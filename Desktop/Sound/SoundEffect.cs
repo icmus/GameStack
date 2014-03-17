@@ -54,6 +54,7 @@ namespace GameStack {
 							break;
 						case 32:
 							format = ALFormat.MonoFloat32Ext;
+							break;
 						default:
 							throw new NotSupportedException ("Sounds must be 8, 16, or 32 bit.");
 					}
