@@ -35,7 +35,7 @@ namespace GameStack.Desktop {
 			_height = height;
 
 			_frameArgs = new FrameArgs();
-			_frameArgs.Enqueue(new Start(new Vector2(_width, _height)));
+			_frameArgs.Enqueue(new Start(new Vector2(_width, _height), 1.0f));
 			_frameArgs.Enqueue(new Resize(new Vector2(_width, _height)));
 			_sdlEvents = new ConcurrentQueue<SDL.SDL_Event>();
 

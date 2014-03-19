@@ -13,19 +13,15 @@ using OpenTK.Graphics.OpenGL;
 using OpenTK.Graphics.ES20;
 #endif
 namespace GameStack {
-	public class Scene : IDisposable {
-		IGameView _view;
+	public class Scene : IGameViewEventHandler, IDisposable {
+		IGameViewEventSource _viewSource;
 		List<IUpdater> _updaters;
 		Dictionary<Type, List<Delegate>> _actions;
 		Dictionary<Type, List<KeyValuePair<object,MethodInfo>>> _handlers;
 		List<object> _unknowns;
 		object[] _handlerArgs;
 
-		public Scene (IGameView view) {
-			_view = view;
-			view.Update += OnUpdate;
-			view.Render += OnDraw;
-			view.Destroyed += OnDestroy;
+		public Scene () {
 			this.ClearColor = Color.CornflowerBlue;
 
 			_actions = new Dictionary<Type, List<Delegate>>();
@@ -37,7 +33,16 @@ namespace GameStack {
 			this.Add(this);
 		}
 
-		public IGameView View { get { return _view; } }
+		public Scene (IGameViewEventSource viewSource)
+			: this()
+		{
+			_viewSource = viewSource;
+			_viewSource.Update += OnUpdate;
+			_viewSource.Render += OnRender;
+			_viewSource.Destroyed += OnDestroy;
+		}
+
+		public IGameViewEventSource ViewSource { get { return _viewSource; } }
 
 		public Color ClearColor { get; set; }
 
@@ -123,7 +128,7 @@ namespace GameStack {
 			}
 		}
 
-		void OnUpdate (object sender, FrameArgs e) {
+		public void OnUpdate (object sender, FrameArgs e) {
 			int count = 0;
 			try {
 				foreach (var evt in e.Events) {
@@ -186,11 +191,11 @@ namespace GameStack {
 			e.ClearEvents();
 		}
 
-		void OnDestroy (object sender, EventArgs e) {
+		public void OnDestroy (object sender, EventArgs e) {
 			this.Dispose();
 		}
 
-		void OnDraw (object sender, FrameArgs e) {
+		public void OnRender (object sender, FrameArgs e) {
 			this.OnDraw(e);
 		}
 
@@ -210,9 +215,11 @@ namespace GameStack {
 		}
 
 		public virtual void Dispose () {
-			_view.Update -= OnUpdate;
-			_view.Render -= OnDraw;
-			_view.Destroyed -= OnDestroy;
+			if (_viewSource != null) {
+				_viewSource.Update -= OnUpdate;
+				_viewSource.Render -= OnRender;
+				_viewSource.Destroyed -= OnDestroy;
+			}
 		}
 	}
 }
