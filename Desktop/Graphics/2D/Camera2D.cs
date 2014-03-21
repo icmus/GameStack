@@ -20,9 +20,9 @@ namespace GameStack.Graphics {
 		public void SetViewSize (Vector2 viewSize, float depth) {
 			Matrix4 projection;
 			if (_origin == Camera2DOrigin.Center)
-				Matrix4.CreateOrthographic(viewSize.X, viewSize.Y, 0f, depth + 0.1f, out projection);
+				Matrix4.CreateOrthographic(viewSize.X, viewSize.Y, 0.1f, depth + 0.1f, out projection);
 			else
-				Matrix4.CreateOrthographicOffCenter(0f, viewSize.X, 0f, viewSize.Y, 0f, depth + 0.1f, out projection);
+				Matrix4.CreateOrthographicOffCenter(0f, viewSize.X, 0f, viewSize.Y, 0.1f, depth + 0.1f, out projection);
 			var view = Matrix4.LookAt(new Vector3(0f, 0f, depth), -Vector3.UnitZ, Vector3.UnitY);
 			this.SetTransforms(ref view, ref projection);
 		}

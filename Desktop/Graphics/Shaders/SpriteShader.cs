@@ -35,7 +35,6 @@ varying vec4 color;
 
 void main() {
 	vec4 c = texture2D(Texture, texCoord0);
-	c.rgb = c.rgb * color.a * Tint.a;
     gl_FragColor = c * color * Tint;
     if(gl_FragColor.a == 0.0)
         discard;
