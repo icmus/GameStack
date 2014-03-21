@@ -42,7 +42,7 @@ namespace GameStack.Pipeline {
 				string outputFile = Path.Combine(outputFolder, baseName + extension);
 				if (File.Exists(outputFile) && File.GetLastWriteTime(outputFile) > File.GetLastWriteTime(inputFile))
 					return;
-				File.Copy(inputFile, outputFile);
+				File.Copy(inputFile, outputFile, true);
 			} else {
 				var attr = (ContentTypeAttribute)Attribute.GetCustomAttribute(type, typeof(ContentTypeAttribute));
 
