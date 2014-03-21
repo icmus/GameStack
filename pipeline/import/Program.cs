@@ -28,20 +28,31 @@ namespace GameStack.Tools.Import {
 				opts[parts[0]] = parts[1];
 			}
 
-			string[] paths = new[] { args[0] };
 			if (Directory.Exists(args[0])) {
-				paths = Directory.GetFiles(args[0]).Where(f => !Path.GetFileName(f).StartsWith(".")).ToArray();
+				try {
+					processDirectoryRec(args[0], args[1], opts);
+				} catch (Exception ex) {
+					Console.WriteLine(ex.ToString());
+					return -1;
+				}
 			}
 
-			try {
-				foreach (var path in paths) {
-					ContentImporter.Process(path, args[1], opts);
-				}
-			} catch (Exception ex) {
-				Console.WriteLine(ex.ToString());
-				return -1;
-			}
 			return 0;
+		}
+
+		static void processDirectoryRec (string iDir, string oDir, Dictionary<string, string> opts) {
+			var paths = Directory.GetFileSystemEntries(iDir)
+				.Where(f => !Path.GetFileName(f).StartsWith(".") && !Path.GetExtension(f).EndsWith(".meta"))
+				.ToArray();
+
+			foreach (var path in paths) {
+				Console.WriteLine("Processing: " + path);
+				if (Directory.Exists(path) && string.IsNullOrEmpty(Path.GetExtension(path))) {
+					var subDir = Path.GetFileName(path);
+					processDirectoryRec(Path.Combine(iDir, subDir), Path.Combine(oDir, subDir), opts);
+				} else
+					ContentImporter.Process(path, oDir, opts);
+			}
 		}
 	}
 }

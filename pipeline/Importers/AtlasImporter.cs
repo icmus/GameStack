@@ -10,22 +10,27 @@ using GameStack.Pipeline.Atlas;
 using GameStack.Pipeline.Tar;
 
 namespace GameStack.Pipeline {
-	[ContentType(".sprites", ".atlas")]
-	public class SpriteImporter : ContentImporter {
-		public override void Import (Stream input, Stream output, string extension) {
+	[ContentType(".spriteatlas", ".atlas")]
+	public class AtlasImporter : ContentImporter {
+		public override void Import (string input, Stream output) {
 			var ser = new JsonSerializer();
-			Metadata metadata = null;
-			using (var sr = new StreamReader(input)) {
-				metadata = ser.Deserialize<Metadata>(new JsonTextReader(sr));
-			}
+			AtlasMetadata metadata = null;
+
+			string metaPath = "atlas.json";
+			if (File.Exists(metaPath)) {
+				using (var sr = new StreamReader(metaPath)) {
+					metadata = ser.Deserialize<AtlasMetadata>(new JsonTextReader(sr));
+				}
+			} else
+				metadata = new AtlasMetadata();
 
 			var lp = new LayoutProperties {
-				inputFilePaths = Directory.GetFiles(metadata.Path).Where(p => Path.GetExtension(p).ToLower() == ".png").ToArray(),
+				inputFilePaths = Directory.GetFiles(".").Where(p => Path.GetExtension(p).ToLower() == ".png").ToArray(),
 				distanceBetweenImages = metadata.Padding,
 				marginWidth = metadata.Margin,
 				powerOfTwo = !metadata.NoPowerOfTwo
 			};
-			var sheetMaker = new SpriteBuilder(lp);
+			var sheetMaker = new AtlasBuilder(lp);
 
 			using (var s = output) {
 				using (var tw = new TarWriter(s)) {
@@ -43,10 +48,7 @@ namespace GameStack.Pipeline {
 			}
 		}
 
-		class Metadata {
-			[JsonProperty("path")]
-			public string Path { get; set; }
-
+		class AtlasMetadata {
 			[JsonProperty("padding")]
 			public int Padding { get; set; }
 

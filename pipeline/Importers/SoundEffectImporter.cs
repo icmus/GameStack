@@ -17,7 +17,7 @@ namespace GameStack.Pipeline {
 		const int WAVE_FORMAT_PCM = 0x0001;
 		const int WAVE_FORMAT_IEEE_FLOAT = 0x0003;
 
-		public override void Import (Stream input, Stream output, string extension) {
+		public override void Import (Stream input, Stream output, string filename) {
 			var reader = new BinaryReader (input);
 
 			int chunkID = reader.ReadInt32 ();

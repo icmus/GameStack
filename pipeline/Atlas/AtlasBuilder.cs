@@ -10,14 +10,14 @@ using Newtonsoft.Json.Linq;
 
 namespace GameStack.Pipeline.Atlas
 {
-    public class SpriteBuilder
+    public class AtlasBuilder
     {
         private Dictionary<int, Image> images;
         private Dictionary<int, string> spriteNames;
         private Dictionary<int, JObject> metadata;
         private LayoutProperties layoutProp;
 
-        public SpriteBuilder(LayoutProperties _layoutProp)
+        public AtlasBuilder(LayoutProperties _layoutProp)
         {
             images = new Dictionary<int, Image>();
 			spriteNames = new Dictionary<int, string>();
@@ -105,7 +105,7 @@ namespace GameStack.Pipeline.Atlas
 
             Image resultSprite = new Bitmap((int)minWidth, (int)minHeight, PixelFormat.Format32bppArgb);
             Graphics graphics = Graphics.FromImage(resultSprite);
-            
+
             //Drawing images into the result image in the original order and writing atlas data.
             foreach (Module m in placement.Modules)
             {

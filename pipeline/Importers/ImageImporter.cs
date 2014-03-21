@@ -8,28 +8,29 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace GameStack.Pipeline {
-	[ContentType (".image", ".png")]
+	[ContentType (".png", ".png")]
 	public class ImageImporter : ContentImporter {
-		public override void Import (Stream input, Stream output, string extension) {
+		public override void Import (Stream input, Stream output, string filename) {
 			var ser = new JsonSerializer();
-			Metadata metadata = null;
-			using (var sr = new StreamReader(input)) {
-				metadata = ser.Deserialize<Metadata>(new JsonTextReader(sr));
-			}
+			ImageMetadata metadata = null;
+			var metaPath = filename + ".meta";
+			if (File.Exists(metaPath)) {
+				using (var sr = new StreamReader(metaPath)) {
+					metadata = ser.Deserialize<ImageMetadata>(new JsonTextReader(sr));
+				}
+			} else
+				metadata = new ImageMetadata();
 
-			var img = Image.FromFile(metadata.Path);
-			if (metadata.PreMultiply) {
+			var img = Image.FromStream(input);
+			if (!metadata.NoPreMultiply) {
 				img = ImageHelper.PremultiplyAlpha(img);
 			}
 			img.Save(output, ImageFormat.Png);
 		}
 	}
 
-	class Metadata {
-		[JsonProperty("path")]
-		public string Path { get; set; }
-
-		[JsonProperty("preMultiply")]
-		public bool PreMultiply { get; set; }
+	class ImageMetadata {
+		[JsonProperty("noPreMultiply")]
+		public bool NoPreMultiply { get; set; }
 	}
 }

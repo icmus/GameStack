@@ -11,15 +11,15 @@ using GameStack.Pipeline.Atlas;
 using GameStack.Pipeline.Tar;
 
 namespace GameStack.Pipeline {
-	[ContentType (".fnt", ".font")]
+	[ContentType (".spritefont", ".font")]
 	public class FontImporter : ContentImporter {
 		class Char {
 			public int id;
 			public float x, y, width, height, xoffset, yoffset, xadvance;
 		}
 
-		public override void Import (Stream input, Stream output, string extension) {
-			var sr = new StreamReader (input);
+		public override void Import (string input, Stream output) {
+			var sr = new StreamReader(Path.GetFileNameWithoutExtension(input) + ".fnt");
 
 			string fontFace = "", textureFile = null;
 			int fontSize = 0;

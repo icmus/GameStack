@@ -80,8 +80,6 @@
     <Compile Include="Tar\ITarHeader.cs" />
     <Compile Include="Tar\DataWriter.cs" />
     <Compile Include="Tar\IArchiveDataWriter.cs" />
-    <Compile Include="Importers\SpriteImporter.cs" />
-    <Compile Include="Atlas\SpriteBuilder.cs" />
     <Compile Include="Importers\SoundEffectImporter.cs" />
     <Compile Include="Extensions\BinaryExtensions.cs" />
     <Compile Include="Extensions\JsonSerializerExtensions.cs" />
@@ -92,6 +90,8 @@
     <Compile Include="Importers\ModelImporter.cs" />
     <Compile Include="Images\ImageLoader.cs" />
     <Compile Include="Images\TargaLoader.cs" />
+    <Compile Include="Importers\AtlasImporter.cs" />
+    <Compile Include="Atlas\AtlasBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

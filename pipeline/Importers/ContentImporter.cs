@@ -23,10 +23,13 @@ namespace GameStack.Pipeline {
 		}
 
 		public static void Process (string inputFile, string outputFolder, IDictionary<string,string> opts) {
-			if (!File.Exists(inputFile))
+			if (!File.Exists(inputFile) && !Directory.Exists(inputFile))
 				throw new ArgumentException("Input file does not exist: " + inputFile);
 			if (!Directory.Exists(outputFolder))
 				Directory.CreateDirectory(outputFolder);
+
+			inputFile = Path.GetFullPath(inputFile);
+			outputFolder = Path.GetFullPath(outputFolder);
 
 			var extension = Path.GetExtension(inputFile);
 			var baseName = Path.GetFileNameWithoutExtension(inputFile);
@@ -48,17 +51,30 @@ namespace GameStack.Pipeline {
 			}
 
 			var oldWorkingDir = Environment.CurrentDirectory;
-			using (FileStream iStream = new FileStream(inputFile, FileMode.Open, FileAccess.Read),
-			       oStream = new FileStream(Path.Combine(outputFolder, baseName + (attr.OutExtension == ".*" ? extension : attr.OutExtension)),
-				                          FileMode.Create, FileAccess.Write)) {
-				var dir = Path.GetDirectoryName(inputFile);
-				if(dir != string.Empty)
-					Environment.CurrentDirectory = Path.GetDirectoryName(inputFile);
-				importer.Import(iStream, oStream, extension);
-				Environment.CurrentDirectory = oldWorkingDir;
+
+			string outputFile = Path.Combine(outputFolder, baseName + (attr.OutExtension == ".*" ? extension : attr.OutExtension));
+
+			using (FileStream oStream = new FileStream(outputFile, FileMode.Create, FileAccess.Write)) {
+				if ((File.GetAttributes(inputFile) & FileAttributes.Directory) == FileAttributes.Directory) {
+					Environment.CurrentDirectory = inputFile;
+					importer.Import(inputFile, oStream);
+				} else {
+					using (FileStream iStream = new FileStream(inputFile, FileMode.Open, FileAccess.Read)) {
+						var dir = Path.GetDirectoryName(inputFile);
+						if (dir != string.Empty)
+							Environment.CurrentDirectory = Path.GetDirectoryName(inputFile);
+						importer.Import(iStream, oStream, Path.GetFileName(inputFile));
+					}
+				}
 			}
+			Environment.CurrentDirectory = oldWorkingDir;
 		}
 
-		public abstract void Import (Stream input, Stream output, string extension);
+		public virtual void Import (Stream iStream, Stream oStream, string filename) {
+			throw new NotImplementedException();
+		}
+		public virtual void Import (string iDir, Stream oStream) {
+			throw new NotImplementedException();
+		}
 	}
 }

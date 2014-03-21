@@ -8,7 +8,7 @@ namespace GameStack.Pipeline {
 	public class WavefrontImporter : ContentImporter {
 		static readonly char[] SplitChar = new char[] { ' ' };
 
-		public override void Import (Stream input, Stream output, string extension) {
+		public override void Import (Stream input, Stream output, string filename) {
 			var v = new List<Vector3>() { Vector3.Zero };
 			var vn = new List<Vector3>() { Vector3.Zero };
 			var vt = new List<Vector2>() { Vector2.Zero };

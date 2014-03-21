@@ -11,11 +11,11 @@ using Assimp;
 namespace GameStack.Pipeline {
 	[ContentType(".dae .obj .fbx .3ds .blend", ".model")]
 	public class ModelImporter : ContentImporter {
-		public override void Import (Stream input, Stream output, string extension) {
+		public override void Import (Stream input, Stream output, string filename) {
 			using (var importer = new AssimpContext()) {
 				var scene = importer.ImportFileFromStream(input,
 					PostProcessSteps.Triangulate | PostProcessSteps.SortByPrimitiveType | PostProcessSteps.GenerateNormals,
-					extension);
+					Path.GetExtension(filename));
 				using (var tw = new TarWriter(output)) {
 					var textures = new Dictionary<string, string>();
 					using (var ms = new MemoryStream()) {

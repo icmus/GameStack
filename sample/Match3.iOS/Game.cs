@@ -45,7 +45,7 @@ namespace Samples.Match3 {
 		SoundChannel _sfx, _sfx2;
 		SoundEffect _sndNoMatch, _sndMatch, _sndLanding, _sndCoin, _sndOneUp;
 		IMusicChannel _musicChannel;
-		IMusicTrack _music, _musicGameOver;
+		//IMusicTrack _music, _musicGameOver;
 		int _score;
 		string _scoreStr;
 		bool _isNewGame, _gameOver, _noInput, _wasPlaying;
@@ -62,7 +62,7 @@ namespace Samples.Match3 {
 			_score = 0;
 			_scoreStr = _score.ToString();
 			_isNewGame = true;
-			this.View.EnableGesture(GestureType.Tap);
+			view.EnableGesture(GestureType.Tap);
 		}
 
 		void IHandler<Start>.Handle (FrameArgs frame, Start e) {
@@ -97,8 +97,8 @@ namespace Samples.Match3 {
 			_sndCoin = new SoundEffect("coin.sfx");
 			_sndOneUp = new SoundEffect("1-up.sfx");
 			_musicChannel = Music.CreateMusicChannel();
-			_music = Music.LoadTrack("mario.mp3");
-			_musicGameOver = Music.LoadTrack("game-over.mp3");
+			//_music = Music.LoadTrack("mario.mp3");
+			//_musicGameOver = Music.LoadTrack("game-over.mp3");
 			_musicChannel.Volume = 0.6f;
 		}
 
@@ -135,7 +135,7 @@ namespace Samples.Match3 {
 
 			if (e.Size.X > e.Size.Y)
 				_origin.X = e.Size.X - 90f - _boardWidth;
-			var s = this.View.PixelScale;
+			var s = e.PixelScale;
 			var width = (int)(_boardWidth * s);
 			_boardArea = new Rectangle((int)(_origin.X * s), (int)(_origin.Y * s), width, width);
 		}
@@ -148,7 +148,7 @@ namespace Samples.Match3 {
 				this.FillBoard(true);
 				_settled = false;
 				_isNewGame = false;
-				_musicChannel.Play(_music, true);
+				//_musicChannel.Play(_music, true);
 				_gameOver = false;
 			}
 			//else if (this.View.Size.Y - e.Point.Y < 50f)
@@ -207,7 +207,7 @@ namespace Samples.Match3 {
 				Transition<float> trnBackground = null;
 				trnBackground = new Transition<float>(_backgroundOffset, 0f, 0.5f, Tween.EaseOutSine, v => _backgroundOffset = v, () => this.Remove(trnBackground));
 				this.Add(trnBackground);
-				_musicChannel.Play(_music, true);
+				//_musicChannel.Play(_music, true);
 			}
 
 			if (_animating) {
@@ -505,7 +505,7 @@ namespace Samples.Match3 {
 		}
 
 		void GameOver () {
-			_musicChannel.Play(_musicGameOver, false);
+			//_musicChannel.Play(_musicGameOver, false);
 			_gameOver = true;
 			Transition<float> trnGameOver = null;
 			trnGameOver = new Transition<float>(0f, 1f, 0.75f, Tween.EaseOutBounce, v => _gameOverScale = v, () => this.Remove(trnGameOver));

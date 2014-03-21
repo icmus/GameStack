@@ -71,10 +71,6 @@
       <Link>assets\coin.sfx</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\assets\game-over.mp3">
-      <Link>assets\game-over.mp3</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="..\assets\jump.sfx">
       <Link>assets\jump.sfx</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -85,10 +81,6 @@
     </None>
     <None Include="..\assets\mario.atlas">
       <Link>assets\mario.atlas</Link>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\assets\mario.mp3">
-      <Link>assets\mario.mp3</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="..\assets\match.sfx">
