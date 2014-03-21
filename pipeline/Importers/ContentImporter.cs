@@ -50,12 +50,13 @@ namespace GameStack.Pipeline {
 				prop.SetValue(importer, Convert.ChangeType(kvp.Value, prop.PropertyType), null);
 			}
 
-			var oldWorkingDir = Environment.CurrentDirectory;
-
 			string outputFile = Path.Combine(outputFolder, baseName + (attr.OutExtension == ".*" ? extension : attr.OutExtension));
+			if (File.Exists(outputFile) && File.GetLastWriteTime(outputFile) > File.GetLastWriteTime(inputFile))
+				return;
 
+			var oldWorkingDir = Environment.CurrentDirectory;
 			using (FileStream oStream = new FileStream(outputFile, FileMode.Create, FileAccess.Write)) {
-				if ((File.GetAttributes(inputFile) & FileAttributes.Directory) == FileAttributes.Directory) {
+				if (Directory.Exists(inputFile)) {
 					Environment.CurrentDirectory = inputFile;
 					importer.Import(inputFile, oStream);
 				} else {
