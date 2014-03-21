@@ -14,14 +14,14 @@ using OpenTK.Graphics.ES20;
 #endif
 namespace GameStack {
 	public class Scene : IGameViewEventHandler, IDisposable {
-		IGameViewEventSource _viewSource;
+		IGameView _view;
 		List<IUpdater> _updaters;
 		Dictionary<Type, List<Delegate>> _actions;
 		Dictionary<Type, List<KeyValuePair<object,MethodInfo>>> _handlers;
 		List<object> _unknowns;
 		object[] _handlerArgs;
 
-		public Scene () {
+		public Scene (IGameView view = null) {
 			this.ClearColor = Color.CornflowerBlue;
 
 			_actions = new Dictionary<Type, List<Delegate>>();
@@ -31,20 +31,25 @@ namespace GameStack {
 			_unknowns = new List<object>();
 
 			this.Add(this);
+
+			if (view != null) {
+				_view = view;
+				_view.Update += OnUpdate;
+				_view.Render += OnRender;
+				_view.Destroyed += OnDestroy;
+			}
 		}
 
-		public Scene (IGameViewEventSource viewSource)
-			: this()
-		{
-			_viewSource = viewSource;
-			_viewSource.Update += OnUpdate;
-			_viewSource.Render += OnRender;
-			_viewSource.Destroyed += OnDestroy;
-		}
-
-		public IGameViewEventSource ViewSource { get { return _viewSource; } }
+		public IGameView View { get { return _view; } }
 
 		public Color ClearColor { get; set; }
+
+		public virtual void Start (object sender, Start args) {
+			var frameArgs = new FrameArgs();
+			frameArgs.Enqueue(args);
+			frameArgs.Enqueue(new Resize(args.Size, args.PixelScale));
+			OnUpdate(sender, frameArgs);
+		}
 
 		public void Add (object obj) {
 			if (obj == null)
@@ -215,12 +220,11 @@ namespace GameStack {
 		}
 
 		public virtual void Dispose () {
-			if (_viewSource != null) {
-				_viewSource.Update -= OnUpdate;
-				_viewSource.Render -= OnRender;
-				_viewSource.Destroyed -= OnDestroy;
+			if (_view != null) {
+				_view.Update -= OnUpdate;
+				_view.Render -= OnRender;
+				_view.Destroyed -= OnDestroy;
 			}
 		}
 	}
 }
-

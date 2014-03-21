@@ -94,7 +94,6 @@
     <Compile Include="Logic\IGameView.cs" />
     <Compile Include="Logic\IHandler.cs" />
     <Compile Include="Logic\IUpdater.cs" />
-    <Compile Include="Logic\Scene.cs" />
     <Compile Include="Logic\Coroutines\Coroutine.cs" />
     <Compile Include="Logic\Coroutines\CoroutineList.cs" />
     <Compile Include="Logic\Coroutines\ICoroutine.cs" />
@@ -126,6 +125,8 @@
     <Compile Include="Logic\ThreadContext.cs" />
     <Compile Include="Graphics\Shaders\MeshShader.cs" />
     <Compile Include="Graphics\3D\Lighting.cs" />
+    <Compile Include="Logic\Scenes\Scene.cs" />
+    <Compile Include="Logic\Scenes\SceneCrossfader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -143,5 +144,6 @@
     <Folder Include="Logic\" />
     <Folder Include="Math\" />
     <Folder Include="Sound\" />
+    <Folder Include="Logic\Scenes\" />
   </ItemGroup>
 </Project>

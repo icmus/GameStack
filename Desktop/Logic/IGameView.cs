@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using OpenTK;
 
 namespace GameStack {
-	public interface IGameView : IGameViewEventSource, IDisposable {
+	public interface IGameView : IDisposable {
+		event EventHandler<FrameArgs> Update;
+		event EventHandler<FrameArgs> Render;
+		event EventHandler Destroyed;
+
 		Vector2 Size { get; }
 		float PixelScale { get; }
 		bool IsPaused { get; }
 
 		void EnableGesture (GestureType type);
-	}
-
-	public interface IGameViewEventSource {
-		event EventHandler<FrameArgs> Update;
-		event EventHandler<FrameArgs> Render;
-		event EventHandler Destroyed;
 	}
 
 	public interface IGameViewEventHandler {
