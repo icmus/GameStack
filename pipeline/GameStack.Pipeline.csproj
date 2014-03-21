@@ -92,6 +92,7 @@
     <Compile Include="Images\TargaLoader.cs" />
     <Compile Include="Importers\AtlasImporter.cs" />
     <Compile Include="Atlas\AtlasBuilder.cs" />
+    <Compile Include="Importers\MusicImporter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

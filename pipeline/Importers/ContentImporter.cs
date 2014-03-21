@@ -37,38 +37,43 @@ namespace GameStack.Pipeline {
 			Type type;
 			_importers.TryGetValue(extension, out type);
 			if (type == null) {
-				Console.WriteLine("No custom importer for {0}, skipping.", extension);
-				return;
-			}
-			var attr = (ContentTypeAttribute)Attribute.GetCustomAttribute(type, typeof(ContentTypeAttribute));
+				Console.WriteLine("No custom importer for {0}, copying as blob.", extension);
 
-			var importer = (ContentImporter)Activator.CreateInstance(type);
-			foreach (var kvp in opts) {
-				var prop = type.GetProperty(kvp.Key, BindingFlags.IgnoreCase | BindingFlags.Public);
-				if (prop == null)
-					throw new ArgumentException("No such property found on importer: " + kvp.Key);
-				prop.SetValue(importer, Convert.ChangeType(kvp.Value, prop.PropertyType), null);
-			}
+				string outputFile = Path.Combine(outputFolder, baseName + extension);
+				if (File.Exists(outputFile) && File.GetLastWriteTime(outputFile) > File.GetLastWriteTime(inputFile))
+					return;
+				File.Copy(inputFile, outputFile);
+			} else {
+				var attr = (ContentTypeAttribute)Attribute.GetCustomAttribute(type, typeof(ContentTypeAttribute));
 
-			string outputFile = Path.Combine(outputFolder, baseName + (attr.OutExtension == ".*" ? extension : attr.OutExtension));
-			if (File.Exists(outputFile) && File.GetLastWriteTime(outputFile) > File.GetLastWriteTime(inputFile))
-				return;
+				var importer = (ContentImporter)Activator.CreateInstance(type);
+				foreach (var kvp in opts) {
+					var prop = type.GetProperty(kvp.Key, BindingFlags.IgnoreCase | BindingFlags.Public);
+					if (prop == null)
+						throw new ArgumentException("No such property found on importer: " + kvp.Key);
+					prop.SetValue(importer, Convert.ChangeType(kvp.Value, prop.PropertyType), null);
+				}
 
-			var oldWorkingDir = Environment.CurrentDirectory;
-			using (FileStream oStream = new FileStream(outputFile, FileMode.Create, FileAccess.Write)) {
-				if (Directory.Exists(inputFile)) {
-					Environment.CurrentDirectory = inputFile;
-					importer.Import(inputFile, oStream);
-				} else {
-					using (FileStream iStream = new FileStream(inputFile, FileMode.Open, FileAccess.Read)) {
-						var dir = Path.GetDirectoryName(inputFile);
-						if (dir != string.Empty)
-							Environment.CurrentDirectory = Path.GetDirectoryName(inputFile);
-						importer.Import(iStream, oStream, Path.GetFileName(inputFile));
+				string outputFile = Path.Combine(outputFolder, baseName + (attr.OutExtension == ".*" ? extension : attr.OutExtension));
+				if (File.Exists(outputFile) && File.GetLastWriteTime(outputFile) > File.GetLastWriteTime(inputFile))
+					return;
+
+				var oldWorkingDir = Environment.CurrentDirectory;
+				using (FileStream oStream = new FileStream(outputFile, FileMode.Create, FileAccess.Write)) {
+					if (Directory.Exists(inputFile)) {
+						Environment.CurrentDirectory = inputFile;
+						importer.Import(inputFile, oStream);
+					} else {
+						using (FileStream iStream = new FileStream(inputFile, FileMode.Open, FileAccess.Read)) {
+							var dir = Path.GetDirectoryName(inputFile);
+							if (dir != string.Empty)
+								Environment.CurrentDirectory = Path.GetDirectoryName(inputFile);
+							importer.Import(iStream, oStream, Path.GetFileName(inputFile));
+						}
 					}
 				}
+				Environment.CurrentDirectory = oldWorkingDir;
 			}
-			Environment.CurrentDirectory = oldWorkingDir;
 		}
 
 		public virtual void Import (Stream iStream, Stream oStream, string filename) {

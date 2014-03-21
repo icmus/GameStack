@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace GameStack.Pipeline {
-	[ContentType (".png", ".png")]
+	[ContentType (".png", ".*")]
 	public class ImageImporter : ContentImporter {
 		public override void Import (Stream input, Stream output, string filename) {
 			var ser = new JsonSerializer();
