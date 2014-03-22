@@ -32,9 +32,9 @@ namespace GameStack
 			_prevFBO = new FrameBuffer(_prevTexture);
 			_nextFBO = new FrameBuffer(_nextTexture);
 
-			_quad = new Quad(new Vector4(0, 768, 1024, 0), Vector4.One);
+			_cam = new Camera2D(e.Size, 2);
+			_quad = new Quad(new Vector4(0, 0, 1024, 768), Vector4.One);
 			_mat = new SpriteMaterial(new SpriteShader(), null);
-			_cam = new Camera2D(new Vector2(e.Size.X, e.Size.Y), 2);
 		}
 
 		public void FadeTo (Scene nextScene, float duration, bool freezePrev = true, bool freezeNext = true) {
