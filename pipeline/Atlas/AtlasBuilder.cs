@@ -30,8 +30,9 @@ namespace GameStack.Pipeline.Atlas
 
             var sprites = new Dictionary<string,SpriteDefinition>();
 			Image resultSprite = generateAutomaticLayout(sprites);
-			if(!noPreMultiply)
-	            resultSprite = ImageHelper.PremultiplyAlpha(resultSprite);
+			// TODO: Uncomment this if mono premultiply behavior changes
+//			if(!noPreMultiply)
+//	            resultSprite = ImageHelper.PremultiplyAlpha(resultSprite);
             resultSprite.Save(sheetStream, imageFormat);
 
             atlasWriter.Write(sprites.Count);

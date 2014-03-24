@@ -31,7 +31,7 @@ namespace GameStack.Pipeline {
 			inputFile = Path.GetFullPath(inputFile);
 			outputFolder = Path.GetFullPath(outputFolder);
 
-			var extension = Path.GetExtension(inputFile);
+			var extension = Path.GetExtension(inputFile).ToLower();
 			var baseName = Path.GetFileNameWithoutExtension(inputFile);
 
 			Type type;

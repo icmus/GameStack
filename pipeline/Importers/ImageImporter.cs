@@ -22,9 +22,10 @@ namespace GameStack.Pipeline {
 				metadata = new ImageMetadata();
 
 			var img = Image.FromStream(input);
-			if (!metadata.NoPreMultiply) {
-				img = ImageHelper.PremultiplyAlpha(img);
-			}
+			// TODO: Uncomment this if mono premultiply behavior changes.
+//			if (!metadata.NoPreMultiply) {
+//				img = ImageHelper.PremultiplyAlpha(img);
+//			}
 			img.Save(output, ImageFormat.Png);
 		}
 	}
