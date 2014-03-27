@@ -16,7 +16,7 @@ namespace GameStack.Pipeline {
 			var ser = new JsonSerializer();
 			AtlasMetadata metadata = null;
 
-			string metaPath = "atlas.json";
+			string metaPath = "atlas.meta";
 			if (File.Exists(metaPath)) {
 				using (var sr = new StreamReader(metaPath)) {
 					metadata = ser.Deserialize<AtlasMetadata>(new JsonTextReader(sr));
@@ -25,10 +25,14 @@ namespace GameStack.Pipeline {
 				metadata = new AtlasMetadata();
 
 			var lp = new LayoutProperties {
-				inputFilePaths = Directory.GetFiles(".").Where(p => Path.GetExtension(p).ToLower() == ".png").ToArray(),
+				inputFilePaths = Directory.Exists("./sprites") ?
+					Directory.GetFiles("./sprites").Where(p => Path.GetExtension(p).ToLower() == ".png").ToArray()
+					: Directory.GetFiles(".").Where(p => Path.GetExtension(p).ToLower() == ".png").ToArray(),
 				distanceBetweenImages = metadata.Padding,
 				marginWidth = metadata.Margin,
-				powerOfTwo = !metadata.NoPowerOfTwo
+				powerOfTwo = metadata.PowerOfTwo,
+				maxSpriteWidth = metadata.MaxSpriteWidth > 0 ? metadata.MaxSpriteWidth : 65535,
+				maxSpriteHeight = metadata.MaxSpriteHeight > 0 ? metadata.MaxSpriteHeight : 65535,
 			};
 			var sheetMaker = new AtlasBuilder(lp);
 
@@ -58,8 +62,14 @@ namespace GameStack.Pipeline {
 			[JsonProperty("noPreMultiply")]
 			public bool NoPreMultiply { get; set; }
 
-			[JsonProperty("noPowerOfTwo")]
-			public bool NoPowerOfTwo { get; set; }
+			[JsonProperty("powerOfTwo")]
+			public bool PowerOfTwo { get; set; }
+
+			[JsonProperty("maxSpriteWidth")]
+			public int MaxSpriteWidth { get; set; }
+
+			[JsonProperty("maxSpriteHeight")]
+			public int MaxSpriteHeight { get; set; }
 		}
 	}
 }

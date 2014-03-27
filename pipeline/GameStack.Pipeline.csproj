@@ -93,6 +93,7 @@
     <Compile Include="Importers\AtlasImporter.cs" />
     <Compile Include="Atlas\AtlasBuilder.cs" />
     <Compile Include="Importers\MusicImporter.cs" />
+    <Compile Include="Images\GraphicsMagick\GraphicsMagick.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -102,5 +103,9 @@
     <Folder Include="Tar\" />
     <Folder Include="Extensions\" />
     <Folder Include="Images\" />
+    <Folder Include="Images\GraphicsMagick\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
 </Project>

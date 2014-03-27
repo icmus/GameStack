@@ -51,16 +51,39 @@ namespace GameStack.Pipeline.Atlas
             for (int i = 0; i < layoutProp.inputFilePaths.Length; i++)
             {
                 var baseName = Path.GetFileNameWithoutExtension(layoutProp.inputFilePaths[i]);
-                var metaPath = Path.Combine(Path.GetDirectoryName(layoutProp.inputFilePaths[i]), baseName) + ".json";
+				var metaPath = layoutProp.inputFilePaths[i] + ".meta";
+
+				if(File.Exists(metaPath)) {
+					using (var metaFile = File.OpenText(metaPath)) {
+						var meta = JObject.Load(new JsonTextReader(metaFile));
+						metadata.Add(i, meta);
+					}
+				}
+
                 Image img = Image.FromFile(layoutProp.inputFilePaths[i]);
+				int maxWidth = layoutProp.maxSpriteWidth, maxHeight = layoutProp.maxSpriteHeight;
+				Console.WriteLine(maxWidth + " " + maxHeight);
+				if ((maxWidth > 0 && img.Width > maxWidth) || (maxHeight > 0 && img.Height > maxHeight)) {
+					img.Dispose();
+					var wand = GraphicsMagick.NewWand();
+					GraphicsMagick.ReadImageBlob(wand, File.OpenRead(layoutProp.inputFilePaths[i]));
+
+					var maxAspect = (float)maxWidth / (float)maxHeight;
+					var imgAspect = (float)GraphicsMagick.GetWidth(wand) / (float)GraphicsMagick.GetHeight(wand);
+
+					if (imgAspect > maxAspect)
+						GraphicsMagick.ResizeImage(wand, (IntPtr)maxWidth, (IntPtr)Math.Round(maxWidth / imgAspect), GraphicsMagick.Filter.Box, 1);
+					else
+						GraphicsMagick.ResizeImage(wand, (IntPtr)Math.Round(maxHeight * imgAspect), (IntPtr)maxHeight, GraphicsMagick.Filter.Box, 1);
+					var newImgBlob = GraphicsMagick.WriteImageBlob(wand);
+
+					using (var ms = new MemoryStream(newImgBlob)) {
+						img = Image.FromStream(ms);
+					}
+				}
+
                 images.Add(i, img);
 				spriteNames.Add(i, baseName);
-                if(File.Exists(metaPath)) {
-                    using (var metaFile = File.OpenText(metaPath)) {
-                        var meta = JObject.Load(new JsonTextReader(metaFile));
-                        metadata.Add(i, meta);
-                    }
-                }
             }
         }
 

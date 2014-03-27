@@ -11,6 +11,8 @@ namespace GameStack.Pipeline.Atlas
         public int distanceBetweenImages; 
         public int marginWidth;
         public bool powerOfTwo;
+		public int maxSpriteWidth;
+		public int maxSpriteHeight;
 
         public LayoutProperties()
         {
@@ -18,6 +20,8 @@ namespace GameStack.Pipeline.Atlas
             distanceBetweenImages = 0;
             marginWidth = 0;
             powerOfTwo = false;
+			maxSpriteWidth = 0;
+			maxSpriteHeight = 0;
         }
     }
 }
