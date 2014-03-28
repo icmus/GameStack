@@ -54,14 +54,38 @@ namespace GameStack.Graphics {
 			this.Initialize(null, settings);
 		}
 
-		public Texture (string path, TextureSettings settings = null) {
-			using (var stream = Assets.ResolveStream(path)) {
-				this.Initialize(PngLoader.Decode(stream, out _size, out _format), settings);
-			}
+		public Texture (string path, TextureSettings settings = null)
+			: this(Assets.ResolveStream(path), Path.GetExtension(path), settings, false)
+		{
 		}
 
-		public Texture (Stream stream, TextureSettings settings = null) {
-			this.Initialize(PngLoader.Decode(stream, out _size, out _format), settings);
+		public Texture (Stream stream, string format = ".png", TextureSettings settings = null, bool leaveOpen = true) {
+			switch (format.ToLower()) {
+			case ".png":
+				this.Initialize(PngLoader.Decode(stream, out _size, out _format), settings);
+				break;
+			default:
+				var img = (Bitmap)Image.FromStream(stream);
+				var bmd = img.LockBits(new Rectangle(0, 0, img.Width, img.Height), System.Drawing.Imaging.ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+				byte[] data = new byte[bmd.Stride * bmd.Height];
+				Marshal.Copy(bmd.Scan0, data, 0, data.Length);
+				img.UnlockBits(bmd);
+
+				for (int i = 0; i < data.Length; i += 4) {
+					byte swap = data[i];
+					data[i] = data[i + 2];
+					data[i + 2] = swap;
+					data[i + 3] = 255;
+				}
+
+				_size = new Size(img.Width, img.Height);
+				_format = PixelFormat.Rgba;
+				this.Initialize(data, settings);
+				break;
+			}
+
+			if (!leaveOpen)
+				stream.Dispose();
 		}
 
 		public uint Handle { get { return _handle; } }

@@ -8,7 +8,7 @@ using PngFormat = System.Drawing.Imaging.PixelFormat;
 using PixelFormat = OpenTK.Graphics.OpenGL.PixelFormat;
 
 namespace GameStack.Content {
-	public class PngLoader {
+	public static class PngLoader {
 		public static byte[] Decode (Stream stream, out Size size, out PixelFormat pxFormat) {
 			var buf = new byte[stream.Length];
 			stream.Read(buf, 0, buf.Length);
