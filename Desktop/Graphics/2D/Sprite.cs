@@ -13,32 +13,62 @@ namespace GameStack.Graphics {
 	// A sprite is a simple quad with a texture applied. A region may be specified
 	// (in pixels, from the top left) so that a texture may hold multiple sprites
 	// (a.k.a atlasing).
-	public class Sprite : Drawable2D, IBatchable {
-		Material _material;
-		Vector2 _size;
-		VertexBuffer _vbuffer;
-		IndexBuffer _ibuffer;
-		int _ioffset, _icount;
+	public class Sprite : Drawable2D, IBatchable, IDisposable {
+		protected Material _material;
+		protected Vector2 _size;
+		protected VertexBuffer _vbuffer;
+		protected IndexBuffer _ibuffer;
+		protected int _ioffset, _icount;
+		bool _ownsResources;
 
-		internal Sprite (Material material, Vector2 size, VertexBuffer vbuffer = null, IndexBuffer ibuffer = null, int ioffset = 0, int icount = 0) {
+		public Sprite (Material material, Vector2 size, VertexBuffer vbuffer = null, IndexBuffer ibuffer = null, int ioffset = 0, int icount = 0, bool ownsResources = false) {
 			_material = material;
 			_size = size;
 			_vbuffer = vbuffer;
 			_ibuffer = ibuffer;
 			_ioffset = ioffset;
 			_icount = icount;
+			_ownsResources = ownsResources;
+		}
+
+		public Sprite (string path, TextureSettings settings, Vector4 rect, Vector4 color, bool flipV = true) {
+			var tex = new Texture(path, settings);
+			_material = new SpriteMaterial(new SpriteShader(), tex);
+			_size = new Vector2(tex.Size.Width, tex.Size.Height);
+
+			if (rect == Vector4.Zero)
+				rect = new Vector4(-_size.X / 2, -_size.Y / 2, _size.X / 2, _size.Y / 2);
+
+			_vbuffer = new VertexBuffer(VertexFormat.PositionColorUV);
+			_vbuffer.Data = new [] {
+				rect.X, rect.Y, 0f, color.X, color.Y, color.Z, color.W, 0f, flipV ? 1f : 0f,
+				rect.Z, rect.Y, 0f, color.X, color.Y, color.Z, color.W, 1f, flipV ? 1f : 0f,
+				rect.Z, rect.W, 0f, color.X, color.Y, color.Z, color.W, 1f, flipV ? 0f : 1f,
+				rect.X, rect.W, 0f, color.X, color.Y, color.Z, color.W, 0f, flipV ? 0f : 1f
+			};
+			_vbuffer.Commit ();
+
+			_ibuffer = new IndexBuffer();
+			_ibuffer.Data = new [] { 0, 1, 2, 2, 3, 0 };
+			_ibuffer.Commit ();
+
+			_ioffset = 0;
+			_icount = 6;
+
+			_ownsResources = true;
+		}
+		public Sprite (string path, TextureSettings settings, Vector4 rect)
+			: this(path, settings, rect, Vector4.One)
+		{
+		}
+		public Sprite (string path, TextureSettings settings = null)
+			: this(path, settings, Vector4.Zero, Vector4.One)
+		{
 		}
 
 		public Material Material { get { return _material; } }
 
 		public virtual Vector2 Size { get { return _size; } }
-
-		protected void SetBuffers (VertexBuffer vbuffer, IndexBuffer ibuffer, int ioffset, int icount) {
-			_vbuffer = vbuffer;
-			_ibuffer = ibuffer;
-			_ioffset = ioffset;
-			_icount = icount;
-		}
 
 		protected override void OnDraw (ref Matrix4 world) {
 			var cam = ScopedObject.Find<Camera> ();
@@ -95,5 +125,10 @@ namespace GameStack.Graphics {
 
 		#endregion
 
+		public void Dispose () {
+			if (!_ownsResources)
+				return;
+
+		}
 	}
 }

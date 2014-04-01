@@ -12,14 +12,12 @@ using OpenTK.Graphics.ES20;
 #endif
 namespace GameStack.Graphics {
 	public class SlicedSprite : Sprite {
-		VertexBuffer _vbuffer;
-		IndexBuffer _ibuffer;
 		Vector2 _origin, _size, _tileSize, _texelSize;
 		Vector4 _border, _outerUV, _innerUV, _color;
 		bool _tileX, _tileY, _hollow;
 
 		public SlicedSprite (SpriteMaterial material, Vector2 pos, Vector2 size, Vector2 origin, Vector4 color, Vector4 border, bool tileX, bool tileY, bool hollow)
-            : base(material, size) {
+			: base(material, size, new VertexBuffer(VertexFormat.PositionColorUV), new IndexBuffer(), 0, 0, true) {
 			ThreadContext.Current.EnsureGLContext();
 
 			_border = border;
@@ -28,9 +26,6 @@ namespace GameStack.Graphics {
 			_tileX = tileX;
 			_tileY = tileY;
 			_hollow = hollow;
-
-			_vbuffer = new VertexBuffer(VertexFormat.PositionColorUV);
-			_ibuffer = new IndexBuffer();
 
 			var tsz = _texelSize = material.Texture.TexelSize;
 			_outerUV = new Vector4(pos.X * tsz.X, (pos.Y + size.Y) * tsz.Y, (pos.X + size.X) * tsz.X, pos.Y * tsz.Y);
@@ -197,7 +192,8 @@ namespace GameStack.Graphics {
 			_ibuffer.Data = indices.ToArray();
 			_ibuffer.Commit();
 
-			this.SetBuffers(_vbuffer, _ibuffer, 0, indices.Count);
+			_ioffset = 0;
+			_icount = indices.Count;
 		}
 
 		static void MakeQuad (List<int> indices,

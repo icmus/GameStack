@@ -12,6 +12,8 @@ using GameStack.Pipeline.Tar;
 namespace GameStack.Pipeline {
 	[ContentType(".spriteatlas", ".atlas")]
 	public class AtlasImporter : ContentImporter {
+		public static readonly string[] SupportedFormats = { ".png", ".jpg", ".jpeg" };
+
 		public override void Import (string input, Stream output) {
 			var ser = new JsonSerializer();
 			AtlasMetadata metadata = null;
@@ -25,9 +27,8 @@ namespace GameStack.Pipeline {
 				metadata = new AtlasMetadata();
 
 			var lp = new LayoutProperties {
-				inputFilePaths = Directory.Exists("./sprites") ?
-					Directory.GetFiles("./sprites").Where(p => Path.GetExtension(p).ToLower() == ".png").ToArray()
-					: Directory.GetFiles(".").Where(p => Path.GetExtension(p).ToLower() == ".png").ToArray(),
+				inputFilePaths = (Directory.Exists("./sprites") ? Directory.GetFiles("./sprites") : Directory.GetFiles("."))
+					.Where(p => SupportedFormats.Contains(Path.GetExtension(p).ToLower())).ToArray(),
 				distanceBetweenImages = metadata.Padding,
 				marginWidth = metadata.Margin,
 				powerOfTwo = metadata.PowerOfTwo,
