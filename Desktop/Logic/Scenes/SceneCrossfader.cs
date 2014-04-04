@@ -9,9 +9,9 @@ namespace GameStack
 	public class SceneCrossfader : Scene, IUpdater, IHandler<Start>, IDisposable
 	{
 		bool fading;
-		Scene _prevScene, _scene;
+		Scene _scene;
 		float _duration;
-		bool _freezePrev, _freezeNext;
+		bool _freezeNext;
 		float _t;
 		Texture _prevTexture, _nextTexture;
 		FrameBuffer _prevFBO, _nextFBO;
@@ -33,15 +33,26 @@ namespace GameStack
 			_nextFBO = new FrameBuffer(_nextTexture);
 
 			_cam = new Camera2D(e.Size, 2);
-			_quad = new Quad(new Vector4(0, 0, 1024, 768), Vector4.One);
+			_quad = new Quad(new Vector4(0, 0, e.Size.X, e.Size.Y), Vector4.One);
 			_mat = new SpriteMaterial(new SpriteShader(), null);
 		}
 
-		public void FadeTo (Scene nextScene, float duration, bool freezePrev = true, bool freezeNext = true) {
-			_prevScene = _scene;
+		public void Init (Scene initialScene)
+		{
+			if (_scene != null)
+				throw new InvalidOperationException("Fader has already been initialized!");
+
+			_scene = initialScene;
+		}
+
+		public void FadeTo (Scene nextScene, Start startArgs, FrameArgs frameArgs, float duration = 0.5f, bool freezeNext = true)
+		{
+			if (_scene == null)
+				throw new InvalidOperationException("No current scene to crossfade from!");
+
+			var prevScene = _scene;
 			_scene = nextScene;
 			_duration = duration;
-			_freezePrev = freezePrev;
 			_freezeNext = freezeNext;
 			_t = 0;
 
@@ -49,6 +60,19 @@ namespace GameStack
 
 			if (_duration <= 0)
 				Skip();
+			else {
+				using (_prevFBO.Begin()) {
+					if (prevScene != null)
+						prevScene.OnRender(this, frameArgs);
+					else
+						base.OnDraw(frameArgs);
+				}
+			}
+
+			if (prevScene != null) {
+				prevScene.Dispose();
+				_scene.Start(this, startArgs);
+			}
 		}
 
 		public void Skip ()
@@ -56,29 +80,19 @@ namespace GameStack
 			if (!fading)
 				return;
 
-			if (_prevScene != null) {
-				_prevScene.Dispose();
-				_prevScene = null;
-			}
-
 			fading = false;
 		}
 
 		public void Update (FrameArgs e)
 		{
-			if (_scene == null)
-				return;
-
 			if (!fading)
 				_scene.OnUpdate(this, e);
 			else {
-				if (!_freezePrev)
-					_prevScene.OnUpdate(this, e);
 				if (!_freezeNext)
 					_scene.OnUpdate(this, e);
 
-				_t += e.DeltaTime;
-				if (_t > _duration)
+				_t += (e.DeltaTime / _duration);
+				if (_t > 1f)
 					Skip();
 			}
 		}
@@ -93,18 +107,8 @@ namespace GameStack
 			if (!fading)
 				_scene.OnRender(this, e);
 			else {
-				using (_prevFBO.Begin()) {
-					if (_prevScene != null)
-						_prevScene.OnRender(this, e);
-					else
-						base.OnDraw(e);
-				}
-
 				using (_nextFBO.Begin()) {
-					if (_scene != null)
-						_scene.OnRender(this, e);
-					else
-						base.OnDraw(e);
+					_scene.OnRender(this, e);
 				}
 
 				OnComposeScenes(e, _prevTexture, _nextTexture, _t);
@@ -142,8 +146,8 @@ namespace GameStack
 
 			if (_scene != null)
 				_scene.Dispose();
-			if (_prevScene != null)
-				_prevScene.Dispose();
+
+			base.Dispose();
 		}
 	}
 }

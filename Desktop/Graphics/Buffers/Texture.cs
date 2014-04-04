@@ -17,11 +17,9 @@ using OpenTK.Graphics.ES20;
 namespace GameStack.Graphics {
 	public class TextureSettings {
 		public TextureFilter MagFilter { get; set; }
-
 		public TextureFilter MinFilter { get; set; }
 
 		public TextureWrap WrapS { get; set; }
-
 		public TextureWrap WrapT { get; set; }
 
 		public TextureSettings () {
@@ -32,7 +30,8 @@ namespace GameStack.Graphics {
 
 	public enum TextureFilter {
 		Linear = All.Linear,
-		Nearest = All.Nearest
+		Nearest = All.Nearest,
+		Trilinear = All.LinearMipmapLinear,
 	}
 
 	public enum TextureWrap {
@@ -118,6 +117,8 @@ namespace GameStack.Graphics {
 			} else {
 				GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height,
 					0, _format, PixelType.UnsignedByte, buf);
+				if (_settings.MinFilter == TextureFilter.Trilinear)
+					GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
 			}
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)_settings.MagFilter);
 			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)_settings.MinFilter);

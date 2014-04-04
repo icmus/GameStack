@@ -34,10 +34,10 @@ namespace GameStack.Graphics {
 		public Sprite (string path, TextureSettings settings, Vector4 rect, Vector4 color, bool flipV = true) {
 			var tex = new Texture(path, settings);
 			_material = new SpriteMaterial(new SpriteShader(), tex);
-			_size = new Vector2(tex.Size.Width, tex.Size.Height);
 
 			if (rect == Vector4.Zero)
-				rect = new Vector4(-_size.X / 2, -_size.Y / 2, _size.X / 2, _size.Y / 2);
+				rect = new Vector4(0, 0, tex.Size.Width, tex.Size.Height);
+			_size = new Vector2(rect.Z - rect.X, rect.W - rect.Y);
 
 			_vbuffer = new VertexBuffer(VertexFormat.PositionColorUV);
 			_vbuffer.Data = new [] {

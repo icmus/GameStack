@@ -18,6 +18,7 @@ namespace GameStack {
 		List<IUpdater> _updaters;
 		Dictionary<Type, List<Delegate>> _actions;
 		Dictionary<Type, List<KeyValuePair<object,MethodInfo>>> _handlers;
+		List<IDisposable> _disposables;
 		List<object> _unknowns;
 		object[] _handlerArgs;
 
@@ -27,6 +28,7 @@ namespace GameStack {
 			_actions = new Dictionary<Type, List<Delegate>>();
 			_updaters = new List<IUpdater>();
 			_handlers = new Dictionary<Type, List<KeyValuePair<object, MethodInfo>>>();
+			_disposables = new List<IDisposable>();
 			_handlerArgs = new object[2];
 			_unknowns = new List<object>();
 
@@ -78,6 +80,12 @@ namespace GameStack {
 				}
 			}
 
+			var disposable = obj as IDisposable;
+			if (disposable != null && disposable != this) {
+				_disposables.Add(disposable);
+				any = true;
+			}
+
 			if (!any)
 				_unknowns.Add(obj);
 		}
@@ -104,6 +112,12 @@ namespace GameStack {
 						}
 					}
 				}
+			}
+
+			var disposable = obj as IDisposable;
+			if (disposable != null) {
+				_disposables.Remove(disposable);
+				any = true;
 			}
 
 			if (!any)
@@ -225,6 +239,9 @@ namespace GameStack {
 				_view.Render -= OnRender;
 				_view.Destroyed -= OnDestroy;
 			}
+
+			foreach (var obj in _disposables)
+				obj.Dispose();
 		}
 	}
 }
