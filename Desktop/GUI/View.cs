@@ -180,6 +180,10 @@ namespace GameStack.Gui {
 		}
 
 		public virtual void Dispose () {
+			for (int i = _children.Count - 1; i >= 0; i--)
+				_children[i].Dispose();
+			if (Parent != null)
+				Parent.RemoveView(this);
 		}
 	}
 }
