@@ -35,6 +35,15 @@ namespace GameStack.Graphics {
 			var tex = new Texture(path, settings);
 			_material = new SpriteMaterial(new SpriteShader(), tex);
 
+			if (rect.Z <= 0) {
+				rect.Z = rect.W <= 0 ? tex.Size.Width : rect.W * ((float)tex.Size.Width / (float)tex.Size.Height);
+				rect.X *= rect.Z;
+			}
+			if (rect.W <= 0) {
+				rect.W = rect.Z <= 0 ? tex.Size.Height : rect.Z * ((float)tex.Size.Height / (float)tex.Size.Width);
+				rect.Y *= rect.W;
+			}
+
 			if (rect == Vector4.Zero)
 				rect = new Vector4(0, 0, tex.Size.Width, tex.Size.Height);
 			_size = new Vector2(rect.Z - rect.X, rect.W - rect.Y);
