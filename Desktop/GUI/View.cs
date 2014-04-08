@@ -51,16 +51,12 @@ namespace GameStack.Gui {
 		}
 
 		public View Parent { get; private set; }
-
 		public ReadOnlyCollection<View> Children { get; private set; }
-
 		public RectangleF Frame { get; protected set; }
-
 		public SizeF Size { get { return _size; } protected set { _size = value; } }
-
 		public Vector4 Margins { get { return _margins; } }
-
 		public float ZDepth { get; set; }
+		public object Tag { get; set; }
 
 		public Matrix4 Transform {
 			get { return _transform; }
@@ -93,9 +89,8 @@ namespace GameStack.Gui {
 		}
 
 		public void ClearViews () {
-			foreach (var view in _children)
-				view.Parent = null;
-			_children.Clear();
+			for (int i = _children.Count - 1; i >= 0; i--)
+				_children[i].Dispose();
 		}
 
 		public virtual void Layout () {
@@ -154,6 +149,20 @@ namespace GameStack.Gui {
 			this.OnDraw(ref local);
 			foreach (var view in _children)
 				view.Draw(local);
+		}
+
+		public Matrix4 GetCumulativeTransform () {
+			var result = _transform;
+			result.M41 += _margins.X;
+			result.M42 += _margins.W;
+			result.M43 += this.ZDepth;
+
+			if (Parent != null) {
+				var parentTransform = Parent.GetCumulativeTransform();
+				Matrix4.Mult(ref result, ref parentTransform, out result);
+			}
+
+			return result;
 		}
 
 		public IPointerInput FindByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {

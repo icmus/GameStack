@@ -29,7 +29,7 @@ namespace GameStack.Gui {
 
 		public void Draw () {
 			using (_camera.Begin()) {
-				this.Draw(Transform);
+				this.Draw(Matrix4.Identity);
 			}
 		}
 
