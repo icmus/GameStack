@@ -13,6 +13,7 @@ namespace GameStack.Pipeline.Atlas
         public bool powerOfTwo;
 		public int maxSpriteWidth;
 		public int maxSpriteHeight;
+		public int filterMode;
 
         public LayoutProperties()
         {
@@ -22,6 +23,7 @@ namespace GameStack.Pipeline.Atlas
             powerOfTwo = false;
 			maxSpriteWidth = 0;
 			maxSpriteHeight = 0;
+			filterMode = 0;
         }
     }
 }

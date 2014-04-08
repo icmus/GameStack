@@ -29,8 +29,8 @@ namespace GameStack.Graphics {
 	}
 
 	public enum TextureFilter {
-		Linear = All.Linear,
 		Nearest = All.Nearest,
+		Linear = All.Linear,
 		Trilinear = All.LinearMipmapLinear,
 	}
 

@@ -34,6 +34,7 @@ namespace GameStack.Pipeline {
 				powerOfTwo = metadata.PowerOfTwo,
 				maxSpriteWidth = metadata.MaxSpriteWidth > 0 ? metadata.MaxSpriteWidth : 65535,
 				maxSpriteHeight = metadata.MaxSpriteHeight > 0 ? metadata.MaxSpriteHeight : 65535,
+				filterMode = metadata.FilterMode,
 			};
 			var sheetMaker = new AtlasBuilder(lp);
 
@@ -65,6 +66,9 @@ namespace GameStack.Pipeline {
 
 			[JsonProperty("powerOfTwo")]
 			public bool PowerOfTwo { get; set; }
+
+			[JsonProperty("filterMode")]
+			public int FilterMode { get; set; }
 
 			[JsonProperty("maxSpriteWidth")]
 			public int MaxSpriteWidth { get; set; }

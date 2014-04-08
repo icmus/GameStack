@@ -40,6 +40,7 @@ namespace GameStack.Graphics {
 			if (shader == null)
 				shader = new SpriteShader();
 
+			int filterMode = 0;
 			var defs = new Dictionary<string, SpriteDefinition>();
 
 			var tr = new TarReader(stream);
@@ -50,6 +51,7 @@ namespace GameStack.Graphics {
 							tr.Read(atlasStream);
 							atlasStream.Position = 0;
 							using (var br = new BinaryReader(atlasStream)) {
+								filterMode = br.ReadInt32();
 								for (var count = br.ReadInt32(); count > 0; --count) {
 									var key = br.ReadString();
 									var value = SpriteDefinition.Read(br);
@@ -63,8 +65,8 @@ namespace GameStack.Graphics {
 							tr.Read(sheetStream);
 							sheetStream.Position = 0;
 							var tex = new Texture(sheetStream, ".png", new TextureSettings {
-								MagFilter = TextureFilter.Nearest,
-								MinFilter = TextureFilter.Linear
+								MagFilter = filterMode > 0 ? TextureFilter.Linear : TextureFilter.Nearest,
+								MinFilter = filterMode == 1 ? TextureFilter.Linear : filterMode == 2 ? TextureFilter.Trilinear : TextureFilter.Nearest,
 							});
 							_material = new SpriteMaterial(shader, tex);
 						}

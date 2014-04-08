@@ -35,6 +35,7 @@ namespace GameStack.Pipeline.Atlas
 //	            resultSprite = ImageHelper.PremultiplyAlpha(resultSprite);
             resultSprite.Save(sheetStream, imageFormat);
 
+			atlasWriter.Write(layoutProp.filterMode);
             atlasWriter.Write(sprites.Count);
             foreach (var kvp in sprites) {
                 atlasWriter.Write(kvp.Key);
