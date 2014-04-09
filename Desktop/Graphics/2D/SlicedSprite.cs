@@ -12,7 +12,7 @@ using OpenTK.Graphics.ES20;
 #endif
 namespace GameStack.Graphics {
 	public class SlicedSprite : Sprite {
-		Vector2 _origin, _size, _tileSize, _texelSize;
+		Vector2 _origin, _tileSize, _texelSize;
 		Vector4 _border, _outerUV, _innerUV, _color;
 		bool _tileX, _tileY, _hollow;
 
@@ -39,8 +39,6 @@ namespace GameStack.Graphics {
 			_vbuffer = new VertexBuffer(VertexFormat.PositionColorUV);
 			_ibuffer = new IndexBuffer();
 		}
-
-		public override Vector2 Size { get { return _size; } }
 
 		public SlicedSprite Clone () {
 			var result = new SlicedSprite(this.Material, this.Size);

@@ -40,7 +40,7 @@ namespace GameStack.Gui {
 
 		void IHandler<Touch>.Handle (FrameArgs frame, Touch e) {
 			Vector2 where;
-			var src = this.FindByPoint(e.SurfacePoint, Matrix4.Identity, out where);
+			var src = this.FindInputSinkByPoint(e.SurfacePoint, Matrix4.Identity, out where);
 			switch (e.State) {
 				case TouchState.Start:
 					if (_pointerId >= 0)

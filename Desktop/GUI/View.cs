@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Drawing;
 using OpenTK;
 using GameStack.Graphics;
@@ -143,7 +144,6 @@ namespace GameStack.Gui {
 			local.M41 += _margins.X;
 			local.M42 += _margins.W;
 			local.M43 += this.ZDepth;
-
 			Matrix4.Mult(ref local, ref parentTransform, out local);
 
 			this.OnDraw(ref local);
@@ -165,12 +165,27 @@ namespace GameStack.Gui {
 			return result;
 		}
 
-		public IPointerInput FindByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {
+		public Matrix4 GetCumulativeTransformInv () {
+			var result = _transformInv;
+
+			if (Parent != null) {
+				var parentTransformInv = Parent.GetCumulativeTransformInv();
+				Matrix4.Mult(ref result, ref parentTransformInv, out result);
+			}
+
+			result.M41 -= _margins.X;
+			result.M42 -= _margins.W;
+			result.M43 -= this.ZDepth;
+
+			return result;
+		}
+
+		public IPointerInput FindInputSinkByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {
 			where = Vector2.Zero;
 			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, 0) * TransformInv;
 
 			foreach (var view in _children) {
-				var found = view.FindByPoint(point, inv, out where);
+				var found = view.FindInputSinkByPoint(point, inv, out where);
 				if (found != null)
 					return found;
 			}
@@ -179,10 +194,46 @@ namespace GameStack.Gui {
 				point = new Vector2(temp.X, temp.Y);
 
 				if (point.X >= 0 && point.Y >= 0
-				    && point.X < _size.Width && point.Y < _size.Height) {
-					where = point;
+					&& point.X < _size.Width && point.Y < _size.Height) {
+						where = point;
 					return (IPointerInput)this;
 				}
+			}
+
+			return null;
+		}
+
+		public View FindViewByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {
+			where = Vector2.Zero;
+			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, 0) * TransformInv;
+
+			var cPoint = point;
+			var hit = _children.Select(c => {
+				Vector2 cHitPos;
+				var cHit = c.FindViewByPoint(cPoint, inv, out cHitPos);
+				if (cHit == null)
+					return new KeyValuePair<View, Vector2>?();
+				else
+					return new KeyValuePair<View, Vector2>(cHit, cHitPos);
+			})
+				.Where(c => c.HasValue)
+				.OrderByDescending(c => c.Value.Key.Transform.M43 + c.Value.Key.ZDepth)
+				.FirstOrDefault();
+
+			var temp = Vector3.Transform(new Vector3(point), inv);
+			point = new Vector2(temp.X, temp.Y);
+
+			if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
+				if (hit.HasValue && hit.Value.Key.Transform.M43 + hit.Value.Key.ZDepth > 0) {
+					where = hit.Value.Value;
+					return hit.Value.Key;
+				} else {
+					where = point;
+					return this;
+				}
+			} else if (hit.HasValue) {
+				where = hit.Value.Value;
+				return hit.Value.Key;
 			}
 
 			return null;
