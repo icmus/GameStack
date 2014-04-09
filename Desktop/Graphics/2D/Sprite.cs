@@ -31,21 +31,19 @@ namespace GameStack.Graphics {
 			_ownsResources = ownsResources;
 		}
 
-		public Sprite (string path, TextureSettings settings, Vector4 rect, Vector4 color, bool flipV = true) {
+		public Sprite (string path, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true) {
 			var tex = new Texture(path, settings);
 			_material = new SpriteMaterial(new SpriteShader(), tex);
 
-			if (rect.Z <= 0) {
-				rect.Z = rect.W <= 0 ? tex.Size.Width : rect.W * ((float)tex.Size.Width / (float)tex.Size.Height);
-				rect.X *= rect.Z;
-			}
-			if (rect.W <= 0) {
-				rect.W = rect.Z <= 0 ? tex.Size.Height : rect.Z * ((float)tex.Size.Height / (float)tex.Size.Width);
-				rect.Y *= rect.W;
-			}
-
 			if (rect == Vector4.Zero)
 				rect = new Vector4(0, 0, tex.Size.Width, tex.Size.Height);
+			else if (relativeRect) {
+				rect.X *= tex.Size.Width;
+				rect.Y *= tex.Size.Height;
+				rect.Z *= tex.Size.Width;
+				rect.W *= tex.Size.Height;
+			}
+
 			_size = new Vector2(rect.Z - rect.X, rect.W - rect.Y);
 
 			_vbuffer = new VertexBuffer(VertexFormat.PositionColorUV);
@@ -66,12 +64,12 @@ namespace GameStack.Graphics {
 
 			_ownsResources = true;
 		}
-		public Sprite (string path, TextureSettings settings, Vector4 rect)
-			: this(path, settings, rect, Vector4.One)
+		public Sprite (string path, TextureSettings settings, Vector4 rect, bool relativeRect = false)
+			: this(path, settings, rect, relativeRect, Vector4.One)
 		{
 		}
 		public Sprite (string path, TextureSettings settings = null)
-			: this(path, settings, Vector4.Zero, Vector4.One)
+			: this(path, settings, Vector4.Zero, false, Vector4.One)
 		{
 		}
 
