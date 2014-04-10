@@ -11,17 +11,61 @@ namespace GameStack.Gui {
 	public class LayoutSpec {
 		public static readonly LayoutSpec Empty = new LayoutSpec();
 
-		public SizeFunc Left { get; set; }
+		SizeFunc _left, _top, _right, _bottom, _width, _height;
 
-		public SizeFunc Top { get; set; }
+		public SizeFunc Left {
+			get { return _left; }
+			set {
+				if (this == Empty)
+					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				_left = value;
+			}
+		}
 
-		public SizeFunc Right { get; set; }
+		public SizeFunc Top {
+			get { return _top; }
+			set {
+				if (this == Empty)
+					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				_top = value;
+			}
+		}
 
-		public SizeFunc Bottom { get; set; }
+		public SizeFunc Right {
+			get { return _right; }
+			set {
+				if (this == Empty)
+					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				_right = value;
+			}
+		}
 
-		public SizeFunc Width { get; set; }
+		public SizeFunc Bottom {
+			get { return _bottom; }
+			set {
+				if (this == Empty)
+					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				_bottom = value;
+			}
+		}
 
-		public SizeFunc Height { get; set; }
+		public SizeFunc Width {
+			get { return _width; }
+			set {
+				if (this == Empty)
+					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				_width = value;
+			}
+		}
+
+		public SizeFunc Height {
+			get { return _height; }
+			set {
+				if (this == Empty)
+					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				_height = value;
+			}
+		}
 	}
 
 	public class View : IDisposable {
@@ -31,6 +75,7 @@ namespace GameStack.Gui {
 		LayoutSpec _spec;
 		Vector4 _margins;
 		SizeF _size;
+		Vector2 _origin;
 
 		public View () : this(null) {
 		}
@@ -56,7 +101,9 @@ namespace GameStack.Gui {
 		public RectangleF Frame { get; protected set; }
 		public SizeF Size { get { return _size; } protected set { _size = value; } }
 		public Vector4 Margins { get { return _margins; } }
+		public Vector2 Origin { get { return _origin; } protected set { _origin = value; } }
 		public float ZDepth { get; set; }
+		public bool BlockInput { get; set; }
 		public object Tag { get; set; }
 
 		public Matrix4 Transform {
@@ -170,7 +217,7 @@ namespace GameStack.Gui {
 
 			if (Parent != null) {
 				var parentTransformInv = Parent.GetCumulativeTransformInv();
-				Matrix4.Mult(ref result, ref parentTransformInv, out result);
+				Matrix4.Mult(ref parentTransformInv, ref result, out result);
 			}
 
 			result.M41 -= _margins.X;
@@ -182,19 +229,23 @@ namespace GameStack.Gui {
 
 		public IPointerInput FindInputSinkByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {
 			where = Vector2.Zero;
+			if (BlockInput)
+				return null;
+
 			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, 0) * TransformInv;
 
 			foreach (var view in _children) {
+				if (view.BlockInput)
+					continue;
 				var found = view.FindInputSinkByPoint(point, inv, out where);
 				if (found != null)
 					return found;
 			}
 			if (this is IPointerInput) {
 				var temp = Vector3.Transform(new Vector3(point), inv);
-				point = new Vector2(temp.X, temp.Y);
+				point = new Vector2(temp.X, temp.Y) + _origin;
 
-				if (point.X >= 0 && point.Y >= 0
-					&& point.X < _size.Width && point.Y < _size.Height) {
+				if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
 						where = point;
 					return (IPointerInput)this;
 				}
@@ -205,7 +256,7 @@ namespace GameStack.Gui {
 
 		public View FindViewByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {
 			where = Vector2.Zero;
-			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, 0) * TransformInv;
+			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, -ZDepth) * TransformInv;
 
 			var cPoint = point;
 			var hit = _children.Select(c => {
@@ -221,10 +272,10 @@ namespace GameStack.Gui {
 				.FirstOrDefault();
 
 			var temp = Vector3.Transform(new Vector3(point), inv);
-			point = new Vector2(temp.X, temp.Y);
+			point = new Vector2(temp.X, temp.Y) + _origin;
 
 			if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
-				if (hit.HasValue && hit.Value.Key.Transform.M43 + hit.Value.Key.ZDepth > 0) {
+				if (hit.HasValue && hit.Value.Key.Transform.M43 + hit.Value.Key.ZDepth >= 0) {
 					where = hit.Value.Value;
 					return hit.Value.Key;
 				} else {

@@ -76,7 +76,7 @@ namespace GameStack.Gui {
 		}
 
 		public event EventHandler<ButtonStateChangedEventArgs> StateChanged;
-		public event EventHandler Pressed;
+		public event EventHandler Clicked;
 
 		Sprite CurrentSprite {
 			get {
@@ -138,9 +138,9 @@ namespace GameStack.Gui {
 			this.SizeSprite (this.DisabledSprite);
 		}
 
-		void OnPressed () {
-			if (this.Pressed != null)
-				this.Pressed (this, EventArgs.Empty);
+		void OnClicked () {
+			if (this.Clicked != null)
+				this.Clicked (this, EventArgs.Empty);
 		}
 
 		void SizeSprite (Sprite sprite) {
@@ -212,11 +212,11 @@ namespace GameStack.Gui {
 					break;
 				case ButtonState.Pressed:
 					this.State = this.IsToggle ? ButtonState.Active : ButtonState.Over;
-					this.OnPressed ();
+					this.OnClicked ();
 					break;
 				case ButtonState.ActivePressed:
 					this.State = ButtonState.Over;
-					this.OnPressed ();
+					this.OnClicked ();
 					break;
 			}
 		}
