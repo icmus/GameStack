@@ -75,7 +75,6 @@ namespace GameStack.Gui {
 		LayoutSpec _spec;
 		Vector4 _margins;
 		SizeF _size;
-		Vector2 _origin;
 
 		public View () : this(null) {
 		}
@@ -101,7 +100,6 @@ namespace GameStack.Gui {
 		public RectangleF Frame { get; protected set; }
 		public SizeF Size { get { return _size; } protected set { _size = value; } }
 		public Vector4 Margins { get { return _margins; } }
-		public Vector2 Origin { get { return _origin; } protected set { _origin = value; } }
 		public float ZDepth { get; set; }
 		public bool BlockInput { get; set; }
 		public object Tag { get; set; }
@@ -174,6 +172,10 @@ namespace GameStack.Gui {
 			_children.ForEach(c => c.Layout());
 		}
 
+		public void SortChildren () {
+			_children.Sort((l, r) => l.ZDepth < r.ZDepth ? -1 : l.ZDepth > r.ZDepth ? 1 : 0);
+		}
+
 		protected virtual void OnUpdate(FrameArgs e) {
 		}
 
@@ -243,7 +245,7 @@ namespace GameStack.Gui {
 			}
 			if (this is IPointerInput) {
 				var temp = Vector3.Transform(new Vector3(point), inv);
-				point = new Vector2(temp.X, temp.Y) + _origin;
+				point = new Vector2(temp.X, temp.Y);
 
 				if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
 						where = point;
@@ -272,7 +274,7 @@ namespace GameStack.Gui {
 				.FirstOrDefault();
 
 			var temp = Vector3.Transform(new Vector3(point), inv);
-			point = new Vector2(temp.X, temp.Y) + _origin;
+			point = new Vector2(temp.X, temp.Y);
 
 			if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
 				if (hit.HasValue && hit.Value.Key.Transform.M43 + hit.Value.Key.ZDepth >= 0) {
@@ -289,6 +291,17 @@ namespace GameStack.Gui {
 
 			return null;
 		}
+
+//		public bool Overlaps (View other) {
+//			Matrix4 inv;
+//			Vector2 bl, br, tl, tr;
+//			inv = GetCumulativeTransformInv();
+//
+//			bl = Vector3.Transform(new Vector3(0 - other.Origin.X, 0 - other.Origin.Y, 0), inv).Xy;
+//			br = Vector3.Transform(new Vector3(0 - other.Origin.X, 0 - other.Origin.Y + other.Size.Width, 0), inv).Xy;
+//			tl = Vector3.Transform(new Vector3(0 - other.Origin.X, 0 - other.Origin.Y, 0), inv).Xy;
+//			tr = Vector3.Transform(new Vector3(0 - other.Origin.X, 0 - other.Origin.Y, 0), inv).Xy;
+//		}
 
 		public virtual void Dispose () {
 			for (int i = _children.Count - 1; i >= 0; i--)
