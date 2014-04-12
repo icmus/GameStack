@@ -258,50 +258,100 @@ namespace GameStack.Gui {
 
 		public View FindViewByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {
 			where = Vector2.Zero;
+			Vector3 hitPos;
+			var view = FindViewByPointImpl(point, parentInv, out hitPos);
+			if (view != null) {
+				where = hitPos.Xy;
+				return view;
+			}
+
+			return null;
+		}
+
+		View FindViewByPointImpl (Vector2 point, Matrix4 parentInv, out Vector3 where) {
+			where = Vector3.Zero;
 			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, -ZDepth) * TransformInv;
 
 			var cPoint = point;
 			var hit = _children.Select(c => {
-				Vector2 cHitPos;
-				var cHit = c.FindViewByPoint(cPoint, inv, out cHitPos);
+				Vector3 cHitPos;
+				var cHit = c.FindViewByPointImpl(cPoint, inv, out cHitPos);
 				if (cHit == null)
-					return new KeyValuePair<View, Vector2>?();
+					return new KeyValuePair<View, Vector3>?();
 				else
-					return new KeyValuePair<View, Vector2>(cHit, cHitPos);
+					return new KeyValuePair<View, Vector3>(cHit, cHitPos);
 			})
 				.Where(c => c.HasValue)
-				.OrderByDescending(c => c.Value.Key.Transform.M43 + c.Value.Key.ZDepth)
+				.OrderByDescending(c => c.Value.Value.Z)
 				.FirstOrDefault();
 
 			var temp = Vector3.Transform(new Vector3(point), inv);
 			point = new Vector2(temp.X, temp.Y);
 
 			if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
-				if (hit.HasValue && hit.Value.Key.Transform.M43 + hit.Value.Key.ZDepth >= 0) {
-					where = hit.Value.Value;
+				if (hit.HasValue && hit.Value.Value.Z >= 0) {
+					where = hit.Value.Value + new Vector3(0, 0, Transform.M43 + ZDepth);
 					return hit.Value.Key;
 				} else {
-					where = point;
+					where = new Vector3(point.X, point.Y, Transform.M43 + ZDepth);
 					return this;
 				}
 			} else if (hit.HasValue) {
-				where = hit.Value.Value;
+				where = hit.Value.Value + new Vector3(0, 0, Transform.M43 + ZDepth);
 				return hit.Value.Key;
 			}
 
 			return null;
 		}
 
-//		public bool Overlaps (View other) {
-//			Matrix4 inv;
-//			Vector2 bl, br, tl, tr;
-//			inv = GetCumulativeTransformInv();
-//
-//			bl = Vector3.Transform(new Vector3(0 - other.Origin.X, 0 - other.Origin.Y, 0), inv).Xy;
-//			br = Vector3.Transform(new Vector3(0 - other.Origin.X, 0 - other.Origin.Y + other.Size.Width, 0), inv).Xy;
-//			tl = Vector3.Transform(new Vector3(0 - other.Origin.X, 0 - other.Origin.Y, 0), inv).Xy;
-//			tr = Vector3.Transform(new Vector3(0 - other.Origin.X, 0 - other.Origin.Y, 0), inv).Xy;
-//		}
+		public bool ContainsPoint (Vector2 point) {
+			point = Vector3.Transform(new Vector3(point), GetCumulativeTransformInv()).Xy;
+			return point.X > 0 && point.X < _size.Width && point.Y > 0 && point.Y < _size.Height;
+		}
+
+		public bool Overlaps (View other) {
+			Matrix4 xform, inv;
+			Vector2[] vecs = new Vector2[4];
+			Vector2 min, max;
+
+			xform = other.GetCumulativeTransform();
+			inv = GetCumulativeTransformInv();
+			vecs[0] = Vector3.Transform(Vector3.Transform(new Vector3(0, 0, 0), xform), inv).Xy;
+			vecs[1] = Vector3.Transform(Vector3.Transform(new Vector3(other.Size.Width, 0, 0), xform), inv).Xy;
+			vecs[2] = Vector3.Transform(Vector3.Transform(new Vector3(0, other.Size.Height, 0), xform), inv).Xy;
+			vecs[3] = vecs[1] + (vecs[2] - vecs[0]);
+
+			min = new Vector2(float.PositiveInfinity, float.PositiveInfinity);
+			max = new Vector2(float.NegativeInfinity, float.NegativeInfinity);
+			foreach (var v in vecs) {
+				min.X = Math.Min(v.X, min.X);
+				min.Y = Math.Min(v.Y, min.Y);
+				max.X = Math.Max(v.X, max.X);
+				max.Y = Math.Max(v.Y, max.Y);
+			}
+
+			if (min.X < _size.Width && max.X > 0 && min.Y < _size.Height && max.Y > 0) {
+				xform = GetCumulativeTransform();
+				inv = other.GetCumulativeTransformInv();
+				vecs[0] = Vector3.Transform(Vector3.Transform(new Vector3(0, 0, 0), xform), inv).Xy;
+				vecs[1] = Vector3.Transform(Vector3.Transform(new Vector3(_size.Width, 0, 0), xform), inv).Xy;
+				vecs[2] = Vector3.Transform(Vector3.Transform(new Vector3(0, _size.Height, 0), xform), inv).Xy;
+				vecs[3] = vecs[1] + (vecs[2] - vecs[0]);
+
+				min = new Vector2(float.PositiveInfinity, float.PositiveInfinity);
+				max = new Vector2(float.NegativeInfinity, float.NegativeInfinity);
+				foreach (var v in vecs) {
+					min.X = Math.Min(v.X, min.X);
+					min.Y = Math.Min(v.Y, min.Y);
+					max.X = Math.Max(v.X, max.X);
+					max.Y = Math.Max(v.Y, max.Y);
+				}
+
+				return min.X < other.Size.Width && max.X > 0 && min.Y < other.Size.Height && max.Y > 0;
+			}
+
+			return false;
+		}
 
 		public virtual void Dispose () {
 			for (int i = _children.Count - 1; i >= 0; i--)
