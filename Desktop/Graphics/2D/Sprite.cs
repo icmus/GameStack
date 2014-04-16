@@ -19,16 +19,16 @@ namespace GameStack.Graphics {
 		protected VertexBuffer _vbuffer;
 		protected IndexBuffer _ibuffer;
 		protected int _ioffset, _icount;
-		bool _ownsResources;
+		bool _ownMaterial;
 
-		public Sprite (Material material, Vector2 size, VertexBuffer vbuffer = null, IndexBuffer ibuffer = null, int ioffset = 0, int icount = 0, bool ownsResources = false) {
+		public Sprite (Material material, Vector2 size, VertexBuffer vbuffer = null, IndexBuffer ibuffer = null, int ioffset = 0, int icount = 0, bool ownMaterial = false) {
 			_material = material;
 			_size = size;
 			_vbuffer = vbuffer;
 			_ibuffer = ibuffer;
 			_ioffset = ioffset;
 			_icount = icount;
-			_ownsResources = ownsResources;
+			_ownMaterial = ownMaterial;
 		}
 
 		public Sprite (string path, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true) {
@@ -62,7 +62,7 @@ namespace GameStack.Graphics {
 			_ioffset = 0;
 			_icount = 6;
 
-			_ownsResources = true;
+			_ownMaterial = true;
 		}
 		public Sprite (string path, TextureSettings settings, Vector4 rect, bool relativeRect = false)
 			: this(path, settings, rect, relativeRect, Vector4.One)
@@ -133,9 +133,9 @@ namespace GameStack.Graphics {
 		#endregion
 
 		public void Dispose () {
-			if (!_ownsResources)
+			if (!_ownMaterial)
 				return;
-
+			_material.Dispose();
 		}
 	}
 }
