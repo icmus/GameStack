@@ -43,10 +43,10 @@ namespace GameStack.Gui {
 			var textTransform = transform;
 			switch (this.VerticalAlignment) {
 				case VerticalAlignment.Top:
-					textTransform.M42 += this.Size.Height - height;
+					textTransform.M42 += (int)(this.Size.Height - height);
 					break;
 				case VerticalAlignment.Middle:
-					textTransform.M42 += (this.Size.Height - height) / 2f;
+					textTransform.M42 += (int)((this.Size.Height - height) / 2f);
 					break;
 				case VerticalAlignment.Bottom:
 					break;
