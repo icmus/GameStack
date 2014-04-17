@@ -91,7 +91,7 @@ namespace GameStack
 				if (!_freezeNext)
 					_scene.OnUpdate(this, e);
 
-				_t += (e.DeltaTime / _duration);
+				_t += e.DeltaTime / _duration;
 				if (_t > 1f)
 					Skip();
 			}

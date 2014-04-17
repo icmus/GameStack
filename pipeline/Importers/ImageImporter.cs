@@ -21,13 +21,16 @@ namespace GameStack.Pipeline {
 			} else
 				metadata = new ImageMetadata();
 
-			input.CopyTo(output);
-//			var img = Image.FromStream(input);
+			if (filename.EndsWith("jpeg") || filename.EndsWith("jpg"))
+				input.CopyTo(output);
+			else {
+				var img = Image.FromStream(input);
 			// TODO: Uncomment this if mono premultiply behavior changes.
-//			if (!metadata.NoPreMultiply) {
-//				img = ImageHelper.PremultiplyAlpha(img);
-//			}
-//			img.Save(output, ImageFormat.Png);
+	//			if (!metadata.NoPreMultiply) {
+	//				img = ImageHelper.PremultiplyAlpha(img);
+	//			}
+				img.Save(output, ImageFormat.Png);
+			}
 		}
 	}
 
