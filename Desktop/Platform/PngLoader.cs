@@ -33,4 +33,26 @@ namespace GameStack.Content {
 		}
 
 	}
+
+//	public static class JpegLoader {
+//		public static byte[] Decode (Stream stream, out Size size, out PixelFormat pxFormat) {
+//			var img = (Bitmap)Image.FromStream(stream);
+//			var bmd = img.LockBits(new Rectangle(0, 0, img.Width, img.Height), System.Drawing.Imaging.ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+//			var data = new byte[bmd.Stride * bmd.Height];
+//			Marshal.Copy(bmd.Scan0, data, 0, data.Length);
+//			img.UnlockBits(bmd);
+//
+//			for (int i = 0; i < data.Length; i += 4) {
+//				byte swap = data[i];
+//				data[i] = data[i + 2];
+//				data[i + 2] = swap;
+//				data[i + 3] = 255;
+//			}
+//
+//			size = new Size(img.Width, img.Height);
+//			pxFormat = PixelFormat.Rgba;
+//
+//			return data;
+//		}
+//	}
 }

@@ -30,9 +30,9 @@ namespace GameStack.Pipeline.Atlas
 
             var sprites = new Dictionary<string,SpriteDefinition>();
 			Image resultSprite = generateAutomaticLayout(sprites);
-			// TODO: Uncomment this if mono premultiply behavior changes
-//			if(!noPreMultiply)
-//	            resultSprite = ImageHelper.PremultiplyAlpha(resultSprite);
+			// Mono on linux premultiplies images automatically; only do this if running on mac
+			if (Extensions.IsRunningOnMac && !noPreMultiply)
+	            resultSprite = ImageHelper.PremultiplyAlpha(resultSprite);
             resultSprite.Save(sheetStream, imageFormat);
 
 			atlasWriter.Write(layoutProp.filterMode);
@@ -66,21 +66,7 @@ namespace GameStack.Pipeline.Atlas
 				Console.WriteLine(maxWidth + " " + maxHeight);
 				if ((maxWidth > 0 && img.Width > maxWidth) || (maxHeight > 0 && img.Height > maxHeight)) {
 					img.Dispose();
-					var wand = GraphicsMagick.NewWand();
-					GraphicsMagick.ReadImageBlob(wand, File.OpenRead(layoutProp.inputFilePaths[i]));
-
-					var maxAspect = (float)maxWidth / (float)maxHeight;
-					var imgAspect = (float)GraphicsMagick.GetWidth(wand) / (float)GraphicsMagick.GetHeight(wand);
-
-					if (imgAspect > maxAspect)
-						GraphicsMagick.ResizeImage(wand, (IntPtr)maxWidth, (IntPtr)Math.Round(maxWidth / imgAspect), GraphicsMagick.Filter.Box, 1);
-					else
-						GraphicsMagick.ResizeImage(wand, (IntPtr)Math.Round(maxHeight * imgAspect), (IntPtr)maxHeight, GraphicsMagick.Filter.Box, 1);
-					var newImgBlob = GraphicsMagick.WriteImageBlob(wand);
-
-					using (var ms = new MemoryStream(newImgBlob)) {
-						img = Image.FromStream(ms);
-					}
+					img = ImageHelper.ResizeImage(layoutProp.inputFilePaths[i], new Size(maxWidth, maxHeight));
 				}
 
                 images.Add(i, img);

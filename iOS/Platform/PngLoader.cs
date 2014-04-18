@@ -6,7 +6,7 @@ using OpenTK.Graphics.ES20;
 using GameStack.Bindings;
 
 namespace GameStack.Content {
-	public class PngLoader {
+	public static class PngLoader {
 		public static byte[] Decode (Stream stream, out Size size, out PixelFormat pxFormat) {
 			var buf = new byte[stream.Length];
 			stream.Read(buf, 0, buf.Length);
@@ -28,6 +28,16 @@ namespace GameStack.Content {
 			size = new Size(w, h);
 			pxFormat = PixelFormat.Rgba;
 			return buf;
+		}
+	}
+
+	public static class JpegLoader {
+		public static byte[] Decode (Stream stream, out Size size, out PixelFormat pxFormat) {
+
+
+			size = new Size();
+			pxFormat = PixelFormat.Rgba;
+			return null;
 		}
 	}
 }

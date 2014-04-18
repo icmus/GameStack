@@ -185,7 +185,7 @@ namespace GameStack {
 				this.Initialize(false);
 
 				_size = new Vector2(bounds.Width, bounds.Height);
-				_event.Enqueue(new Resize(_size));
+				_event.Enqueue(new Resize(_size, PixelScale));
 			}
 		}
 
@@ -253,10 +253,10 @@ namespace GameStack {
 				_alContext.MakeCurrent();
 				this.MultipleTouchEnabled = false;
 				_event = new FrameArgs();
-				_event.Enqueue(new Start(_size));
+				_event.Enqueue(new Start(_size, PixelScale));
 			}
 
-			_event.Enqueue(new Resize(_size));
+			_event.Enqueue(new Resize(_size, PixelScale));
 		}
 
 		void DestroyContext () {

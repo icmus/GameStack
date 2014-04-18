@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
 
@@ -20,6 +21,30 @@ namespace GameStack.Pipeline {
 			}
 			bmp.UnlockBits(data);
 			return (Image)bmp;
+		}
+
+
+		public static Image ResizeImage (string path, Size maxSize) {
+			// Mono for mac uses a better system.drawing implementation; fall back to graphicsmagick on linux
+			if (Extensions.IsRunningOnMac) {
+				return null;
+			} else {
+				var wand = GraphicsMagick.NewWand();
+				GraphicsMagick.ReadImageBlob(wand, File.OpenRead(path));
+
+				var maxAspect = (float)maxSize.Width / (float)maxSize.Height;
+				var imgAspect = (float)GraphicsMagick.GetWidth(wand) / (float)GraphicsMagick.GetHeight(wand);
+
+				if (imgAspect > maxAspect)
+					GraphicsMagick.ResizeImage(wand, (IntPtr)maxSize.Width, (IntPtr)Math.Round(maxSize.Width / imgAspect), GraphicsMagick.Filter.Box, 1);
+				else
+					GraphicsMagick.ResizeImage(wand, (IntPtr)Math.Round(maxSize.Height * imgAspect), (IntPtr)maxSize.Height, GraphicsMagick.Filter.Box, 1);
+				var newImgBlob = GraphicsMagick.WriteImageBlob(wand);
+
+				using (var ms = new MemoryStream(newImgBlob)) {
+					return Image.FromStream(ms);
+				}
+			}
 		}
 	}
 }

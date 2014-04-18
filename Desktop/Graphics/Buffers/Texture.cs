@@ -12,6 +12,7 @@ using GameStack.Content;
 using OpenTK.Graphics.OpenGL;
 #else
 using OpenTK.Graphics.ES20;
+using GenerateMipmapTarget = OpenTK.Graphics.ES20.All;
 #endif
 
 namespace GameStack.Graphics {
@@ -59,29 +60,15 @@ namespace GameStack.Graphics {
 		}
 
 		public Texture (Stream stream, string format = ".png", TextureSettings settings = null, bool leaveOpen = true) {
+			byte[] data = null;
 			switch (format.ToLower()) {
 			case ".png":
-				this.Initialize(PngLoader.Decode(stream, out _size, out _format), settings);
+				data = PngLoader.Decode(stream, out _size, out _format);
 				break;
 			default:
-				var img = (Bitmap)Image.FromStream(stream);
-				var bmd = img.LockBits(new Rectangle(0, 0, img.Width, img.Height), System.Drawing.Imaging.ImageLockMode.ReadOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-				byte[] data = new byte[bmd.Stride * bmd.Height];
-				Marshal.Copy(bmd.Scan0, data, 0, data.Length);
-				img.UnlockBits(bmd);
-
-				for (int i = 0; i < data.Length; i += 4) {
-					byte swap = data[i];
-					data[i] = data[i + 2];
-					data[i + 2] = swap;
-					data[i + 3] = 255;
-				}
-
-				_size = new Size(img.Width, img.Height);
-				_format = PixelFormat.Rgba;
-				this.Initialize(data, settings);
-				break;
+				throw new NotSupportedException("Unsupported image format: " + format);
 			}
+			this.Initialize(data, settings);
 
 			if (!leaveOpen)
 				stream.Dispose();

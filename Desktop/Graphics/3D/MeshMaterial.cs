@@ -75,13 +75,16 @@ namespace GameStack.Graphics {
 					GL.Disable(EnableCap.CullFace);
 			}
 
+			#if __DESKTOP__
 			if (_isWireframeEnabled) {
 				GL.GetInteger(GetPName.PolygonMode, _polygonState);
 				GL.PolygonMode(MaterialFace.Front, PolygonMode.Line);
 				if (_isTwoSided)
 					GL.PolygonMode(MaterialFace.Back, PolygonMode.Line);
 			}
+			#endif
 
+			#if __DESKTOP__
 			GL.GetInteger(GetPName.BlendSrc, out _blendSrcState);
 			GL.GetInteger(GetPName.BlendDst, out _blendDstState);
 			if (_blendMode == BlendMode.Additive) {
@@ -89,6 +92,15 @@ namespace GameStack.Graphics {
 				GL.GetInteger(GetPName.BlendDst, out _blendDstState);
 				GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.One);
 			}
+			#else
+			GL.GetInteger(GetPName.BlendSrcRgb, out _blendSrcState);
+			GL.GetInteger(GetPName.BlendDstRgb, out _blendDstState);
+			if (_blendMode == BlendMode.Additive) {
+				GL.GetInteger(GetPName.BlendSrcRgb, out _blendSrcState);
+				GL.GetInteger(GetPName.BlendDstRgb, out _blendDstState);
+				GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.One);
+			}
+			#endif
 
 			var shader = this.Shader;
 			shader.Uniform("ColorAmbient", _colorAmbient);
@@ -117,11 +129,13 @@ namespace GameStack.Graphics {
 			}
 			if (_isTwoSided && _cullingState)
 				GL.Enable(EnableCap.CullFace);
+			#if __DESKTOP__
 			if (_isWireframeEnabled) {
 				GL.PolygonMode(MaterialFace.Front, (PolygonMode)_polygonState[0]);
 				if (_isTwoSided)
 					GL.PolygonMode(MaterialFace.Back, (PolygonMode)_polygonState[1]);
 			}
+			#endif
 			if (_blendMode == BlendMode.Additive)
 				GL.BlendFunc((BlendingFactorSrc)_blendSrcState, (BlendingFactorDest)_blendDstState);
 

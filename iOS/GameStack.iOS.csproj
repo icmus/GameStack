@@ -50,13 +50,14 @@
     <Folder Include="Logic\" />
     <Folder Include="Math\" />
     <Folder Include="Sound\" />
+    <Folder Include="Logic\Source\" />
+    <Folder Include="Logic\Scenes\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Platform\iOSGameView.cs" />
     <Compile Include="Platform\Music.cs" />
     <Compile Include="Platform\iOSMusicChannel.cs" />
-    <Compile Include="Platform\PngLoader.cs" />
     <Compile Include="..\Desktop\Platform\Assets.cs">
       <Link>Platform\Assets.cs</Link>
     </Compile>
@@ -192,9 +193,6 @@
     <Compile Include="..\Desktop\Logic\IUpdater.cs">
       <Link>Logic\IUpdater.cs</Link>
     </Compile>
-    <Compile Include="..\Desktop\Logic\Scene.cs">
-      <Link>Logic\Scene.cs</Link>
-    </Compile>
     <Compile Include="..\Desktop\Logic\Coroutines\Coroutine.cs">
       <Link>Logic\Coroutines\Coroutine.cs</Link>
     </Compile>
@@ -279,6 +277,19 @@
     <Compile Include="..\Desktop\Graphics\3D\Node.cs">
       <Link>Graphics\3D\Node.cs</Link>
     </Compile>
+    <Compile Include="..\Desktop\Logic\Scenes\Scene.cs">
+      <Link>Logic\Scenes\Scene.cs</Link>
+    </Compile>
+    <Compile Include="..\Desktop\Logic\Scenes\SceneCrossfader.cs">
+      <Link>Logic\Scenes\SceneCrossfader.cs</Link>
+    </Compile>
+    <Compile Include="..\Desktop\Graphics\Shaders\MeshShader.cs">
+      <Link>Graphics\Shaders\MeshShader.cs</Link>
+    </Compile>
+    <Compile Include="..\Desktop\Graphics\3D\Lighting.cs">
+      <Link>Graphics\3D\Lighting.cs</Link>
+    </Compile>
+    <Compile Include="Platform\PngLoader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>

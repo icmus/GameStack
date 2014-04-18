@@ -8,8 +8,7 @@ namespace GameStack.Graphics {
 		}
 
 #if __DESKTOP__
-		const string VertSrc = @"
-#version 120
+		const string VertSrc = @"#version 120
 
 uniform mat4 WorldViewProjection;
 
@@ -28,8 +27,7 @@ void main() {
 }
 ";
 
-		const string FragSrc = @"
-#version 120
+		const string FragSrc = @"#version 120
 
 uniform sampler2D Texture;
 uniform vec4 Tint;

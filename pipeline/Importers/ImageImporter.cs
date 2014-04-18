@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace GameStack.Pipeline {
-	[ContentType (".png .jpg .jpeg", ".*")]
+	[ContentType (".png .jpg .jpeg", ".png")]
 	public class ImageImporter : ContentImporter {
 		public override void Import (Stream input, Stream output, string filename) {
 			var ser = new JsonSerializer();
@@ -21,16 +21,11 @@ namespace GameStack.Pipeline {
 			} else
 				metadata = new ImageMetadata();
 
-			if (filename.EndsWith("jpeg") || filename.EndsWith("jpg"))
-				input.CopyTo(output);
-			else {
-				var img = Image.FromStream(input);
-			// TODO: Uncomment this if mono premultiply behavior changes.
-	//			if (!metadata.NoPreMultiply) {
-	//				img = ImageHelper.PremultiplyAlpha(img);
-	//			}
-				img.Save(output, ImageFormat.Png);
-			}
+			var img = Image.FromStream(input);
+			// Mono on linux premultiplies images automatically, only do this if running on mac.
+			if (Extensions.IsRunningOnMac && !metadata.NoPreMultiply)
+				img = ImageHelper.PremultiplyAlpha(img);
+			img.Save(output, ImageFormat.Png);
 		}
 	}
 

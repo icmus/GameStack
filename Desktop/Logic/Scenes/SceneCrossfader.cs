@@ -1,6 +1,10 @@
 using System;
 using OpenTK;
+#if __DESKTOP__
 using OpenTK.Graphics.OpenGL;
+#else
+using OpenTK.Graphics.ES20;
+#endif
 using GameStack.Graphics;
 
 

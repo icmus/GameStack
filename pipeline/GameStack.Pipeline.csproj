@@ -94,6 +94,7 @@
     <Compile Include="Atlas\AtlasBuilder.cs" />
     <Compile Include="Importers\MusicImporter.cs" />
     <Compile Include="Images\GraphicsMagick\GraphicsMagick.cs" />
+    <Compile Include="Extensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
