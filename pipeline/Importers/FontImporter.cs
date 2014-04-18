@@ -137,13 +137,9 @@ namespace GameStack.Pipeline {
 						using (var tw = new TarWriter(s)) {
 							tw.Write(ms, ms.Length, "font.atlas");
 							using (var ts = new MemoryStream()) {
-								// Mono on linux premultiplies images automatically; only do this if running on mac.
-								if (Extensions.IsRunningOnMac) {
-									using (var texture = ImageHelper.PremultiplyAlpha(img)) {
-										texture.Save(ts, ImageFormat.Png);
-									}
-								} else
-									img.Save(ts, ImageFormat.Png);
+								using (var texture = ImageHelper.PremultiplyAlpha(img)) {
+									texture.Save(ts, ImageFormat.Png);
+								}
 
 								ts.Position = 0;
 								tw.Write(ts, ts.Length, "font.png");

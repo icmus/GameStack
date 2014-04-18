@@ -10,10 +10,10 @@ using Newtonsoft.Json;
 namespace GameStack.Pipeline {
 	[ContentType (".png .jpg .jpeg", ".png")]
 	public class ImageImporter : ContentImporter {
-		public override void Import (Stream input, Stream output, string filename) {
+		public override void Import (Stream input, Stream output, string filepath) {
 			var ser = new JsonSerializer();
 			ImageMetadata metadata = null;
-			var metaPath = filename + ".meta";
+			var metaPath = filepath + ".meta";
 			if (File.Exists(metaPath)) {
 				using (var sr = new StreamReader(metaPath)) {
 					metadata = ser.Deserialize<ImageMetadata>(new JsonTextReader(sr));
@@ -23,8 +23,10 @@ namespace GameStack.Pipeline {
 
 			var img = Image.FromStream(input);
 			// Mono on linux premultiplies images automatically, only do this if running on mac.
-			if (Extensions.IsRunningOnMac && !metadata.NoPreMultiply)
+			if (!metadata.NoPreMultiply)
 				img = ImageHelper.PremultiplyAlpha(img);
+			if (img.Width > metadata.MaxWidth || img.Height > metadata.MaxHeight)
+				img = ImageHelper.ResizeImage(img, filepath, new Size(metadata.MaxWidth, metadata.MaxHeight));
 			img.Save(output, ImageFormat.Png);
 		}
 	}
@@ -32,5 +34,10 @@ namespace GameStack.Pipeline {
 	class ImageMetadata {
 		[JsonProperty("noPreMultiply")]
 		public bool NoPreMultiply { get; set; }
+
+		[JsonProperty("maxWidth")]
+		public int MaxWidth { get; set; }
+		[JsonProperty("maxHeight")]
+		public int MaxHeight { get; set; }
 	}
 }

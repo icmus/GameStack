@@ -6,6 +6,10 @@ using System.Drawing.Imaging;
 namespace GameStack.Pipeline {
 	public static class ImageHelper {
 		public unsafe static Image PremultiplyAlpha (Image img) {
+			// Mono on linux premultiplies images automatically, only do this if running on mac.
+			if (!Extensions.IsRunningOnMac)
+				return img;
+
 			var bmp = new Bitmap(img);
 			var data = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
 			var p = (byte*)data.Scan0;
@@ -20,15 +24,22 @@ namespace GameStack.Pipeline {
 				p += 4;
 			}
 			bmp.UnlockBits(data);
-			return (Image)bmp;
+			return bmp;
 		}
 
 
-		public static Image ResizeImage (string path, Size maxSize) {
+		public static Image ResizeImage (Image img, string path, Size maxSize) {
 			// Mono for mac uses a better system.drawing implementation; fall back to graphicsmagick on linux
 			if (Extensions.IsRunningOnMac) {
-				return null;
+				var maxAspect = (float)maxSize.Width / (float)maxSize.Height;
+				var imgAspect = (float)img.Width / (float)img.Height;
+
+				if (imgAspect > maxAspect)
+					return new Bitmap(img, new Size(maxSize.Width, (int)Math.Round(maxSize.Width / imgAspect)));
+				else
+					return new Bitmap(img, new Size((int)Math.Round(maxSize.Height * imgAspect), maxSize.Height));
 			} else {
+				img.Dispose();
 				var wand = GraphicsMagick.NewWand();
 				GraphicsMagick.ReadImageBlob(wand, File.OpenRead(path));
 

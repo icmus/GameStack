@@ -32,8 +32,8 @@ namespace GameStack.Pipeline {
 				distanceBetweenImages = metadata.Padding,
 				marginWidth = metadata.Margin,
 				powerOfTwo = metadata.PowerOfTwo,
-				maxSpriteWidth = metadata.MaxSpriteWidth > 0 ? metadata.MaxSpriteWidth : 65535,
-				maxSpriteHeight = metadata.MaxSpriteHeight > 0 ? metadata.MaxSpriteHeight : 65535,
+				maxSpriteWidth = metadata.MaxSpriteWidth > 0 ? metadata.MaxSpriteWidth : 16384,
+				maxSpriteHeight = metadata.MaxSpriteHeight > 0 ? metadata.MaxSpriteHeight : 16384,
 				filterMode = metadata.FilterMode,
 			};
 			var sheetMaker = new AtlasBuilder(lp);

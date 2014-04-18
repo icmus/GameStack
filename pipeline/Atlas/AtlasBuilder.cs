@@ -30,8 +30,7 @@ namespace GameStack.Pipeline.Atlas
 
             var sprites = new Dictionary<string,SpriteDefinition>();
 			Image resultSprite = generateAutomaticLayout(sprites);
-			// Mono on linux premultiplies images automatically; only do this if running on mac
-			if (Extensions.IsRunningOnMac && !noPreMultiply)
+			if (!noPreMultiply)
 	            resultSprite = ImageHelper.PremultiplyAlpha(resultSprite);
             resultSprite.Save(sheetStream, imageFormat);
 
@@ -63,10 +62,10 @@ namespace GameStack.Pipeline.Atlas
 
                 Image img = Image.FromFile(layoutProp.inputFilePaths[i]);
 				int maxWidth = layoutProp.maxSpriteWidth, maxHeight = layoutProp.maxSpriteHeight;
-				Console.WriteLine(maxWidth + " " + maxHeight);
 				if ((maxWidth > 0 && img.Width > maxWidth) || (maxHeight > 0 && img.Height > maxHeight)) {
+					var newImg = ImageHelper.ResizeImage(img, layoutProp.inputFilePaths[i], new Size(maxWidth, maxHeight));
 					img.Dispose();
-					img = ImageHelper.ResizeImage(layoutProp.inputFilePaths[i], new Size(maxWidth, maxHeight));
+					img = newImg;
 				}
 
                 images.Add(i, img);

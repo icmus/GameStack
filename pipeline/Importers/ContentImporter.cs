@@ -76,7 +76,7 @@ namespace GameStack.Pipeline {
 			}
 		}
 
-		public virtual void Import (Stream iStream, Stream oStream, string filename) {
+		public virtual void Import (Stream iStream, Stream oStream, string filepath) {
 			throw new NotImplementedException();
 		}
 		public virtual void Import (string iDir, Stream oStream) {
