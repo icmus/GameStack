@@ -31,11 +31,6 @@ namespace GameStack
 
 		void IHandler<Start>.Handle (FrameArgs frame, Start e)
 		{
-			_prevTexture = new Texture(new System.Drawing.Size((int)e.Size.X, (int)e.Size.Y));
-			_nextTexture = new Texture(new System.Drawing.Size((int)e.Size.X, (int)e.Size.Y));
-			_prevFBO = new FrameBuffer(_prevTexture);
-			_nextFBO = new FrameBuffer(_nextTexture);
-
 			_cam = new Camera2D(e.Size, 2);
 			_quad = new Quad(new Vector4(0, 0, e.Size.X, e.Size.Y), Vector4.One);
 			_mat = new SpriteMaterial(new SpriteShader(), null);
@@ -65,6 +60,15 @@ namespace GameStack
 			if (_duration <= 0)
 				Skip();
 			else {
+				if (_prevTexture == null)
+					_prevTexture = new Texture(new System.Drawing.Size((int)startArgs.Size.X, (int)startArgs.Size.Y));
+				if (_nextTexture == null)
+					_nextTexture = new Texture(new System.Drawing.Size((int)startArgs.Size.X, (int)startArgs.Size.Y));
+				if (_prevFBO == null)
+					_prevFBO = new FrameBuffer(_prevTexture);
+				if (_nextFBO == null)
+					_nextFBO = new FrameBuffer(_nextTexture);
+
 				using (_prevFBO.Begin()) {
 					if (prevScene != null)
 						prevScene.OnRender(this, frameArgs);
@@ -84,7 +88,25 @@ namespace GameStack
 			if (!fading)
 				return;
 
+			FreeResources();
 			fading = false;
+		}
+
+		void FreeResources ()
+		{
+			if (_prevFBO != null)
+				_prevFBO.Dispose();
+			if (_nextFBO != null)
+				_nextFBO.Dispose();
+			if (_prevTexture != null)
+				_prevTexture.Dispose();
+			if (_nextTexture != null)
+				_nextTexture.Dispose();
+
+			_prevFBO = null;
+			_nextFBO = null;
+			_prevTexture = null;
+			_nextTexture = null;
 		}
 
 		public void Update (FrameArgs e)
@@ -143,10 +165,7 @@ namespace GameStack
 
 		public override void Dispose ()
 		{
-			_prevFBO.Dispose();
-			_nextFBO.Dispose();
-			_prevTexture.Dispose();
-			_nextTexture.Dispose();
+			FreeResources();
 
 			if (_scene != null)
 				_scene.Dispose();
