@@ -64,7 +64,7 @@ namespace GameStack.Graphics {
 						using (var sheetStream = new MemoryStream((int)tr.FileInfo.SizeInBytes)) {
 							tr.Read(sheetStream);
 							sheetStream.Position = 0;
-							var tex = new Texture(sheetStream, ".png", new TextureSettings {
+							var tex = new Texture(sheetStream, new TextureSettings {
 								MagFilter = filterMode > 0 ? TextureFilter.Linear : TextureFilter.Nearest,
 								MinFilter = filterMode == 1 ? TextureFilter.Linear : filterMode == 2 ? TextureFilter.Trilinear : TextureFilter.Nearest,
 							});

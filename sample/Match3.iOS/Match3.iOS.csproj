@@ -10,6 +10,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Samples.Match3</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="BeforeBuild" command="mono ../../bin/import.exe ../content/ ../assets/" workingdir="${ProjectDir}" />
+      </CustomCommands>
+    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -26,13 +31,7 @@
     <MtouchI18n>
     </MtouchI18n>
     <MtouchArch>ARMv7</MtouchArch>
-    <MtouchProfiling>true</MtouchProfiling>
     <MtouchUseSGen>true</MtouchUseSGen>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="BeforeBuild" command="mono ../../bin/import.exe ../content/ ../assets/" workingdir="${ProjectDir}" />
-      </CustomCommands>
-    </CustomCommands>
     <AssemblyName>Match3iOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">

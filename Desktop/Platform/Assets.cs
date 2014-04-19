@@ -3,7 +3,7 @@ using System.IO;
 
 namespace GameStack {
 	public static class Assets {
-		const string AssetBasePath = "assets/";
+		const string AssetBasePath = "Assets/";
 
 		public static Stream ResolveStream (string path) {
 			return File.OpenRead (ResolvePath (path));

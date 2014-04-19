@@ -30,14 +30,4 @@ namespace GameStack.Content {
 			return buf;
 		}
 	}
-
-	public static class JpegLoader {
-		public static byte[] Decode (Stream stream, out Size size, out PixelFormat pxFormat) {
-
-
-			size = new Size();
-			pxFormat = PixelFormat.Rgba;
-			return null;
-		}
-	}
 }

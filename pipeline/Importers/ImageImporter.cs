@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace GameStack.Pipeline {
-	[ContentType (".png .jpg .jpeg", ".png")]
+	[ContentType (".png .jpg .jpeg", ".texture")]
 	public class ImageImporter : ContentImporter {
 		public override void Import (Stream input, Stream output, string filepath) {
 			var ser = new JsonSerializer();
@@ -32,6 +32,11 @@ namespace GameStack.Pipeline {
 	}
 
 	class ImageMetadata {
+		public ImageMetadata()
+		{
+			MaxWidth = MaxHeight = 16384;
+		}
+
 		[JsonProperty("noPreMultiply")]
 		public bool NoPreMultiply { get; set; }
 

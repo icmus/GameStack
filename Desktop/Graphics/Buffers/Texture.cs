@@ -55,19 +55,12 @@ namespace GameStack.Graphics {
 		}
 
 		public Texture (string path, TextureSettings settings = null)
-			: this(Assets.ResolveStream(path), Path.GetExtension(path), settings, false)
+			: this(Assets.ResolveStream(path), settings, false)
 		{
 		}
 
-		public Texture (Stream stream, string format = ".png", TextureSettings settings = null, bool leaveOpen = true) {
-			byte[] data = null;
-			switch (format.ToLower()) {
-			case ".png":
-				data = PngLoader.Decode(stream, out _size, out _format);
-				break;
-			default:
-				throw new NotSupportedException("Unsupported image format: " + format);
-			}
+		public Texture (Stream stream, TextureSettings settings = null, bool leaveOpen = true) {
+			byte[] data = PngLoader.Decode(stream, out _size, out _format);
 			this.Initialize(data, settings);
 
 			if (!leaveOpen)
@@ -99,9 +92,9 @@ namespace GameStack.Graphics {
 			GL.PixelStore(PixelStoreParameter.UnpackAlignment, 1);
 			GL.ActiveTexture(TextureUnit.Texture0);
 			GL.BindTexture(TextureTarget.Texture2D, _handle);
-			if (buf == null) {
+			if (buf == null)
 				GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height, 0, _format, PixelType.UnsignedByte, IntPtr.Zero);
-			} else {
+			else {
 				GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height,
 					0, _format, PixelType.UnsignedByte, buf);
 				if (_settings.MinFilter == TextureFilter.Trilinear)

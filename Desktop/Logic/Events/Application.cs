@@ -6,7 +6,7 @@ namespace GameStack {
 		public Vector2 Size { get; private set; }
 		public float PixelScale { get; private set; }
 
-		internal Start (Vector2 size, float pixelScale) {
+		public Start (Vector2 size, float pixelScale) {
 			this.Size = size;
 			this.PixelScale = pixelScale;
 		}

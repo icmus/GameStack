@@ -13,7 +13,7 @@ ASSETS=$2
 
 if [ -z "$TGT" ]; then exit; fi
 cp -f "$SRC"/../lib/liblodepng.* "$SRC"/../lib/*.config "$TGT"
-mkdir -p "$TGT"/assets
+mkdir -p "$TGT"/Assets
 for var in ${@:2}; do
-    mono "$SRC"/../bin/import.exe "$var" "$TGT"/assets
+    mono "$SRC"/../bin/import.exe "$var" "$TGT"/Assets
 done
