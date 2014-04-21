@@ -13,6 +13,7 @@ namespace GameStack {
 		bool IsPaused { get; }
 
 		void EnableGesture (GestureType type);
+		void LoadFrame ();
 	}
 
 	public interface IGameViewEventHandler {

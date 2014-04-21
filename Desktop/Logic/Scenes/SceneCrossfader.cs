@@ -77,10 +77,11 @@ namespace GameStack
 				}
 			}
 
-			if (prevScene != null) {
+			if (prevScene != null)
 				prevScene.Dispose();
-				_scene.Start(this, startArgs);
-			}
+
+			View.LoadFrame();
+			_scene.Start(this, startArgs);
 		}
 
 		public void Skip ()
