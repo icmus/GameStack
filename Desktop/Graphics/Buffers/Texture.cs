@@ -47,7 +47,7 @@ namespace GameStack.Graphics {
 		Vector2 _texelSize;
 		TextureSettings _settings;
 
-		public Texture (Size size, PixelFormat format = PixelFormat.Rgba, TextureSettings settings = null) {
+		public Texture (Size size, TextureSettings settings = null, PixelFormat format = PixelFormat.Rgba) {
 			_size = size;
 			_format = format;
 
@@ -108,6 +108,34 @@ namespace GameStack.Graphics {
 
 			_texelSize = new Vector2(1f / _size.Width, 1f / _size.Height);
 		}
+
+		public void GenerateMipmaps () {
+			if (_settings.MinFilter != TextureFilter.Trilinear)
+				throw new InvalidOperationException("Texture filter does not use mipmaps.");
+
+			GL.ActiveTexture(TextureUnit.Texture0);
+			GL.BindTexture(TextureTarget.Texture2D, _handle);
+			GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
+			GL.BindTexture(TextureTarget.Texture2D, 0);
+		}
+
+		public void Save (string path) {
+			using (var stream = Assets.ResolveUserStream(path, FileMode.Create, FileAccess.Write)) {
+				Save(stream);
+			}
+		}
+
+		public void Save (Stream stream) {
+			GL.ActiveTexture(TextureUnit.Texture0);
+			GL.BindTexture(TextureTarget.Texture2D, _handle);
+			var img = new byte[_size.Width * _size.Height * 4];
+			GL.GetTexImage(TextureTarget.Texture2D, 0, PixelFormat.Rgba, PixelType.UnsignedByte, img);
+			var buf = PngLoader.Encode(img, Size);
+			GL.BindTexture(TextureTarget.Texture2D, 0);
+
+			stream.Write(buf, 0, buf.Length);
+		}
+
 
 		public void Dispose () {
 			GL.DeleteTexture((int)this.Handle);

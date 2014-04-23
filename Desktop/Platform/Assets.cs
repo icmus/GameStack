@@ -13,7 +13,7 @@ namespace GameStack {
 			return File.OpenRead (ResolvePath (path));
 		}
 
-		public static string ResolvePath (string path) {
+		public static string ResolvePath (string path = "") {
 			return Path.Combine (AssetBasePath, path);
 		}
 
@@ -31,7 +31,7 @@ namespace GameStack {
 			return File.Open(Path.Combine(_userPath, path), mode, access);
 		}
 
-		public static string ResolveUserPath (string path) {
+		public static string ResolveUserPath (string path = "") {
 			if (_userPath == null)
 				throw new InvalidOperationException("Must call SetAppInfo first!");
 

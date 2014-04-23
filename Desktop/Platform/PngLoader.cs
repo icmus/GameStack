@@ -19,7 +19,7 @@ namespace GameStack.Content {
 		public static byte[] Decode (byte[] pngData, out Size size, out PixelFormat pxFormat) {
 			IntPtr p;
 			int w, h;
-			var error = LibLodePng.Decode32(out p, out w, out h, pngData, pngData.Length);
+			var error = LibLodePng.Decode32(out p, out w, out h, pngData, (IntPtr)pngData.Length);
 			if (error != 0) {
 				throw new ContentException("Failed to load png");
 				//throw new ContentException ("Error decoding PNG: " + LibLodePng.ErrorText (error));
@@ -32,6 +32,25 @@ namespace GameStack.Content {
 			return buf;
 		}
 
+		public static byte[] Encode (Stream stream, Size size) {
+			var buf = new byte[stream.Length];
+			stream.Read(buf, 0, buf.Length);
+			stream.Close();
+			return Encode(buf, size);
+		}
+
+		public static byte[] Encode (byte[] imgData, Size size) {
+			IntPtr p;
+			IntPtr ps;
+			var error = LibLodePng.Encode32(out p, out ps, imgData, size.Width, size.Height);
+			if (error != 0)
+				throw new ContentException("Failed to save png");
+
+			var buf = new byte[(long)ps];
+			Marshal.Copy(p, buf, 0, buf.Length);
+			LibLodePng.Free(p);
+			return buf;
+		}
 	}
 
 //	public static class JpegLoader {
