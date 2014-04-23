@@ -291,6 +291,10 @@ namespace GameStack {
 			_glContext.PresentRenderBuffer((uint)RenderbufferTarget.Renderbuffer);
 		}
 
+		public void LoadFrame () {
+
+		}
+
 		Vector2 NormalizeToViewport (PointF point) {
 			return new Vector2(
 				2f * point.X / _size.X - 1f,
