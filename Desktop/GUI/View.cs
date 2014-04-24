@@ -215,17 +215,13 @@ namespace GameStack.Gui {
 		}
 
 		public Matrix4 GetCumulativeTransformInv () {
-			var result = _transformInv;
-
-			if (Parent != null) {
-				var parentTransformInv = Parent.GetCumulativeTransformInv();
-				Matrix4.Mult(ref parentTransformInv, ref result, out result);
-			}
+			Matrix4 result = Parent != null ? Parent.GetCumulativeTransformInv() : Matrix4.Identity;
 
 			result.M41 -= _margins.X;
 			result.M42 -= _margins.W;
 			result.M43 -= this.ZDepth;
 
+			Matrix4.Mult(ref result, ref _transformInv, out result);
 			return result;
 		}
 
@@ -306,7 +302,7 @@ namespace GameStack.Gui {
 
 		public bool ContainsPoint (Vector2 point) {
 			point = Vector3.Transform(new Vector3(point), GetCumulativeTransformInv()).Xy;
-			return point.X > 0 && point.X < _size.Width && point.Y > 0 && point.Y < _size.Height;
+			return point.X >= 0 && point.X < _size.Width && point.Y >= 0 && point.Y < _size.Height;
 		}
 
 		public bool Overlaps (View other) {
