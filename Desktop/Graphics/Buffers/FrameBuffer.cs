@@ -2,8 +2,10 @@
 
 using System;
 using System.Drawing;
+using System.IO;
 using OpenTK;
 using OpenTK.Graphics;
+using GameStack.Content;
 
 #if __DESKTOP__
 using OpenTK.Graphics.OpenGL;
@@ -63,6 +65,28 @@ namespace GameStack.Graphics {
 		protected override void OnEnd () {
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _oldfb);
 			GL.Viewport(_oldViewport[0], _oldViewport[1], _oldViewport[2], _oldViewport[3]);
+		}
+
+		public void Save (string path) {
+			if (ScopedObject.Find<FrameBuffer>() != this)
+				throw new InvalidOperationException("FBO must be active to save its contents.");
+
+			using (var stream = Assets.ResolveUserStream(path, FileMode.Create, FileAccess.Write)) {
+				Save(stream);
+			}
+		}
+
+		public void Save (Stream stream) {
+			if (ScopedObject.Find<FrameBuffer>() != this)
+				throw new InvalidOperationException("FBO must be active to save its contents.");
+
+			var img = new byte[_size.Width * _size.Height * 4];
+
+			GL.PixelStore(PixelStoreParameter.PackAlignment, 4);
+			GL.ReadPixels(0, 0, _size.Width, _size.Height, PixelFormat.Rgba, PixelType.UnsignedByte, img);
+			var buf = PngLoader.Encode(img, Size);
+
+			stream.Write(buf, 0, buf.Length);
 		}
 
 		public override void Dispose () {

@@ -119,36 +119,6 @@ namespace GameStack.Graphics {
 			GL.BindTexture(TextureTarget.Texture2D, 0);
 		}
 
-		public void Save (string path) {
-			using (var stream = Assets.ResolveUserStream(path, FileMode.Create, FileAccess.Write)) {
-				Save(stream);
-			}
-		}
-
-		public void Save (Stream stream) {
-			var img = new byte[_size.Width * _size.Height * 4];
-			byte[] buf = null;
-
-			#if __DESKTOP__
-			GL.ActiveTexture(TextureUnit.Texture0);
-			GL.BindTexture(TextureTarget.Texture2D, _handle);
-			GL.GetTexImage(TextureTarget.Texture2D, 0, PixelFormat.Rgba, PixelType.UnsignedByte, img);
-			buf = PngLoader.Encode(img, Size);
-			GL.BindTexture(TextureTarget.Texture2D, 0);
-			#else
-//			using (var fbo = new FrameBuffer(this)) {
-//				using (fbo.Begin()) {
-					GL.PixelStore(PixelStoreParameter.PackAlignment, 4);
-					GL.ReadPixels(0, 0, _size.Width, _size.Height, PixelFormat.Rgba, PixelType.UnsignedByte, img);
-					buf = PngLoader.Encode(img, Size);
-//				}
-//			}
-			#endif
-
-			stream.Write(buf, 0, buf.Length);
-		}
-
-
 		public void Dispose () {
 			GL.DeleteTexture((int)this.Handle);
 		}
