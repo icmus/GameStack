@@ -9,11 +9,7 @@ namespace GameStack {
 		static string _userPath;
 
 		public static Stream ResolveStream (string path) {
-			return File.OpenRead (ResolvePath (path));
-		}
-
-		public static string ResolvePath (string path = "") {
-			return Path.Combine (AssetBasePath, path);
+			return File.OpenRead(Path.Combine(AssetBasePath, path));
 		}
 
 		public static void SetAppInfo (string appName, string orgName = "") {
