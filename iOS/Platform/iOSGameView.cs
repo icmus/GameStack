@@ -22,6 +22,7 @@ namespace GameStack {
 		CADisplayLink _link;
 		double _lastTime = -1.0;
 		FrameArgs _event;
+		int _loadFrame;
 
 		[Export("layerClass")]
 		public static Class LayerClass () {
@@ -104,21 +105,22 @@ namespace GameStack {
 						point = o.LocationInView(o.View);
 						SwipeDirection dir = SwipeDirection.Left;
 						switch (o.Direction) {
-							case UISwipeGestureRecognizerDirection.Left:
-								dir = SwipeDirection.Left;
-								break;
-							case UISwipeGestureRecognizerDirection.Right:
-								dir = SwipeDirection.Right;
-								break;
-							case UISwipeGestureRecognizerDirection.Up:
-								dir = SwipeDirection.Up;
-								break;
-							case UISwipeGestureRecognizerDirection.Down:
-								dir = SwipeDirection.Down;
-								break;
+						case UISwipeGestureRecognizerDirection.Left:
+							dir = SwipeDirection.Left;
+							break;
+						case UISwipeGestureRecognizerDirection.Right:
+							dir = SwipeDirection.Right;
+							break;
+						case UISwipeGestureRecognizerDirection.Up:
+							dir = SwipeDirection.Up;
+							break;
+						case UISwipeGestureRecognizerDirection.Down:
+							dir = SwipeDirection.Down;
+							break;
 						}
 						_event.Enqueue(new SwipeGesture(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y), dir));
 					}));
+					break;
 				case GestureType.Pan:
 					gr = new UIPanGestureRecognizer((Action<UIPanGestureRecognizer>)(o => {
 						state = GetStateFromUIGesture(o);
@@ -156,24 +158,28 @@ namespace GameStack {
 		}
 
 		public override void TouchesBegan (NSSet touches, UIEvent evt) {
-			this.OnTouchEvent(TouchState.Start, touches.AnyObject as UITouch);
+			foreach (var touch in touches)
+				this.OnTouchEvent(TouchState.Start, touch as UITouch);
 		}
 
 		public override void TouchesMoved (NSSet touches, UIEvent evt) {
-			this.OnTouchEvent(TouchState.Move, touches.AnyObject as UITouch);
+			foreach (var touch in touches)
+				this.OnTouchEvent(TouchState.Move, touch as UITouch);
 		}
 
 		public override void TouchesEnded (NSSet touches, UIEvent evt) {
-			this.OnTouchEvent(TouchState.End, touches.AnyObject as UITouch);
+			foreach (var touch in touches)
+				this.OnTouchEvent(TouchState.End, touch as UITouch);
 		}
 
 		public override void TouchesCancelled (NSSet touches, UIEvent evt) {
-			this.OnTouchEvent(TouchState.Cancel, touches.AnyObject as UITouch);
+			foreach (var touch in touches)
+				this.OnTouchEvent(TouchState.Cancel, touch as UITouch);
 		}
 
 		void OnTouchEvent (TouchState state, UITouch touch) {
 			var point = touch.LocationInView(touch.View);
-			_event.Enqueue(new Touch(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y)));
+			_event.Enqueue(new Touch(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y), (long)touch.Handle));
 		}
 
 		public override void LayoutSubviews () {
@@ -199,6 +205,8 @@ namespace GameStack {
 		}
 
 		void Initialize (bool isNewContext) {
+			MultipleTouchEnabled = true;
+
 			// set layer to 32-bit RGBA
 			var layer = (CAEAGLLayer)this.Layer;
 
@@ -276,11 +284,17 @@ namespace GameStack {
 			_alContext.MakeCurrent();
 			GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, _cb);
 
+
 			// do user time-step
 			var time = _link.Timestamp;
 			_event.Time = time;
 			_event.DeltaTime = _lastTime < 0.0 ? 0f : (float)(time - _lastTime);
 			_lastTime = time;
+
+			if (_loadFrame > 0) {
+				_event.DeltaTime = 1f / 60f;
+				_loadFrame--;
+			}
 
 			if (this.Update != null)
 				Update(this, _event);
@@ -292,7 +306,7 @@ namespace GameStack {
 		}
 
 		public void LoadFrame () {
-
+			_loadFrame = 2;
 		}
 
 		Vector2 NormalizeToViewport (PointF point) {
