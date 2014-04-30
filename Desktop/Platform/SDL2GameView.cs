@@ -222,6 +222,12 @@ namespace GameStack.Desktop {
 			}
 		}
 
+		public void RenderNow () {
+			if (Render != null)
+				Render(this, _frameArgs);
+			SDL.SDL_GL_SwapWindow(_window);
+		}
+
 		void ProcessEvent (SDL.SDL_Event e) {
 			if (Event != null)
 				Event(this, new SDL2EventArgs(e));

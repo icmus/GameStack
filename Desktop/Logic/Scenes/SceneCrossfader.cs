@@ -75,6 +75,8 @@ namespace GameStack
 					else
 						base.OnDraw(frameArgs);
 				}
+
+				View.RenderNow();
 			}
 
 			if (prevScene != null)
@@ -134,8 +136,10 @@ namespace GameStack
 			if (!fading)
 				_scene.OnRender(this, e);
 			else {
-				using (_nextFBO.Begin()) {
-					_scene.OnRender(this, e);
+				if (_t > 0) {
+					using (_nextFBO.Begin()) {
+						_scene.OnRender(this, e);
+					}
 				}
 
 				OnComposeScenes(e, _prevTexture, _nextTexture, _t);
@@ -156,10 +160,12 @@ namespace GameStack
 					_quad.Draw(0, 0, 0);
 				}
 
-				_mat.Texture = nextTexture;
-				_mat.Color = new Vector4(t, t, t, t);
-				using (_mat.Begin()) {
-					_quad.Draw(0, 0, 1);
+				if (_t > 0) {
+					_mat.Texture = nextTexture;
+					_mat.Color = new Vector4(t, t, t, t);
+					using (_mat.Begin()) {
+						_quad.Draw(0, 0, 1);
+					}
 				}
 			}
 		}

@@ -14,6 +14,7 @@ namespace GameStack {
 
 		void EnableGesture (GestureType type);
 		void LoadFrame ();
+		void RenderNow ();
 	}
 
 	public interface IGameViewEventHandler {
