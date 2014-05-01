@@ -38,17 +38,15 @@ namespace GameStack.Pipeline {
 			};
 			var sheetMaker = new AtlasBuilder(lp);
 
-			using (var s = output) {
-				using (var tw = new TarWriter(s)) {
-					using (MemoryStream atlasStream = new MemoryStream(), sheetStream = new MemoryStream()) {
-						using (var bw = new BinaryWriter(atlasStream)) {
-							sheetMaker.Create(bw, sheetStream, ImageFormat.Png, metadata.NoPreMultiply);
-							bw.Flush();
-							atlasStream.Position = 0;
-							sheetStream.Position = 0;
-							tw.Write(atlasStream, atlasStream.Length, "atlas.bin");
-							tw.Write(sheetStream, sheetStream.Length, "sheet.png");
-						}
+			using (var tw = new TarWriter(output)) {
+				using (MemoryStream atlasStream = new MemoryStream(), sheetStream = new MemoryStream()) {
+					using (var bw = new BinaryWriter(atlasStream)) {
+						sheetMaker.Create(bw, sheetStream, ImageFormat.Png, metadata.NoPreMultiply);
+						bw.Flush();
+						atlasStream.Position = 0;
+						sheetStream.Position = 0;
+						tw.Write(atlasStream, atlasStream.Length, "atlas.bin");
+						tw.Write(sheetStream, sheetStream.Length, "sheet.png");
 					}
 				}
 			}

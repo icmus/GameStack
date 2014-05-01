@@ -7,7 +7,7 @@ using GameStack.Pipeline;
 
 namespace GameStack.Tools.Import {
 	class MainClass {
-		static readonly char[] SplitChar = new char[] { ' ' };
+		static readonly char[] SplitChar = new char[] { '=' };
 
 		public static int Usage () {
 			Console.WriteLine(string.Format(@"Usage:

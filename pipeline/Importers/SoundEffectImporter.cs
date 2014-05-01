@@ -61,17 +61,15 @@ namespace GameStack.Pipeline {
 				Length = dataSize / (bitDepth / 8) / channels,
 			};
 
-			using (var s = output) {
-				using (var tw = new TarWriter(s)) {
-					using (var ms = new MemoryStream()) {
-						using (var bw = new BinaryWriter(ms)) {
-							md.Write (bw);
-							ms.Position = 0;
-							tw.Write (ms, ms.Length, "sound.bin");
-						}
+			using (var tw = new TarWriter(output)) {
+				using (var ms = new MemoryStream()) {
+					using (var bw = new BinaryWriter(ms)) {
+						md.Write (bw);
+						ms.Position = 0;
+						tw.Write (ms, ms.Length, "sound.bin");
 					}
-					tw.Write (new MemoryStream (byteArray), byteArray.Length, "sound.pcm");
 				}
+				tw.Write (new MemoryStream (byteArray), byteArray.Length, "sound.pcm");
 			}
 		}
 	}

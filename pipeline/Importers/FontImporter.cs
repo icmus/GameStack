@@ -133,17 +133,15 @@ namespace GameStack.Pipeline {
 					bw.Flush();
 					ms.Position = 0;
 
-					using (var s = output) {
-						using (var tw = new TarWriter(s)) {
-							tw.Write(ms, ms.Length, "font.atlas");
-							using (var ts = new MemoryStream()) {
-								using (var texture = ImageHelper.PremultiplyAlpha(img)) {
-									texture.Save(ts, ImageFormat.Png);
-								}
-
-								ts.Position = 0;
-								tw.Write(ts, ts.Length, "font.png");
+					using (var tw = new TarWriter(output)) {
+						tw.Write(ms, ms.Length, "font.atlas");
+						using (var ts = new MemoryStream()) {
+							using (var texture = ImageHelper.PremultiplyAlpha(img)) {
+								texture.Save(ts, ImageFormat.Png);
 							}
+
+							ts.Position = 0;
+							tw.Write(ts, ts.Length, "font.png");
 						}
 					}
 				}

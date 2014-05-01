@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.Cryptography;
 
 namespace GameStack.Pipeline {
 	public abstract class ContentImporter {
@@ -42,12 +43,27 @@ namespace GameStack.Pipeline {
 				string outputFile = Path.Combine(outputFolder, baseName + extension);
 				if (File.Exists(outputFile) && File.GetLastWriteTime(outputFile) > File.GetLastWriteTime(inputFile))
 					return;
-				File.Copy(inputFile, outputFile, true);
+
+				if (opts.ContainsKey("Key") && opts.ContainsKey("IV")) {
+					var key = Convert.FromBase64String(opts["Key"]);
+					var iv = Convert.FromBase64String(opts["IV"]);
+
+					var rm = new RijndaelManaged();
+					using (var oStream = new CryptoStream(new FileStream(outputFile, FileMode.Create, FileAccess.Write), rm.CreateEncryptor(key, iv), CryptoStreamMode.Write)) {
+						using (var iStream = File.OpenRead(inputFile)) {
+							iStream.CopyTo(oStream);
+						}
+					}
+				} else
+					File.Copy(inputFile, outputFile, true);
 			} else {
 				var attr = (ContentTypeAttribute)Attribute.GetCustomAttribute(type, typeof(ContentTypeAttribute));
 
 				var importer = (ContentImporter)Activator.CreateInstance(type);
 				foreach (var kvp in opts) {
+					if (kvp.Key == "Key" || kvp.Key == "IV")
+						continue;
+
 					var prop = type.GetProperty(kvp.Key, BindingFlags.IgnoreCase | BindingFlags.Public);
 					if (prop == null)
 						throw new ArgumentException("No such property found on importer: " + kvp.Key);
@@ -59,7 +75,16 @@ namespace GameStack.Pipeline {
 					return;
 
 				var oldWorkingDir = Environment.CurrentDirectory;
-				using (FileStream oStream = new FileStream(outputFile, FileMode.Create, FileAccess.Write)) {
+				using (FileStream ofStream = new FileStream(outputFile, FileMode.Create, FileAccess.Write)) {
+					Stream oStream = ofStream;
+					if (opts.ContainsKey("Key") && opts.ContainsKey("IV")) {
+						var key = Convert.FromBase64String(opts["Key"]);
+						var iv = Convert.FromBase64String(opts["IV"]);
+
+						var rm = new RijndaelManaged();
+						oStream = new CryptoStream(ofStream, rm.CreateEncryptor(key, iv), CryptoStreamMode.Write);
+					}
+
 					if (Directory.Exists(inputFile)) {
 						Environment.CurrentDirectory = inputFile;
 						importer.Import(inputFile, oStream);
@@ -71,6 +96,9 @@ namespace GameStack.Pipeline {
 							importer.Import(iStream, oStream, Path.GetFileName(inputFile));
 						}
 					}
+
+					if (oStream is CryptoStream)
+						((CryptoStream)oStream).FlushFinalBlock();
 				}
 				Environment.CurrentDirectory = oldWorkingDir;
 			}

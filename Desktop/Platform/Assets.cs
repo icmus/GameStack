@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using SDL2;
+using System.Security.Cryptography;
 
 namespace GameStack {
 	public static class Assets {
@@ -8,9 +9,28 @@ namespace GameStack {
 		public static string AppName { get; private set; }
 		public static string OrgName { get; private set; }
 		static string _userPath;
+		static RijndaelManaged _rm = new RijndaelManaged();
+		static byte[] _key, _iv;
+
+		public static void SetKey (string key, string iv) {
+			_key = Convert.FromBase64String(key);
+			_iv = Convert.FromBase64String(iv);
+		}
+
 
 		public static Stream ResolveStream (string path) {
-			return File.OpenRead (Path.Combine(AssetBasePath, path));
+			var stream = File.OpenRead (Path.Combine(AssetBasePath, path));
+
+			if (_key != null && _iv != null) {
+				var ms = new MemoryStream();
+
+				using (var cs = new CryptoStream(stream, _rm.CreateDecryptor(_key, _iv), CryptoStreamMode.Read)) {
+					cs.CopyTo(ms);
+				}
+				ms.Position = 0;
+				return ms;
+			} else
+				return stream;
 		}
 
 		public static void SetAppInfo (string appName, string orgName = "") {

@@ -11,7 +11,7 @@
     <AssemblyName>Temp</AssemblyName>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="../scripts/desktop.sh ${TargetDir} content/" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="../scripts/desktop.sh content/ ${TargetDir}" workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>

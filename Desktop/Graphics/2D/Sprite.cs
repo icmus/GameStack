@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Drawing;
 using OpenTK;
 using OpenTK.Graphics;
@@ -31,8 +32,8 @@ namespace GameStack.Graphics {
 			_ownMaterial = ownMaterial;
 		}
 
-		public Sprite (string path, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true) {
-			var tex = new Texture(path, settings);
+		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true) {
+			var tex = new Texture(stream, settings);
 			_material = new SpriteMaterial(new SpriteShader(), tex);
 
 			if (rect == Vector4.Zero)
@@ -64,11 +65,24 @@ namespace GameStack.Graphics {
 
 			_ownMaterial = true;
 		}
-		public Sprite (string path, TextureSettings settings, Vector4 rect, bool relativeRect = false)
+		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect = false)
+			: this(stream, settings, rect, relativeRect, Vector4.One)
+		{
+		}
+		public Sprite (Stream stream, TextureSettings settings = null)
+			: this(stream, settings, Vector4.Zero, false, Vector4.One)
+		{
+		}
+
+		public Sprite (String path, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true)
+			: this(Assets.ResolveStream(path), settings, rect, relativeRect, color, flipV)
+		{
+		}
+		public Sprite (String path, TextureSettings settings, Vector4 rect, bool relativeRect = false)
 			: this(path, settings, rect, relativeRect, Vector4.One)
 		{
 		}
-		public Sprite (string path, TextureSettings settings = null)
+		public Sprite (String path, TextureSettings settings = null)
 			: this(path, settings, Vector4.Zero, false, Vector4.One)
 		{
 		}
