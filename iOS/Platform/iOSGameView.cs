@@ -305,6 +305,12 @@ namespace GameStack {
 			_glContext.PresentRenderBuffer((uint)RenderbufferTarget.Renderbuffer);
 		}
 
+		public void RenderNow () {
+			if (this.Render != null)
+				Render(this, _event);
+			_glContext.PresentRenderBuffer((uint)RenderbufferTarget.Renderbuffer);
+		}
+
 		public void LoadFrame () {
 			_loadFrame = 2;
 		}
