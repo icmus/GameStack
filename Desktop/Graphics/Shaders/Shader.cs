@@ -37,6 +37,8 @@ namespace GameStack.Graphics {
 						_handle = master._handle;
 						_vertHandle = master._vertHandle;
 						_fragHandle = master._fragHandle;
+						_uniforms = master._uniforms;
+						_attributes = master._attributes;
 						return;
 					}
 				} else {
