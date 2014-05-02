@@ -17,7 +17,6 @@ namespace GameStack {
 			_iv = Convert.FromBase64String(iv);
 		}
 
-
 		public static Stream ResolveStream (string path) {
 			var stream = File.OpenRead (Path.Combine(AssetBasePath, path));
 
