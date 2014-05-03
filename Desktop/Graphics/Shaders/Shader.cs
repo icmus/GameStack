@@ -45,28 +45,28 @@ namespace GameStack.Graphics {
 					_shaders.Add(glContext, new Dictionary<string, Shader>());
 				}
 				_shaders[glContext].Add(_name, this);
-			}
-			_master = this;
+				_master = this;
 
-			// create shader program and link
+				// create shader program and link
 #if __ANDROID__
             _vertHandle = (uint)GL.CreateShader(All.VertexShader);
             _fragHandle = (uint)GL.CreateShader(All.FragmentShader);
 #else
-			_vertHandle = (uint)GL.CreateShader(ShaderType.VertexShader);
-			_fragHandle = (uint)GL.CreateShader(ShaderType.FragmentShader);
+				_vertHandle = (uint)GL.CreateShader(ShaderType.VertexShader);
+				_fragHandle = (uint)GL.CreateShader(ShaderType.FragmentShader);
 #endif
 
-			if (_vertHandle <= 0 || _fragHandle <= 0)
-				throw new ShaderException("Failed to create shader.");
-			_handle = (uint)GL.CreateProgram();
-			if (_handle <= 0)
-				throw new ShaderException("Failed to create program.");
-			CompileShader(_vertHandle, vertSource);
-			CompileShader(_fragHandle, fragSource);
-			GL.AttachShader(_handle, _vertHandle);
-			GL.AttachShader(_handle, _fragHandle);
-			GL.LinkProgram(_handle);
+				if (_vertHandle <= 0 || _fragHandle <= 0)
+					throw new ShaderException("Failed to create shader.");
+				_handle = (uint)GL.CreateProgram();
+				if (_handle <= 0)
+					throw new ShaderException("Failed to create program.");
+				CompileShader(_vertHandle, vertSource);
+				CompileShader(_fragHandle, fragSource);
+				GL.AttachShader(_handle, _vertHandle);
+				GL.AttachShader(_handle, _fragHandle);
+				GL.LinkProgram(_handle);
+			}
 
 			// catalog linked shader uniforms
 			int total = 0;
