@@ -12,7 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <CustomCommands>
       <CustomCommands>
-        <Command type="BeforeBuild" command="mono ../../bin/import.exe ../content/ ../assets/" workingdir="${ProjectDir}" />
+        <Command type="BeforeBuild" command="mono ../../bin/import.exe ../content/ ../Assets/" workingdir="${ProjectDir}" />
         <Command type="AfterBuild" command="cp -f ../../external/desktop/liblodepng.so ${TargetDir}" workingdir="${ProjectDir}" />
         <Command type="AfterBuild" command="cp -f ../../external/desktop/liblodepng.dylib ${TargetDir}" workingdir="${ProjectDir}" />
         <Command type="AfterBuild" command="cp -f ../../external/desktop/SDL2#.dll.config ${TargetDir}" workingdir="${ProjectDir}" />
@@ -60,35 +60,35 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="assets\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\assets\1-up.sfx">
-      <Link>assets\1-up.sfx</Link>
+    <None Include="..\Assets\1-up.sfx">
+      <Link>Assets\1-up.sfx</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\assets\coin.sfx">
-      <Link>assets\coin.sfx</Link>
+    <None Include="..\Assets\coin.sfx">
+      <Link>Assets\coin.sfx</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\assets\jump.sfx">
-      <Link>assets\jump.sfx</Link>
+    <None Include="..\Assets\jump.sfx">
+      <Link>Assets\jump.sfx</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\assets\landing.sfx">
-      <Link>assets\landing.sfx</Link>
+    <None Include="..\Assets\landing.sfx">
+      <Link>Assets\landing.sfx</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\assets\mario.atlas">
-      <Link>assets\mario.atlas</Link>
+    <None Include="..\Assets\mario.atlas">
+      <Link>Assets\mario.atlas</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\assets\match.sfx">
-      <Link>assets\match.sfx</Link>
+    <None Include="..\Assets\match.sfx">
+      <Link>Assets\match.sfx</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="..\assets\no-match.sfx">
-      <Link>assets\no-match.sfx</Link>
+    <None Include="..\Assets\no-match.sfx">
+      <Link>Assets\no-match.sfx</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

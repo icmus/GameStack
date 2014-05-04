@@ -5,7 +5,7 @@
 bin/
 obj/
 local.*
-sample/assets/
+sample/Assets/
 sample/Tests.iOS/Assets/
-sample/Tests.Desktop/assets/
+sample/Tests.Desktop/Assets/
 /lib/

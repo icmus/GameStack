@@ -86,8 +86,12 @@ namespace GameStack {
 			get { return _buffer; }
 		}
 
+		public float Length { get { return (float)_md.Length / (float)_md.Rate; } }
+
 		public void Dispose () {
+			AL.GetError();
 			AL.DeleteBuffer (_buffer);
+			Sounds.CheckError();
 		}
 
 		class SfxMetadata {
