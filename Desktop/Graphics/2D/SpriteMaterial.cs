@@ -23,6 +23,7 @@ namespace GameStack.Graphics {
 				GL.ActiveTexture(TextureUnit.Texture0);
 				GL.BindTexture(TextureTarget.Texture2D, _texture.Handle);
 				this.Shader.Uniform("Texture", 0);
+				this.Shader.Uniform("TextureSize", new Vector2(_texture.Size.Width, _texture.Size.Height));
 			}
 			this.Shader.Uniform("Tint", _tint);
 		}
