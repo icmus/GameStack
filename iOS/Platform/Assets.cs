@@ -2,6 +2,7 @@
 using System.IO;
 using System.Security.Cryptography;
 using MonoTouch;
+using MonoTouch.Foundation;
 
 namespace GameStack {
 	public static class Assets {
@@ -59,7 +60,18 @@ namespace GameStack {
 		}
 
 		public static Stream ResolveAddonStream (string path, FileMode mode = FileMode.Open, FileAccess access = FileAccess.Read) {
-			return File.Open(Path.Combine(AddonsBasePath, path), mode, access);
+			var stream = File.Open(Path.Combine(AddonsBasePath, path), mode, access);
+
+			if (_key != null && _iv != null) {
+				var ms = new MemoryStream();
+
+				using (var cs = new CryptoStream(stream, _rm.CreateDecryptor(_key, _iv), CryptoStreamMode.Read)) {
+					cs.CopyTo(ms);
+				}
+				ms.Position = 0;
+				return ms;
+			} else
+				return stream;
 		}
 
 		public static string ResolveAddonPath (string path = "") {

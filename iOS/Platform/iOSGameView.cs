@@ -21,6 +21,7 @@ namespace GameStack {
 		uint _cb, _fb, _db;
 		CADisplayLink _link;
 		double _lastTime = -1.0;
+		int _interval;
 		FrameArgs _event;
 		int _loadFrame;
 
@@ -54,6 +55,15 @@ namespace GameStack {
 
 		public float PixelScale { get { return UIScreen.MainScreen.Scale; } }
 
+		public int Interval {
+			get { return _interval; }
+			set {
+				_interval = value;
+				if (_link != null)
+					_link.FrameInterval = value;
+			}
+		}
+
 		public bool IsPaused { get; private set; }
 
 		public void Pause () {
@@ -75,6 +85,7 @@ namespace GameStack {
 
 			if (_link == null) {
 				_link = CADisplayLink.Create(new NSAction(OnUpdate));
+				_link.FrameInterval = Interval;
 				_link.AddToRunLoop(NSRunLoop.Main, NSRunLoop.NSDefaultRunLoopMode);
 			}
 
@@ -292,7 +303,7 @@ namespace GameStack {
 			_lastTime = time;
 
 			if (_loadFrame > 0) {
-				_event.DeltaTime = 1f / 60f;
+				_event.DeltaTime = Interval / 60f;
 				_loadFrame--;
 			}
 
