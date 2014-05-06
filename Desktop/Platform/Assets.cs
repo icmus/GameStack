@@ -52,5 +52,20 @@ namespace GameStack {
 
 			return Path.Combine(_userPath, path);
 		}
+
+		public static Stream ResolveAddonStream (string path, FileMode mode = FileMode.Open, FileAccess access = FileAccess.Read) {
+			var stream = File.OpenRead(Path.Combine(_userPath, path));
+
+			if (_key != null && _iv != null) {
+				var ms = new MemoryStream();
+
+				using (var cs = new CryptoStream(stream, _rm.CreateDecryptor(_key, _iv), CryptoStreamMode.Read)) {
+					cs.CopyTo(ms);
+				}
+				ms.Position = 0;
+				return ms;
+			} else
+				return stream;
+		}
 	}
 }

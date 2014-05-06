@@ -1,10 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Security.Cryptography;
+using MonoTouch;
 
 namespace GameStack {
 	public static class Assets {
-		const string AssetBasePath = "Assets/";
+		static readonly string AssetBasePath = Path.Combine(NSBundle.MainBundle.BundleUrl.Path, "Assets");
+		static readonly string AddonsBasePath = Path.GetFullPath(Path.Combine(NSBundle.MainBundle.BundleUrl.Path, "..", "Library", "Addons"));
 		public static string AppName { get; private set; }
 		public static string OrgName { get; private set; }
 		static string _userPath;
@@ -54,6 +56,14 @@ namespace GameStack {
 				throw new InvalidOperationException("Must call SetAppInfo first!");
 
 			return Path.Combine(_userPath, path);
+		}
+
+		public static Stream ResolveAddonStream (string path, FileMode mode = FileMode.Open, FileAccess access = FileAccess.Read) {
+			return File.Open(Path.Combine(AddonsBasePath, path), mode, access);
+		}
+
+		public static string ResolveAddonPath (string path = "") {
+			return Path.Combine(AddonsBasePath, path);
 		}
 	}
 }
