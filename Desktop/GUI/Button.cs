@@ -158,6 +158,8 @@ namespace GameStack.Gui {
 		public override void Dispose () {
 			if (_group != null)
 				_group.Remove (this);
+
+			base.Dispose();
 		}
 
 		#region IPointerInput implementation
