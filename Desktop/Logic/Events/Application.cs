@@ -18,6 +18,9 @@ namespace GameStack {
 	public class Resume : EventBase {
 	}
 
+	public class Terminate : EventBase {
+	}
+
 	public class LowMemory : EventBase {
 	}
 }

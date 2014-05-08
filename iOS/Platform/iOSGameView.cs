@@ -67,8 +67,10 @@ namespace GameStack {
 		public bool IsPaused { get; private set; }
 
 		public void Pause () {
-			if (!this.IsPaused)
+			if (!this.IsPaused) {
 				_event.Enqueue(new GameStack.Pause());
+				OnUpdate();
+			}
 
 			if (_link != null) {
 				_link.RemoveFromRunLoop(NSRunLoop.Main, NSRunLoop.NSDefaultRunLoopMode);
@@ -92,8 +94,9 @@ namespace GameStack {
 			this.IsPaused = false;
 		}
 
-		public void Quit () {
-			throw new NotImplementedException();
+		public void OnLowMemory () {
+			_event.Enqueue(new GameStack.LowMemory());
+			OnUpdate();
 		}
 
 		public void EnableGesture (GestureType type) {
@@ -205,6 +208,8 @@ namespace GameStack {
 				_event.Enqueue(new Resize(_size, PixelScale));
 			}
 		}
+
+
 
 		protected override void Dispose (bool disposing) {
 			_link.RemoveFromRunLoop(NSRunLoop.Main, NSRunLoop.NSDefaultRunLoopMode);
