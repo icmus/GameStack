@@ -21,11 +21,13 @@ namespace GameStack.Gui {
 		Label _label;
 
 		public Button (LayoutSpec spec = null) : base(spec) {
+			Color = Vector4.One;
 		}
 
 		public Button (RadioGroup group, LayoutSpec spec = null) : base(spec) {
 			group.Add (this);
 			_group = group;
+			Color = Vector4.One;
 		}
 
 		public Sprite NormalSprite { get; set; }
@@ -40,7 +42,10 @@ namespace GameStack.Gui {
 
 		public Sprite DisabledSprite { get; set; }
 
+		public Vector4 Color { get; set; }
+
 		public bool IsToggle { get; set; }
+
 
 		public ButtonState State {
 			get {
@@ -112,7 +117,7 @@ namespace GameStack.Gui {
 			if (_label != null)
 				this.RemoveView (_label);
 			_label = new Label (text, font);
-			_label.Color = Color.White;
+			_label.Color = System.Drawing.Color.White;
 			_label.HorizontalAlignment = halign;
 			_label.VerticalAlignment = valign;
 			this.AddView (_label);
@@ -122,7 +127,7 @@ namespace GameStack.Gui {
 			if (_label != null)
 				this.RemoveView (_label);
 			_label = new Label (text, font);
-			_label.Color = Color.White;
+			_label.Color = System.Drawing.Color.White;
 			_label.HorizontalAlignment = HorizontalAlignment.Center;
 			_label.VerticalAlignment = VerticalAlignment.Middle;
 			this.AddView (_label);
@@ -151,8 +156,14 @@ namespace GameStack.Gui {
 
 		protected override void OnDraw (ref Matrix4 transform) {
 			var sprite = this.CurrentSprite;
-			if (sprite != null)
-				sprite.Draw (ref transform);
+
+			SpriteMaterial spriteMat;
+			if (Color != Vector4.One && (spriteMat = sprite.Material as SpriteMaterial) != null) {
+				spriteMat.Color = Color;
+				sprite.Draw(ref transform);
+				spriteMat.Color = Vector4.One;
+			} else
+				sprite.Draw(ref transform);
 		}
 
 		public override void Dispose () {
