@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Drawing;
+using System.Threading;
 using MonoTouch.CoreAnimation;
 using MonoTouch.Foundation;
 using MonoTouch.ObjCRuntime;
@@ -15,6 +17,9 @@ using GameStack.Graphics;
 namespace GameStack {
 	[Register("GameView")]
 	public class iOSGameView : UIView, IGameView {
+		Thread _logicThread;
+		volatile bool _threadPaused;
+		bool _threadQuit;
 		EAGLContext _glContext;
 		AudioContext _alContext;
 		Vector2 _size;
@@ -22,8 +27,10 @@ namespace GameStack {
 		CADisplayLink _link;
 		double _lastTime = -1.0;
 		int _interval;
-		FrameArgs _event;
+		ConcurrentQueue<EventBase> _events;
+		FrameArgs _frame;
 		int _loadFrame;
+
 
 		[Export("layerClass")]
 		public static Class LayerClass () {
@@ -32,19 +39,16 @@ namespace GameStack {
 
 		public iOSGameView (IntPtr handle) : base(handle) {
 			this.Initialize(true);
-			this.Resume();
 		}
 
 		[Export("initWithCoder:")]
 		public iOSGameView (NSCoder coder) : base(coder) {
 			this.Initialize(true);
-			this.Resume();
 		}
 
 		public iOSGameView (RectangleF frame) {
 			this.Frame = frame;
 			this.Initialize(true);
-			this.Resume();
 		}
 
 		public event EventHandler<FrameArgs> Update;
@@ -58,44 +62,36 @@ namespace GameStack {
 		public int Interval {
 			get { return _interval; }
 			set {
+				if (_logicThread != null && Thread.CurrentThread != _logicThread)
+					throw new InvalidOperationException("Frame interval can only be changed by other threads if the simulation has not yet started!");
 				_interval = value;
-				if (_link != null)
-					_link.FrameInterval = value;
 			}
 		}
 
-		public bool IsPaused { get; private set; }
+		public bool IsPaused {
+			get { return _threadPaused; }
+		}
 
 		public void Pause () {
 			if (!this.IsPaused) {
-				_event.Enqueue(new GameStack.Pause());
-				OnUpdate();
+				_events.Enqueue(new GameStack.Pause());
+				if (Thread.CurrentThread != _logicThread)
+					while (!_threadPaused)
+						Thread.Sleep(0);
 			}
-
-			if (_link != null) {
-				_link.RemoveFromRunLoop(NSRunLoop.Main, NSRunLoop.NSDefaultRunLoopMode);
-				_link.Dispose();
-				_link = null;
-				_lastTime = -1.0;
-			}
-			this.IsPaused = true;
 		}
 
 		public void Resume () {
-			if (this.IsPaused)
-				_event.Enqueue(new GameStack.Resume());
-
-			if (_link == null) {
-				_link = CADisplayLink.Create(new NSAction(OnUpdate));
-				_link.FrameInterval = Interval;
-				_link.AddToRunLoop(NSRunLoop.Main, NSRunLoop.NSDefaultRunLoopMode);
+			if (this.IsPaused) {
+				_events.Enqueue(new GameStack.Resume());
+				if (Thread.CurrentThread != _logicThread)
+					while (_threadPaused)
+						Thread.Sleep(0);
 			}
-
-			this.IsPaused = false;
 		}
 
 		public void OnLowMemory () {
-			_event.Enqueue(new GameStack.LowMemory());
+			_events.Enqueue(new GameStack.LowMemory());
 			OnUpdate();
 		}
 
@@ -110,7 +106,7 @@ namespace GameStack {
 						if (o.State != UIGestureRecognizerState.Ended)
 							return;
 						point = o.LocationInView(o.View);
-						_event.Enqueue(new TapGesture(this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y)));
+						_events.Enqueue(new TapGesture(this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y)));
 					}));
 					break;
 				case GestureType.Swipe:
@@ -132,7 +128,7 @@ namespace GameStack {
 							dir = SwipeDirection.Down;
 							break;
 						}
-						_event.Enqueue(new SwipeGesture(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y), dir));
+						_events.Enqueue(new SwipeGesture(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y), dir));
 					}));
 					break;
 				case GestureType.Pan:
@@ -140,7 +136,7 @@ namespace GameStack {
 						state = GetStateFromUIGesture(o);
 						point = o.LocationInView(o.View);
 						var translation = o.TranslationInView(o.View);
-						_event.Enqueue(new PanGesture(
+						_events.Enqueue(new PanGesture(
 							state,
 							this.NormalizeToViewport(point),
 							new Vector2(point.X, _size.Y - point.Y),
@@ -193,7 +189,7 @@ namespace GameStack {
 
 		void OnTouchEvent (TouchState state, UITouch touch) {
 			var point = touch.LocationInView(touch.View);
-			_event.Enqueue(new Touch(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y), (long)touch.Handle));
+			_events.Enqueue(new Touch(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y), (long)touch.Handle));
 		}
 
 		public override void LayoutSubviews () {
@@ -205,19 +201,8 @@ namespace GameStack {
 				this.Initialize(false);
 
 				_size = new Vector2(bounds.Width, bounds.Height);
-				_event.Enqueue(new Resize(_size, PixelScale));
+				_events.Enqueue(new Resize(_size, PixelScale));
 			}
-		}
-
-
-
-		protected override void Dispose (bool disposing) {
-			_link.RemoveFromRunLoop(NSRunLoop.Main, NSRunLoop.NSDefaultRunLoopMode);
-			_link.Dispose();
-			if (this.Destroyed != null)
-				this.Destroyed(this, EventArgs.Empty);
-			this.DestroyContext();
-			base.Dispose(disposing);
 		}
 
 		void Initialize (bool isNewContext) {
@@ -276,11 +261,12 @@ namespace GameStack {
 				_alContext = new AudioContext();
 				_alContext.MakeCurrent();
 				this.MultipleTouchEnabled = false;
-				_event = new FrameArgs();
-				_event.Enqueue(new Start(_size, PixelScale));
+				_frame = new FrameArgs();
+				_events = new ConcurrentQueue<EventBase>();
+				_events.Enqueue(new Start(_size, PixelScale));
 			}
 
-			_event.Enqueue(new Resize(_size, PixelScale));
+			_events.Enqueue(new Resize(_size, PixelScale));
 		}
 
 		void DestroyContext () {
@@ -293,29 +279,75 @@ namespace GameStack {
 			_alContext.Dispose();
 		}
 
+
+		public void StartThread () {
+			_threadPaused = false;
+			Resume();
+			Thread.MemoryBarrier();
+			_logicThread = new Thread(ThreadProc);
+			_logicThread.Start();
+		}
+
+		void ThreadProc (object o)
+		{
+			_link = CADisplayLink.Create(OnUpdate);
+			_link.AddToRunLoop(NSRunLoop.Current, NSRunLoop.NSDefaultRunLoopMode);
+			_link.FrameInterval = _interval;
+
+			NSRunLoop.Current.Run();
+
+			_link.RemoveFromRunLoop(NSRunLoop.Main, NSRunLoop.NSDefaultRunLoopMode);
+			_link.Dispose();
+		}
+
 		void OnUpdate () {
+			while (_events.Count > 0) {
+				EventBase e;
+				_events.TryDequeue(out e);
+				_frame.Enqueue(e);
+
+				if (e is Pause && !_threadPaused) {
+					DoUpdate();
+					_threadPaused = true;
+				} else if (e is Resume && _threadPaused)
+					_threadPaused = false;
+			}
+
+			if (_threadPaused) {
+				if (_threadQuit)
+					NSRunLoop.Current.Stop();
+				return;
+			}
+
+			DoUpdate();
+
+			if (_threadQuit)
+				NSRunLoop.Current.Stop();
+		}
+
+		void DoUpdate ()
+		{
 			// set context and bind buffers
 			EAGLContext.SetCurrentContext(_glContext);
 			ThreadContext.Current.GLContext = _glContext.Handle;
 			_alContext.MakeCurrent();
 			GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, _cb);
 
-
 			// do user time-step
 			var time = _link.Timestamp;
-			_event.Time = time;
-			_event.DeltaTime = _lastTime < 0.0 ? 0f : (float)(time - _lastTime);
+			_frame.Time = time;
+			_frame.DeltaTime = _lastTime < 0.0 ? 0f : (float)(time - _lastTime);
 			_lastTime = time;
 
 			if (_loadFrame > 0) {
-				_event.DeltaTime = Interval / 60f;
+				_frame.DeltaTime = Interval / 60f;
 				_loadFrame--;
 			}
 
 			if (this.Update != null)
-				Update(this, _event);
+				Update(this, _frame);
 			if (this.Render != null)
-				Render(this, _event);
+				Render(this, _frame);
 
 			// present output
 			_glContext.PresentRenderBuffer((uint)RenderbufferTarget.Renderbuffer);
@@ -323,12 +355,22 @@ namespace GameStack {
 
 		public void RenderNow () {
 			if (this.Render != null)
-				Render(this, _event);
+				Render(this, _frame);
 			_glContext.PresentRenderBuffer((uint)RenderbufferTarget.Renderbuffer);
 		}
 
 		public void LoadFrame () {
 			_loadFrame = 2;
+		}
+
+		protected override void Dispose (bool disposing) {
+			_threadQuit = true;
+			_logicThread.Join();
+
+			if (this.Destroyed != null)
+				this.Destroyed(this, EventArgs.Empty);
+			this.DestroyContext();
+			base.Dispose(disposing);
 		}
 
 		Vector2 NormalizeToViewport (PointF point) {
