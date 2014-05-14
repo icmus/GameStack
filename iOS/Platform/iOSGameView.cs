@@ -19,7 +19,6 @@ namespace GameStack {
 	public class iOSGameView : UIView, IGameView {
 		Thread _logicThread;
 		volatile bool _threadPaused;
-		bool _threadQuit;
 		EAGLContext _glContext;
 		AudioContext _alContext;
 		Vector2 _size;
@@ -75,18 +74,23 @@ namespace GameStack {
 		public void Pause () {
 			if (!this.IsPaused) {
 				_events.Enqueue(new GameStack.Pause());
-				if (Thread.CurrentThread != _logicThread)
-					while (!_threadPaused)
-						Thread.Sleep(0);
+				if (Thread.CurrentThread != _logicThread) {
+					_logicThread.Join();
+					_logicThread = null;
+				}
 			}
 		}
 
 		public void Resume () {
 			if (this.IsPaused) {
+				while (_events.Count > 0) {
+					EventBase e;
+					_events.TryDequeue(out e);
+				}
 				_events.Enqueue(new GameStack.Resume());
+
 				if (Thread.CurrentThread != _logicThread)
-					while (_threadPaused)
-						Thread.Sleep(0);
+					StartThread();
 			}
 		}
 
@@ -267,6 +271,7 @@ namespace GameStack {
 			}
 
 			_events.Enqueue(new Resize(_size, PixelScale));
+			_threadPaused = true;
 		}
 
 		void DestroyContext () {
@@ -279,10 +284,8 @@ namespace GameStack {
 			_alContext.Dispose();
 		}
 
-
 		public void StartThread () {
 			_threadPaused = false;
-			Resume();
 			Thread.MemoryBarrier();
 			_logicThread = new Thread(ThreadProc);
 			_logicThread.Start();
@@ -296,8 +299,7 @@ namespace GameStack {
 
 			NSRunLoop.Current.Run();
 
-			_link.RemoveFromRunLoop(NSRunLoop.Main, NSRunLoop.NSDefaultRunLoopMode);
-			_link.Dispose();
+			_threadPaused = true;
 		}
 
 		void OnUpdate () {
@@ -306,23 +308,15 @@ namespace GameStack {
 				_events.TryDequeue(out e);
 				_frame.Enqueue(e);
 
-				if (e is Pause && !_threadPaused) {
+				if (e is Pause) {
 					DoUpdate();
-					_threadPaused = true;
-				} else if (e is Resume && _threadPaused)
-					_threadPaused = false;
-			}
-
-			if (_threadPaused) {
-				if (_threadQuit)
-					NSRunLoop.Current.Stop();
-				return;
+					_link.RemoveFromRunLoop(NSRunLoop.Current, NSRunLoop.NSDefaultRunLoopMode);
+					_link.Dispose();
+					return;
+				}
 			}
 
 			DoUpdate();
-
-			if (_threadQuit)
-				NSRunLoop.Current.Stop();
 		}
 
 		void DoUpdate ()
@@ -364,8 +358,7 @@ namespace GameStack {
 		}
 
 		protected override void Dispose (bool disposing) {
-			_threadQuit = true;
-			_logicThread.Join();
+			Pause();
 
 			if (this.Destroyed != null)
 				this.Destroyed(this, EventArgs.Empty);
