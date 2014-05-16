@@ -36,6 +36,8 @@ namespace GameStack
 			_mat = new SpriteMaterial(new SpriteShader(), null);
 		}
 
+		public Scene Scene { get { return _scene; } }
+
 		public void Init (Scene initialScene)
 		{
 			if (_scene != null)
