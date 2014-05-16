@@ -29,6 +29,7 @@ namespace GameStack {
 		ConcurrentQueue<EventBase> _events;
 		FrameArgs _frame;
 		int _loadFrame;
+		volatile bool _lowMemHandled;
 
 
 		[Export("layerClass")]
@@ -83,20 +84,17 @@ namespace GameStack {
 
 		public void Resume () {
 			if (this.IsPaused) {
-				while (_events.Count > 0) {
-					EventBase e;
-					_events.TryDequeue(out e);
-				}
 				_events.Enqueue(new GameStack.Resume());
-
 				if (Thread.CurrentThread != _logicThread)
 					StartThread();
 			}
 		}
 
 		public void OnLowMemory () {
+			_lowMemHandled = false;
 			_events.Enqueue(new GameStack.LowMemory());
-			OnUpdate();
+			while (!_lowMemHandled)
+				Thread.Sleep(0);
 		}
 
 		public void EnableGesture (GestureType type) {
@@ -172,6 +170,9 @@ namespace GameStack {
 		}
 
 		public override void TouchesBegan (NSSet touches, UIEvent evt) {
+			if (IsPaused)
+				return;
+
 			foreach (var touch in touches)
 				this.OnTouchEvent(TouchState.Start, touch as UITouch);
 		}
@@ -303,6 +304,8 @@ namespace GameStack {
 		}
 
 		void OnUpdate () {
+			bool lowMem = false;
+
 			while (_events.Count > 0) {
 				EventBase e;
 				_events.TryDequeue(out e);
@@ -313,10 +316,14 @@ namespace GameStack {
 					_link.RemoveFromRunLoop(NSRunLoop.Current, NSRunLoop.NSDefaultRunLoopMode);
 					_link.Dispose();
 					return;
-				}
+				} else if (e is LowMemory)
+					lowMem = true;
 			}
 
 			DoUpdate();
+
+			if (lowMem)
+				_lowMemHandled = true;
 		}
 
 		void DoUpdate ()
