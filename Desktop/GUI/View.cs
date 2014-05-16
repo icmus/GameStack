@@ -232,7 +232,7 @@ namespace GameStack.Gui {
 
 			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, 0) * TransformInv;
 
-			foreach (var view in _children) {
+			foreach (var view in Enumerable.Reverse(_children)) {
 				if (view.BlockInput)
 					continue;
 				var found = view.FindInputSinkByPoint(point, inv, out where);
