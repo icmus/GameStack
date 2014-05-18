@@ -1,4 +1,6 @@
-﻿using System;
+﻿#pragma warning disable 0414
+
+using System;
 using OpenTK;
 #if __DESKTOP__
 using OpenTK.Graphics.OpenGL;
