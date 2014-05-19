@@ -42,7 +42,9 @@ namespace GameStack.Graphics {
 		public Vector4 Color { get { return _tint; } set { _tint = value; } }
 
 		public override void Dispose () {
-			_texture.Dispose();
+			if (_texture != null)
+				_texture.Dispose();
+
 			base.Dispose();
 		}
 	}

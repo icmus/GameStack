@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Threading;
 using OpenTK;
 using GameStack.Content;
 
@@ -41,6 +42,8 @@ namespace GameStack.Graphics {
 	}
 
 	public class Texture : IDisposable {
+		public static volatile int TextureCount = 0;
+
 		uint _handle = 0;
 		Size _size;
 		PixelFormat _format;
@@ -107,6 +110,8 @@ namespace GameStack.Graphics {
 			GL.BindTexture(TextureTarget.Texture2D, 0);
 
 			_texelSize = new Vector2(1f / _size.Width, 1f / _size.Height);
+
+			Interlocked.Increment(ref TextureCount);
 		}
 
 		public void GenerateMipmaps () {
@@ -121,6 +126,7 @@ namespace GameStack.Graphics {
 
 		public void Dispose () {
 			GL.DeleteTexture((int)this.Handle);
+			Interlocked.Decrement(ref TextureCount);
 		}
 	}
 }

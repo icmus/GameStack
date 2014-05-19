@@ -167,6 +167,7 @@ namespace GameStack.Graphics {
 		public void Dispose () {
 			_vbuffer.Dispose();
 			_ibuffer.Dispose();
+			_material.Dispose();
 		}
 
 		static Vector4 ParseColor (string s) {

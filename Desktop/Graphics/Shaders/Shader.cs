@@ -13,6 +13,8 @@ using OpenTK.Graphics.ES20;
 
 namespace GameStack.Graphics {
 	public abstract class Shader : IDisposable {
+		public static volatile int ShaderCount = 0;
+
 		static Dictionary<IntPtr,Dictionary<string, Shader>> _shaders = new Dictionary<IntPtr, Dictionary<string, Shader>>();
 
 		string _name;
@@ -33,7 +35,8 @@ namespace GameStack.Graphics {
 				if (_shaders.TryGetValue(glContext, out shaders)) {
 					Shader master;
 					if (shaders.TryGetValue(_name, out master)) {
-						master._refCount++;
+						_master = master;
+						_master._refCount++;
 						_handle = master._handle;
 						_vertHandle = master._vertHandle;
 						_fragHandle = master._fragHandle;
@@ -120,6 +123,7 @@ namespace GameStack.Graphics {
 			}
 
 			_refCount = 1;
+			Interlocked.Increment(ref ShaderCount);
 		}
 
 		public virtual int MaxNumLights { get { return 0; } }
@@ -239,6 +243,8 @@ namespace GameStack.Graphics {
 				lock (_shaders) {
 					_shaders[ThreadContext.Current.GLContext].Remove(_name);
 				}
+
+				Interlocked.Decrement(ref ShaderCount);
 			}
 		}
 

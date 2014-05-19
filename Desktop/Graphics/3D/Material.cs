@@ -32,5 +32,13 @@ namespace GameStack.Graphics {
 		protected override void OnEnd () {
 			GL.UseProgram(0);
 		}
+
+		public override void Dispose ()
+		{
+			if (_shader != null)
+				_shader.Dispose();
+
+			base.Dispose();
+		}
 	}
 }

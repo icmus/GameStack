@@ -20,7 +20,7 @@ namespace GameStack.Graphics {
 		protected VertexBuffer _vbuffer;
 		protected IndexBuffer _ibuffer;
 		protected int _ioffset, _icount;
-		bool _ownMaterial;
+		bool _ownResources;
 
 		public Sprite (Material material, Vector2 size, VertexBuffer vbuffer = null, IndexBuffer ibuffer = null, int ioffset = 0, int icount = 0, bool ownMaterial = false) {
 			_material = material;
@@ -29,7 +29,7 @@ namespace GameStack.Graphics {
 			_ibuffer = ibuffer;
 			_ioffset = ioffset;
 			_icount = icount;
-			_ownMaterial = ownMaterial;
+			_ownResources = ownMaterial;
 		}
 
 		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true) {
@@ -63,7 +63,7 @@ namespace GameStack.Graphics {
 			_ioffset = 0;
 			_icount = 6;
 
-			_ownMaterial = true;
+			_ownResources = true;
 		}
 		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect = false)
 			: this(stream, settings, rect, relativeRect, Vector4.One)
@@ -147,8 +147,10 @@ namespace GameStack.Graphics {
 		#endregion
 
 		public void Dispose () {
-			if (!_ownMaterial)
+			if (!_ownResources)
 				return;
+			_vbuffer.Dispose();
+			_ibuffer.Dispose();
 			_material.Dispose();
 		}
 	}
