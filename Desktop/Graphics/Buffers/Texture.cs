@@ -42,7 +42,9 @@ namespace GameStack.Graphics {
 	}
 
 	public class Texture : IDisposable {
-		public static volatile int TextureCount = 0;
+		static volatile int _textureCount = 0;
+
+		public static int TextureCount { get { return _textureCount; } }
 
 		uint _handle = 0;
 		Size _size;
@@ -111,7 +113,7 @@ namespace GameStack.Graphics {
 
 			_texelSize = new Vector2(1f / _size.Width, 1f / _size.Height);
 
-			Interlocked.Increment(ref TextureCount);
+			Interlocked.Increment(ref _textureCount);
 		}
 
 		public void GenerateMipmaps () {
@@ -126,7 +128,7 @@ namespace GameStack.Graphics {
 
 		public void Dispose () {
 			GL.DeleteTexture((int)this.Handle);
-			Interlocked.Decrement(ref TextureCount);
+			Interlocked.Decrement(ref _textureCount);
 		}
 	}
 }
