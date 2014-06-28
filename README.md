@@ -95,14 +95,22 @@ dependencies individually.
 ## Building GameStack libraries
 
 ```
-make desktop    #build GameStack.Desktop
-make ios        #build GameStack.iOS (needs OSX)
-make android    #build GameStack.Android
-make samples    #build sample app
+make desktop         # build GameStack.Desktop
+make ios             # build GameStack.iOS (needs OSX)
+make android         # build GameStack.Android
+make samples         # build sample app
+make install         # perform all below install actions
+make install-gac     # install assemblies ito gac
+make install-libs    # install assemblies into library folder
+make install-addin   # install MonoDevelop/XamarinStudio project templates
 ```
+Each install target also has an uninstall target. Some install actions may
+require sudo. By default, libraries are installed in $(PREFIX)/lib/GameStack
+and pkgconfig files are added to $(PREFIX)/lib/pkgconfig. PREFIX defaults
+to /usr/local and may be overridden when running make.
 
-All library build output will be located in the bin/ folder, and further divided
-into sub-folders for each platform.
+After a build, all library build output will be located in the ./bin/ folder, 
+and further divided into sub-folders for each platform.
 
 # Dependencies and acknowledgments
 
@@ -118,3 +126,5 @@ GameStack relies on the following open source libraries:
 * [Json.NET](http://james.newtonking.com/json)
 * [tar-cs](https://code.google.com/p/tar-cs/)
 * [Autosprite](https://github.com/ricmrodrigues/autosprite)
+* [libogg](http://www.xiph.org/)
+* [libopus and libopusfile](http://www.opus-codec.org/)
