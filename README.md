@@ -92,13 +92,21 @@ make libs
 You can also enter the lib folder and use the Makefile targets to build
 dependencies individually.
 
-## Building GameStack libraries
+## Building the libraries
 
 ```
 make desktop         # build GameStack.Desktop
 make ios             # build GameStack.iOS (needs OSX)
 make android         # build GameStack.Android
 make samples         # build sample app
+```
+After a build, all library build output will be located in the ./bin/ folder, 
+and further divided into sub-folders for each platform. Instead of using make,
+you can also open the various .sln files with Xamarin Studio or MonoDevelop.
+
+## Installing
+
+```
 make install         # perform all below install actions
 make install-gac     # install assemblies ito gac
 make install-libs    # install assemblies into library folder
@@ -108,9 +116,6 @@ Each install target also has an uninstall target. Some install actions may
 require sudo. By default, libraries are installed in $(PREFIX)/lib/GameStack
 and pkgconfig files are added to $(PREFIX)/lib/pkgconfig. PREFIX defaults
 to /usr/local and may be overridden when running make.
-
-After a build, all library build output will be located in the ./bin/ folder, 
-and further divided into sub-folders for each platform.
 
 # Dependencies and acknowledgments
 
