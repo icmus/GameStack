@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{24C81D9C-0BB2-4E26-BA36-E7AC8C9727BE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GameStack.Pipeline</RootNamespace>
+    <AssemblyName>GameStack.Pipeline</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoWarn>1591</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>..\bin\GameStack.Pipeline.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="AssimpNet">
+      <HintPath>..\..\bin\AssimpNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Importers\ContentImporter.cs" />
+    <Compile Include="Importers\ContentTypeAttribute.cs" />
+    <Compile Include="Importers\WavefrontImporter.cs" />
+    <Compile Include="Primitives.cs" />
+    <Compile Include="Atlas\LayoutProperties.cs" />
+    <Compile Include="Atlas\Placement.cs" />
+    <Compile Include="Atlas\Algorithm\Algorithm.cs" />
+    <Compile Include="Atlas\Algorithm\Bit.cs" />
+    <Compile Include="Atlas\Algorithm\Contour.cs" />
+    <Compile Include="Atlas\Algorithm\Graph.cs" />
+    <Compile Include="Atlas\Algorithm\GraphNode.cs" />
+    <Compile Include="Atlas\Algorithm\HorizontalContour.cs" />
+    <Compile Include="Atlas\Algorithm\OT.cs" />
+    <Compile Include="Atlas\Algorithm\OTree.cs" />
+    <Compile Include="Atlas\Algorithm\VerticalContour.cs" />
+    <Compile Include="Atlas\Algorithm\Module.cs" />
+    <Compile Include="Tar\TarWriter.cs" />
+    <Compile Include="Tar\LegacyTarWriter.cs" />
+    <Compile Include="Tar\TarHeader.cs" />
+    <Compile Include="Tar\UsTarHeader.cs" />
+    <Compile Include="Tar\TarException.cs" />
+    <Compile Include="Tar\ITarHeader.cs" />
+    <Compile Include="Tar\DataWriter.cs" />
+    <Compile Include="Tar\IArchiveDataWriter.cs" />
+    <Compile Include="Importers\SoundEffectImporter.cs" />
+    <Compile Include="Extensions\BinaryExtensions.cs" />
+    <Compile Include="Extensions\JsonSerializerExtensions.cs" />
+    <Compile Include="Importers\FontImporter.cs" />
+    <Compile Include="ContentException.cs" />
+    <Compile Include="ImageHelper.cs" />
+    <Compile Include="Importers\ImageImporter.cs" />
+    <Compile Include="Importers\ModelImporter.cs" />
+    <Compile Include="Images\ImageLoader.cs" />
+    <Compile Include="Images\TargaLoader.cs" />
+    <Compile Include="Importers\AtlasImporter.cs" />
+    <Compile Include="Atlas\AtlasBuilder.cs" />
+    <Compile Include="Importers\MusicImporter.cs" />
+    <Compile Include="Images\GraphicsMagick\GraphicsMagick.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="..\AssemblyVersion.cs">
+      <Link>Properties\AssemblyVersion.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Importers\" />
+    <Folder Include="Atlas\" />
+    <Folder Include="Atlas\Algorithm\" />
+    <Folder Include="Tar\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Images\" />
+    <Folder Include="Images\GraphicsMagick\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+</Project>

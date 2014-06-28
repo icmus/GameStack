@@ -1,0 +1,142 @@
+﻿<?xml version="1.0"?>
+<Template originator="Brett Ernst" created="2014/06/23" lastModified="2014/06/23">
+	<TemplateConfiguration>
+		<_Name>GameStack iOS App</_Name>
+		<_Category>GameStack</_Category>
+		<Icon>md-project-iphone</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates a new GameStack iOS app project.</_Description>
+	</TemplateConfiguration>
+
+	<Actions>
+		<Open filename="DefaultScene.cs"></Open>
+	</Actions>
+
+	<Combine name="${ProjectName}" directory=".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		<Project name="${ProjectName}" directory="." type="IPhone">
+			<Options />
+			<References>
+				<Reference type="Gac" refto="System" />
+				<Reference type="Gac" refto="System.Core" />
+				<Reference type="Gac" refto="monotouch" />
+				<Reference type="Package" refto="GameStack.iOS" />
+				<Reference type="Package" refto="GameStack.iOS.Bindings" />
+			</References>
+			<Files>
+				<FileTemplateReference TemplateID="GameStack-EmptyScene" name="DefaultScene.cs" />
+				<CodeTranslationFile name="Main.cs">
+				<![CDATA[using System;
+using MonoTouch.UIKit;
+using GameStack;
+
+namespace ${Namespace} {
+	public class Application {
+		static void Main (string[] args) {
+			UIApplication.Main(args, null, "AppDelegate");
+		}
+	}
+}]]>
+				</CodeTranslationFile>
+				<CodeTranslationFile name="AppDelegate.cs">
+				<![CDATA[using System;
+using MonoTouch.Foundation;
+using MonoTouch.UIKit;
+using GameStack;
+
+namespace ${Namespace} {
+	[Register("AppDelegate")]
+	public partial class AppDelegate : UIApplicationDelegate {
+		UIWindow _window;
+		UIViewController _controller;
+		iOSGameView _view;
+		DefaultScene _scene;
+
+		public override bool FinishedLaunching (UIApplication app, NSDictionary options) {
+			_window = new UIWindow(UIScreen.MainScreen.Bounds);
+			_controller = new UIViewController();
+			_view = new iOSGameView(UIScreen.MainScreen.ApplicationFrame);
+			_scene = new DefaultScene(_view);
+			_window.RootViewController = _controller;
+			_controller.View = _view;
+
+			_window.MakeKeyAndVisible();
+
+			return true;
+		}
+
+		protected override void Dispose (bool disposing) {
+			base.Dispose(disposing);
+			if (disposing)
+				_scene.Dispose();
+		}
+
+		public override void OnResignActivation (UIApplication application) {
+			_view.Pause();
+		}
+
+		public override void OnActivated (UIApplication application) {
+			_view.Resume();
+		}
+	}
+}
+]]>
+				</CodeTranslationFile>
+				<File name="Info.plist" AddStandardHeader="false">
+				<![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+</dict>
+</plist>
+]]>
+				</File>
+				<File name="Entitlements.plist" AddStandardHeader="false">
+				<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>CFBundleDisplayName</key>
+        <string>${ProjectName}</string>
+        <key>CFBundleIdentifier</key>
+        <string>com.your-company.${Namespace}</string>
+        <key>CFBundleShortVersionString</key>
+        <string>1.0</string>
+        <key>CFBundleVersion</key>
+        <string>1.0</string>
+        <key>LSRequiresIPhoneOS</key>
+        <true/>
+        <key>MinimumOSVersion</key>
+        <string>7.0</string>
+        <key>UIDeviceFamily</key>
+        <array>
+                <integer>1</integer>
+                <integer>2</integer>
+        </array>
+        <key>UIRequiredDeviceCapabilities</key>
+        <array>
+                <string>armv7</string>
+        </array>
+        <key>UISupportedInterfaceOrientations</key>
+        <array>
+                <string>UIInterfaceOrientationPortrait</string>
+                <string>UIInterfaceOrientationLandscapeLeft</string>
+                <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+                <string>UIInterfaceOrientationPortrait</string>
+                <string>UIInterfaceOrientationPortraitUpsideDown</string>
+                <string>UIInterfaceOrientationLandscapeLeft</string>
+                <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+</dict>
+</plist>
+]]>
+				</File>
+			</Files>
+		</Project>
+	</Combine>
+</Template>

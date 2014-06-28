@@ -1,0 +1,4 @@
+Name: SDL2-CS
+Description: SDL2-CS
+Version: 1.0.0.0
+Libs: -r:_LIB_/GameStack/SDL2-CS.dll 

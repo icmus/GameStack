@@ -1,0 +1,49 @@
+﻿<?xml version="1.0"?>
+<Template originator="Brett Ernst" Created="2014/6/23" LastModified="2014/6/23">
+	<TemplateConfiguration>
+		<_Name>Empty Scene</_Name>
+		<Icon>md-class-file</Icon>
+		<_Category>GameStack</_Category>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates an empty scene class.</_Description>
+		<DefaultFilename>EmptyScene</DefaultFilename>
+	</TemplateConfiguration>
+
+	<TemplateFiles>
+		<File DefaultName="EmptyScene.cs">
+				<![CDATA[using System;
+using GameStack;
+using GameStack.Graphics;
+
+namespace ${Namespace} {
+	public class ${EscapedIdentifier} : Scene, IUpdater, IHandler<Start> {
+		public ${EscapedIdentifier} (IGameView view) : base(view) {
+		}
+
+		void IHandler<Start>.Handle (FrameArgs frame, Start e) {
+			// Load assets and initialize scene objects
+		}
+
+		void IUpdater.Update (FrameArgs e) {
+			// Update scene objects
+		}
+
+		protected override void OnDraw (FrameArgs e) {
+			base.OnDraw(e);
+
+			// Perform draw operations
+		}
+
+		public override void Dispose () {
+			// Dispose all resources
+
+			base.Dispose();
+		}
+	}
+}
+]]>
+		</File>
+	</TemplateFiles>
+
+	<FileOptions/>
+</Template>

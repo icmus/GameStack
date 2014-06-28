@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared", "Shared\GameStack.Shared.shproj", "{3107B7A2-20CE-47DB-87FE-2169344B4D2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.Android", "Android\GameStack.Android.csproj", "{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.Android.Bindings", "Android\bindings\GameStack.Android.Bindings.csproj", "{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Bindings", "Shared\bindings\GameStack.Shared.Bindings.shproj", "{247588CC-3D44-4E88-AA21-F78584895C4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temp.Android", "tmp\Temp.Android\Temp.Android.csproj", "{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Temp.Shared", "tmp\shared\Temp.Shared.shproj", "{FEAC4115-B926-41FA-9146-0D8ACA3ADB6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3107B7A2-20CE-47DB-87FE-2169344B4D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3107B7A2-20CE-47DB-87FE-2169344B4D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = tmp\Temp.Android\Temp.Android.csproj
+	EndGlobalSection
+EndGlobal

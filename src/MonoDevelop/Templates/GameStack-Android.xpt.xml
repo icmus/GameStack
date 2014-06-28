@@ -1,0 +1,103 @@
+﻿<?xml version="1.0"?>
+<Template originator="Brett Ernst" created="2014/06/23" lastModified="2014/06/23">
+	<TemplateConfiguration>
+		<_Name>GameStack Android App</_Name>
+		<_Category>GameStack</_Category>
+		<Icon>md-project-monodroid</Icon>
+		<LanguageName>C#</LanguageName>
+		<_Description>Creates a new GameStack Android app project.</_Description>
+	</TemplateConfiguration>
+
+	<Actions>
+		<Open filename="DefaultScene.cs"></Open>
+	</Actions>
+
+	<Combine name="${ProjectName}" directory=".">
+		<Options>
+			<StartupProject>${ProjectName}</StartupProject>
+		</Options>
+		<Project name="${ProjectName}" directory="." type="MonoDroid">
+			<Options AndroidApplication="true"
+            	AndroidResgenFile="Resources/Resource.designer.cs"
+                AndroidResgenClass="Resource" />
+			<References>
+				<Reference type="Gac" refto="System" />
+				<Reference type="Gac" refto="System.Core" />
+				<Reference type="Gac" refto="OpenTK-1.0" />
+				<Reference type="Gac" refto="Mono.Android" />
+				<Reference type="Package" refto="GameStack.Android" />
+				<Reference type="Package" refto="GameStack.Android.Bindings" />
+			</References>
+			<Files>
+				<FileTemplateReference TemplateID="GameStack-EmptyScene" name="DefaultScene.cs" />
+				<CodeTranslationFile name="MainActivity.cs">
+				<![CDATA[
+#pragma warning disable 0414
+
+using System;
+using System.Runtime.InteropServices;
+using System.Security;
+using Android.App;
+using Android.Content;
+using Android.Content.PM;
+using Android.Content.Res;
+using Android.Media;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using GameStack;
+using Java.IO;
+using OpenTK;
+using OpenTK.Audio;
+using OpenTK.Audio.OpenAL;
+
+namespace ${Namespace} {
+	[Activity (Label = "${Namespace}.MainActivity", MainLauncher = true,
+		ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden)]
+	public class MainActivity : Activity {
+		AndroidGameView _view;
+		DefaultScene _scene;
+
+		protected override void OnCreate (Bundle bundle) {
+			base.OnCreate (bundle);
+
+			_view = new AndroidGameView (this, 60);
+			_scene = new DefaultScene (_view);
+
+			this.SetContentView (_view);
+		}
+
+		protected override void OnPause () {
+			base.OnPause ();
+			_view.Pause ();
+		}
+
+		protected override void OnResume () {
+			base.OnResume ();
+			_view.Resume ();
+		}
+	}
+}]]>
+				</CodeTranslationFile>
+				<Directory name="assets"/>
+				<Directory name="Properties">
+					<File name="AndroidManifest.xml">
+					<![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="${ProjectName}">
+	<uses-sdk android:minSdkVersion="14" />
+	<application android:label="${ProjectName}">
+	</application>
+</manifest>
+					]]>
+					</File>
+				</Directory>
+				<Directory name="Resources">
+					<Directory name="drawable"/>
+					<Directory name="layout"/>
+					<Directory name="values"/>
+				</Directory>
+			</Files>
+		</Project>
+	</Combine>
+</Template>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{3107B7A2-20CE-47DB-87FE-2169344B4D2D}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GameStack.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Extensions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Graphics\" />
+    <Folder Include="$(MSBuildThisFileDirectory)GUI\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Logic\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Math\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Sound\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Content\ContentException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Content\Tar\ITarHeader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Content\Tar\TarException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Content\Tar\TarHeader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Content\Tar\TarReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Content\Tar\UsTarHeader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\BinaryExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ConversionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\ScopedObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\Atlas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\BitmapFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\Camera2D.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\Drawable2D.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\FrameSequence.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\Quad.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\SlicedSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\Sprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\SpriteMaterial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\SpriteSequence.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\TextBlock.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\TextRun.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\Animation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\Bone.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\Camera.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\Lighting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\Material.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\Mesh.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\MeshMaterial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\Model.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\3D\Node.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Buffers\Batch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Buffers\FrameBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Buffers\IndexBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Buffers\Texture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Buffers\VertexBuffer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Buffers\VertexFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\MeshShader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\Shader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\SolidColorShader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\SpriteShader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\Button.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\IGestureInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\IPointerInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\ImageView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\Label.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\RadioGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\RootView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\View.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\FrameArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\IGameView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\IHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\IUpdater.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\ThreadContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Coroutines\Coroutine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Coroutines\CoroutineList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Coroutines\ICoroutine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Coroutines\WaitFor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\Application.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\EventBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\Gesture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\Keyboard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\Resize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\Touch.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Scenes\Scene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logic\Scenes\SceneCrossfader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Controller.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\ITransition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Mathf.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Ray.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Transition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Tween.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\SoundChannel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\SoundEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\Sounds.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\StreamingSoundChannel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\IStreamingSound.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\StreamingOpusFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Content\PngLoader.cs" />
+  </ItemGroup>
+</Project>

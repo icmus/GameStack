@@ -1,0 +1,10 @@
+﻿<ExtensionModel>
+	<Extension path="/MonoDevelop/Ide/FileTemplates">
+		<FileTemplate id="GameStack-EmptyScene" resource="GameStack-EmptyScene.xft.xml"/>
+	</Extension>
+	<Extension path="/MonoDevelop/Ide/ProjectTemplates">
+		<ProjectTemplate id="GameStack-Desktop" resource="GameStack-Desktop.xpt.xml"/>
+		<ProjectTemplate id="GameStack-iOS" resource="GameStack-iOS.xpt.xml"/>
+		<ProjectTemplate id="GameStack-Android" resource="GameStack-Android.xpt.xml"/>
+	</Extension>
+</ExtensionModel>

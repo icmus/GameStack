@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F806C460-A5B9-4DB2-8356-4B8AE8820F14}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Temp</RootNamespace>
+    <AssemblyName>Temp</AssemblyName>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="../scripts/desktop.sh content/ ${TargetDir}" workingdir="${ProjectDir}" />
+      </CustomCommands>
+    </CustomCommands>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__DESKTOP__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="../../../dist/desktop.sh ${ProjectDir}/../content/ ${TargetDir}" workingdir="${ProjectDir}" />
+      </CustomCommands>
+    </CustomCommands>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <PlatformTarget>x86</PlatformTarget>
+    <EnvironmentVariables>
+      <EnvironmentVariables>
+        <Variable name="DYLD_LIBRARY_PATH" value="/Users/bernst/code/GameStack/src/Temp/bin/Debug" />
+      </EnvironmentVariables>
+    </EnvironmentVariables>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="../../../dist/desktop.sh ${ProjectDir}/../content/ ${TargetDir}" workingdir="${ProjectDir}" />
+      </CustomCommands>
+    </CustomCommands>
+    <DefineConstants>__DESKTOP__</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="SDL2-CS">
+      <HintPath>..\..\..\bin\desktop\SDL2-CS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="..\shared\Temp.Shared.projitems" Label="Shared" Condition="Exists('..\shared\Temp.Shared.projitems')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Desktop\GameStack.Desktop.csproj">
+      <Project>{F616E57C-F618-4994-8F94-A6B78247AC6D}</Project>
+      <Name>GameStack.Desktop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Desktop\bindings\GameStack.Desktop.Bindings.csproj">
+      <Project>{EEA75F42-6E10-4607-9957-3A7FF66FC0A7}</Project>
+      <Name>GameStack.Desktop.Bindings</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

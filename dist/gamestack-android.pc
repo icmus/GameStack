@@ -1,0 +1,4 @@
+Name: GameStack
+Description: GameStack
+Version: 1.0.0.0
+Libs: -r:_LIB_/GameStack/android/GameStack.Android.dll -r:_LIB_/GameStack/android/GameStack.Android.Bindings.dll
