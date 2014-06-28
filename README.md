@@ -18,9 +18,95 @@ the main loop.
 GameStack can be used on Mac and Linux without Xamarin Studio, but we recommend
 MonoDevelop for most scenarios.
 
-## Dependencies and acknowledgments
+# Run-time Prerequisites
 
-GameStack relies on the following open source technologies:
+The following components are required for execution of GameStack apps on desktop
+platforms:
+
+* Mono 3.2+ [OSX installer](http://www.go-mono.com/mono-downloads/download.html)
+* SDL 2 [OSX installer](http://www.libsdl.org/download-2.0.php)
+* OpenAL (provided by OSX; needs package install on Linux)
+
+Machines with Xamarin Studio or MonoDevelop installed should already have a
+suitable version of Mono.
+
+In Arch Linux, simply use:
+
+```
+pacman -S mono sdl2 openal
+```
+
+You also need to have installed video/sound drivers and an appropriate display
+server (e.g., Xorg). See your distribution's documentation for additional info.
+
+# Building GameStack
+
+GameStack.Desktop can be built on either Linux or Mac OSX, but GameStack.iOS
+requires OSX.
+
+## Prerequisites
+
+After cloning, GameStack can download and build all of its dependencies,
+provided that all of the prerequisites are present on your system.  If any of
+the builds fail, it is likely that something is missing.  When building on Mac
+OSX, we recommend installing common prerequisites via
+[Homebrew](http://brew.sh/). For Linux, these packages should all be available
+via your distribution's package manager.
+
+Most of these prerequisites are required to build GameStack's dependencies
+rather than GameStack itself. You do not need to install them all on machines
+that are merely going to run GameStack-based apps. See below for the list of
+run-time requirements.
+
+### Common prerequisites (all platforms)
+
+* git
+* svn (Subversion)
+* wget
+* unzip
+* cmake
+
+### Linux prerequisites
+
+* Base dev tools: gcc, g++, make, autoconf, patch
+* Mono 3.2+
+
+Cheat code for Arch:
+
+```
+pacman -S git base-devel wget unzip subversion mono cmake
+```
+
+### Mac OSX prerequisites
+
+* Xcode 5.1+ with command-line tools installed
+* iPhone SDK 7.1+
+* Xamarin 3+ (Mono 3.2+)
+
+## Building prerequisites
+
+```
+make libs
+```
+
+You can also enter the lib folder and use the Makefile targets to build
+dependencies individually.
+
+## Building GameStack libraries
+
+```
+make desktop    #build GameStack.Desktop
+make ios        #build GameStack.iOS (needs OSX)
+make android    #build GameStack.Android
+make samples    #build sample app
+```
+
+All library build output will be located in the bin/ folder, and further divided
+into sub-folders for each platform.
+
+# Dependencies and acknowledgments
+
+GameStack relies on the following open source libraries:
 
 * [Mono 3+](http://www.mono-project.com/Main_Page)
 * [SDL2](http://www.libsdl.org/)

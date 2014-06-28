@@ -1,6 +1,0 @@
-{
-    "border": { "X": 5, "Y": 5, "Z": 5, "W": 5 },
-    "tileX": true,
-    "tileY": true,
-    "hollow": false
-}
