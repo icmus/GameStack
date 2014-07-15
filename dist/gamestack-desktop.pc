@@ -1,4 +1,4 @@
 Name: GameStack
 Description: GameStack
 Version: 1.0.0.0
-Libs: -r:_LIB_/GameStack/desktop/GameStack.Desktop.dll -r:_LIB_/GameStack/desktop/GameStack.Desktop.Bindings.dll -r:_LIB_/GameStack/GameStack.Pipeline.dll
+Libs: -r:_LIB_/GameStack/desktop/GameStack.Desktop.dll -r:_LIB_/GameStack/desktop/GameStack.Desktop.Bindings.dll -r:_LIB_/GameStack/GameStack.Pipeline.dll -r:_LIB_/GameStack/desktop/SDL2-CS.dll

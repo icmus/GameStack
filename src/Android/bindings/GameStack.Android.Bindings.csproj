@@ -12,6 +12,8 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>GameStack.Android.Bindings</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,9 +62,6 @@
     <Folder Include="armeabi-v7a\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedNativeLibrary Include="..\..\..\bin\android\libcairo.so">
-      <Link>armeabi-v7a\libcairo.so</Link>
-    </EmbeddedNativeLibrary>
     <EmbeddedNativeLibrary Include="..\..\..\bin\android\liblodepng.so">
       <Link>armeabi-v7a\liblodepng.so</Link>
     </EmbeddedNativeLibrary>
@@ -71,9 +70,6 @@
     </EmbeddedNativeLibrary>
     <EmbeddedNativeLibrary Include="..\..\..\bin\android\libopusfile.so">
       <Link>armeabi-v7a\libopusfile.so</Link>
-    </EmbeddedNativeLibrary>
-    <EmbeddedNativeLibrary Include="..\..\..\bin\android\libpixman-1.so">
-      <Link>armeabi-v7a\libpixman-1.so</Link>
     </EmbeddedNativeLibrary>
   </ItemGroup>
 </Project>

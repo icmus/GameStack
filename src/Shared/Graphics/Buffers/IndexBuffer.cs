@@ -19,7 +19,7 @@ using DrawElementsType = OpenTK.Graphics.ES20.All;
 namespace GameStack.Graphics {
 	public class IndexBuffer : IDisposable {
 		int[] _data;
-		uint _handle;
+		int _handle;
 		#if __ANDROID__
 		All _mode;
 
@@ -36,7 +36,7 @@ namespace GameStack.Graphics {
 			ThreadContext.Current.EnsureGLContext();
 			_data = vertices;
 
-			var buffers = new uint[1];
+			var buffers = new int[1];
 			GL.GenBuffers(1, buffers);
 			_handle = buffers[0];
 
@@ -66,7 +66,10 @@ namespace GameStack.Graphics {
 		}
 
 		public void Dispose () {
-			GL.DeleteBuffers(1, new uint[_handle]);
+			if (_handle >= 0) {
+				GL.DeleteBuffers(1, new int[] { _handle });
+				_handle = -1;
+			}
 		}
 	}
 }

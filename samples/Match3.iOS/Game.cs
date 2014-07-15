@@ -582,9 +582,12 @@ namespace Samples.Match3 {
 		}
 
 		public override void Dispose () {
-			_music.Dispose();
-			_sfx.Dispose();
-			_sfx2.Dispose();
+			if (_music != null)
+				_music.Dispose();
+			if (_sfx != null)
+				_sfx.Dispose();
+			if (_sfx2 != null)
+				_sfx2.Dispose();
 
 			base.Dispose();
 		}

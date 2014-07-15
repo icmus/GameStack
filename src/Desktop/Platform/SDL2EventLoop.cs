@@ -36,28 +36,32 @@ namespace GameStack.Desktop {
 		public void EnterLoop () {
 			bool isQuitting = false;
 
-			foreach (var view in _views)
-				view.StartThread();
+			if (_views.Count == 1) {
 
-			while (!isQuitting) {
-				SDL.SDL_Event e;
-				if (SDL.SDL_WaitEvent(out e) == 1) {
-					var evtHandler = this.Event;
-					if (evtHandler != null)
-						evtHandler(this, new SDL2EventArgs(e));
-					foreach (var view in _views)
-						view.EnqueueEvent(e);
+			} else {
+				foreach (var view in _views)
+					view.StartThread();
 
-					lock (_closedList) {
-						foreach (var view in _closedList) {
-							_views.Remove(view);
-							view.Dispose();
+				while (!isQuitting) {
+					SDL.SDL_Event e;
+					if (SDL.SDL_WaitEvent(out e) == 1) {
+						var evtHandler = this.Event;
+						if (evtHandler != null)
+							evtHandler(this, new SDL2EventArgs(e));
+						foreach (var view in _views)
+							view.EnqueueEvent(e);
+
+						lock (_closedList) {
+							foreach (var view in _closedList) {
+								_views.Remove(view);
+								view.Dispose();
+							}
+							_closedList.Clear();
 						}
-						_closedList.Clear();
-					}
 
-					if (_views.Count == 0 || e.type == SDL.SDL_EventType.SDL_QUIT)
-						isQuitting = true;
+						if (_views.Count == 0 || e.type == SDL.SDL_EventType.SDL_QUIT)
+							isQuitting = true;
+					}
 				}
 			}
 		}

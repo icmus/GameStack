@@ -21,6 +21,7 @@ namespace GameStack {
 		List<IDisposable> _disposables;
 		List<object> _unknowns;
 		object[] _handlerArgs;
+		bool _isVisible, _isUpdating;
 
 		public Scene (IGameView view = null) {
 			this.ClearColor = Color.CornflowerBlue;
@@ -40,11 +41,17 @@ namespace GameStack {
 				_view.Render += OnRender;
 				_view.Destroyed += OnDestroy;
 			}
+			_isVisible = true;
+			_isUpdating = true;
 		}
 
 		public IGameView View { get { return _view; } }
 
 		public Color ClearColor { get; set; }
+
+		public bool IsVisible { get { return _isVisible; } set { _isVisible = value; } }
+
+		public bool IsUpdating { get { return _isUpdating; } set { _isUpdating = value; } }
 
 		public virtual void Start (object sender, Start args) {
 			var frameArgs = new FrameArgs();
@@ -90,6 +97,11 @@ namespace GameStack {
 				_unknowns.Add(obj);
 		}
 
+		public void AddMany (params object[] obj) {
+			foreach (var o in obj)
+				this.Add(o);
+		}
+
 		public void Remove (object obj) {
 			var any = false;
 
@@ -124,6 +136,11 @@ namespace GameStack {
 				_unknowns.Remove(obj);
 		}
 
+		public void RemoveMany(params object[] obj) {
+			foreach (var o in obj)
+				this.Remove(o);
+		}
+
 		public void ForEach<T> (Action<T> action) where T : class, IUpdater {
 			for (var i = 0; i < _updaters.Count; i++) {
 				var obj = _updaters[i] as T;
@@ -148,6 +165,9 @@ namespace GameStack {
 		}
 
 		public void OnUpdate (object sender, FrameArgs e) {
+			if (!_isUpdating)
+				return;
+
 			int count = 0;
 			try {
 				foreach (var evt in e.Events) {
@@ -186,7 +206,7 @@ namespace GameStack {
 
 			try {
 				count = _updaters.Count;
-				for (var i = 0; i < _updaters.Count; i++) {
+				for (var i = 0; i < count; i++) {
 					if (_updaters[i] != null)
 						_updaters[i].Update(e);
 				}
@@ -206,8 +226,6 @@ namespace GameStack {
 				list.RemoveAll(o => o.Value == null);
 			}
 			_updaters.RemoveAll(o => o == null);
-
-			e.ClearEvents();
 		}
 
 		public void OnDestroy (object sender, EventArgs e) {
@@ -215,6 +233,11 @@ namespace GameStack {
 		}
 
 		public void OnRender (object sender, FrameArgs e) {
+			if(_isVisible)
+				this.OnDraw(e);
+		}
+
+		public void DrawNow(FrameArgs e) {
 			this.OnDraw(e);
 		}
 
@@ -240,8 +263,10 @@ namespace GameStack {
 				_view.Destroyed -= OnDestroy;
 			}
 
-			foreach (var obj in _disposables)
-				obj.Dispose();
+			foreach (var obj in _disposables) {
+				if (obj != this)
+					obj.Dispose();
+			}
 		}
 	}
 }

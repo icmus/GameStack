@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{F616E57C-F618-4994-8F94-A6B78247AC6D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>GameStack.Desktop</RootNamespace>
@@ -12,6 +10,8 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\GameStack.snk</AssemblyOriginatorKeyFile>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,6 +42,7 @@
     <Reference Include="SDL2-CS">
       <HintPath>..\..\bin\desktop\SDL2-CS.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Cairo" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,16 +53,26 @@
     <Compile Include="..\AssemblyVersion.cs">
       <Link>Properties\AssemblyVersion.cs</Link>
     </Compile>
+    <Compile Include="..\Shared\drawing\CairoEx.cs">
+      <Link>Drawing\CairoEx.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\drawing\CanvasView.cs">
+      <Link>Drawing\CanvasView.cs</Link>
+    </Compile>
+    <Compile Include="..\Shared\drawing\FreeTypeFontFace.cs">
+      <Link>Drawing\FreeTypeFontFace.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="..\Shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\Shared\GameStack.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Platform\" />
+    <Folder Include="Drawing\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="bindings\GameStack.Desktop.Bindings.csproj">
       <Project>{EEA75F42-6E10-4607-9957-3A7FF66FC0A7}</Project>
       <Name>GameStack.Desktop.Bindings</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Platform\" />
   </ItemGroup>
 </Project>

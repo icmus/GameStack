@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{1BAAACB5-02FC-4EC2-B97D-BA4B95220190}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>GameStack.Shared.Drawing</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Mono.Cairo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Antialias.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Cairo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\CairoDebug.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Color.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Content.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Distance.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Extend.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\FillRule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Filter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\FontExtents.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\FontFace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\FontOptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\FontSlant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\FontType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\FontWeight.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Format.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Glyph.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Gradient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\HintMetrics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\HintStyle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\ImageSurface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\LinearGradient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\LineCap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\LineJoin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Matrix.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\NativeMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Operator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Path.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Pattern.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\PatternType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Point.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\PointD.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\RadialGradient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Rectangle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Region.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\ScaledFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\SolidPattern.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Status.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\SubpixelOrder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\Surface.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\SurfacePattern.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\SurfaceType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\SvgVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mono.Cairo\TextExtents.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CanvasView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CairoEx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FreeTypeFontFace.cs" />
+  </ItemGroup>
+</Project>

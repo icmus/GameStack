@@ -3,7 +3,7 @@ using OpenTK.Audio;
 using OpenTK.Audio.OpenAL;
 
 namespace GameStack {
-	public class SoundChannel : IDisposable {
+	public class SoundChannel : IDisposable, IWaitFor {
 		int _source;
 		SoundEffect _effect;
 		bool _isDispsoed;
@@ -62,6 +62,10 @@ namespace GameStack {
 			_isDispsoed = true;
 
 			AL.DeleteSource(_source);
+		}
+
+		bool IWaitFor.Check () {
+			return !this.IsPlaying;
 		}
 	}
 }

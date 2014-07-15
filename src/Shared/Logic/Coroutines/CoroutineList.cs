@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using IEnumerator = System.Collections.IEnumerator;
 
 namespace GameStack {
-	public class CoroutineList<T> : IUpdater {
+	public class CoroutineList<T> : IUpdater where T : class {
 		List<Coroutine<T>> _co;
 		List<Coroutine<T>> _startList;
 
@@ -65,7 +65,11 @@ namespace GameStack {
 		}
 
 		void IUpdater.Update (FrameArgs e) {
-			this.Update();
+			var obj = this as CoroutineList<FrameArgs>;
+			if (obj != null)
+				obj.Update(e);
+			else
+				this.Update();
 		}
 	}
 }

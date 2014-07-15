@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
 using Assimp;
+using Mono.Unix;
 
 namespace GameStack.Pipeline {
 	public abstract class ContentImporter {
@@ -60,8 +61,11 @@ namespace GameStack.Pipeline {
 							iStream.CopyTo(oStream);
 						}
 					}
-				} else
+				} else {
 					File.Copy(inputFile, outputFile, true);
+					var ufi = new UnixFileInfo(outputFile);
+					ufi.FileAccessPermissions |= FileAccessPermissions.UserWrite;
+				}
 			} else {
 				var attr = (ContentTypeAttribute)Attribute.GetCustomAttribute(type, typeof(ContentTypeAttribute));
 

@@ -41,14 +41,16 @@ namespace GameStack.Gui {
 		protected override void OnDraw (ref Matrix4 transform) {
 			var height = _text.ActualSize.Y;
 			var textTransform = transform;
+			var baseLine = _text.Font.Base - _text.Font.LineHeight;
 			switch (this.VerticalAlignment) {
 				case VerticalAlignment.Top:
-					textTransform.M42 += (int)(this.Size.Height - height);
+					textTransform.M42 += (int)(this.Size.Height - height) + baseLine;
 					break;
 				case VerticalAlignment.Middle:
-					textTransform.M42 += (int)((this.Size.Height - height) / 2f);
+					textTransform.M42 += (int)((this.Size.Height - height) / 2f) + baseLine;
 					break;
 				case VerticalAlignment.Bottom:
+					textTransform.M42 = baseLine;
 					break;
 			}
 			_text.Draw (ref textTransform);

@@ -25,7 +25,7 @@ namespace GameStack.Graphics {
 
 			if (_texture != null) {
 				GL.ActiveTexture(TextureUnit.Texture0);
-				GL.BindTexture(TextureTarget.Texture2D, _texture.Handle);
+				_texture.Apply();
 				this.Shader.Uniform("Texture", 0);
 				this.Shader.Uniform("TextureSize", new Vector2(_texture.Size.Width, _texture.Size.Height));
 			}

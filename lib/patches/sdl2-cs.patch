@@ -1,0 +1,103 @@
+diff --git a/SDL2-CS.csproj b/SDL2-CS.csproj
+index d9d882a..5ef07ce 100644
+--- a/SDL2-CS.csproj
++++ b/SDL2-CS.csproj
+@@ -3,7 +3,7 @@
+   <PropertyGroup>
+     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+-    <ProductVersion>9.0.21022</ProductVersion>
++    <ProductVersion>8.0.30703</ProductVersion>
+     <SchemaVersion>2.0</SchemaVersion>
+     <ProjectGuid>{85480198-8711-4355-830E-72FD794AD3F6}</ProjectGuid>
+     <OutputType>Library</OutputType>
+@@ -21,6 +21,8 @@
+     <PlatformTarget>x86</PlatformTarget>
+     <ConsolePause>false</ConsolePause>
+     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
++    <SignAssembly>true</SignAssembly>
++    <AssemblyOriginatorKeyFile>..\..\src\GameStack.snk</AssemblyOriginatorKeyFile>
+   </PropertyGroup>
+   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+     <DebugType>none</DebugType>
+@@ -31,6 +33,8 @@
+     <PlatformTarget>x86</PlatformTarget>
+     <ConsolePause>false</ConsolePause>
+     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
++    <SignAssembly>true</SignAssembly>
++    <AssemblyOriginatorKeyFile>..\..\src\GameStack.snk</AssemblyOriginatorKeyFile>
+   </PropertyGroup>
+   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+     <DebugSymbols>true</DebugSymbols>
+@@ -51,6 +55,8 @@
+     <WarningLevel>4</WarningLevel>
+     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+     <ConsolePause>false</ConsolePause>
++    <SignAssembly>true</SignAssembly>
++    <AssemblyOriginatorKeyFile>..\..\src\GameStack.snk</AssemblyOriginatorKeyFile>
+   </PropertyGroup>
+   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+     <DebugSymbols>true</DebugSymbols>
+diff --git a/SDL2-CS.dll.config b/SDL2-CS.dll.config
+index 9e4db74..5ea7edd 100644
+--- a/SDL2-CS.dll.config
++++ b/SDL2-CS.dll.config
+@@ -1,22 +1,26 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <configuration>
+ 	<dllmap dll="SDL2.dll" os="windows" target="SDL2.dll"/>
+-	<dllmap dll="SDL2.dll" os="osx" target="libSDL2-2.0.0.dylib"/>
++	<dllmap dll="SDL2.dll" os="osx" target="SDL2.framework/SDL2"/>
+ 	<dllmap dll="SDL2.dll" os="linux" target="libSDL2-2.0.so.0"/>
+ 
+ 	<dllmap dll="SDL2_image.dll" os="windows" target="SDL2_image.dll"/>
+-	<dllmap dll="SDL2_image.dll" os="osx" target="libSDL2_image-2.0.0.dylib"/>
++	<dllmap dll="SDL2_image.dll" os="osx" target="SDL2_image.framework/SDL2_image"/>
+ 	<dllmap dll="SDL2_image.dll" os="linux" target="libSDL2_image-2.0.so.0"/>
+ 
+ 	<dllmap dll="SDL2_mixer.dll" os="windows" target="SDL2_mixer.dll"/>
+-	<dllmap dll="SDL2_mixer.dll" os="osx" target="libSDL2_mixer-2.0.0.dylib"/>
++	<dllmap dll="SDL2_mixer.dll" os="osx" target="SDL2_mixer.framework/SDL2_mixer"/>
+ 	<dllmap dll="SDL2_mixer.dll" os="linux" target="libSDL2_mixer-2.0.so.0"/>
+ 
+ 	<dllmap dll="SDL2_ttf.dll" os="windows" target="SDL2_ttf.dll"/>
+-	<dllmap dll="SDL2_ttf.dll" os="osx" target="libSDL2_ttf-2.0.0.dylib"/>
++	<dllmap dll="SDL2_ttf.dll" os="osx" target="SDL2_ttf.framework/SDL_ttf"/>
+ 	<dllmap dll="SDL2_ttf.dll" os="linux" target="libSDL2_ttf-2.0.so.0"/>
+ 
+-	<dllmap dll="soft_oal.dll" os="windows" target="soft_oal.dll"/>
+-	<dllmap dll="soft_oal.dll" os="osx" target="libopenal.1.dylib"/>
++	<dllmap dll="openal32.dll" os="windows" target="openal32.dll"/>
++	<dllmap dll="openal32.dll" os="osx" target="OpenAL.framework/OpenAL"/>
++	<dllmap dll="openal32.dll" os="linux" target="libopenal.so.1"/>
++
++	<dllmap dll="soft_oal.dll" os="windows" target="openal32.dll"/>
++	<dllmap dll="soft_oal.dll" os="osx" target="OpenAL.framework/OpenAL"/>
+ 	<dllmap dll="soft_oal.dll" os="linux" target="libopenal.so.1"/>
+ </configuration>
+diff --git a/src/MiniTK/Graphics/SDL2_GraphicsContext.cs b/src/MiniTK/Graphics/SDL2_GraphicsContext.cs
+index 3d0593e..e1f1ac4 100644
+--- a/src/MiniTK/Graphics/SDL2_GraphicsContext.cs
++++ b/src/MiniTK/Graphics/SDL2_GraphicsContext.cs
+@@ -28,16 +28,19 @@
+ 
+ #region Using Statements
+ using System;
++using System.Threading;
+ #endregion
+ 
+ namespace OpenTK.Graphics
+ {
+ 	public class GraphicsContext
+ 	{
++		public static ThreadLocal<IntPtr> _threadContexts = new ThreadLocal<IntPtr>(() => IntPtr.Zero);
++
+ 		public static IntPtr CurrentContext
+ 		{
+-			get;
+-			set;
++			get { return _threadContexts.Value; }
++			set { _threadContexts.Value = value; }
+ 		}
+ 		
+ 		public static bool ErrorChecking

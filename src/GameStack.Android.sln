@@ -9,9 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.Android.Bindings"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Bindings", "Shared\bindings\GameStack.Shared.Bindings.shproj", "{247588CC-3D44-4E88-AA21-F78584895C4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temp.Android", "tmp\Temp.Android\Temp.Android.csproj", "{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temp.Android", "tmp\android\Temp.Android.csproj", "{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Temp.Shared", "tmp\shared\Temp.Shared.shproj", "{FEAC4115-B926-41FA-9146-0D8ACA3ADB6E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Drawing", "Shared\drawing\GameStack.Shared.Drawing.shproj", "{1BAAACB5-02FC-4EC2-B97D-BA4B95220190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.Android.Drawing", "Android\drawing\GameStack.Android.Drawing.csproj", "{EBB4EE45-7967-462A-8934-50D099F466F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,8 +27,6 @@ Global
 		{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3107B7A2-20CE-47DB-87FE-2169344B4D2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3107B7A2-20CE-47DB-87FE-2169344B4D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,8 +35,12 @@ Global
 		{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68F22F3D-C86B-4E94-BFE3-6AFFAF855C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBB4EE45-7967-462A-8934-50D099F466F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBB4EE45-7967-462A-8934-50D099F466F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBB4EE45-7967-462A-8934-50D099F466F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBB4EE45-7967-462A-8934-50D099F466F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = tmp\Temp.Android\Temp.Android.csproj
+		StartupItem = tmp\android\Temp.Android.csproj
 	EndGlobalSection
 EndGlobal

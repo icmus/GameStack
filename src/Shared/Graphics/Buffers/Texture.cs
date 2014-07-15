@@ -23,8 +23,8 @@ using TexturePixelType = OpenTK.Graphics.ES20.All;
 using PixelInternalFormat = OpenTK.Graphics.ES20.All;
 using PixelType = OpenTK.Graphics.ES20.All;
 using PixelStoreParameter = OpenTK.Graphics.ES20.All;
-using PixelFormat = OpenTK.Graphics.ES20.All;
 using TextureParameterName = OpenTK.Graphics.ES20.All;
+using PixelFormat = OpenTK.Graphics.ES20.All;
 #endif
 
 namespace GameStack.Graphics {
@@ -63,9 +63,28 @@ namespace GameStack.Graphics {
 		Vector2 _texelSize;
 		TextureSettings _settings;
 
-		public Texture (Size size, TextureSettings settings = null, PixelFormat format = PixelFormat.Rgba) {
+		public Texture (int width, int height, TextureSettings settings = null,
+			#if __MOBILE__
+			All format = All.Rgba
+			#else
+			PixelFormat format = PixelFormat.Rgba
+			#endif
+		) {
+			_size = new Size(width, height);
+			_format = (PixelFormat)format;
+
+			this.Initialize(null, settings);
+		}
+
+		public Texture (Size size, TextureSettings settings = null,
+			#if __MOBILE__
+			All format = All.Rgba
+			#else
+			PixelFormat format = PixelFormat.Rgba
+			#endif
+		) {
 			_size = size;
-			_format = format;
+			_format = (PixelFormat)format;
 
 			this.Initialize(null, settings);
 		}
@@ -138,6 +157,10 @@ namespace GameStack.Graphics {
 			_texelSize = new Vector2(1f / _size.Width, 1f / _size.Height);
 
 			Interlocked.Increment(ref _textureCount);
+		}
+
+		public void Apply() {
+			GL.BindTexture(TextureTarget.Texture2D, _handle);
 		}
 
 		public void GenerateMipmaps () {

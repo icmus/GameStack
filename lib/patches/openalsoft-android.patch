@@ -1,0 +1,25 @@
+diff -rupN openalsoft.orig/Alc/backends/opensl.c openalsoft/Alc/backends/opensl.c
+--- openalsoft.orig/Alc/backends/opensl.c	2014-06-26 18:23:42.000000000 -0700
++++ openalsoft/Alc/backends/opensl.c	2014-06-26 18:26:20.000000000 -0700
+@@ -152,9 +152,9 @@ static const char *res_str(SLresult resu
+         case SL_RESULT_UNKNOWN_ERROR: return "Unknown error";
+         case SL_RESULT_OPERATION_ABORTED: return "Operation aborted";
+         case SL_RESULT_CONTROL_LOST: return "Control lost";
+-        case SL_RESULT_READONLY: return "ReadOnly";
+-        case SL_RESULT_ENGINEOPTION_UNSUPPORTED: return "Engine option unsupported";
+-        case SL_RESULT_SOURCE_SINK_INCOMPATIBLE: return "Source/Sink incompatible";
++        //case SL_RESULT_READONLY: return "ReadOnly";
++        //case SL_RESULT_ENGINEOPTION_UNSUPPORTED: return "Engine option unsupported";
++        //case SL_RESULT_SOURCE_SINK_INCOMPATIBLE: return "Source/Sink incompatible";
+     }
+     return "Unknown error code";
+ }
+@@ -293,7 +293,7 @@ static ALCboolean opensl_reset_playback(
+     format_pcm.bitsPerSample = BytesFromDevFmt(Device->FmtType) * 8;
+     format_pcm.containerSize = format_pcm.bitsPerSample;
+     format_pcm.channelMask = GetChannelMask(Device->FmtChans);
+-    format_pcm.endianness = SL_BYTEORDER_NATIVE;
++    format_pcm.endianness = SL_BYTEORDER_LITTLEENDIAN;
+ 
+     audioSrc.pLocator = &loc_bufq;
+     audioSrc.pFormat = &format_pcm;

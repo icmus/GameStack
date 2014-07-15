@@ -1,0 +1,14 @@
+assimp-net
+sdl2-cs
+assimp
+libogg
+libopus
+libopusfile
+pixman
+cairo
+openalsoft
+freetype
+*.a
+*.o
+*.dylib
+*.so

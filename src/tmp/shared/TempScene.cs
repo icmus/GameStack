@@ -1,44 +1,56 @@
 ﻿using System;
 using GameStack;
 using GameStack.Graphics;
+using System.Drawing;
+using OpenTK;
+using Cairo;
+using GameStack.Gui;
+using OpenTK.Graphics.ES20;
 
 namespace Temp {
+	public class MyView : CanvasView {
+		FreeTypeFontFace _font;
+
+		public MyView(LayoutSpec spec) : base(spec) {
+			_font = FreeTypeFontFace.Create("FordAntennaWGL-Regular.otf");
+		}
+
+		public MyView() {
+		}
+
+		protected override void OnDraw (Context ctx, double w, double h) {
+			base.OnDraw(ctx, w, h);
+
+			ctx.LineWidth = 2;
+			ctx.SetSourceRGBA(1, 0, 0, 1);
+			ctx.MoveTo(0, 0);
+			ctx.LineTo(w, h);
+			ctx.MoveTo(0, h);
+			ctx.LineTo(w, 0);
+			ctx.Stroke();
+
+			ctx.SetContextFontFace(_font);
+			ctx.SetFontSize(48);
+			ctx.SetSourceRGBA(0, 0, 0, 1);
+			ctx.MoveTo(50, 50);
+			ctx.ShowText("HELLO WORLD!");
+			ctx.Fill();
+		}
+	}
+
 	public class MyScene : Scene, IUpdater, IHandler<Start> {
-//		Camera _cam;
-//		Quad _quad;
-//		Texture _tex;
-//		Material _mat;
+		Camera _cam;
+		RootView _root;
 
 		public MyScene (IGameView view) : base(view) {
 		}
 
 		void IHandler<Start>.Handle (FrameArgs frame, Start e) {
-//			_tex = new Texture(new Size(640, 480), null, OpenTK.Graphics.OpenGL.PixelFormat.Bgra);
-//			_mat = new SpriteMaterial(new SpriteShader(), _tex);
-//			_quad = new Quad(_mat, new Vector4(0, 0, 640, 480), Vector4.One);
-//			_cam = new Camera2D(e.Size, 1000f);
-//
-//			using (var draw = new ImageSurface(Format.Argb32, 640, 480)) {
-//				using (var ctx = new Context(draw)) {
-//					ctx.Antialias = Antialias.Subpixel;
-//
-//					IntPtr err;
-//					var svgHandle = NativeMethods.rsvg_handle_new_from_file("feed.svg", out err);
-//					ctx.Save();
-//					NativeMethods.rsvg_handle_render_cairo(svgHandle, ctx.Handle);
-//					ctx.Translate(100, 0);
-//					ctx.Scale(2, 2);
-//					NativeMethods.rsvg_handle_render_cairo(svgHandle, ctx.Handle);
-//					ctx.Restore();
-//					ctx.Translate(300, 0);
-//					ctx.Scale(3, 3);
-//					NativeMethods.rsvg_handle_render_cairo(svgHandle, ctx.Handle);
-//					ctx.Restore();
-//					NativeMethods.rsvg_handle_close(svgHandle);
-//					_tex.SetData(draw.DataPtr);
-//				}
-//			}
+			_cam = new Camera2D(e.Size, 1000f);
+			_root = new RootView(e.Size, 0f);
 
+			_root.AddView(new MyView());
+			this.Add(_root);
 		}
 
 		void IUpdater.Update (FrameArgs e) {
@@ -47,9 +59,9 @@ namespace Temp {
 		protected override void OnDraw (FrameArgs e) {
 			base.OnDraw(e);
 
-//			using (_cam.Begin()) {
-//				_quad.Draw(0f, 0f, 0f);
-//			}
+			using (_cam.Begin()) {
+				_root.Draw();
+			}
 		}
 
 		public override void Dispose () {

@@ -246,7 +246,8 @@ namespace GameStack.Graphics {
 				GL.DeleteShader(_fragHandle);
 				GL.DeleteProgram(_handle);
 				lock (_shaders) {
-					_shaders[ThreadContext.Current.GLContext].Remove(_name);
+					if(_shaders.ContainsKey(ThreadContext.Current.GLContext))
+						_shaders[ThreadContext.Current.GLContext].Remove(_name);
 				}
 
 				Interlocked.Decrement(ref _shaderCount);

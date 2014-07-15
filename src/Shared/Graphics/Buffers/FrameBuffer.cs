@@ -24,7 +24,7 @@ using PixelFormat = OpenTK.Graphics.ES20.All;
 
 namespace GameStack.Graphics {
 	public class FrameBuffer : ScopedObject {
-		uint _fb, _oldfb;
+		int _fb, _oldfb;
 		Size _size;
 		Vector4 _color;
 		int[] _oldViewport;
@@ -37,7 +37,10 @@ namespace GameStack.Graphics {
 			_oldfb = this.CurrentFrameBuffer;
 			_oldViewport = new int[4];
 
-			GL.GenFramebuffers(1, out _fb);
+			var buf = new int[1];
+			GL.GenFramebuffers(1, buf);
+			_fb = buf[0];
+
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _fb);
 			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
 			#if __DESKTOP__
@@ -52,7 +55,7 @@ namespace GameStack.Graphics {
 			this.ClearOnBegin = true;
 		}
 
-		public uint Handle { get { return _fb; } }
+		public int Handle { get { return _fb; } }
 
 		public Size Size { get { return _size; } }
 
@@ -99,16 +102,19 @@ namespace GameStack.Graphics {
 		}
 
 		public override void Dispose () {
-			base.Dispose();
+			if (_fb > 0) {
+				GL.DeleteFramebuffers(1, new int[] { _fb });
+				_fb = -1;
+			}
 
-			GL.DeleteFramebuffers(1, ref _fb);
+			base.Dispose();
 		}
 
-		uint CurrentFrameBuffer {
+		int CurrentFrameBuffer {
 			get {
 				int fb;
 				GL.GetInteger(GetPName.FramebufferBinding, out fb);
-				return (uint)fb;
+				return fb;
 			}
 		}
 	}

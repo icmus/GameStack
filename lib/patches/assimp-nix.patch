@@ -1,0 +1,96 @@
+Index: AssimpNet/AssimpNet.csproj
+===================================================================
+--- AssimpNet/AssimpNet.csproj	(revision 101)
++++ AssimpNet/AssimpNet.csproj	(working copy)
+@@ -136,7 +136,7 @@
+   <ItemGroup />
+   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+   <PropertyGroup>
+-    <PostBuildEvent>"$(SolutionDir)AssimpNet.Interop.Generator\bin\$(Configuration)\AssimpNet.Interop.Generator.exe" "$(TargetDir)$(TargetFileName)" "$(ProjectDir)AssimpKey.snk"</PostBuildEvent>
++    <PostBuildEvent>mono "$(SolutionDir)AssimpNet.Interop.Generator\bin\$(Configuration)\AssimpNet.Interop.Generator.exe" "$(TargetDir)$(TargetFileName)" "$(ProjectDir)AssimpKey.snk"</PostBuildEvent>
+   </PropertyGroup>
+   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+        Other similar extension points exist, see Microsoft.Common.targets.
+@@ -145,4 +145,4 @@
+   <Target Name="AfterBuild">
+   </Target>
+   -->
+-</Project>
+\ No newline at end of file
++</Project>
+Index: AssimpNet/Unmanaged/AssimpLibrary.cs
+===================================================================
+--- AssimpNet/Unmanaged/AssimpLibrary.cs	(revision 101)
++++ AssimpNet/Unmanaged/AssimpLibrary.cs	(working copy)
+@@ -1350,8 +1350,8 @@
+         public const String DefaultWindows32BitPath = "Assimp32.dll";
+         public const String DefaultWindows64BitPath = "Assimp64.dll";
+ 
+-        public const String DefaultLinux32BitPath = "Assimp32.so";
+-        public const String DefaultLinux64BitPath = "Assimp64.so";
++		public const String DefaultLinux32BitPath = "./libassimp";
++		public const String DefaultLinux64BitPath = "./libassimp";
+ 
+         public static AssimpLibraryImplementation CreateRuntimeImplementation() {
+             if(IsLinux()) {
+@@ -1559,26 +1559,54 @@
+ 
+         public override string DefaultLibraryPath32Bit {
+             get {
+-                return AssimpDefaultLibraryPath.DefaultLinux32BitPath;
++				return AssimpDefaultLibraryPath.DefaultLinux32BitPath + LibExtension;
+             }
+         }
+ 
+         public override string DefaultLibraryPath64Bit {
+             get {
+-                return AssimpDefaultLibraryPath.DefaultLinux64BitPath;
++				return AssimpDefaultLibraryPath.DefaultLinux64BitPath + LibExtension;
+             }
+         }
+ 
+-        [DllImport("libdl.so")]
++		private static string LibExtension {
++			get {
++				return IsMacOsx ? ".dylib" : ".so";
++			}
++		}
++
++		private static bool IsMacOsx {
++			get {
++				var buf = IntPtr.Zero;
++				try {
++					buf = Marshal.AllocHGlobal(2048);
++					if (uname(buf) == 0) {
++						string os = Marshal.PtrToStringAnsi(buf);
++						if (os == "Darwin")
++							return true;
++					}
++				} catch {
++				} finally {
++					if (buf != IntPtr.Zero)
++						Marshal.FreeHGlobal(buf);
++				}
++				return false;
++			}
++		}
++
++		[DllImport("libc")]
++		private static extern int uname (IntPtr buf);
++
++        [DllImport("libdl")]
+         private static extern IntPtr dlopen(String fileName, int flags);
+ 
+-        [DllImport("libdl.so")]
++        [DllImport("libdl")]
+         private static extern IntPtr dlsym(IntPtr handle, String functionName);
+ 
+-        [DllImport("libdl.so")]
++        [DllImport("libdl")]
+         private static extern int dlclose(IntPtr handle);
+ 
+-        [DllImport("libdl.so")]
++        [DllImport("libdl")]
+         private static extern IntPtr dlerror();
+ 
+         private const int RTLD_NOW = 2;

@@ -10,12 +10,11 @@ using GameStack.Graphics;
 
 namespace GameStack
 {
-	public class SceneCrossfader : Scene, IUpdater, IHandler<Start>, IDisposable
+	public class SceneCrossfader : Scene, IUpdater, IHandler<Start>, IHandler<Resize>, IDisposable
 	{
-		bool fading;
-		Scene _scene;
+		Scene _scene, _nextScene, _newScene;
 		float _duration;
-		bool _freezeNext;
+		bool _freezeNext, _fading, _disposeCurrent;
 		float _t;
 		Texture _prevTexture, _nextTexture;
 		FrameBuffer _prevFBO, _nextFBO;
@@ -24,40 +23,50 @@ namespace GameStack
 		Quad _quad;
 		Camera _cam;
 
-		public SceneCrossfader (IGameView view = null)
+		public SceneCrossfader (IGameView view)
 			: base(view)
 		{
 		}
 
 		void IHandler<Start>.Handle (FrameArgs frame, Start e)
 		{
-			_cam = new Camera2D(e.Size, 2);
-			_quad = new Quad(new Vector4(0, 0, e.Size.X, e.Size.Y), Vector4.One);
 			_mat = new SpriteMaterial(new SpriteShader(), null);
+		}
+
+		void IHandler<Resize>.Handle (FrameArgs frame, Resize e)
+		{
+			_cam = new Camera2D(e.Size, 2);
+			if (_quad != null)
+				_quad.Dispose();
+			_quad = new Quad(new Vector4(0, 0, e.Size.X, e.Size.Y), Vector4.One);
 		}
 
 		public Scene Scene { get { return _scene; } }
 
-		public void Init (Scene initialScene)
-		{
-			if (_scene != null)
-				throw new InvalidOperationException("Fader has already been initialized!");
-
-			_scene = initialScene;
+		public void SetScene (Scene scene) {
+			_newScene = scene;
+			_newScene.IsUpdating = false;
+			_newScene.IsVisible = false;
 		}
 
-		public void FadeTo (Scene nextScene, Start startArgs, FrameArgs frameArgs, float duration = 0.5f, bool freezeNext = true)
+		public void FadeTo (Scene nextScene, float duration = 0.5f, bool disposeCurrent = true, bool freezeNext = true) {
+			_nextScene = nextScene;
+			_duration = duration;
+			_freezeNext = freezeNext;
+			_disposeCurrent = disposeCurrent;
+			_nextScene.IsVisible = false;
+		}
+
+		void FadeTo (Scene nextScene, Start startArgs, FrameArgs frameArgs)
 		{
 			if (_scene == null)
 				throw new InvalidOperationException("No current scene to crossfade from!");
 
 			var prevScene = _scene;
 			_scene = nextScene;
-			_duration = duration;
-			_freezeNext = freezeNext;
 			_t = 0;
 
-			fading = true;
+			_fading = true;
 
 			if (_duration <= 0)
 				Skip();
@@ -73,7 +82,7 @@ namespace GameStack
 
 				using (_prevFBO.Begin()) {
 					if (prevScene != null)
-						prevScene.OnRender(this, frameArgs);
+						prevScene.DrawNow(frameArgs);
 					else
 						base.OnDraw(frameArgs);
 				}
@@ -81,20 +90,20 @@ namespace GameStack
 				View.RenderNow();
 			}
 
-			if (prevScene != null)
+			if (prevScene != null && _disposeCurrent)
 				prevScene.Dispose();
 
 			View.LoadFrame();
-			_scene.Start(this, startArgs);
 		}
 
 		public void Skip ()
 		{
-			if (!fading)
+			if (!_fading)
 				return;
 
 			FreeResources();
-			fading = false;
+			_fading = false;
+			_scene.IsVisible = true;
 		}
 
 		void FreeResources ()
@@ -116,12 +125,29 @@ namespace GameStack
 
 		public void Update (FrameArgs e)
 		{
-			if (!fading)
-				_scene.OnUpdate(this, e);
-			else {
-				if (!_freezeNext)
-					_scene.OnUpdate(this, e);
+			if (_newScene != null) {
+				if (_scene != null) {
+					_scene.IsVisible = false;
+					_scene.IsUpdating = false;
+				}
+				_scene = _newScene;
+				_newScene = null;
+				_scene.IsUpdating = true;
+				_scene.IsVisible = true;
+				_scene.Start(this, new GameStack.Start(this.View.Size, this.View.PixelScale));
+			}
 
+			if (_nextScene != null) {
+				_scene.IsVisible = false;
+				this.FadeTo(_nextScene, new Start(this.View.Size, this.View.PixelScale), e);
+				_nextScene = null;
+				_scene.IsVisible = false;
+				_scene.IsUpdating = true;
+				_scene.Start(this, new GameStack.Start(this.View.Size, this.View.PixelScale));
+				_scene.IsUpdating = _freezeNext;
+			}
+
+			if (_fading) {
 				_t += e.DeltaTime / _duration;
 				if (_t > 1f)
 					Skip();
@@ -135,12 +161,10 @@ namespace GameStack
 				return;
 			}
 
-			if (!fading)
-				_scene.OnRender(this, e);
-			else {
+			if (_fading) {
 				if (_t > 0) {
 					using (_nextFBO.Begin()) {
-						_scene.OnRender(this, e);
+						_scene.DrawNow(e);
 					}
 				}
 

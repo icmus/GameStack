@@ -24,8 +24,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Content\Tar\TarHeader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Content\Tar\TarReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Content\Tar\UsTarHeader.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Extensions\BinaryExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ConversionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\ScopedObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\Atlas.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\2D\BitmapFont.cs" />
@@ -96,5 +94,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Sound\IStreamingSound.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sound\StreamingOpusFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Content\PngLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\ConversionEx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\BinaryEx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\BlurMaterial.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\BlurShader.cs" />
   </ItemGroup>
 </Project>

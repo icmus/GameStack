@@ -15,6 +15,7 @@ namespace GameStack.Pipeline {
 		public static readonly string[] SupportedFormats = { ".png", ".jpg", ".jpeg" };
 
 		public override void Import (string input, Stream output) {
+
 			var ser = new JsonSerializer();
 			AtlasMetadata metadata = null;
 

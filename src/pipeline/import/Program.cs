@@ -44,6 +44,9 @@ namespace GameStack.Tools.Import {
 		}
 
 		static void processDirectoryRec (string iDir, string oDir, Dictionary<string, string> opts) {
+			if (File.Exists(Path.Combine(iDir, ".ignore")))
+				return;
+
 			var paths = Directory.GetFileSystemEntries(iDir)
 				.Where(f => !Path.GetFileName(f).StartsWith(".") && !Path.GetExtension(f).EndsWith(".meta"))
 				.ToArray();

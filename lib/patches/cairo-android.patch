@@ -1,0 +1,54 @@
+diff -rupN cairo.orig/src/cairo-cff-subset.c cairo/src/cairo-cff-subset.c
+--- cairo.orig/src/cairo-cff-subset.c	2014-07-12 16:37:56.000000000 -0700
++++ cairo/src/cairo-cff-subset.c	2014-07-12 16:39:56.000000000 -0700
+@@ -305,9 +305,14 @@ decode_real (unsigned char *p, double *r
+     char *buf = buffer;
+     char *buf_end = buffer + sizeof (buffer);
+ 
++#ifdef __ANDROID__
++    decimal_point = ".";
++    decimal_point_len = 1;
++#else
+     locale_data = localeconv ();
+     decimal_point = locale_data->decimal_point;
+     decimal_point_len = strlen (decimal_point);
++#endif
+ 
+     assert (decimal_point_len != 0);
+     assert (sizeof(buffer) + decimal_point_len < sizeof(buffer2));
+diff -rupN cairo.orig/src/cairo-output-stream.c cairo/src/cairo-output-stream.c
+--- cairo.orig/src/cairo-output-stream.c	2014-07-12 16:37:56.000000000 -0700
++++ cairo/src/cairo-output-stream.c	2014-07-12 16:39:03.000000000 -0700
+@@ -314,9 +314,14 @@ _cairo_dtostr (char *buffer, size_t size
+     if (d == 0.0)
+ 	d = 0.0;
+ 
++#ifdef __ANDROID__
++    decimal_point = ".";
++    decimal_point_len = 1;
++#else
+     locale_data = localeconv ();
+     decimal_point = locale_data->decimal_point;
+     decimal_point_len = strlen (decimal_point);
++#endif
+ 
+     assert (decimal_point_len != 0);
+ 
+diff -rupN cairo.orig/src/cairo-type1-subset.c cairo/src/cairo-type1-subset.c
+--- cairo.orig/src/cairo-type1-subset.c	2014-07-12 16:37:56.000000000 -0700
++++ cairo/src/cairo-type1-subset.c	2014-07-12 16:40:13.000000000 -0700
+@@ -313,9 +313,14 @@ cairo_type1_font_subset_get_matrix (cair
+     const char *decimal_point;
+     int decimal_point_len;
+ 
++#ifdef __ANDROID__
++    decimal_point = ".";
++    decimal_point_len = 1;
++#else
+     locale_data = localeconv ();
+     decimal_point = locale_data->decimal_point;
+     decimal_point_len = strlen (decimal_point);
++#endif
+ 
+     assert (decimal_point_len != 0);
+ 

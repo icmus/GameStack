@@ -5,7 +5,7 @@ using OpenTK.Audio;
 using OpenTK.Audio.OpenAL;
 
 namespace GameStack {
-	public class StreamingSoundChannel {
+	public class StreamingSoundChannel : IDisposable {
 		static Dictionary<IStreamingSound, StreamingSoundChannel> _soundUsers = new Dictionary<IStreamingSound, StreamingSoundChannel>();
 
 		Thread _thread;

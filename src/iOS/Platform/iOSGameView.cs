@@ -327,6 +327,7 @@ namespace GameStack {
 			}
 
 			DoUpdate();
+			_frame.ClearEvents();
 
 			if (lowMem)
 				_lowMemHandled = true;

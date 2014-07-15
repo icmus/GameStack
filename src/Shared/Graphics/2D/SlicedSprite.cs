@@ -56,6 +56,10 @@ namespace GameStack.Graphics {
 			return result;
 		}
 
+		public void Resize (float w, float h) {
+			this.Resize(new Vector2(w, h));
+		}
+
 		public void Resize (Vector2 size) {
 			if (size == _size)
 				return;

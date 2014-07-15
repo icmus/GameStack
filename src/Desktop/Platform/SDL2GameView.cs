@@ -40,9 +40,9 @@ namespace GameStack.Desktop {
 			_frameArgs.Enqueue(new Resize(new Vector2(_width, _height), 1.0f));
 			_sdlEvents = new ConcurrentQueue<SDL.SDL_Event>();
 
-			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_MAJOR_VERSION, 2);
+			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_MINOR_VERSION, 1);
-			//SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_PROFILE_MASK, (int)SDL.SDL_GLprofile.SDL_GL_CONTEXT_PROFILE_COMPATIBILITY);
+			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_PROFILE_MASK, (int)SDL.SDL_GLprofile.SDL_GL_CONTEXT_PROFILE_CORE);
 			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_RED_SIZE, 8);
 			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_GREEN_SIZE, 8);
 			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_BLUE_SIZE, 8);
@@ -94,6 +94,10 @@ namespace GameStack.Desktop {
 			_glContext = SDL.SDL_GL_CreateContext(_window);
 			if (_glContext == IntPtr.Zero)
 				throw new SDL2Exception();
+			SDL.SDL_GL_MakeCurrent(_window, _glContext);
+			ThreadContext.Current.GLContext = _glContext;
+			OpenTK.Graphics.GraphicsContext.CurrentContext = _glContext;
+
 			#if DEBUG
 			int major, minor;
 			SDL.SDL_GL_GetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_MAJOR_VERSION, out major);
@@ -121,6 +125,7 @@ namespace GameStack.Desktop {
 			while (!_isDisposed) {
 				SDL.SDL_GL_MakeCurrent(_window, _glContext);
 				ThreadContext.Current.GLContext = _glContext;
+				OpenTK.Graphics.GraphicsContext.CurrentContext = _glContext;
 
 				while (_sdlEvents.Count > 0 && !_isDisposed) {
 					SDL.SDL_Event e;
@@ -174,8 +179,6 @@ namespace GameStack.Desktop {
 		// Runs GameView loop on main thread instead.
 		public void EnterLoop () {
 			InitGLContext();
-			SDL.SDL_GL_MakeCurrent(_window, _glContext);
-			ThreadContext.Current.GLContext = _glContext;
 
 			long freq = Stopwatch.Frequency;
 			long time = Stopwatch.GetTimestamp();
@@ -305,6 +308,8 @@ namespace GameStack.Desktop {
 
 			if (Update != null)
 				Update(this, _frameArgs);
+
+			_frameArgs.ClearEvents();
 
 			_frameArgs.Time += delta;
 		}

@@ -268,6 +268,8 @@ namespace GameStack {
 				this.Update (this, _event);
 			if (this.Render != null)
 				this.Render (this, _event);
+
+			_event.ClearEvents();
 		}
 
 		#endregion

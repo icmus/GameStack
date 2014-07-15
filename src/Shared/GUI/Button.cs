@@ -28,6 +28,7 @@ namespace GameStack.Gui {
 			group.Add (this);
 			_group = group;
 			Color = Vector4.One;
+			this.IsToggle = true;
 		}
 
 		public Sprite NormalSprite { get; set; }

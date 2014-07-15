@@ -22,8 +22,8 @@
 				<Reference type="Gac" refto="System" />
 				<Reference type="Gac" refto="System.Core" />
 				<Reference type="Gac" refto="monotouch" />
-				<Reference type="Package" refto="GameStack.iOS" />
-				<Reference type="Package" refto="GameStack.iOS.Bindings" />
+				<Reference type="Package" refto="GameStack.iOS" SpecificVersion="false" />
+				<Reference type="Package" refto="GameStack.iOS.Bindings" SpecificVersion="false" />
 			</References>
 			<Files>
 				<FileTemplateReference TemplateID="GameStack-EmptyScene" name="DefaultScene.cs" />

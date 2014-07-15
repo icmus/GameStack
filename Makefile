@@ -41,23 +41,31 @@ libs:
 pipeline:
 	$(call xbuild,src/pipeline/GameStack.Pipeline.csproj)
 
-import:
+import: pipeline
 	$(call xbuild,src/pipeline/import/Import.csproj)
 
 desktop:
 	$(call xbuild,src/Desktop/bindings/GameStack.Desktop.Bindings.csproj)
 	$(call xbuild,src/Desktop/GameStack.Desktop.csproj)
+
+addin:
 	$(call xbuild,src/MonoDevelop/MonoDevelop.GameStack.csproj)
 
 ios:
+	$(call mdbuild,Clean,GameStack.iOS.Drawing.Bindings)
+	$(call mdbuild,Clean,GameStack.iOS.Drawing)
 	$(call mdbuild,Clean,GameStack.iOS.Bindings)
 	$(call mdbuild,Clean,GameStack.iOS)
+	$(call mdbuild,Build,GameStack.iOS.Drawing.Bindings)
+	$(call mdbuild,Build,GameStack.iOS.Drawing)
 	$(call mdbuild,Build,GameStack.iOS.Bindings)
 	$(call mdbuild,Build,GameStack.iOS)
 
 android:
+	$(call mdbuild,Clean,GameStack.Android.Drawing)
 	$(call mdbuild,Clean,GameStack.Android.Bindings)
 	$(call mdbuild,Clean,GameStack.Android)
+	$(call mdbuild,Build,GameStack.Android.Drawing)
 	$(call mdbuild,Build,GameStack.Android.Bindings)
 	$(call mdbuild,Build,GameStack.Android)
 

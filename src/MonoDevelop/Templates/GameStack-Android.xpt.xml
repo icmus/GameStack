@@ -3,7 +3,7 @@
 	<TemplateConfiguration>
 		<_Name>GameStack Android App</_Name>
 		<_Category>GameStack</_Category>
-		<Icon>md-project-monodroid</Icon>
+		<Icon>monodroid-project</Icon>
 		<LanguageName>C#</LanguageName>
 		<_Description>Creates a new GameStack Android app project.</_Description>
 	</TemplateConfiguration>
@@ -25,8 +25,8 @@
 				<Reference type="Gac" refto="System.Core" />
 				<Reference type="Gac" refto="OpenTK-1.0" />
 				<Reference type="Gac" refto="Mono.Android" />
-				<Reference type="Package" refto="GameStack.Android" />
-				<Reference type="Package" refto="GameStack.Android.Bindings" />
+				<Reference type="Package" refto="GameStack.Android" SpecificVersion="false" />
+				<Reference type="Package" refto="GameStack.Android.Bindings" SpecificVersion="false" />
 			</References>
 			<Files>
 				<FileTemplateReference TemplateID="GameStack-EmptyScene" name="DefaultScene.cs" />

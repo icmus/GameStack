@@ -244,8 +244,10 @@ namespace GameStack.Graphics {
 		}
 
 		public void Dispose () {
-			_vbuffer.Dispose();
-			_ibuffer.Dispose();
+			if(_vbuffer != null)
+				_vbuffer.Dispose();
+			if(_ibuffer != null)
+				_ibuffer.Dispose();
 		}
 	}
 }

@@ -7,11 +7,16 @@ namespace GameStack.Graphics {
 
 		int _maxNumLights;
 
-		public MeshShader (MeshShaderSettings settings) : base(GetVertSource(settings), GetFragSource(settings)) {
+		public MeshShader (MeshShaderSettings settings)
+			: base(GetVertSource(settings), GetFragSource(settings), GetName(settings)) {
 			_maxNumLights = settings.MaxLights;
 		}
 
 		public override int MaxNumLights { get { return _maxNumLights; } }
+
+		static string GetName(MeshShaderSettings settings) {
+			return typeof(MeshShader).FullName + "::" + settings.MaxLights;
+		}
 
 		static string GetVertSource (MeshShaderSettings settings) {
 			var sb = new StringBuilder();
@@ -36,7 +41,6 @@ namespace GameStack.Graphics {
 			sb.AppendLine("    gl_Position = WorldViewProjection * p;");
 			sb.AppendLine("}");
 
-			Console.WriteLine(sb.ToString());
 			return sb.ToString();
 		}
 

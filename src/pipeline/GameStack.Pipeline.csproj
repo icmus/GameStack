@@ -43,6 +43,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Posix" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

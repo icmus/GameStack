@@ -24,12 +24,13 @@
     <MtouchDebug>true</MtouchDebug>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="../../../dist/mobile.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${AppDirectory}" />
+        <Command type="AfterBuild" command="../../../dist/ios.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${AppDirectory}" />
       </CustomCommands>
     </CustomCommands>
     <MtouchI18n>
     </MtouchI18n>
-    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchExtraArgs>-vvvv</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -43,7 +44,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="../../../dist/mobile.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${AppDirectory}" />
+        <Command type="AfterBuild" command="../../../dist/ios.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${AppDirectory}" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -61,7 +62,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="../../../dist/mobile.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="../../../dist/ios.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
     <MtouchI18n>
@@ -80,7 +81,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="../../../dist/mobile.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="../../../dist/ios.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -114,6 +115,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="OpenTK-1.0" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -131,6 +133,10 @@
     <ProjectReference Include="..\..\iOS\GameStack.iOS.csproj">
       <Project>{A74E0B3C-5920-4C74-B0C7-6D9F7A2EC828}</Project>
       <Name>GameStack.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\iOS\GameStack.iOS.Drawing\GameStack.iOS.Drawing.csproj">
+      <Project>{4F2D647B-CE47-499E-981D-E65739F5DDEE}</Project>
+      <Name>GameStack.iOS.Drawing</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

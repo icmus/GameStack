@@ -12,22 +12,30 @@ using OpenTK.Graphics.ES20;
 #endif
 #if __ANDROID__
 using VertexAttribPointerType = OpenTK.Graphics.ES20.All;
+using BufferTarget = OpenTK.Graphics.ES20.All;
+using BufferUsage = OpenTK.Graphics.ES20.All;
 #endif
 
 namespace GameStack.Graphics {
 	public class VertexBuffer : ScopedObject {
 		VertexFormat _format;
 		float[] _data;
-		uint _handle;
+		int _handle;
+		#if __DESKTOP__
+		int _vao;
+		#endif
 
 		public VertexBuffer (VertexFormat format, float[] vertices = null) {
-			ThreadContext.Current.EnsureGLContext();
 			_format = format;
 			_data = vertices;
 
-			var buffers = new uint[1];
-			GL.GenBuffers(1, buffers);
-			_handle = buffers[0];
+			var buf = new int[1];
+			GL.GenBuffers(1, buf);
+			_handle = buf[0];
+			#if __DESKTOP__
+			_vao = GL.GenVertexArray();
+			GL.BindVertexArray(_vao);
+			#endif
 
 			if (_data != null)
 				this.Commit();
@@ -41,15 +49,9 @@ namespace GameStack.Graphics {
 			if (_data == null)
 				_data = new float[0];
 
-#if __ANDROID__
-            GL.BindBuffer(All.ArrayBuffer, _handle);
-            GL.BufferData(All.ArrayBuffer, (IntPtr)(sizeof(float) * _data.Length), _data, All.StaticDraw);
-            GL.BindBuffer(All.ArrayBuffer, 0);
-#else
 			GL.BindBuffer(BufferTarget.ArrayBuffer, _handle);
 			GL.BufferData(BufferTarget.ArrayBuffer, (IntPtr)(sizeof(float) * _data.Length), _data, BufferUsage.StaticDraw);
 			GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
-#endif
 		}
 
 		protected override void OnBegin () {
@@ -59,12 +61,12 @@ namespace GameStack.Graphics {
 			if (ScopedObject.Find<VertexBuffer>() != null)
 				throw new InvalidOperationException("there is already an active vertex buffer.");
 
+			#if __DESKTOP__
+			GL.BindVertexArray(_vao);
+			#endif
+
 			var stride = _format.Stride * sizeof(float);
-#if __ANDROID__
-            GL.BindBuffer(All.ArrayBuffer, _handle);
-#else
 			GL.BindBuffer(BufferTarget.ArrayBuffer, _handle);
-#endif
 
 			foreach (var el in _format.Elements) {
 				var loc = mat.Shader.Attribute(el.Name);
@@ -77,11 +79,7 @@ namespace GameStack.Graphics {
 
 		protected override void OnEnd () {
 			var mat = ScopedObject.Find<Material>();
-#if __ANDROID__
-            GL.BindBuffer(All.ArrayBuffer, 0);
-#else
 			GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
-#endif
 			if (mat != null) {
 				foreach (var el in _format.Elements) {
 					var loc = mat.Shader.Attribute(el.Name);
@@ -94,7 +92,16 @@ namespace GameStack.Graphics {
 		public override void Dispose () {
 			base.Dispose();
 
-			GL.DeleteBuffers(1, new uint[_handle]);
+			if (_handle >= 0) {
+				GL.DeleteBuffers(1, new int[] { _handle });
+				_handle = -1;
+			}
+			#if __DESKTOP__
+			if(_vao >= 0) {
+				GL.DeleteVertexArray(_vao);
+				_vao = -1;
+			}
+			#endif
 		}
 	}
 }
