@@ -99,7 +99,7 @@ pacman -S git base-devel wget unzip subversion mono cmake
 
 * Xcode 5.1+ with command-line tools installed
 * iPhone SDK 7.1+
-* Android NDK rd8+
+* Android NDK r8d+
 * Xamarin Studio 5+ (Mono 3.4+)
 
 ## Building prerequisite libs
