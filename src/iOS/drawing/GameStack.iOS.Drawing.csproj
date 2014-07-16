@@ -48,7 +48,7 @@
       <Link>Properties\AssemblyVersion.cs</Link>
     </Compile>
   </ItemGroup>
-  <Import Project="..\..\Shared\drawing\GameStack.Shared.Drawing.projitems" Label="Shared" Condition="Exists('..\..\Shared\drawing\GameStack.Shared.Drawing.projitems')" />
+  <Import Project="..\..\shared\drawing\GameStack.Shared.Drawing.projitems" Label="Shared" Condition="Exists('..\..\shared\drawing\GameStack.Shared.Drawing.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\GameStack.iOS.csproj">

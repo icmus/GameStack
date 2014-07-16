@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Import", "pipeline\import\I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temp", "tmp\desktop\Temp.csproj", "{F806C460-A5B9-4DB2-8356-4B8AE8820F14}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared", "Shared\GameStack.Shared.shproj", "{3107B7A2-20CE-47DB-87FE-2169344B4D2D}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared", "shared\GameStack.Shared.shproj", "{3107B7A2-20CE-47DB-87FE-2169344B4D2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.Desktop", "Desktop\GameStack.Desktop.csproj", "{F616E57C-F618-4994-8F94-A6B78247AC6D}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Bindings", "Shared\bindings\GameStack.Shared.Bindings.shproj", "{247588CC-3D44-4E88-AA21-F78584895C4D}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Bindings", "shared\bindings\GameStack.Shared.Bindings.shproj", "{247588CC-3D44-4E88-AA21-F78584895C4D}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Temp.Shared", "tmp\shared\Temp.Shared.shproj", "{FEAC4115-B926-41FA-9146-0D8ACA3ADB6E}"
 EndProject

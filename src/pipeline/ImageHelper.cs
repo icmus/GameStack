@@ -29,33 +29,13 @@ namespace GameStack.Pipeline {
 
 
 		public static Image ResizeImage (Image img, string path, Size maxSize) {
-			// Mono for mac uses a better system.drawing implementation; fall back to graphicsmagick on linux
-			if (Extensions.IsRunningOnMac) {
-				var maxAspect = (float)maxSize.Width / (float)maxSize.Height;
-				var imgAspect = (float)img.Width / (float)img.Height;
+			var maxAspect = (float)maxSize.Width / (float)maxSize.Height;
+			var imgAspect = (float)img.Width / (float)img.Height;
 
-				if (imgAspect > maxAspect)
-					return new Bitmap(img, new Size(maxSize.Width, (int)Math.Round(maxSize.Width / imgAspect)));
-				else
-					return new Bitmap(img, new Size((int)Math.Round(maxSize.Height * imgAspect), maxSize.Height));
-			} else {
-				img.Dispose();
-				var wand = GraphicsMagick.NewWand();
-				GraphicsMagick.ReadImageBlob(wand, File.OpenRead(path));
-
-				var maxAspect = (float)maxSize.Width / (float)maxSize.Height;
-				var imgAspect = (float)GraphicsMagick.GetWidth(wand) / (float)GraphicsMagick.GetHeight(wand);
-
-				if (imgAspect > maxAspect)
-					GraphicsMagick.ResizeImage(wand, (IntPtr)maxSize.Width, (IntPtr)Math.Round(maxSize.Width / imgAspect), GraphicsMagick.Filter.Box, 1);
-				else
-					GraphicsMagick.ResizeImage(wand, (IntPtr)Math.Round(maxSize.Height * imgAspect), (IntPtr)maxSize.Height, GraphicsMagick.Filter.Box, 1);
-				var newImgBlob = GraphicsMagick.WriteImageBlob(wand);
-
-				using (var ms = new MemoryStream(newImgBlob)) {
-					return Image.FromStream(ms);
-				}
-			}
+			if (imgAspect > maxAspect)
+				return new Bitmap(img, new Size(maxSize.Width, (int)Math.Round(maxSize.Width / imgAspect)));
+			else
+				return new Bitmap(img, new Size((int)Math.Round(maxSize.Height * imgAspect), maxSize.Height));
 		}
 	}
 }

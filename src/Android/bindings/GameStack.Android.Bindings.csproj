@@ -56,7 +56,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <Import Project="..\..\Shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\Shared\bindings\GameStack.Shared.Bindings.projitems')" />
+  <Import Project="..\..\shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\shared\bindings\GameStack.Shared.Bindings.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="armeabi-v7a\" />

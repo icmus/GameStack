@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared", "Shared\GameStack.Shared.shproj", "{3107B7A2-20CE-47DB-87FE-2169344B4D2D}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared", "shared\GameStack.Shared.shproj", "{3107B7A2-20CE-47DB-87FE-2169344B4D2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.iOS", "iOS\GameStack.iOS.csproj", "{A74E0B3C-5920-4C74-B0C7-6D9F7A2EC828}"
 EndProject
@@ -19,11 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.Android", "Androi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.Android.Bindings", "Android\bindings\GameStack.Android.Bindings.csproj", "{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Bindings", "Shared\bindings\GameStack.Shared.Bindings.shproj", "{247588CC-3D44-4E88-AA21-F78584895C4D}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Bindings", "shared\bindings\GameStack.Shared.Bindings.shproj", "{247588CC-3D44-4E88-AA21-F78584895C4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoDevelop.GameStack", "MonoDevelop\MonoDevelop.GameStack.csproj", "{5623CDB6-0B71-4B8D-AE06-0496FE76D897}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Drawing", "Shared\drawing\GameStack.Shared.Drawing.shproj", "{1BAAACB5-02FC-4EC2-B97D-BA4B95220190}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "GameStack.Shared.Drawing", "shared\drawing\GameStack.Shared.Drawing.shproj", "{1BAAACB5-02FC-4EC2-B97D-BA4B95220190}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStack.Android.Drawing", "Android\drawing\GameStack.Android.Drawing.csproj", "{EBB4EE45-7967-462A-8934-50D099F466F7}"
 EndProject

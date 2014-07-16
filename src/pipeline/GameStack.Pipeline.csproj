@@ -49,7 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Importers\ContentImporter.cs" />
     <Compile Include="Importers\ContentTypeAttribute.cs" />
-    <Compile Include="Importers\WavefrontImporter.cs" />
     <Compile Include="Primitives.cs" />
     <Compile Include="Atlas\LayoutProperties.cs" />
     <Compile Include="Atlas\Placement.cs" />
@@ -83,8 +82,6 @@
     <Compile Include="Images\TargaLoader.cs" />
     <Compile Include="Importers\AtlasImporter.cs" />
     <Compile Include="Atlas\AtlasBuilder.cs" />
-    <Compile Include="Importers\MusicImporter.cs" />
-    <Compile Include="Images\GraphicsMagick\GraphicsMagick.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="..\AssemblyVersion.cs">
       <Link>Properties\AssemblyVersion.cs</Link>
@@ -98,7 +95,6 @@
     <Folder Include="Tar\" />
     <Folder Include="Extensions\" />
     <Folder Include="Images\" />
-    <Folder Include="Images\GraphicsMagick\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -59,7 +59,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <Import Project="..\Shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\Shared\GameStack.Shared.projitems')" />
+  <Import Project="..\shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\shared\GameStack.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Platform\" />

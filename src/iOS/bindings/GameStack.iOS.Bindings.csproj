@@ -40,7 +40,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
-  <Import Project="..\..\Shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\Shared\bindings\GameStack.Shared.Bindings.projitems')" />
+  <Import Project="..\..\shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\shared\bindings\GameStack.Shared.Bindings.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />

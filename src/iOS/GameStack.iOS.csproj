@@ -44,7 +44,7 @@
   <ItemGroup>
     <Folder Include="Platform\" />
   </ItemGroup>
-  <Import Project="..\Shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\Shared\GameStack.Shared.projitems')" />
+  <Import Project="..\shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\shared\GameStack.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Platform\iOSGameView.cs" />

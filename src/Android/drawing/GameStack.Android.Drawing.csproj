@@ -55,7 +55,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
   </ItemGroup>
-  <Import Project="..\..\Shared\drawing\GameStack.Shared.Drawing.projitems" Label="Shared" Condition="Exists('..\..\Shared\drawing\GameStack.Shared.Drawing.projitems')" />
+  <Import Project="..\..\shared\drawing\GameStack.Shared.Drawing.projitems" Label="Shared" Condition="Exists('..\..\shared\drawing\GameStack.Shared.Drawing.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="armeabi-v7a\" />

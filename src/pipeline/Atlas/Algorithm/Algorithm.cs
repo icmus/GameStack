@@ -38,7 +38,7 @@ namespace GameStack.Pipeline.Atlas
                     Placement pm = oT.Placement;
 
                     //Choose the one with the minimum perimeter.
-					if (pm.Perimeter < minPerimeter && pm.Width <= 2048 && pm.Height <= 2048)
+					if (pm.Perimeter < minPerimeter)
                     {
                         finalOT = oT;
                         bestOTree = ot;

@@ -42,6 +42,6 @@
       <Link>Properties\AssemblyVersion.cs</Link>
     </Compile>
   </ItemGroup>
-  <Import Project="..\..\Shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\Shared\bindings\GameStack.Shared.Bindings.projitems')" />
+  <Import Project="..\..\shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\shared\bindings\GameStack.Shared.Bindings.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
