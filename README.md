@@ -1,8 +1,8 @@
 # GameStack Overview
 
-GameStack is a gaming and interactive media library for Mono, Xamarin.iOS and
-Xamarin.Android. GameStack supports Mac, Linux, iOS and Android build targets
-and can be used with MonoDevelop/Xamarin Studio or other development
+GameStack is a toolkit for building games and interactive displays with Mono, 
+Xamarin.iOS and Xamarin.Android. GameStack supports Mac, Linux, iOS and Android
+build targets and can be used with MonoDevelop/Xamarin Studio or other development
 environments. It can be used with Xamarin to publish on mobile app stores, or
 with embedded Linux PCs to drive interactive displays.
 
