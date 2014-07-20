@@ -1,0 +1,726 @@
+<html>
+  <head>
+    <title>GameStack.Graphics.SlicedSprite</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" src="styles.css" />
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">GameStack.Desktop</a> : <a href="index.html">GameStack.Graphics Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:GameStack.Graphics.SlicedSprite">Overview</a>
+      </p>
+      <p>
+        <a href="#T:GameStack.Graphics.SlicedSprite:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:GameStack.Graphics.SlicedSprite:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:GameStack.Graphics.SlicedSprite:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:GameStack.Graphics.SlicedSprite">SlicedSprite  Class</h1>
+    <p class="Summary" id="T:GameStack.Graphics.SlicedSprite:Summary">
+      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+    </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:GameStack.Graphics.SlicedSprite:Signature">public class  <b>SlicedSprite</b> : <a href="../GameStack.Graphics/Sprite.html">Sprite</a></div>
+    </div>
+    <div class="Remarks" id="T:GameStack.Graphics.SlicedSprite:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:GameStack.Graphics.SlicedSprite:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:GameStack.Graphics.SlicedSprite:Docs:Version Information">
+        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../GameStack.Graphics/Sprite.html">Sprite</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean)">SlicedSprite</a>
+                    </b>(<a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Fields</h2>
+        <div class="SectionBox" id="Protected Fields">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#F:GameStack.Graphics.Sprite._ibuffer">_ibuffer</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GameStack.Graphics/IndexBuffer.html">IndexBuffer</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#F:GameStack.Graphics.Sprite._icount">_icount</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#F:GameStack.Graphics.Sprite._ioffset">_ioffset</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#F:GameStack.Graphics.Sprite._material">_material</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GameStack.Graphics/Material.html">Material</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#F:GameStack.Graphics.Sprite._size">_size</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#F:GameStack.Graphics.Sprite._vbuffer">_vbuffer</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GameStack.Graphics/VertexBuffer.html">VertexBuffer</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#P:GameStack.Graphics.Sprite.Material">Material</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GameStack.Graphics/Material.html">Material</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#P:GameStack.Graphics.Sprite.Size">Size</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.Graphics.SlicedSprite.Clone()">Clone</a>
+                  </b>()<nobr> : <a href="../GameStack.Graphics/SlicedSprite.html">SlicedSprite</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#M:GameStack.Graphics.Sprite.Dispose()">Dispose</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4)">Draw</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4@)">Draw</a>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2)">Resize</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single)">Resize</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../GameStack.Graphics/Sprite.html#M:GameStack.Graphics.Sprite.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>abstract </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Explicitly Implemented Interface Members</h2>
+        <div class="SectionBox" id="Explicitly Implemented Interface Members">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <a href="../GameStack.Graphics/Sprite.html#P:GameStack.Graphics.Sprite.GameStack#Graphics#IBatchable#IndexBuffer">
+                    <b>GameStack.Graphics.IBatchable.IndexBuffer</b>
+                  </a>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GameStack.Graphics/IndexBuffer.html">IndexBuffer</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <a href="../GameStack.Graphics/Sprite.html#P:GameStack.Graphics.Sprite.GameStack#Graphics#IBatchable#IndexCount">
+                    <b>GameStack.Graphics.IBatchable.IndexCount</b>
+                  </a>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <a href="../GameStack.Graphics/Sprite.html#P:GameStack.Graphics.Sprite.GameStack#Graphics#IBatchable#IndexOffset">
+                    <b>GameStack.Graphics.IBatchable.IndexOffset</b>
+                  </a>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <a href="../GameStack.Graphics/Sprite.html#P:GameStack.Graphics.Sprite.GameStack#Graphics#IBatchable#Material">
+                    <b>GameStack.Graphics.IBatchable.Material</b>
+                  </a>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GameStack.Graphics/Material.html">Material</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <a href="../GameStack.Graphics/Sprite.html#P:GameStack.Graphics.Sprite.GameStack#Graphics#IBatchable#VertexBuffer">
+                    <b>GameStack.Graphics.IBatchable.VertexBuffer</b>
+                  </a>
+                </td>
+                <td>
+                  <i>
+                    <a href="../GameStack.Graphics/VertexBuffer.html">VertexBuffer</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Sprite.html">Sprite</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:GameStack.Graphics.SlicedSprite:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean)">SlicedSprite Constructor</h3>
+        <blockquote id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>SlicedSprite</b> (<a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a> material, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> pos, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> size, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> origin, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> color, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> border, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> tileX, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> tileY, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> hollow)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>material</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>pos</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>size</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>origin</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>color</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>border</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>tileX</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>tileY</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>hollow</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean):Version Information">
+            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.Graphics.SlicedSprite.Clone()">Clone Method</h3>
+        <blockquote id="M:GameStack.Graphics.SlicedSprite.Clone():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="../GameStack.Graphics/SlicedSprite.html">SlicedSprite</a> <b>Clone</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.SlicedSprite.Clone():Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Clone():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Clone():Version Information">
+            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2)">Resize Method</h3>
+        <blockquote id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Resize</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> size)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2):Parameters">
+            <dl>
+              <dt>
+                <i>size</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2):Version Information">
+            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single)">Resize Method</h3>
+        <blockquote id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Resize</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> w, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> h)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>w</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>h</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single):Version Information">
+            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
