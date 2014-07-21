@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.Atlas</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Atlas">Atlas  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.Atlas:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.Atlas:Summary">Manages a collection of sprites combined together into a single texture (a spritesheet).</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.Atlas:Signature">public class  <b>Atlas</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.Atlas:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Atlas:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.Atlas:Docs:Remarks">Atlas assets are created using the pipeline tools.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.Atlas:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -243,9 +239,7 @@
                       <a href="#C:GameStack.Graphics.Atlas(System.IO.Stream,GameStack.Graphics.Shader)">Atlas</a>
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../GameStack.Graphics/Shader.html">Shader</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Load an asset atlas directly from a stream.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -259,7 +253,6 @@
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/Shader.html">Shader</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -278,7 +271,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/Sprite.html">Sprite</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets a sprite by name.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -290,7 +283,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/Material.html">Material</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the sprite's default material.</td>
               </tr>
             </table>
           </div>
@@ -307,7 +300,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Atlas.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release textures.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -317,7 +310,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Atlas.GetSprite(System.String)">GetSprite</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../GameStack.Graphics/Sprite.html">Sprite</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../GameStack.Graphics/Sprite.html">Sprite</a></nobr><blockquote>Gets a single standard sprite by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -327,7 +320,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Atlas.GetSprite``1(System.String)">GetSprite&lt;T&gt;</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <i title="To be added.">T</i></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <i title="To retrieve a specialized sprite type, specify a subtype of Sprite.">T</i></nobr><blockquote>Get a strongly typed sprite instance.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -339,9 +332,7 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="C:GameStack.Graphics.Atlas(System.IO.Stream,GameStack.Graphics.Shader)">Atlas Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Atlas(System.IO.Stream,GameStack.Graphics.Shader):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Load an asset atlas directly from a stream.</p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Atlas</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../GameStack.Graphics/Shader.html">Shader</a> shader)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -351,20 +342,16 @@
                 <i>stream</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>shader</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Atlas(System.IO.Stream,GameStack.Graphics.Shader):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.Graphics.Atlas(System.IO.Stream,GameStack.Graphics.Shader):Remarks">The input must contain an atlas file image as created by the pipeline tools.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Atlas(System.IO.Stream,GameStack.Graphics.Shader):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -373,7 +360,6 @@
         <h3 id="C:GameStack.Graphics.Atlas(System.String,GameStack.Graphics.Shader)">Atlas Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Atlas(System.String,GameStack.Graphics.Shader):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Atlas</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path, <a href="../GameStack.Graphics/Shader.html">Shader</a> shader)</div>
@@ -383,20 +369,15 @@
               <dt>
                 <i>path</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Relative asset path.</dd>
               <dt>
                 <i>shader</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>If provided, always use this shader instead of the default sprite shader.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Atlas(System.String,GameStack.Graphics.Shader):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Atlas(System.String,GameStack.Graphics.Shader):Version Information">
@@ -405,14 +386,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Atlas.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Graphics.Atlas.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release textures.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Atlas.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Atlas.Dispose():Version Information">
@@ -421,9 +399,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Atlas.GetSprite(System.String)">GetSprite Method</h3>
         <blockquote id="M:GameStack.Graphics.Atlas.GetSprite(System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a single standard sprite by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Sprite.html">Sprite</a> <b>GetSprite</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -432,18 +408,14 @@
               <dt>
                 <i>name</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The sprite name, matching the original filename, without extension.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Atlas.GetSprite(System.String):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Atlas.GetSprite(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Atlas.GetSprite(System.String):Version Information">
@@ -452,20 +424,16 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Atlas.GetSprite``1(System.String)">GetSprite&lt;T&gt; Generic Method</h3>
         <blockquote id="M:GameStack.Graphics.Atlas.GetSprite``1(System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Get a strongly typed sprite instance.</p>
           <h2>Syntax</h2>
-          <div class="Signature">public <i title="To be added.">T</i> <b>GetSprite&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)<br /> where T : <a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a></div>
+          <div class="Signature">public <i title="To retrieve a specialized sprite type, specify a subtype of Sprite.">T</i> <b>GetSprite&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)<br /> where T : <a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a></div>
           <h4 class="Subsection">Type Parameters</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Atlas.GetSprite``1(System.String):Type Parameters">
             <dl>
               <dt>
                 <i>T</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>To retrieve a specialized sprite type, specify a subtype of Sprite.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Parameters</h4>
@@ -474,19 +442,14 @@
               <dt>
                 <i>name</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The sprite name, matching the original filename, without extension.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Atlas.GetSprite``1(System.String):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Atlas.GetSprite``1(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Atlas.GetSprite``1(System.String):Remarks">Use this method to easily retireve SlicedSprite instances from an Atlas. This is just a convenience overload so that casting is not required.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Atlas.GetSprite``1(System.String):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -494,9 +457,7 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Atlas.Item(System.String)">Item Property</h3>
         <blockquote id="P:GameStack.Graphics.Atlas.Item(System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a sprite by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">
             <p>
@@ -508,18 +469,14 @@
               <dt>
                 <i>name</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The sprite name, matching the original filename, without extension.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Atlas.Item(System.String):Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Atlas.Item(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Atlas.Item(System.String):Version Information">
@@ -528,19 +485,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Atlas.Material">Material Property</h3>
         <blockquote id="P:GameStack.Graphics.Atlas.Material:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the sprite's default material.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Material.html">Material</a> <b>Material</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Atlas.Material:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Atlas.Material:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.Atlas.Material:Remarks">This material will be used each time a sprite from the Atlas is rendered, unless another material is already in scope.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Atlas.Material:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

@@ -3,6 +3,7 @@
     <title>GameStack.Transition&lt;T&gt;</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,12 +207,10 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Transition`1">Transition&lt;T&gt; Generic Class</h1>
-    <p class="Summary" id="T:GameStack.Transition`1:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Transition`1:Summary">Transitions a property from one value to another over time.</p>
     <div>
       <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Transition`1:Signature">public class  <b>Transition&lt;T&gt;</b> : <a href="../GameStack/ITransition.html">ITransition</a>, <a href="../GameStack/IUpdater.html">IUpdater</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+      <div class="Signature" id="T:GameStack.Transition`1:Signature">public class  <b>Transition&lt;T&gt;</b> : <a href="../GameStack/IUpdater.html">IUpdater</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Transition`1:Docs">
       <h4 class="Subsection">Type Parameters</h4>
@@ -221,15 +219,11 @@
           <dt>
             <i>T</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>The type of the controlled value.</dd>
         </dl>
       </blockquote>
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Transition`1:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Transition`1:Docs:Remarks">This is a simpler version of <a href="../GameStack/Controller`1.html">GameStack.Controller&lt;T&gt;</a> for one-time transitions.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Transition`1:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -252,11 +246,9 @@
                   <div>
                     <b>
                       <a href="#C:GameStack.Transition`1(`0,`0,System.Single,GameStack.TweenFunc{`0},System.Action{`0},System.Action)">Transition</a>
-                    </b>(<i title="To be added.">T</i>, <i title="To be added.">T</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../GameStack/TweenFunc`1.html">TweenFunc&lt;T&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;T&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)</div>
+                    </b>(<i title="The type of the controlled value.">T</i>, <i title="The type of the controlled value.">T</i>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../GameStack/TweenFunc`1.html">TweenFunc&lt;T&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;T&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Start a transition immediately.</td>
               </tr>
             </table>
           </div>
@@ -275,7 +267,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Is the transition finished?</td>
               </tr>
             </table>
           </div>
@@ -292,7 +284,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Transition`1.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>End the transition.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -302,7 +294,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Transition`1.Update(GameStack.FrameArgs)">Update</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote>Advance the transition one frame.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -312,7 +304,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Transition`1.Update(System.Single)">Update</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Advance the transition one frame.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -324,56 +316,40 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="C:GameStack.Transition`1(`0,`0,System.Single,GameStack.TweenFunc{`0},System.Action{`0},System.Action)">Transition Constructor</h3>
         <blockquote id="C:GameStack.Transition`1(`0,`0,System.Single,GameStack.TweenFunc{`0},System.Action{`0},System.Action):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Start a transition immediately.</p>
           <h2>Syntax</h2>
-          <div class="Signature">public  <b>Transition</b> (<i title="To be added.">T</i> from, <i title="To be added.">T</i> to, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> duration, <a href="../GameStack/TweenFunc`1.html">TweenFunc&lt;T&gt;</a> easing, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;T&gt;</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> done)</div>
+          <div class="Signature">public  <b>Transition</b> (<i title="The type of the controlled value.">T</i> from, <i title="The type of the controlled value.">T</i> to, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> duration, <a href="../GameStack/TweenFunc`1.html">TweenFunc&lt;T&gt;</a> easing, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;T&gt;</a> callback, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action">Action</a> done)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:GameStack.Transition`1(`0,`0,System.Single,GameStack.TweenFunc{`0},System.Action{`0},System.Action):Parameters">
             <dl>
               <dt>
                 <i>from</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The starting value.</dd>
               <dt>
                 <i>to</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The ending value.</dd>
               <dt>
                 <i>duration</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The transition duration in seconds.</dd>
               <dt>
                 <i>easing</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The easing function to use.</dd>
               <dt>
                 <i>callback</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Called to set the controlled object's property.</dd>
               <dt>
                 <i>done</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Called when the transition has finished.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Transition`1(`0,`0,System.Single,GameStack.TweenFunc{`0},System.Action{`0},System.Action):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.Transition`1(`0,`0,System.Single,GameStack.TweenFunc{`0},System.Action{`0},System.Action):Remarks">In order to continue running, the transition must either be added to the scene collection by calling <a href="../GameStack/Scene.html#M:GameStack.Scene.Add(System.Object)">Scene.Add(object)</a> or by pumping the transition manually on update.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Transition`1(`0,`0,System.Single,GameStack.TweenFunc{`0},System.Action{`0},System.Action):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -381,14 +357,11 @@
         </blockquote>
         <h3 id="M:GameStack.Transition`1.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Transition`1.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">End the transition.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Transition`1.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Transition`1.Dispose():Version Information">
@@ -397,18 +370,14 @@
         </blockquote>
         <h3 id="P:GameStack.Transition`1.IsDone">IsDone Property</h3>
         <blockquote id="P:GameStack.Transition`1.IsDone:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Is the transition finished?</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsDone</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Transition`1.IsDone:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Transition`1.IsDone:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Transition`1.IsDone:Version Information">
@@ -417,9 +386,7 @@
         </blockquote>
         <h3 id="M:GameStack.Transition`1.Update(GameStack.FrameArgs)">Update Method</h3>
         <blockquote id="M:GameStack.Transition`1.Update(GameStack.FrameArgs):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Advance the transition one frame.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="../GameStack/FrameArgs.html">FrameArgs</a> frame)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -428,15 +395,11 @@
               <dt>
                 <i>frame</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Current frame info.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Transition`1.Update(GameStack.FrameArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Transition`1.Update(GameStack.FrameArgs):Remarks">Generally called automatically when added to the scene collection.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Transition`1.Update(GameStack.FrameArgs):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -444,9 +407,7 @@
         </blockquote>
         <h3 id="M:GameStack.Transition`1.Update(System.Single)">Update Method</h3>
         <blockquote id="M:GameStack.Transition`1.Update(System.Single):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Advance the transition one frame.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> delta)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -455,14 +416,11 @@
               <dt>
                 <i>delta</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The time that has passed in seconds since the last call.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Transition`1.Update(System.Single):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Transition`1.Update(System.Single):Version Information">

@@ -3,6 +3,7 @@
     <title>GameStack.Gui.RadioGroup</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.RadioGroup">RadioGroup  Class</h1>
-    <p class="Summary" id="T:GameStack.Gui.RadioGroup:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Gui.RadioGroup:Summary">Groups buttons together into a common radio group with only one active button at a time.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Gui.RadioGroup:Signature">public class  <b>RadioGroup</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.Gui.RadioGroup:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.RadioGroup:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Gui.RadioGroup:Docs:Remarks">Pass an instance of this to <a href="../GameStack.Gui/Button.html#C:GameStack.Gui.Button(GameStack.Gui.RadioGroup,GameStack.Gui.LayoutSpec)">Button(RadioGroup, LayoutSpec)</a> for all buttons that should belong to this group.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Gui.RadioGroup:Docs:Version Information">
         <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>()</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -267,7 +262,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;RadioGroupEventArgs&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Fires whenever the active button has changed.</td>
               </tr>
             </table>
           </div>
@@ -286,7 +281,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Gui/Button.html">Button</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Returns the active button, or null if there is none yet.</td>
               </tr>
             </table>
           </div>
@@ -299,13 +294,11 @@
         <h3 id="C:GameStack.Gui.RadioGroup()">RadioGroup Constructor</h3>
         <blockquote id="C:GameStack.Gui.RadioGroup():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>RadioGroup</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Gui.RadioGroup():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Gui.RadioGroup():Version Information">
@@ -314,18 +307,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.RadioGroup.Active">Active Property</h3>
         <blockquote id="P:GameStack.Gui.RadioGroup.Active:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Returns the active button, or null if there is none yet.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Gui/Button.html">Button</a> <b>Active</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.RadioGroup.Active:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Gui.RadioGroup.Active:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.RadioGroup.Active:Version Information">
@@ -334,14 +323,11 @@
         </blockquote>
         <h3 id="F:GameStack.Gui.RadioGroup.Changed">Changed Field</h3>
         <blockquote id="F:GameStack.Gui.RadioGroup.Changed:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Fires whenever the active button has changed.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;RadioGroupEventArgs&gt;</a> <b>Changed</b> </div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="F:GameStack.Gui.RadioGroup.Changed:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:GameStack.Gui.RadioGroup.Changed:Version Information">

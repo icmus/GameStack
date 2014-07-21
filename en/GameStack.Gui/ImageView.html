@@ -3,6 +3,7 @@
     <title>GameStack.Gui.ImageView</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.ImageView">ImageView  Class</h1>
-    <p class="Summary" id="T:GameStack.Gui.ImageView:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Gui.ImageView:Summary">A simple view for displaying a single image.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Gui.ImageView:Signature">public class  <b>ImageView</b> : <a href="../GameStack.Gui/View.html">View</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Gui.ImageView:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.ImageView:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Gui.ImageView:Docs:Remarks">If a <a href="../GameStack.Graphics/SlicedSprite.html">GameStack.Graphics.SlicedSprite</a> is provided, the sprite is automtically resized to fit the view frame. Since this operation mutates the sprite's geometry, consider calling <a href="../GameStack.Graphics/SlicedSprite.html#M:GameStack.Graphics.SlicedSprite.Clone()">GameStack.Graphics.SlicedSprite.Clone()</a> to create a copy first. Sliced sprites are resized regardless of the <a href="../GameStack.Gui/ImageView.html#P:GameStack.Gui.ImageView.Fill">ImageView.Fill</a> setting.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Gui.ImageView:Docs:Version Information">
         <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a>, <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -294,7 +289,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the tint color.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -309,7 +304,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Should the sprite be scaled to fill the view frame?</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -393,7 +388,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the sprite presented by this view.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -559,7 +554,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Gui.ImageView.Layout()">Layout</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -625,7 +620,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Gui.ImageView.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -658,7 +653,6 @@
         <h3 id="C:GameStack.Gui.ImageView(GameStack.Graphics.Sprite,GameStack.Gui.LayoutSpec,System.Boolean)">ImageView Constructor</h3>
         <blockquote id="C:GameStack.Gui.ImageView(GameStack.Graphics.Sprite,GameStack.Gui.LayoutSpec,System.Boolean):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>ImageView</b> (<a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a> sprite, <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a> spec, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> fill)</div>
@@ -669,25 +663,19 @@
                 <i>sprite</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>spec</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Layout.</dd>
               <dt>
                 <i>fill</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>If true, the sprite will fill the view's frame; otherwise, it will retain its original dimensions.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Gui.ImageView(GameStack.Graphics.Sprite,GameStack.Gui.LayoutSpec,System.Boolean):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Gui.ImageView(GameStack.Graphics.Sprite,GameStack.Gui.LayoutSpec,System.Boolean):Version Information">
@@ -696,19 +684,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.ImageView.Color">Color Property</h3>
         <blockquote id="P:GameStack.Gui.ImageView.Color:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the tint color.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> <b>Color</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.ImageView.Color:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.ImageView.Color:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gui.ImageView.Color:Remarks">Use white for no tint.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.ImageView.Color:Version Information">
             <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -716,18 +699,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.ImageView.Fill">Fill Property</h3>
         <blockquote id="P:GameStack.Gui.ImageView.Fill:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Should the sprite be scaled to fill the view frame?</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Fill</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.ImageView.Fill:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Gui.ImageView.Fill:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.ImageView.Fill:Version Information">
@@ -737,13 +716,11 @@
         <h3 id="M:GameStack.Gui.ImageView.Layout()">Layout Method</h3>
         <blockquote id="M:GameStack.Gui.ImageView.Layout():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Layout</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Gui.ImageView.Layout():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Gui.ImageView.Layout():Version Information">
@@ -753,7 +730,6 @@
         <h3 id="M:GameStack.Gui.ImageView.OnDraw(OpenTK.Matrix4@)">OnDraw Method</h3>
         <blockquote id="M:GameStack.Gui.ImageView.OnDraw(OpenTK.Matrix4@):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDraw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> transform)</div>
@@ -764,13 +740,11 @@
                 <i>transform</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Gui.ImageView.OnDraw(OpenTK.Matrix4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Gui.ImageView.OnDraw(OpenTK.Matrix4@):Version Information">
@@ -779,18 +753,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.ImageView.Sprite">Sprite Property</h3>
         <blockquote id="P:GameStack.Gui.ImageView.Sprite:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the sprite presented by this view.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a> <b>Sprite</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.ImageView.Sprite:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Gui.ImageView.Sprite:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.ImageView.Sprite:Version Information">

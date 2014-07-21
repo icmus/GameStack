@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.TextureWrap</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.TextureWrap">TextureWrap  Enum</h1>
-    <p class="Summary" id="T:GameStack.Graphics.TextureWrap:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.TextureWrap:Summary">Controls how textures are wrapped; specifically, how textured are rendered with a U or V coordinate outside the 0..1 range.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.TextureWrap:Signature">public enum <b>TextureWrap</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.TextureWrap:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.TextureWrap:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.TextureWrap:Docs:Remarks">Use with <a href="../GameStack.Graphics/Texture.html">GameStack.Graphics.Texture</a>.</div>
       <h2 class="Section">Members</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.TextureWrap:Docs:Members">
         <table class="Enumeration">
@@ -230,17 +226,13 @@
             <td id="F:GameStack.Graphics.TextureWrap.Clamp">
               <b>Clamp</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The color at the edge will be repeated, "smearing" edges of the texture outwards.</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.Graphics.TextureWrap.Repeat">
               <b>Repeat</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The texture will repeat (x = x % 1.0); use this with tiling textures.</td>
           </tr>
         </table>
       </div>

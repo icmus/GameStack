@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.VertexBuffer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.VertexBuffer">VertexBuffer  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.VertexBuffer:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.VertexBuffer:Summary">Manages a collection of vertices in a buffer.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.VertexBuffer:Signature">public class  <b>VertexBuffer</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.VertexBuffer:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.VertexBuffer:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.VertexBuffer:Docs:Remarks">Collections of vertices can belong to simple 2D geometry like sprites or quads, and 3D meshes. This class is typically used in concert with <a href="../GameStack.Graphics/IndexBuffer.html">GameStack.Graphics.IndexBuffer</a>. By using a separate index buffer, vertices can be re-used any number of times in the mesh whenever the attributes are identical. In order to draw with an index buffer, an instance of this class must be in scope. This class is not normally created directly, but instead via one of the asset loading classes like <a href="../GameStack.Graphics/Model.html">GameStack.Graphics.Model</a>.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.VertexBuffer:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[])</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -266,7 +261,7 @@
                 </td>
                 <td>
                   <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[]</i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[]</i>. Gets or sets the raw vertex data.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -278,7 +273,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the vertex format.</td>
               </tr>
             </table>
           </div>
@@ -295,7 +290,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -305,7 +300,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.VertexBuffer.Commit()">Commit</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Write data to the native vertex buffer.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -314,7 +309,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.VertexBuffer.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release buffer resources.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -324,7 +319,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                  </b>()<blockquote>Must be called to release resources. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -334,7 +329,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                  </b>()<blockquote>Takes the object out of scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
               </tr>
             </table>
           </div>
@@ -350,7 +345,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.VertexBuffer.OnBegin()">OnBegin</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -360,7 +355,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                  </b>()<blockquote>Override to perform actions upon entering scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -369,7 +364,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.VertexBuffer.OnEnd()">OnEnd</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -379,7 +374,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                  </b>()<blockquote>Override to perform actions upon leaving scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
               </tr>
             </table>
           </div>
@@ -392,7 +387,6 @@
         <h3 id="C:GameStack.Graphics.VertexBuffer(GameStack.Graphics.VertexFormat,System.Single[])">VertexBuffer Constructor</h3>
         <blockquote id="C:GameStack.Graphics.VertexBuffer(GameStack.Graphics.VertexFormat,System.Single[]):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>VertexBuffer</b> (<a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> format, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[] vertices)</div>
@@ -403,19 +397,16 @@
                 <i>format</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>vertices</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.VertexBuffer(GameStack.Graphics.VertexFormat,System.Single[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.VertexBuffer(GameStack.Graphics.VertexFormat,System.Single[]):Version Information">
@@ -424,15 +415,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.VertexBuffer.Commit()">Commit Method</h3>
         <blockquote id="M:GameStack.Graphics.VertexBuffer.Commit():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Write data to the native vertex buffer.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Commit</b> ()</div>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.Commit():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.Commit():Remarks">Must be called for changes to take effect.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.Commit():Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -440,19 +427,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.VertexBuffer.Data">Data Property</h3>
         <blockquote id="P:GameStack.Graphics.VertexBuffer.Data:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the raw vertex data.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[] <b>Data</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexBuffer.Data:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.VertexBuffer.Data:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.VertexBuffer.Data:Remarks">In order for changes to take effect, <a href="../GameStack.Graphics/VertexBuffer.html#M:GameStack.Graphics.VertexBuffer.Commit()">VertexBuffer.Commit()</a> must be called.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.VertexBuffer.Data:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -460,14 +442,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.VertexBuffer.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Graphics.VertexBuffer.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release buffer resources.</p>
           <h2>Syntax</h2>
           <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.Dispose():Version Information">
@@ -476,19 +455,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.VertexBuffer.Format">Format Property</h3>
         <blockquote id="P:GameStack.Graphics.VertexBuffer.Format:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the vertex format.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>Format</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexBuffer.Format:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.VertexBuffer.Format:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.VertexBuffer.Format:Remarks">Vertex formats specify what kind of information is passed to the shader for each vertex.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.VertexBuffer.Format:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -497,13 +471,11 @@
         <h3 id="M:GameStack.Graphics.VertexBuffer.OnBegin()">OnBegin Method</h3>
         <blockquote id="M:GameStack.Graphics.VertexBuffer.OnBegin():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.OnBegin():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.OnBegin():Version Information">
@@ -513,13 +485,11 @@
         <h3 id="M:GameStack.Graphics.VertexBuffer.OnEnd()">OnEnd Method</h3>
         <blockquote id="M:GameStack.Graphics.VertexBuffer.OnEnd():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnEnd</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.OnEnd():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.VertexBuffer.OnEnd():Version Information">

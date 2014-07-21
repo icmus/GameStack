@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.FrameSequence&lt;T&gt;</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.FrameSequence`1">FrameSequence&lt;T&gt; Generic Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.FrameSequence`1:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.FrameSequence`1:Summary">Abstract base class for classes providing functionality related to sequences of frames.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.FrameSequence`1:Signature">public class  <b>FrameSequence&lt;T&gt;</b> : <a href="../GameStack/IUpdater.html">GameStack.IUpdater</a></div>
@@ -221,15 +219,11 @@
           <dt>
             <i>T</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>The type of object to be sequenced.</dd>
         </dl>
       </blockquote>
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.FrameSequence`1:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.FrameSequence`1:Docs:Remarks">Add this object to your scene collection to automatically update it each frame. Otherwise, pump it manually in your update method.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.FrameSequence`1:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -252,10 +246,9 @@
                   <div>
                     <b>
                       <a href="#C:GameStack.Graphics.FrameSequence`1(System.Int32,System.Boolean,`0[])">FrameSequence</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <b>params</b> <i title="To be added.">T</i>[])</div>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <b>params</b> <i title="The type of object to be sequenced.">T</i>[])</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -274,8 +267,8 @@
                 </td>
                 <td>
                   <i>
-                    <i title="To be added.">T</i>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                    <i title="The type of object to be sequenced.">T</i>
+                  </i>. Gets the current frame.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -287,7 +280,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. True if the sequence has finished.</td>
               </tr>
             </table>
           </div>
@@ -304,7 +297,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.FrameSequence`1.Reset()">Reset</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Stop the sequence and reset to the beginning.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -314,7 +307,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.FrameSequence`1.Update(GameStack.FrameArgs)">Update</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>Advance the sequence by the specified time.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -327,36 +320,28 @@
         <h3 id="C:GameStack.Graphics.FrameSequence`1(System.Int32,System.Boolean,`0[])">FrameSequence Constructor</h3>
         <blockquote id="C:GameStack.Graphics.FrameSequence`1(System.Int32,System.Boolean,`0[]):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
-          <div class="Signature">public  <b>FrameSequence</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> framesPerSecond, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> loop, <b>params</b> <i title="To be added.">T</i>[] frames)</div>
+          <div class="Signature">public  <b>FrameSequence</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> framesPerSecond, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> loop, <b>params</b> <i title="The type of object to be sequenced.">T</i>[] frames)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="C:GameStack.Graphics.FrameSequence`1(System.Int32,System.Boolean,`0[]):Parameters">
             <dl>
               <dt>
                 <i>framesPerSecond</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The animation rate in frames per second.</dd>
               <dt>
                 <i>loop</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>True to loop infinitely.</dd>
               <dt>
                 <i>frames</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>One or more objects representing the frames.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.FrameSequence`1(System.Int32,System.Boolean,`0[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.FrameSequence`1(System.Int32,System.Boolean,`0[]):Version Information">
@@ -365,18 +350,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.FrameSequence`1.Current">Current Property</h3>
         <blockquote id="P:GameStack.Graphics.FrameSequence`1.Current:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the current frame.</p>
           <h2>Syntax</h2>
-          <div class="Signature">public <i title="To be added.">T</i> <b>Current</b>  { get; }</div>
+          <div class="Signature">public <i title="The type of object to be sequenced.">T</i> <b>Current</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameSequence`1.Current:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.FrameSequence`1.Current:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.FrameSequence`1.Current:Version Information">
@@ -385,19 +366,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.FrameSequence`1.IsDone">IsDone Property</h3>
         <blockquote id="P:GameStack.Graphics.FrameSequence`1.IsDone:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">True if the sequence has finished.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsDone</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameSequence`1.IsDone:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameSequence`1.IsDone:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.FrameSequence`1.IsDone:Remarks">This is never true if the sequence is looping.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.FrameSequence`1.IsDone:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -405,14 +381,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.FrameSequence`1.Reset()">Reset Method</h3>
         <blockquote id="M:GameStack.Graphics.FrameSequence`1.Reset():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Stop the sequence and reset to the beginning.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Reset</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.FrameSequence`1.Reset():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.FrameSequence`1.Reset():Version Information">
@@ -421,9 +394,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.FrameSequence`1.Update(GameStack.FrameArgs)">Update Method</h3>
         <blockquote id="M:GameStack.Graphics.FrameSequence`1.Update(GameStack.FrameArgs):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Advance the sequence by the specified time.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> frame)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -432,15 +403,11 @@
               <dt>
                 <i>frame</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Frame information.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameSequence`1.Update(GameStack.FrameArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.FrameSequence`1.Update(GameStack.FrameArgs):Remarks">Usually called by the scene when added to the scene collection, but can be pumped manually.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.FrameSequence`1.Update(GameStack.FrameArgs):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

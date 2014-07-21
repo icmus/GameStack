@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.Camera</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Camera">Camera  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.Camera:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.Camera:Summary">Manages projection and view transforms.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.Camera:Signature">public class  <b>Camera</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.Camera:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Camera:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.Camera:Docs:Remarks">For 2D requirements, consider using the <a href="../GameStack.Graphics/Camera2D.html">GameStack.Graphics.Camera2D</a> convenience class. Whenever a camera is in scope (by calling Begin) the camera's transforms will be applied to drawing operations. Most drawing operations require a camera and will throw an exception if none is in scope.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.Camera:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>()</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -264,7 +259,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the combined inverse of the view-projection matrix.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -276,7 +271,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the projection matrix.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -288,7 +283,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the view transform.</td>
               </tr>
             </table>
           </div>
@@ -305,7 +300,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Camera.Apply(OpenTK.Matrix4@)">Apply</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Apply the camera's transforms to the current shader.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -345,7 +340,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@)">SetTransforms</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Change the camera's transforms.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -355,7 +350,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4,OpenTK.Matrix4)">SetTransforms</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Change the camera's transforms.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -365,7 +360,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Camera.Unproject(OpenTK.Vector2,System.Single)">Unproject</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a></nobr><blockquote>Unproject a point into world space.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -405,13 +400,11 @@
         <h3 id="C:GameStack.Graphics.Camera()">Camera Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Camera():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Camera</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Camera():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Camera():Version Information">
@@ -420,9 +413,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Camera.Apply(OpenTK.Matrix4@)">Apply Method</h3>
         <blockquote id="M:GameStack.Graphics.Camera.Apply(OpenTK.Matrix4@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Apply the camera's transforms to the current shader.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Apply</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -432,14 +423,11 @@
                 <i>world</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Camera.Apply(OpenTK.Matrix4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Camera.Apply(OpenTK.Matrix4@):Remarks">Must be called before drawing using the camera. This method is primarily called by drawable objects and not directly by apps.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Camera.Apply(OpenTK.Matrix4@):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -447,18 +435,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Camera.Inverse">Inverse Property</h3>
         <blockquote id="P:GameStack.Graphics.Camera.Inverse:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the combined inverse of the view-projection matrix.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>Inverse</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Camera.Inverse:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Camera.Inverse:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Camera.Inverse:Version Information">
@@ -467,18 +451,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Camera.Projection">Projection Property</h3>
         <blockquote id="P:GameStack.Graphics.Camera.Projection:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the projection matrix.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>Projection</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Camera.Projection:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Camera.Projection:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Camera.Projection:Version Information">
@@ -487,9 +467,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4,OpenTK.Matrix4)">SetTransforms Method</h3>
         <blockquote id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4,OpenTK.Matrix4):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Change the camera's transforms.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetTransforms</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> view, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> projection)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -498,21 +476,15 @@
               <dt>
                 <i>view</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new view matrix.</dd>
               <dt>
                 <i>projection</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new projection matrix.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4,OpenTK.Matrix4):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4,OpenTK.Matrix4):Remarks">Use the static helper methods of the <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> class to construct view and projection matrices.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4,OpenTK.Matrix4):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -520,9 +492,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@)">SetTransforms Method</h3>
         <blockquote id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Change the camera's transforms.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetTransforms</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> view, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> projection)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -531,21 +501,15 @@
               <dt>
                 <i>view</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new view matrix.</dd>
               <dt>
                 <i>projection</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new projection matrix.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@):Remarks">Use the static helper methods of the <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> class to construct view and projection matrices.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -553,9 +517,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Camera.Unproject(OpenTK.Vector2,System.Single)">Unproject Method</h3>
         <blockquote id="M:GameStack.Graphics.Camera.Unproject(OpenTK.Vector2,System.Single):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Unproject a point into world space.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Unproject</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> pos, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> z)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -577,12 +539,9 @@
           </blockquote>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Camera.Unproject(OpenTK.Vector2,System.Single):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Camera.Unproject(OpenTK.Vector2,System.Single):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Camera.Unproject(OpenTK.Vector2,System.Single):Remarks">The inverse of the combined view-projection matrix is applied to the point.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Camera.Unproject(OpenTK.Vector2,System.Single):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -590,18 +549,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Camera.View">View Property</h3>
         <blockquote id="P:GameStack.Graphics.Camera.View:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the view transform.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>View</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Camera.View:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Camera.View:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Camera.View:Version Information">

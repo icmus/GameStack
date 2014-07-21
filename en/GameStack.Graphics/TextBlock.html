@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.TextBlock</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.TextBlock">TextBlock  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.TextBlock:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.TextBlock:Summary">A primitive drawable bitmap text object containing one or more lines of text.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.TextBlock:Signature">public class  <b>TextBlock</b> : <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>,	<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.TextBlock:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.TextBlock:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.TextBlock:Docs:Remarks">For a higher-level control that supports vertical placement options, consider <a href="../GameStack.Gui/Label.html">GameStack.Gui.Label</a>.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.TextBlock:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>()</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
               <tr valign="top">
@@ -259,7 +254,6 @@
                     </b>(<a href="../GameStack.Graphics/BitmapFont.html">BitmapFont</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -279,7 +273,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the actual required size of the text block, given the current text and font.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -294,7 +288,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the text color.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -309,7 +303,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/BitmapFont.html">BitmapFont</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the bitmap font used to render the text.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -324,7 +318,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/HorizontalAlignment.html">HorizontalAlignment</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the horizontal alignment, used in combination with Width.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -339,7 +333,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets kerning override; when set to a non-zero value, adjust the kerning for all characters by this amount.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -354,7 +348,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets leading override; when set to a non-zero value, adjust the lading for all lines by this amount.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -369,7 +363,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the text string.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -384,7 +378,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the word wrap width; use 0 for no wrapping.</td>
               </tr>
             </table>
           </div>
@@ -401,7 +395,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.TextBlock.Build()">Build</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Force a geometry build, assembling each character into a shared geometry for fast rendering.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -411,7 +405,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.TextBlock.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release buffers.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -421,7 +415,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -431,7 +425,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4@)">Draw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -441,7 +435,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -451,7 +445,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
             </table>
           </div>
@@ -467,7 +461,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.TextBlock.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -476,7 +470,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>When overridden, must draw the object. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
             </table>
           </div>
@@ -489,13 +483,11 @@
         <h3 id="C:GameStack.Graphics.TextBlock()">TextBlock Constructor</h3>
         <blockquote id="C:GameStack.Graphics.TextBlock():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>TextBlock</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.TextBlock():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.TextBlock():Version Information">
@@ -505,7 +497,6 @@
         <h3 id="C:GameStack.Graphics.TextBlock(GameStack.Graphics.BitmapFont,System.Single,System.String)">TextBlock Constructor</h3>
         <blockquote id="C:GameStack.Graphics.TextBlock(GameStack.Graphics.BitmapFont,System.Single,System.String):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>TextBlock</b> (<a href="../GameStack.Graphics/BitmapFont.html">BitmapFont</a> font, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> width, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
@@ -515,26 +506,19 @@
               <dt>
                 <i>font</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Bitmap font asset.</dd>
               <dt>
                 <i>width</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Word wrap width, or 0 for no wrapping.</dd>
               <dt>
                 <i>text</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Initial text.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.TextBlock(GameStack.Graphics.BitmapFont,System.Single,System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.TextBlock(GameStack.Graphics.BitmapFont,System.Single,System.String):Version Information">
@@ -543,19 +527,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextBlock.ActualSize">ActualSize Property</h3>
         <blockquote id="P:GameStack.Graphics.TextBlock.ActualSize:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the actual required size of the text block, given the current text and font.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>ActualSize</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextBlock.ActualSize:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.ActualSize:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.ActualSize:Remarks">Accessing this method forces a geometry build if one has not already taken place.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.ActualSize:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -563,14 +542,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.TextBlock.Build()">Build Method</h3>
         <blockquote id="M:GameStack.Graphics.TextBlock.Build():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Force a geometry build, assembling each character into a shared geometry for fast rendering.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Build</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.TextBlock.Build():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.TextBlock.Build():Version Information">
@@ -579,19 +555,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextBlock.Color">Color Property</h3>
         <blockquote id="P:GameStack.Graphics.TextBlock.Color:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the text color.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> <b>Color</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextBlock.Color:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Color:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Color:Remarks">This sets the vertex color for each character.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Color:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -599,14 +570,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.TextBlock.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Graphics.TextBlock.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release buffers.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.TextBlock.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.TextBlock.Dispose():Version Information">
@@ -615,18 +583,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextBlock.Font">Font Property</h3>
         <blockquote id="P:GameStack.Graphics.TextBlock.Font:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the bitmap font used to render the text.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/BitmapFont.html">BitmapFont</a> <b>Font</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextBlock.Font:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Font:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Font:Version Information">
@@ -635,18 +599,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextBlock.HorizontalAlignment">HorizontalAlignment Property</h3>
         <blockquote id="P:GameStack.Graphics.TextBlock.HorizontalAlignment:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the horizontal alignment, used in combination with Width.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/HorizontalAlignment.html">HorizontalAlignment</a> <b>HorizontalAlignment</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextBlock.HorizontalAlignment:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.HorizontalAlignment:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.HorizontalAlignment:Version Information">
@@ -655,18 +615,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextBlock.Kerning">Kerning Property</h3>
         <blockquote id="P:GameStack.Graphics.TextBlock.Kerning:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets kerning override; when set to a non-zero value, adjust the kerning for all characters by this amount.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Kerning</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextBlock.Kerning:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Kerning:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Kerning:Version Information">
@@ -675,18 +631,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextBlock.Leading">Leading Property</h3>
         <blockquote id="P:GameStack.Graphics.TextBlock.Leading:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets leading override; when set to a non-zero value, adjust the lading for all lines by this amount.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Leading</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextBlock.Leading:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Leading:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Leading:Version Information">
@@ -696,7 +648,6 @@
         <h3 id="M:GameStack.Graphics.TextBlock.OnDraw(OpenTK.Matrix4@)">OnDraw Method</h3>
         <blockquote id="M:GameStack.Graphics.TextBlock.OnDraw(OpenTK.Matrix4@):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDraw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
@@ -707,13 +658,11 @@
                 <i>world</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.TextBlock.OnDraw(OpenTK.Matrix4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.TextBlock.OnDraw(OpenTK.Matrix4@):Version Information">
@@ -722,18 +671,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextBlock.Text">Text Property</h3>
         <blockquote id="P:GameStack.Graphics.TextBlock.Text:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the text string.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Text</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextBlock.Text:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Text:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Text:Version Information">
@@ -742,18 +687,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextBlock.Width">Width Property</h3>
         <blockquote id="P:GameStack.Graphics.TextBlock.Width:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the word wrap width; use 0 for no wrapping.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Width</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextBlock.Width:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Width:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextBlock.Width:Version Information">

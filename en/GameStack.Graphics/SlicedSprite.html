@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.SlicedSprite</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.SlicedSprite">SlicedSprite  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.SlicedSprite:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.SlicedSprite:Summary">Extends the <a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a> class and provides the ability to resize a sprite without distorting the edges or border.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.SlicedSprite:Signature">public class  <b>SlicedSprite</b> : <a href="../GameStack.Graphics/Sprite.html">Sprite</a></div>
@@ -217,7 +215,8 @@
     <div class="Remarks" id="T:GameStack.Graphics.SlicedSprite:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.SlicedSprite:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+        <p>Instances of this class are typically retrieved via <a href="../GameStack.Graphics/Atlas.html#M:GameStack.Graphics.Atlas.GetSprite``1(System.String)">Atlas.GetSprite``1(string)</a>.</p>
+        <p>A sliced sprite is broken into 9 quads: one for each edge, one for each corner, and one for the middle (think of a tic-tac-toe board). This allows each portion to be scaled differently. Corners are never scaled. Edges can be scaled along their axis, but not long their width (or they can be tiled along their axis). The center is scaled in either direction, or it can tile in either direction (or both).</p>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.SlicedSprite:Docs:Version Information">
@@ -244,7 +243,6 @@
                     </b>(<a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -390,7 +388,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.SlicedSprite.Clone()">Clone</a>
-                  </b>()<nobr> : <a href="../GameStack.Graphics/SlicedSprite.html">SlicedSprite</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="../GameStack.Graphics/SlicedSprite.html">SlicedSprite</a></nobr><blockquote>Creates a new copy of the sprite so that it can be sized independently.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -410,7 +408,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -420,7 +418,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4@)">Draw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -430,7 +428,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -440,7 +438,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -450,7 +448,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2)">Resize</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote>Modify the sprite's geometry to match the new size.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -460,7 +458,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single)">Resize</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Modify the sprite's geometry to match the new size.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -485,7 +483,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>When overridden, must draw the object. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
               </tr>
             </table>
           </div>
@@ -565,7 +563,6 @@
         <h3 id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean)">SlicedSprite Constructor</h3>
         <blockquote id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>SlicedSprite</b> (<a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a> material, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> pos, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> size, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> origin, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> color, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> border, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> tileX, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> tileY, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> hollow)</div>
@@ -575,63 +572,51 @@
               <dt>
                 <i>material</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Default material.</dd>
               <dt>
                 <i>pos</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>size</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>origin</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>color</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>border</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>tileX</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>tileY</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>hollow</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean):Remarks">Typically only called by asset loaders.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.SlicedSprite(GameStack.Graphics.SpriteMaterial,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector2,OpenTK.Vector4,OpenTK.Vector4,System.Boolean,System.Boolean,System.Boolean):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -639,19 +624,14 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.SlicedSprite.Clone()">Clone Method</h3>
         <blockquote id="M:GameStack.Graphics.SlicedSprite.Clone():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Creates a new copy of the sprite so that it can be sized independently.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/SlicedSprite.html">SlicedSprite</a> <b>Clone</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Graphics.SlicedSprite.Clone():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Clone():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Clone():Remarks">The new copy shares the same material resources, but stores its own resizable copy of the geometry.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Clone():Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -659,9 +639,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2)">Resize Method</h3>
         <blockquote id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Modify the sprite's geometry to match the new size.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Resize</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> size)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -670,15 +648,11 @@
               <dt>
                 <i>size</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new size, including border widths.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2):Remarks">This method mutates the sprite instance. Use <a href="../GameStack.Graphics/SlicedSprite.html#M:GameStack.Graphics.SlicedSprite.Clone()">SlicedSprite.Clone()</a> to avoid conflicts.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(OpenTK.Vector2):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -686,9 +660,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single)">Resize Method</h3>
         <blockquote id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Modify the sprite's geometry to match the new size.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Resize</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> w, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> h)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -697,21 +669,15 @@
               <dt>
                 <i>w</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new width, including border widths.</dd>
               <dt>
                 <i>h</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new height, including border widths.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single):Remarks">This method mutates the sprite instance. Use <a href="../GameStack.Graphics/SlicedSprite.html#M:GameStack.Graphics.SlicedSprite.Clone()">SlicedSprite.Clone()</a> to avoid conflicts.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.SlicedSprite.Resize(System.Single,System.Single):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

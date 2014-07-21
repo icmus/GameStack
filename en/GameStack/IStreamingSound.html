@@ -3,6 +3,7 @@
     <title>GameStack.IStreamingSound</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.IStreamingSound">IStreamingSound  Interface</h1>
-    <p class="Summary" id="T:GameStack.IStreamingSound:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.IStreamingSound:Summary">Generic interface for a streaming sound asset.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.IStreamingSound:Signature">public interface  <b>IStreamingSound</b></div>
@@ -217,7 +215,6 @@
     <div class="Remarks" id="T:GameStack.IStreamingSound:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.IStreamingSound:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.IStreamingSound:Docs:Version Information">
@@ -238,7 +235,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the number of audio channels contained in the asset (2 for stereo).</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -250,7 +247,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the path to the streaming asset.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -262,7 +259,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the sample rate in samples per second (e.g., 44100).</td>
               </tr>
             </table>
           </div>
@@ -279,7 +276,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.IStreamingSound.FillBuffer(System.Int32,System.Int16[],System.Int32)">FillBuffer</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>Fills the specified buffer with audio data, advancing the current location.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -289,7 +286,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.IStreamingSound.Reset()">Reset</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Reset the current position to the beginning.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -301,18 +298,14 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="P:GameStack.IStreamingSound.ChannelCount">ChannelCount Property</h3>
         <blockquote id="P:GameStack.IStreamingSound.ChannelCount:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the number of audio channels contained in the asset (2 for stereo).</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ChannelCount</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.IStreamingSound.ChannelCount:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.IStreamingSound.ChannelCount:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.IStreamingSound.ChannelCount:Version Information">
@@ -321,9 +314,7 @@
         </blockquote>
         <h3 id="M:GameStack.IStreamingSound.FillBuffer(System.Int32,System.Int16[],System.Int32)">FillBuffer Method</h3>
         <blockquote id="M:GameStack.IStreamingSound.FillBuffer(System.Int32,System.Int16[],System.Int32):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Fills the specified buffer with audio data, advancing the current location.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>FillBuffer</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sampleCount, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a>[] buf, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> bufOffset)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -350,13 +341,9 @@
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.IStreamingSound.FillBuffer(System.Int32,System.Int16[],System.Int32):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.IStreamingSound.FillBuffer(System.Int32,System.Int16[],System.Int32):Returns">Number of bytes filled.</blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.IStreamingSound.FillBuffer(System.Int32,System.Int16[],System.Int32):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.IStreamingSound.FillBuffer(System.Int32,System.Int16[],System.Int32):Remarks">This method is normally not called directly but instead through a <a href="javascript:alert(&quot;Documentation not found.&quot;)">GameStack.StreamingSoundCahnnel</a> instance. </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.IStreamingSound.FillBuffer(System.Int32,System.Int16[],System.Int32):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -364,18 +351,14 @@
         </blockquote>
         <h3 id="P:GameStack.IStreamingSound.Path">Path Property</h3>
         <blockquote id="P:GameStack.IStreamingSound.Path:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the path to the streaming asset.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Path</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.IStreamingSound.Path:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.IStreamingSound.Path:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.IStreamingSound.Path:Version Information">
@@ -384,19 +367,13 @@
         </blockquote>
         <h3 id="M:GameStack.IStreamingSound.Reset()">Reset Method</h3>
         <blockquote id="M:GameStack.IStreamingSound.Reset():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Reset the current position to the beginning.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Reset</b> ()</div>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.IStreamingSound.Reset():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.IStreamingSound.Reset():Returns">True if the operation was successful.</blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.IStreamingSound.Reset():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.IStreamingSound.Reset():Remarks">This method will not stop any active sound channels from playing.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.IStreamingSound.Reset():Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -404,18 +381,14 @@
         </blockquote>
         <h3 id="P:GameStack.IStreamingSound.SampleRate">SampleRate Property</h3>
         <blockquote id="P:GameStack.IStreamingSound.SampleRate:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the sample rate in samples per second (e.g., 44100).</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>SampleRate</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.IStreamingSound.SampleRate:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.IStreamingSound.SampleRate:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.IStreamingSound.SampleRate:Version Information">

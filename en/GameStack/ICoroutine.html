@@ -3,6 +3,7 @@
     <title>GameStack.ICoroutine</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.ICoroutine">ICoroutine  Interface</h1>
-    <p class="Summary" id="T:GameStack.ICoroutine:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.ICoroutine:Summary">Coroutines are controlled through this interface.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.ICoroutine:Signature">public interface  <b>ICoroutine</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.ICoroutine:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.ICoroutine:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.ICoroutine:Docs:Remarks">Objects implementing this interface are returned by <a href="../GameStack/CoroutineList`1.html#M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator)">CoroutineList&lt;T&gt;.Start(IEnumerator)</a>. </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.ICoroutine:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -238,7 +234,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Is the coroutine finished running?</td>
               </tr>
             </table>
           </div>
@@ -255,7 +251,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.ICoroutine.Stop()">Stop</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Stop the coroutine.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -267,18 +263,14 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="P:GameStack.ICoroutine.IsFinished">IsFinished Property</h3>
         <blockquote id="P:GameStack.ICoroutine.IsFinished:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Is the coroutine finished running?</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsFinished</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.ICoroutine.IsFinished:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.ICoroutine.IsFinished:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.ICoroutine.IsFinished:Version Information">
@@ -287,15 +279,11 @@
         </blockquote>
         <h3 id="M:GameStack.ICoroutine.Stop()">Stop Method</h3>
         <blockquote id="M:GameStack.ICoroutine.Stop():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Stop the coroutine.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Stop</b> ()</div>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.ICoroutine.Stop():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.ICoroutine.Stop():Remarks">Stopped coroutines cannot be resumed and must be started again.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.ICoroutine.Stop():Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

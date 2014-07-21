@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.VertexElement</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.VertexElement">VertexElement  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.VertexElement:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.VertexElement:Summary">Represents a single element within a <a href="../GameStack.Graphics/VertexFormat.html">GameStack.Graphics.VertexFormat</a>.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.VertexElement:Signature">public class  <b>VertexElement</b></div>
@@ -217,7 +215,6 @@
     <div class="Remarks" id="T:GameStack.Graphics.VertexElement:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.VertexElement:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.VertexElement:Docs:Version Information">
@@ -244,7 +241,6 @@
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -267,7 +263,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the name of the element, matching a shader attribute.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -282,7 +278,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the index of the first float of the first instance of this element.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -297,7 +293,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the size of this element (in floats).</td>
               </tr>
             </table>
           </div>
@@ -310,7 +306,6 @@
         <h3 id="C:GameStack.Graphics.VertexElement(System.String,System.Int32,System.Int32)">VertexElement Constructor</h3>
         <blockquote id="C:GameStack.Graphics.VertexElement(System.String,System.Int32,System.Int32):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>VertexElement</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> size)</div>
@@ -320,26 +315,19 @@
               <dt>
                 <i>name</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The name of the vertex attribute (matches shader name).</dd>
               <dt>
                 <i>offset</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The index of the first float of the first instance of this element.</dd>
               <dt>
                 <i>size</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The size (in floats) of this element.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.VertexElement(System.String,System.Int32,System.Int32):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.VertexElement(System.String,System.Int32,System.Int32):Version Information">
@@ -348,18 +336,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.VertexElement.Name">Name Property</h3>
         <blockquote id="P:GameStack.Graphics.VertexElement.Name:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the name of the element, matching a shader attribute.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexElement.Name:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.VertexElement.Name:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.VertexElement.Name:Version Information">
@@ -368,18 +352,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.VertexElement.Offset">Offset Property</h3>
         <blockquote id="P:GameStack.Graphics.VertexElement.Offset:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the index of the first float of the first instance of this element.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Offset</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexElement.Offset:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.VertexElement.Offset:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.VertexElement.Offset:Version Information">
@@ -388,18 +368,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.VertexElement.Size">Size Property</h3>
         <blockquote id="P:GameStack.Graphics.VertexElement.Size:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the size of this element (in floats).</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Size</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexElement.Size:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.VertexElement.Size:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.VertexElement.Size:Version Information">

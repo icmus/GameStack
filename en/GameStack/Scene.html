@@ -3,6 +3,7 @@
     <title>GameStack.Scene</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,17 +207,16 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Scene">Scene  Class</h1>
-    <p class="Summary" id="T:GameStack.Scene:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Scene:Summary">The scene is responsible for updating its own objects, managing its own resources, and controlling any number of entities or views. Most apps will have types derived from Scene.</p>
     <div>
       <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Scene:Signature">public class  <b>Scene</b> : <a href="../GameStack/IGameViewEventHandler.html">IGameViewEventHandler</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+      <div class="Signature" id="T:GameStack.Scene:Signature">public class  <b>Scene</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Scene:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.Scene:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+        <p>A class derived from Scene can implement any of the event handling interfaces, such as <a href="../GameStack/IUpdater.html">GameStack.IUpdater</a> or <a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;T&gt;</a> and the handler methods will automatically be called. Most scenes implement at least IUpdater for updating the world and IHandler&lt;Start&gt; for loading resources.</p>
+        <p>All types deriving from this class should override the <a href="../GameStack/Scene.html#M:GameStack.Scene.Dispose">Scene.Dispose</a> method in order to free resources such as textures and sound assets.</p>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Scene:Docs:Version Information">
@@ -244,7 +243,6 @@
                     </b>(<a href="../GameStack/IGameView.html">IGameView</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -267,7 +265,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Color">System.Drawing.Color</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the clear color used in the default <a href="../GameStack/Scene.html#M:GameStack.Scene.OnDraw(GameStack.FrameArgs)">Scene.OnDraw(FrameArgs)</a> method.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -282,7 +280,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Is the scene actively updating?</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -297,7 +295,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Is the scene actively rendering?</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -309,7 +307,7 @@
                 <td>
                   <i>
                     <a href="../GameStack/IGameView.html">IGameView</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets a reference to the view that the scene is attached to.</td>
               </tr>
             </table>
           </div>
@@ -326,7 +324,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.Add(System.Object)">Add</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>Add an object to the scene, subscribing any relevant event handlers.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -336,7 +334,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.AddHandler``1(System.Action{GameStack.FrameArgs,``0})">AddHandler&lt;T&gt;</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;FrameArgs, T&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;FrameArgs, T&gt;</a>)<blockquote>Add a simple handler to be invoked when an event of the specified type occurs.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -346,7 +344,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.AddMany(System.Object[])">AddMany</a>
-                  </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<blockquote>Add one or more objects to the scene collection.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -356,7 +354,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Should be overridden in derived classes to dispose of resources.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -366,7 +364,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.DrawNow(GameStack.FrameArgs)">DrawNow</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote>Force the scene to draw immediately, for capturing frame output from a scene for use in another draw operation.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -376,7 +374,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.ForEach``1(System.Action{``0})">ForEach&lt;T&gt;</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;T&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;T&gt;</a>)<blockquote>Performs an action of all objects in the scene collection that match the specified type or derive from it.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -386,7 +384,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.OnDestroy(System.Object,System.EventArgs)">OnDestroy</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a>)<blockquote>Called when the attached viewport has been destroyed.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -396,7 +394,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.OnRender(System.Object,GameStack.FrameArgs)">OnRender</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote>Called when the viewport wants the scene to render.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -406,7 +404,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.OnUpdate(System.Object,GameStack.FrameArgs)">OnUpdate</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote>Called when the viewport wants the scene to update.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -416,7 +414,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.Remove(System.Object)">Remove</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>)<blockquote>Remove an object from the scene collection and stop calling its event handlers.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -426,7 +424,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.RemoveHandler``1(System.Action{GameStack.FrameArgs,``0})">RemoveHandler&lt;T&gt;</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;FrameArgs, T&gt;</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;FrameArgs, T&gt;</a>)<blockquote>Removes a simple event handler.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -436,7 +434,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.RemoveMany(System.Object[])">RemoveMany</a>
-                  </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[])<blockquote>Removes one or more objects from the scene collection.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -446,7 +444,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.Start(System.Object,GameStack.Start)">Start</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="../GameStack/Start.html">Start</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>, <a href="../GameStack/Start.html">Start</a>)<blockquote>Can be called explicitly by scene transition managers to activate the scene.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -463,7 +461,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Scene.OnDraw(GameStack.FrameArgs)">OnDraw</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote>Called when the scene should render all of its contents.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -476,7 +474,6 @@
         <h3 id="C:GameStack.Scene(GameStack.IGameView)">Scene Constructor</h3>
         <blockquote id="C:GameStack.Scene(GameStack.IGameView):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Scene</b> (<a href="../GameStack/IGameView.html">IGameView</a> view)</div>
@@ -486,14 +483,11 @@
               <dt>
                 <i>view</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The view to which the scene will be attached.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Scene(GameStack.IGameView):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Scene(GameStack.IGameView):Version Information">
@@ -502,9 +496,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.Add(System.Object)">Add Method</h3>
         <blockquote id="M:GameStack.Scene.Add(System.Object):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Add an object to the scene, subscribing any relevant event handlers.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Add</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> obj)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -513,15 +505,11 @@
               <dt>
                 <i>obj</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>An object of any type to add to the scene collection.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.Add(System.Object):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.Add(System.Object):Remarks">If the object implements <a href="../GameStack/IUpdater.html">GameStack.IUpdater</a> or <a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;T&gt;</a> then the event handlers will automatically be connected.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.Add(System.Object):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -529,9 +517,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.AddHandler``1(System.Action{GameStack.FrameArgs,``0})">AddHandler&lt;T&gt; Generic Method</h3>
         <blockquote id="M:GameStack.Scene.AddHandler``1(System.Action{GameStack.FrameArgs,``0}):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Add a simple handler to be invoked when an event of the specified type occurs.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddHandler&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;FrameArgs, T&gt;</a> action)</div>
           <h4 class="Subsection">Type Parameters</h4>
@@ -540,9 +526,7 @@
               <dt>
                 <i>T</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The type of event to be handled.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Parameters</h4>
@@ -551,14 +535,11 @@
               <dt>
                 <i>action</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The action to take when an event occurs.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Scene.AddHandler``1(System.Action{GameStack.FrameArgs,``0}):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.AddHandler``1(System.Action{GameStack.FrameArgs,``0}):Version Information">
@@ -567,9 +548,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.AddMany(System.Object[])">AddMany Method</h3>
         <blockquote id="M:GameStack.Scene.AddMany(System.Object[]):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Add one or more objects to the scene collection.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddMany</b> (<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] obj)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -578,15 +557,11 @@
               <dt>
                 <i>obj</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>One or more objects to be added. They may be of different types.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.AddMany(System.Object[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.AddMany(System.Object[]):Remarks">See <a href="../GameStack/Scene.html#M:GameStack.Scene.Add(System.Object)">Scene.Add(object)</a>.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.AddMany(System.Object[]):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -594,19 +569,14 @@
         </blockquote>
         <h3 id="P:GameStack.Scene.ClearColor">ClearColor Property</h3>
         <blockquote id="P:GameStack.Scene.ClearColor:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the clear color used in the default <a href="../GameStack/Scene.html#M:GameStack.Scene.OnDraw(GameStack.FrameArgs)">Scene.OnDraw(FrameArgs)</a> method.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Color">System.Drawing.Color</a> <b>ClearColor</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Scene.ClearColor:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Scene.ClearColor:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Scene.ClearColor:Remarks">Defaults to the familiar cornflower blue.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Scene.ClearColor:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -614,15 +584,11 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Scene.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Should be overridden in derived classes to dispose of resources.</p>
           <h2>Syntax</h2>
           <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.Dispose():Remarks">If a suitable implementation is not provided, then resources may leak when switching between scenes.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.Dispose():Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -630,9 +596,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.DrawNow(GameStack.FrameArgs)">DrawNow Method</h3>
         <blockquote id="M:GameStack.Scene.DrawNow(GameStack.FrameArgs):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Force the scene to draw immediately, for capturing frame output from a scene for use in another draw operation.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DrawNow</b> (<a href="../GameStack/FrameArgs.html">FrameArgs</a> e)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -642,14 +606,11 @@
                 <i>e</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.DrawNow(GameStack.FrameArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.DrawNow(GameStack.FrameArgs):Remarks">Normally when this method is called expclitly, a <a href="../GameStack.Graphics/FrameBuffer.html">GameStack.Graphics.FrameBuffer</a> object will be in scope to capture the output.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.DrawNow(GameStack.FrameArgs):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -657,9 +618,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.ForEach``1(System.Action{``0})">ForEach&lt;T&gt; Generic Method</h3>
         <blockquote id="M:GameStack.Scene.ForEach``1(System.Action{``0}):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Performs an action of all objects in the scene collection that match the specified type or derive from it.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ForEach&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`1">Action&lt;T&gt;</a> action)<br /> where T : class, <a href="../GameStack/IUpdater.html">GameStack.IUpdater</a></div>
           <h4 class="Subsection">Type Parameters</h4>
@@ -668,9 +627,7 @@
               <dt>
                 <i>T</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The type on which to filter.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Parameters</h4>
@@ -679,14 +636,11 @@
               <dt>
                 <i>action</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The action to perform on all matching objects.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Scene.ForEach``1(System.Action{``0}):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.ForEach``1(System.Action{``0}):Version Information">
@@ -695,18 +649,14 @@
         </blockquote>
         <h3 id="P:GameStack.Scene.IsUpdating">IsUpdating Property</h3>
         <blockquote id="P:GameStack.Scene.IsUpdating:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Is the scene actively updating?</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsUpdating</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Scene.IsUpdating:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Scene.IsUpdating:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Scene.IsUpdating:Version Information">
@@ -715,18 +665,14 @@
         </blockquote>
         <h3 id="P:GameStack.Scene.IsVisible">IsVisible Property</h3>
         <blockquote id="P:GameStack.Scene.IsVisible:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Is the scene actively rendering?</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsVisible</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Scene.IsVisible:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Scene.IsVisible:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Scene.IsVisible:Version Information">
@@ -735,9 +681,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.OnDestroy(System.Object,System.EventArgs)">OnDestroy Method</h3>
         <blockquote id="M:GameStack.Scene.OnDestroy(System.Object,System.EventArgs):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Called when the attached viewport has been destroyed.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDestroy</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> sender, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a> e)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -747,19 +691,16 @@
                 <i>sender</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>e</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Scene.OnDestroy(System.Object,System.EventArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.OnDestroy(System.Object,System.EventArgs):Version Information">
@@ -768,9 +709,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.OnDraw(GameStack.FrameArgs)">OnDraw Method</h3>
         <blockquote id="M:GameStack.Scene.OnDraw(GameStack.FrameArgs):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Called when the scene should render all of its contents.</p>
           <h2>Syntax</h2>
           <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDraw</b> (<a href="../GameStack/FrameArgs.html">FrameArgs</a> e)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -779,15 +718,11 @@
               <dt>
                 <i>e</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Info for the current frame.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.OnDraw(GameStack.FrameArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.OnDraw(GameStack.FrameArgs):Remarks">When this method is called, the graphics context is guaranteed to be valid.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.OnDraw(GameStack.FrameArgs):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -795,9 +730,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.OnRender(System.Object,GameStack.FrameArgs)">OnRender Method</h3>
         <blockquote id="M:GameStack.Scene.OnRender(System.Object,GameStack.FrameArgs):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Called when the viewport wants the scene to render.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnRender</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> sender, <a href="../GameStack/FrameArgs.html">FrameArgs</a> e)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -807,20 +740,16 @@
                 <i>sender</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>e</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.OnRender(System.Object,GameStack.FrameArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.OnRender(System.Object,GameStack.FrameArgs):Remarks">Overriding this method is not normally needed. It can be used to perform pre-render actions.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.OnRender(System.Object,GameStack.FrameArgs):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -828,9 +757,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.OnUpdate(System.Object,GameStack.FrameArgs)">OnUpdate Method</h3>
         <blockquote id="M:GameStack.Scene.OnUpdate(System.Object,GameStack.FrameArgs):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Called when the viewport wants the scene to update.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnUpdate</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> sender, <a href="../GameStack/FrameArgs.html">FrameArgs</a> e)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -840,20 +767,16 @@
                 <i>sender</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>e</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.OnUpdate(System.Object,GameStack.FrameArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.OnUpdate(System.Object,GameStack.FrameArgs):Remarks">Overriding this method is not normally needed. It can be used to perform pre-update actions before event handlers are called.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.OnUpdate(System.Object,GameStack.FrameArgs):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -861,9 +784,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.Remove(System.Object)">Remove Method</h3>
         <blockquote id="M:GameStack.Scene.Remove(System.Object):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Remove an object from the scene collection and stop calling its event handlers.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Remove</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> obj)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -873,14 +794,11 @@
                 <i>obj</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.Remove(System.Object):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.Remove(System.Object):Remarks">If the object does not exist in the scene collection, this method does nothing.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.Remove(System.Object):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -888,9 +806,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.RemoveHandler``1(System.Action{GameStack.FrameArgs,``0})">RemoveHandler&lt;T&gt; Generic Method</h3>
         <blockquote id="M:GameStack.Scene.RemoveHandler``1(System.Action{GameStack.FrameArgs,``0}):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Removes a simple event handler.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveHandler&lt;T&gt;</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Action`2">Action&lt;FrameArgs, T&gt;</a> action)</div>
           <h4 class="Subsection">Type Parameters</h4>
@@ -900,7 +816,6 @@
                 <i>T</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
@@ -910,14 +825,11 @@
               <dt>
                 <i>action</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The previously added action.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Scene.RemoveHandler``1(System.Action{GameStack.FrameArgs,``0}):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.RemoveHandler``1(System.Action{GameStack.FrameArgs,``0}):Version Information">
@@ -926,9 +838,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.RemoveMany(System.Object[])">RemoveMany Method</h3>
         <blockquote id="M:GameStack.Scene.RemoveMany(System.Object[]):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Removes one or more objects from the scene collection.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveMany</b> (<b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>[] obj)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -937,15 +847,11 @@
               <dt>
                 <i>obj</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>One or more objects to be removed.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.RemoveMany(System.Object[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.RemoveMany(System.Object[]):Remarks">See <a href="../GameStack/Scene.html#M:GameStack.Scene.Remove(System.Object)">Scene.Remove(object)</a></div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.RemoveMany(System.Object[]):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -953,9 +859,7 @@
         </blockquote>
         <h3 id="M:GameStack.Scene.Start(System.Object,GameStack.Start)">Start Method</h3>
         <blockquote id="M:GameStack.Scene.Start(System.Object,GameStack.Start):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Can be called explicitly by scene transition managers to activate the scene.</p>
           <h2>Syntax</h2>
           <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Start</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> sender, <a href="../GameStack/Start.html">Start</a> args)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -965,20 +869,16 @@
                 <i>sender</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>args</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Scene.Start(System.Object,GameStack.Start):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Scene.Start(System.Object,GameStack.Start):Remarks">This method does not normally need to be called or overridden.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Scene.Start(System.Object,GameStack.Start):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -986,18 +886,14 @@
         </blockquote>
         <h3 id="P:GameStack.Scene.View">View Property</h3>
         <blockquote id="P:GameStack.Scene.View:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a reference to the view that the scene is attached to.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack/IGameView.html">IGameView</a> <b>View</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Scene.View:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Scene.View:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Scene.View:Version Information">

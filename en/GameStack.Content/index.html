@@ -1,8 +1,9 @@
 <html>
   <head>
-    <title>GameStack.Android: GameStack.Content</title>
+    <title>GameStack: GameStack.Content</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -188,7 +188,7 @@
   </head>
   <body>
     <div class="CollectionTitle">
-      <a href="../index.html">GameStack.Android</a>
+      <a href="../index.html">GameStack</a>
     </div>
     <h1 class="PageTitle">GameStack.Content Namespace</h1>
     <p class="Summary">
@@ -197,9 +197,7 @@
     </div>
     <div class="Remarks">
       <h2 class="Section"> Namespace</h2>
-      <p>
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </p>
+      <p>Types in this namespace are generally only used by classes that load and control assets. You can use these tools to build custom multi-file asset types based on the standard .tar file format.</p>
       <table class="TypesListing" style="margin-top: 1em">
         <tr>
           <th>Type</th>
@@ -207,41 +205,47 @@
         </tr>
         <tr valign="top">
           <td>
+            <a href="./BinaryEx.html">BinaryEx</a>
+          </td>
+          <td>Static extension methods for reading and writing binary data.</td>
+        </tr>
+        <tr valign="top">
+          <td>
             <a href="./ContentException.html">ContentException</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Thrown whenever an asset fails to load or could not be found.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./ITarHeader.html">ITarHeader</a>
           </td>
           <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+        Metadata and file access for a single entry in a .tar file.
+    </td>
+        </tr>
+        <tr valign="top">
+          <td>
+            <a href="./PngLoader.html">PngLoader</a>
           </td>
+          <td>Static facilities to load PNG files.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./TarException.html">TarException</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Thrown when an error has occurred reading a multi-file TAR asset.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./TarReader.html">TarReader</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Provides basic .tar file reading facilities for asset loaders.</td>
         </tr>
       </table>
     </div>
     <div class="Members">
     </div>
     <hr size="1" />
-    <div class="Copyright">To be added.</div>
+    <div class="Copyright">© 2014 iconmobile LLC</div>
   </body>
 </html>

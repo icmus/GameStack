@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.Texture</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,15 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Texture">Texture  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.Texture:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.Texture:Summary">Manages a texture, or an area of memory containing an image or map used in rendering.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.Texture:Signature">public class  <b>Texture</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.Texture:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Texture:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.Texture:Docs:Remarks">GameStack standardizes on .png files for texture images. The pipeline tools will automatically
+    pre-multiply both stand-alone images and images that are part of a spritesheet.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.Texture:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -243,9 +240,7 @@
                       <a href="#C:GameStack.Graphics.Texture(System.String,GameStack.Graphics.TextureSettings)">Texture</a>
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Create a texture from an asset file.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -258,9 +253,7 @@
                       <a href="#C:GameStack.Graphics.Texture(System.Drawing.Size,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat)">Texture</a>
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Size">System.Drawing.Size</a>, <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Graphics.OpenGL.PixelFormat</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Create a new.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -273,9 +266,7 @@
                       <a href="#C:GameStack.Graphics.Texture(System.IO.Stream,GameStack.Graphics.TextureSettings,System.Boolean)">Texture</a>
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Create a new texture from an image in a stream.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -289,7 +280,6 @@
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Graphics.OpenGL.PixelFormat</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -309,7 +299,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the native texture handle.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -321,7 +311,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the textures settings.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -333,7 +323,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Size">System.Drawing.Size</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the size of the texture in pixels.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -345,7 +335,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the size of a single texel in UV space (1/w, 1/h).</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div>static </div></td>
@@ -357,7 +347,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Get the number of texture instances currently in use.</td>
               </tr>
             </table>
           </div>
@@ -374,7 +364,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Texture.Apply()">Apply</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Activate the texture in the current context.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -384,7 +374,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Texture.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release texture buffer.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -394,7 +384,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Texture.GenerateMipmaps()">GenerateMipmaps</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Generates texture Mipmaps.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -404,7 +394,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Texture.SetData(System.IntPtr)">SetData</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a>)<blockquote>Replace the texture pixel data.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -416,9 +406,7 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="C:GameStack.Graphics.Texture(System.String,GameStack.Graphics.TextureSettings)">Texture Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Texture(System.String,GameStack.Graphics.TextureSettings):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Create a texture from an asset file.</p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Texture</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path, <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a> settings)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -427,20 +415,16 @@
               <dt>
                 <i>path</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Relative asset path to .png.</dd>
               <dt>
                 <i>settings</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.String,GameStack.Graphics.TextureSettings):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.String,GameStack.Graphics.TextureSettings):Version Information">
@@ -449,9 +433,7 @@
         </blockquote>
         <h3 id="C:GameStack.Graphics.Texture(System.Drawing.Size,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat)">Texture Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Texture(System.Drawing.Size,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Create a new.</p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Texture</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Size">System.Drawing.Size</a> size, <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a> settings, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Graphics.OpenGL.PixelFormat</a> format)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -460,27 +442,21 @@
               <dt>
                 <i>size</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Texture size in pixels.</dd>
               <dt>
                 <i>settings</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>format</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.Drawing.Size,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.Drawing.Size,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat):Remarks">A new texture is not guaranteed to be cleared.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.Drawing.Size,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -488,9 +464,7 @@
         </blockquote>
         <h3 id="C:GameStack.Graphics.Texture(System.IO.Stream,GameStack.Graphics.TextureSettings,System.Boolean)">Texture Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Texture(System.IO.Stream,GameStack.Graphics.TextureSettings,System.Boolean):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Create a new texture from an image in a stream.</p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Texture</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a> settings, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> leaveOpen)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -499,26 +473,20 @@
               <dt>
                 <i>stream</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Stream containing .png file image.</dd>
               <dt>
                 <i>settings</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>leaveOpen</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>If true, stream will be left open after image is loaded.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.IO.Stream,GameStack.Graphics.TextureSettings,System.Boolean):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.IO.Stream,GameStack.Graphics.TextureSettings,System.Boolean):Version Information">
@@ -528,7 +496,6 @@
         <h3 id="C:GameStack.Graphics.Texture(System.Int32,System.Int32,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat)">Texture Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Texture(System.Int32,System.Int32,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Texture</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> width, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> height, <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a> settings, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Graphics.OpenGL.PixelFormat</a> format)</div>
@@ -538,33 +505,25 @@
               <dt>
                 <i>width</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Width in pixels.</dd>
               <dt>
                 <i>height</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Height in pixels.</dd>
               <dt>
                 <i>settings</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>format</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.Int32,System.Int32,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.Int32,System.Int32,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat):Remarks">A new texture is not guaranteed to be cleared.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Texture(System.Int32,System.Int32,GameStack.Graphics.TextureSettings,OpenTK.Graphics.OpenGL.PixelFormat):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -572,15 +531,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Texture.Apply()">Apply Method</h3>
         <blockquote id="M:GameStack.Graphics.Texture.Apply():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Activate the texture in the current context.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Apply</b> ()</div>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Texture.Apply():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Texture.Apply():Remarks">Typically only called by internal classes, but more fine-grained control can be gained by flipping textures manually.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Texture.Apply():Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -588,14 +543,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Texture.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Graphics.Texture.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release texture buffer.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Texture.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Texture.Dispose():Version Information">
@@ -604,15 +556,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Texture.GenerateMipmaps()">GenerateMipmaps Method</h3>
         <blockquote id="M:GameStack.Graphics.Texture.GenerateMipmaps():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Generates texture Mipmaps.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GenerateMipmaps</b> ()</div>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Texture.GenerateMipmaps():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Texture.GenerateMipmaps():Remarks">Call this method to generate Mipmaps on a new texture, or to update the Mipmaps after changing texture data. Only applicable when using trilinear filtering.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Texture.GenerateMipmaps():Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -620,18 +568,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Texture.Handle">Handle Property</h3>
         <blockquote id="P:GameStack.Graphics.Texture.Handle:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the native texture handle.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>Handle</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Texture.Handle:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.Handle:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.Handle:Version Information">
@@ -640,9 +584,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Texture.SetData(System.IntPtr)">SetData Method</h3>
         <blockquote id="M:GameStack.Graphics.Texture.SetData(System.IntPtr):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Replace the texture pixel data.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetData</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IntPtr">IntPtr</a> buf)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -651,14 +593,11 @@
               <dt>
                 <i>buf</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Raw data in the pixel format specified when constructed.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Texture.SetData(System.IntPtr):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Texture.SetData(System.IntPtr):Version Information">
@@ -667,18 +606,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Texture.Settings">Settings Property</h3>
         <blockquote id="P:GameStack.Graphics.Texture.Settings:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the textures settings.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/TextureSettings.html">TextureSettings</a> <b>Settings</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Texture.Settings:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.Settings:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.Settings:Version Information">
@@ -687,18 +622,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Texture.Size">Size Property</h3>
         <blockquote id="P:GameStack.Graphics.Texture.Size:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the size of the texture in pixels.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Size">System.Drawing.Size</a> <b>Size</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Texture.Size:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.Size:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.Size:Version Information">
@@ -707,18 +638,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Texture.TexelSize">TexelSize Property</h3>
         <blockquote id="P:GameStack.Graphics.Texture.TexelSize:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the size of a single texel in UV space (1/w, 1/h).</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>TexelSize</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Texture.TexelSize:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.TexelSize:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.TexelSize:Version Information">
@@ -727,18 +654,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Texture.TextureCount">TextureCount Property</h3>
         <blockquote id="P:GameStack.Graphics.Texture.TextureCount:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Get the number of texture instances currently in use.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>TextureCount</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Texture.TextureCount:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.TextureCount:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Texture.TextureCount:Version Information">

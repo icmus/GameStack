@@ -3,6 +3,7 @@
     <title>GameStack.SoundChannel</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.SoundChannel">SoundChannel  Class</h1>
-    <p class="Summary" id="T:GameStack.SoundChannel:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.SoundChannel:Summary">A single sound channel through which one sound at a time may be played.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.SoundChannel:Signature">public class  <b>SoundChannel</b> : <a href="../GameStack/IWaitFor.html">IWaitFor</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.SoundChannel:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.SoundChannel:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.SoundChannel:Docs:Remarks">You may instantiate any number of sound channels, limited only by platform and hardware constraints.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.SoundChannel:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>()</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -264,7 +259,7 @@
                 <td>
                   <i>
                     <a href="../GameStack/SoundEffect.html">SoundEffect</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the sound that is currently playing, or the sound that was last played, or null if no sound has been played.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -276,7 +271,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Is a sound currently playing on this channel?</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -291,7 +286,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the volume level.</td>
               </tr>
             </table>
           </div>
@@ -308,7 +303,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.SoundChannel.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release sound channel resources.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -318,7 +313,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.SoundChannel.Pause()">Pause</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Pause the current sound.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -328,7 +323,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.SoundChannel.Play()">Play</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Start or resume playing the current sound.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -338,7 +333,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.SoundChannel.PlaySound(GameStack.SoundEffect,System.Boolean)">PlaySound</a>
-                  </b>(<a href="../GameStack/SoundEffect.html">SoundEffect</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../GameStack/SoundEffect.html">SoundEffect</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote>Set a new sound effect as the current sound and begin playing.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -348,7 +343,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.SoundChannel.Stop()">Stop</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Stop playing and rewind to the beginning.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -368,7 +363,6 @@
                   </a>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -382,13 +376,11 @@
         <h3 id="C:GameStack.SoundChannel()">SoundChannel Constructor</h3>
         <blockquote id="C:GameStack.SoundChannel():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>SoundChannel</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.SoundChannel():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.SoundChannel():Version Information">
@@ -397,18 +389,14 @@
         </blockquote>
         <h3 id="P:GameStack.SoundChannel.CurrentSound">CurrentSound Property</h3>
         <blockquote id="P:GameStack.SoundChannel.CurrentSound:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the sound that is currently playing, or the sound that was last played, or null if no sound has been played.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack/SoundEffect.html">SoundEffect</a> <b>CurrentSound</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.SoundChannel.CurrentSound:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.SoundChannel.CurrentSound:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.SoundChannel.CurrentSound:Version Information">
@@ -417,14 +405,11 @@
         </blockquote>
         <h3 id="M:GameStack.SoundChannel.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.SoundChannel.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release sound channel resources.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.Dispose():Version Information">
@@ -434,18 +419,15 @@
         <h3 id="M:GameStack.SoundChannel.GameStack#IWaitFor#Check()">GameStack.IWaitFor.Check Method</h3>
         <blockquote id="M:GameStack.SoundChannel.GameStack#IWaitFor#Check():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">
             <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>GameStack.IWaitFor.Check</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.SoundChannel.GameStack#IWaitFor#Check():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.GameStack#IWaitFor#Check():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.GameStack#IWaitFor#Check():Version Information">
@@ -454,19 +436,14 @@
         </blockquote>
         <h3 id="P:GameStack.SoundChannel.IsPlaying">IsPlaying Property</h3>
         <blockquote id="P:GameStack.SoundChannel.IsPlaying:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Is a sound currently playing on this channel?</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsPlaying</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.SoundChannel.IsPlaying:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.SoundChannel.IsPlaying:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.SoundChannel.IsPlaying:Remarks">False if a sound has not been played or if a sound has finished playing.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.SoundChannel.IsPlaying:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -474,14 +451,11 @@
         </blockquote>
         <h3 id="M:GameStack.SoundChannel.Pause()">Pause Method</h3>
         <blockquote id="M:GameStack.SoundChannel.Pause():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Pause the current sound.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Pause</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.Pause():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.Pause():Version Information">
@@ -490,14 +464,11 @@
         </blockquote>
         <h3 id="M:GameStack.SoundChannel.Play()">Play Method</h3>
         <blockquote id="M:GameStack.SoundChannel.Play():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Start or resume playing the current sound.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Play</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.Play():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.Play():Version Information">
@@ -506,9 +477,7 @@
         </blockquote>
         <h3 id="M:GameStack.SoundChannel.PlaySound(GameStack.SoundEffect,System.Boolean)">PlaySound Method</h3>
         <blockquote id="M:GameStack.SoundChannel.PlaySound(GameStack.SoundEffect,System.Boolean):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Set a new sound effect as the current sound and begin playing.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>PlaySound</b> (<a href="../GameStack/SoundEffect.html">SoundEffect</a> effect, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> loop)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -517,20 +486,15 @@
               <dt>
                 <i>effect</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The sound to play.</dd>
               <dt>
                 <i>loop</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>True to loop infinitely.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.PlaySound(GameStack.SoundEffect,System.Boolean):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.PlaySound(GameStack.SoundEffect,System.Boolean):Version Information">
@@ -539,14 +503,11 @@
         </blockquote>
         <h3 id="M:GameStack.SoundChannel.Stop()">Stop Method</h3>
         <blockquote id="M:GameStack.SoundChannel.Stop():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Stop playing and rewind to the beginning.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Stop</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.Stop():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.SoundChannel.Stop():Version Information">
@@ -555,19 +516,13 @@
         </blockquote>
         <h3 id="P:GameStack.SoundChannel.Volume">Volume Property</h3>
         <blockquote id="P:GameStack.SoundChannel.Volume:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the volume level.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Volume</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.SoundChannel.Volume:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="P:GameStack.SoundChannel.Volume:Value">A value between 0 or 1, with 0 being silent and 1 being maximum volume.</blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.SoundChannel.Volume:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.SoundChannel.Volume:Remarks">Setting this property affects only this sound channel. Each sound channel controls its volume independently.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.SoundChannel.Volume:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

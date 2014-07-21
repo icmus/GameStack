@@ -3,6 +3,7 @@
     <title>GameStack.Gui.LayoutSpec</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.LayoutSpec">LayoutSpec  Class</h1>
-    <p class="Summary" id="T:GameStack.Gui.LayoutSpec:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Gui.LayoutSpec:Summary">A layout specification is a collection of lambda functions that control the behavior of a view's layout with respect to its parent.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Gui.LayoutSpec:Signature">public class  <b>LayoutSpec</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.Gui.LayoutSpec:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.LayoutSpec:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Gui.LayoutSpec:Docs:Remarks">Since layout specs use lambdas, they can be continually evaluated whenever a layout refresh is required. This provides an extremely flexible layout system capable of stacking, tiling, grids, and so on.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Gui.LayoutSpec:Docs:Version Information">
         <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>()</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -266,7 +261,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. A generic layout spec that just fills the parent.</td>
               </tr>
             </table>
           </div>
@@ -288,7 +283,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets a function returning the distance in pixels between the bottom of this view and the bottom of its parent.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -303,7 +298,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets a function that returns the view's height.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -318,7 +313,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets a function that returns the distance between the view's left side and the parent's left side.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -333,7 +328,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets a function that returns the distance between the view's right side and the parent's right side.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -348,7 +343,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets a function returning the distance in pixels between the top of this view and the top of its parent.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -363,7 +358,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets a function returning the width of this view.</td>
               </tr>
             </table>
           </div>
@@ -376,13 +371,11 @@
         <h3 id="C:GameStack.Gui.LayoutSpec()">LayoutSpec Constructor</h3>
         <blockquote id="C:GameStack.Gui.LayoutSpec():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>LayoutSpec</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Gui.LayoutSpec():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Gui.LayoutSpec():Version Information">
@@ -391,19 +384,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.LayoutSpec.Bottom">Bottom Property</h3>
         <blockquote id="P:GameStack.Gui.LayoutSpec.Bottom:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets a function returning the distance in pixels between the bottom of this view and the bottom of its parent.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a> <b>Bottom</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.LayoutSpec.Bottom:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Bottom:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Bottom:Remarks">If <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Top">LayoutSpec.Top</a> and <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Height">LayoutSpec.Height</a> are set, this should be omitted.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Bottom:Version Information">
             <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -411,14 +399,11 @@
         </blockquote>
         <h3 id="F:GameStack.Gui.LayoutSpec.Empty">Empty Field</h3>
         <blockquote id="F:GameStack.Gui.LayoutSpec.Empty:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">A generic layout spec that just fills the parent.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static readonly <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a> <b>Empty</b> </div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="F:GameStack.Gui.LayoutSpec.Empty:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="F:GameStack.Gui.LayoutSpec.Empty:Version Information">
@@ -427,19 +412,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.LayoutSpec.Height">Height Property</h3>
         <blockquote id="P:GameStack.Gui.LayoutSpec.Height:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets a function that returns the view's height.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a> <b>Height</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.LayoutSpec.Height:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Height:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Height:Remarks">If <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Top">LayoutSpec.Top</a> and <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Height">LayoutSpec.Height</a> are set, this should be omitted.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Height:Version Information">
             <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -447,19 +427,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.LayoutSpec.Left">Left Property</h3>
         <blockquote id="P:GameStack.Gui.LayoutSpec.Left:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets a function that returns the distance between the view's left side and the parent's left side.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a> <b>Left</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.LayoutSpec.Left:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Left:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Left:Remarks">If <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Right">LayoutSpec.Right</a> and <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Width">LayoutSpec.Width</a> are set, this should be omitted.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Left:Version Information">
             <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -467,19 +442,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.LayoutSpec.Right">Right Property</h3>
         <blockquote id="P:GameStack.Gui.LayoutSpec.Right:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets a function that returns the distance between the view's right side and the parent's right side.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a> <b>Right</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.LayoutSpec.Right:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Right:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Right:Remarks">If <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Left">LayoutSpec.Left</a> and <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Width">LayoutSpec.Width</a> are set, this should be omitted.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Right:Version Information">
             <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -487,19 +457,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.LayoutSpec.Top">Top Property</h3>
         <blockquote id="P:GameStack.Gui.LayoutSpec.Top:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets a function returning the distance in pixels between the top of this view and the top of its parent.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a> <b>Top</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.LayoutSpec.Top:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Top:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Top:Remarks">If <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Bottom">LayoutSpec.Bottom</a> and <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Height">LayoutSpec.Height</a> are set, this should be omitted.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Top:Version Information">
             <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -507,19 +472,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gui.LayoutSpec.Width">Width Property</h3>
         <blockquote id="P:GameStack.Gui.LayoutSpec.Width:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets a function returning the width of this view.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Func`2">Func&lt;System.Drawing.SizeF, float&gt;</a> <b>Width</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gui.LayoutSpec.Width:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Width:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Width:Remarks">If <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Left">LayoutSpec.Left</a> and <a href="../GameStack.Gui/LayoutSpec.html#P:GameStack.Gui.LayoutSpec.Right">LayoutSpec.Right</a> are set, this should be omitted.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gui.LayoutSpec.Width:Version Information">
             <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

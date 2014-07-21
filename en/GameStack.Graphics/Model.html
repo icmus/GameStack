@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.Model</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Model">Model  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.Model:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.Model:Summary">Manages a model asset.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.Model:Signature">public class  <b>Model</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.Model:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Model:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.Model:Docs:Remarks">Model assets are produced by the pipeline tools and have the extension .model.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.Model:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -243,9 +239,7 @@
                       <a href="#C:GameStack.Graphics.Model(System.IO.Stream)">Model</a>
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Load a model asset from a stream.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -259,7 +253,6 @@
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -279,7 +272,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IDictionary`2">IDictionary&lt;string, Animation&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets a collection of named animations included in the model.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -291,7 +284,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IDictionary`2">IDictionary&lt;string, Mesh&gt;</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the collection of named meshes contained in the model.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -303,7 +296,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/Node.html">Node</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the model's root transform node.</td>
               </tr>
             </table>
           </div>
@@ -320,7 +313,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Model.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release the model's buffers and materials.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -330,7 +323,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Model.Draw()">Draw</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Draw the entire model.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -340,7 +333,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draw the entire model.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -350,7 +343,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4@)">Draw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draw the entire model.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -362,9 +355,7 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="C:GameStack.Graphics.Model(System.IO.Stream)">Model Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Model(System.IO.Stream):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Load a model asset from a stream.</p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Model</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -374,14 +365,11 @@
                 <i>stream</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Model(System.IO.Stream):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.Graphics.Model(System.IO.Stream):Remarks">The stream must contain the file image for a .model asset.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Model(System.IO.Stream):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -390,7 +378,6 @@
         <h3 id="C:GameStack.Graphics.Model(System.String)">Model Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Model(System.String):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Model</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path)</div>
@@ -400,14 +387,11 @@
               <dt>
                 <i>path</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Relative asset path to .model file.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Model(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Model(System.String):Version Information">
@@ -416,18 +400,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Model.Animations">Animations Property</h3>
         <blockquote id="P:GameStack.Graphics.Model.Animations:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a collection of named animations included in the model.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IDictionary`2">IDictionary&lt;string, Animation&gt;</a> <b>Animations</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Model.Animations:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Model.Animations:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Model.Animations:Version Information">
@@ -436,14 +416,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Model.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Graphics.Model.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release the model's buffers and materials.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Model.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Model.Dispose():Version Information">
@@ -452,15 +429,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Model.Draw()">Draw Method</h3>
         <blockquote id="M:GameStack.Graphics.Model.Draw():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Draw the entire model.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> ()</div>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw():Remarks">A camera must be in scope. If a material is in scope, it will override all mesh materials.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw():Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -468,9 +441,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4)">Draw Method</h3>
         <blockquote id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Draw the entire model.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -479,15 +450,11 @@
               <dt>
                 <i>world</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>World transform applied to the draw operation.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4):Remarks">A camera must be in scope. If a material is in scope, it will override all mesh materials.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -495,9 +462,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4@)">Draw Method</h3>
         <blockquote id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Draw the entire model.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -506,15 +471,11 @@
               <dt>
                 <i>world</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>World transform applied to the draw operation.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4@):Remarks">A camera must be in scope. If a material is in scope, it will override all mesh materials.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Model.Draw(OpenTK.Matrix4@):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -522,18 +483,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Model.Meshes">Meshes Property</h3>
         <blockquote id="P:GameStack.Graphics.Model.Meshes:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the collection of named meshes contained in the model.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IDictionary`2">IDictionary&lt;string, Mesh&gt;</a> <b>Meshes</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Model.Meshes:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Model.Meshes:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Model.Meshes:Version Information">
@@ -542,19 +499,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Model.RootNode">RootNode Property</h3>
         <blockquote id="P:GameStack.Graphics.Model.RootNode:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the model's root transform node.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Node.html">Node</a> <b>RootNode</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Model.RootNode:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Model.RootNode:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.Model.RootNode:Remarks">The transform node hierarchy applies transforms to meshes and bones. These transforms can be animated over time.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Model.RootNode:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

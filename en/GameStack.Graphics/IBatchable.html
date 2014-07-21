@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.IBatchable</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.IBatchable">IBatchable  Interface</h1>
-    <p class="Summary" id="T:GameStack.Graphics.IBatchable:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.IBatchable:Summary">When implemented by an object, indicates that the object is capable of being used with the <a href="../GameStack.Graphics/Batch.html">GameStack.Graphics.Batch</a> class to batch draw calls.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.IBatchable:Signature">public interface  <b>IBatchable</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.IBatchable:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.IBatchable:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.IBatchable:Docs:Remarks">Any object implementing IBatchable has an additional responsibility: when the object is asked to draw itself, it must check if there is a <a href="../GameStack.Graphics/Batch.html">GameStack.Graphics.Batch</a> is in scope using the <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Find{T}">ScopedObject.Find&lt;T&gt;</a> method. If there is, it must call <a href="../GameStack.Graphics/Batch.html#M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable)">Batch.Draw(IBatchable)</a> instead of drawing itself normally.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.IBatchable:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -238,7 +234,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/IndexBuffer.html">IndexBuffer</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets a reference to the index buffer containing the object's geometry.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -250,7 +246,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the index count of the object's geometry.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -262,7 +258,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the index buffer offset of the object's geometry.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -274,7 +270,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/Material.html">Material</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets a reference to the object's default material.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -286,7 +282,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/VertexBuffer.html">VertexBuffer</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets a reference to the vertex buffer containing the object's geometry.</td>
               </tr>
             </table>
           </div>
@@ -298,18 +294,14 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="P:GameStack.Graphics.IBatchable.IndexBuffer">IndexBuffer Property</h3>
         <blockquote id="P:GameStack.Graphics.IBatchable.IndexBuffer:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a reference to the index buffer containing the object's geometry.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/IndexBuffer.html">IndexBuffer</a> <b>IndexBuffer</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.IBatchable.IndexBuffer:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.IndexBuffer:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.IndexBuffer:Version Information">
@@ -318,18 +310,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.IBatchable.IndexCount">IndexCount Property</h3>
         <blockquote id="P:GameStack.Graphics.IBatchable.IndexCount:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the index count of the object's geometry.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>IndexCount</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.IBatchable.IndexCount:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.IndexCount:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.IndexCount:Version Information">
@@ -338,18 +326,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.IBatchable.IndexOffset">IndexOffset Property</h3>
         <blockquote id="P:GameStack.Graphics.IBatchable.IndexOffset:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the index buffer offset of the object's geometry.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>IndexOffset</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.IBatchable.IndexOffset:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.IndexOffset:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.IndexOffset:Version Information">
@@ -358,18 +342,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.IBatchable.Material">Material Property</h3>
         <blockquote id="P:GameStack.Graphics.IBatchable.Material:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a reference to the object's default material.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Material.html">Material</a> <b>Material</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.IBatchable.Material:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.Material:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.Material:Version Information">
@@ -378,18 +358,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.IBatchable.VertexBuffer">VertexBuffer Property</h3>
         <blockquote id="P:GameStack.Graphics.IBatchable.VertexBuffer:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a reference to the vertex buffer containing the object's geometry.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/VertexBuffer.html">VertexBuffer</a> <b>VertexBuffer</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.IBatchable.VertexBuffer:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.VertexBuffer:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.IBatchable.VertexBuffer:Version Information">

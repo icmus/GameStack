@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.Camera2D</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Camera2D">Camera2D  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.Camera2D:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.Camera2D:Summary">A utility class that adds convenience functions to <a href="../GameStack.Graphics/Camera.html">GameStack.Graphics.Camera</a> specific to 2D scenarios.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.Camera2D:Signature">public class  <b>Camera2D</b> : <a href="../GameStack.Graphics/Camera.html">Camera</a>,	<a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;GameStack.Resize&gt;</a></div>
@@ -217,7 +215,6 @@
     <div class="Remarks" id="T:GameStack.Graphics.Camera2D:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.Camera2D:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.Camera2D:Docs:Version Information">
@@ -244,7 +241,6 @@
                     </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../GameStack.Graphics/Camera2DOrigin.html">Camera2DOrigin</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -264,7 +260,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</td>
+                  </i>. Gets the combined inverse of the view-projection matrix. (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -276,7 +272,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</td>
+                  </i>. Gets the projection matrix. (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -288,7 +284,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</td>
+                  </i>. Gets the view transform. (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</td>
               </tr>
             </table>
           </div>
@@ -305,7 +301,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Camera.html#M:GameStack.Graphics.Camera.Apply(OpenTK.Matrix4@)">Apply</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Apply the camera's transforms to the current shader. (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -345,7 +341,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Camera.html#M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@)">SetTransforms</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Change the camera's transforms. (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -355,7 +351,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Camera.html#M:GameStack.Graphics.Camera.SetTransforms(OpenTK.Matrix4,OpenTK.Matrix4)">SetTransforms</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Change the camera's transforms. (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -365,7 +361,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Camera2D.SetViewSize(OpenTK.Vector2,System.Single)">SetViewSize</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Updates the camera to match a changed view size.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -375,7 +371,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Camera.html#M:GameStack.Graphics.Camera.Unproject(OpenTK.Vector2,System.Single)">Unproject</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a></nobr><blockquote>Unproject a point into world space. (<i>Inherited from <a href="../GameStack.Graphics/Camera.html">Camera</a>.</i>)</blockquote></td>
               </tr>
             </table>
           </div>
@@ -422,7 +418,6 @@
                   </a>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -436,7 +431,6 @@
         <h3 id="C:GameStack.Graphics.Camera2D(OpenTK.Vector2,System.Single,GameStack.Graphics.Camera2DOrigin)">Camera2D Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Camera2D(OpenTK.Vector2,System.Single,GameStack.Graphics.Camera2DOrigin):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Camera2D</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> viewSize, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> depth, <a href="../GameStack.Graphics/Camera2DOrigin.html">Camera2DOrigin</a> origin)</div>
@@ -446,26 +440,19 @@
               <dt>
                 <i>viewSize</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The size of the viewport.</dd>
               <dt>
                 <i>depth</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The maximum depth, or how far the camera can see. Larger values allow for bigger z depth values on UI controls.</dd>
               <dt>
                 <i>origin</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Specifies where on the screen the (0,0) coordinates should be.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Camera2D(OpenTK.Vector2,System.Single,GameStack.Graphics.Camera2DOrigin):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Camera2D(OpenTK.Vector2,System.Single,GameStack.Graphics.Camera2DOrigin):Version Information">
@@ -475,7 +462,6 @@
         <h3 id="M:GameStack.Graphics.Camera2D.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize)">GameStack.IHandler&lt;GameStack.Resize&gt;.Handle Method</h3>
         <blockquote id="M:GameStack.Graphics.Camera2D.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">
@@ -487,19 +473,16 @@
                 <i>frame</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>e</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Camera2D.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Camera2D.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):Version Information">
@@ -508,9 +491,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Camera2D.SetViewSize(OpenTK.Vector2,System.Single)">SetViewSize Method</h3>
         <blockquote id="M:GameStack.Graphics.Camera2D.SetViewSize(OpenTK.Vector2,System.Single):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Updates the camera to match a changed view size.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetViewSize</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> viewSize, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> depth)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -519,21 +500,15 @@
               <dt>
                 <i>viewSize</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new view size.</dd>
               <dt>
                 <i>depth</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The new camera depth.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Camera2D.SetViewSize(OpenTK.Vector2,System.Single):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Camera2D.SetViewSize(OpenTK.Vector2,System.Single):Remarks">View sizes can change when window resize is enabled on desktop and when the orientation changes on mobile devices.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Camera2D.SetViewSize(OpenTK.Vector2,System.Single):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

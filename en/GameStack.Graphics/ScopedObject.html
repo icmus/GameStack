@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.ScopedObject</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.ScopedObject">ScopedObject  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.ScopedObject:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.ScopedObject:Summary">An abstract base class for objects that can be added to and removed from the drawing scope.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.ScopedObject:Signature">public abstract class  <b>ScopedObject</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
@@ -217,7 +215,8 @@
     <div class="Remarks" id="T:GameStack.Graphics.ScopedObject:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.ScopedObject:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+        <p>The drawing scope is a mechanism that GameStack uses to track the various components required to render an object. When a scoped object like a Camera or a Material is in scope, it will be used with drawing operations. In fact, many operations require a camera to be in scope. Some objects can be brought into scope to override defaults. For example, when a material is already in scope, a quad or sprite will use that material instead of its defaults.</p>
+        <p>To bring a scoped object into scope, call <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">ScopedObject.Begin()</a>. This method returns an object implementing <a href="javascript:alert(&quot;Documentation not found.&quot;)">stem.IDisposable</a> which, when disposed, will take the object back out of scope. This makes it possible to use C#'s  keyword like so:<table class="CodeExampleTable"><tr><td><b><font size="-1"> Example</font></b></td></tr><tr><td><pre class="">using(scopedObj.Begin()) { ... }</pre></td></tr></table></p>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.ScopedObject:Docs:Version Information">
@@ -244,7 +243,6 @@
                     </b>()</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -262,7 +260,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -272,7 +270,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release resources.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -282,7 +280,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.ScopedObject.End()">End</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Takes the object out of scope.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -291,7 +289,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.ScopedObject.Find``1()">Find&lt;T&gt;</a>
-                  </b>()<nobr> : <i title="To be added.">T</i></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <i title="The type of scoped object to search for.">T</i></nobr><blockquote>Scans for an object of the specified type in scope and returns it.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -308,7 +306,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Override to perform actions upon entering scope.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -318,7 +316,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Override to perform actions upon leaving scope.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -331,13 +329,11 @@
         <h3 id="C:GameStack.Graphics.ScopedObject()">ScopedObject Constructor</h3>
         <blockquote id="C:GameStack.Graphics.ScopedObject():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>ScopedObject</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.ScopedObject():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.ScopedObject():Version Information">
@@ -346,18 +342,13 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.ScopedObject.Begin()">Begin Method</h3>
         <blockquote id="M:GameStack.Graphics.ScopedObject.Begin():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Brings the object into scope.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a> <b>Begin</b> ()</div>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.ScopedObject.Begin():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.ScopedObject.Begin():Returns">Returns a stub object that, when disposed, takes this object back out of scope.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.Begin():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.Begin():Version Information">
@@ -366,14 +357,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.ScopedObject.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Graphics.ScopedObject.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release resources.</p>
           <h2>Syntax</h2>
           <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.Dispose():Version Information">
@@ -382,15 +370,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.ScopedObject.End()">End Method</h3>
         <blockquote id="M:GameStack.Graphics.ScopedObject.End():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Takes the object out of scope.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>End</b> ()</div>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.End():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.End():Remarks">This is an alternative way of taking the object out of scope. The other pattern is safer to use.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.End():Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -398,30 +382,22 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.ScopedObject.Find``1()">Find&lt;T&gt; Generic Method</h3>
         <blockquote id="M:GameStack.Graphics.ScopedObject.Find``1():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Scans for an object of the specified type in scope and returns it.</p>
           <h2>Syntax</h2>
-          <div class="Signature">public static <i title="To be added.">T</i> <b>Find&lt;T&gt;</b> ()<br /> where T : <a href="../GameStack.Graphics/ScopedObject.html">GameStack.Graphics.ScopedObject</a></div>
+          <div class="Signature">public static <i title="The type of scoped object to search for.">T</i> <b>Find&lt;T&gt;</b> ()<br /> where T : <a href="../GameStack.Graphics/ScopedObject.html">GameStack.Graphics.ScopedObject</a></div>
           <h4 class="Subsection">Type Parameters</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Graphics.ScopedObject.Find``1():Type Parameters">
             <dl>
               <dt>
                 <i>T</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The type of scoped object to search for.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.ScopedObject.Find``1():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.ScopedObject.Find``1():Returns">The found object or null if none was found.</blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.Find``1():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.Find``1():Remarks">If multiple objects of the same type are in scope, this method returns the innermost object (i.e., the one most recently put into scope).</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.Find``1():Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -429,14 +405,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin Method</h3>
         <blockquote id="M:GameStack.Graphics.ScopedObject.OnBegin():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Override to perform actions upon entering scope.</p>
           <h2>Syntax</h2>
           <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.OnBegin():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.OnBegin():Version Information">
@@ -445,14 +418,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd Method</h3>
         <blockquote id="M:GameStack.Graphics.ScopedObject.OnEnd():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Override to perform actions upon leaving scope.</p>
           <h2>Syntax</h2>
           <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnEnd</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.OnEnd():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.ScopedObject.OnEnd():Version Information">

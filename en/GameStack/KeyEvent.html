@@ -3,6 +3,7 @@
     <title>GameStack.KeyEvent</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.KeyEvent">KeyEvent  Class</h1>
-    <p class="Summary" id="T:GameStack.KeyEvent:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.KeyEvent:Summary">An object of this type is added to the queue whenever a keyboard event occurs.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.KeyEvent:Signature">public class  <b>KeyEvent</b> : <a href="../GameStack/EventBase.html">EventBase</a></div>
@@ -217,7 +215,6 @@
     <div class="Remarks" id="T:GameStack.KeyEvent:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.KeyEvent:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.KeyEvent:Docs:Version Information">
@@ -242,7 +239,7 @@
                 <td>
                   <i>
                     <a href="../GameStack/KeyModifier.html">KeyModifier</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets any key modifiers applied during the key event.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -254,7 +251,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the numeric scan code of the key in question.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -266,7 +263,7 @@
                 <td>
                   <i>
                     <a href="../GameStack/KeyState.html">KeyState</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the current state of the key causing the event.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -278,7 +275,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the symbolic character associated with the key.</td>
               </tr>
             </table>
           </div>
@@ -290,18 +287,14 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="P:GameStack.KeyEvent.Modifier">Modifier Property</h3>
         <blockquote id="P:GameStack.KeyEvent.Modifier:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets any key modifiers applied during the key event.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack/KeyModifier.html">KeyModifier</a> <b>Modifier</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.KeyEvent.Modifier:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.KeyEvent.Modifier:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.KeyEvent.Modifier:Version Information">
@@ -310,19 +303,14 @@
         </blockquote>
         <h3 id="P:GameStack.KeyEvent.ScanCode">ScanCode Property</h3>
         <blockquote id="P:GameStack.KeyEvent.ScanCode:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the numeric scan code of the key in question.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ScanCode</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.KeyEvent.ScanCode:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.KeyEvent.ScanCode:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.KeyEvent.ScanCode:Remarks">This is not necessarily an ASCII/ANSI value. Use <a href="../GameStack/KeyEvent.html#P:GameStack.KeyEvent.Symbol">KeyEvent.Symbol</a> when reading character data.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.KeyEvent.ScanCode:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -330,18 +318,14 @@
         </blockquote>
         <h3 id="P:GameStack.KeyEvent.State">State Property</h3>
         <blockquote id="P:GameStack.KeyEvent.State:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the current state of the key causing the event.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack/KeyState.html">KeyState</a> <b>State</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.KeyEvent.State:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.KeyEvent.State:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.KeyEvent.State:Version Information">
@@ -350,19 +334,14 @@
         </blockquote>
         <h3 id="P:GameStack.KeyEvent.Symbol">Symbol Property</h3>
         <blockquote id="P:GameStack.KeyEvent.Symbol:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the symbolic character associated with the key.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Char">char</a> <b>Symbol</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.KeyEvent.Symbol:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.KeyEvent.Symbol:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.KeyEvent.Symbol:Remarks">This property will return a zero character value if the key does not correspond to an ANSI character between 0 and 255.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.KeyEvent.Symbol:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

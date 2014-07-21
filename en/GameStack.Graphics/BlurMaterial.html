@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.BlurMaterial</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.BlurMaterial">BlurMaterial  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.BlurMaterial:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.BlurMaterial:Summary">A material applies a blur affect to anything rendered using it.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.BlurMaterial:Signature">public class  <b>BlurMaterial</b> : <a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.BlurMaterial:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.BlurMaterial:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.BlurMaterial:Docs:Remarks">A horizontal or vertical blur may be applied, but not both at the same time. To blur in both directions, use a <a href="../GameStack.Graphics/FrameBuffer.html">GameStack.Graphics.FrameBuffer</a> object for multi-phase drawing.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.BlurMaterial:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="../GameStack.Graphics/Shader.html">Shader</a>, <a href="../GameStack.Graphics/Texture.html">Texture</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -368,7 +363,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.BlurMaterial.OnBegin()">OnBegin</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -437,7 +432,6 @@
         <h3 id="C:GameStack.Graphics.BlurMaterial(GameStack.Graphics.Shader,GameStack.Graphics.Texture,System.Single)">BlurMaterial Constructor</h3>
         <blockquote id="C:GameStack.Graphics.BlurMaterial(GameStack.Graphics.Shader,GameStack.Graphics.Texture,System.Single):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>BlurMaterial</b> (<a href="../GameStack.Graphics/Shader.html">Shader</a> shader, <a href="../GameStack.Graphics/Texture.html">Texture</a> texture, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> texelSize)</div>
@@ -447,26 +441,19 @@
               <dt>
                 <i>shader</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>If provided, always use the custom shader instead of the default blur shader.</dd>
               <dt>
                 <i>texture</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>When blurring a textured object, a texture must be specified.</dd>
               <dt>
                 <i>texelSize</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The blur shader needs to know the size of each texel so it can calculate blur radius propertly. This is normally equal to 1 / texture width for horizontal blur and 1 / texture height for vertical blur.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.BlurMaterial(GameStack.Graphics.Shader,GameStack.Graphics.Texture,System.Single):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.BlurMaterial(GameStack.Graphics.Shader,GameStack.Graphics.Texture,System.Single):Version Information">
@@ -476,13 +463,11 @@
         <h3 id="M:GameStack.Graphics.BlurMaterial.OnBegin()">OnBegin Method</h3>
         <blockquote id="M:GameStack.Graphics.BlurMaterial.OnBegin():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.BlurMaterial.OnBegin():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.BlurMaterial.OnBegin():Version Information">

@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.BlurShader</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.BlurShader">BlurShader  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.BlurShader:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.BlurShader:Summary">Custom shader providing horizontal and vertical Gaussian blur.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.BlurShader:Signature">public class  <b>BlurShader</b> : <a href="../GameStack.Graphics/Shader.html">Shader</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.BlurShader:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.BlurShader:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.BlurShader:Docs:Remarks">Normally used alongside the <a href="../GameStack.Graphics/BlurMaterial.html">GameStack.Graphics.BlurMaterial</a> material which sets uniforms necessary for the proper operation of this shader.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.BlurShader:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="../GameStack.Graphics/BlurDirection.html">BlurDirection</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -456,7 +451,6 @@
         <h3 id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double)">BlurShader Constructor</h3>
         <blockquote id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>BlurShader</b> (<a href="../GameStack.Graphics/BlurDirection.html">BlurDirection</a> dir, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> kernel, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> sigma)</div>
@@ -466,26 +460,19 @@
               <dt>
                 <i>dir</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The blur direction.</dd>
               <dt>
                 <i>kernel</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The Gaussian blur kernel.</dd>
               <dt>
                 <i>sigma</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The Gaussian blur standard deviation.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):Version Information">

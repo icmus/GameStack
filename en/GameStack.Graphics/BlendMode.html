@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.BlendMode</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.BlendMode">BlendMode  Enum</h1>
-    <p class="Summary" id="T:GameStack.Graphics.BlendMode:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.BlendMode:Summary">Indicates which blend mode to use with <a href="../GameStack.Graphics/MeshMaterial.html">GameStack.Graphics.MeshMaterial</a></p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.BlendMode:Signature">public enum <b>BlendMode</b></div>
@@ -230,17 +228,13 @@
             <td id="F:GameStack.Graphics.BlendMode.Additive">
               <b>Additive</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>Additive blending (src.rgb + dst.rgb).</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.Graphics.BlendMode.Default">
               <b>Default</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>Standard blend mode: src.rgb * src.a + dst.rgb * (1-src.a)</td>
           </tr>
         </table>
       </div>

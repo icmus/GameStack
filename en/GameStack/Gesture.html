@@ -3,6 +3,7 @@
     <title>GameStack.Gesture</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gesture">Gesture  Class</h1>
-    <p class="Summary" id="T:GameStack.Gesture:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Gesture:Summary">Abstract base class for all gesture events.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Gesture:Signature">public abstract class  <b>Gesture</b> : <a href="../GameStack/EventBase.html">EventBase</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Gesture:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gesture:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Gesture:Docs:Remarks">Only supported on platforms with gesture support (currently mobile).</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Gesture:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -228,28 +224,6 @@
 								See Also: Inherited members from
 								<a href="../GameStack/EventBase.html">EventBase</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.Gesture(GameStack.GestureState,OpenTK.Vector2,OpenTK.Vector2)">Gesture</a>
-                    </b>(<a href="../GameStack/GestureState.html">GestureState</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)</div>
-                </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </div>
         <h2 class="Section">Public Properties</h2>
         <div class="SectionBox" id="Public Properties">
           <div class="SubsectionBox">
@@ -264,7 +238,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the normalized viewport point (-1 to 1).</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -276,7 +250,7 @@
                 <td>
                   <i>
                     <a href="../GameStack/GestureState.html">GestureState</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the gestures current state, indicating what phase of the gesture this event indicates.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -288,7 +262,7 @@
                 <td>
                   <i>
                     <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. The viewport point in pixels.</td>
               </tr>
             </table>
           </div>
@@ -298,60 +272,16 @@
     <div class="Members" id="T:GameStack.Gesture:Members">
       <h2 class="Section" id="MemberDetails">Member Details</h2>
       <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Gesture(GameStack.GestureState,OpenTK.Vector2,OpenTK.Vector2)">Gesture Constructor</h3>
-        <blockquote id="C:GameStack.Gesture(GameStack.GestureState,OpenTK.Vector2,OpenTK.Vector2):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>Gesture</b> (<a href="../GameStack/GestureState.html">GestureState</a> state, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> point, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> surfacePoint)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Gesture(GameStack.GestureState,OpenTK.Vector2,OpenTK.Vector2):Parameters">
-            <dl>
-              <dt>
-                <i>state</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-              <dt>
-                <i>point</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-              <dt>
-                <i>surfacePoint</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-            </dl>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Gesture(GameStack.GestureState,OpenTK.Vector2,OpenTK.Vector2):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Gesture(GameStack.GestureState,OpenTK.Vector2,OpenTK.Vector2):Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
         <h3 id="P:GameStack.Gesture.Point">Point Property</h3>
         <blockquote id="P:GameStack.Gesture.Point:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the normalized viewport point (-1 to 1).</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>Point</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gesture.Point:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gesture.Point:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gesture.Point:Remarks">Useful for unprojecting the point into world space.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gesture.Point:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -359,18 +289,14 @@
         </blockquote>
         <h3 id="P:GameStack.Gesture.State">State Property</h3>
         <blockquote id="P:GameStack.Gesture.State:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the gestures current state, indicating what phase of the gesture this event indicates.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack/GestureState.html">GestureState</a> <b>State</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gesture.State:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Gesture.State:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gesture.State:Version Information">
@@ -379,19 +305,15 @@
         </blockquote>
         <h3 id="P:GameStack.Gesture.SurfacePoint">SurfacePoint Property</h3>
         <blockquote id="P:GameStack.Gesture.SurfacePoint:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">The viewport point in pixels.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>SurfacePoint</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Gesture.SurfacePoint:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gesture.SurfacePoint:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Gesture.SurfacePoint:Remarks">When using an orthographic 2D camera with the origin in the lower left, these coordinates
+        will match world coordinates, and are useful for GUI click detection without projecting.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Gesture.SurfacePoint:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

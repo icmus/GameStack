@@ -3,6 +3,7 @@
     <title>GameStack.IUpdater</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.IUpdater">IUpdater  Interface</h1>
-    <p class="Summary" id="T:GameStack.IUpdater:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.IUpdater:Summary">Implemented by any object that wants to receive an update each frame.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.IUpdater:Signature">public interface  <b>IUpdater</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.IUpdater:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.IUpdater:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.IUpdater:Docs:Remarks">This interface applies to any class derived from <a href="../GameStack/Scene.html">GameStack.Scene</a> or that is added to the scene's collection.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.IUpdater:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -236,7 +232,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.IUpdater.Update(GameStack.FrameArgs)">Update</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote>Called once per frame before rendering.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -248,9 +244,7 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="M:GameStack.IUpdater.Update(GameStack.FrameArgs)">Update Method</h3>
         <blockquote id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Called once per frame before rendering.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="../GameStack/FrameArgs.html">FrameArgs</a> e)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -259,15 +253,11 @@
               <dt>
                 <i>e</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Information about the current frame.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Remarks">If your implementation is not called, make sure you've implemented it on your scene class or any object added to the scene collection.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.MeshShader</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.MeshShader">MeshShader  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.MeshShader:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.MeshShader:Summary">Default mesh shader implementing a standard Phong model.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.MeshShader:Signature">public class  <b>MeshShader</b> : <a href="../GameStack.Graphics/Shader.html">Shader</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.MeshShader:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.MeshShader:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.MeshShader:Docs:Remarks">Most commonly used with <a href="../GameStack.Graphics/MeshMaterial.html">GameStack.Graphics.MeshMaterial</a>.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.MeshShader:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="../GameStack.Graphics/MeshShaderSettings.html">MeshShaderSettings</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -264,7 +259,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</td>
+                  </i>. Gets the native shader handle. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div>override </div></td>
@@ -276,7 +271,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the maximum number of supported lights.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -288,7 +283,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</td>
+                  </i>. Gets the maximum number of lights supported by this shader. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</td>
               </tr>
             </table>
           </div>
@@ -305,7 +300,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Attribute(System.String)">Attribute</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>Gets a location from an attribute name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -315,7 +310,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                  </b>()<blockquote>Must be called to release shader resources. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -325,7 +320,7 @@
                 <td colspan="2">
                   <b>
                     <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@)">SetTransforms</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Set the shader's modelview and projection uniforms. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -468,7 +463,6 @@
         <h3 id="C:GameStack.Graphics.MeshShader(GameStack.Graphics.MeshShaderSettings)">MeshShader Constructor</h3>
         <blockquote id="C:GameStack.Graphics.MeshShader(GameStack.Graphics.MeshShaderSettings):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>MeshShader</b> (<a href="../GameStack.Graphics/MeshShaderSettings.html">MeshShaderSettings</a> settings)</div>
@@ -479,13 +473,11 @@
                 <i>settings</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.MeshShader(GameStack.Graphics.MeshShaderSettings):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.MeshShader(GameStack.Graphics.MeshShaderSettings):Version Information">
@@ -494,19 +486,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.MeshShader.MaxNumLights">MaxNumLights Property</h3>
         <blockquote id="P:GameStack.Graphics.MeshShader.MaxNumLights:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the maximum number of supported lights.</p>
           <h2>Syntax</h2>
           <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MaxNumLights</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShader.MaxNumLights:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShader.MaxNumLights:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.MeshShader.MaxNumLights:Remarks">If the caller attempts to use more lights than are supported, the additional lights will be ignored.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.MeshShader.MaxNumLights:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.Mesh</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Mesh">Mesh  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.Mesh:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.Mesh:Summary">Manages a single mesh within a <a href="../GameStack.Graphics/Model.html">GameStack.Graphics.Model</a>.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.Mesh:Signature">public class  <b>Mesh</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.Mesh:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Mesh:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.Mesh:Docs:Remarks">Apps typically do not need to acces objects of this type directly.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.Mesh:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/Material.html">Material</a>, <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[], <a href="../GameStack.Graphics/Bone.html">Bone</a>[])</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -263,7 +258,7 @@
                 </td>
                 <td>
                   <i>
-                    <a href="../GameStack.Graphics/Bone.html">Bone</a>[]</i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                    <a href="../GameStack.Graphics/Bone.html">Bone</a>[]</i>. Gets the bones associated with the mesh, if any.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -275,7 +270,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/Material.html">Material</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the mesh's default material.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -287,7 +282,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the mesh's name as defined in the original model file.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -299,7 +294,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/Node.html">Node</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the transform hierarchy node for this mesh.</td>
               </tr>
             </table>
           </div>
@@ -316,7 +311,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@)">Draw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the mesh.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -329,7 +324,6 @@
         <h3 id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[])">Mesh Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Mesh</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../GameStack.Graphics/Material.html">Material</a> mat, <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> format, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[] vertices, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] indices, <a href="../GameStack.Graphics/Bone.html">Bone</a>[] bones)</div>
@@ -340,44 +334,36 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>mat</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>format</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>vertices</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>indices</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>bones</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Remarks">Typically called by asset loaders.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -385,18 +371,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Mesh.Bones">Bones Property</h3>
         <blockquote id="P:GameStack.Graphics.Mesh.Bones:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the bones associated with the mesh, if any.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Bone.html">Bone</a>[] <b>Bones</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Bones:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Bones:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Bones:Version Information">
@@ -405,9 +387,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@)">Draw Method</h3>
         <blockquote id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Draws the mesh.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -416,15 +396,11 @@
               <dt>
                 <i>world</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Apply this world transform.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Remarks">Uses the mesh's default material unless another material is already in scope. A camera must be in scope.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -432,18 +408,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Mesh.Material">Material Property</h3>
         <blockquote id="P:GameStack.Graphics.Mesh.Material:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the mesh's default material.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Material.html">Material</a> <b>Material</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Material:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Material:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Material:Version Information">
@@ -452,18 +424,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Mesh.Name">Name Property</h3>
         <blockquote id="P:GameStack.Graphics.Mesh.Name:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the mesh's name as defined in the original model file.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Name:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Name:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Name:Version Information">
@@ -472,18 +440,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Mesh.Node">Node Property</h3>
         <blockquote id="P:GameStack.Graphics.Mesh.Node:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the transform hierarchy node for this mesh.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Node.html">Node</a> <b>Node</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Node:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Node:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Node:Version Information">

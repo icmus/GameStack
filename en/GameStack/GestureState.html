@@ -3,6 +3,7 @@
     <title>GameStack.GestureState</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.GestureState">GestureState  Enum</h1>
-    <p class="Summary" id="T:GameStack.GestureState:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.GestureState:Summary">Indicates the phase that a gesture is currently in.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.GestureState:Signature">public enum <b>GestureState</b></div>
@@ -217,7 +215,6 @@
     <div class="Remarks" id="T:GameStack.GestureState:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.GestureState:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Members</h2>
       <div class="SectionBox" id="T:GameStack.GestureState:Docs:Members">
@@ -230,33 +227,25 @@
             <td id="F:GameStack.GestureState.Cancel">
               <b>Cancel</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The gesture has been cancelled. On some systems, this means the touch moved outside a specific area, a hardware button is pressed, or any other action that interrupts a gesture in progress.</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.GestureState.Change">
               <b>Change</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The gesture is continuing and has been updated with new info. For example, a swipe's distance may be updated over time.</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.GestureState.End">
               <b>End</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The gesture has been completed.</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.GestureState.Start">
               <b>Start</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>A new gesture is beginning and may either end successfully or be cancelled.</td>
           </tr>
         </table>
       </div>

@@ -3,6 +3,7 @@
     <title>GameStack.CoroutineList&lt;T&gt;</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,8 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.CoroutineList`1">CoroutineList&lt;T&gt; Generic Class</h1>
-    <p class="Summary" id="T:GameStack.CoroutineList`1:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.CoroutineList`1:Summary">Manages a list of coroutines, stepping them forward on each update. Coroutines can be added or stopped
+    at any time.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.CoroutineList`1:Signature">public class  <b>CoroutineList&lt;T&gt;</b> : <a href="../GameStack/IUpdater.html">IUpdater</a><br /> where T : class</div>
@@ -221,15 +220,11 @@
           <dt>
             <i>T</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>The type of object that will be passed in on each update.</dd>
         </dl>
       </blockquote>
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.CoroutineList`1:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.CoroutineList`1:Docs:Remarks">Commonly used with the <a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> class.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.CoroutineList`1:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -255,7 +250,6 @@
                     </b>()</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -275,7 +269,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the number of active coroutines.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -286,8 +280,8 @@
                 </td>
                 <td>
                   <i>
-                    <i title="To be added.">T</i>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                    <i title="The type of object that will be passed in on each update.">T</i>
+                  </i>. Gets the current update value, if there is one.</td>
               </tr>
             </table>
           </div>
@@ -304,7 +298,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator)">Start</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a>)<nobr> : <a href="../GameStack/ICoroutine.html">ICoroutine</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a>)<nobr> : <a href="../GameStack/ICoroutine.html">ICoroutine</a></nobr><blockquote>Start running a new coroutine.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -314,7 +308,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.CoroutineList`1.Stop(GameStack.ICoroutine)">Stop</a>
-                  </b>(<a href="../GameStack/ICoroutine.html">ICoroutine</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../GameStack/ICoroutine.html">ICoroutine</a>)<blockquote>Stops the given coroutine.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -324,7 +318,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.CoroutineList`1.Update()">Update</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Advances all coroutines one frame, using no arguments.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -334,7 +328,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.CoroutineList`1.Update(`0)">Update</a>
-                  </b>(<i title="To be added.">T</i>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i title="The type of object that will be passed in on each update.">T</i>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Advance all coroutines one frame, using the supplied arguments.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -354,7 +348,6 @@
                   </a>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -368,13 +361,11 @@
         <h3 id="C:GameStack.CoroutineList`1()">CoroutineList Constructor</h3>
         <blockquote id="C:GameStack.CoroutineList`1():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>CoroutineList</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.CoroutineList`1():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.CoroutineList`1():Version Information">
@@ -383,19 +374,14 @@
         </blockquote>
         <h3 id="P:GameStack.CoroutineList`1.Count">Count Property</h3>
         <blockquote id="P:GameStack.CoroutineList`1.Count:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the number of active coroutines.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Count</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.CoroutineList`1.Count:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.CoroutineList`1.Count:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.CoroutineList`1.Count:Remarks">This number increases as coroutines are added and decreases as coroutines are stopped or completed.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.CoroutineList`1.Count:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -403,19 +389,14 @@
         </blockquote>
         <h3 id="P:GameStack.CoroutineList`1.Current">Current Property</h3>
         <blockquote id="P:GameStack.CoroutineList`1.Current:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the current update value, if there is one.</p>
           <h2>Syntax</h2>
-          <div class="Signature">public <i title="To be added.">T</i> <b>Current</b>  { get; }</div>
+          <div class="Signature">public <i title="The type of object that will be passed in on each update.">T</i> <b>Current</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.CoroutineList`1.Current:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.CoroutineList`1.Current:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.CoroutineList`1.Current:Remarks">Most commonly called from inside coroutines to get the current frame information.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.CoroutineList`1.Current:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -424,7 +405,6 @@
         <h3 id="M:GameStack.CoroutineList`1.GameStack#IUpdater#Update(GameStack.FrameArgs)">GameStack.IUpdater.Update Method</h3>
         <blockquote id="M:GameStack.CoroutineList`1.GameStack#IUpdater#Update(GameStack.FrameArgs):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">
@@ -436,13 +416,11 @@
                 <i>e</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.CoroutineList`1.GameStack#IUpdater#Update(GameStack.FrameArgs):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.CoroutineList`1.GameStack#IUpdater#Update(GameStack.FrameArgs):Version Information">
@@ -451,9 +429,7 @@
         </blockquote>
         <h3 id="M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator)">Start Method</h3>
         <blockquote id="M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Start running a new coroutine.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack/ICoroutine.html">ICoroutine</a> <b>Start</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.IEnumerator">IEnumerator</a> ie)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -462,19 +438,13 @@
               <dt>
                 <i>ie</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The enumerator returned from the coroutine's method.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator):Returns">A coroutine reference so that it can be monitored and controlled by the caller.</blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator):Remarks">The coroutine is invoked before this method returns. If the coroutine breaks during that time, it is immediately removed.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.CoroutineList`1.Start(System.Collections.IEnumerator):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -482,9 +452,7 @@
         </blockquote>
         <h3 id="M:GameStack.CoroutineList`1.Stop(GameStack.ICoroutine)">Stop Method</h3>
         <blockquote id="M:GameStack.CoroutineList`1.Stop(GameStack.ICoroutine):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Stops the given coroutine.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Stop</b> (<a href="../GameStack/ICoroutine.html">ICoroutine</a> ic)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -494,14 +462,11 @@
                 <i>ic</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.CoroutineList`1.Stop(GameStack.ICoroutine):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.CoroutineList`1.Stop(GameStack.ICoroutine):Remarks">The coroutine is removed from the list. Coroutines cannot be resumed without being re-added.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.CoroutineList`1.Stop(GameStack.ICoroutine):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -509,18 +474,13 @@
         </blockquote>
         <h3 id="M:GameStack.CoroutineList`1.Update()">Update Method</h3>
         <blockquote id="M:GameStack.CoroutineList`1.Update():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Advances all coroutines one frame, using no arguments.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Update</b> ()</div>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.CoroutineList`1.Update():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.CoroutineList`1.Update():Returns">True if any coroutines ran this frame.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.CoroutineList`1.Update():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.CoroutineList`1.Update():Version Information">
@@ -529,30 +489,22 @@
         </blockquote>
         <h3 id="M:GameStack.CoroutineList`1.Update(`0)">Update Method</h3>
         <blockquote id="M:GameStack.CoroutineList`1.Update(`0):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Advance all coroutines one frame, using the supplied arguments.</p>
           <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Update</b> (<i title="To be added.">T</i> e)</div>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Update</b> (<i title="The type of object that will be passed in on each update.">T</i> e)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.CoroutineList`1.Update(`0):Parameters">
             <dl>
               <dt>
                 <i>e</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Arguments for the current frame.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.CoroutineList`1.Update(`0):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.CoroutineList`1.Update(`0):Returns">True if any coroutines ran this frame.</blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.CoroutineList`1.Update(`0):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.CoroutineList`1.Update(`0):Remarks">Typically used with <a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.CoroutineList`1.Update(`0):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

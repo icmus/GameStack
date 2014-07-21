@@ -3,6 +3,7 @@
     <title>GameStack.TouchState</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.TouchState">TouchState  Enum</h1>
-    <p class="Summary" id="T:GameStack.TouchState:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.TouchState:Summary">Indicates the current phase of an individual touch.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.TouchState:Signature">public enum <b>TouchState</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.TouchState:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.TouchState:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.TouchState:Docs:Remarks">Used with the <a href="../GameStack/Touch.html">GameStack.Touch</a> event type.</div>
       <h2 class="Section">Members</h2>
       <div class="SectionBox" id="T:GameStack.TouchState:Docs:Members">
         <table class="Enumeration">
@@ -230,33 +226,25 @@
             <td id="F:GameStack.TouchState.Cancel">
               <b>Cancel</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The touch has been cancelled; for example, the touch went outside of the view bounds or the user pressed the home button during a touch action.</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.TouchState.End">
               <b>End</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The touch has ended normally (finger up).</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.TouchState.Move">
               <b>Move</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The touch continues at a new position (finger still down).</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.TouchState.Start">
               <b>Start</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The touch has begun (finger down).</td>
           </tr>
         </table>
       </div>

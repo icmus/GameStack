@@ -1,8 +1,9 @@
 <html>
   <head>
-    <title>GameStack.Android: GameStack.Graphics</title>
+    <title>GameStack: GameStack.Graphics</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -188,7 +188,7 @@
   </head>
   <body>
     <div class="CollectionTitle">
-      <a href="../index.html">GameStack.Android</a>
+      <a href="../index.html">GameStack</a>
     </div>
     <h1 class="PageTitle">GameStack.Graphics Namespace</h1>
     <p class="Summary">
@@ -198,7 +198,6 @@
     <div class="Remarks">
       <h2 class="Section"> Namespace</h2>
       <p>
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </p>
       <table class="TypesListing" style="margin-top: 1em">
         <tr>
@@ -209,495 +208,373 @@
           <td>
             <a href="./Animation.html">Animation</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages animations provided by model assets.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./AnimationBehavior.html">AnimationBehavior</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates how an animation should behave when animating a time outside of its defined timeline.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./AnimationChannel.html">AnimationChannel</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a set of transform key frames to be applied to a mesh node when playing an animation.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Atlas.html">Atlas</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a collection of sprites combined together into a single texture (a spritesheet).</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Batch.html">Batch</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Combines multiple draw operations with one material into a single draw operation.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./BitmapChar.html">BitmapChar</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Holds information about a single bitmap character glyph.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./BitmapFont.html">BitmapFont</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a bitmap font asset.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./BlendMode.html">BlendMode</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates which blend mode to use with <a href="../GameStack.Graphics/MeshMaterial.html">GameStack.Graphics.MeshMaterial</a></td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./BlurDirection.html">BlurDirection</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates which direction (horizontal or vertical) an instance of a blur shader should use.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./BlurMaterial.html">BlurMaterial</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A material applies a blur affect to anything rendered using it.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./BlurShader.html">BlurShader</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Custom shader providing horizontal and vertical Gaussian blur.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Bone.html">Bone</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a single bone instance, used with model animation.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Camera.html">Camera</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages projection and view transforms.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Camera2D.html">Camera2D</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A utility class that adds convenience functions to <a href="../GameStack.Graphics/Camera.html">GameStack.Graphics.Camera</a> specific to 2D scenarios.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Camera2DOrigin.html">Camera2DOrigin</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates where the (0,0) coordinate is considered to be with repsect to the camera.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./DirectionalLight.html">DirectionalLight</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Simulates a light at an infinite distance shining rays in parallel in a specified direction.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Drawable2D.html">Drawable2D</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>An abstract base class for any simple 2D drawable object such as a sprite or quad.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./FrameBuffer.html">FrameBuffer</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Provides the ability to render to a surface other than the viewport, allowing apps to use the output of the rendering to apply further effects.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./FrameSequence`1.html">FrameSequence&lt;T&gt;</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Abstract base class for classes providing functionality related to sequences of frames.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./FreeTypeException.html">FreeTypeException</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Thrown whenever there is a problem loading or initializing a font with FreeType.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./FreeTypeFontFace.html">FreeTypeFontFace</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a vector font face for use with the drawing API.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./HorizontalAlignment.html">HorizontalAlignment</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates horizontal alignment for UI elements.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./IBatchable.html">IBatchable</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>When implemented by an object, indicates that the object is capable of being used with the <a href="../GameStack.Graphics/Batch.html">GameStack.Graphics.Batch</a> class to batch draw calls.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./IndexBuffer.html">IndexBuffer</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a native index buffer containing a set of indices into a <a href="../GameStack.Graphics/VertexBuffer.html">GameStack.Graphics.VertexBuffer</a>.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Light.html">Light</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Abstract base class for different types of light.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Lighting.html">Lighting</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Aggregates one or more lights into a lighting rig to be used with drawing operations.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./LightType.html">LightType</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates which type of light a light source provides.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Material.html">Material</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A base class for all materials.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Mesh.html">Mesh</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a single mesh within a <a href="../GameStack.Graphics/Model.html">GameStack.Graphics.Model</a>.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MeshMaterial.html">MeshMaterial</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A material to be used with the default mesh shader.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MeshShader.html">MeshShader</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Default mesh shader implementing a standard Phong model.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MeshShaderSettings.html">MeshShaderSettings</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Controls the limits of a mesh shader instance.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./MeshTextureSlot.html">MeshTextureSlot</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Maps a mesh to one or more textures.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Model.html">Model</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a model asset.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Node.html">Node</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A single node in a model's transform hierarchy.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./PointLight.html">PointLight</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Simulates a light that sends rays in all directions from a specific point.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./PositionKey.html">PositionKey</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Represents a single position key in an animation channel.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Quad.html">Quad</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A convenience type that can render a simple quad using a specified material.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./RotationKey.html">RotationKey</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Represents a single rotation key in an animation channel.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./ScalingKey.html">ScalingKey</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Represents a single scaling key in an animation channel.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./ScopedObject.html">ScopedObject</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>An abstract base class for objects that can be added to and removed from the drawing scope.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Shader.html">Shader</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A base class for custom shaders, providing basic shader compilation, linking and reflection facilities.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./ShaderException.html">ShaderException</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Thrown when there is a problem compiling, linking, or using a shader.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./ShadingMode.html">ShadingMode</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates the desired shading model for a mesh.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./SlicedSprite.html">SlicedSprite</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Extends the <a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a> class and provides the ability to resize a sprite without distorting the edges or border.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./SolidColorShader.html">SolidColorShader</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A convenience shader for drawing solid colors (e.g., for debugging).</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Sprite.html">Sprite</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a single 2D image, often part of a spritesheet.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./SpriteMaterial.html">SpriteMaterial</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>The default material used with <a href="../GameStack.Graphics/Sprite.html">GameStack.Graphics.Sprite</a> and <a href="../GameStack.Graphics/Atlas.html">GameStack.Graphics.Atlas</a>.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./SpriteSequence.html">SpriteSequence</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Utility class for drawing a sequence of sprite images at a specified frame rate.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./SpriteShader.html">SpriteShader</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Default shader for sprites and 2D objects.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./TextBlock.html">TextBlock</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A primitive drawable bitmap text object containing one or more lines of text.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./Texture.html">Texture</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a texture, or an area of memory containing an image or map used in rendering.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./TextureFilter.html">TextureFilter</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates what kind of min or mag filtering a texture uses.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./TextureOperation.html">TextureOperation</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Indicates which texture operation to use when combining texture layers in a mesh material.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./TextureSettings.html">TextureSettings</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Options container for per-texture rendering options.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./TextureSlot.html">TextureSlot</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Maps one or more textures to a mesh.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./TextureWrap.html">TextureWrap</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Controls how textures are wrapped; specifically, how textured are rendered with a U or V coordinate outside the 0..1 range.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./VertexBuffer.html">VertexBuffer</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Manages a collection of vertices in a buffer.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./VertexElement.html">VertexElement</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Represents a single element within a <a href="../GameStack.Graphics/VertexFormat.html">GameStack.Graphics.VertexFormat</a>.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./VertexFormat.html">VertexFormat</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>A vertex format specifies which attributes are passed into the shader for each vertex.</td>
         </tr>
         <tr valign="top">
           <td>
             <a href="./VertexWeight.html">VertexWeight</a>
           </td>
-          <td>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </td>
+          <td>Used with model animations to specify a weight for a vertex or group of vertices.</td>
         </tr>
       </table>
     </div>
     <div class="Members">
     </div>
     <hr size="1" />
-    <div class="Copyright">To be added.</div>
+    <div class="Copyright">© 2014 iconmobile LLC</div>
   </body>
 </html>

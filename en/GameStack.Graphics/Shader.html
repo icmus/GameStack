@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.Shader</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Shader">Shader  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.Shader:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.Shader:Summary">A base class for custom shaders, providing basic shader compilation, linking and reflection facilities.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.Shader:Signature">public abstract class  <b>Shader</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.Shader:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Shader:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.Shader:Docs:Remarks">Shaders are generally used by subtypes of <a href="../GameStack.Graphics/Material.html">GameStack.Graphics.Material</a> and shaders that take custom parameters often have their own material types exposing those parameters as well.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.Shader:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -264,7 +259,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the native shader handle.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -276,19 +271,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>static </div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Shader.ShaderCount">ShaderCount</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the maximum number of lights supported by this shader.</td>
               </tr>
             </table>
           </div>
@@ -305,7 +288,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Attribute(System.String)">Attribute</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>Gets a location from an attribute name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -315,7 +298,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release shader resources.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -325,7 +308,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@)">SetTransforms</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Set the shader's modelview and projection uniforms.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -335,7 +318,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>Gets a uniform location by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -345,7 +328,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -355,7 +338,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4@)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -365,7 +348,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4[])">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>[])<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>[])<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -375,7 +358,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector2)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -385,7 +368,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -395,7 +378,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3@)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -405,7 +388,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3[])">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>[])<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>[])<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -415,7 +398,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -425,7 +408,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4@)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -435,7 +418,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -445,7 +428,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32[])">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[])<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[])<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -455,7 +438,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Graphics.Shader.Uniform(System.String,System.Single)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets a uniform value by name.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -468,7 +451,6 @@
         <h3 id="C:GameStack.Graphics.Shader(System.String,System.String,System.String)">Shader Constructor</h3>
         <blockquote id="C:GameStack.Graphics.Shader(System.String,System.String,System.String):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>Shader</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> vertSource, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> fragSource, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
@@ -478,27 +460,19 @@
               <dt>
                 <i>vertSource</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The vertex shader GLSL source code.</dd>
               <dt>
                 <i>fragSource</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The fragment shader GLSL source code.</dd>
               <dt>
                 <i>name</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The unique name of the shader instance, used for reference tracking.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Shader(System.String,System.String,System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.Graphics.Shader(System.String,System.String,System.String):Remarks">The shader name is used by the reference counting mechanism to determine if two shaders of the same type are in fact identical shaders. One might construct two shaders of the same type but with different parameters, affecting how the shader code is generated. For statically defined shaders, using the default (the type name) is sufficient. Dynamically generated shaders must supply unique names based on any arguments affecting generation of shader code. Failure to do so may result in shader instances being reused when they should not be. Take note and heed this warning before ye descend into madness.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.Shader(System.String,System.String,System.String):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -506,9 +480,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Attribute(System.String)">Attribute Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Attribute(System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a location from an attribute name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Attribute</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -517,18 +489,13 @@
               <dt>
                 <i>name</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Attribute name.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Shader.Attribute(System.String):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Shader.Attribute(System.String):Returns">Attribute location or -1 if not found.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Attribute(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Attribute(System.String):Version Information">
@@ -537,14 +504,11 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release shader resources.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Dispose():Version Information">
@@ -553,18 +517,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Shader.Handle">Handle Property</h3>
         <blockquote id="P:GameStack.Graphics.Shader.Handle:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the native shader handle.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>Handle</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Shader.Handle:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Shader.Handle:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Shader.Handle:Version Information">
@@ -573,19 +533,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.Shader.MaxNumLights">MaxNumLights Property</h3>
         <blockquote id="P:GameStack.Graphics.Shader.MaxNumLights:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the maximum number of lights supported by this shader.</p>
           <h2>Syntax</h2>
           <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MaxNumLights</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Shader.MaxNumLights:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Shader.MaxNumLights:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.Graphics.Shader.MaxNumLights:Remarks">Shaders that do not support the lighting model should return 0.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.Shader.MaxNumLights:Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -593,9 +548,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@)">SetTransforms Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Set the shader's modelview and projection uniforms.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetTransforms</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> modelView, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> projection)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -605,50 +558,24 @@
                 <i>modelView</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>projection</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@):Remarks">This methid is typically only called by <a href="../GameStack.Graphics/Camera.html">GameStack.Graphics.Camera</a> and related classes.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@):Version Information">
             <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
           <hr size="1" />
         </blockquote>
-        <h3 id="P:GameStack.Graphics.Shader.ShaderCount">ShaderCount Property</h3>
-        <blockquote id="P:GameStack.Graphics.Shader.ShaderCount:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ShaderCount</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Shader.ShaderCount:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Shader.ShaderCount:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Shader.ShaderCount:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets a uniform location by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -657,18 +584,13 @@
               <dt>
                 <i>name</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Uniform name.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String):Returns">Uniform location or -1 if not found.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String):Version Information">
@@ -677,9 +599,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -689,19 +609,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4):Version Information">
@@ -710,9 +627,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4@)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -722,19 +637,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4@):Version Information">
@@ -743,9 +655,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4[])">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4[]):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>[] values)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -755,19 +665,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>values</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4[]):Version Information">
@@ -776,9 +683,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector2)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector2):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -788,19 +693,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector2):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector2):Version Information">
@@ -809,9 +711,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -821,19 +721,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3):Version Information">
@@ -842,9 +739,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3@)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -854,19 +749,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3@):Version Information">
@@ -875,9 +767,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3[])">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3[]):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>[] values)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -887,19 +777,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>values</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3[]):Version Information">
@@ -908,9 +795,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -920,19 +805,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4):Version Information">
@@ -941,9 +823,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4@)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -953,19 +833,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4@):Version Information">
@@ -974,9 +851,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -986,19 +861,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32):Version Information">
@@ -1007,9 +879,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32[])">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32[]):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] values)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -1019,19 +889,16 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>values</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32[]):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32[]):Version Information">
@@ -1040,9 +907,7 @@
         </blockquote>
         <h3 id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Single)">Uniform Method</h3>
         <blockquote id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Single):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets a uniform value by name.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Uniform</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> value)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -1052,7 +917,6 @@
                 <i>name</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>value</i>
@@ -1064,7 +928,6 @@
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Single):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Graphics.Shader.Uniform(System.String,System.Single):Version Information">

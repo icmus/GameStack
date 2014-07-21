@@ -3,6 +3,7 @@
     <title>GameStack.WaitForCoroutine</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.WaitForCoroutine">WaitForCoroutine  Class</h1>
-    <p class="Summary" id="T:GameStack.WaitForCoroutine:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.WaitForCoroutine:Summary">When yielded from a coroutine, waits for a specified coroutine to complete before continuing execution.</p>
     <div>
       <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.WaitForCoroutine:Signature">public class  <b>WaitForCoroutine</b> : <a href="../GameStack/WaitForBase.html">WaitForBase</a></div>
+      <div class="Signature" id="T:GameStack.WaitForCoroutine:Signature">public class  <b>WaitForCoroutine</b> : <a href="../GameStack/WaitFor.html">WaitFor</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.WaitForCoroutine:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.WaitForCoroutine:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.WaitForCoroutine:Docs:Remarks">Use with <a href="../GameStack/CoroutineList`1.html">GameStack.CoroutineList&lt;T&gt;</a>.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.WaitForCoroutine:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -226,7 +222,7 @@
       <div class="SectionBox" id="_Members">
         <p>
 								See Also: Inherited members from
-								<a href="../GameStack/WaitForBase.html">WaitForBase</a>.
+								<a href="../GameStack/WaitFor.html">WaitFor</a>.
 							</p>
         <h2 class="Section">Public Constructors</h2>
         <div class="SectionBox" id="Public Constructors">
@@ -244,7 +240,6 @@
                     </b>(<a href="../GameStack/ICoroutine.html">ICoroutine</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -261,7 +256,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.WaitForCoroutine.Check()">Check</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote></blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -270,8 +265,8 @@
                 </td>
                 <td colspan="2">
                   <b>
-                    <a href="../GameStack/WaitForBase.html#M:GameStack.WaitForBase.Check()">Check</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack/WaitForBase.html">WaitForBase</a>.</i>)</blockquote></td>
+                    <a href="../GameStack/WaitFor.html#M:GameStack.WaitFor.Check()">Check</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Checks whether the wait condition is true. (<i>Inherited from <a href="../GameStack/WaitFor.html">WaitFor</a>.</i>)</blockquote></td>
               </tr>
             </table>
           </div>
@@ -284,7 +279,6 @@
         <h3 id="C:GameStack.WaitForCoroutine(GameStack.ICoroutine)">WaitForCoroutine Constructor</h3>
         <blockquote id="C:GameStack.WaitForCoroutine(GameStack.ICoroutine):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>WaitForCoroutine</b> (<a href="../GameStack/ICoroutine.html">ICoroutine</a> co)</div>
@@ -294,14 +288,11 @@
               <dt>
                 <i>co</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The handle of the coroutine to wait for.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.WaitForCoroutine(GameStack.ICoroutine):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.WaitForCoroutine(GameStack.ICoroutine):Version Information">
@@ -311,17 +302,14 @@
         <h3 id="M:GameStack.WaitForCoroutine.Check()">Check Method</h3>
         <blockquote id="M:GameStack.WaitForCoroutine.Check():member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Check</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.WaitForCoroutine.Check():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.WaitForCoroutine.Check():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.WaitForCoroutine.Check():Version Information">

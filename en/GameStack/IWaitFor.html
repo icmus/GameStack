@@ -3,6 +3,7 @@
     <title>GameStack.IWaitFor</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.IWaitFor">IWaitFor  Interface</h1>
-    <p class="Summary" id="T:GameStack.IWaitFor:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.IWaitFor:Summary">Implemented by any type that can be yielded from a coroutine.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.IWaitFor:Signature">public interface  <b>IWaitFor</b></div>
@@ -217,7 +215,6 @@
     <div class="Remarks" id="T:GameStack.IWaitFor:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.IWaitFor:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.IWaitFor:Docs:Version Information">
@@ -236,7 +233,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.IWaitFor.Check()">Check</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Checks the current condition to determine if the coroutine may continue.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -248,18 +245,13 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="M:GameStack.IWaitFor.Check()">Check Method</h3>
         <blockquote id="M:GameStack.IWaitFor.Check():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Checks the current condition to determine if the coroutine may continue.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Check</b> ()</div>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.IWaitFor.Check():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.IWaitFor.Check():Returns">True if the condition has been met and the coroutine should continue, false if the coroutine should remain dormant until the next update.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.IWaitFor.Check():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.IWaitFor.Check():Version Information">

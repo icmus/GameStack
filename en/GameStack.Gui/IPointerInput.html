@@ -3,6 +3,7 @@
     <title>GameStack.Gui.IPointerInput</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.IPointerInput">IPointerInput  Interface</h1>
-    <p class="Summary" id="T:GameStack.Gui.IPointerInput:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Gui.IPointerInput:Summary">Implemented by any UI controls that wish to receive generic pointer events.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Gui.IPointerInput:Signature">public interface  <b>IPointerInput</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.Gui.IPointerInput:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.IPointerInput:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Gui.IPointerInput:Docs:Remarks">Pointers are abstract and take a different form on different platforms. On mobile, a pointer refers to a single tracked touch. On a desktop, the pointer is simply the mouse cursor. Most UI interfaces involve a single pointer.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Gui.IPointerInput:Docs:Version Information">
         <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -236,7 +232,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Gui.IPointerInput.OnPointerDown(OpenTK.Vector2)">OnPointerDown</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote>Handler for pointer down inside view's bounds.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -246,7 +242,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Gui.IPointerInput.OnPointerEnter(OpenTK.Vector2)">OnPointerEnter</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote>Handles pointer entering view bounds.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -256,7 +252,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Gui.IPointerInput.OnPointerExit(OpenTK.Vector2)">OnPointerExit</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote>Handles pointer leaving view bounds.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -266,7 +262,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Gui.IPointerInput.OnPointerMove(OpenTK.Vector2)">OnPointerMove</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote>Handles the pointer moving within view bounds.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -276,7 +272,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Gui.IPointerInput.OnPointerUp(OpenTK.Vector2)">OnPointerUp</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote>Handler for pointer up within view's bounds, or outside of view's bounds if pointer was previously down inside.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -288,9 +284,7 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="M:GameStack.Gui.IPointerInput.OnPointerDown(OpenTK.Vector2)">OnPointerDown Method</h3>
         <blockquote id="M:GameStack.Gui.IPointerInput.OnPointerDown(OpenTK.Vector2):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Handler for pointer down inside view's bounds.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnPointerDown</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -299,14 +293,11 @@
               <dt>
                 <i>where</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Point relative to this view.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerDown(OpenTK.Vector2):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerDown(OpenTK.Vector2):Version Information">
@@ -315,9 +306,7 @@
         </blockquote>
         <h3 id="M:GameStack.Gui.IPointerInput.OnPointerEnter(OpenTK.Vector2)">OnPointerEnter Method</h3>
         <blockquote id="M:GameStack.Gui.IPointerInput.OnPointerEnter(OpenTK.Vector2):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Handles pointer entering view bounds.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnPointerEnter</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -326,14 +315,11 @@
               <dt>
                 <i>where</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Point relative to this view.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerEnter(OpenTK.Vector2):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerEnter(OpenTK.Vector2):Version Information">
@@ -342,9 +328,7 @@
         </blockquote>
         <h3 id="M:GameStack.Gui.IPointerInput.OnPointerExit(OpenTK.Vector2)">OnPointerExit Method</h3>
         <blockquote id="M:GameStack.Gui.IPointerInput.OnPointerExit(OpenTK.Vector2):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Handles pointer leaving view bounds.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnPointerExit</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -353,14 +337,11 @@
               <dt>
                 <i>where</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Point relative to this view.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerExit(OpenTK.Vector2):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerExit(OpenTK.Vector2):Version Information">
@@ -369,9 +350,7 @@
         </blockquote>
         <h3 id="M:GameStack.Gui.IPointerInput.OnPointerMove(OpenTK.Vector2)">OnPointerMove Method</h3>
         <blockquote id="M:GameStack.Gui.IPointerInput.OnPointerMove(OpenTK.Vector2):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Handles the pointer moving within view bounds.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnPointerMove</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -380,14 +359,11 @@
               <dt>
                 <i>where</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Point relative to this view.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerMove(OpenTK.Vector2):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerMove(OpenTK.Vector2):Version Information">
@@ -396,9 +372,7 @@
         </blockquote>
         <h3 id="M:GameStack.Gui.IPointerInput.OnPointerUp(OpenTK.Vector2)">OnPointerUp Method</h3>
         <blockquote id="M:GameStack.Gui.IPointerInput.OnPointerUp(OpenTK.Vector2):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Handler for pointer up within view's bounds, or outside of view's bounds if pointer was previously down inside.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnPointerUp</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -407,14 +381,11 @@
               <dt>
                 <i>where</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Point relative to this view.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerUp(OpenTK.Vector2):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Gui.IPointerInput.OnPointerUp(OpenTK.Vector2):Version Information">

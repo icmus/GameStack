@@ -3,6 +3,7 @@
     <title>GameStack.SoundEffect</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.SoundEffect">SoundEffect  Class</h1>
-    <p class="Summary" id="T:GameStack.SoundEffect:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.SoundEffect:Summary">An individual sound effect asset, commonly a short sound snippet that will be buffered in memory.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.SoundEffect:Signature">public class  <b>SoundEffect</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.SoundEffect:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.SoundEffect:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.SoundEffect:Docs:Remarks">For longer sounds such as music tracks, consider the <a href="../GameStack/StreamingOpusFile.html">GameStack.StreamingOpusFile</a> class. To play sound effects, use the <a href="../GameStack/SoundChannel.html">GameStack.SoundChannel</a> class.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.SoundEffect:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -243,9 +239,7 @@
                       <a href="#C:GameStack.SoundEffect(System.String)">SoundEffect</a>
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Load a sound effect into memory from the asset path specified.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -258,9 +252,7 @@
                       <a href="#C:GameStack.SoundEffect(System.IO.Stream,System.Boolean)">SoundEffect</a>
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
                 </td>
-                <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-                </td>
+                <td>Create a sound effect in memory directly from a stream.</td>
               </tr>
             </table>
           </div>
@@ -279,7 +271,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the length of the sound in seconds.</td>
               </tr>
             </table>
           </div>
@@ -296,7 +288,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.SoundEffect.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release sound buffer.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -308,9 +300,7 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="C:GameStack.SoundEffect(System.String)">SoundEffect Constructor</h3>
         <blockquote id="C:GameStack.SoundEffect(System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Load a sound effect into memory from the asset path specified.</p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>SoundEffect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -319,15 +309,11 @@
               <dt>
                 <i>path</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Relative asset path.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.SoundEffect(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.SoundEffect(System.String):Remarks">File types currently supported are .wav and .opus; no special pipeline processing is required.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.SoundEffect(System.String):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -335,9 +321,7 @@
         </blockquote>
         <h3 id="C:GameStack.SoundEffect(System.IO.Stream,System.Boolean)">SoundEffect Constructor</h3>
         <blockquote id="C:GameStack.SoundEffect(System.IO.Stream,System.Boolean):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Create a sound effect in memory directly from a stream.</p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>SoundEffect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> inputStream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> isOpus)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -346,21 +330,15 @@
               <dt>
                 <i>inputStream</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The stream containing the supported audio format.</dd>
               <dt>
                 <i>isOpus</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>True to use the Ogg Opus file format, false to use WAV.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.SoundEffect(System.IO.Stream,System.Boolean):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="C:GameStack.SoundEffect(System.IO.Stream,System.Boolean):Remarks">Currently supported formats are .wav and .opus.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.SoundEffect(System.IO.Stream,System.Boolean):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -368,14 +346,11 @@
         </blockquote>
         <h3 id="M:GameStack.SoundEffect.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.SoundEffect.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release sound buffer.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.SoundEffect.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.SoundEffect.Dispose():Version Information">
@@ -384,18 +359,14 @@
         </blockquote>
         <h3 id="P:GameStack.SoundEffect.Length">Length Property</h3>
         <blockquote id="P:GameStack.SoundEffect.Length:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the length of the sound in seconds.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Length</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.SoundEffect.Length:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.SoundEffect.Length:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.SoundEffect.Length:Version Information">

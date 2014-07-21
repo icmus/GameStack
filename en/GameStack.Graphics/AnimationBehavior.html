@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.AnimationBehavior</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.AnimationBehavior">AnimationBehavior  Enum</h1>
-    <p class="Summary" id="T:GameStack.Graphics.AnimationBehavior:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.AnimationBehavior:Summary">Indicates how an animation should behave when animating a time outside of its defined timeline.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.AnimationBehavior:Signature">public enum <b>AnimationBehavior</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.AnimationBehavior:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.AnimationBehavior:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.AnimationBehavior:Docs:Remarks">For example, if an animation has a duration of 10 seconds, but we allow the animation to play to 11 seconds, how should the animation behave in that case?</div>
       <h2 class="Section">Members</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.AnimationBehavior:Docs:Members">
         <table class="Enumeration">
@@ -230,33 +226,25 @@
             <td id="F:GameStack.Graphics.AnimationBehavior.Constant">
               <b>Constant</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>Clamp the time to the ending time (or beginning time), effectively freezing the animation.</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.Graphics.AnimationBehavior.Default">
               <b>Default</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>Use the default node transformation (reverts model to original position).</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.Graphics.AnimationBehavior.Linear">
               <b>Linear</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>The value of the nearest two keys is extrapolated (continues current motion).</td>
           </tr>
           <tr valign="top">
             <td id="F:GameStack.Graphics.AnimationBehavior.Repeat">
               <b>Repeat</b>
             </td>
-            <td>
-              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-            </td>
+            <td>Play the animation repeatedly (time mod duration).</td>
           </tr>
         </table>
       </div>

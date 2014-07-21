@@ -3,6 +3,7 @@
     <title>GameStack.StreamingOpusFile</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.StreamingOpusFile">StreamingOpusFile  Class</h1>
-    <p class="Summary" id="T:GameStack.StreamingOpusFile:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.StreamingOpusFile:Summary">A sound asset capable of streaming rather than buffering entirely into memory.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.StreamingOpusFile:Signature">public class  <b>StreamingOpusFile</b> : <a href="../GameStack/IStreamingSound.html">IStreamingSound</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
     </div>
     <div class="Remarks" id="T:GameStack.StreamingOpusFile:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.StreamingOpusFile:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.StreamingOpusFile:Docs:Remarks">This class is ideal for longer audio files such as music because the memory requirements are minimal. Note that this class has higher overhead and latency when starting and stopping, so sounds that are short or are played rapidly should be played with <a href="../GameStack/SoundEffect.html">GameStack.SoundEffect</a> and <a href="../GameStack/SoundChannel.html">GameStack.SoundChannel</a>.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.StreamingOpusFile:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
               <tr valign="top">
@@ -259,7 +254,6 @@
                     </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -279,7 +273,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the number of channels in the audio file.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -291,7 +285,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the relative asset path.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div></div></td>
@@ -303,7 +297,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets the sample rate in samples per second.</td>
               </tr>
             </table>
           </div>
@@ -320,7 +314,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.StreamingOpusFile.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<blockquote>Must be called to release the asset resources.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -330,7 +324,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.StreamingOpusFile.FillBuffer(System.Int32,System.Int16[],System.Int32)">FillBuffer</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>To be used by sound channel implementations.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -340,7 +334,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.StreamingOpusFile.Reset()">Reset</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Reset the position to the beginning.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -353,7 +347,6 @@
         <h3 id="C:GameStack.StreamingOpusFile(System.String)">StreamingOpusFile Constructor</h3>
         <blockquote id="C:GameStack.StreamingOpusFile(System.String):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>StreamingOpusFile</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path)</div>
@@ -363,14 +356,11 @@
               <dt>
                 <i>path</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The relative asset path.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.StreamingOpusFile(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.StreamingOpusFile(System.String):Version Information">
@@ -380,7 +370,6 @@
         <h3 id="C:GameStack.StreamingOpusFile(System.IO.Stream,System.Boolean)">StreamingOpusFile Constructor</h3>
         <blockquote id="C:GameStack.StreamingOpusFile(System.IO.Stream,System.Boolean):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>StreamingOpusFile</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> leaveOpen)</div>
@@ -390,20 +379,15 @@
               <dt>
                 <i>stream</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>A stream contaning an Ogg Opus file image.</dd>
               <dt>
                 <i>leaveOpen</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>True if the stream should be left open after the instance is disposed.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.StreamingOpusFile(System.IO.Stream,System.Boolean):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.StreamingOpusFile(System.IO.Stream,System.Boolean):Version Information">
@@ -412,19 +396,14 @@
         </blockquote>
         <h3 id="P:GameStack.StreamingOpusFile.ChannelCount">ChannelCount Property</h3>
         <blockquote id="P:GameStack.StreamingOpusFile.ChannelCount:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the number of channels in the audio file.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>ChannelCount</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.StreamingOpusFile.ChannelCount:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.StreamingOpusFile.ChannelCount:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.StreamingOpusFile.ChannelCount:Remarks">1 for mono, 2 for stereo.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.StreamingOpusFile.ChannelCount:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -432,14 +411,11 @@
         </blockquote>
         <h3 id="M:GameStack.StreamingOpusFile.Dispose()">Dispose Method</h3>
         <blockquote id="M:GameStack.StreamingOpusFile.Dispose():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Must be called to release the asset resources.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.StreamingOpusFile.Dispose():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.StreamingOpusFile.Dispose():Version Information">
@@ -448,9 +424,7 @@
         </blockquote>
         <h3 id="M:GameStack.StreamingOpusFile.FillBuffer(System.Int32,System.Int16[],System.Int32)">FillBuffer Method</h3>
         <blockquote id="M:GameStack.StreamingOpusFile.FillBuffer(System.Int32,System.Int16[],System.Int32):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">To be used by sound channel implementations.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>FillBuffer</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> sampleCount, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int16">short</a>[] buf, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> bufOffset)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -460,30 +434,24 @@
                 <i>sampleCount</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>buf</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>bufOffset</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.StreamingOpusFile.FillBuffer(System.Int32,System.Int16[],System.Int32):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.StreamingOpusFile.FillBuffer(System.Int32,System.Int16[],System.Int32):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.StreamingOpusFile.FillBuffer(System.Int32,System.Int16[],System.Int32):Remarks">Classes like <a href="javascript:alert(&quot;Documentation not found.&quot;)">GameStack:StreamingSoundChannel</a> will call this method to fill their buffers.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.StreamingOpusFile.FillBuffer(System.Int32,System.Int16[],System.Int32):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -491,18 +459,14 @@
         </blockquote>
         <h3 id="P:GameStack.StreamingOpusFile.Path">Path Property</h3>
         <blockquote id="P:GameStack.StreamingOpusFile.Path:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the relative asset path.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Path</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.StreamingOpusFile.Path:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.StreamingOpusFile.Path:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.StreamingOpusFile.Path:Version Information">
@@ -511,19 +475,14 @@
         </blockquote>
         <h3 id="M:GameStack.StreamingOpusFile.Reset()">Reset Method</h3>
         <blockquote id="M:GameStack.StreamingOpusFile.Reset():member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Reset the position to the beginning.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Reset</b> ()</div>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.StreamingOpusFile.Reset():Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.StreamingOpusFile.Reset():Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.StreamingOpusFile.Reset():Remarks">If the sound is already playing on a channel, it continues playing from the beginning.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.StreamingOpusFile.Reset():Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -531,19 +490,14 @@
         </blockquote>
         <h3 id="P:GameStack.StreamingOpusFile.SampleRate">SampleRate Property</h3>
         <blockquote id="P:GameStack.StreamingOpusFile.SampleRate:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the sample rate in samples per second.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>SampleRate</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.StreamingOpusFile.SampleRate:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.StreamingOpusFile.SampleRate:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="P:GameStack.StreamingOpusFile.SampleRate:Remarks">For example, 44100.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.StreamingOpusFile.SampleRate:Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

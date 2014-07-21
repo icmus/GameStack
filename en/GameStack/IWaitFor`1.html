@@ -3,6 +3,7 @@
     <title>GameStack.IWaitFor&lt;T&gt;</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.IWaitFor`1">IWaitFor&lt;T&gt; Generic Interface</h1>
-    <p class="Summary" id="T:GameStack.IWaitFor`1:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.IWaitFor`1:Summary">Implemented by any type that can be yielded from a coroutine.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.IWaitFor`1:Signature">public interface  <b>IWaitFor&lt;T&gt;</b> : <a href="../GameStack/IWaitFor.html">IWaitFor</a></div>
@@ -221,14 +219,11 @@
           <dt>
             <i>T</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>The type of frame arguments to be passed in. Must match the type used by <a href="../GameStack/CoroutineList`1.html">GameStack.CoroutineList&lt;T&gt;</a>.</dd>
         </dl>
       </blockquote>
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.IWaitFor`1:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.IWaitFor`1:Docs:Version Information">
@@ -247,7 +242,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.IWaitFor`1.Check(`0)">Check</a>
-                  </b>(<i title="To be added.">T</i>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<i title="The type of frame arguments to be passed in. Must match the type used by .">T</i>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Checks whether the condition is true, using the frame arguments as additional input.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -259,29 +254,22 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="M:GameStack.IWaitFor`1.Check(`0)">Check Method</h3>
         <blockquote id="M:GameStack.IWaitFor`1.Check(`0):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Checks whether the condition is true, using the frame arguments as additional input.</p>
           <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Check</b> (<i title="To be added.">T</i> e)</div>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Check</b> (<i title="The type of frame arguments to be passed in. Must match the type used by .">T</i> e)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.IWaitFor`1.Check(`0):Parameters">
             <dl>
               <dt>
                 <i>e</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The current frame arguments.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.IWaitFor`1.Check(`0):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </blockquote>
+          <blockquote class="SubsectionBox" id="M:GameStack.IWaitFor`1.Check(`0):Returns">True if the condition is true and the coroutine should continue executing, false if the coroutine should remain dormant for another frame.</blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.IWaitFor`1.Check(`0):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.IWaitFor`1.Check(`0):Version Information">

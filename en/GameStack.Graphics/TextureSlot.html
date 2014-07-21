@@ -3,6 +3,7 @@
     <title>GameStack.Graphics.TextureSlot</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,18 +207,14 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.TextureSlot">TextureSlot  Class</h1>
-    <p class="Summary" id="T:GameStack.Graphics.TextureSlot:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Graphics.TextureSlot:Summary">Maps one or more textures to a mesh.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Graphics.TextureSlot:Signature">public class  <b>TextureSlot</b></div>
     </div>
     <div class="Remarks" id="T:GameStack.Graphics.TextureSlot:Docs">
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.TextureSlot:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.Graphics.TextureSlot:Docs:Remarks">Typically not used directly by apps, but can be used when dynamically constructing models. See the <a href="../GameStack.Graphics/Model.html">GameStack.Graphics.Model</a> class.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Graphics.TextureSlot:Docs:Version Information">
         <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -244,7 +240,6 @@
                     </b>(<a href="../GameStack.Graphics/Texture.html">Texture</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="../GameStack.Graphics/TextureOperation.html">TextureOperation</a>, <a href="../GameStack.Graphics/TextureWrap.html">TextureWrap</a>, <a href="../GameStack.Graphics/TextureWrap.html">TextureWrap</a>)</div>
                 </td>
                 <td>
-                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
                 </td>
               </tr>
             </table>
@@ -267,7 +262,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the amount that this texture contributes to the final color.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -282,7 +277,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/TextureOperation.html">TextureOperation</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets how this texture is combined with the existing color.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -297,7 +292,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/Texture.html">Texture</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the texture assigned to this slot.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -312,7 +307,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the index of the UV in the UV table.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -327,7 +322,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/TextureWrap.html">TextureWrap</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets a value controlling wrapping in the U direction.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -342,7 +337,7 @@
                 <td>
                   <i>
                     <a href="../GameStack.Graphics/TextureWrap.html">TextureWrap</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets a value controlling wrapping in the V direction.</td>
               </tr>
             </table>
           </div>
@@ -355,7 +350,6 @@
         <h3 id="C:GameStack.Graphics.TextureSlot(GameStack.Graphics.Texture,System.Int32,System.Single,GameStack.Graphics.TextureOperation,GameStack.Graphics.TextureWrap,GameStack.Graphics.TextureWrap)">TextureSlot Constructor</h3>
         <blockquote id="C:GameStack.Graphics.TextureSlot(GameStack.Graphics.Texture,System.Int32,System.Single,GameStack.Graphics.TextureOperation,GameStack.Graphics.TextureWrap,GameStack.Graphics.TextureWrap):member">
           <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </p>
           <h2>Syntax</h2>
           <div class="Signature">public  <b>TextureSlot</b> (<a href="../GameStack.Graphics/Texture.html">Texture</a> texture, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> uvIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> blendFactor, <a href="../GameStack.Graphics/TextureOperation.html">TextureOperation</a> operation, <a href="../GameStack.Graphics/TextureWrap.html">TextureWrap</a> wrapS, <a href="../GameStack.Graphics/TextureWrap.html">TextureWrap</a> wrapT)</div>
@@ -366,43 +360,36 @@
                 <i>texture</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>uvIndex</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>blendFactor</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>operation</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>wrapS</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>wrapT</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.TextureSlot(GameStack.Graphics.Texture,System.Int32,System.Single,GameStack.Graphics.TextureOperation,GameStack.Graphics.TextureWrap,GameStack.Graphics.TextureWrap):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="C:GameStack.Graphics.TextureSlot(GameStack.Graphics.Texture,System.Int32,System.Single,GameStack.Graphics.TextureOperation,GameStack.Graphics.TextureWrap,GameStack.Graphics.TextureWrap):Version Information">
@@ -411,18 +398,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextureSlot.BlendFactor">BlendFactor Property</h3>
         <blockquote id="P:GameStack.Graphics.TextureSlot.BlendFactor:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the amount that this texture contributes to the final color.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>BlendFactor</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextureSlot.BlendFactor:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.BlendFactor:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.BlendFactor:Version Information">
@@ -431,18 +414,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextureSlot.Operation">Operation Property</h3>
         <blockquote id="P:GameStack.Graphics.TextureSlot.Operation:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets how this texture is combined with the existing color.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/TextureOperation.html">TextureOperation</a> <b>Operation</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextureSlot.Operation:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.Operation:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.Operation:Version Information">
@@ -451,18 +430,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextureSlot.Texture">Texture Property</h3>
         <blockquote id="P:GameStack.Graphics.TextureSlot.Texture:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the texture assigned to this slot.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/Texture.html">Texture</a> <b>Texture</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextureSlot.Texture:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.Texture:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.Texture:Version Information">
@@ -471,18 +446,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextureSlot.UVIndex">UVIndex Property</h3>
         <blockquote id="P:GameStack.Graphics.TextureSlot.UVIndex:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the index of the UV in the UV table.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>UVIndex</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextureSlot.UVIndex:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.UVIndex:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.UVIndex:Version Information">
@@ -491,18 +462,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextureSlot.WrapS">WrapS Property</h3>
         <blockquote id="P:GameStack.Graphics.TextureSlot.WrapS:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets a value controlling wrapping in the U direction.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/TextureWrap.html">TextureWrap</a> <b>WrapS</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextureSlot.WrapS:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.WrapS:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.WrapS:Version Information">
@@ -511,18 +478,14 @@
         </blockquote>
         <h3 id="P:GameStack.Graphics.TextureSlot.WrapT">WrapT Property</h3>
         <blockquote id="P:GameStack.Graphics.TextureSlot.WrapT:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets a value controlling wrapping in the V direction.</p>
           <h2>Syntax</h2>
           <div class="Signature">public <a href="../GameStack.Graphics/TextureWrap.html">TextureWrap</a> <b>WrapT</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Graphics.TextureSlot.WrapT:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.WrapT:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Graphics.TextureSlot.WrapT:Version Information">

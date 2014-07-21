@@ -1,0 +1,1288 @@
+<html>
+  <head>
+    <title>GameStack.AndroidGameView</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      body { font-family: 'Helvetica' }
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">GameStack.Android</a> : <a href="index.html">GameStack Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:GameStack.AndroidGameView">Overview</a>
+      </p>
+      <p>
+        <a href="#T:GameStack.AndroidGameView:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:GameStack.AndroidGameView:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:GameStack.AndroidGameView:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:GameStack.AndroidGameView">AndroidGameView  Class</h1>
+    <p class="Summary" id="T:GameStack.AndroidGameView:Summary">
+      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+    </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:GameStack.AndroidGameView:Signature">public class  <b>AndroidGameView</b> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Opengl.GLSurfaceView</a>,	<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Opengl.GLSurfaceView.IRenderer</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.GestureDetector.IOnGestureListener</a>, <a href="../GameStack/IGameView.html">IGameView</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+    </div>
+    <div class="Remarks" id="T:GameStack.AndroidGameView:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:GameStack.AndroidGameView:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:GameStack.AndroidGameView:Docs:Version Information">
+        <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Opengl.GLSurfaceView</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:GameStack.AndroidGameView(Android.Content.Context,System.Int32)">AndroidGameView</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Content.Context</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:GameStack.AndroidGameView.IsPaused">IsPaused</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:GameStack.AndroidGameView.PixelScale">PixelScale</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:GameStack.AndroidGameView.Size">Size</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
+                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.EnableGesture(GameStack.GestureType)">EnableGesture</a>
+                  </b>(<a href="../GameStack/GestureType.html">GestureType</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.LoadFrame()">LoadFrame</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.OnTouchEvent(Android.Views.MotionEvent)">OnTouchEvent</a>
+                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.Pause()">Pause</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.Quit()">Quit</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.RenderNow()">RenderNow</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.Resume()">Resume</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Protected Methods</h2>
+        <div class="SectionBox" id="Protected Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.Dispose(System.Boolean)">Dispose</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.OnDetachedFromWindow()">OnDetachedFromWindow</a>
+                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:GameStack.AndroidGameView.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32)">OnSizeChanged</a>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Events</h2>
+        <div class="SectionBox" id="Public Events">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:GameStack.AndroidGameView.Destroyed">Destroyed</a>
+                  </b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:GameStack.AndroidGameView.Render">Render</a>
+                  </b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="#E:GameStack.AndroidGameView.Update">Update</a>
+                  </b>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Explicitly Implemented Interface Members</h2>
+        <div class="SectionBox" id="Explicitly Implemented Interface Members">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnDown(Android.Views.MotionEvent)">
+                    <b>Android.Views.GestureDetector.IOnGestureListener.OnDown</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnDrawFrame(Javax.Microedition.Khronos.Opengles.IGL10)">
+                    <b>Android.Opengl.GLSurfaceView.IRenderer.OnDrawFrame</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single)">
+                    <b>Android.Views.GestureDetector.IOnGestureListener.OnFling</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnLongPress(Android.Views.MotionEvent)">
+                    <b>Android.Views.GestureDetector.IOnGestureListener.OnLongPress</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnScroll(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single)">
+                    <b>Android.Views.GestureDetector.IOnGestureListener.OnScroll</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnShowPress(Android.Views.MotionEvent)">
+                    <b>Android.Views.GestureDetector.IOnGestureListener.OnShowPress</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnSingleTapUp(Android.Views.MotionEvent)">
+                    <b>Android.Views.GestureDetector.IOnGestureListener.OnSingleTapUp</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceChanged(Javax.Microedition.Khronos.Opengles.IGL10,System.Int32,System.Int32)">
+                    <b>Android.Opengl.GLSurfaceView.IRenderer.OnSurfaceChanged</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <a href="#M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceCreated(Javax.Microedition.Khronos.Opengles.IGL10,Javax.Microedition.Khronos.Egl.EGLConfig)">
+                    <b>Android.Opengl.GLSurfaceView.IRenderer.OnSurfaceCreated</b>
+                  </a>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:GameStack.AndroidGameView:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:GameStack.AndroidGameView(Android.Content.Context,System.Int32)">AndroidGameView Constructor</h3>
+        <blockquote id="C:GameStack.AndroidGameView(Android.Content.Context,System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>AndroidGameView</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Content.Context</a> context, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> maxFramesPerSecond)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:GameStack.AndroidGameView(Android.Content.Context,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>context</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>maxFramesPerSecond</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:GameStack.AndroidGameView(Android.Content.Context,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:GameStack.AndroidGameView(Android.Content.Context,System.Int32):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnDrawFrame(Javax.Microedition.Khronos.Opengles.IGL10)">Android.Opengl.GLSurfaceView+IRenderer.OnDrawFrame Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnDrawFrame(Javax.Microedition.Khronos.Opengles.IGL10):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Android.Opengl.GLSurfaceView+IRenderer.OnDrawFrame</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Javax.Microedition.Khronos.Opengles.IGL10</a> gl)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnDrawFrame(Javax.Microedition.Khronos.Opengles.IGL10):Parameters">
+            <dl>
+              <dt>
+                <i>gl</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnDrawFrame(Javax.Microedition.Khronos.Opengles.IGL10):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnDrawFrame(Javax.Microedition.Khronos.Opengles.IGL10):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceChanged(Javax.Microedition.Khronos.Opengles.IGL10,System.Int32,System.Int32)">Android.Opengl.GLSurfaceView+IRenderer.OnSurfaceChanged Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceChanged(Javax.Microedition.Khronos.Opengles.IGL10,System.Int32,System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Android.Opengl.GLSurfaceView+IRenderer.OnSurfaceChanged</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Javax.Microedition.Khronos.Opengles.IGL10</a> gl, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> width, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> height)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceChanged(Javax.Microedition.Khronos.Opengles.IGL10,System.Int32,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>gl</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>width</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>height</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceChanged(Javax.Microedition.Khronos.Opengles.IGL10,System.Int32,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceChanged(Javax.Microedition.Khronos.Opengles.IGL10,System.Int32,System.Int32):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceCreated(Javax.Microedition.Khronos.Opengles.IGL10,Javax.Microedition.Khronos.Egl.EGLConfig)">Android.Opengl.GLSurfaceView+IRenderer.OnSurfaceCreated Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceCreated(Javax.Microedition.Khronos.Opengles.IGL10,Javax.Microedition.Khronos.Egl.EGLConfig):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Android.Opengl.GLSurfaceView+IRenderer.OnSurfaceCreated</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Javax.Microedition.Khronos.Opengles.IGL10</a> gl, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Javax.Microedition.Khronos.Egl.EGLConfig</a> config)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceCreated(Javax.Microedition.Khronos.Opengles.IGL10,Javax.Microedition.Khronos.Egl.EGLConfig):Parameters">
+            <dl>
+              <dt>
+                <i>gl</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>config</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceCreated(Javax.Microedition.Khronos.Opengles.IGL10,Javax.Microedition.Khronos.Egl.EGLConfig):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Opengl#GLSurfaceView+IRenderer#OnSurfaceCreated(Javax.Microedition.Khronos.Opengles.IGL10,Javax.Microedition.Khronos.Egl.EGLConfig):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnDown(Android.Views.MotionEvent)">Android.Views.GestureDetector+IOnGestureListener.OnDown Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnDown(Android.Views.MotionEvent):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Android.Views.GestureDetector+IOnGestureListener.OnDown</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnDown(Android.Views.MotionEvent):Parameters">
+            <dl>
+              <dt>
+                <i>e</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnDown(Android.Views.MotionEvent):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnDown(Android.Views.MotionEvent):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnDown(Android.Views.MotionEvent):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single)">Android.Views.GestureDetector+IOnGestureListener.OnFling Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Android.Views.GestureDetector+IOnGestureListener.OnFling</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e2, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> velocityX, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> velocityY)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>e1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>e2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>velocityX</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>velocityY</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnFling(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnLongPress(Android.Views.MotionEvent)">Android.Views.GestureDetector+IOnGestureListener.OnLongPress Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnLongPress(Android.Views.MotionEvent):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Android.Views.GestureDetector+IOnGestureListener.OnLongPress</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnLongPress(Android.Views.MotionEvent):Parameters">
+            <dl>
+              <dt>
+                <i>e</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnLongPress(Android.Views.MotionEvent):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnLongPress(Android.Views.MotionEvent):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnScroll(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single)">Android.Views.GestureDetector+IOnGestureListener.OnScroll Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnScroll(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Android.Views.GestureDetector+IOnGestureListener.OnScroll</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e1, <a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e2, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> distanceX, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> distanceY)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnScroll(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):Parameters">
+            <dl>
+              <dt>
+                <i>e1</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>e2</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>distanceX</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>distanceY</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnScroll(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnScroll(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnScroll(Android.Views.MotionEvent,Android.Views.MotionEvent,System.Single,System.Single):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnShowPress(Android.Views.MotionEvent)">Android.Views.GestureDetector+IOnGestureListener.OnShowPress Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnShowPress(Android.Views.MotionEvent):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Android.Views.GestureDetector+IOnGestureListener.OnShowPress</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnShowPress(Android.Views.MotionEvent):Parameters">
+            <dl>
+              <dt>
+                <i>e</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnShowPress(Android.Views.MotionEvent):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnShowPress(Android.Views.MotionEvent):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnSingleTapUp(Android.Views.MotionEvent)">Android.Views.GestureDetector+IOnGestureListener.OnSingleTapUp Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnSingleTapUp(Android.Views.MotionEvent):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">
+            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Android.Views.GestureDetector+IOnGestureListener.OnSingleTapUp</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnSingleTapUp(Android.Views.MotionEvent):Parameters">
+            <dl>
+              <dt>
+                <i>e</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnSingleTapUp(Android.Views.MotionEvent):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnSingleTapUp(Android.Views.MotionEvent):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Android#Views#GestureDetector+IOnGestureListener#OnSingleTapUp(Android.Views.MotionEvent):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:GameStack.AndroidGameView.Destroyed">Destroyed Event</h3>
+        <blockquote id="E:GameStack.AndroidGameView.Destroyed:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler">EventHandler</a> <b>Destroyed</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="E:GameStack.AndroidGameView.Destroyed:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="E:GameStack.AndroidGameView.Destroyed:Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Dispose(System.Boolean)">Dispose Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Dispose(System.Boolean):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposing)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.Dispose(System.Boolean):Parameters">
+            <dl>
+              <dt>
+                <i>disposing</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Dispose(System.Boolean):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Dispose(System.Boolean):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.EnableGesture(GameStack.GestureType)">EnableGesture Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.EnableGesture(GameStack.GestureType):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnableGesture</b> (<a href="../GameStack/GestureType.html">GestureType</a> type)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.EnableGesture(GameStack.GestureType):Parameters">
+            <dl>
+              <dt>
+                <i>type</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.EnableGesture(GameStack.GestureType):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.EnableGesture(GameStack.GestureType):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:GameStack.AndroidGameView.IsPaused">IsPaused Property</h3>
+        <blockquote id="P:GameStack.AndroidGameView.IsPaused:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsPaused</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:GameStack.AndroidGameView.IsPaused:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:GameStack.AndroidGameView.IsPaused:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:GameStack.AndroidGameView.IsPaused:Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.LoadFrame()">LoadFrame Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.LoadFrame():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoadFrame</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.LoadFrame():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.LoadFrame():Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.OnDetachedFromWindow()">OnDetachedFromWindow Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.OnDetachedFromWindow():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDetachedFromWindow</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.OnDetachedFromWindow():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.OnDetachedFromWindow():Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32)">OnSizeChanged Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnSizeChanged</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> w, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> h, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> oldw, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> oldh)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32):Parameters">
+            <dl>
+              <dt>
+                <i>w</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>h</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>oldw</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+              <dt>
+                <i>oldh</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.OnSizeChanged(System.Int32,System.Int32,System.Int32,System.Int32):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.OnTouchEvent(Android.Views.MotionEvent)">OnTouchEvent Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.OnTouchEvent(Android.Views.MotionEvent):member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>OnTouchEvent</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">Android.Views.MotionEvent</a> e)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.OnTouchEvent(Android.Views.MotionEvent):Parameters">
+            <dl>
+              <dt>
+                <i>e</i>
+              </dt>
+              <dd>
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </dd>
+            </dl>
+          </blockquote>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:GameStack.AndroidGameView.OnTouchEvent(Android.Views.MotionEvent):Returns">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.OnTouchEvent(Android.Views.MotionEvent):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.OnTouchEvent(Android.Views.MotionEvent):Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Pause()">Pause Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Pause():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Pause</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Pause():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Pause():Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:GameStack.AndroidGameView.PixelScale">PixelScale Property</h3>
+        <blockquote id="P:GameStack.AndroidGameView.PixelScale:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>PixelScale</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:GameStack.AndroidGameView.PixelScale:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:GameStack.AndroidGameView.PixelScale:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:GameStack.AndroidGameView.PixelScale:Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Quit()">Quit Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Quit():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Quit</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Quit():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Quit():Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:GameStack.AndroidGameView.Render">Render Event</h3>
+        <blockquote id="E:GameStack.AndroidGameView.Render:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;FrameArgs&gt;</a> <b>Render</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="E:GameStack.AndroidGameView.Render:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="E:GameStack.AndroidGameView.Render:Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.RenderNow()">RenderNow Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.RenderNow():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RenderNow</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.RenderNow():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.RenderNow():Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:GameStack.AndroidGameView.Resume()">Resume Method</h3>
+        <blockquote id="M:GameStack.AndroidGameView.Resume():member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Resume</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Resume():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:GameStack.AndroidGameView.Resume():Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:GameStack.AndroidGameView.Size">Size Property</h3>
+        <blockquote id="P:GameStack.AndroidGameView.Size:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>Size</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:GameStack.AndroidGameView.Size:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:GameStack.AndroidGameView.Size:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:GameStack.AndroidGameView.Size:Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="E:GameStack.AndroidGameView.Update">Update Event</h3>
+        <blockquote id="E:GameStack.AndroidGameView.Update:member">
+          <p class="Summary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </p>
+          <h2>Syntax</h2>
+          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;FrameArgs&gt;</a> <b>Update</b> </div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="E:GameStack.AndroidGameView.Update:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="E:GameStack.AndroidGameView.Update:Version Information">
+            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Android (in GameStack.Android.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

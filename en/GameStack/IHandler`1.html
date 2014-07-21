@@ -3,6 +3,7 @@
     <title>GameStack.IHandler&lt;T&gt;</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.IHandler`1">IHandler&lt;T&gt; Generic Interface</h1>
-    <p class="Summary" id="T:GameStack.IHandler`1:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.IHandler`1:Summary">Any class can implement this interface to receive the specified type of event.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.IHandler`1:Signature">public interface  <b>IHandler&lt;T&gt;</b><br /> where T : <a href="../GameStack/EventBase.html">GameStack.EventBase</a></div>
@@ -221,15 +219,11 @@
           <dt>
             <i>T</i>
           </dt>
-          <dd>
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </dd>
+          <dd>The type of event to be handled.</dd>
         </dl>
       </blockquote>
       <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.IHandler`1:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-      </div>
+      <div class="SectionBox" id="T:GameStack.IHandler`1:Docs:Remarks">Scenes can implement this interface, as well as objects that are added to a scene collection. When added, any object that has an interface of any specific type will handle events of that type that come through the queue.</div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.IHandler`1:Docs:Version Information">
         <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -247,7 +241,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.IHandler`1.Handle(GameStack.FrameArgs,`0)">Handle</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>, <i title="To be added.">T</i>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>, <i title="The type of event to be handled.">T</i>)<blockquote>Called when an event of type T is dequeued from the event queue.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -259,32 +253,24 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="M:GameStack.IHandler`1.Handle(GameStack.FrameArgs,`0)">Handle Method</h3>
         <blockquote id="M:GameStack.IHandler`1.Handle(GameStack.FrameArgs,`0):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Called when an event of type T is dequeued from the event queue.</p>
           <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Handle</b> (<a href="../GameStack/FrameArgs.html">FrameArgs</a> frame, <i title="To be added.">T</i> e)</div>
+          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Handle</b> (<a href="../GameStack/FrameArgs.html">FrameArgs</a> frame, <i title="The type of event to be handled.">T</i> e)</div>
           <h4 class="Subsection">Parameters</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.IHandler`1.Handle(GameStack.FrameArgs,`0):Parameters">
             <dl>
               <dt>
                 <i>frame</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Information about the current frame.</dd>
               <dt>
                 <i>e</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Arguments specific to the event.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.IHandler`1.Handle(GameStack.FrameArgs,`0):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.IHandler`1.Handle(GameStack.FrameArgs,`0):Remarks">If your implementation is not being called, ensure that it's either implemented on your scene class or on an object added to the scene collection.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.IHandler`1.Handle(GameStack.FrameArgs,`0):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

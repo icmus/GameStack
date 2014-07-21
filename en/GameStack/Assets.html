@@ -3,6 +3,7 @@
     <title>GameStack.Assets</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
+      body { font-family: 'Helvetica' }
       a { text-decoration: none }
 
       div.SideBar {
@@ -171,7 +172,6 @@
         padding: 1em;
       }
     </style>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
     <script type="text/JavaScript">
       function toggle_display (block) {
         var w = document.getElementById (block);
@@ -207,9 +207,7 @@
       </p>
     </div>
     <h1 class="PageTitle" id="T:GameStack.Assets">Assets  Class</h1>
-    <p class="Summary" id="T:GameStack.Assets:Summary">
-      <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-    </p>
+    <p class="Summary" id="T:GameStack.Assets:Summary">Static class for accessing assets on the current platform.</p>
     <div>
       <h2>Syntax</h2>
       <div class="Signature" id="T:GameStack.Assets:Signature">public static class  <b>Assets</b></div>
@@ -217,7 +215,6 @@
     <div class="Remarks" id="T:GameStack.Assets:Docs">
       <h2 class="Section">Remarks</h2>
       <div class="SectionBox" id="T:GameStack.Assets:Docs:Remarks">
-        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
       </div>
       <h2 class="Section">Requirements</h2>
       <div class="SectionBox" id="T:GameStack.Assets:Docs:Version Information">
@@ -242,7 +239,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the app name to be used when storing user data.</td>
               </tr>
               <tr valign="top">
                 <td>[read-only]<div>static </div></td>
@@ -254,7 +251,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the organization name to be used when storing user data.</td>
               </tr>
               <tr valign="top">
                 <td>
@@ -268,7 +265,7 @@
                 <td>
                   <i>
                     <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span></td>
+                  </i>. Gets or sets the current pixel scaling value (e.g., 2f for retina).</td>
               </tr>
             </table>
           </div>
@@ -284,7 +281,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Assets.ResolveAddonStream(System.String,System.IO.FileMode,System.IO.FileAccess)">ResolveAddonStream</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileMode">System.IO.FileMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileAccess">System.IO.FileAccess</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileMode">System.IO.FileMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileAccess">System.IO.FileAccess</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>Resolves an add-on path into a stream for reading.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -293,7 +290,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Assets.ResolveStream(System.String)">ResolveStream</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>Resolves a named asset into a stream for reading.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -302,7 +299,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Assets.ResolveUserPath(System.String)">ResolveUserPath</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>Gets the user data folder or a path to a sub-folder inside the user data folder.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -311,7 +308,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Assets.ResolveUserStream(System.String,System.IO.FileMode,System.IO.FileAccess)">ResolveUserStream</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileMode">System.IO.FileMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileAccess">System.IO.FileAccess</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileMode">System.IO.FileMode</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileAccess">System.IO.FileAccess</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>Resolves a user data file by relative path.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -320,7 +317,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Assets.SetAppInfo(System.String,System.String)">SetAppInfo</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Sets the app and org names for the currently running app.</blockquote></td>
               </tr>
               <tr valign="top">
                 <td>
@@ -329,7 +326,7 @@
                 <td colspan="2">
                   <b>
                     <a href="#M:GameStack.Assets.SetKey(System.String,System.String)">SetKey</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Sets the encryption key and IV to be used with encrypted assets.</blockquote></td>
               </tr>
             </table>
           </div>
@@ -341,18 +338,14 @@
       <div class="SectionBox" id="_MemberDetails">
         <h3 id="P:GameStack.Assets.AppName">AppName Property</h3>
         <blockquote id="P:GameStack.Assets.AppName:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the app name to be used when storing user data.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>AppName</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Assets.AppName:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Assets.AppName:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Assets.AppName:Version Information">
@@ -361,18 +354,14 @@
         </blockquote>
         <h3 id="P:GameStack.Assets.OrgName">OrgName Property</h3>
         <blockquote id="P:GameStack.Assets.OrgName:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the organization name to be used when storing user data.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>OrgName</b>  { get; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Assets.OrgName:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Assets.OrgName:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Assets.OrgName:Version Information">
@@ -381,18 +370,14 @@
         </blockquote>
         <h3 id="P:GameStack.Assets.PixelScale">PixelScale Property</h3>
         <blockquote id="P:GameStack.Assets.PixelScale:member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets or sets the current pixel scaling value (e.g., 2f for retina).</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>PixelScale</b>  { get; set; }</div>
           <h4 class="Subsection">Value</h4>
           <blockquote class="SubsectionBox" id="P:GameStack.Assets.PixelScale:Value">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="P:GameStack.Assets.PixelScale:Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="P:GameStack.Assets.PixelScale:Version Information">
@@ -401,9 +386,7 @@
         </blockquote>
         <h3 id="M:GameStack.Assets.ResolveAddonStream(System.String,System.IO.FileMode,System.IO.FileAccess)">ResolveAddonStream Method</h3>
         <blockquote id="M:GameStack.Assets.ResolveAddonStream(System.String,System.IO.FileMode,System.IO.FileAccess):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Resolves an add-on path into a stream for reading.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>ResolveAddonStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileMode">System.IO.FileMode</a> mode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileAccess">System.IO.FileAccess</a> access)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -413,30 +396,24 @@
                 <i>path</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>mode</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>access</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Assets.ResolveAddonStream(System.String,System.IO.FileMode,System.IO.FileAccess):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Assets.ResolveAddonStream(System.String,System.IO.FileMode,System.IO.FileAccess):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Assets.ResolveAddonStream(System.String,System.IO.FileMode,System.IO.FileAccess):Remarks">Only applicable on platforms with in-app add-on support.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Assets.ResolveAddonStream(System.String,System.IO.FileMode,System.IO.FileAccess):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -444,9 +421,7 @@
         </blockquote>
         <h3 id="M:GameStack.Assets.ResolveStream(System.String)">ResolveStream Method</h3>
         <blockquote id="M:GameStack.Assets.ResolveStream(System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Resolves a named asset into a stream for reading.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>ResolveStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -455,18 +430,14 @@
               <dt>
                 <i>path</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The name of the asset relative to the base asset path.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Assets.ResolveStream(System.String):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Assets.ResolveStream(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Assets.ResolveStream(System.String):Version Information">
@@ -475,9 +446,7 @@
         </blockquote>
         <h3 id="M:GameStack.Assets.ResolveUserPath(System.String)">ResolveUserPath Method</h3>
         <blockquote id="M:GameStack.Assets.ResolveUserPath(System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Gets the user data folder or a path to a sub-folder inside the user data folder.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ResolveUserPath</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -486,18 +455,14 @@
               <dt>
                 <i>path</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>A relative path inside the user data folder, or an empty string to return the user data root.</dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Assets.ResolveUserPath(System.String):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Assets.ResolveUserPath(System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Assets.ResolveUserPath(System.String):Version Information">
@@ -506,9 +471,7 @@
         </blockquote>
         <h3 id="M:GameStack.Assets.ResolveUserStream(System.String,System.IO.FileMode,System.IO.FileAccess)">ResolveUserStream Method</h3>
         <blockquote id="M:GameStack.Assets.ResolveUserStream(System.String,System.IO.FileMode,System.IO.FileAccess):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Resolves a user data file by relative path.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>ResolveUserStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileMode">System.IO.FileMode</a> mode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.FileAccess">System.IO.FileAccess</a> access)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -517,30 +480,24 @@
               <dt>
                 <i>path</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>Relative path to user data file.</dd>
               <dt>
                 <i>mode</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>access</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h4 class="Subsection">Returns</h4>
           <blockquote class="SubsectionBox" id="M:GameStack.Assets.ResolveUserStream(System.String,System.IO.FileMode,System.IO.FileAccess):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </blockquote>
           <h2 class="Section">Remarks</h2>
           <div class="SectionBox" id="M:GameStack.Assets.ResolveUserStream(System.String,System.IO.FileMode,System.IO.FileAccess):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
           </div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Assets.ResolveUserStream(System.String,System.IO.FileMode,System.IO.FileAccess):Version Information">
@@ -549,9 +506,7 @@
         </blockquote>
         <h3 id="M:GameStack.Assets.SetAppInfo(System.String,System.String)">SetAppInfo Method</h3>
         <blockquote id="M:GameStack.Assets.SetAppInfo(System.String,System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets the app and org names for the currently running app.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetAppInfo</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> appName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> orgName)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -560,21 +515,15 @@
               <dt>
                 <i>appName</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The app name to use when storing user data.</dd>
               <dt>
                 <i>orgName</i>
               </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
+              <dd>The organization name to use when storing user data.</dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Assets.SetAppInfo(System.String,System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Assets.SetAppInfo(System.String,System.String):Remarks">Only applicable on platforms with persistent settings APIs.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Assets.SetAppInfo(System.String,System.String):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -582,9 +531,7 @@
         </blockquote>
         <h3 id="M:GameStack.Assets.SetKey(System.String,System.String)">SetKey Method</h3>
         <blockquote id="M:GameStack.Assets.SetKey(System.String,System.String):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
+          <p class="Summary">Sets the encryption key and IV to be used with encrypted assets.</p>
           <h2>Syntax</h2>
           <div class="Signature">public static <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetKey</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> key, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> iv)</div>
           <h4 class="Subsection">Parameters</h4>
@@ -594,20 +541,16 @@
                 <i>key</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
               <dt>
                 <i>iv</i>
               </dt>
               <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
               </dd>
             </dl>
           </blockquote>
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Assets.SetKey(System.String,System.String):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
+          <div class="SectionBox" id="M:GameStack.Assets.SetKey(System.String,System.String):Remarks">Must be called before loading any encrypted assets.</div>
           <h2 class="Section">Requirements</h2>
           <div class="SectionBox" id="M:GameStack.Assets.SetKey(System.String,System.String):Version Information">
             <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
