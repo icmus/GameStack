@@ -3,8 +3,9 @@
     <title>GameStack.FrameArgs</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,146 +210,148 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.FrameArgs">FrameArgs  Class</h1>
     <p class="Summary" id="T:GameStack.FrameArgs:Summary">Contains information for a single frame.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.FrameArgs:Signature">public class  <b>FrameArgs</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.FrameArgs:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.FrameArgs:Docs:Remarks">Passed into all update methods and other event handlers.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.FrameArgs:Docs:Version Information">
-        <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.FrameArgs:Signature">public class  <b>FrameArgs</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.FrameArgs:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.FrameArgs:Docs:Remarks">Passed into all update methods and other event handlers.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.FrameArgs:Docs:Version Information">
+          <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a>.
 							</p>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.FrameArgs.DeltaTime">DeltaTime</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. The time in seconds since the last frame.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.FrameArgs.EventCount">EventCount</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. Gets the number of events currently in the queue.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.FrameArgs.Events">Events</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;EventBase&gt;</a>
-                  </i>. Gets a collection of events to be handled in the current frame.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.FrameArgs.Time">Time</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
-                  </i>. Gets the absolute time in seconds since the view was started.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.FrameArgs.DeltaTime">DeltaTime</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                    </i>. The time in seconds since the last frame.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.FrameArgs.EventCount">EventCount</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                    </i>. Gets the number of events currently in the queue.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.FrameArgs.Events">Events</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;EventBase&gt;</a>
+                    </i>. Gets a collection of events to be handled in the current frame.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.FrameArgs.Time">Time</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>
+                    </i>. Gets the absolute time in seconds since the view was started.</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.FrameArgs:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="P:GameStack.FrameArgs.DeltaTime">DeltaTime Property</h3>
-        <blockquote id="P:GameStack.FrameArgs.DeltaTime:member">
-          <p class="Summary">The time in seconds since the last frame.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>DeltaTime</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.FrameArgs.DeltaTime:Value">
+      <div class="Members" id="T:GameStack.FrameArgs:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="P:GameStack.FrameArgs.DeltaTime">DeltaTime Property</h3>
+          <blockquote id="P:GameStack.FrameArgs.DeltaTime:member">
+            <p class="Summary">The time in seconds since the last frame.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>DeltaTime</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.FrameArgs.DeltaTime:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.FrameArgs.DeltaTime:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.FrameArgs.DeltaTime:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.FrameArgs.DeltaTime:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.FrameArgs.DeltaTime:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.FrameArgs.EventCount">EventCount Property</h3>
-        <blockquote id="P:GameStack.FrameArgs.EventCount:member">
-          <p class="Summary">Gets the number of events currently in the queue.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>EventCount</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.FrameArgs.EventCount:Value">
+          <h3 id="P:GameStack.FrameArgs.EventCount">EventCount Property</h3>
+          <blockquote id="P:GameStack.FrameArgs.EventCount:member">
+            <p class="Summary">Gets the number of events currently in the queue.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>EventCount</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.FrameArgs.EventCount:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.FrameArgs.EventCount:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.FrameArgs.EventCount:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.FrameArgs.EventCount:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.FrameArgs.EventCount:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.FrameArgs.Events">Events Property</h3>
-        <blockquote id="P:GameStack.FrameArgs.Events:member">
-          <p class="Summary">Gets a collection of events to be handled in the current frame.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;EventBase&gt;</a> <b>Events</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.FrameArgs.Events:Value">
+          <h3 id="P:GameStack.FrameArgs.Events">Events Property</h3>
+          <blockquote id="P:GameStack.FrameArgs.Events:member">
+            <p class="Summary">Gets a collection of events to be handled in the current frame.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;EventBase&gt;</a> <b>Events</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.FrameArgs.Events:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.FrameArgs.Events:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.FrameArgs.Events:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.FrameArgs.Events:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.FrameArgs.Events:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.FrameArgs.Time">Time Property</h3>
-        <blockquote id="P:GameStack.FrameArgs.Time:member">
-          <p class="Summary">Gets the absolute time in seconds since the view was started.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Time</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.FrameArgs.Time:Value">
+          <h3 id="P:GameStack.FrameArgs.Time">Time Property</h3>
+          <blockquote id="P:GameStack.FrameArgs.Time:member">
+            <p class="Summary">Gets the absolute time in seconds since the view was started.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> <b>Time</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.FrameArgs.Time:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.FrameArgs.Time:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.FrameArgs.Time:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.FrameArgs.Time:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.FrameArgs.Time:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

@@ -3,8 +3,9 @@
     <title>GameStack.Desktop.SDL2GameView</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,529 +210,531 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Desktop.SDL2GameView">SDL2GameView  Class</h1>
     <p class="Summary" id="T:GameStack.Desktop.SDL2GameView:Summary">A game view implementation designed to run on desktop systems with SDL2.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Desktop.SDL2GameView:Signature">public class  <b>SDL2GameView</b> : <a href="../GameStack/IGameView.html">GameStack.IGameView</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Desktop.SDL2GameView:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Desktop.SDL2GameView:Docs:Remarks">
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Desktop.SDL2GameView:Signature">public class  <b>SDL2GameView</b> : <a href="../GameStack/IGameView.html">GameStack.IGameView</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
       </div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Desktop.SDL2GameView:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+      <div class="Remarks" id="T:GameStack.Desktop.SDL2GameView:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Desktop.SDL2GameView:Docs:Remarks">
+        </div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Desktop.SDL2GameView:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32)">SDL2GameView</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</div>
+                  </td>
+                  <td>Create and initialize a new window.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32)">SDL2GameView</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</div>
-                </td>
-                <td>Create and initialize a new window.</td>
-              </tr>
-            </table>
+                      <a href="#P:GameStack.Desktop.SDL2GameView.IsPaused">IsPaused</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                    </i>. Is the view currently paused?</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Desktop.SDL2GameView.PixelScale">PixelScale</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                    </i>. Gets the system's pixel scale.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Desktop.SDL2GameView.Size">Size</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
+                    </i>. Gets the viewport size in logical pixels.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Desktop.SDL2GameView.WindowId">WindowId</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                    </i>. </td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Desktop.SDL2GameView.IsPaused">IsPaused</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. Is the view currently paused?</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Desktop.SDL2GameView.PixelScale">PixelScale</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. Gets the system's pixel scale.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Desktop.SDL2GameView.Size">Size</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
-                  </i>. Gets the viewport size in logical pixels.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Desktop.SDL2GameView.WindowId">WindowId</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
-                  </i>. </td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Desktop.SDL2GameView.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release window and viewport resources.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType)">EnableGesture</a>
+                    </b>(<a href="../GameStack/GestureType.html">GameStack.GestureType</a>)<blockquote>Enables a specific type of gesture event.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event)">EnqueueEvent</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">SDL2.SDL.SDL_Event</a>)<blockquote></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Desktop.SDL2GameView.EnterLoop()">EnterLoop</a>
+                    </b>()<blockquote>Begin executing the event loop.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Desktop.SDL2GameView.Join()">Join</a>
+                    </b>()<blockquote></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Desktop.SDL2GameView.LoadFrame()">LoadFrame</a>
+                    </b>()<blockquote>When called, the current frame is marked as a load frame.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Desktop.SDL2GameView.RenderNow()">RenderNow</a>
+                    </b>()<blockquote>Force the scene to render immediately.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Desktop.SDL2GameView.StartThread()">StartThread</a>
+                    </b>()<blockquote></blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Desktop.SDL2GameView.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to release window and viewport resources.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType)">EnableGesture</a>
-                  </b>(<a href="../GameStack/GestureType.html">GameStack.GestureType</a>)<blockquote>Enables a specific type of gesture event.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event)">EnqueueEvent</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">SDL2.SDL.SDL_Event</a>)<blockquote></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Desktop.SDL2GameView.EnterLoop()">EnterLoop</a>
-                  </b>()<blockquote>Begin executing the event loop.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Desktop.SDL2GameView.Join()">Join</a>
-                  </b>()<blockquote></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Desktop.SDL2GameView.LoadFrame()">LoadFrame</a>
-                  </b>()<blockquote>When called, the current frame is marked as a load frame.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Desktop.SDL2GameView.RenderNow()">RenderNow</a>
-                  </b>()<blockquote>Force the scene to render immediately.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Desktop.SDL2GameView.StartThread()">StartThread</a>
-                  </b>()<blockquote></blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Events</h2>
-        <div class="SectionBox" id="Public Events">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#E:GameStack.Desktop.SDL2GameView.Destroyed">Destroyed</a>
-                  </b>
-                </td>
-                <td>Fires when the window is being closed.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#E:GameStack.Desktop.SDL2GameView.Event">Event</a>
-                  </b>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#E:GameStack.Desktop.SDL2GameView.Render">Render</a>
-                  </b>
-                </td>
-                <td>Fires when the view needs the scene to render.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#E:GameStack.Desktop.SDL2GameView.Update">Update</a>
-                  </b>
-                </td>
-                <td>Fires when the view needs the scene to update.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Events</h2>
+          <div class="SectionBox" id="Public Events">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#E:GameStack.Desktop.SDL2GameView.Destroyed">Destroyed</a>
+                    </b>
+                  </td>
+                  <td>Fires when the window is being closed.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#E:GameStack.Desktop.SDL2GameView.Event">Event</a>
+                    </b>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#E:GameStack.Desktop.SDL2GameView.Render">Render</a>
+                    </b>
+                  </td>
+                  <td>Fires when the view needs the scene to render.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#E:GameStack.Desktop.SDL2GameView.Update">Update</a>
+                    </b>
+                  </td>
+                  <td>Fires when the view needs the scene to update.</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Desktop.SDL2GameView:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32)">SDL2GameView Constructor</h3>
-        <blockquote id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32):member">
-          <p class="Summary">Create and initialize a new window.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>SDL2GameView</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> title, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> width, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> height, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> fullscreen, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> vsync, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> x, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> y)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32):Parameters">
-            <dl>
-              <dt>
-                <i>title</i>
-              </dt>
-              <dd>Window title.</dd>
-              <dt>
-                <i>width</i>
-              </dt>
-              <dd>Desired viewport width.</dd>
-              <dt>
-                <i>height</i>
-              </dt>
-              <dd>Desired viewport height.</dd>
-              <dt>
-                <i>fullscreen</i>
-              </dt>
-              <dd>True to enter full screen mode.</dd>
-              <dt>
-                <i>vsync</i>
-              </dt>
-              <dd>True to attempt enabling v-sync.</dd>
-              <dt>
-                <i>x</i>
-              </dt>
-              <dd>Initial left position of window.</dd>
-              <dt>
-                <i>y</i>
-              </dt>
-              <dd>Initial top position of window.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Desktop.SDL2GameView:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32)">SDL2GameView Constructor</h3>
+          <blockquote id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32):member">
+            <p class="Summary">Create and initialize a new window.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>SDL2GameView</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> title, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> width, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> height, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> fullscreen, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> vsync, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> x, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> y)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32):Parameters">
+              <dl>
+                <dt>
+                  <i>title</i>
+                </dt>
+                <dd>Window title.</dd>
+                <dt>
+                  <i>width</i>
+                </dt>
+                <dd>Desired viewport width.</dd>
+                <dt>
+                  <i>height</i>
+                </dt>
+                <dd>Desired viewport height.</dd>
+                <dt>
+                  <i>fullscreen</i>
+                </dt>
+                <dd>True to enter full screen mode.</dd>
+                <dt>
+                  <i>vsync</i>
+                </dt>
+                <dd>True to attempt enabling v-sync.</dd>
+                <dt>
+                  <i>x</i>
+                </dt>
+                <dd>Initial left position of window.</dd>
+                <dt>
+                  <i>y</i>
+                </dt>
+                <dd>Initial top position of window.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32):Remarks">Events will begin firing immediately when the viewport is ready if a scene has been connected.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32):Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32):Remarks">Events will begin firing immediately when the viewport is ready if a scene has been connected.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Desktop.SDL2GameView(System.String,System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32,System.Int32):Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="E:GameStack.Desktop.SDL2GameView.Destroyed">Destroyed Event</h3>
-        <blockquote id="E:GameStack.Desktop.SDL2GameView.Destroyed:member">
-          <p class="Summary">Fires when the window is being closed.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler">EventHandler</a> <b>Destroyed</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Destroyed:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Destroyed:Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Desktop.SDL2GameView.Dispose()">Dispose Method</h3>
-        <blockquote id="M:GameStack.Desktop.SDL2GameView.Dispose():member">
-          <p class="Summary">Must be called to release window and viewport resources.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.Dispose():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.Dispose():Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType)">EnableGesture Method</h3>
-        <blockquote id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType):member">
-          <p class="Summary">Enables a specific type of gesture event.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnableGesture</b> (<a href="../GameStack/GestureType.html">GameStack.GestureType</a> type)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType):Parameters">
-            <dl>
-              <dt>
-                <i>type</i>
-              </dt>
-              <dd>The type of gesture events to be enabled.</dd>
-            </dl>
+          <h3 id="E:GameStack.Desktop.SDL2GameView.Destroyed">Destroyed Event</h3>
+          <blockquote id="E:GameStack.Desktop.SDL2GameView.Destroyed:member">
+            <p class="Summary">Fires when the window is being closed.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler">EventHandler</a> <b>Destroyed</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Destroyed:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Destroyed:Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType):Remarks">Calling this method currently has no effect on desktop systems.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType):Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event)">EnqueueEvent Method</h3>
-        <blockquote id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnqueueEvent</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">SDL2.SDL.SDL_Event</a> e)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event):Parameters">
-            <dl>
-              <dt>
-                <i>e</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="M:GameStack.Desktop.SDL2GameView.Dispose()">Dispose Method</h3>
+          <blockquote id="M:GameStack.Desktop.SDL2GameView.Dispose():member">
+            <p class="Summary">Must be called to release window and viewport resources.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.Dispose():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.Dispose():Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event):Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Desktop.SDL2GameView.EnterLoop()">EnterLoop Method</h3>
-        <blockquote id="M:GameStack.Desktop.SDL2GameView.EnterLoop():member">
-          <p class="Summary">Begin executing the event loop.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnterLoop</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnterLoop():Remarks">Any scenes connected to the view will be executed and this method will return when all scenes are finished.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnterLoop():Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="E:GameStack.Desktop.SDL2GameView.Event">Event Event</h3>
-        <blockquote id="E:GameStack.Desktop.SDL2GameView.Event:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;SDL2EventArgs&gt;</a> <b>Event</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Event:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Event:Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Desktop.SDL2GameView.IsPaused">IsPaused Property</h3>
-        <blockquote id="P:GameStack.Desktop.SDL2GameView.IsPaused:member">
-          <p class="Summary">Is the view currently paused?</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsPaused</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Desktop.SDL2GameView.IsPaused:Value">
+          <h3 id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType)">EnableGesture Method</h3>
+          <blockquote id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType):member">
+            <p class="Summary">Enables a specific type of gesture event.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnableGesture</b> (<a href="../GameStack/GestureType.html">GameStack.GestureType</a> type)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType):Parameters">
+              <dl>
+                <dt>
+                  <i>type</i>
+                </dt>
+                <dd>The type of gesture events to be enabled.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType):Remarks">Calling this method currently has no effect on desktop systems.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnableGesture(GameStack.GestureType):Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.IsPaused:Remarks">When paused, no scene updates or rendering will take place. This property commonly returns true if the app is suspended.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.IsPaused:Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Desktop.SDL2GameView.Join()">Join Method</h3>
-        <blockquote id="M:GameStack.Desktop.SDL2GameView.Join():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Join</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.Join():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.Join():Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Desktop.SDL2GameView.LoadFrame()">LoadFrame Method</h3>
-        <blockquote id="M:GameStack.Desktop.SDL2GameView.LoadFrame():member">
-          <p class="Summary">When called, the current frame is marked as a load frame.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoadFrame</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.LoadFrame():Remarks">Load frames are used to identiy extra long frames, allowing the system to deal intelligently with animations and transitions to prevent them from skipping ahead because of the gap in time.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.LoadFrame():Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Desktop.SDL2GameView.PixelScale">PixelScale Property</h3>
-        <blockquote id="P:GameStack.Desktop.SDL2GameView.PixelScale:member">
-          <p class="Summary">Gets the system's pixel scale.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>PixelScale</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Desktop.SDL2GameView.PixelScale:Value">
+          <h3 id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event)">EnqueueEvent Method</h3>
+          <blockquote id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnqueueEvent</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">SDL2.SDL.SDL_Event</a> e)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event):Parameters">
+              <dl>
+                <dt>
+                  <i>e</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnqueueEvent(SDL2.SDL.SDL_Event):Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.PixelScale:Remarks">Returns 2.0 for retina displays.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.PixelScale:Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="E:GameStack.Desktop.SDL2GameView.Render">Render Event</h3>
-        <blockquote id="E:GameStack.Desktop.SDL2GameView.Render:member">
-          <p class="Summary">Fires when the view needs the scene to render.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;GameStack.FrameArgs&gt;</a> <b>Render</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Render:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Render:Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Desktop.SDL2GameView.RenderNow()">RenderNow Method</h3>
-        <blockquote id="M:GameStack.Desktop.SDL2GameView.RenderNow():member">
-          <p class="Summary">Force the scene to render immediately.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RenderNow</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.RenderNow():Remarks">Useful for capturing the output of a scene for further processing.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.RenderNow():Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Desktop.SDL2GameView.Size">Size Property</h3>
-        <blockquote id="P:GameStack.Desktop.SDL2GameView.Size:member">
-          <p class="Summary">Gets the viewport size in logical pixels.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>Size</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Desktop.SDL2GameView.Size:Value">
+          <h3 id="M:GameStack.Desktop.SDL2GameView.EnterLoop()">EnterLoop Method</h3>
+          <blockquote id="M:GameStack.Desktop.SDL2GameView.EnterLoop():member">
+            <p class="Summary">Begin executing the event loop.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>EnterLoop</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnterLoop():Remarks">Any scenes connected to the view will be executed and this method will return when all scenes are finished.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.EnterLoop():Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.Size:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.Size:Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Desktop.SDL2GameView.StartThread()">StartThread Method</h3>
-        <blockquote id="M:GameStack.Desktop.SDL2GameView.StartThread():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StartThread</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.StartThread():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.StartThread():Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="E:GameStack.Desktop.SDL2GameView.Update">Update Event</h3>
-        <blockquote id="E:GameStack.Desktop.SDL2GameView.Update:member">
-          <p class="Summary">Fires when the view needs the scene to update.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;GameStack.FrameArgs&gt;</a> <b>Update</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Update:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Update:Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Desktop.SDL2GameView.WindowId">WindowId Property</h3>
-        <blockquote id="P:GameStack.Desktop.SDL2GameView.WindowId:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>WindowId</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Desktop.SDL2GameView.WindowId:Value">
+          <h3 id="E:GameStack.Desktop.SDL2GameView.Event">Event Event</h3>
+          <blockquote id="E:GameStack.Desktop.SDL2GameView.Event:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;SDL2EventArgs&gt;</a> <b>Event</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Event:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Event:Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.WindowId:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.WindowId:Version Information">
-            <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="P:GameStack.Desktop.SDL2GameView.IsPaused">IsPaused Property</h3>
+          <blockquote id="P:GameStack.Desktop.SDL2GameView.IsPaused:member">
+            <p class="Summary">Is the view currently paused?</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsPaused</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Desktop.SDL2GameView.IsPaused:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.IsPaused:Remarks">When paused, no scene updates or rendering will take place. This property commonly returns true if the app is suspended.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.IsPaused:Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Desktop.SDL2GameView.Join()">Join Method</h3>
+          <blockquote id="M:GameStack.Desktop.SDL2GameView.Join():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Join</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.Join():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.Join():Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Desktop.SDL2GameView.LoadFrame()">LoadFrame Method</h3>
+          <blockquote id="M:GameStack.Desktop.SDL2GameView.LoadFrame():member">
+            <p class="Summary">When called, the current frame is marked as a load frame.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>LoadFrame</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.LoadFrame():Remarks">Load frames are used to identiy extra long frames, allowing the system to deal intelligently with animations and transitions to prevent them from skipping ahead because of the gap in time.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.LoadFrame():Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="P:GameStack.Desktop.SDL2GameView.PixelScale">PixelScale Property</h3>
+          <blockquote id="P:GameStack.Desktop.SDL2GameView.PixelScale:member">
+            <p class="Summary">Gets the system's pixel scale.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>PixelScale</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Desktop.SDL2GameView.PixelScale:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.PixelScale:Remarks">Returns 2.0 for retina displays.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.PixelScale:Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="E:GameStack.Desktop.SDL2GameView.Render">Render Event</h3>
+          <blockquote id="E:GameStack.Desktop.SDL2GameView.Render:member">
+            <p class="Summary">Fires when the view needs the scene to render.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;GameStack.FrameArgs&gt;</a> <b>Render</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Render:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Render:Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Desktop.SDL2GameView.RenderNow()">RenderNow Method</h3>
+          <blockquote id="M:GameStack.Desktop.SDL2GameView.RenderNow():member">
+            <p class="Summary">Force the scene to render immediately.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RenderNow</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.RenderNow():Remarks">Useful for capturing the output of a scene for further processing.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.RenderNow():Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="P:GameStack.Desktop.SDL2GameView.Size">Size Property</h3>
+          <blockquote id="P:GameStack.Desktop.SDL2GameView.Size:member">
+            <p class="Summary">Gets the viewport size in logical pixels.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>Size</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Desktop.SDL2GameView.Size:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.Size:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.Size:Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Desktop.SDL2GameView.StartThread()">StartThread Method</h3>
+          <blockquote id="M:GameStack.Desktop.SDL2GameView.StartThread():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>StartThread</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.StartThread():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Desktop.SDL2GameView.StartThread():Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="E:GameStack.Desktop.SDL2GameView.Update">Update Event</h3>
+          <blockquote id="E:GameStack.Desktop.SDL2GameView.Update:member">
+            <p class="Summary">Fires when the view needs the scene to update.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;GameStack.FrameArgs&gt;</a> <b>Update</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Update:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="E:GameStack.Desktop.SDL2GameView.Update:Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="P:GameStack.Desktop.SDL2GameView.WindowId">WindowId Property</h3>
+          <blockquote id="P:GameStack.Desktop.SDL2GameView.WindowId:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>WindowId</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Desktop.SDL2GameView.WindowId:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.WindowId:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Desktop.SDL2GameView.WindowId:Version Information">
+              <b>Namespace: </b>GameStack.Desktop<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

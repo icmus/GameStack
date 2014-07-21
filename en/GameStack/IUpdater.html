@@ -3,8 +3,9 @@
     <title>GameStack.IUpdater</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,61 +210,63 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.IUpdater">IUpdater  Interface</h1>
     <p class="Summary" id="T:GameStack.IUpdater:Summary">Implemented by any object that wants to receive an update each frame.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.IUpdater:Signature">public interface  <b>IUpdater</b></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.IUpdater:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.IUpdater:Docs:Remarks">This interface applies to any class derived from <a href="../GameStack/Scene.html">GameStack.Scene</a> or that is added to the scene's collection.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.IUpdater:Docs:Version Information">
-        <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.IUpdater.Update(GameStack.FrameArgs)">Update</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote>Called once per frame before rendering.</blockquote></td>
-              </tr>
-            </table>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.IUpdater:Signature">public interface  <b>IUpdater</b></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.IUpdater:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.IUpdater:Docs:Remarks">This interface applies to any class derived from <a href="../GameStack/Scene.html">GameStack.Scene</a> or that is added to the scene's collection.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.IUpdater:Docs:Version Information">
+          <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.IUpdater.Update(GameStack.FrameArgs)">Update</a>
+                    </b>(<a href="../GameStack/FrameArgs.html">FrameArgs</a>)<blockquote>Called once per frame before rendering.</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.IUpdater:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="M:GameStack.IUpdater.Update(GameStack.FrameArgs)">Update Method</h3>
-        <blockquote id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):member">
-          <p class="Summary">Called once per frame before rendering.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="../GameStack/FrameArgs.html">FrameArgs</a> e)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Parameters">
-            <dl>
-              <dt>
-                <i>e</i>
-              </dt>
-              <dd>Information about the current frame.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.IUpdater:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="M:GameStack.IUpdater.Update(GameStack.FrameArgs)">Update Method</h3>
+          <blockquote id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):member">
+            <p class="Summary">Called once per frame before rendering.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="../GameStack/FrameArgs.html">FrameArgs</a> e)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Parameters">
+              <dl>
+                <dt>
+                  <i>e</i>
+                </dt>
+                <dd>Information about the current frame.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Remarks">If your implementation is not called, make sure you've implemented it on your scene class or any object added to the scene collection.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Remarks">If your implementation is not called, make sure you've implemented it on your scene class or any object added to the scene collection.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.IUpdater.Update(GameStack.FrameArgs):Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

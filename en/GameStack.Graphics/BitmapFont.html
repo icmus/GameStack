@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.BitmapFont</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,399 +210,401 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.BitmapFont">BitmapFont  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.BitmapFont:Summary">Manages a bitmap font asset.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.BitmapFont:Signature">public class  <b>BitmapFont</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.BitmapFont:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.BitmapFont:Docs:Remarks">This class can be used with UI controls such as <a href="../GameStack.Gui/Label.html">GameStack.Gui.Label</a> and <a href="../GameStack.Gui/Button.html">GameStack.Gui.Button</a> or can be used directly with <a href="../GameStack.Graphics/TextBlock.html">GameStack.Graphics.TextBlock</a>. The .font asset must be produced by the pipeline tools, which support BMFont-format font definition files.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.BitmapFont:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.BitmapFont:Signature">public class  <b>BitmapFont</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.BitmapFont:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.BitmapFont:Docs:Remarks">This class can be used with UI controls such as <a href="../GameStack.Gui/Label.html">GameStack.Gui.Label</a> and <a href="../GameStack.Gui/Button.html">GameStack.Gui.Button</a> or can be used directly with <a href="../GameStack.Graphics/TextBlock.html">GameStack.Graphics.TextBlock</a>. The .font asset must be produced by the pipeline tools, which support BMFont-format font definition files.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.BitmapFont:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader)">BitmapFont</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../GameStack.Graphics/Shader.html">Shader</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader)">BitmapFont</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/Shader.html">Shader</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader)">BitmapFont</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>, <a href="../GameStack.Graphics/Shader.html">Shader</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader)">BitmapFont</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/Shader.html">Shader</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.BitmapFont.Base">Base</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. Gets the font baseline in pixels.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.BitmapFont.Face">Face</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. Gets the name of the font face.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div><i>default property</i></div><div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.BitmapFont.Item(System.Int32)">Item</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/BitmapChar.html">BitmapChar</a>
-                  </i>. Gets info about a single bitmap character.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.BitmapFont.LineHeight">LineHeight</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. Gets the total space between the bottom and the top of a line of text.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.BitmapFont.Material">Material</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a>
-                  </i>. Gets the underlying material for the font sheet.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.BitmapFont.PixelScale">PixelScale</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. Gets the pixel scale of the underlying texture.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.BitmapFont.Size">Size</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. Gets the size of the font sheet texture as defined by the asset metadata.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.BitmapFont.Base">Base</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                    </i>. Gets the font baseline in pixels.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.BitmapFont.Face">Face</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                    </i>. Gets the name of the font face.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div><i>default property</i></div><div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.BitmapFont.Item(System.Int32)">Item</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)</td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/BitmapChar.html">BitmapChar</a>
+                    </i>. Gets info about a single bitmap character.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.BitmapFont.LineHeight">LineHeight</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                    </i>. Gets the total space between the bottom and the top of a line of text.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.BitmapFont.Material">Material</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a>
+                    </i>. Gets the underlying material for the font sheet.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.BitmapFont.PixelScale">PixelScale</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                    </i>. Gets the pixel scale of the underlying texture.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.BitmapFont.Size">Size</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                    </i>. Gets the size of the font sheet texture as defined by the asset metadata.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.BitmapFont.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to release texture resources.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32)">GetKerning</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Gets a kerning value for a specific character pair.</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.BitmapFont.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release texture resources.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32)">GetKerning</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a></nobr><blockquote>Gets a kerning value for a specific character pair.</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.BitmapFont:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader)">BitmapFont Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>BitmapFont</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../GameStack.Graphics/Shader.html">Shader</a> shader)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader):Parameters">
-            <dl>
-              <dt>
-                <i>stream</i>
-              </dt>
-              <dd>Must contain an font asset file image produced by the pipeline.</dd>
-              <dt>
-                <i>shader</i>
-              </dt>
-              <dd>When supplied, always use this shader instead of the default sprite shader.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.BitmapFont:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader)">BitmapFont Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>BitmapFont</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream, <a href="../GameStack.Graphics/Shader.html">Shader</a> shader)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader):Parameters">
+              <dl>
+                <dt>
+                  <i>stream</i>
+                </dt>
+                <dd>Must contain an font asset file image produced by the pipeline.</dd>
+                <dt>
+                  <i>shader</i>
+                </dt>
+                <dd>When supplied, always use this shader instead of the default sprite shader.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.BitmapFont(System.IO.Stream,GameStack.Graphics.Shader):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader)">BitmapFont Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>BitmapFont</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path, <a href="../GameStack.Graphics/Shader.html">Shader</a> shader)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader):Parameters">
-            <dl>
-              <dt>
-                <i>path</i>
-              </dt>
-              <dd>Relative asset path.</dd>
-              <dt>
-                <i>shader</i>
-              </dt>
-              <dd>When supplied, always use this shader instead of the default sprite shader.</dd>
-            </dl>
+          <h3 id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader)">BitmapFont Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>BitmapFont</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path, <a href="../GameStack.Graphics/Shader.html">Shader</a> shader)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader):Parameters">
+              <dl>
+                <dt>
+                  <i>path</i>
+                </dt>
+                <dd>Relative asset path.</dd>
+                <dt>
+                  <i>shader</i>
+                </dt>
+                <dd>When supplied, always use this shader instead of the default sprite shader.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.BitmapFont(System.String,GameStack.Graphics.Shader):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.BitmapFont.Base">Base Property</h3>
-        <blockquote id="P:GameStack.Graphics.BitmapFont.Base:member">
-          <p class="Summary">Gets the font baseline in pixels.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Base</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Base:Value">
+          <h3 id="P:GameStack.Graphics.BitmapFont.Base">Base Property</h3>
+          <blockquote id="P:GameStack.Graphics.BitmapFont.Base:member">
+            <p class="Summary">Gets the font baseline in pixels.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>Base</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Base:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Base:Remarks">This indicates where the bottoms of most letters should sit. When rendering lines of text, the vertical position is adjusted with this value.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Base:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Base:Remarks">This indicates where the bottoms of most letters should sit. When rendering lines of text, the vertical position is adjusted with this value.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Base:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.BitmapFont.Dispose()">Dispose Method</h3>
-        <blockquote id="M:GameStack.Graphics.BitmapFont.Dispose():member">
-          <p class="Summary">Must be called to release texture resources.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.BitmapFont.Dispose():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.BitmapFont.Dispose():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.BitmapFont.Face">Face Property</h3>
-        <blockquote id="P:GameStack.Graphics.BitmapFont.Face:member">
-          <p class="Summary">Gets the name of the font face.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Face</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Face:Value">
+          <h3 id="M:GameStack.Graphics.BitmapFont.Dispose()">Dispose Method</h3>
+          <blockquote id="M:GameStack.Graphics.BitmapFont.Dispose():member">
+            <p class="Summary">Must be called to release texture resources.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.BitmapFont.Dispose():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.BitmapFont.Dispose():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Face:Remarks">This matches the name of the font as specified in the original font definition.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Face:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32)">GetKerning Method</h3>
-        <blockquote id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):member">
-          <p class="Summary">Gets a kerning value for a specific character pair.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetKerning</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> first, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> second)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):Parameters">
-            <dl>
-              <dt>
-                <i>first</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>second</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="P:GameStack.Graphics.BitmapFont.Face">Face Property</h3>
+          <blockquote id="P:GameStack.Graphics.BitmapFont.Face:member">
+            <p class="Summary">Gets the name of the font face.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Face</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Face:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Face:Remarks">This matches the name of the font as specified in the original font definition.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Face:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):Returns">
+          <h3 id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32)">GetKerning Method</h3>
+          <blockquote id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):member">
+            <p class="Summary">Gets a kerning value for a specific character pair.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>GetKerning</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> first, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> second)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):Parameters">
+              <dl>
+                <dt>
+                  <i>first</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>second</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):Returns">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):Remarks">This is used when rendering bitmap text to adjust the horizontal placement of each character based on the previous character. If no specific kerning is defined for the character pair, a value of 0 is returned.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):Remarks">This is used when rendering bitmap text to adjust the horizontal placement of each character based on the previous character. If no specific kerning is defined for the character pair, a value of 0 is returned.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.BitmapFont.GetKerning(System.Int32,System.Int32):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.BitmapFont.Item(System.Int32)">Item Property</h3>
-        <blockquote id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):member">
-          <p class="Summary">Gets info about a single bitmap character.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">
-            <p>
-              <i>This is the default property for this class.</i>
-            </p>public <a href="../GameStack.Graphics/BitmapChar.html">BitmapChar</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> id] { get; }</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):Parameters">
-            <dl>
-              <dt>
-                <i>id</i>
-              </dt>
-              <dd>Character ID, usually equal to the character's numerical value.</dd>
-            </dl>
+          <h3 id="P:GameStack.Graphics.BitmapFont.Item(System.Int32)">Item Property</h3>
+          <blockquote id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):member">
+            <p class="Summary">Gets info about a single bitmap character.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">
+              <p>
+                <i>This is the default property for this class.</i>
+              </p>public <a href="../GameStack.Graphics/BitmapChar.html">BitmapChar</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> id] { get; }</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):Parameters">
+              <dl>
+                <dt>
+                  <i>id</i>
+                </dt>
+                <dd>Character ID, usually equal to the character's numerical value.</dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):Value">
+          <h3 id="P:GameStack.Graphics.BitmapFont.LineHeight">LineHeight Property</h3>
+          <blockquote id="P:GameStack.Graphics.BitmapFont.LineHeight:member">
+            <p class="Summary">Gets the total space between the bottom and the top of a line of text.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>LineHeight</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.LineHeight:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.LineHeight:Remarks">When rendering text, this is the amount of space the virtual caret must move down when beginning a new line.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.LineHeight:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Item(System.Int32):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.BitmapFont.LineHeight">LineHeight Property</h3>
-        <blockquote id="P:GameStack.Graphics.BitmapFont.LineHeight:member">
-          <p class="Summary">Gets the total space between the bottom and the top of a line of text.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>LineHeight</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.LineHeight:Value">
+          <h3 id="P:GameStack.Graphics.BitmapFont.Material">Material Property</h3>
+          <blockquote id="P:GameStack.Graphics.BitmapFont.Material:member">
+            <p class="Summary">Gets the underlying material for the font sheet.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a> <b>Material</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Material:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Material:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Material:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.LineHeight:Remarks">When rendering text, this is the amount of space the virtual caret must move down when beginning a new line.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.LineHeight:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.BitmapFont.Material">Material Property</h3>
-        <blockquote id="P:GameStack.Graphics.BitmapFont.Material:member">
-          <p class="Summary">Gets the underlying material for the font sheet.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/SpriteMaterial.html">SpriteMaterial</a> <b>Material</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Material:Value">
+          <h3 id="P:GameStack.Graphics.BitmapFont.PixelScale">PixelScale Property</h3>
+          <blockquote id="P:GameStack.Graphics.BitmapFont.PixelScale:member">
+            <p class="Summary">Gets the pixel scale of the underlying texture.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>PixelScale</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.PixelScale:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.PixelScale:Remarks">Fonts designed to be used at retina resolution will return 2.0.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.PixelScale:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Material:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Material:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.BitmapFont.PixelScale">PixelScale Property</h3>
-        <blockquote id="P:GameStack.Graphics.BitmapFont.PixelScale:member">
-          <p class="Summary">Gets the pixel scale of the underlying texture.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>PixelScale</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.PixelScale:Value">
+          <h3 id="P:GameStack.Graphics.BitmapFont.Size">Size Property</h3>
+          <blockquote id="P:GameStack.Graphics.BitmapFont.Size:member">
+            <p class="Summary">Gets the size of the font sheet texture as defined by the asset metadata.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Size</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Size:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Size:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Size:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.PixelScale:Remarks">Fonts designed to be used at retina resolution will return 2.0.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.PixelScale:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.BitmapFont.Size">Size Property</h3>
-        <blockquote id="P:GameStack.Graphics.BitmapFont.Size:member">
-          <p class="Summary">Gets the size of the font sheet texture as defined by the asset metadata.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Size</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.BitmapFont.Size:Value">
-          </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Size:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.BitmapFont.Size:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

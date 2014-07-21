@@ -3,8 +3,9 @@
     <title>GameStack.Gui.RadioGroup</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,132 +210,134 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.RadioGroup">RadioGroup  Class</h1>
     <p class="Summary" id="T:GameStack.Gui.RadioGroup:Summary">Groups buttons together into a common radio group with only one active button at a time.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Gui.RadioGroup:Signature">public class  <b>RadioGroup</b></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Gui.RadioGroup:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.RadioGroup:Docs:Remarks">Pass an instance of this to <a href="../GameStack.Gui/Button.html#C:GameStack.Gui.Button(GameStack.Gui.RadioGroup,GameStack.Gui.LayoutSpec)">Button(RadioGroup, LayoutSpec)</a> for all buttons that should belong to this group.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.RadioGroup:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Gui.RadioGroup:Signature">public class  <b>RadioGroup</b></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Gui.RadioGroup:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.RadioGroup:Docs:Remarks">Pass an instance of this to <a href="../GameStack.Gui/Button.html#C:GameStack.Gui.Button(GameStack.Gui.RadioGroup,GameStack.Gui.LayoutSpec)">Button(RadioGroup, LayoutSpec)</a> for all buttons that should belong to this group.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.RadioGroup:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Gui.RadioGroup()">RadioGroup</a>
+                      </b>()</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Fields</h2>
+          <div class="SectionBox" id="Public Fields">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Gui.RadioGroup()">RadioGroup</a>
-                    </b>()</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#F:GameStack.Gui.RadioGroup.Changed">Changed</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;RadioGroupEventArgs&gt;</a>
+                    </i>. Fires whenever the active button has changed.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Fields</h2>
-        <div class="SectionBox" id="Public Fields">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#F:GameStack.Gui.RadioGroup.Changed">Changed</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;RadioGroupEventArgs&gt;</a>
-                  </i>. Fires whenever the active button has changed.</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.RadioGroup.Active">Active</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Gui/Button.html">Button</a>
-                  </i>. Returns the active button, or null if there is none yet.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.RadioGroup.Active">Active</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Gui/Button.html">Button</a>
+                    </i>. Returns the active button, or null if there is none yet.</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Gui.RadioGroup:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Gui.RadioGroup()">RadioGroup Constructor</h3>
-        <blockquote id="C:GameStack.Gui.RadioGroup():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>RadioGroup</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Gui.RadioGroup():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Gui.RadioGroup():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.RadioGroup.Active">Active Property</h3>
-        <blockquote id="P:GameStack.Gui.RadioGroup.Active:member">
-          <p class="Summary">Returns the active button, or null if there is none yet.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Gui/Button.html">Button</a> <b>Active</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.RadioGroup.Active:Value">
+      <div class="Members" id="T:GameStack.Gui.RadioGroup:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Gui.RadioGroup()">RadioGroup Constructor</h3>
+          <blockquote id="C:GameStack.Gui.RadioGroup():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>RadioGroup</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Gui.RadioGroup():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Gui.RadioGroup():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.RadioGroup.Active:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.RadioGroup.Active:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="F:GameStack.Gui.RadioGroup.Changed">Changed Field</h3>
-        <blockquote id="F:GameStack.Gui.RadioGroup.Changed:member">
-          <p class="Summary">Fires whenever the active button has changed.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;RadioGroupEventArgs&gt;</a> <b>Changed</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="F:GameStack.Gui.RadioGroup.Changed:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="F:GameStack.Gui.RadioGroup.Changed:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="P:GameStack.Gui.RadioGroup.Active">Active Property</h3>
+          <blockquote id="P:GameStack.Gui.RadioGroup.Active:member">
+            <p class="Summary">Returns the active button, or null if there is none yet.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Gui/Button.html">Button</a> <b>Active</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.RadioGroup.Active:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.RadioGroup.Active:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.RadioGroup.Active:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="F:GameStack.Gui.RadioGroup.Changed">Changed Field</h3>
+          <blockquote id="F:GameStack.Gui.RadioGroup.Changed:member">
+            <p class="Summary">Fires whenever the active button has changed.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;RadioGroupEventArgs&gt;</a> <b>Changed</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="F:GameStack.Gui.RadioGroup.Changed:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="F:GameStack.Gui.RadioGroup.Changed:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

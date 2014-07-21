@@ -3,8 +3,9 @@
     <title>GameStack: GameStack</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -193,321 +195,323 @@
     <h1 class="PageTitle">GameStack Namespace</h1>
     <p class="Summary">
     </p>
-    <div>
-    </div>
-    <div class="Remarks">
-      <h2 class="Section"> Namespace</h2>
-      <p>
-      </p>
-      <table class="TypesListing" style="margin-top: 1em">
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Assets.html">Assets</a>
-          </td>
-          <td>Static class for accessing assets on the current platform.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./CairoEx.html">CairoEx</a>
-          </td>
-          <td>Convenience extension methods for working with Cairo.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Controller`1.html">Controller&lt;T&gt;</a>
-          </td>
-          <td>Controls a property or variable by transitioning it from value to value over time.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ConversionEx.html">ConversionEx</a>
-          </td>
-          <td>Static utility methods for common conversions.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./CoroutineList`1.html">CoroutineList&lt;T&gt;</a>
-          </td>
-          <td>Manages a list of coroutines, stepping them forward on each update. Coroutines can be added or stopped
+    <div class="content-container">
+      <div>
+      </div>
+      <div class="Remarks">
+        <h2 class="Section"> Namespace</h2>
+        <p>
+        </p>
+        <table class="TypesListing" style="margin-top: 1em">
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Assets.html">Assets</a>
+            </td>
+            <td>Static class for accessing assets on the current platform.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./CairoEx.html">CairoEx</a>
+            </td>
+            <td>Convenience extension methods for working with Cairo.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Controller`1.html">Controller&lt;T&gt;</a>
+            </td>
+            <td>Controls a property or variable by transitioning it from value to value over time.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./ConversionEx.html">ConversionEx</a>
+            </td>
+            <td>Static utility methods for common conversions.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./CoroutineList`1.html">CoroutineList&lt;T&gt;</a>
+            </td>
+            <td>Manages a list of coroutines, stepping them forward on each update. Coroutines can be added or stopped
     at any time.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./EventBase.html">EventBase</a>
-          </td>
-          <td>Abstract base class for all GameStack events.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./FrameArgs.html">FrameArgs</a>
-          </td>
-          <td>Contains information for a single frame.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Gesture.html">Gesture</a>
-          </td>
-          <td>Abstract base class for all gesture events.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./GestureState.html">GestureState</a>
-          </td>
-          <td>Indicates the phase that a gesture is currently in.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./GestureType.html">GestureType</a>
-          </td>
-          <td>Indicates the type of the current gesture.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ICoroutine.html">ICoroutine</a>
-          </td>
-          <td>Coroutines are controlled through this interface.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IGameView.html">IGameView</a>
-          </td>
-          <td>A cross-platform interface for platform-specific game view implementations.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IGestureInput.html">IGestureInput</a>
-          </td>
-          <td>Implemented by all UI views that which to receive gesture events within their frame.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IHandler`1.html">IHandler&lt;T&gt;</a>
-          </td>
-          <td>Any class can implement this interface to receive the specified type of event.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IStreamingSound.html">IStreamingSound</a>
-          </td>
-          <td>Generic interface for a streaming sound asset.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IUpdater.html">IUpdater</a>
-          </td>
-          <td>Implemented by any object that wants to receive an update each frame.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IWaitFor.html">IWaitFor</a>
-          </td>
-          <td>Implemented by any type that can be yielded from a coroutine.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IWaitFor`1.html">IWaitFor&lt;T&gt;</a>
-          </td>
-          <td>Implemented by any type that can be yielded from a coroutine.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./KeyEvent.html">KeyEvent</a>
-          </td>
-          <td>An object of this type is added to the queue whenever a keyboard event occurs.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./KeyModifier.html">KeyModifier</a>
-          </td>
-          <td>Indicates which modifier keys are pressed during key events.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./KeyState.html">KeyState</a>
-          </td>
-          <td>Indicates the current state of a key associated with a <a href="../GameStack/KeyEvent.html">GameStack.KeyEvent</a>.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./LowMemory.html">LowMemory</a>
-          </td>
-          <td>An event type that signals the need to release unneeded resources.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Mathf.html">Mathf</a>
-          </td>
-          <td>Static utility methods for manipulating single-precision floating point values.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./OpenALException.html">OpenALException</a>
-          </td>
-          <td>Thrown when an OpenAL operation has failed.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./PanGesture.html">PanGesture</a>
-          </td>
-          <td>Instances of this class are added to the event queue when pan gestures have been detected.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Pause.html">Pause</a>
-          </td>
-          <td>An instance of this type is added to the event queue when the scene has been paused.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Ray.html">Ray</a>
-          </td>
-          <td>A utility class representing a ray.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Resize.html">Resize</a>
-          </td>
-          <td>An instance of this type is added to the event queue when the viewport has resized.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Resume.html">Resume</a>
-          </td>
-          <td>An instance of this type is added to the event queue when the scene has been resumed from a paused state.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Scene.html">Scene</a>
-          </td>
-          <td>The scene is responsible for updating its own objects, managing its own resources, and controlling any number of entities or views. Most apps will have types derived from Scene.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SceneCrossfader.html">SceneCrossfader</a>
-          </td>
-          <td>A special type of scene that manages other scenes and adds the ability to cross-fade between the two.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SoundChannel.html">SoundChannel</a>
-          </td>
-          <td>A single sound channel through which one sound at a time may be played.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SoundEffect.html">SoundEffect</a>
-          </td>
-          <td>An individual sound effect asset, commonly a short sound snippet that will be buffered in memory.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Start.html">Start</a>
-          </td>
-          <td>An instance of this type is added to the event queue when the scene is clear to begin running.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./StreamingOpusFile.html">StreamingOpusFile</a>
-          </td>
-          <td>A sound asset capable of streaming rather than buffering entirely into memory.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./StreamingSoundChannel.html">StreamingSoundChannel</a>
-          </td>
-          <td>A sound channel that can be used to play sounds streamed from asset resources.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SwipeDirection.html">SwipeDirection</a>
-          </td>
-          <td>Indicates a swipe gesture's direction.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./SwipeGesture.html">SwipeGesture</a>
-          </td>
-          <td>An instance of this type is added to the event queue whenever a swipe gesture is detected.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./TapGesture.html">TapGesture</a>
-          </td>
-          <td>Instances of this type are added to the event queue whenever a tap gesture is detected.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ThreadContext.html">ThreadContext</a>
-          </td>
-          <td>Provides static access to the state of the current thread.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Touch.html">Touch</a>
-          </td>
-          <td>Instances of this type will be added to the event queue whenever a touch event occurs.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./TouchState.html">TouchState</a>
-          </td>
-          <td>Indicates the current phase of an individual touch.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Transition`1.html">Transition&lt;T&gt;</a>
-          </td>
-          <td>Transitions a property from one value to another over time.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Tween.html">Tween</a>
-          </td>
-          <td>Static class providing common easing functions.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./TweenFunc`1.html">TweenFunc&lt;T&gt;</a>
-          </td>
-          <td>Functions matching this delegate can be used with <a href="../GameStack/Controller`1.html">GameStack.Controller&lt;T&gt;</a> and <a href="../GameStack/Transition`1.html">GameStack.Transition&lt;T&gt;</a>.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./WaitFor.html">WaitFor</a>
-          </td>
-          <td>Any class deriving from this class can be yielded from a coroutine.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./WaitFor`1.html">WaitFor&lt;T&gt;</a>
-          </td>
-          <td>Any class deriving from this class can be yielded from a coroutine.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./WaitForAny`1.html">WaitForAny&lt;T&gt;</a>
-          </td>
-          <td>Aggregates several <a href="../GameStack/IWaitFor.html">GameStack.IWaitFor</a> objects to suspend execution until any have completed.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./WaitForCoroutine.html">WaitForCoroutine</a>
-          </td>
-          <td>When yielded from a coroutine, waits for a specified coroutine to complete before continuing execution.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./WaitForTime.html">WaitForTime</a>
-          </td>
-          <td>When yielded, suspends execution until the specified period of time has passed.</td>
-        </tr>
-      </table>
-    </div>
-    <div class="Members">
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./EventBase.html">EventBase</a>
+            </td>
+            <td>Abstract base class for all GameStack events.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./FrameArgs.html">FrameArgs</a>
+            </td>
+            <td>Contains information for a single frame.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Gesture.html">Gesture</a>
+            </td>
+            <td>Abstract base class for all gesture events.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./GestureState.html">GestureState</a>
+            </td>
+            <td>Indicates the phase that a gesture is currently in.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./GestureType.html">GestureType</a>
+            </td>
+            <td>Indicates the type of the current gesture.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./ICoroutine.html">ICoroutine</a>
+            </td>
+            <td>Coroutines are controlled through this interface.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./IGameView.html">IGameView</a>
+            </td>
+            <td>A cross-platform interface for platform-specific game view implementations.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./IGestureInput.html">IGestureInput</a>
+            </td>
+            <td>Implemented by all UI views that which to receive gesture events within their frame.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./IHandler`1.html">IHandler&lt;T&gt;</a>
+            </td>
+            <td>Any class can implement this interface to receive the specified type of event.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./IStreamingSound.html">IStreamingSound</a>
+            </td>
+            <td>Generic interface for a streaming sound asset.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./IUpdater.html">IUpdater</a>
+            </td>
+            <td>Implemented by any object that wants to receive an update each frame.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./IWaitFor.html">IWaitFor</a>
+            </td>
+            <td>Implemented by any type that can be yielded from a coroutine.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./IWaitFor`1.html">IWaitFor&lt;T&gt;</a>
+            </td>
+            <td>Implemented by any type that can be yielded from a coroutine.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./KeyEvent.html">KeyEvent</a>
+            </td>
+            <td>An object of this type is added to the queue whenever a keyboard event occurs.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./KeyModifier.html">KeyModifier</a>
+            </td>
+            <td>Indicates which modifier keys are pressed during key events.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./KeyState.html">KeyState</a>
+            </td>
+            <td>Indicates the current state of a key associated with a <a href="../GameStack/KeyEvent.html">GameStack.KeyEvent</a>.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./LowMemory.html">LowMemory</a>
+            </td>
+            <td>An event type that signals the need to release unneeded resources.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Mathf.html">Mathf</a>
+            </td>
+            <td>Static utility methods for manipulating single-precision floating point values.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./OpenALException.html">OpenALException</a>
+            </td>
+            <td>Thrown when an OpenAL operation has failed.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./PanGesture.html">PanGesture</a>
+            </td>
+            <td>Instances of this class are added to the event queue when pan gestures have been detected.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Pause.html">Pause</a>
+            </td>
+            <td>An instance of this type is added to the event queue when the scene has been paused.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Ray.html">Ray</a>
+            </td>
+            <td>A utility class representing a ray.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Resize.html">Resize</a>
+            </td>
+            <td>An instance of this type is added to the event queue when the viewport has resized.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Resume.html">Resume</a>
+            </td>
+            <td>An instance of this type is added to the event queue when the scene has been resumed from a paused state.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Scene.html">Scene</a>
+            </td>
+            <td>The scene is responsible for updating its own objects, managing its own resources, and controlling any number of entities or views. Most apps will have types derived from Scene.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./SceneCrossfader.html">SceneCrossfader</a>
+            </td>
+            <td>A special type of scene that manages other scenes and adds the ability to cross-fade between the two.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./SoundChannel.html">SoundChannel</a>
+            </td>
+            <td>A single sound channel through which one sound at a time may be played.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./SoundEffect.html">SoundEffect</a>
+            </td>
+            <td>An individual sound effect asset, commonly a short sound snippet that will be buffered in memory.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Start.html">Start</a>
+            </td>
+            <td>An instance of this type is added to the event queue when the scene is clear to begin running.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./StreamingOpusFile.html">StreamingOpusFile</a>
+            </td>
+            <td>A sound asset capable of streaming rather than buffering entirely into memory.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./StreamingSoundChannel.html">StreamingSoundChannel</a>
+            </td>
+            <td>A sound channel that can be used to play sounds streamed from asset resources.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./SwipeDirection.html">SwipeDirection</a>
+            </td>
+            <td>Indicates a swipe gesture's direction.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./SwipeGesture.html">SwipeGesture</a>
+            </td>
+            <td>An instance of this type is added to the event queue whenever a swipe gesture is detected.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./TapGesture.html">TapGesture</a>
+            </td>
+            <td>Instances of this type are added to the event queue whenever a tap gesture is detected.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./ThreadContext.html">ThreadContext</a>
+            </td>
+            <td>Provides static access to the state of the current thread.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Touch.html">Touch</a>
+            </td>
+            <td>Instances of this type will be added to the event queue whenever a touch event occurs.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./TouchState.html">TouchState</a>
+            </td>
+            <td>Indicates the current phase of an individual touch.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Transition`1.html">Transition&lt;T&gt;</a>
+            </td>
+            <td>Transitions a property from one value to another over time.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Tween.html">Tween</a>
+            </td>
+            <td>Static class providing common easing functions.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./TweenFunc`1.html">TweenFunc&lt;T&gt;</a>
+            </td>
+            <td>Functions matching this delegate can be used with <a href="../GameStack/Controller`1.html">GameStack.Controller&lt;T&gt;</a> and <a href="../GameStack/Transition`1.html">GameStack.Transition&lt;T&gt;</a>.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./WaitFor.html">WaitFor</a>
+            </td>
+            <td>Any class deriving from this class can be yielded from a coroutine.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./WaitFor`1.html">WaitFor&lt;T&gt;</a>
+            </td>
+            <td>Any class deriving from this class can be yielded from a coroutine.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./WaitForAny`1.html">WaitForAny&lt;T&gt;</a>
+            </td>
+            <td>Aggregates several <a href="../GameStack/IWaitFor.html">GameStack.IWaitFor</a> objects to suspend execution until any have completed.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./WaitForCoroutine.html">WaitForCoroutine</a>
+            </td>
+            <td>When yielded from a coroutine, waits for a specified coroutine to complete before continuing execution.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./WaitForTime.html">WaitForTime</a>
+            </td>
+            <td>When yielded, suspends execution until the specified period of time has passed.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Members">
+      </div>
     </div>
     <hr size="1" />
     <div class="Copyright">© 2014 iconmobile LLC</div>

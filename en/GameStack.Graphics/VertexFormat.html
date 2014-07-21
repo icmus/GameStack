@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.VertexFormat</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,288 +210,290 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.VertexFormat">VertexFormat  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.VertexFormat:Summary">A vertex format specifies which attributes are passed into the shader for each vertex.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.VertexFormat:Signature">public class  <b>VertexFormat</b></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.VertexFormat:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.VertexFormat:Docs:Remarks">Typically used with <a href="../GameStack.Graphics/VertexBuffer.html">GameStack.Graphics.VertexBuffer</a>. Instances of this class are usually created by asset loaders like <a href="../GameStack.Graphics/Model.html">GameStack.Graphics.Model</a>.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.VertexFormat:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.VertexFormat:Signature">public class  <b>VertexFormat</b></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.VertexFormat:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.VertexFormat:Docs:Remarks">Typically used with <a href="../GameStack.Graphics/VertexBuffer.html">GameStack.Graphics.VertexBuffer</a>. Instances of this class are usually created by asset loaders like <a href="../GameStack.Graphics/Model.html">GameStack.Graphics.Model</a>.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.VertexFormat:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[])">VertexFormat</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <b>params</b> <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>[])</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Fields</h2>
+          <div class="SectionBox" id="Public Fields">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>static readonly </div>
+                  </td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[])">VertexFormat</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <b>params</b> <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>[])</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#F:GameStack.Graphics.VertexFormat.Position">Position</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
+                    </i>. A convenience format specifying position; the bare minimum.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>static readonly </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#F:GameStack.Graphics.VertexFormat.PositionColor">PositionColor</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
+                    </i>. A convenience format specifying position and color.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>static readonly </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#F:GameStack.Graphics.VertexFormat.PositionColorUV">PositionColorUV</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
+                    </i>. A convenience format specifying position, color, and a texture coordinate.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>static readonly </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#F:GameStack.Graphics.VertexFormat.PositionUV">PositionUV</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
+                    </i>. A convenience format specifying a position and texture coordinate.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Fields</h2>
-        <div class="SectionBox" id="Public Fields">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>static readonly </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#F:GameStack.Graphics.VertexFormat.Position">Position</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
-                  </i>. A convenience format specifying position; the bare minimum.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static readonly </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#F:GameStack.Graphics.VertexFormat.PositionColor">PositionColor</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
-                  </i>. A convenience format specifying position and color.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static readonly </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#F:GameStack.Graphics.VertexFormat.PositionColorUV">PositionColorUV</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
-                  </i>. A convenience format specifying position, color, and a texture coordinate.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static readonly </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#F:GameStack.Graphics.VertexFormat.PositionUV">PositionUV</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>
-                  </i>. A convenience format specifying a position and texture coordinate.</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.VertexFormat.Elements">Elements</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>[]</i>. Gets the elements in the vertex format.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div><i>default property</i></div><div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.VertexFormat.Item(System.String)">Item</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>
-                  </i>. Gets a vertex element by name.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.VertexFormat.Stride">Stride</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. Gets the stride, or the total size of the vertex elements in floats.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.VertexFormat.Elements">Elements</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>[]</i>. Gets the elements in the vertex format.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div><i>default property</i></div><div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.VertexFormat.Item(System.String)">Item</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>
+                    </i>. Gets a vertex element by name.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.VertexFormat.Stride">Stride</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                    </i>. Gets the stride, or the total size of the vertex elements in floats.</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.VertexFormat:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[])">VertexFormat Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[]):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>VertexFormat</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> stride, <b>params</b> <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>[] elements)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[]):Parameters">
-            <dl>
-              <dt>
-                <i>stride</i>
-              </dt>
-              <dd>The total size of the vertex format in floats.</dd>
-              <dt>
-                <i>elements</i>
-              </dt>
-              <dd>One or more elements.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.VertexFormat:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[])">VertexFormat Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[]):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>VertexFormat</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> stride, <b>params</b> <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>[] elements)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[]):Parameters">
+              <dl>
+                <dt>
+                  <i>stride</i>
+                </dt>
+                <dd>The total size of the vertex format in floats.</dd>
+                <dt>
+                  <i>elements</i>
+                </dt>
+                <dd>One or more elements.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[]):Remarks">To be useful, at least a Position element needs to be specified.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[]):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[]):Remarks">To be useful, at least a Position element needs to be specified.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.VertexFormat(System.Int32,GameStack.Graphics.VertexElement[]):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.VertexFormat.Elements">Elements Property</h3>
-        <blockquote id="P:GameStack.Graphics.VertexFormat.Elements:member">
-          <p class="Summary">Gets the elements in the vertex format.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>[] <b>Elements</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexFormat.Elements:Value">
+          <h3 id="P:GameStack.Graphics.VertexFormat.Elements">Elements Property</h3>
+          <blockquote id="P:GameStack.Graphics.VertexFormat.Elements:member">
+            <p class="Summary">Gets the elements in the vertex format.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a>[] <b>Elements</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexFormat.Elements:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Elements:Remarks">To be useful, at least a Position element needs to be specified.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Elements:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Elements:Remarks">To be useful, at least a Position element needs to be specified.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Elements:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.VertexFormat.Item(System.String)">Item Property</h3>
-        <blockquote id="P:GameStack.Graphics.VertexFormat.Item(System.String):member">
-          <p class="Summary">Gets a vertex element by name.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">
-            <p>
-              <i>This is the default property for this class.</i>
-            </p>public <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name] { get; }</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexFormat.Item(System.String):Parameters">
-            <dl>
-              <dt>
-                <i>name</i>
-              </dt>
-              <dd>Element name matching shader attribute name.</dd>
-            </dl>
+          <h3 id="P:GameStack.Graphics.VertexFormat.Item(System.String)">Item Property</h3>
+          <blockquote id="P:GameStack.Graphics.VertexFormat.Item(System.String):member">
+            <p class="Summary">Gets a vertex element by name.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">
+              <p>
+                <i>This is the default property for this class.</i>
+              </p>public <a href="../GameStack.Graphics/VertexElement.html">VertexElement</a> this [<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name] { get; }</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexFormat.Item(System.String):Parameters">
+              <dl>
+                <dt>
+                  <i>name</i>
+                </dt>
+                <dd>Element name matching shader attribute name.</dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexFormat.Item(System.String):Value">A matching element or null if not found.</blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Item(System.String):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Item(System.String):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexFormat.Item(System.String):Value">A matching element or null if not found.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Item(System.String):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Item(System.String):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="F:GameStack.Graphics.VertexFormat.Position">Position Field</h3>
-        <blockquote id="F:GameStack.Graphics.VertexFormat.Position:member">
-          <p class="Summary">A convenience format specifying position; the bare minimum.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static readonly <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>Position</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.Position:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.Position:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="F:GameStack.Graphics.VertexFormat.PositionColor">PositionColor Field</h3>
-        <blockquote id="F:GameStack.Graphics.VertexFormat.PositionColor:member">
-          <p class="Summary">A convenience format specifying position and color.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static readonly <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>PositionColor</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionColor:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionColor:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="F:GameStack.Graphics.VertexFormat.PositionColorUV">PositionColorUV Field</h3>
-        <blockquote id="F:GameStack.Graphics.VertexFormat.PositionColorUV:member">
-          <p class="Summary">A convenience format specifying position, color, and a texture coordinate.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static readonly <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>PositionColorUV</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionColorUV:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionColorUV:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="F:GameStack.Graphics.VertexFormat.PositionUV">PositionUV Field</h3>
-        <blockquote id="F:GameStack.Graphics.VertexFormat.PositionUV:member">
-          <p class="Summary">A convenience format specifying a position and texture coordinate.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static readonly <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>PositionUV</b> </div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionUV:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionUV:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.VertexFormat.Stride">Stride Property</h3>
-        <blockquote id="P:GameStack.Graphics.VertexFormat.Stride:member">
-          <p class="Summary">Gets the stride, or the total size of the vertex elements in floats.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Stride</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexFormat.Stride:Value">
+          <h3 id="F:GameStack.Graphics.VertexFormat.Position">Position Field</h3>
+          <blockquote id="F:GameStack.Graphics.VertexFormat.Position:member">
+            <p class="Summary">A convenience format specifying position; the bare minimum.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public static readonly <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>Position</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.Position:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.Position:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Stride:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Stride:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="F:GameStack.Graphics.VertexFormat.PositionColor">PositionColor Field</h3>
+          <blockquote id="F:GameStack.Graphics.VertexFormat.PositionColor:member">
+            <p class="Summary">A convenience format specifying position and color.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public static readonly <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>PositionColor</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionColor:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionColor:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="F:GameStack.Graphics.VertexFormat.PositionColorUV">PositionColorUV Field</h3>
+          <blockquote id="F:GameStack.Graphics.VertexFormat.PositionColorUV:member">
+            <p class="Summary">A convenience format specifying position, color, and a texture coordinate.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public static readonly <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>PositionColorUV</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionColorUV:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionColorUV:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="F:GameStack.Graphics.VertexFormat.PositionUV">PositionUV Field</h3>
+          <blockquote id="F:GameStack.Graphics.VertexFormat.PositionUV:member">
+            <p class="Summary">A convenience format specifying a position and texture coordinate.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public static readonly <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> <b>PositionUV</b> </div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionUV:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="F:GameStack.Graphics.VertexFormat.PositionUV:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="P:GameStack.Graphics.VertexFormat.Stride">Stride Property</h3>
+          <blockquote id="P:GameStack.Graphics.VertexFormat.Stride:member">
+            <p class="Summary">Gets the stride, or the total size of the vertex elements in floats.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Stride</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.VertexFormat.Stride:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Stride:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.VertexFormat.Stride:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

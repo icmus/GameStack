@@ -3,8 +3,9 @@
     <title>GameStack.Gui.View</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,945 +210,947 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.View">View  Class</h1>
     <p class="Summary" id="T:GameStack.Gui.View:Summary">The base class for all objects participating in a UI view hierarchy.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Gui.View:Signature">public class  <b>View</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Gui.View:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.View:Docs:Remarks">This class is overriden to create controls with specific behaviors and visuals. This class can also be used by itself as a generic container for other views, since all views can contain other views.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.View:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Gui.View:Signature">public class  <b>View</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Gui.View:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.View:Docs:Remarks">This class is overriden to create controls with specific behaviors and visuals. This class can also be used by itself as a generic container for other views, since all views can contain other views.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.View:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Gui.View()">View</a>
+                      </b>()</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Gui.View(GameStack.Gui.LayoutSpec)">View</a>
+                      </b>(<a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Gui.View()">View</a>
-                    </b>()</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+                      <a href="#P:GameStack.Gui.View.BlockInput">BlockInput</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                    </i>. Is the view's input blocked?</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Gui.View(GameStack.Gui.LayoutSpec)">View</a>
-                    </b>(<a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#P:GameStack.Gui.View.Children">Children</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;View&gt;</a>
+                    </i>. Gets the immediate children of this view.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.Frame">Frame</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.RectangleF">System.Drawing.RectangleF</a>
+                    </i>. Gets the control's frame relative to its parent.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.Margins">Margins</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>
+                    </i>. Get the left, top, right, and bottom distances from the parent's frame.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.Parent">Parent</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Gui/View.html">View</a>
+                    </i>. Gets the view's parent view, or returns null if the view is not part of a hierarchy, or is at the root of a hierarchy.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.Size">Size</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.SizeF">System.Drawing.SizeF</a>
+                    </i>. Gets the size of the view in pixels.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.Spec">Spec</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a>
+                    </i>. Gets or sets the layout specification.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.Tag">Tag</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
+                    </i>. An optional data tag of any type.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.Transform">Transform</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
+                    </i>. Gets or sets the local transform applied to this view in its parent's coordinate space.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.TransformInv">TransformInv</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
+                    </i>. Gets or sets the local inverse transform.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.View.ZDepth">ZDepth</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                    </i>. The view's Z-depth relative to the parent. Higher values are closer to the camera.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.BlockInput">BlockInput</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. Is the view's input blocked?</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.Children">Children</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;View&gt;</a>
-                  </i>. Gets the immediate children of this view.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.Frame">Frame</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.RectangleF">System.Drawing.RectangleF</a>
-                  </i>. Gets the control's frame relative to its parent.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.Margins">Margins</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>
-                  </i>. Get the left, top, right, and bottom distances from the parent's frame.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.Parent">Parent</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Gui/View.html">View</a>
-                  </i>. Gets the view's parent view, or returns null if the view is not part of a hierarchy, or is at the root of a hierarchy.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.Size">Size</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.SizeF">System.Drawing.SizeF</a>
-                  </i>. Gets the size of the view in pixels.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.Spec">Spec</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a>
-                  </i>. Gets or sets the layout specification.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.Tag">Tag</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
-                  </i>. An optional data tag of any type.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.Transform">Transform</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. Gets or sets the local transform applied to this view in its parent's coordinate space.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.TransformInv">TransformInv</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. Gets or sets the local inverse transform.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.View.ZDepth">ZDepth</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. The view's Z-depth relative to the parent. Higher values are closer to the camera.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.AddView(GameStack.Gui.View)">AddView</a>
+                    </b>(<a href="../GameStack.Gui/View.html">View</a>)<blockquote>Add a view as a child of this view.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.ClearViews()">ClearViews</a>
+                    </b>()<blockquote>Dispose and remove all child views.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2)">ContainsPoint</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Determines whether a point within the view lies within the view's frame.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to dispose child views.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.Draw(OpenTK.Matrix4)">Draw</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draw the view and its children using the specified world transform.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindInputSinkByPoint</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="../GameStack.Gui/IPointerInput.html">IPointerInput</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindViewByPoint</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="../GameStack.Gui/View.html">View</a></nobr><blockquote>Find the appropriate input sink, if any, for an event at the specified point.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.GetCumulativeTransform()">GetCumulativeTransform</a>
+                    </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a></nobr><blockquote>Calculate the cumulative transform of this view based on its parents.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.GetCumulativeTransformInv()">GetCumulativeTransformInv</a>
+                    </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a></nobr><blockquote>Calculate the inverse cumulative transform of this view based on its parents.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.Layout()">Layout</a>
+                    </b>()<blockquote>Force the view to recursively process layout.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.Overlaps(GameStack.Gui.View)">Overlaps</a>
+                    </b>(<a href="../GameStack.Gui/View.html">View</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Determines whether two views overlap in 2D space.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.RemoveView(GameStack.Gui.View)">RemoveView</a>
+                    </b>(<a href="../GameStack.Gui/View.html">View</a>)<blockquote>Removes a child view from the hierarchy.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.SortChildren()">SortChildren</a>
+                    </b>()<blockquote>Sort all child views so that they are ordered from smallest to highest z-depth.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.Update(GameStack.FrameArgs)">Update</a>
+                    </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote></blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.AddView(GameStack.Gui.View)">AddView</a>
-                  </b>(<a href="../GameStack.Gui/View.html">View</a>)<blockquote>Add a view as a child of this view.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.ClearViews()">ClearViews</a>
-                  </b>()<blockquote>Dispose and remove all child views.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2)">ContainsPoint</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Determines whether a point within the view lies within the view's frame.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to dispose child views.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.Draw(OpenTK.Matrix4)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draw the view and its children using the specified world transform.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindInputSinkByPoint</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="../GameStack.Gui/IPointerInput.html">IPointerInput</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindViewByPoint</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="../GameStack.Gui/View.html">View</a></nobr><blockquote>Find the appropriate input sink, if any, for an event at the specified point.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.GetCumulativeTransform()">GetCumulativeTransform</a>
-                  </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a></nobr><blockquote>Calculate the cumulative transform of this view based on its parents.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.GetCumulativeTransformInv()">GetCumulativeTransformInv</a>
-                  </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a></nobr><blockquote>Calculate the inverse cumulative transform of this view based on its parents.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.Layout()">Layout</a>
-                  </b>()<blockquote>Force the view to recursively process layout.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.Overlaps(GameStack.Gui.View)">Overlaps</a>
-                  </b>(<a href="../GameStack.Gui/View.html">View</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Determines whether two views overlap in 2D space.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.RemoveView(GameStack.Gui.View)">RemoveView</a>
-                  </b>(<a href="../GameStack.Gui/View.html">View</a>)<blockquote>Removes a child view from the hierarchy.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.SortChildren()">SortChildren</a>
-                  </b>()<blockquote>Sort all child views so that they are ordered from smallest to highest z-depth.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.Update(GameStack.FrameArgs)">Update</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote></blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Protected Methods</h2>
-        <div class="SectionBox" id="Protected Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>When overridden, should perform all actions required to render the view.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs)">OnUpdate</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>When overridden, should perform all actions required to update the view.</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Protected Methods</h2>
+          <div class="SectionBox" id="Protected Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
+                    </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>When overridden, should perform all actions required to render the view.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs)">OnUpdate</a>
+                    </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>When overridden, should perform all actions required to update the view.</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Gui.View:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Gui.View()">View Constructor</h3>
-        <blockquote id="C:GameStack.Gui.View():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>View</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Gui.View():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Gui.View():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec)">View Constructor</h3>
-        <blockquote id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>View</b> (<a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a> spec)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec):Parameters">
-            <dl>
-              <dt>
-                <i>spec</i>
-              </dt>
-              <dd>Layout.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Gui.View:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Gui.View()">View Constructor</h3>
+          <blockquote id="C:GameStack.Gui.View():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>View</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Gui.View():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Gui.View():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.AddView(GameStack.Gui.View)">AddView Method</h3>
-        <blockquote id="M:GameStack.Gui.View.AddView(GameStack.Gui.View):member">
-          <p class="Summary">Add a view as a child of this view.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddView</b> (<a href="../GameStack.Gui/View.html">View</a> view)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.AddView(GameStack.Gui.View):Parameters">
-            <dl>
-              <dt>
-                <i>view</i>
-              </dt>
-              <dd>View to be added.</dd>
-            </dl>
+          <h3 id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec)">View Constructor</h3>
+          <blockquote id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>View</b> (<a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a> spec)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec):Parameters">
+              <dl>
+                <dt>
+                  <i>spec</i>
+                </dt>
+                <dd>Layout.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Gui.View(GameStack.Gui.LayoutSpec):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.AddView(GameStack.Gui.View):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.AddView(GameStack.Gui.View):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.BlockInput">BlockInput Property</h3>
-        <blockquote id="P:GameStack.Gui.View.BlockInput:member">
-          <p class="Summary">Is the view's input blocked?</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>BlockInput</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.BlockInput:Value">
+          <h3 id="M:GameStack.Gui.View.AddView(GameStack.Gui.View)">AddView Method</h3>
+          <blockquote id="M:GameStack.Gui.View.AddView(GameStack.Gui.View):member">
+            <p class="Summary">Add a view as a child of this view.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddView</b> (<a href="../GameStack.Gui/View.html">View</a> view)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.AddView(GameStack.Gui.View):Parameters">
+              <dl>
+                <dt>
+                  <i>view</i>
+                </dt>
+                <dd>View to be added.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.AddView(GameStack.Gui.View):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.AddView(GameStack.Gui.View):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.BlockInput:Remarks">When true, the view will not process any input events, nor will any descendants receive events. This property is useful for situations where you want to suppress user input while a transition finishes. By setting this on the root, you can disable input for the entire view hierarchy.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.BlockInput:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.Children">Children Property</h3>
-        <blockquote id="P:GameStack.Gui.View.Children:member">
-          <p class="Summary">Gets the immediate children of this view.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;View&gt;</a> <b>Children</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Children:Value">
+          <h3 id="P:GameStack.Gui.View.BlockInput">BlockInput Property</h3>
+          <blockquote id="P:GameStack.Gui.View.BlockInput:member">
+            <p class="Summary">Is the view's input blocked?</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>BlockInput</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.BlockInput:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.BlockInput:Remarks">When true, the view will not process any input events, nor will any descendants receive events. This property is useful for situations where you want to suppress user input while a transition finishes. By setting this on the root, you can disable input for the entire view hierarchy.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.BlockInput:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Children:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Children:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.ClearViews()">ClearViews Method</h3>
-        <blockquote id="M:GameStack.Gui.View.ClearViews():member">
-          <p class="Summary">Dispose and remove all child views.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ClearViews</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.ClearViews():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.ClearViews():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2)">ContainsPoint Method</h3>
-        <blockquote id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):member">
-          <p class="Summary">Determines whether a point within the view lies within the view's frame.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ContainsPoint</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> point)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):Parameters">
-            <dl>
-              <dt>
-                <i>point</i>
-              </dt>
-              <dd>Absolute point in pixels in the same coordinate space as the UI root.</dd>
-            </dl>
+          <h3 id="P:GameStack.Gui.View.Children">Children Property</h3>
+          <blockquote id="P:GameStack.Gui.View.Children:member">
+            <p class="Summary">Gets the immediate children of this view.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;View&gt;</a> <b>Children</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Children:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Children:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Children:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):Returns">True if the point is within the view's frame.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.Dispose()">Dispose Method</h3>
-        <blockquote id="M:GameStack.Gui.View.Dispose():member">
-          <p class="Summary">Must be called to dispose child views.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Dispose():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Dispose():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4)">Draw Method</h3>
-        <blockquote id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4):member">
-          <p class="Summary">Draw the view and its children using the specified world transform.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> parentTransform)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4):Parameters">
-            <dl>
-              <dt>
-                <i>parentTransform</i>
-              </dt>
-              <dd>The cumulative identity applied to the parent, or identity for none.</dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.View.ClearViews()">ClearViews Method</h3>
+          <blockquote id="M:GameStack.Gui.View.ClearViews():member">
+            <p class="Summary">Dispose and remove all child views.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>ClearViews</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.ClearViews():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.ClearViews():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4):Remarks">Usually not called directly except with the <a href="../GameStack.Gui/RootView.html">GameStack.Gui.RootView</a> class when your scene wants to draw the view hierarchy.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindInputSinkByPoint Method</h3>
-        <blockquote id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):member">
-          <p class="Summary">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Gui/IPointerInput.html">IPointerInput</a> <b>FindInputSinkByPoint</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> point, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> parentInv, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Parameters">
-            <dl>
-              <dt>
-                <i>point</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-              <dt>
-                <i>parentInv</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-              <dt>
-                <i>where</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2)">ContainsPoint Method</h3>
+          <blockquote id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):member">
+            <p class="Summary">Determines whether a point within the view lies within the view's frame.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ContainsPoint</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> point)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):Parameters">
+              <dl>
+                <dt>
+                  <i>point</i>
+                </dt>
+                <dd>Absolute point in pixels in the same coordinate space as the UI root.</dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):Returns">True if the point is within the view's frame.</blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Returns">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          <h3 id="M:GameStack.Gui.View.Dispose()">Dispose Method</h3>
+          <blockquote id="M:GameStack.Gui.View.Dispose():member">
+            <p class="Summary">Must be called to dispose child views.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Dispose():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Dispose():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Remarks">
-            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindViewByPoint Method</h3>
-        <blockquote id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):member">
-          <p class="Summary">Find the appropriate input sink, if any, for an event at the specified point.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Gui/View.html">View</a> <b>FindViewByPoint</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> point, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> parentInv, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Parameters">
-            <dl>
-              <dt>
-                <i>point</i>
-              </dt>
-              <dd>Absolute point in pixels in the same coordinate space as the UI root.</dd>
-              <dt>
-                <i>parentInv</i>
-              </dt>
-              <dd>The cumulative inverse transform of the parent.</dd>
-              <dt>
-                <i>where</i>
-              </dt>
-              <dd>The relative point within the view, if found.</dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4)">Draw Method</h3>
+          <blockquote id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4):member">
+            <p class="Summary">Draw the view and its children using the specified world transform.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> parentTransform)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4):Parameters">
+              <dl>
+                <dt>
+                  <i>parentTransform</i>
+                </dt>
+                <dd>The cumulative identity applied to the parent, or identity for none.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4):Remarks">Usually not called directly except with the <a href="../GameStack.Gui/RootView.html">GameStack.Gui.RootView</a> class when your scene wants to draw the view hierarchy.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Draw(OpenTK.Matrix4):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Returns">A reference to the handling view or null if there is none.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Remarks">Usually not called directly.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.Frame">Frame Property</h3>
-        <blockquote id="P:GameStack.Gui.View.Frame:member">
-          <p class="Summary">Gets the control's frame relative to its parent.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.RectangleF">System.Drawing.RectangleF</a> <b>Frame</b>  { get; protected set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Frame:Value">
+          <h3 id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindInputSinkByPoint Method</h3>
+          <blockquote id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):member">
+            <p class="Summary">
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Gui/IPointerInput.html">IPointerInput</a> <b>FindInputSinkByPoint</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> point, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> parentInv, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Parameters">
+              <dl>
+                <dt>
+                  <i>point</i>
+                </dt>
+                <dd>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </dd>
+                <dt>
+                  <i>parentInv</i>
+                </dt>
+                <dd>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </dd>
+                <dt>
+                  <i>where</i>
+                </dt>
+                <dd>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Returns">
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Remarks">
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Frame:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Frame:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.GetCumulativeTransform()">GetCumulativeTransform Method</h3>
-        <blockquote id="M:GameStack.Gui.View.GetCumulativeTransform():member">
-          <p class="Summary">Calculate the cumulative transform of this view based on its parents.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>GetCumulativeTransform</b> ()</div>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.GetCumulativeTransform():Returns">
+          <h3 id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindViewByPoint Method</h3>
+          <blockquote id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):member">
+            <p class="Summary">Find the appropriate input sink, if any, for an event at the specified point.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Gui/View.html">View</a> <b>FindViewByPoint</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> point, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> parentInv, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> where)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Parameters">
+              <dl>
+                <dt>
+                  <i>point</i>
+                </dt>
+                <dd>Absolute point in pixels in the same coordinate space as the UI root.</dd>
+                <dt>
+                  <i>parentInv</i>
+                </dt>
+                <dd>The cumulative inverse transform of the parent.</dd>
+                <dt>
+                  <i>where</i>
+                </dt>
+                <dd>The relative point within the view, if found.</dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Returns">A reference to the handling view or null if there is none.</blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Remarks">Usually not called directly.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.GetCumulativeTransform():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.GetCumulativeTransform():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.GetCumulativeTransformInv()">GetCumulativeTransformInv Method</h3>
-        <blockquote id="M:GameStack.Gui.View.GetCumulativeTransformInv():member">
-          <p class="Summary">Calculate the inverse cumulative transform of this view based on its parents.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>GetCumulativeTransformInv</b> ()</div>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.GetCumulativeTransformInv():Returns">
+          <h3 id="P:GameStack.Gui.View.Frame">Frame Property</h3>
+          <blockquote id="P:GameStack.Gui.View.Frame:member">
+            <p class="Summary">Gets the control's frame relative to its parent.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.RectangleF">System.Drawing.RectangleF</a> <b>Frame</b>  { get; protected set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Frame:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Frame:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Frame:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.GetCumulativeTransformInv():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.GetCumulativeTransformInv():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.Layout()">Layout Method</h3>
-        <blockquote id="M:GameStack.Gui.View.Layout():member">
-          <p class="Summary">Force the view to recursively process layout.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Layout</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Layout():Remarks">Usually not called directly.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Layout():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.Margins">Margins Property</h3>
-        <blockquote id="P:GameStack.Gui.View.Margins:member">
-          <p class="Summary">Get the left, top, right, and bottom distances from the parent's frame.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> <b>Margins</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Margins:Value">
+          <h3 id="M:GameStack.Gui.View.GetCumulativeTransform()">GetCumulativeTransform Method</h3>
+          <blockquote id="M:GameStack.Gui.View.GetCumulativeTransform():member">
+            <p class="Summary">Calculate the cumulative transform of this view based on its parents.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>GetCumulativeTransform</b> ()</div>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.GetCumulativeTransform():Returns">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.GetCumulativeTransform():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.GetCumulativeTransform():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Margins:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Margins:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@)">OnDraw Method</h3>
-        <blockquote id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@):member">
-          <p class="Summary">When overridden, should perform all actions required to render the view.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDraw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> transform)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@):Parameters">
-            <dl>
-              <dt>
-                <i>transform</i>
-              </dt>
-              <dd>The cumulative transform that should be applied to this view.</dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.View.GetCumulativeTransformInv()">GetCumulativeTransformInv Method</h3>
+          <blockquote id="M:GameStack.Gui.View.GetCumulativeTransformInv():member">
+            <p class="Summary">Calculate the inverse cumulative transform of this view based on its parents.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>GetCumulativeTransformInv</b> ()</div>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.GetCumulativeTransformInv():Returns">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.GetCumulativeTransformInv():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.GetCumulativeTransformInv():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs)">OnUpdate Method</h3>
-        <blockquote id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs):member">
-          <p class="Summary">When overridden, should perform all actions required to update the view.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnUpdate</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> e)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs):Parameters">
-            <dl>
-              <dt>
-                <i>e</i>
-              </dt>
-              <dd>Frame info.</dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.View.Layout()">Layout Method</h3>
+          <blockquote id="M:GameStack.Gui.View.Layout():member">
+            <p class="Summary">Force the view to recursively process layout.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Layout</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Layout():Remarks">Usually not called directly.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Layout():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View)">Overlaps Method</h3>
-        <blockquote id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):member">
-          <p class="Summary">Determines whether two views overlap in 2D space.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Overlaps</b> (<a href="../GameStack.Gui/View.html">View</a> other)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):Parameters">
-            <dl>
-              <dt>
-                <i>other</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="P:GameStack.Gui.View.Margins">Margins Property</h3>
+          <blockquote id="P:GameStack.Gui.View.Margins:member">
+            <p class="Summary">Get the left, top, right, and bottom distances from the parent's frame.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> <b>Margins</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Margins:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Margins:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Margins:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):Returns">True if the two views overlap.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.Parent">Parent Property</h3>
-        <blockquote id="P:GameStack.Gui.View.Parent:member">
-          <p class="Summary">Gets the view's parent view, or returns null if the view is not part of a hierarchy, or is at the root of a hierarchy.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Gui/View.html">View</a> <b>Parent</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Parent:Value">
+          <h3 id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@)">OnDraw Method</h3>
+          <blockquote id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@):member">
+            <p class="Summary">When overridden, should perform all actions required to render the view.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDraw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> transform)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@):Parameters">
+              <dl>
+                <dt>
+                  <i>transform</i>
+                </dt>
+                <dd>The cumulative transform that should be applied to this view.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Parent:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Parent:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View)">RemoveView Method</h3>
-        <blockquote id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View):member">
-          <p class="Summary">Removes a child view from the hierarchy.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveView</b> (<a href="../GameStack.Gui/View.html">View</a> view)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View):Parameters">
-            <dl>
-              <dt>
-                <i>view</i>
-              </dt>
-              <dd>The view to be removed.</dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs)">OnUpdate Method</h3>
+          <blockquote id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs):member">
+            <p class="Summary">When overridden, should perform all actions required to update the view.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnUpdate</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> e)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs):Parameters">
+              <dl>
+                <dt>
+                  <i>e</i>
+                </dt>
+                <dd>Frame info.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View):Remarks">If the view is not a child of this view, no action is taken.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.Size">Size Property</h3>
-        <blockquote id="P:GameStack.Gui.View.Size:member">
-          <p class="Summary">Gets the size of the view in pixels.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.SizeF">System.Drawing.SizeF</a> <b>Size</b>  { get; protected set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Size:Value">
+          <h3 id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View)">Overlaps Method</h3>
+          <blockquote id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):member">
+            <p class="Summary">Determines whether two views overlap in 2D space.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Overlaps</b> (<a href="../GameStack.Gui/View.html">View</a> other)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):Parameters">
+              <dl>
+                <dt>
+                  <i>other</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):Returns">True if the two views overlap.</blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Overlaps(GameStack.Gui.View):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Size:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Size:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.SortChildren()">SortChildren Method</h3>
-        <blockquote id="M:GameStack.Gui.View.SortChildren():member">
-          <p class="Summary">Sort all child views so that they are ordered from smallest to highest z-depth.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SortChildren</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.SortChildren():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.SortChildren():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.Spec">Spec Property</h3>
-        <blockquote id="P:GameStack.Gui.View.Spec:member">
-          <p class="Summary">Gets or sets the layout specification.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a> <b>Spec</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Spec:Value">
+          <h3 id="P:GameStack.Gui.View.Parent">Parent Property</h3>
+          <blockquote id="P:GameStack.Gui.View.Parent:member">
+            <p class="Summary">Gets the view's parent view, or returns null if the view is not part of a hierarchy, or is at the root of a hierarchy.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Gui/View.html">View</a> <b>Parent</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Parent:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Parent:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Parent:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Spec:Remarks">See <a href="../GameStack.Gui/LayoutSpec.html">GameStack.Gui.LayoutSpec</a>.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Spec:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.Tag">Tag Property</h3>
-        <blockquote id="P:GameStack.Gui.View.Tag:member">
-          <p class="Summary">An optional data tag of any type.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>Tag</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Tag:Value">
+          <h3 id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View)">RemoveView Method</h3>
+          <blockquote id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View):member">
+            <p class="Summary">Removes a child view from the hierarchy.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveView</b> (<a href="../GameStack.Gui/View.html">View</a> view)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View):Parameters">
+              <dl>
+                <dt>
+                  <i>view</i>
+                </dt>
+                <dd>The view to be removed.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View):Remarks">If the view is not a child of this view, no action is taken.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.RemoveView(GameStack.Gui.View):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Tag:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Tag:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.Transform">Transform Property</h3>
-        <blockquote id="P:GameStack.Gui.View.Transform:member">
-          <p class="Summary">Gets or sets the local transform applied to this view in its parent's coordinate space.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>Transform</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Transform:Value">
+          <h3 id="P:GameStack.Gui.View.Size">Size Property</h3>
+          <blockquote id="P:GameStack.Gui.View.Size:member">
+            <p class="Summary">Gets the size of the view in pixels.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.SizeF">System.Drawing.SizeF</a> <b>Size</b>  { get; protected set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Size:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Size:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Size:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Transform:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.Transform:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.TransformInv">TransformInv Property</h3>
-        <blockquote id="P:GameStack.Gui.View.TransformInv:member">
-          <p class="Summary">Gets or sets the local inverse transform.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>TransformInv</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.TransformInv:Value">
+          <h3 id="M:GameStack.Gui.View.SortChildren()">SortChildren Method</h3>
+          <blockquote id="M:GameStack.Gui.View.SortChildren():member">
+            <p class="Summary">Sort all child views so that they are ordered from smallest to highest z-depth.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SortChildren</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.SortChildren():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.SortChildren():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.TransformInv:Remarks">Automatically updated when the local transform is set.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.TransformInv:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.View.Update(GameStack.FrameArgs)">Update Method</h3>
-        <blockquote id="M:GameStack.Gui.View.Update(GameStack.FrameArgs):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> e)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.Update(GameStack.FrameArgs):Parameters">
-            <dl>
-              <dt>
-                <i>e</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="P:GameStack.Gui.View.Spec">Spec Property</h3>
+          <blockquote id="P:GameStack.Gui.View.Spec:member">
+            <p class="Summary">Gets or sets the layout specification.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a> <b>Spec</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Spec:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Spec:Remarks">See <a href="../GameStack.Gui/LayoutSpec.html">GameStack.Gui.LayoutSpec</a>.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Spec:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Update(GameStack.FrameArgs):Remarks">Not usually called manually.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.View.Update(GameStack.FrameArgs):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.View.ZDepth">ZDepth Property</h3>
-        <blockquote id="P:GameStack.Gui.View.ZDepth:member">
-          <p class="Summary">The view's Z-depth relative to the parent. Higher values are closer to the camera.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>ZDepth</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.ZDepth:Value">
+          <h3 id="P:GameStack.Gui.View.Tag">Tag Property</h3>
+          <blockquote id="P:GameStack.Gui.View.Tag:member">
+            <p class="Summary">An optional data tag of any type.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>Tag</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Tag:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Tag:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Tag:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.ZDepth:Remarks">By default, the Z-depth of every view is set to 0.1f.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.View.ZDepth:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="P:GameStack.Gui.View.Transform">Transform Property</h3>
+          <blockquote id="P:GameStack.Gui.View.Transform:member">
+            <p class="Summary">Gets or sets the local transform applied to this view in its parent's coordinate space.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>Transform</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.Transform:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Transform:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.Transform:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="P:GameStack.Gui.View.TransformInv">TransformInv Property</h3>
+          <blockquote id="P:GameStack.Gui.View.TransformInv:member">
+            <p class="Summary">Gets or sets the local inverse transform.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> <b>TransformInv</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.TransformInv:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.TransformInv:Remarks">Automatically updated when the local transform is set.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.TransformInv:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Gui.View.Update(GameStack.FrameArgs)">Update Method</h3>
+          <blockquote id="M:GameStack.Gui.View.Update(GameStack.FrameArgs):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Update</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> e)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.View.Update(GameStack.FrameArgs):Parameters">
+              <dl>
+                <dt>
+                  <i>e</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Update(GameStack.FrameArgs):Remarks">Not usually called manually.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.View.Update(GameStack.FrameArgs):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="P:GameStack.Gui.View.ZDepth">ZDepth Property</h3>
+          <blockquote id="P:GameStack.Gui.View.ZDepth:member">
+            <p class="Summary">The view's Z-depth relative to the parent. Higher values are closer to the camera.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> <b>ZDepth</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.View.ZDepth:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.ZDepth:Remarks">By default, the Z-depth of every view is set to 0.1f.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.View.ZDepth:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

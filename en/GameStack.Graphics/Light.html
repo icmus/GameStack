@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.Light</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,275 +210,277 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Light">Light  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.Light:Summary">Abstract base class for different types of light.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.Light:Signature">public abstract class  <b>Light</b></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.Light:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Light:Docs:Remarks">Objects of this type can be added to <a href="../GameStack.Graphics/Lighting.html">GameStack.Graphics.Lighting</a> instances.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Light:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.Light:Signature">public abstract class  <b>Light</b></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.Light:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Light:Docs:Remarks">Objects of this type can be added to <a href="../GameStack.Graphics/Lighting.html">GameStack.Graphics.Lighting</a> instances.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Light:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3)">Light</a>
-                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3)">Light</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Light.Ambient">Ambient</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
-                  </i>. Gets or sets the ambient contribution.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Light.Attenuation">Attenuation</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
-                  </i>. Gets or sets the light's attenuation.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Light.Diffuse">Diffuse</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
-                  </i>. Gets or sets the diffuse contribution.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Light.Specular">Specular</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
-                  </i>. Gets or sets the specular contribution.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div>abstract </div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Light.Type">Type</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/LightType.html">LightType</a>
-                  </i>. Gets the light type.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Light.Vector">Vector</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
-                  </i>. Gets or sets the light vector.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Light.Ambient">Ambient</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
+                    </i>. Gets or sets the ambient contribution.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Light.Attenuation">Attenuation</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
+                    </i>. Gets or sets the light's attenuation.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Light.Diffuse">Diffuse</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
+                    </i>. Gets or sets the diffuse contribution.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Light.Specular">Specular</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
+                    </i>. Gets or sets the specular contribution.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div>abstract </div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Light.Type">Type</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/LightType.html">LightType</a>
+                    </i>. Gets the light type.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Light.Vector">Vector</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>
+                    </i>. Gets or sets the light vector.</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.Light:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3)">Light Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>Light</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> vector, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> ambient, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> diffuse, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> specular, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> attenuation)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3):Parameters">
-            <dl>
-              <dt>
-                <i>vector</i>
-              </dt>
-              <dd>The light vector (meaning is implementation-dependent).</dd>
-              <dt>
-                <i>ambient</i>
-              </dt>
-              <dd>Ambient contribution.</dd>
-              <dt>
-                <i>diffuse</i>
-              </dt>
-              <dd>Diffuse contribution.</dd>
-              <dt>
-                <i>specular</i>
-              </dt>
-              <dd>Specular contribution.</dd>
-              <dt>
-                <i>attenuation</i>
-              </dt>
-              <dd>Attenuation (where applicable).</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.Light:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3)">Light Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>Light</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> vector, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> ambient, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> diffuse, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> specular, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> attenuation)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3):Parameters">
+              <dl>
+                <dt>
+                  <i>vector</i>
+                </dt>
+                <dd>The light vector (meaning is implementation-dependent).</dd>
+                <dt>
+                  <i>ambient</i>
+                </dt>
+                <dd>Ambient contribution.</dd>
+                <dt>
+                  <i>diffuse</i>
+                </dt>
+                <dd>Diffuse contribution.</dd>
+                <dt>
+                  <i>specular</i>
+                </dt>
+                <dd>Specular contribution.</dd>
+                <dt>
+                  <i>attenuation</i>
+                </dt>
+                <dd>Attenuation (where applicable).</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Light(OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3,OpenTK.Vector3):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Light.Ambient">Ambient Property</h3>
-        <blockquote id="P:GameStack.Graphics.Light.Ambient:member">
-          <p class="Summary">Gets or sets the ambient contribution.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Ambient</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Ambient:Value">
+          <h3 id="P:GameStack.Graphics.Light.Ambient">Ambient Property</h3>
+          <blockquote id="P:GameStack.Graphics.Light.Ambient:member">
+            <p class="Summary">Gets or sets the ambient contribution.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Ambient</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Ambient:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Ambient:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Ambient:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Ambient:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Ambient:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Light.Attenuation">Attenuation Property</h3>
-        <blockquote id="P:GameStack.Graphics.Light.Attenuation:member">
-          <p class="Summary">Gets or sets the light's attenuation.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Attenuation</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Attenuation:Value">
+          <h3 id="P:GameStack.Graphics.Light.Attenuation">Attenuation Property</h3>
+          <blockquote id="P:GameStack.Graphics.Light.Attenuation:member">
+            <p class="Summary">Gets or sets the light's attenuation.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Attenuation</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Attenuation:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Attenuation:Remarks">For light types that support attenuation, this controls how much influence the light loses over an object as it moves further away.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Attenuation:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Attenuation:Remarks">For light types that support attenuation, this controls how much influence the light loses over an object as it moves further away.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Attenuation:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Light.Diffuse">Diffuse Property</h3>
-        <blockquote id="P:GameStack.Graphics.Light.Diffuse:member">
-          <p class="Summary">Gets or sets the diffuse contribution.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Diffuse</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Diffuse:Value">
+          <h3 id="P:GameStack.Graphics.Light.Diffuse">Diffuse Property</h3>
+          <blockquote id="P:GameStack.Graphics.Light.Diffuse:member">
+            <p class="Summary">Gets or sets the diffuse contribution.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Diffuse</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Diffuse:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Diffuse:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Diffuse:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Diffuse:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Diffuse:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Light.Specular">Specular Property</h3>
-        <blockquote id="P:GameStack.Graphics.Light.Specular:member">
-          <p class="Summary">Gets or sets the specular contribution.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Specular</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Specular:Value">
+          <h3 id="P:GameStack.Graphics.Light.Specular">Specular Property</h3>
+          <blockquote id="P:GameStack.Graphics.Light.Specular:member">
+            <p class="Summary">Gets or sets the specular contribution.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Specular</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Specular:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Specular:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Specular:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Specular:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Specular:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Light.Type">Type Property</h3>
-        <blockquote id="P:GameStack.Graphics.Light.Type:member">
-          <p class="Summary">Gets the light type.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public abstract <a href="../GameStack.Graphics/LightType.html">LightType</a> <b>Type</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Type:Value">
+          <h3 id="P:GameStack.Graphics.Light.Type">Type Property</h3>
+          <blockquote id="P:GameStack.Graphics.Light.Type:member">
+            <p class="Summary">Gets the light type.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public abstract <a href="../GameStack.Graphics/LightType.html">LightType</a> <b>Type</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Type:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Type:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Type:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Type:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Type:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Light.Vector">Vector Property</h3>
-        <blockquote id="P:GameStack.Graphics.Light.Vector:member">
-          <p class="Summary">Gets or sets the light vector.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Vector</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Vector:Value">
+          <h3 id="P:GameStack.Graphics.Light.Vector">Vector Property</h3>
+          <blockquote id="P:GameStack.Graphics.Light.Vector:member">
+            <p class="Summary">Gets or sets the light vector.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> <b>Vector</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Light.Vector:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Vector:Remarks">The meaning of this value is dependent on the light type.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Light.Vector:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Vector:Remarks">The meaning of this value is dependent on the light type.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Light.Vector:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.MeshShaderSettings</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,309 +210,311 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.MeshShaderSettings">MeshShaderSettings  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.MeshShaderSettings:Summary">Controls the limits of a mesh shader instance.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.MeshShaderSettings:Signature">public class  <b>MeshShaderSettings</b></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.MeshShaderSettings:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.MeshShaderSettings:Docs:Remarks">Using higher limits will consume more resources but will allow for more intricate animations and more lights. The default settings are good enough in most cases.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.MeshShaderSettings:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.MeshShaderSettings:Signature">public class  <b>MeshShaderSettings</b></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.MeshShaderSettings:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.MeshShaderSettings:Docs:Remarks">Using higher limits will consume more resources but will allow for more intricate animations and more lights. The default settings are good enough in most cases.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.MeshShaderSettings:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.Graphics.MeshShaderSettings()">MeshShaderSettings</a>
-                    </b>()</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.MeshShaderSettings()">MeshShaderSettings</a>
+                      </b>()</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.MeshShaderSettings.BoneCount">BoneCount</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. The number of bones to be rendered.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount">BoneSlotCount</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. The maximum number of transformations that can be applied to a bone.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.MeshShaderSettings.Diffuse">Diffuse</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[]</i>. Gets or sets the texture slot mapping for the diffuse texture.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.MeshShaderSettings.Emissive">Emissive</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[]</i>. Gets or sets the texture slot mapping for the emissive texture.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.MeshShaderSettings.MaxLights">MaxLights</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. Gets or sets the maximum number of lights.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.MeshShaderSettings.Normal">Normal</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[]</i>. Gets or sets the texture slot mapping for the normal texture.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.MeshShaderSettings.ShadingMode">ShadingMode</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/ShadingMode.html">ShadingMode</a>
-                  </i>. Gets or sets the shading mode.</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.MeshShaderSettings.Specular">Specular</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[]</i>. Gets or sets the texture slot mapping for the specular texture.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.MeshShaderSettings.BoneCount">BoneCount</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                    </i>. The number of bones to be rendered.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount">BoneSlotCount</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                    </i>. The maximum number of transformations that can be applied to a bone.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.MeshShaderSettings.Diffuse">Diffuse</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[]</i>. Gets or sets the texture slot mapping for the diffuse texture.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.MeshShaderSettings.Emissive">Emissive</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[]</i>. Gets or sets the texture slot mapping for the emissive texture.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.MeshShaderSettings.MaxLights">MaxLights</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                    </i>. Gets or sets the maximum number of lights.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.MeshShaderSettings.Normal">Normal</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[]</i>. Gets or sets the texture slot mapping for the normal texture.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.MeshShaderSettings.ShadingMode">ShadingMode</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/ShadingMode.html">ShadingMode</a>
+                    </i>. Gets or sets the shading mode.</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.MeshShaderSettings.Specular">Specular</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[]</i>. Gets or sets the texture slot mapping for the specular texture.</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.MeshShaderSettings:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.MeshShaderSettings()">MeshShaderSettings Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.MeshShaderSettings():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>MeshShaderSettings</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.MeshShaderSettings():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.MeshShaderSettings():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.MeshShaderSettings.BoneCount">BoneCount Property</h3>
-        <blockquote id="P:GameStack.Graphics.MeshShaderSettings.BoneCount:member">
-          <p class="Summary">The number of bones to be rendered.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>BoneCount</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneCount:Value">
+      <div class="Members" id="T:GameStack.Graphics.MeshShaderSettings:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.MeshShaderSettings()">MeshShaderSettings Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.MeshShaderSettings():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>MeshShaderSettings</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.MeshShaderSettings():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.MeshShaderSettings():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneCount:Remarks">This should be set equal to the number of bones contained in the mesh(es) to be rendered with this instance.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneCount:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount">BoneSlotCount Property</h3>
-        <blockquote id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount:member">
-          <p class="Summary">The maximum number of transformations that can be applied to a bone.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>BoneSlotCount</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount:Value">
+          <h3 id="P:GameStack.Graphics.MeshShaderSettings.BoneCount">BoneCount Property</h3>
+          <blockquote id="P:GameStack.Graphics.MeshShaderSettings.BoneCount:member">
+            <p class="Summary">The number of bones to be rendered.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>BoneCount</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneCount:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneCount:Remarks">This should be set equal to the number of bones contained in the mesh(es) to be rendered with this instance.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneCount:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount:Remarks">This should be equal to the maximum number of bones that can influence any given vertex. Raising this value consumes more resources, lowering it may reduce the accuracy of animations.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.MeshShaderSettings.Diffuse">Diffuse Property</h3>
-        <blockquote id="P:GameStack.Graphics.MeshShaderSettings.Diffuse:member">
-          <p class="Summary">Gets or sets the texture slot mapping for the diffuse texture.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[] <b>Diffuse</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Diffuse:Value">
+          <h3 id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount">BoneSlotCount Property</h3>
+          <blockquote id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount:member">
+            <p class="Summary">The maximum number of transformations that can be applied to a bone.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>BoneSlotCount</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount:Remarks">This should be equal to the maximum number of bones that can influence any given vertex. Raising this value consumes more resources, lowering it may reduce the accuracy of animations.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.BoneSlotCount:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Diffuse:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Diffuse:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.MeshShaderSettings.Emissive">Emissive Property</h3>
-        <blockquote id="P:GameStack.Graphics.MeshShaderSettings.Emissive:member">
-          <p class="Summary">Gets or sets the texture slot mapping for the emissive texture.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[] <b>Emissive</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Emissive:Value">
+          <h3 id="P:GameStack.Graphics.MeshShaderSettings.Diffuse">Diffuse Property</h3>
+          <blockquote id="P:GameStack.Graphics.MeshShaderSettings.Diffuse:member">
+            <p class="Summary">Gets or sets the texture slot mapping for the diffuse texture.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[] <b>Diffuse</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Diffuse:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Diffuse:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Diffuse:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Emissive:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Emissive:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.MeshShaderSettings.MaxLights">MaxLights Property</h3>
-        <blockquote id="P:GameStack.Graphics.MeshShaderSettings.MaxLights:member">
-          <p class="Summary">Gets or sets the maximum number of lights.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MaxLights</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.MaxLights:Value">
+          <h3 id="P:GameStack.Graphics.MeshShaderSettings.Emissive">Emissive Property</h3>
+          <blockquote id="P:GameStack.Graphics.MeshShaderSettings.Emissive:member">
+            <p class="Summary">Gets or sets the texture slot mapping for the emissive texture.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[] <b>Emissive</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Emissive:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Emissive:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Emissive:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.MaxLights:Remarks">Higher values consume more resources, lower values may cause some lights to be ignored.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.MaxLights:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.MeshShaderSettings.Normal">Normal Property</h3>
-        <blockquote id="P:GameStack.Graphics.MeshShaderSettings.Normal:member">
-          <p class="Summary">Gets or sets the texture slot mapping for the normal texture.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[] <b>Normal</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Normal:Value">
+          <h3 id="P:GameStack.Graphics.MeshShaderSettings.MaxLights">MaxLights Property</h3>
+          <blockquote id="P:GameStack.Graphics.MeshShaderSettings.MaxLights:member">
+            <p class="Summary">Gets or sets the maximum number of lights.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>MaxLights</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.MaxLights:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.MaxLights:Remarks">Higher values consume more resources, lower values may cause some lights to be ignored.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.MaxLights:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Normal:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Normal:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode">ShadingMode Property</h3>
-        <blockquote id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode:member">
-          <p class="Summary">Gets or sets the shading mode.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/ShadingMode.html">ShadingMode</a> <b>ShadingMode</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode:Value">
+          <h3 id="P:GameStack.Graphics.MeshShaderSettings.Normal">Normal Property</h3>
+          <blockquote id="P:GameStack.Graphics.MeshShaderSettings.Normal:member">
+            <p class="Summary">Gets or sets the texture slot mapping for the normal texture.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[] <b>Normal</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Normal:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Normal:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Normal:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode:Remarks">Currently, only the Phong mode is implemented.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.MeshShaderSettings.Specular">Specular Property</h3>
-        <blockquote id="P:GameStack.Graphics.MeshShaderSettings.Specular:member">
-          <p class="Summary">Gets or sets the texture slot mapping for the specular texture.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[] <b>Specular</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Specular:Value">
+          <h3 id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode">ShadingMode Property</h3>
+          <blockquote id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode:member">
+            <p class="Summary">Gets or sets the shading mode.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/ShadingMode.html">ShadingMode</a> <b>ShadingMode</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode:Remarks">Currently, only the Phong mode is implemented.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.ShadingMode:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Specular:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Specular:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="P:GameStack.Graphics.MeshShaderSettings.Specular">Specular Property</h3>
+          <blockquote id="P:GameStack.Graphics.MeshShaderSettings.Specular:member">
+            <p class="Summary">Gets or sets the texture slot mapping for the specular texture.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/MeshTextureSlot.html">MeshTextureSlot</a>[] <b>Specular</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Specular:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Specular:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.MeshShaderSettings.Specular:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

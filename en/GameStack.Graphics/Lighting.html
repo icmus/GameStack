@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.Lighting</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,166 +210,168 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Lighting">Lighting  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.Lighting:Summary">Aggregates one or more lights into a lighting rig to be used with drawing operations.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.Lighting:Signature">public class  <b>Lighting</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.Lighting:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Lighting:Docs:Remarks">Use with subtypes of <a href="../GameStack.Graphics/Light.html">GameStack.Graphics.Light</a>.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Lighting:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.Lighting:Signature">public class  <b>Lighting</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.Lighting:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Lighting:Docs:Remarks">Use with subtypes of <a href="../GameStack.Graphics/Light.html">GameStack.Graphics.Light</a>.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Lighting:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[])">Lighting</a>
+                      </b>(<b>params</b> <a href="../GameStack.Graphics/Light.html">Light</a>[])</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
                     <b>
-                      <a href="#C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[])">Lighting</a>
-                    </b>(<b>params</b> <a href="../GameStack.Graphics/Light.html">Light</a>[])</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@)">Apply</a>
+                    </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Apply the lighting rig to the currently active material/shader.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
+                    </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release resources. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
+                    </b>()<blockquote>Takes the object out of scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@)">Apply</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Apply the lighting rig to the currently active material/shader.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to release resources. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
-                  </b>()<blockquote>Takes the object out of scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Protected Methods</h2>
-        <div class="SectionBox" id="Protected Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
-                  </b>()<blockquote>Override to perform actions upon entering scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
-                  </b>()<blockquote>Override to perform actions upon leaving scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Protected Methods</h2>
+          <div class="SectionBox" id="Protected Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
+                    </b>()<blockquote>Override to perform actions upon entering scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
+                    </b>()<blockquote>Override to perform actions upon leaving scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.Lighting:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[])">Lighting Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[]):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>Lighting</b> (<b>params</b> <a href="../GameStack.Graphics/Light.html">Light</a>[] lights)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[]):Parameters">
-            <dl>
-              <dt>
-                <i>lights</i>
-              </dt>
-              <dd>One or more lights.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.Lighting:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[])">Lighting Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[]):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>Lighting</b> (<b>params</b> <a href="../GameStack.Graphics/Light.html">Light</a>[] lights)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[]):Parameters">
+              <dl>
+                <dt>
+                  <i>lights</i>
+                </dt>
+                <dd>One or more lights.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[]):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[]):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[]):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Lighting(GameStack.Graphics.Light[]):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@)">Apply Method</h3>
-        <blockquote id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@):member">
-          <p class="Summary">Apply the lighting rig to the currently active material/shader.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Apply</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@):Parameters">
-            <dl>
-              <dt>
-                <i>world</i>
-              </dt>
-              <dd>World transform applied to lighting rig.</dd>
-            </dl>
+          <h3 id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@)">Apply Method</h3>
+          <blockquote id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@):member">
+            <p class="Summary">Apply the lighting rig to the currently active material/shader.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Apply</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@):Parameters">
+              <dl>
+                <dt>
+                  <i>world</i>
+                </dt>
+                <dd>World transform applied to lighting rig.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@):Remarks">Usually called by drawable classes and not directly by apps. If no material is in scope, an exception will be thrown. If the material does not support lighting, the behavior of this method is undefined.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@):Remarks">Usually called by drawable classes and not directly by apps. If no material is in scope, an exception will be thrown. If the material does not support lighting, the behavior of this method is undefined.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Lighting.Apply(OpenTK.Matrix4@):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

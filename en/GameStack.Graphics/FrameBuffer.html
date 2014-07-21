@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.FrameBuffer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,392 +210,394 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.FrameBuffer">FrameBuffer  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.FrameBuffer:Summary">Provides the ability to render to a surface other than the viewport, allowing apps to use the output of the rendering to apply further effects.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.FrameBuffer:Signature">public class  <b>FrameBuffer</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.FrameBuffer:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.FrameBuffer:Docs:Remarks">GameStack always has at least one default frame buffer for drawing to the window. However, instances of this class can be created to draw to an alternate destination. This has many applications, such as applying special effects like mirror and blur. Whenever a frame buffer is placed into scope by calling Begin, all draws will be made to the buffer instead of the screen until it goes out of scope.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.FrameBuffer:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.FrameBuffer:Signature">public class  <b>FrameBuffer</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.FrameBuffer:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.FrameBuffer:Docs:Remarks">GameStack always has at least one default frame buffer for drawing to the window. However, instances of this class can be created to draw to an alternate destination. This has many applications, such as applying special effects like mirror and blur. Whenever a frame buffer is placed into scope by calling Begin, all draws will be made to the buffer instead of the screen until it goes out of scope.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.FrameBuffer:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean)">FrameBuffer</a>
+                      </b>(<a href="../GameStack.Graphics/Texture.html">Texture</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean)">FrameBuffer</a>
-                    </b>(<a href="../GameStack.Graphics/Texture.html">Texture</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#P:GameStack.Graphics.FrameBuffer.ClearOnBegin">ClearOnBegin</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                    </i>. Will the target texture be cleared on each frame?</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.FrameBuffer.Color">Color</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>
+                    </i>. Gets or sets the default clear color.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.FrameBuffer.Handle">Handle</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                    </i>. Gets or sets the buffer's native handle.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.FrameBuffer.Size">Size</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Size">System.Drawing.Size</a>
+                    </i>. Gets the size of the buffer's storage in pixels.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.FrameBuffer.ClearOnBegin">ClearOnBegin</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. Will the target texture be cleared on each frame?</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.FrameBuffer.Color">Color</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>
-                  </i>. Gets or sets the default clear color.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.FrameBuffer.Handle">Handle</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. Gets or sets the buffer's native handle.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.FrameBuffer.Size">Size</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Size">System.Drawing.Size</a>
-                  </i>. Gets the size of the buffer's storage in pixels.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
+                    </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.FrameBuffer.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release the frame buffer resources.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release resources. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
+                    </b>()<blockquote>Takes the object out of scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream)">Save</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>Write the contents of the frame buffer to the stream in PNG format.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.FrameBuffer.Save(System.String)">Save</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Write the contents of the frame buffer to the file in PNG format.</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.FrameBuffer.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to release the frame buffer resources.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to release resources. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
-                  </b>()<blockquote>Takes the object out of scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream)">Save</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a>)<blockquote>Write the contents of the frame buffer to the stream in PNG format.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.FrameBuffer.Save(System.String)">Save</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<blockquote>Write the contents of the frame buffer to the file in PNG format.</blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Protected Methods</h2>
-        <div class="SectionBox" id="Protected Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.FrameBuffer.OnBegin()">OnBegin</a>
-                  </b>()<blockquote></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
-                  </b>()<blockquote>Override to perform actions upon entering scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.FrameBuffer.OnEnd()">OnEnd</a>
-                  </b>()<blockquote></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
-                  </b>()<blockquote>Override to perform actions upon leaving scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Protected Methods</h2>
+          <div class="SectionBox" id="Protected Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.FrameBuffer.OnBegin()">OnBegin</a>
+                    </b>()<blockquote></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
+                    </b>()<blockquote>Override to perform actions upon entering scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.FrameBuffer.OnEnd()">OnEnd</a>
+                    </b>()<blockquote></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
+                    </b>()<blockquote>Override to perform actions upon leaving scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.FrameBuffer:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean)">FrameBuffer Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>FrameBuffer</b> (<a href="../GameStack.Graphics/Texture.html">Texture</a> texture, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposeTexture)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean):Parameters">
-            <dl>
-              <dt>
-                <i>texture</i>
-              </dt>
-              <dd>Render to this texture.</dd>
-              <dt>
-                <i>disposeTexture</i>
-              </dt>
-              <dd>If true, automatically dispose the supplied texture when this object is disposed.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.FrameBuffer:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean)">FrameBuffer Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>FrameBuffer</b> (<a href="../GameStack.Graphics/Texture.html">Texture</a> texture, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> disposeTexture)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean):Parameters">
+              <dl>
+                <dt>
+                  <i>texture</i>
+                </dt>
+                <dd>Render to this texture.</dd>
+                <dt>
+                  <i>disposeTexture</i>
+                </dt>
+                <dd>If true, automatically dispose the supplied texture when this object is disposed.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.FrameBuffer(GameStack.Graphics.Texture,System.Boolean):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin">ClearOnBegin Property</h3>
-        <blockquote id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin:member">
-          <p class="Summary">Will the target texture be cleared on each frame?</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ClearOnBegin</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin:Value">
+          <h3 id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin">ClearOnBegin Property</h3>
+          <blockquote id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin:member">
+            <p class="Summary">Will the target texture be cleared on each frame?</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>ClearOnBegin</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin:Remarks">Set to true if your app expects the texture to be empty before drawing. The texture is cleared to <a href="../GameStack.Graphics/FrameBuffer.html#P:GameStack.Graphics.FrameBuffer.Color">FrameBuffer.Color</a>.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin:Remarks">Set to true if your app expects the texture to be empty before drawing. The texture is cleared to <a href="../GameStack.Graphics/FrameBuffer.html#P:GameStack.Graphics.FrameBuffer.Color">FrameBuffer.Color</a>.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.ClearOnBegin:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.FrameBuffer.Color">Color Property</h3>
-        <blockquote id="P:GameStack.Graphics.FrameBuffer.Color:member">
-          <p class="Summary">Gets or sets the default clear color.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> <b>Color</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameBuffer.Color:Value">
+          <h3 id="P:GameStack.Graphics.FrameBuffer.Color">Color Property</h3>
+          <blockquote id="P:GameStack.Graphics.FrameBuffer.Color:member">
+            <p class="Summary">Gets or sets the default clear color.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> <b>Color</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameBuffer.Color:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Color:Remarks">The buffer is only cleared when <a href="../GameStack.Graphics/FrameBuffer.html#P:GameStack.Graphics.FrameBuffer.ClearOnBegin">FrameBuffer.ClearOnBegin</a> is true.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Color:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Color:Remarks">The buffer is only cleared when <a href="../GameStack.Graphics/FrameBuffer.html#P:GameStack.Graphics.FrameBuffer.ClearOnBegin">FrameBuffer.ClearOnBegin</a> is true.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Color:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.FrameBuffer.Dispose()">Dispose Method</h3>
-        <blockquote id="M:GameStack.Graphics.FrameBuffer.Dispose():member">
-          <p class="Summary">Must be called to release the frame buffer resources.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Dispose():Remarks">The attached texture may or may not be disposed depending on the constructor arguments.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Dispose():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.FrameBuffer.Handle">Handle Property</h3>
-        <blockquote id="P:GameStack.Graphics.FrameBuffer.Handle:member">
-          <p class="Summary">Gets or sets the buffer's native handle.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Handle</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameBuffer.Handle:Value">
+          <h3 id="M:GameStack.Graphics.FrameBuffer.Dispose()">Dispose Method</h3>
+          <blockquote id="M:GameStack.Graphics.FrameBuffer.Dispose():member">
+            <p class="Summary">Must be called to release the frame buffer resources.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Dispose():Remarks">The attached texture may or may not be disposed depending on the constructor arguments.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Dispose():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Handle:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Handle:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.FrameBuffer.OnBegin()">OnBegin Method</h3>
-        <blockquote id="M:GameStack.Graphics.FrameBuffer.OnBegin():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.OnBegin():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.OnBegin():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.FrameBuffer.OnEnd()">OnEnd Method</h3>
-        <blockquote id="M:GameStack.Graphics.FrameBuffer.OnEnd():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnEnd</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.OnEnd():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.OnEnd():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream)">Save Method</h3>
-        <blockquote id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream):member">
-          <p class="Summary">Write the contents of the frame buffer to the stream in PNG format.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Save</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream):Parameters">
-            <dl>
-              <dt>
-                <i>stream</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="P:GameStack.Graphics.FrameBuffer.Handle">Handle Property</h3>
+          <blockquote id="P:GameStack.Graphics.FrameBuffer.Handle:member">
+            <p class="Summary">Gets or sets the buffer's native handle.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>Handle</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameBuffer.Handle:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Handle:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Handle:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream):Remarks">This method is useful for saving screenshots of the buffer. The buffer must be in scope.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.FrameBuffer.Save(System.String)">Save Method</h3>
-        <blockquote id="M:GameStack.Graphics.FrameBuffer.Save(System.String):member">
-          <p class="Summary">Write the contents of the frame buffer to the file in PNG format.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Save</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.String):Parameters">
-            <dl>
-              <dt>
-                <i>path</i>
-              </dt>
-              <dd>Path relative to user data location.</dd>
-            </dl>
+          <h3 id="M:GameStack.Graphics.FrameBuffer.OnBegin()">OnBegin Method</h3>
+          <blockquote id="M:GameStack.Graphics.FrameBuffer.OnBegin():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.OnBegin():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.OnBegin():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.String):Remarks">This method is useful for saving screenshots of the buffer. The buffer must be in scope.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.String):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.FrameBuffer.Size">Size Property</h3>
-        <blockquote id="P:GameStack.Graphics.FrameBuffer.Size:member">
-          <p class="Summary">Gets the size of the buffer's storage in pixels.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Size">System.Drawing.Size</a> <b>Size</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameBuffer.Size:Value">
+          <h3 id="M:GameStack.Graphics.FrameBuffer.OnEnd()">OnEnd Method</h3>
+          <blockquote id="M:GameStack.Graphics.FrameBuffer.OnEnd():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnEnd</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.OnEnd():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.OnEnd():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Size:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Size:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream)">Save Method</h3>
+          <blockquote id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream):member">
+            <p class="Summary">Write the contents of the frame buffer to the stream in PNG format.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Save</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> stream)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream):Parameters">
+              <dl>
+                <dt>
+                  <i>stream</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream):Remarks">This method is useful for saving screenshots of the buffer. The buffer must be in scope.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.IO.Stream):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Graphics.FrameBuffer.Save(System.String)">Save Method</h3>
+          <blockquote id="M:GameStack.Graphics.FrameBuffer.Save(System.String):member">
+            <p class="Summary">Write the contents of the frame buffer to the file in PNG format.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Save</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> path)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.String):Parameters">
+              <dl>
+                <dt>
+                  <i>path</i>
+                </dt>
+                <dd>Path relative to user data location.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.String):Remarks">This method is useful for saving screenshots of the buffer. The buffer must be in scope.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.FrameBuffer.Save(System.String):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="P:GameStack.Graphics.FrameBuffer.Size">Size Property</h3>
+          <blockquote id="P:GameStack.Graphics.FrameBuffer.Size:member">
+            <p class="Summary">Gets the size of the buffer's storage in pixels.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.Size">System.Drawing.Size</a> <b>Size</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.FrameBuffer.Size:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Size:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.FrameBuffer.Size:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.Batch</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,266 +210,268 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Batch">Batch  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.Batch:Summary">Combines multiple draw operations with one material into a single draw operation.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.Batch:Signature">public class  <b>Batch</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>,	<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.Batch:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Batch:Docs:Remarks">When an instance of this class is placed in scope (by calling Begin), draw calls on supported objects (those implementing <a href="../GameStack.Graphics/IBatchable.html">GameStack.Graphics.IBatchable</a>) will be batched into a single draw call per material. The actual draw takes place when the batch leaves scope.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Batch:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.Batch:Signature">public class  <b>Batch</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>,	<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.Batch:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Batch:Docs:Remarks">When an instance of this class is placed in scope (by calling Begin), draw calls on supported objects (those implementing <a href="../GameStack.Graphics/IBatchable.html">GameStack.Graphics.IBatchable</a>) will be batched into a single draw call per material. The actual draw takes place when the batch leaves scope.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Batch:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.Batch()">Batch</a>
+                      </b>()</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
                     <b>
-                      <a href="#C:GameStack.Graphics.Batch()">Batch</a>
-                    </b>()</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
+                    </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Batch.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release buffer resources.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release resources. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4)">Draw</a>
+                    </b>(<a href="../GameStack.Graphics/IBatchable.html">IBatchable</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Explicitly adds a single batchable object to the draw list.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@)">Draw</a>
+                    </b>(<a href="../GameStack.Graphics/IBatchable.html">IBatchable</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Explicitly adds a single batchable object to the draw list.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
+                    </b>()<blockquote>Takes the object out of scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Batch.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to release buffer resources.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4)">Draw</a>
-                  </b>(<a href="../GameStack.Graphics/IBatchable.html">IBatchable</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Explicitly adds a single batchable object to the draw list.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@)">Draw</a>
-                  </b>(<a href="../GameStack.Graphics/IBatchable.html">IBatchable</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Explicitly adds a single batchable object to the draw list.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Protected Methods</h2>
-        <div class="SectionBox" id="Protected Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Batch.OnBegin()">OnBegin</a>
-                  </b>()<blockquote></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Batch.OnEnd()">OnEnd</a>
-                  </b>()<blockquote></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Protected Methods</h2>
+          <div class="SectionBox" id="Protected Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Batch.OnBegin()">OnBegin</a>
+                    </b>()<blockquote></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
+                    </b>()<blockquote>Override to perform actions upon entering scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Batch.OnEnd()">OnEnd</a>
+                    </b>()<blockquote></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
+                    </b>()<blockquote>Override to perform actions upon leaving scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.Batch:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.Batch()">Batch Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.Batch():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>Batch</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Batch():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Batch():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Batch.Dispose()">Dispose Method</h3>
-        <blockquote id="M:GameStack.Graphics.Batch.Dispose():member">
-          <p class="Summary">Must be called to release buffer resources.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.Dispose():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.Dispose():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4)">Draw Method</h3>
-        <blockquote id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4):member">
-          <p class="Summary">Explicitly adds a single batchable object to the draw list.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="../GameStack.Graphics/IBatchable.html">IBatchable</a> obj, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4):Parameters">
-            <dl>
-              <dt>
-                <i>obj</i>
-              </dt>
-              <dd>Batchable drawing object to add.</dd>
-              <dt>
-                <i>world</i>
-              </dt>
-              <dd>World transform to apply when drawing this object.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.Batch:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.Batch()">Batch Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.Batch():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>Batch</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Batch():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Batch():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@)">Draw Method</h3>
-        <blockquote id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@):member">
-          <p class="Summary">Explicitly adds a single batchable object to the draw list.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="../GameStack.Graphics/IBatchable.html">IBatchable</a> obj, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@):Parameters">
-            <dl>
-              <dt>
-                <i>obj</i>
-              </dt>
-              <dd>Batchable drawing object to add.</dd>
-              <dt>
-                <i>world</i>
-              </dt>
-              <dd>World transform to apply when drawing this object.</dd>
-            </dl>
+          <h3 id="M:GameStack.Graphics.Batch.Dispose()">Dispose Method</h3>
+          <blockquote id="M:GameStack.Graphics.Batch.Dispose():member">
+            <p class="Summary">Must be called to release buffer resources.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.Dispose():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.Dispose():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Batch.OnBegin()">OnBegin Method</h3>
-        <blockquote id="M:GameStack.Graphics.Batch.OnBegin():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.OnBegin():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.OnBegin():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Batch.OnEnd()">OnEnd Method</h3>
-        <blockquote id="M:GameStack.Graphics.Batch.OnEnd():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnEnd</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.OnEnd():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Batch.OnEnd():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4)">Draw Method</h3>
+          <blockquote id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4):member">
+            <p class="Summary">Explicitly adds a single batchable object to the draw list.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="../GameStack.Graphics/IBatchable.html">IBatchable</a> obj, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4):Parameters">
+              <dl>
+                <dt>
+                  <i>obj</i>
+                </dt>
+                <dd>Batchable drawing object to add.</dd>
+                <dt>
+                  <i>world</i>
+                </dt>
+                <dd>World transform to apply when drawing this object.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@)">Draw Method</h3>
+          <blockquote id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@):member">
+            <p class="Summary">Explicitly adds a single batchable object to the draw list.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="../GameStack.Graphics/IBatchable.html">IBatchable</a> obj, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@):Parameters">
+              <dl>
+                <dt>
+                  <i>obj</i>
+                </dt>
+                <dd>Batchable drawing object to add.</dd>
+                <dt>
+                  <i>world</i>
+                </dt>
+                <dd>World transform to apply when drawing this object.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable,OpenTK.Matrix4@):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Graphics.Batch.OnBegin()">OnBegin Method</h3>
+          <blockquote id="M:GameStack.Graphics.Batch.OnBegin():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.OnBegin():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.OnBegin():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Graphics.Batch.OnEnd()">OnEnd Method</h3>
+          <blockquote id="M:GameStack.Graphics.Batch.OnEnd():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnEnd</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.OnEnd():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Batch.OnEnd():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.IndexBuffer</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,199 +210,201 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.IndexBuffer">IndexBuffer  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.IndexBuffer:Summary">Manages a native index buffer containing a set of indices into a <a href="../GameStack.Graphics/VertexBuffer.html">GameStack.Graphics.VertexBuffer</a>.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.IndexBuffer:Signature">public class  <b>IndexBuffer</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.IndexBuffer:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.IndexBuffer:Docs:Remarks">Index buffers are used to optimize memory by eliminating redundant vertex definitions. Each vertex can be referenced multiple times in a mesh's geometry by index.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.IndexBuffer:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.IndexBuffer:Signature">public class  <b>IndexBuffer</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.IndexBuffer:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.IndexBuffer:Docs:Remarks">Index buffers are used to optimize memory by eliminating redundant vertex definitions. Each vertex can be referenced multiple times in a mesh's geometry by index.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.IndexBuffer:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode)">IndexBuffer</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[], <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Graphics.OpenGL.BeginMode</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode)">IndexBuffer</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[], <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Graphics.OpenGL.BeginMode</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#P:GameStack.Graphics.IndexBuffer.Data">Data</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[]</i>. Gets or sets the raw buffer data.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.IndexBuffer.Data">Data</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[]</i>. Gets or sets the raw buffer data.</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.IndexBuffer.Commit()">Commit</a>
-                  </b>()<blockquote>Synchronize the data to the actual hardware buffer.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.IndexBuffer.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called in order to release buffer resources.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32)">Draw</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>Draw the contents of the index buffer, causing a native draw call.</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.IndexBuffer.Commit()">Commit</a>
+                    </b>()<blockquote>Synchronize the data to the actual hardware buffer.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.IndexBuffer.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called in order to release buffer resources.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32)">Draw</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>Draw the contents of the index buffer, causing a native draw call.</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.IndexBuffer:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode)">IndexBuffer Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>IndexBuffer</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] vertices, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Graphics.OpenGL.BeginMode</a> mode)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode):Parameters">
-            <dl>
-              <dt>
-                <i>vertices</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>mode</i>
-              </dt>
-              <dd>Override the draw mode for this buffer. The most common primitive is the triangle.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.IndexBuffer:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode)">IndexBuffer Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>IndexBuffer</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] vertices, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Graphics.OpenGL.BeginMode</a> mode)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode):Parameters">
+              <dl>
+                <dt>
+                  <i>vertices</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>mode</i>
+                </dt>
+                <dd>Override the draw mode for this buffer. The most common primitive is the triangle.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.IndexBuffer(System.Int32[],OpenTK.Graphics.OpenGL.BeginMode):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.IndexBuffer.Commit()">Commit Method</h3>
-        <blockquote id="M:GameStack.Graphics.IndexBuffer.Commit():member">
-          <p class="Summary">Synchronize the data to the actual hardware buffer.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Commit</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Commit():Remarks">In order for changes to the data to take effect, this method must be called. It is best to make all of your changes and then call this method once to reduce overhead.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Commit():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.IndexBuffer.Data">Data Property</h3>
-        <blockquote id="P:GameStack.Graphics.IndexBuffer.Data:member">
-          <p class="Summary">Gets or sets the raw buffer data.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] <b>Data</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.IndexBuffer.Data:Value">
+          <h3 id="M:GameStack.Graphics.IndexBuffer.Commit()">Commit Method</h3>
+          <blockquote id="M:GameStack.Graphics.IndexBuffer.Commit():member">
+            <p class="Summary">Synchronize the data to the actual hardware buffer.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Commit</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Commit():Remarks">In order for changes to the data to take effect, this method must be called. It is best to make all of your changes and then call this method once to reduce overhead.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Commit():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.IndexBuffer.Data:Remarks">After setting this value or modifying the array, the <a href="../GameStack.Graphics/IndexBuffer.html#M:GameStack.Graphics.IndexBuffer.Commit()">IndexBuffer.Commit()</a> method must be called for the changes to take effect.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.IndexBuffer.Data:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.IndexBuffer.Dispose()">Dispose Method</h3>
-        <blockquote id="M:GameStack.Graphics.IndexBuffer.Dispose():member">
-          <p class="Summary">Must be called in order to release buffer resources.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Dispose():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Dispose():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32)">Draw Method</h3>
-        <blockquote id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32):member">
-          <p class="Summary">Draw the contents of the index buffer, causing a native draw call.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32):Parameters">
-            <dl>
-              <dt>
-                <i>offset</i>
-              </dt>
-              <dd>The start offset.</dd>
-              <dt>
-                <i>count</i>
-              </dt>
-              <dd>The primitive count or -1 for buffer length.</dd>
-            </dl>
+          <h3 id="P:GameStack.Graphics.IndexBuffer.Data">Data Property</h3>
+          <blockquote id="P:GameStack.Graphics.IndexBuffer.Data:member">
+            <p class="Summary">Gets or sets the raw buffer data.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] <b>Data</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.IndexBuffer.Data:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.IndexBuffer.Data:Remarks">After setting this value or modifying the array, the <a href="../GameStack.Graphics/IndexBuffer.html#M:GameStack.Graphics.IndexBuffer.Commit()">IndexBuffer.Commit()</a> method must be called for the changes to take effect.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.IndexBuffer.Data:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32):Remarks">This method is normally called by drawable classes and not directly by apps. A <a href="../GameStack.Graphics/VertexBuffer.html">GameStack.Graphics.VertexBuffer</a> must be in scope or this method has undefined behavior.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="M:GameStack.Graphics.IndexBuffer.Dispose()">Dispose Method</h3>
+          <blockquote id="M:GameStack.Graphics.IndexBuffer.Dispose():member">
+            <p class="Summary">Must be called in order to release buffer resources.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Dispose():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Dispose():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32)">Draw Method</h3>
+          <blockquote id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32):member">
+            <p class="Summary">Draw the contents of the index buffer, causing a native draw call.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> offset, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32):Parameters">
+              <dl>
+                <dt>
+                  <i>offset</i>
+                </dt>
+                <dd>The start offset.</dd>
+                <dt>
+                  <i>count</i>
+                </dt>
+                <dd>The primitive count or -1 for buffer length.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32):Remarks">This method is normally called by drawable classes and not directly by apps. A <a href="../GameStack.Graphics/VertexBuffer.html">GameStack.Graphics.VertexBuffer</a> must be in scope or this method has undefined behavior.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.IndexBuffer.Draw(System.Int32,System.Int32):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

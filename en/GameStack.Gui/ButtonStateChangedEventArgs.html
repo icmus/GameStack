@@ -3,8 +3,9 @@
     <title>GameStack.Gui.ButtonStateChangedEventArgs</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,91 +210,93 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.ButtonStateChangedEventArgs">ButtonStateChangedEventArgs  Class</h1>
     <p class="Summary" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Summary">Event arguments for use with <a href="../GameStack.Gui/Button.html#E:GameStack.Gui.Button.StateChanged">Button.StateChanged</a>.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Signature">public class  <b>ButtonStateChangedEventArgs</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Docs:Remarks">
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Signature">public class  <b>ButtonStateChangedEventArgs</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a></div>
       </div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+      <div class="Remarks" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Docs:Remarks">
+        </div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventArgs">EventArgs</a>.
 							</p>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.ButtonStateChangedEventArgs.OldState">OldState</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Gui/ButtonState.html">ButtonState</a>
-                  </i>. Gets the previous button state.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Gui.ButtonStateChangedEventArgs.State">State</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Gui/ButtonState.html">ButtonState</a>
-                  </i>. Gets the current button state.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.ButtonStateChangedEventArgs.OldState">OldState</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Gui/ButtonState.html">ButtonState</a>
+                    </i>. Gets the previous button state.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Gui.ButtonStateChangedEventArgs.State">State</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Gui/ButtonState.html">ButtonState</a>
+                    </i>. Gets the current button state.</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState">OldState Property</h3>
-        <blockquote id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState:member">
-          <p class="Summary">Gets the previous button state.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Gui/ButtonState.html">ButtonState</a> <b>OldState</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState:Value">
+      <div class="Members" id="T:GameStack.Gui.ButtonStateChangedEventArgs:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState">OldState Property</h3>
+          <blockquote id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState:member">
+            <p class="Summary">Gets the previous button state.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Gui/ButtonState.html">ButtonState</a> <b>OldState</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.OldState:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Gui.ButtonStateChangedEventArgs.State">State Property</h3>
-        <blockquote id="P:GameStack.Gui.ButtonStateChangedEventArgs.State:member">
-          <p class="Summary">Gets the current button state.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Gui/ButtonState.html">ButtonState</a> <b>State</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.State:Value">
+          <h3 id="P:GameStack.Gui.ButtonStateChangedEventArgs.State">State Property</h3>
+          <blockquote id="P:GameStack.Gui.ButtonStateChangedEventArgs.State:member">
+            <p class="Summary">Gets the current button state.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Gui/ButtonState.html">ButtonState</a> <b>State</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.State:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.State:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.State:Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.State:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Gui.ButtonStateChangedEventArgs.State:Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

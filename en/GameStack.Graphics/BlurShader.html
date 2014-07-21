@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.BlurShader</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,277 +210,279 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.BlurShader">BlurShader  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.BlurShader:Summary">Custom shader providing horizontal and vertical Gaussian blur.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.BlurShader:Signature">public class  <b>BlurShader</b> : <a href="../GameStack.Graphics/Shader.html">Shader</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.BlurShader:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.BlurShader:Docs:Remarks">Normally used alongside the <a href="../GameStack.Graphics/BlurMaterial.html">GameStack.Graphics.BlurMaterial</a> material which sets uniforms necessary for the proper operation of this shader.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.BlurShader:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.BlurShader:Signature">public class  <b>BlurShader</b> : <a href="../GameStack.Graphics/Shader.html">Shader</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.BlurShader:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.BlurShader:Docs:Remarks">Normally used alongside the <a href="../GameStack.Graphics/BlurMaterial.html">GameStack.Graphics.BlurMaterial</a> material which sets uniforms necessary for the proper operation of this shader.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.BlurShader:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack.Graphics/Shader.html">Shader</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double)">BlurShader</a>
+                      </b>(<a href="../GameStack.Graphics/BlurDirection.html">BlurDirection</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double)">BlurShader</a>
-                    </b>(<a href="../GameStack.Graphics/BlurDirection.html">BlurDirection</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="../GameStack.Graphics/Shader.html#P:GameStack.Graphics.Shader.Handle">Handle</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                    </i>. Gets the native shader handle. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#P:GameStack.Graphics.Shader.MaxNumLights">MaxNumLights</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
+                    </i>. Gets the maximum number of lights supported by this shader. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#P:GameStack.Graphics.Shader.Handle">Handle</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#P:GameStack.Graphics.Shader.MaxNumLights">MaxNumLights</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>
-                  </i>. <span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Attribute(System.String)">Attribute</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Dispose()">Dispose</a>
-                  </b>()<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@)">SetTransforms</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4@)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4[])">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>[])<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector2)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3@)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3[])">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>[])<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4@)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32[])">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[])<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,System.Single)">Uniform</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Attribute(System.String)">Attribute</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>Gets a location from an attribute name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release shader resources. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.SetTransforms(OpenTK.Matrix4@,OpenTK.Matrix4@)">SetTransforms</a>
+                    </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Set the shader's modelview and projection uniforms. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a></nobr><blockquote>Gets a uniform location by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4@)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Matrix4[])">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>[])<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector2)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3@)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector3[])">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>[])<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,OpenTK.Vector4@)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,System.Int32[])">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[])<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Shader.html#M:GameStack.Graphics.Shader.Uniform(System.String,System.Single)">Uniform</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Sets a uniform value by name. (<i>Inherited from <a href="../GameStack.Graphics/Shader.html">Shader</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.BlurShader:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double)">BlurShader Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>BlurShader</b> (<a href="../GameStack.Graphics/BlurDirection.html">BlurDirection</a> dir, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> kernel, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> sigma)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):Parameters">
-            <dl>
-              <dt>
-                <i>dir</i>
-              </dt>
-              <dd>The blur direction.</dd>
-              <dt>
-                <i>kernel</i>
-              </dt>
-              <dd>The Gaussian blur kernel.</dd>
-              <dt>
-                <i>sigma</i>
-              </dt>
-              <dd>The Gaussian blur standard deviation.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.BlurShader:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double)">BlurShader Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>BlurShader</b> (<a href="../GameStack.Graphics/BlurDirection.html">BlurDirection</a> dir, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> kernel, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Double">double</a> sigma)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):Parameters">
+              <dl>
+                <dt>
+                  <i>dir</i>
+                </dt>
+                <dd>The blur direction.</dd>
+                <dt>
+                  <i>kernel</i>
+                </dt>
+                <dd>The Gaussian blur kernel.</dd>
+                <dt>
+                  <i>sigma</i>
+                </dt>
+                <dd>The Gaussian blur standard deviation.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.BlurShader(GameStack.Graphics.BlurDirection,System.Int32,System.Double):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

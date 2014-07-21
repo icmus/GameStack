@@ -3,8 +3,9 @@
     <title>GameStack.WaitFor</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,160 +210,162 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.WaitFor">WaitFor  Class</h1>
     <p class="Summary" id="T:GameStack.WaitFor:Summary">Any class deriving from this class can be yielded from a coroutine.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.WaitFor:Signature">public class  <b>WaitFor</b> : <a href="../GameStack/IWaitFor.html">IWaitFor</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.WaitFor:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.WaitFor:Docs:Remarks">Use with <a href="../GameStack/CoroutineList`1.html">GameStack.CoroutineList&lt;T&gt;</a>.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.WaitFor:Docs:Version Information">
-        <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.WaitFor:Signature">public class  <b>WaitFor</b> : <a href="../GameStack/IWaitFor.html">IWaitFor</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.WaitFor:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.WaitFor:Docs:Remarks">Use with <a href="../GameStack/CoroutineList`1.html">GameStack.CoroutineList&lt;T&gt;</a>.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.WaitFor:Docs:Version Information">
+          <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.WaitFor()">WaitFor</a>
-                    </b>()</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.WaitFor()">WaitFor</a>
+                      </b>()</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.WaitFor.Check()">Check</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Checks whether the wait condition is true.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine)">Coroutine</a>
-                  </b>(<a href="../GameStack/ICoroutine.html">ICoroutine</a>)<nobr> : <a href="../GameStack/IWaitFor.html">IWaitFor</a></nobr><blockquote>When yielded, suspends execution until the specified coroutine is complete.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>static </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.WaitFor.Seconds(System.Single)">Seconds</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../GameStack/IWaitFor.html">IWaitFor</a></nobr><blockquote>When yielded, suspends execution until the specified time has elapsed.</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.WaitFor.Check()">Check</a>
+                    </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Checks whether the wait condition is true.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>static </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine)">Coroutine</a>
+                    </b>(<a href="../GameStack/ICoroutine.html">ICoroutine</a>)<nobr> : <a href="../GameStack/IWaitFor.html">IWaitFor</a></nobr><blockquote>When yielded, suspends execution until the specified coroutine is complete.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>static </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.WaitFor.Seconds(System.Single)">Seconds</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<nobr> : <a href="../GameStack/IWaitFor.html">IWaitFor</a></nobr><blockquote>When yielded, suspends execution until the specified time has elapsed.</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.WaitFor:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.WaitFor()">WaitFor Constructor</h3>
-        <blockquote id="C:GameStack.WaitFor():member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>WaitFor</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.WaitFor():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.WaitFor():Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.WaitFor.Check()">Check Method</h3>
-        <blockquote id="M:GameStack.WaitFor.Check():member">
-          <p class="Summary">Checks whether the wait condition is true.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Check</b> ()</div>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Check():Returns">True if the coroutine should continue running.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.WaitFor.Check():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.WaitFor.Check():Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine)">Coroutine Method</h3>
-        <blockquote id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):member">
-          <p class="Summary">When yielded, suspends execution until the specified coroutine is complete.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static <a href="../GameStack/IWaitFor.html">IWaitFor</a> <b>Coroutine</b> (<a href="../GameStack/ICoroutine.html">ICoroutine</a> co)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):Parameters">
-            <dl>
-              <dt>
-                <i>co</i>
-              </dt>
-              <dd>The coroutine to wait for.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.WaitFor:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.WaitFor()">WaitFor Constructor</h3>
+          <blockquote id="C:GameStack.WaitFor():member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>WaitFor</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.WaitFor():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.WaitFor():Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):Returns">Yield this value.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.WaitFor.Seconds(System.Single)">Seconds Method</h3>
-        <blockquote id="M:GameStack.WaitFor.Seconds(System.Single):member">
-          <p class="Summary">When yielded, suspends execution until the specified time has elapsed.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public static <a href="../GameStack/IWaitFor.html">IWaitFor</a> <b>Seconds</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> seconds)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Seconds(System.Single):Parameters">
-            <dl>
-              <dt>
-                <i>seconds</i>
-              </dt>
-              <dd>The time to wait, in seconds.</dd>
-            </dl>
+          <h3 id="M:GameStack.WaitFor.Check()">Check Method</h3>
+          <blockquote id="M:GameStack.WaitFor.Check():member">
+            <p class="Summary">Checks whether the wait condition is true.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>Check</b> ()</div>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Check():Returns">True if the coroutine should continue running.</blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.WaitFor.Check():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.WaitFor.Check():Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h4 class="Subsection">Returns</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Seconds(System.Single):Returns">Yield this value.</blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.WaitFor.Seconds(System.Single):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.WaitFor.Seconds(System.Single):Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine)">Coroutine Method</h3>
+          <blockquote id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):member">
+            <p class="Summary">When yielded, suspends execution until the specified coroutine is complete.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public static <a href="../GameStack/IWaitFor.html">IWaitFor</a> <b>Coroutine</b> (<a href="../GameStack/ICoroutine.html">ICoroutine</a> co)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):Parameters">
+              <dl>
+                <dt>
+                  <i>co</i>
+                </dt>
+                <dd>The coroutine to wait for.</dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):Returns">Yield this value.</blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.WaitFor.Coroutine(GameStack.ICoroutine):Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.WaitFor.Seconds(System.Single)">Seconds Method</h3>
+          <blockquote id="M:GameStack.WaitFor.Seconds(System.Single):member">
+            <p class="Summary">When yielded, suspends execution until the specified time has elapsed.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public static <a href="../GameStack/IWaitFor.html">IWaitFor</a> <b>Seconds</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> seconds)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Seconds(System.Single):Parameters">
+              <dl>
+                <dt>
+                  <i>seconds</i>
+                </dt>
+                <dd>The time to wait, in seconds.</dd>
+              </dl>
+            </blockquote>
+            <h4 class="Subsection">Returns</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.WaitFor.Seconds(System.Single):Returns">Yield this value.</blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.WaitFor.Seconds(System.Single):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.WaitFor.Seconds(System.Single):Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

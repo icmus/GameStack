@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.SpriteSequence</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,290 +210,292 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.SpriteSequence">SpriteSequence  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.SpriteSequence:Summary">Utility class for drawing a sequence of sprite images at a specified frame rate.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.SpriteSequence:Signature">public class  <b>SpriteSequence</b> : <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;Sprite&gt;</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.SpriteSequence:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.SpriteSequence:Docs:Remarks">In order to update the animation, the object must be added to your scene collection or pumped manually in your update method.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.SpriteSequence:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.SpriteSequence:Signature">public class  <b>SpriteSequence</b> : <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;Sprite&gt;</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.SpriteSequence:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.SpriteSequence:Docs:Remarks">In order to update the animation, the object must be added to your scene collection or pumped manually in your update method.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.SpriteSequence:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;Sprite&gt;</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[])">SpriteSequence</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <b>params</b> <a href="../GameStack.Graphics/Sprite.html">Sprite</a>[])</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[])">SpriteSequence</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../GameStack.Graphics/Atlas.html">Atlas</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[])</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[])">SpriteSequence</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <b>params</b> <a href="../GameStack.Graphics/Sprite.html">Sprite</a>[])</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[])">SpriteSequence</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="../GameStack.Graphics/Atlas.html">Atlas</a>, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[])</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Graphics/FrameSequence`1.html#P:GameStack.Graphics.FrameSequence`1.Current">Current</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/Sprite.html">Sprite</a>
-                  </i>. Gets the current frame. (<i>Inherited from <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;T&gt;</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Graphics/FrameSequence`1.html#P:GameStack.Graphics.FrameSequence`1.IsDone">IsDone</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. True if the sequence has finished. (<i>Inherited from <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;T&gt;</a>.</i>)</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Graphics/FrameSequence`1.html#P:GameStack.Graphics.FrameSequence`1.Current">Current</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/Sprite.html">Sprite</a>
+                    </i>. Gets the current frame. (<i>Inherited from <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;T&gt;</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Graphics/FrameSequence`1.html#P:GameStack.Graphics.FrameSequence`1.IsDone">IsDone</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                    </i>. True if the sequence has finished. (<i>Inherited from <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;T&gt;</a>.</i>)</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the current frame.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the current frame.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/FrameSequence`1.html#M:GameStack.Graphics.FrameSequence`1.Reset()">Reset</a>
-                  </b>()<blockquote>Stop the sequence and reset to the beginning. (<i>Inherited from <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;T&gt;</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/FrameSequence`1.html#M:GameStack.Graphics.FrameSequence`1.Update(GameStack.FrameArgs)">Update</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>Advance the sequence by the specified time. (<i>Inherited from <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;T&gt;</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the current frame.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the current frame.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/FrameSequence`1.html#M:GameStack.Graphics.FrameSequence`1.Reset()">Reset</a>
+                    </b>()<blockquote>Stop the sequence and reset to the beginning. (<i>Inherited from <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;T&gt;</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/FrameSequence`1.html#M:GameStack.Graphics.FrameSequence`1.Update(GameStack.FrameArgs)">Update</a>
+                    </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>Advance the sequence by the specified time. (<i>Inherited from <a href="../GameStack.Graphics/FrameSequence`1.html">FrameSequence&lt;T&gt;</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.SpriteSequence:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[])">SpriteSequence Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[]):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>SpriteSequence</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> framesPerSecond, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> loop, <b>params</b> <a href="../GameStack.Graphics/Sprite.html">Sprite</a>[] frames)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[]):Parameters">
-            <dl>
-              <dt>
-                <i>framesPerSecond</i>
-              </dt>
-              <dd>Animation rate in frames per second.</dd>
-              <dt>
-                <i>loop</i>
-              </dt>
-              <dd>If true, animation is looped infinitely.</dd>
-              <dt>
-                <i>frames</i>
-              </dt>
-              <dd>One or more sprites to be displayed in sequence.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.SpriteSequence:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[])">SpriteSequence Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[]):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>SpriteSequence</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> framesPerSecond, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> loop, <b>params</b> <a href="../GameStack.Graphics/Sprite.html">Sprite</a>[] frames)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[]):Parameters">
+              <dl>
+                <dt>
+                  <i>framesPerSecond</i>
+                </dt>
+                <dd>Animation rate in frames per second.</dd>
+                <dt>
+                  <i>loop</i>
+                </dt>
+                <dd>If true, animation is looped infinitely.</dd>
+                <dt>
+                  <i>frames</i>
+                </dt>
+                <dd>One or more sprites to be displayed in sequence.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[]):Remarks">Sprites are expected to be the same size.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[]):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[]):Remarks">Sprites are expected to be the same size.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Sprite[]):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[])">SpriteSequence Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[]):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>SpriteSequence</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> framesPerSecond, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> loop, <a href="../GameStack.Graphics/Atlas.html">Atlas</a> atlas, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[] spriteNames)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[]):Parameters">
-            <dl>
-              <dt>
-                <i>framesPerSecond</i>
-              </dt>
-              <dd>Animation rate in frames per second.</dd>
-              <dt>
-                <i>loop</i>
-              </dt>
-              <dd>If true, animation is looped infinitely.</dd>
-              <dt>
-                <i>atlas</i>
-              </dt>
-              <dd>The atlas asset from which all sprites will be sourced.</dd>
-              <dt>
-                <i>spriteNames</i>
-              </dt>
-              <dd>One or more names of sprites within the atlas.</dd>
-            </dl>
+          <h3 id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[])">SpriteSequence Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[]):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>SpriteSequence</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> framesPerSecond, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> loop, <a href="../GameStack.Graphics/Atlas.html">Atlas</a> atlas, <b>params</b> <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>[] spriteNames)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[]):Parameters">
+              <dl>
+                <dt>
+                  <i>framesPerSecond</i>
+                </dt>
+                <dd>Animation rate in frames per second.</dd>
+                <dt>
+                  <i>loop</i>
+                </dt>
+                <dd>If true, animation is looped infinitely.</dd>
+                <dt>
+                  <i>atlas</i>
+                </dt>
+                <dd>The atlas asset from which all sprites will be sourced.</dd>
+                <dt>
+                  <i>spriteNames</i>
+                </dt>
+                <dd>One or more names of sprites within the atlas.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[]):Remarks">Sprites are expected to be the same size. Sprite names are equivalent to their original .png file names, but without the extension.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[]):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[]):Remarks">Sprites are expected to be the same size. Sprite names are equivalent to their original .png file names, but without the extension.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.SpriteSequence(System.Int32,System.Boolean,GameStack.Graphics.Atlas,System.String[]):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw Method</h3>
-        <blockquote id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single):member">
-          <p class="Summary">Draws the current frame.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> pos, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleX, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleY, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> rotation)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single):Parameters">
-            <dl>
-              <dt>
-                <i>pos</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>scaleX</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>scaleY</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>rotation</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw Method</h3>
+          <blockquote id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single):member">
+            <p class="Summary">Draws the current frame.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a> pos, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleX, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleY, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> rotation)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single):Parameters">
+              <dl>
+                <dt>
+                  <i>pos</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>scaleX</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>scaleY</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>rotation</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw Method</h3>
-        <blockquote id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single):member">
-          <p class="Summary">Draws the current frame.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> x, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> y, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> z, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleX, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleY, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> rotation)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single):Parameters">
-            <dl>
-              <dt>
-                <i>x</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>y</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>z</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>scaleX</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>scaleY</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>rotation</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw Method</h3>
+          <blockquote id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single):member">
+            <p class="Summary">Draws the current frame.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> x, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> y, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> z, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleX, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> scaleY, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> rotation)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single):Parameters">
+              <dl>
+                <dt>
+                  <i>x</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>y</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>z</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>scaleX</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>scaleY</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>rotation</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.SpriteSequence.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

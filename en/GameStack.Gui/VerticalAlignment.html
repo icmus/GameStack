@@ -3,8 +3,9 @@
     <title>GameStack.Gui.VerticalAlignment</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,48 +210,50 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.VerticalAlignment">VerticalAlignment  Enum</h1>
     <p class="Summary" id="T:GameStack.Gui.VerticalAlignment:Summary">Indicates the vertical alignment to be used when positioning text.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Gui.VerticalAlignment:Signature">public enum <b>VerticalAlignment</b></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Gui.VerticalAlignment:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.VerticalAlignment:Docs:Remarks">Used with <a href="../GameStack.Gui/Label.html">GameStack.Gui.Label</a>.</div>
-      <h2 class="Section">Members</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.VerticalAlignment:Docs:Members">
-        <table class="Enumeration">
-          <tr>
-            <th>Member Name</th>
-            <th>Description</th>
-          </tr>
-          <tr valign="top">
-            <td id="F:GameStack.Gui.VerticalAlignment.Bottom">
-              <b>Bottom</b>
-            </td>
-            <td>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td id="F:GameStack.Gui.VerticalAlignment.Middle">
-              <b>Middle</b>
-            </td>
-            <td>
-            </td>
-          </tr>
-          <tr valign="top">
-            <td id="F:GameStack.Gui.VerticalAlignment.Top">
-              <b>Top</b>
-            </td>
-            <td>
-            </td>
-          </tr>
-        </table>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Gui.VerticalAlignment:Signature">public enum <b>VerticalAlignment</b></div>
       </div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.VerticalAlignment:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-    </div>
-    <div class="Members" id="T:GameStack.Gui.VerticalAlignment:Members">
+      <div class="Remarks" id="T:GameStack.Gui.VerticalAlignment:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.VerticalAlignment:Docs:Remarks">Used with <a href="../GameStack.Gui/Label.html">GameStack.Gui.Label</a>.</div>
+        <h2 class="Section">Members</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.VerticalAlignment:Docs:Members">
+          <table class="Enumeration">
+            <tr>
+              <th>Member Name</th>
+              <th>Description</th>
+            </tr>
+            <tr valign="top">
+              <td id="F:GameStack.Gui.VerticalAlignment.Bottom">
+                <b>Bottom</b>
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td id="F:GameStack.Gui.VerticalAlignment.Middle">
+                <b>Middle</b>
+              </td>
+              <td>
+              </td>
+            </tr>
+            <tr valign="top">
+              <td id="F:GameStack.Gui.VerticalAlignment.Top">
+                <b>Top</b>
+              </td>
+              <td>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.VerticalAlignment:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+      </div>
+      <div class="Members" id="T:GameStack.Gui.VerticalAlignment:Members">
+      </div>
     </div>
     <hr size="1" />
     <div class="Copyright">

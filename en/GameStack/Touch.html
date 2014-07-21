@@ -3,8 +3,9 @@
     <title>GameStack.Touch</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,169 +210,171 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Touch">Touch  Class</h1>
     <p class="Summary" id="T:GameStack.Touch:Summary">Instances of this type will be added to the event queue whenever a touch event occurs.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Touch:Signature">public class  <b>Touch</b> : <a href="../GameStack/EventBase.html">EventBase</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Touch:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Touch:Docs:Remarks">Touch events include things like finger down, repeated movements, and finger up. For higher level gesture support (where available) see classes derived from <a href="../GameStack/Gesture.html">GameStack.Gesture</a>. On desktop platforms, mouse events will act like touch events (with left click representing a finger down action).</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Touch:Docs:Version Information">
-        <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Touch:Signature">public class  <b>Touch</b> : <a href="../GameStack/EventBase.html">EventBase</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Touch:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Touch:Docs:Remarks">Touch events include things like finger down, repeated movements, and finger up. For higher level gesture support (where available) see classes derived from <a href="../GameStack/Gesture.html">GameStack.Gesture</a>. On desktop platforms, mouse events will act like touch events (with left click representing a finger down action).</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Touch:Docs:Version Information">
+          <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack/EventBase.html">EventBase</a>.
 							</p>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Touch.Index">Index</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
-                  </i>. Gets the touch index for this event.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Touch.IsVirtual">IsVirtual</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. Was the touch event generated by the system?</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Touch.Point">Point</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
-                  </i>. Gets the normalized view point (-1 to 1).</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Touch.State">State</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack/TouchState.html">TouchState</a>
-                  </i>. Gets the current state of this touch.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Touch.SurfacePoint">SurfacePoint</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
-                  </i>. Gets the viewport point in pixels.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Touch.Index">Index</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a>
+                    </i>. Gets the touch index for this event.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Touch.IsVirtual">IsVirtual</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                    </i>. Was the touch event generated by the system?</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Touch.Point">Point</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
+                    </i>. Gets the normalized view point (-1 to 1).</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Touch.State">State</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack/TouchState.html">TouchState</a>
+                    </i>. Gets the current state of this touch.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Touch.SurfacePoint">SurfacePoint</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>
+                    </i>. Gets the viewport point in pixels.</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Touch:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="P:GameStack.Touch.Index">Index Property</h3>
-        <blockquote id="P:GameStack.Touch.Index:member">
-          <p class="Summary">Gets the touch index for this event.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Index</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Touch.Index:Value">
+      <div class="Members" id="T:GameStack.Touch:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="P:GameStack.Touch.Index">Index Property</h3>
+          <blockquote id="P:GameStack.Touch.Index:member">
+            <p class="Summary">Gets the touch index for this event.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int64">long</a> <b>Index</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Touch.Index:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.Index:Remarks">The touch index for a single physical touch remains consistent between frames so that individual touches can be tracked separately. On desktop, mouse events always use index 0.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.Index:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.Index:Remarks">The touch index for a single physical touch remains consistent between frames so that individual touches can be tracked separately. On desktop, mouse events always use index 0.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.Index:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Touch.IsVirtual">IsVirtual Property</h3>
-        <blockquote id="P:GameStack.Touch.IsVirtual:member">
-          <p class="Summary">Was the touch event generated by the system?</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsVirtual</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Touch.IsVirtual:Value">
+          <h3 id="P:GameStack.Touch.IsVirtual">IsVirtual Property</h3>
+          <blockquote id="P:GameStack.Touch.IsVirtual:member">
+            <p class="Summary">Was the touch event generated by the system?</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsVirtual</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Touch.IsVirtual:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.IsVirtual:Remarks">When true, the touch event was not the result of an actual physical touch but was instead generated (e.g., from a mouse event).</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.IsVirtual:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.IsVirtual:Remarks">When true, the touch event was not the result of an actual physical touch but was instead generated (e.g., from a mouse event).</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.IsVirtual:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Touch.Point">Point Property</h3>
-        <blockquote id="P:GameStack.Touch.Point:member">
-          <p class="Summary">Gets the normalized view point (-1 to 1).</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>Point</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Touch.Point:Value">
+          <h3 id="P:GameStack.Touch.Point">Point Property</h3>
+          <blockquote id="P:GameStack.Touch.Point:member">
+            <p class="Summary">Gets the normalized view point (-1 to 1).</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>Point</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Touch.Point:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.Point:Remarks">This value is suitable for unprojection.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.Point:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.Point:Remarks">This value is suitable for unprojection.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.Point:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Touch.State">State Property</h3>
-        <blockquote id="P:GameStack.Touch.State:member">
-          <p class="Summary">Gets the current state of this touch.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack/TouchState.html">TouchState</a> <b>State</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Touch.State:Value">
+          <h3 id="P:GameStack.Touch.State">State Property</h3>
+          <blockquote id="P:GameStack.Touch.State:member">
+            <p class="Summary">Gets the current state of this touch.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack/TouchState.html">TouchState</a> <b>State</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Touch.State:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.State:Remarks">A single touch may go through multiple phases, so it will generate repeated events with updated states.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.State:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.State:Remarks">A single touch may go through multiple phases, so it will generate repeated events with updated states.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.State:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Touch.SurfacePoint">SurfacePoint Property</h3>
-        <blockquote id="P:GameStack.Touch.SurfacePoint:member">
-          <p class="Summary">Gets the viewport point in pixels.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>SurfacePoint</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Touch.SurfacePoint:Value">
+          <h3 id="P:GameStack.Touch.SurfacePoint">SurfacePoint Property</h3>
+          <blockquote id="P:GameStack.Touch.SurfacePoint:member">
+            <p class="Summary">Gets the viewport point in pixels.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> <b>SurfacePoint</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Touch.SurfacePoint:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.SurfacePoint:Remarks">When an orthographic 2D camera is used with its origin in the lower left corner, this value will map directly to world coordinates, making it handy for easy hit testing without the need to unproject.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Touch.SurfacePoint:Version Information">
+              <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.SurfacePoint:Remarks">When an orthographic 2D camera is used with its origin in the lower left corner, this value will map directly to world coordinates, making it handy for easy hit testing without the need to unproject.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Touch.SurfacePoint:Version Information">
-            <b>Namespace: </b>GameStack<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

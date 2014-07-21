@@ -3,8 +3,9 @@
     <title>GameStack: GameStack.Gui</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -193,98 +195,100 @@
     <h1 class="PageTitle">GameStack.Gui Namespace</h1>
     <p class="Summary">
     </p>
-    <div>
-    </div>
-    <div class="Remarks">
-      <h2 class="Section"> Namespace</h2>
-      <p>
-      </p>
-      <table class="TypesListing" style="margin-top: 1em">
-        <tr>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Button.html">Button</a>
-          </td>
-          <td>A simple control that can be used as a standard button, a toggle button, or as a member of a radio button group.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ButtonState.html">ButtonState</a>
-          </td>
-          <td>Indicates the current state of a button.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ButtonStateChangedEventArgs.html">ButtonStateChangedEventArgs</a>
-          </td>
-          <td>Event arguments for use with <a href="../GameStack.Gui/Button.html#E:GameStack.Gui.Button.StateChanged">GameStack.Gui.Button.StateChanged</a>.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./CanvasView.html">CanvasView</a>
-          </td>
-          <td>A base class for views that which to use the Cairo drawing API.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./ImageView.html">ImageView</a>
-          </td>
-          <td>A simple view for displaying a single image.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./IPointerInput.html">IPointerInput</a>
-          </td>
-          <td>Implemented by any UI controls that wish to receive generic pointer events.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./Label.html">Label</a>
-          </td>
-          <td>A simple view that presents one or more lines of text using a bitmap font.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./LayoutSpec.html">LayoutSpec</a>
-          </td>
-          <td>A layout specification is a collection of lambda functions that control the behavior of a view's layout with respect to its parent.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./RadioGroup.html">RadioGroup</a>
-          </td>
-          <td>Groups buttons together into a common radio group with only one active button at a time.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./RadioGroupEventArgs.html">RadioGroupEventArgs</a>
-          </td>
-          <td>Provides information about a radio button event.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./RootView.html">RootView</a>
-          </td>
-          <td>Manages a UI hierarchy and processes events handled by controls within the hierarchy.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./VerticalAlignment.html">VerticalAlignment</a>
-          </td>
-          <td>Indicates the vertical alignment to be used when positioning text.</td>
-        </tr>
-        <tr valign="top">
-          <td>
-            <a href="./View.html">View</a>
-          </td>
-          <td>The base class for all objects participating in a UI view hierarchy.</td>
-        </tr>
-      </table>
-    </div>
-    <div class="Members">
+    <div class="content-container">
+      <div>
+      </div>
+      <div class="Remarks">
+        <h2 class="Section"> Namespace</h2>
+        <p>
+        </p>
+        <table class="TypesListing" style="margin-top: 1em">
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Button.html">Button</a>
+            </td>
+            <td>A simple control that can be used as a standard button, a toggle button, or as a member of a radio button group.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./ButtonState.html">ButtonState</a>
+            </td>
+            <td>Indicates the current state of a button.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./ButtonStateChangedEventArgs.html">ButtonStateChangedEventArgs</a>
+            </td>
+            <td>Event arguments for use with <a href="../GameStack.Gui/Button.html#E:GameStack.Gui.Button.StateChanged">GameStack.Gui.Button.StateChanged</a>.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./CanvasView.html">CanvasView</a>
+            </td>
+            <td>A base class for views that which to use the Cairo drawing API.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./ImageView.html">ImageView</a>
+            </td>
+            <td>A simple view for displaying a single image.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./IPointerInput.html">IPointerInput</a>
+            </td>
+            <td>Implemented by any UI controls that wish to receive generic pointer events.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./Label.html">Label</a>
+            </td>
+            <td>A simple view that presents one or more lines of text using a bitmap font.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./LayoutSpec.html">LayoutSpec</a>
+            </td>
+            <td>A layout specification is a collection of lambda functions that control the behavior of a view's layout with respect to its parent.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./RadioGroup.html">RadioGroup</a>
+            </td>
+            <td>Groups buttons together into a common radio group with only one active button at a time.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./RadioGroupEventArgs.html">RadioGroupEventArgs</a>
+            </td>
+            <td>Provides information about a radio button event.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./RootView.html">RootView</a>
+            </td>
+            <td>Manages a UI hierarchy and processes events handled by controls within the hierarchy.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./VerticalAlignment.html">VerticalAlignment</a>
+            </td>
+            <td>Indicates the vertical alignment to be used when positioning text.</td>
+          </tr>
+          <tr valign="top">
+            <td>
+              <a href="./View.html">View</a>
+            </td>
+            <td>The base class for all objects participating in a UI view hierarchy.</td>
+          </tr>
+        </table>
+      </div>
+      <div class="Members">
+      </div>
     </div>
     <hr size="1" />
     <div class="Copyright">© 2014 iconmobile LLC</div>

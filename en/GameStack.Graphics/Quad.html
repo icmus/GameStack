@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.Quad</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,284 +210,286 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Quad">Quad  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.Quad:Summary">A convenience type that can render a simple quad using a specified material.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.Quad:Signature">public class  <b>Quad</b> : <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>,	<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.Quad:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Quad:Docs:Remarks">Quads contain four coplanar points and can be used to draw textured or non-textured images. Quads can have a default material. If another material is in scope when the quad is drawn, that material is used instead.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Quad:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.Quad:Signature">public class  <b>Quad</b> : <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>,	<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.Quad:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Quad:Docs:Remarks">Quads contain four coplanar points and can be used to draw textured or non-textured images. Quads can have a default material. If another material is in scope when the quad is drawn, that material is used instead.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Quad:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean)">Quad</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean)">Quad</a>
+                      </b>(<a href="../GameStack.Graphics/Material.html">Material</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean)">Quad</a>
-                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+                      <a href="#P:GameStack.Graphics.Quad.Material">Material</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/Material.html">Material</a>
+                    </i>. Gets the quad's default material.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
                     <b>
-                      <a href="#C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean)">Quad</a>
-                    </b>(<a href="../GameStack.Graphics/Material.html">Material</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#M:GameStack.Graphics.Quad.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to dispose the quad's geometry resources.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4)">Draw</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4@)">Draw</a>
+                    </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Quad.Material">Material</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/Material.html">Material</a>
-                  </i>. Gets the quad's default material.</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Quad.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to dispose the quad's geometry resources.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Matrix4@)">Draw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(OpenTK.Vector3,System.Single,System.Single,System.Single)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector3</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.Draw(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">Draw</a>
-                  </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote>Draws the object using the current material and camera. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Protected Methods</h2>
-        <div class="SectionBox" id="Protected Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>abstract </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>When overridden, must draw the object. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Protected Methods</h2>
+          <div class="SectionBox" id="Protected Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
+                    </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>abstract </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/Drawable2D.html#M:GameStack.Graphics.Drawable2D.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
+                    </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>When overridden, must draw the object. (<i>Inherited from <a href="../GameStack.Graphics/Drawable2D.html">Drawable2D</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.Quad:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean)">Quad Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>Quad</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> rect, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> color, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> flipY)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Parameters">
-            <dl>
-              <dt>
-                <i>rect</i>
-              </dt>
-              <dd>Specifies the actual quad geometry. For a quad of unit size centered at the origin, use (-0.5, -0.5, 0.5, 0.5).</dd>
-              <dt>
-                <i>color</i>
-              </dt>
-              <dd>Color applied to each vertex.</dd>
-              <dt>
-                <i>flipY</i>
-              </dt>
-              <dd>If true, the texture coordinates are vertically flipped to compensate for upside-down images.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.Quad:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean)">Quad Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>Quad</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> rect, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> color, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> flipY)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Parameters">
+              <dl>
+                <dt>
+                  <i>rect</i>
+                </dt>
+                <dd>Specifies the actual quad geometry. For a quad of unit size centered at the origin, use (-0.5, -0.5, 0.5, 0.5).</dd>
+                <dt>
+                  <i>color</i>
+                </dt>
+                <dd>Color applied to each vertex.</dd>
+                <dt>
+                  <i>flipY</i>
+                </dt>
+                <dd>If true, the texture coordinates are vertically flipped to compensate for upside-down images.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Quad(OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean)">Quad Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>Quad</b> (<a href="../GameStack.Graphics/Material.html">Material</a> material, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> rect, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> color, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> flipV)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Parameters">
-            <dl>
-              <dt>
-                <i>material</i>
-              </dt>
-              <dd>If specified, use this material by default when drawing the quad.</dd>
-              <dt>
-                <i>rect</i>
-              </dt>
-              <dd>Specifies the actual quad geometry. For a quad of unit size centered at the origin, use (-0.5, -0.5, 0.5, 0.5).</dd>
-              <dt>
-                <i>color</i>
-              </dt>
-              <dd>Color applied to each vertex.</dd>
-              <dt>
-                <i>flipV</i>
-              </dt>
-              <dd>
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </dd>
-            </dl>
+          <h3 id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean)">Quad Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>Quad</b> (<a href="../GameStack.Graphics/Material.html">Material</a> material, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> rect, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a> color, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> flipV)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Parameters">
+              <dl>
+                <dt>
+                  <i>material</i>
+                </dt>
+                <dd>If specified, use this material by default when drawing the quad.</dd>
+                <dt>
+                  <i>rect</i>
+                </dt>
+                <dd>Specifies the actual quad geometry. For a quad of unit size centered at the origin, use (-0.5, -0.5, 0.5, 0.5).</dd>
+                <dt>
+                  <i>color</i>
+                </dt>
+                <dd>Color applied to each vertex.</dd>
+                <dt>
+                  <i>flipV</i>
+                </dt>
+                <dd>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Quad(GameStack.Graphics.Material,OpenTK.Vector4,OpenTK.Vector4,System.Boolean):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Quad.Dispose()">Dispose Method</h3>
-        <blockquote id="M:GameStack.Graphics.Quad.Dispose():member">
-          <p class="Summary">Must be called to dispose the quad's geometry resources.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Quad.Dispose():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Quad.Dispose():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Quad.Material">Material Property</h3>
-        <blockquote id="P:GameStack.Graphics.Quad.Material:member">
-          <p class="Summary">Gets the quad's default material.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/Material.html">Material</a> <b>Material</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Quad.Material:Value">
+          <h3 id="M:GameStack.Graphics.Quad.Dispose()">Dispose Method</h3>
+          <blockquote id="M:GameStack.Graphics.Quad.Dispose():member">
+            <p class="Summary">Must be called to dispose the quad's geometry resources.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Quad.Dispose():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Quad.Dispose():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Quad.Material:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Quad.Material:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@)">OnDraw Method</h3>
-        <blockquote id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDraw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@):Parameters">
-            <dl>
-              <dt>
-                <i>world</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="P:GameStack.Graphics.Quad.Material">Material Property</h3>
+          <blockquote id="P:GameStack.Graphics.Quad.Material:member">
+            <p class="Summary">Gets the quad's default material.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/Material.html">Material</a> <b>Material</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Quad.Material:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Quad.Material:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Quad.Material:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@)">OnDraw Method</h3>
+          <blockquote id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnDraw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@):Parameters">
+              <dl>
+                <dt>
+                  <i>world</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Quad.OnDraw(OpenTK.Matrix4@):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

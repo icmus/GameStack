@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.Mesh</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,252 +210,254 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Mesh">Mesh  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.Mesh:Summary">Manages a single mesh within a <a href="../GameStack.Graphics/Model.html">GameStack.Graphics.Model</a>.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.Mesh:Signature">public class  <b>Mesh</b></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.Mesh:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Mesh:Docs:Remarks">Apps typically do not need to acces objects of this type directly.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Mesh:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.Mesh:Signature">public class  <b>Mesh</b></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.Mesh:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Mesh:Docs:Remarks">Apps typically do not need to acces objects of this type directly.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Mesh:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[])">Mesh</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/Material.html">Material</a>, <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[], <a href="../GameStack.Graphics/Bone.html">Bone</a>[])</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[])">Mesh</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/Material.html">Material</a>, <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[], <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[], <a href="../GameStack.Graphics/Bone.html">Bone</a>[])</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#P:GameStack.Graphics.Mesh.Bones">Bones</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/Bone.html">Bone</a>[]</i>. Gets the bones associated with the mesh, if any.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Mesh.Material">Material</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/Material.html">Material</a>
+                    </i>. Gets the mesh's default material.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Mesh.Name">Name</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                    </i>. Gets the mesh's name as defined in the original model file.</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.Mesh.Node">Node</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/Node.html">Node</a>
+                    </i>. Gets the transform hierarchy node for this mesh.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Mesh.Bones">Bones</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/Bone.html">Bone</a>[]</i>. Gets the bones associated with the mesh, if any.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Mesh.Material">Material</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/Material.html">Material</a>
-                  </i>. Gets the mesh's default material.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Mesh.Name">Name</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. Gets the mesh's name as defined in the original model file.</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Mesh.Node">Node</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/Node.html">Node</a>
-                  </i>. Gets the transform hierarchy node for this mesh.</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@)">Draw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the mesh.</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@)">Draw</a>
+                    </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draws the mesh.</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.Mesh:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[])">Mesh Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>Mesh</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../GameStack.Graphics/Material.html">Material</a> mat, <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> format, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[] vertices, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] indices, <a href="../GameStack.Graphics/Bone.html">Bone</a>[] bones)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Parameters">
-            <dl>
-              <dt>
-                <i>name</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>mat</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>format</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>vertices</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>indices</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>bones</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.Mesh:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[])">Mesh Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>Mesh</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../GameStack.Graphics/Material.html">Material</a> mat, <a href="../GameStack.Graphics/VertexFormat.html">VertexFormat</a> format, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>[] vertices, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>[] indices, <a href="../GameStack.Graphics/Bone.html">Bone</a>[] bones)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Parameters">
+              <dl>
+                <dt>
+                  <i>name</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>mat</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>format</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>vertices</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>indices</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>bones</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Remarks">Typically called by asset loaders.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Remarks">Typically called by asset loaders.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Mesh(System.String,GameStack.Graphics.Material,GameStack.Graphics.VertexFormat,System.Single[],System.Int32[],GameStack.Graphics.Bone[]):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Mesh.Bones">Bones Property</h3>
-        <blockquote id="P:GameStack.Graphics.Mesh.Bones:member">
-          <p class="Summary">Gets the bones associated with the mesh, if any.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/Bone.html">Bone</a>[] <b>Bones</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Bones:Value">
+          <h3 id="P:GameStack.Graphics.Mesh.Bones">Bones Property</h3>
+          <blockquote id="P:GameStack.Graphics.Mesh.Bones:member">
+            <p class="Summary">Gets the bones associated with the mesh, if any.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/Bone.html">Bone</a>[] <b>Bones</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Bones:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Bones:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Bones:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Bones:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Bones:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@)">Draw Method</h3>
-        <blockquote id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):member">
-          <p class="Summary">Draws the mesh.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Parameters">
-            <dl>
-              <dt>
-                <i>world</i>
-              </dt>
-              <dd>Apply this world transform.</dd>
-            </dl>
+          <h3 id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@)">Draw Method</h3>
+          <blockquote id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):member">
+            <p class="Summary">Draws the mesh.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> (<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a> world)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Parameters">
+              <dl>
+                <dt>
+                  <i>world</i>
+                </dt>
+                <dd>Apply this world transform.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Remarks">Uses the mesh's default material unless another material is already in scope. A camera must be in scope.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Remarks">Uses the mesh's default material unless another material is already in scope. A camera must be in scope.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Mesh.Draw(OpenTK.Matrix4@):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Mesh.Material">Material Property</h3>
-        <blockquote id="P:GameStack.Graphics.Mesh.Material:member">
-          <p class="Summary">Gets the mesh's default material.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/Material.html">Material</a> <b>Material</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Material:Value">
+          <h3 id="P:GameStack.Graphics.Mesh.Material">Material Property</h3>
+          <blockquote id="P:GameStack.Graphics.Mesh.Material:member">
+            <p class="Summary">Gets the mesh's default material.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/Material.html">Material</a> <b>Material</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Material:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Material:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Material:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Material:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Material:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Mesh.Name">Name Property</h3>
-        <blockquote id="P:GameStack.Graphics.Mesh.Name:member">
-          <p class="Summary">Gets the mesh's name as defined in the original model file.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Name:Value">
+          <h3 id="P:GameStack.Graphics.Mesh.Name">Name Property</h3>
+          <blockquote id="P:GameStack.Graphics.Mesh.Name:member">
+            <p class="Summary">Gets the mesh's name as defined in the original model file.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Name</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Name:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Name:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Name:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Name:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Name:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Mesh.Node">Node Property</h3>
-        <blockquote id="P:GameStack.Graphics.Mesh.Node:member">
-          <p class="Summary">Gets the transform hierarchy node for this mesh.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/Node.html">Node</a> <b>Node</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Node:Value">
+          <h3 id="P:GameStack.Graphics.Mesh.Node">Node Property</h3>
+          <blockquote id="P:GameStack.Graphics.Mesh.Node:member">
+            <p class="Summary">Gets the transform hierarchy node for this mesh.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/Node.html">Node</a> <b>Node</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Mesh.Node:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Node:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Node:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Node:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Mesh.Node:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

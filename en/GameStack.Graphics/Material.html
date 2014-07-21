@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.Material</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,236 +210,238 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.Material">Material  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.Material:Summary">A base class for all materials.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.Material:Signature">public class  <b>Material</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.Material:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Material:Docs:Remarks">Materials store information about how geometry is rendered, independent of the geometry itself. This includes the shader program that will be used as well as the parameters that are passed to the shader. Materials are responsible for setting texture parameters as well. This class can be subtyped to expose more properties specific to certain shaders. For example, <a href="../GameStack.Graphics/BlurMaterial.html">GameStack.Graphics.BlurMaterial</a> exposes properties relevant to the use of <a href="../GameStack.Graphics/BlurShader.html">GameStack.Graphics.BlurShader</a>.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.Material:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.Material:Signature">public class  <b>Material</b> : <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.Material:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Material:Docs:Remarks">Materials store information about how geometry is rendered, independent of the geometry itself. This includes the shader program that will be used as well as the parameters that are passed to the shader. Materials are responsible for setting texture parameters as well. This class can be subtyped to expose more properties specific to certain shaders. For example, <a href="../GameStack.Graphics/BlurMaterial.html">GameStack.Graphics.BlurMaterial</a> exposes properties relevant to the use of <a href="../GameStack.Graphics/BlurShader.html">GameStack.Graphics.BlurShader</a>.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.Material:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.Material(GameStack.Graphics.Shader)">Material</a>
+                      </b>(<a href="../GameStack.Graphics/Shader.html">Shader</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Graphics.Material(GameStack.Graphics.Shader)">Material</a>
-                    </b>(<a href="../GameStack.Graphics/Shader.html">Shader</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="#P:GameStack.Graphics.Material.Shader">Shader</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/Shader.html">Shader</a>
+                    </i>. Gets or sets the shader to be used when the material is active.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.Material.Shader">Shader</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/Shader.html">Shader</a>
-                  </i>. Gets or sets the shader to be used when the material is active.</td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
+                    </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Material.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release shader resources.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to release resources. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
+                    </b>()<blockquote>Takes the object out of scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Begin()">Begin</a>
-                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IDisposable">IDisposable</a></nobr><blockquote>Brings the object into scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Material.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to release shader resources.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to release resources. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.End()">End</a>
-                  </b>()<blockquote>Takes the object out of scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Protected Methods</h2>
-        <div class="SectionBox" id="Protected Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Material.OnBegin()">OnBegin</a>
-                  </b>()<blockquote>Set all shader uniforms in preparation for draw.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
-                  </b>()<blockquote>Override to perform actions upon entering scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>override </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Graphics.Material.OnEnd()">OnEnd</a>
-                  </b>()<blockquote>If necessary, restore any modified settings.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
-                  </b>()<blockquote>Override to perform actions upon leaving scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Protected Methods</h2>
+          <div class="SectionBox" id="Protected Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Material.OnBegin()">OnBegin</a>
+                    </b>()<blockquote>Set all shader uniforms in preparation for draw.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnBegin()">OnBegin</a>
+                    </b>()<blockquote>Override to perform actions upon entering scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>override </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Graphics.Material.OnEnd()">OnEnd</a>
+                    </b>()<blockquote>If necessary, restore any modified settings.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Graphics/ScopedObject.html#M:GameStack.Graphics.ScopedObject.OnEnd()">OnEnd</a>
+                    </b>()<blockquote>Override to perform actions upon leaving scope. (<i>Inherited from <a href="../GameStack.Graphics/ScopedObject.html">ScopedObject</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.Material:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader)">Material Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>Material</b> (<a href="../GameStack.Graphics/Shader.html">Shader</a> shader)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader):Parameters">
-            <dl>
-              <dt>
-                <i>shader</i>
-              </dt>
-              <dd>The shader to be used when this material is active.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.Material:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader)">Material Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>Material</b> (<a href="../GameStack.Graphics/Shader.html">Shader</a> shader)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader):Parameters">
+              <dl>
+                <dt>
+                  <i>shader</i>
+                </dt>
+                <dd>The shader to be used when this material is active.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader):Remarks">The shader will be disposed with the material.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader):Remarks">The shader will be disposed with the material.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.Material(GameStack.Graphics.Shader):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Material.Dispose()">Dispose Method</h3>
-        <blockquote id="M:GameStack.Graphics.Material.Dispose():member">
-          <p class="Summary">Must be called to release shader resources.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Material.Dispose():Remarks">The shader is automatically disposed with the material.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Material.Dispose():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Material.OnBegin()">OnBegin Method</h3>
-        <blockquote id="M:GameStack.Graphics.Material.OnBegin():member">
-          <p class="Summary">Set all shader uniforms in preparation for draw.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Material.OnBegin():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Material.OnBegin():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Graphics.Material.OnEnd()">OnEnd Method</h3>
-        <blockquote id="M:GameStack.Graphics.Material.OnEnd():member">
-          <p class="Summary">If necessary, restore any modified settings.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnEnd</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Material.OnEnd():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Graphics.Material.OnEnd():Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.Material.Shader">Shader Property</h3>
-        <blockquote id="P:GameStack.Graphics.Material.Shader:member">
-          <p class="Summary">Gets or sets the shader to be used when the material is active.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/Shader.html">Shader</a> <b>Shader</b>  { get; set; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Material.Shader:Value">
+          <h3 id="M:GameStack.Graphics.Material.Dispose()">Dispose Method</h3>
+          <blockquote id="M:GameStack.Graphics.Material.Dispose():member">
+            <p class="Summary">Must be called to release shader resources.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Dispose</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Material.Dispose():Remarks">The shader is automatically disposed with the material.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Material.Dispose():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Material.Shader:Remarks">When switching materials, the caller is responsible for disposing the old material.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.Material.Shader:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="M:GameStack.Graphics.Material.OnBegin()">OnBegin Method</h3>
+          <blockquote id="M:GameStack.Graphics.Material.OnBegin():member">
+            <p class="Summary">Set all shader uniforms in preparation for draw.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnBegin</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Material.OnBegin():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Material.OnBegin():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="M:GameStack.Graphics.Material.OnEnd()">OnEnd Method</h3>
+          <blockquote id="M:GameStack.Graphics.Material.OnEnd():member">
+            <p class="Summary">If necessary, restore any modified settings.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">protected override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnEnd</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Material.OnEnd():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Graphics.Material.OnEnd():Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+          <h3 id="P:GameStack.Graphics.Material.Shader">Shader Property</h3>
+          <blockquote id="P:GameStack.Graphics.Material.Shader:member">
+            <p class="Summary">Gets or sets the shader to be used when the material is active.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/Shader.html">Shader</a> <b>Shader</b>  { get; set; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.Material.Shader:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Material.Shader:Remarks">When switching materials, the caller is responsible for disposing the old material.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.Material.Shader:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

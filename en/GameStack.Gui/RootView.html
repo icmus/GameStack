@@ -3,8 +3,9 @@
     <title>GameStack.Gui.RootView</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,650 +210,652 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Gui.RootView">RootView  Class</h1>
     <p class="Summary" id="T:GameStack.Gui.RootView:Summary">Manages a UI hierarchy and processes events handled by controls within the hierarchy.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Gui.RootView:Signature">public class  <b>RootView</b> : <a href="../GameStack.Gui/View.html">View</a>,	<a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;GameStack.Gesture&gt;</a>, <a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;GameStack.Resize&gt;</a>, <a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;GameStack.Touch&gt;</a>, <a href="../GameStack/IUpdater.html">GameStack.IUpdater</a></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Gui.RootView:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.RootView:Docs:Remarks">An instance of this class must sit at the root of any UI hierarchy. It represents the entire hierarchy to your scene. Add the root to the scene collection by calling <a href="../GameStack/Scene.html#M:GameStack.Scene.Add(System.Object)">GameStack.Scene.Add(object)</a> to pass events into the hierarchy.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Gui.RootView:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Gui.RootView:Signature">public class  <b>RootView</b> : <a href="../GameStack.Gui/View.html">View</a>,	<a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;GameStack.Gesture&gt;</a>, <a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;GameStack.Resize&gt;</a>, <a href="../GameStack/IHandler`1.html">GameStack.IHandler&lt;GameStack.Touch&gt;</a>, <a href="../GameStack/IUpdater.html">GameStack.IUpdater</a></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Gui.RootView:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.RootView:Docs:Remarks">An instance of this class must sit at the root of any UI hierarchy. It represents the entire hierarchy to your scene. Add the root to the scene collection by calling <a href="../GameStack/Scene.html#M:GameStack.Scene.Add(System.Object)">GameStack.Scene.Add(object)</a> to pass events into the hierarchy.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Gui.RootView:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="../GameStack.Gui/View.html">View</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single)">RootView</a>
+                      </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
                     <b>
-                      <a href="#C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single)">RootView</a>
-                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.BlockInput">BlockInput</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                    </i>. Is the view's input blocked? (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Children">Children</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;View&gt;</a>
+                    </i>. Gets the immediate children of this view. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Frame">Frame</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.RectangleF">System.Drawing.RectangleF</a>
+                    </i>. Gets the control's frame relative to its parent. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Margins">Margins</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>
+                    </i>. Get the left, top, right, and bottom distances from the parent's frame. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Parent">Parent</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Gui/View.html">View</a>
+                    </i>. Gets the view's parent view, or returns null if the view is not part of a hierarchy, or is at the root of a hierarchy. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Size">Size</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.SizeF">System.Drawing.SizeF</a>
+                    </i>. Gets the size of the view in pixels. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Spec">Spec</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a>
+                    </i>. Gets or sets the layout specification. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Tag">Tag</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
+                    </i>. An optional data tag of any type. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Transform">Transform</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
+                    </i>. Gets or sets the local transform applied to this view in its parent's coordinate space. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.TransformInv">TransformInv</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
+                    </i>. Gets or sets the local inverse transform. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <b>
+                      <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.ZDepth">ZDepth</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
+                    </i>. The view's Z-depth relative to the parent. Higher values are closer to the camera. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.BlockInput">BlockInput</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
-                  </i>. Is the view's input blocked? (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Children">Children</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.ObjectModel.ReadOnlyCollection`1">System.Collections.ObjectModel.ReadOnlyCollection&lt;View&gt;</a>
-                  </i>. Gets the immediate children of this view. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Frame">Frame</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.RectangleF">System.Drawing.RectangleF</a>
-                  </i>. Gets the control's frame relative to its parent. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Margins">Margins</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector4</a>
-                  </i>. Get the left, top, right, and bottom distances from the parent's frame. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Parent">Parent</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Gui/View.html">View</a>
-                  </i>. Gets the view's parent view, or returns null if the view is not part of a hierarchy, or is at the root of a hierarchy. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Size">Size</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Drawing.SizeF">System.Drawing.SizeF</a>
-                  </i>. Gets the size of the view in pixels. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Spec">Spec</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Gui/LayoutSpec.html">LayoutSpec</a>
-                  </i>. Gets or sets the layout specification. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Tag">Tag</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
-                  </i>. An optional data tag of any type. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.Transform">Transform</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. Gets or sets the local transform applied to this view in its parent's coordinate space. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.TransformInv">TransformInv</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>
-                  </i>. Gets or sets the local inverse transform. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <b>
-                    <a href="../GameStack.Gui/View.html#P:GameStack.Gui.View.ZDepth">ZDepth</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>
-                  </i>. The view's Z-depth relative to the parent. Higher values are closer to the camera. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <h2 class="Section">Public Methods</h2>
-        <div class="SectionBox" id="Public Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.AddView(GameStack.Gui.View)">AddView</a>
-                  </b>(<a href="../GameStack.Gui/View.html">View</a>)<blockquote>Add a view as a child of this view. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.ClearViews()">ClearViews</a>
-                  </b>()<blockquote>Dispose and remove all child views. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2)">ContainsPoint</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Determines whether a point within the view lies within the view's frame. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Dispose()">Dispose</a>
-                  </b>()<blockquote>Must be called to dispose child views. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.RootView.Draw()">Draw</a>
-                  </b>()<blockquote>Draw the entire view hierarchy. This method must be called from your draw method or your view hierarchy will not be visible.</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Draw(OpenTK.Matrix4)">Draw</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draw the view and its children using the specified world transform. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindInputSinkByPoint</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="../GameStack.Gui/IPointerInput.html">IPointerInput</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindViewByPoint</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="../GameStack.Gui/View.html">View</a></nobr><blockquote>Find the appropriate input sink, if any, for an event at the specified point. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.GetCumulativeTransform()">GetCumulativeTransform</a>
-                  </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a></nobr><blockquote>Calculate the cumulative transform of this view based on its parents. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.GetCumulativeTransformInv()">GetCumulativeTransformInv</a>
-                  </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a></nobr><blockquote>Calculate the inverse cumulative transform of this view based on its parents. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Layout()">Layout</a>
-                  </b>()<blockquote>Force the view to recursively process layout. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="#M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single)">Layout</a>
-                  </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote></blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Overlaps(GameStack.Gui.View)">Overlaps</a>
-                  </b>(<a href="../GameStack.Gui/View.html">View</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Determines whether two views overlap in 2D space. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.RemoveView(GameStack.Gui.View)">RemoveView</a>
-                  </b>(<a href="../GameStack.Gui/View.html">View</a>)<blockquote>Removes a child view from the hierarchy. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.SortChildren()">SortChildren</a>
-                  </b>()<blockquote>Sort all child views so that they are ordered from smallest to highest z-depth. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Update(GameStack.FrameArgs)">Update</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>
+          <h2 class="Section">Public Methods</h2>
+          <div class="SectionBox" id="Public Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.AddView(GameStack.Gui.View)">AddView</a>
+                    </b>(<a href="../GameStack.Gui/View.html">View</a>)<blockquote>Add a view as a child of this view. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.ClearViews()">ClearViews</a>
+                    </b>()<blockquote>Dispose and remove all child views. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.ContainsPoint(OpenTK.Vector2)">ContainsPoint</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Determines whether a point within the view lies within the view's frame. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Dispose()">Dispose</a>
+                    </b>()<blockquote>Must be called to dispose child views. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.RootView.Draw()">Draw</a>
+                    </b>()<blockquote>Draw the entire view hierarchy. This method must be called from your draw method or your view hierarchy will not be visible.</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Draw(OpenTK.Matrix4)">Draw</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>Draw the view and its children using the specified world transform. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.FindInputSinkByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindInputSinkByPoint</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="../GameStack.Gui/IPointerInput.html">IPointerInput</a></nobr><blockquote><span class="NotEntered">Documentation for this section has not yet been entered.</span> (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.FindViewByPoint(OpenTK.Vector2,OpenTK.Matrix4,OpenTK.Vector2@)">FindViewByPoint</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>, <i>out</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>)<nobr> : <a href="../GameStack.Gui/View.html">View</a></nobr><blockquote>Find the appropriate input sink, if any, for an event at the specified point. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.GetCumulativeTransform()">GetCumulativeTransform</a>
+                    </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a></nobr><blockquote>Calculate the cumulative transform of this view based on its parents. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.GetCumulativeTransformInv()">GetCumulativeTransformInv</a>
+                    </b>()<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a></nobr><blockquote>Calculate the inverse cumulative transform of this view based on its parents. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Layout()">Layout</a>
+                    </b>()<blockquote>Force the view to recursively process layout. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="#M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single)">Layout</a>
+                    </b>(<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a>)<blockquote></blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Overlaps(GameStack.Gui.View)">Overlaps</a>
+                    </b>(<a href="../GameStack.Gui/View.html">View</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a></nobr><blockquote>Determines whether two views overlap in 2D space. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.RemoveView(GameStack.Gui.View)">RemoveView</a>
+                    </b>(<a href="../GameStack.Gui/View.html">View</a>)<blockquote>Removes a child view from the hierarchy. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.SortChildren()">SortChildren</a>
+                    </b>()<blockquote>Sort all child views so that they are ordered from smallest to highest z-depth. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.Update(GameStack.FrameArgs)">Update</a>
+                    </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>
          (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Protected Methods</h2>
-        <div class="SectionBox" id="Protected Methods">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
-                  </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>When overridden, should perform all actions required to render the view. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td colspan="2">
-                  <b>
-                    <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs)">OnUpdate</a>
-                  </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>When overridden, should perform all actions required to update the view. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
-              </tr>
-            </table>
+          <h2 class="Section">Protected Methods</h2>
+          <div class="SectionBox" id="Protected Methods">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.OnDraw(OpenTK.Matrix4@)">OnDraw</a>
+                    </b>(<i>ref</i> <a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Matrix4</a>)<blockquote>When overridden, should perform all actions required to render the view. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td colspan="2">
+                    <b>
+                      <a href="../GameStack.Gui/View.html#M:GameStack.Gui.View.OnUpdate(GameStack.FrameArgs)">OnUpdate</a>
+                    </b>(<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a>)<blockquote>When overridden, should perform all actions required to update the view. (<i>Inherited from <a href="../GameStack.Gui/View.html">View</a>.</i>)</blockquote></td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Explicitly Implemented Interface Members</h2>
-        <div class="SectionBox" id="Explicitly Implemented Interface Members">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <a href="#M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture)">
-                    <b>GameStack.IHandler&lt;GameStack.Gesture&gt;.Handle</b>
-                  </a>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <a href="#M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize)">
-                    <b>GameStack.IHandler&lt;GameStack.Resize&gt;.Handle</b>
-                  </a>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <a href="#M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch)">
-                    <b>GameStack.IHandler&lt;GameStack.Touch&gt;.Handle</b>
-                  </a>
-                </td>
-                <td>
-                </td>
-              </tr>
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <a href="#M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs)">
-                    <b>GameStack.IUpdater.Update</b>
-                  </a>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+          <h2 class="Section">Explicitly Implemented Interface Members</h2>
+          <div class="SectionBox" id="Explicitly Implemented Interface Members">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture)">
+                      <b>GameStack.IHandler&lt;GameStack.Gesture&gt;.Handle</b>
+                    </a>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize)">
+                      <b>GameStack.IHandler&lt;GameStack.Resize&gt;.Handle</b>
+                    </a>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch)">
+                      <b>GameStack.IHandler&lt;GameStack.Touch&gt;.Handle</b>
+                    </a>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <a href="#M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs)">
+                      <b>GameStack.IUpdater.Update</b>
+                    </a>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Gui.RootView:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single)">RootView Constructor</h3>
-        <blockquote id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>RootView</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> viewSize, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> depth, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> maxDepth)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single):Parameters">
-            <dl>
-              <dt>
-                <i>viewSize</i>
-              </dt>
-              <dd>The viewport size in logical pixels.</dd>
-              <dt>
-                <i>depth</i>
-              </dt>
-              <dd>The Z-depth of the root (use 0 unless you have multiple roots).</dd>
-              <dt>
-                <i>maxDepth</i>
-              </dt>
-              <dd>The maximum camera view distance. Don't draw any views further than this.</dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Gui.RootView:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single)">RootView Constructor</h3>
+          <blockquote id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>RootView</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> viewSize, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> depth, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> maxDepth)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single):Parameters">
+              <dl>
+                <dt>
+                  <i>viewSize</i>
+                </dt>
+                <dd>The viewport size in logical pixels.</dd>
+                <dt>
+                  <i>depth</i>
+                </dt>
+                <dd>The Z-depth of the root (use 0 unless you have multiple roots).</dd>
+                <dt>
+                  <i>maxDepth</i>
+                </dt>
+                <dd>The maximum camera view distance. Don't draw any views further than this.</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Gui.RootView(OpenTK.Vector2,System.Single,System.Single):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.RootView.Draw()">Draw Method</h3>
-        <blockquote id="M:GameStack.Gui.RootView.Draw():member">
-          <p class="Summary">Draw the entire view hierarchy. This method must be called from your draw method or your view hierarchy will not be visible.</p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> ()</div>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.Draw():Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.Draw():Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture)">GameStack.IHandler&lt;GameStack.Gesture&gt;.Handle Method</h3>
-        <blockquote id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">
-            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GameStack.IHandler&lt;GameStack.Gesture&gt;.Handle</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> frame, <a href="../GameStack/Gesture.html">GameStack.Gesture</a> e)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture):Parameters">
-            <dl>
-              <dt>
-                <i>frame</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>e</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.RootView.Draw()">Draw Method</h3>
+          <blockquote id="M:GameStack.Gui.RootView.Draw():member">
+            <p class="Summary">Draw the entire view hierarchy. This method must be called from your draw method or your view hierarchy will not be visible.</p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Draw</b> ()</div>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.Draw():Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.Draw():Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize)">GameStack.IHandler&lt;GameStack.Resize&gt;.Handle Method</h3>
-        <blockquote id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">
-            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GameStack.IHandler&lt;GameStack.Resize&gt;.Handle</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> frame, <a href="../GameStack/Resize.html">GameStack.Resize</a> e)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):Parameters">
-            <dl>
-              <dt>
-                <i>frame</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>e</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture)">GameStack.IHandler&lt;GameStack.Gesture&gt;.Handle Method</h3>
+          <blockquote id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">
+              <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GameStack.IHandler&lt;GameStack.Gesture&gt;.Handle</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> frame, <a href="../GameStack/Gesture.html">GameStack.Gesture</a> e)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture):Parameters">
+              <dl>
+                <dt>
+                  <i>frame</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>e</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Gesture}#Handle(GameStack.FrameArgs,GameStack.Gesture):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch)">GameStack.IHandler&lt;GameStack.Touch&gt;.Handle Method</h3>
-        <blockquote id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">
-            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GameStack.IHandler&lt;GameStack.Touch&gt;.Handle</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> frame, <a href="../GameStack/Touch.html">GameStack.Touch</a> e)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch):Parameters">
-            <dl>
-              <dt>
-                <i>frame</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>e</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize)">GameStack.IHandler&lt;GameStack.Resize&gt;.Handle Method</h3>
+          <blockquote id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">
+              <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GameStack.IHandler&lt;GameStack.Resize&gt;.Handle</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> frame, <a href="../GameStack/Resize.html">GameStack.Resize</a> e)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):Parameters">
+              <dl>
+                <dt>
+                  <i>frame</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>e</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Resize}#Handle(GameStack.FrameArgs,GameStack.Resize):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs)">GameStack.IUpdater.Update Method</h3>
-        <blockquote id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">
-            <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GameStack.IUpdater.Update</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> e)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs):Parameters">
-            <dl>
-              <dt>
-                <i>e</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch)">GameStack.IHandler&lt;GameStack.Touch&gt;.Handle Method</h3>
+          <blockquote id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">
+              <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GameStack.IHandler&lt;GameStack.Touch&gt;.Handle</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> frame, <a href="../GameStack/Touch.html">GameStack.Touch</a> e)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch):Parameters">
+              <dl>
+                <dt>
+                  <i>frame</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>e</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IHandler{GameStack#Touch}#Handle(GameStack.FrameArgs,GameStack.Touch):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single)">Layout Method</h3>
-        <blockquote id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Layout</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> viewSize, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> depth)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single):Parameters">
-            <dl>
-              <dt>
-                <i>viewSize</i>
-              </dt>
-              <dd>The new view size.</dd>
-              <dt>
-                <i>depth</i>
-              </dt>
-              <dd>The new z-index of the root (usually 0).</dd>
-            </dl>
+          <h3 id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs)">GameStack.IUpdater.Update Method</h3>
+          <blockquote id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">
+              <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GameStack.IUpdater.Update</b> (<a href="../GameStack/FrameArgs.html">GameStack.FrameArgs</a> e)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs):Parameters">
+              <dl>
+                <dt>
+                  <i>e</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.GameStack#IUpdater#Update(GameStack.FrameArgs):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single):Remarks">If you haven't added the root to your scene collection, you must manually call this function when the viewport size changes.</div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single):Version Information">
-            <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+          <h3 id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single)">Layout Method</h3>
+          <blockquote id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Layout</b> (<a href="javascript:alert(&quot;Documentation not found.&quot;)">OpenTK.Vector2</a> viewSize, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Single">float</a> depth)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single):Parameters">
+              <dl>
+                <dt>
+                  <i>viewSize</i>
+                </dt>
+                <dd>The new view size.</dd>
+                <dt>
+                  <i>depth</i>
+                </dt>
+                <dd>The new z-index of the root (usually 0).</dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single):Remarks">If you haven't added the root to your scene collection, you must manually call this function when the viewport size changes.</div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="M:GameStack.Gui.RootView.Layout(OpenTK.Vector2,System.Single):Version Information">
+              <b>Namespace: </b>GameStack.Gui<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
+          </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />

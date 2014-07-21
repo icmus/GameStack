@@ -3,8 +3,9 @@
     <title>GameStack.Graphics.AnimationChannel</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      body { font-family: 'Helvetica' }
-      a { text-decoration: none }
+      body { font-family: 'Helvetica'; font-weight: lighter; margin: 20px 40px; color: #444; }
+      .content-container { margin: 20px 40px; }
+      a { text-decoration: none; font-weight: lighter; }
 
       div.SideBar {
         padding-left: 1em;
@@ -15,8 +16,8 @@
         background-color: #f2f2f2;
       }
     
-      .CollectionTitle { font-weight: bold }
-      .PageTitle { font-size: 150%; font-weight: bold }
+      .CollectionTitle { font-weight: lighter }
+      .PageTitle { font-size: 150%; font-weight: lighter }
 
       .Summary { }
       .Signature { }          
@@ -24,15 +25,15 @@
       .Members { }
       .Copyright { }
       
-      .Section { font-size: 125%; font-weight: bold }
+      .Section { font-size: 125%; font-weight: lighter }
       p.Summary {
         margin-left: 1em;
       }
       .SectionBox { margin-left: 2em }
-      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceName { font-size: 105%; font-weight: lighter }
       .NamespaceSumary { }
-      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
-      .Subsection { font-size: 105%; font-weight: bold }
+      .MemberName { font-size: 115%; font-weight: lighter; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: lighter }
       .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
 
       .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
@@ -46,19 +47,20 @@
       }
       th {
         text-align: left;
+        font-weight: normal;
       }
 
       .TypesListing td { 
         margin: 0px;  
-        padding: .25em;
-        border: solid gray 1px;
+        padding: .5em;
+        border: solid lightgray 1px;
       }
 
       .TypesListing th { 
         margin: 0px;  
-        padding: .25em;
+        padding: .5em;
         background-color: #f2f2f2;
-        border: solid gray 1px;
+        border: solid lightgray 1px;
       }
 
       div.Footer {
@@ -208,304 +210,306 @@
     </div>
     <h1 class="PageTitle" id="T:GameStack.Graphics.AnimationChannel">AnimationChannel  Class</h1>
     <p class="Summary" id="T:GameStack.Graphics.AnimationChannel:Summary">Manages a set of transform key frames to be applied to a mesh node when playing an animation.</p>
-    <div>
-      <h2>Syntax</h2>
-      <div class="Signature" id="T:GameStack.Graphics.AnimationChannel:Signature">public class  <b>AnimationChannel</b></div>
-    </div>
-    <div class="Remarks" id="T:GameStack.Graphics.AnimationChannel:Docs">
-      <h2 class="Section">Remarks</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.AnimationChannel:Docs:Remarks">One animation channel can work in concert with others to simultaneously animate different parts of the model. This class is normally instantiated by asset loaders, and can be retrieved from instances of <a href="../GameStack.Graphics/Animation.html">GameStack.Graphics.Animation</a>.</div>
-      <h2 class="Section">Requirements</h2>
-      <div class="SectionBox" id="T:GameStack.Graphics.AnimationChannel:Docs:Version Information">
-        <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-      <h2 class="Section" id="Members">Members</h2>
-      <div class="SectionBox" id="_Members">
-        <p>
+    <div class="content-container">
+      <div>
+        <h2>Syntax</h2>
+        <div class="Signature" id="T:GameStack.Graphics.AnimationChannel:Signature">public class  <b>AnimationChannel</b></div>
+      </div>
+      <div class="Remarks" id="T:GameStack.Graphics.AnimationChannel:Docs">
+        <h2 class="Section">Remarks</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.AnimationChannel:Docs:Remarks">One animation channel can work in concert with others to simultaneously animate different parts of the model. This class is normally instantiated by asset loaders, and can be retrieved from instances of <a href="../GameStack.Graphics/Animation.html">GameStack.Graphics.Animation</a>.</div>
+        <h2 class="Section">Requirements</h2>
+        <div class="SectionBox" id="T:GameStack.Graphics.AnimationChannel:Docs:Version Information">
+          <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        <h2 class="Section" id="Members">Members</h2>
+        <div class="SectionBox" id="_Members">
+          <p>
 								See Also: Inherited members from
 								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
 							</p>
-        <h2 class="Section">Public Constructors</h2>
-        <div class="SectionBox" id="Public Constructors">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>
-                  <div>
-                  </div>
-                </td>
-                <td>
-                  <div>
-                    <b>
-                      <a href="#C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[])">AnimationChannel</a>
-                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a>, <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a>, <a href="../GameStack.Graphics/PositionKey.html">PositionKey</a>[], <a href="../GameStack.Graphics/RotationKey.html">RotationKey</a>[], <a href="../GameStack.Graphics/ScalingKey.html">ScalingKey</a>[])</div>
-                </td>
-                <td>
-                </td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Constructors</h2>
+          <div class="SectionBox" id="Public Constructors">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>
+                    <div>
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <b>
+                        <a href="#C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[])">AnimationChannel</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a>, <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a>, <a href="../GameStack.Graphics/PositionKey.html">PositionKey</a>[], <a href="../GameStack.Graphics/RotationKey.html">RotationKey</a>[], <a href="../GameStack.Graphics/ScalingKey.html">ScalingKey</a>[])</div>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <h2 class="Section">Public Properties</h2>
-        <div class="SectionBox" id="Public Properties">
-          <div class="SubsectionBox">
-            <table class="TypeMembers">
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.AnimationChannel.Node">Node</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/Node.html">Node</a>
-                  </i>. </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.AnimationChannel.NodeName">NodeName</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
-                  </i>. </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.AnimationChannel.PositionKeys">PositionKeys</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/PositionKey.html">PositionKey</a>[]</i>. </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.AnimationChannel.PostState">PostState</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a>
-                  </i>. </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.AnimationChannel.PreState">PreState</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a>
-                  </i>. </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.AnimationChannel.RotationKeys">RotationKeys</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/RotationKey.html">RotationKey</a>[]</i>. </td>
-              </tr>
-              <tr valign="top">
-                <td>[read-only]<div></div></td>
-                <td>
-                  <b>
-                    <a href="#P:GameStack.Graphics.AnimationChannel.ScalingKeys">ScalingKeys</a>
-                  </b>
-                </td>
-                <td>
-                  <i>
-                    <a href="../GameStack.Graphics/ScalingKey.html">ScalingKey</a>[]</i>. </td>
-              </tr>
-            </table>
+          <h2 class="Section">Public Properties</h2>
+          <div class="SectionBox" id="Public Properties">
+            <div class="SubsectionBox">
+              <table class="TypeMembers">
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.AnimationChannel.Node">Node</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/Node.html">Node</a>
+                    </i>. </td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.AnimationChannel.NodeName">NodeName</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                    </i>. </td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.AnimationChannel.PositionKeys">PositionKeys</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/PositionKey.html">PositionKey</a>[]</i>. </td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.AnimationChannel.PostState">PostState</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a>
+                    </i>. </td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.AnimationChannel.PreState">PreState</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a>
+                    </i>. </td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.AnimationChannel.RotationKeys">RotationKeys</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/RotationKey.html">RotationKey</a>[]</i>. </td>
+                </tr>
+                <tr valign="top">
+                  <td>[read-only]<div></div></td>
+                  <td>
+                    <b>
+                      <a href="#P:GameStack.Graphics.AnimationChannel.ScalingKeys">ScalingKeys</a>
+                    </b>
+                  </td>
+                  <td>
+                    <i>
+                      <a href="../GameStack.Graphics/ScalingKey.html">ScalingKey</a>[]</i>. </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="Members" id="T:GameStack.Graphics.AnimationChannel:Members">
-      <h2 class="Section" id="MemberDetails">Member Details</h2>
-      <div class="SectionBox" id="_MemberDetails">
-        <h3 id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[])">AnimationChannel Constructor</h3>
-        <blockquote id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[]):member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public  <b>AnimationChannel</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> nodeName, <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a> preState, <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a> postState, <a href="../GameStack.Graphics/PositionKey.html">PositionKey</a>[] posKeys, <a href="../GameStack.Graphics/RotationKey.html">RotationKey</a>[] rotKeys, <a href="../GameStack.Graphics/ScalingKey.html">ScalingKey</a>[] scaleKeys)</div>
-          <h4 class="Subsection">Parameters</h4>
-          <blockquote class="SubsectionBox" id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[]):Parameters">
-            <dl>
-              <dt>
-                <i>nodeName</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>preState</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>postState</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>posKeys</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>rotKeys</i>
-              </dt>
-              <dd>
-              </dd>
-              <dt>
-                <i>scaleKeys</i>
-              </dt>
-              <dd>
-              </dd>
-            </dl>
+      <div class="Members" id="T:GameStack.Graphics.AnimationChannel:Members">
+        <h2 class="Section" id="MemberDetails">Member Details</h2>
+        <div class="SectionBox" id="_MemberDetails">
+          <h3 id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[])">AnimationChannel Constructor</h3>
+          <blockquote id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[]):member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public  <b>AnimationChannel</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> nodeName, <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a> preState, <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a> postState, <a href="../GameStack.Graphics/PositionKey.html">PositionKey</a>[] posKeys, <a href="../GameStack.Graphics/RotationKey.html">RotationKey</a>[] rotKeys, <a href="../GameStack.Graphics/ScalingKey.html">ScalingKey</a>[] scaleKeys)</div>
+            <h4 class="Subsection">Parameters</h4>
+            <blockquote class="SubsectionBox" id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[]):Parameters">
+              <dl>
+                <dt>
+                  <i>nodeName</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>preState</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>postState</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>posKeys</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>rotKeys</i>
+                </dt>
+                <dd>
+                </dd>
+                <dt>
+                  <i>scaleKeys</i>
+                </dt>
+                <dd>
+                </dd>
+              </dl>
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[]):Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[]):Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[]):Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="C:GameStack.Graphics.AnimationChannel(System.String,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.AnimationBehavior,GameStack.Graphics.PositionKey[],GameStack.Graphics.RotationKey[],GameStack.Graphics.ScalingKey[]):Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.AnimationChannel.Node">Node Property</h3>
-        <blockquote id="P:GameStack.Graphics.AnimationChannel.Node:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/Node.html">Node</a> <b>Node</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.Node:Value">
+          <h3 id="P:GameStack.Graphics.AnimationChannel.Node">Node Property</h3>
+          <blockquote id="P:GameStack.Graphics.AnimationChannel.Node:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/Node.html">Node</a> <b>Node</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.Node:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.Node:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.Node:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.Node:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.Node:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.AnimationChannel.NodeName">NodeName Property</h3>
-        <blockquote id="P:GameStack.Graphics.AnimationChannel.NodeName:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>NodeName</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.NodeName:Value">
+          <h3 id="P:GameStack.Graphics.AnimationChannel.NodeName">NodeName Property</h3>
+          <blockquote id="P:GameStack.Graphics.AnimationChannel.NodeName:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>NodeName</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.NodeName:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.NodeName:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.NodeName:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.NodeName:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.NodeName:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.AnimationChannel.PositionKeys">PositionKeys Property</h3>
-        <blockquote id="P:GameStack.Graphics.AnimationChannel.PositionKeys:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/PositionKey.html">PositionKey</a>[] <b>PositionKeys</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.PositionKeys:Value">
+          <h3 id="P:GameStack.Graphics.AnimationChannel.PositionKeys">PositionKeys Property</h3>
+          <blockquote id="P:GameStack.Graphics.AnimationChannel.PositionKeys:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/PositionKey.html">PositionKey</a>[] <b>PositionKeys</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.PositionKeys:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PositionKeys:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PositionKeys:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PositionKeys:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PositionKeys:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.AnimationChannel.PostState">PostState Property</h3>
-        <blockquote id="P:GameStack.Graphics.AnimationChannel.PostState:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a> <b>PostState</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.PostState:Value">
+          <h3 id="P:GameStack.Graphics.AnimationChannel.PostState">PostState Property</h3>
+          <blockquote id="P:GameStack.Graphics.AnimationChannel.PostState:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a> <b>PostState</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.PostState:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PostState:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PostState:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PostState:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PostState:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.AnimationChannel.PreState">PreState Property</h3>
-        <blockquote id="P:GameStack.Graphics.AnimationChannel.PreState:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a> <b>PreState</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.PreState:Value">
+          <h3 id="P:GameStack.Graphics.AnimationChannel.PreState">PreState Property</h3>
+          <blockquote id="P:GameStack.Graphics.AnimationChannel.PreState:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/AnimationBehavior.html">AnimationBehavior</a> <b>PreState</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.PreState:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PreState:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PreState:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PreState:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.PreState:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.AnimationChannel.RotationKeys">RotationKeys Property</h3>
-        <blockquote id="P:GameStack.Graphics.AnimationChannel.RotationKeys:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/RotationKey.html">RotationKey</a>[] <b>RotationKeys</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.RotationKeys:Value">
+          <h3 id="P:GameStack.Graphics.AnimationChannel.RotationKeys">RotationKeys Property</h3>
+          <blockquote id="P:GameStack.Graphics.AnimationChannel.RotationKeys:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/RotationKey.html">RotationKey</a>[] <b>RotationKeys</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.RotationKeys:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.RotationKeys:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.RotationKeys:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.RotationKeys:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.RotationKeys:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
-        <h3 id="P:GameStack.Graphics.AnimationChannel.ScalingKeys">ScalingKeys Property</h3>
-        <blockquote id="P:GameStack.Graphics.AnimationChannel.ScalingKeys:member">
-          <p class="Summary">
-          </p>
-          <h2>Syntax</h2>
-          <div class="Signature">public <a href="../GameStack.Graphics/ScalingKey.html">ScalingKey</a>[] <b>ScalingKeys</b>  { get; }</div>
-          <h4 class="Subsection">Value</h4>
-          <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.ScalingKeys:Value">
+          <h3 id="P:GameStack.Graphics.AnimationChannel.ScalingKeys">ScalingKeys Property</h3>
+          <blockquote id="P:GameStack.Graphics.AnimationChannel.ScalingKeys:member">
+            <p class="Summary">
+            </p>
+            <h2>Syntax</h2>
+            <div class="Signature">public <a href="../GameStack.Graphics/ScalingKey.html">ScalingKey</a>[] <b>ScalingKeys</b>  { get; }</div>
+            <h4 class="Subsection">Value</h4>
+            <blockquote class="SubsectionBox" id="P:GameStack.Graphics.AnimationChannel.ScalingKeys:Value">
+            </blockquote>
+            <h2 class="Section">Remarks</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.ScalingKeys:Remarks">
+            </div>
+            <h2 class="Section">Requirements</h2>
+            <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.ScalingKeys:Version Information">
+              <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+            <hr size="1" />
           </blockquote>
-          <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.ScalingKeys:Remarks">
-          </div>
-          <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="P:GameStack.Graphics.AnimationChannel.ScalingKeys:Version Information">
-            <b>Namespace: </b>GameStack.Graphics<br /><b>Assembly: </b>GameStack.Desktop (in GameStack.Desktop.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-          <hr size="1" />
-        </blockquote>
+        </div>
       </div>
     </div>
     <hr size="1" />
