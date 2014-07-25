@@ -1,0 +1,160 @@
+<Type Name="TextureSlot" FullName="GameStack.Graphics.TextureSlot">
+  <TypeSignature Language="C#" Value="public class TextureSlot" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextureSlot extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Maps one or more textures to a mesh.</summary>
+    <remarks>Typically not used directly by apps, but can be used when dynamically constructing models. See the <see cref="T:GameStack.Graphics.Model" /> class.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureSlot (GameStack.Graphics.Texture texture, int uvIndex, float blendFactor, GameStack.Graphics.TextureOperation operation, GameStack.Graphics.TextureWrap wrapS, GameStack.Graphics.TextureWrap wrapT);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.Texture texture, int32 uvIndex, float32 blendFactor, valuetype GameStack.Graphics.TextureOperation operation, valuetype GameStack.Graphics.TextureWrap wrapS, valuetype GameStack.Graphics.TextureWrap wrapT) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="texture" Type="GameStack.Graphics.Texture" />
+        <Parameter Name="uvIndex" Type="System.Int32" />
+        <Parameter Name="blendFactor" Type="System.Single" />
+        <Parameter Name="operation" Type="GameStack.Graphics.TextureOperation" />
+        <Parameter Name="wrapS" Type="GameStack.Graphics.TextureWrap" />
+        <Parameter Name="wrapT" Type="GameStack.Graphics.TextureWrap" />
+      </Parameters>
+      <Docs>
+        <param name="texture">
+        </param>
+        <param name="uvIndex">
+        </param>
+        <param name="blendFactor">
+        </param>
+        <param name="operation">
+        </param>
+        <param name="wrapS">
+        </param>
+        <param name="wrapT">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlendFactor">
+      <MemberSignature Language="C#" Value="public float BlendFactor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 BlendFactor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the amount that this texture contributes to the final color.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureOperation Operation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.TextureOperation Operation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets how this texture is combined with the existing color.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Texture">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Texture Texture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Texture Texture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Texture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the texture assigned to this slot.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UVIndex">
+      <MemberSignature Language="C#" Value="public int UVIndex { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 UVIndex" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the index of the UV in the UV table.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapS">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureWrap WrapS { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.TextureWrap WrapS" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureWrap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value controlling wrapping in the U direction.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapT">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureWrap WrapT { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.TextureWrap WrapT" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureWrap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value controlling wrapping in the V direction.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

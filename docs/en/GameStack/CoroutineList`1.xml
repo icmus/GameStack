@@ -1,0 +1,180 @@
+<Type Name="CoroutineList&lt;T&gt;" FullName="GameStack.CoroutineList&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class CoroutineList&lt;T&gt; : GameStack.IUpdater where T : class" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CoroutineList`1&lt;class T&gt; extends System.Object implements class GameStack.IUpdater" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IUpdater</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">The type of object that will be passed in on each update.</typeparam>
+    <summary>Manages a list of coroutines, stepping them forward on each update. Coroutines can be added or stopped
+    at any time.</summary>
+    <remarks>Commonly used with the <see cref="T:GameStack.FrameArgs" /> class.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CoroutineList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the number of active coroutines.</summary>
+        <value>
+        </value>
+        <remarks>This number increases as coroutines are added and decreases as coroutines are stopped or completed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public T Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the current update value, if there is one.</summary>
+        <value>
+        </value>
+        <remarks>Most commonly called from inside coroutines to get the current frame information.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IUpdater.Update">
+      <MemberSignature Language="C#" Value="void IUpdater.Update (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IUpdater.Update(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public GameStack.ICoroutine Start (System.Collections.IEnumerator ie);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GameStack.ICoroutine Start(class System.Collections.IEnumerator ie) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.ICoroutine</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ie" Type="System.Collections.IEnumerator" />
+      </Parameters>
+      <Docs>
+        <param name="ie">The enumerator returned from the coroutine's method.</param>
+        <summary>Start running a new coroutine.</summary>
+        <returns>A coroutine reference so that it can be monitored and controlled by the caller.</returns>
+        <remarks>The coroutine is invoked before this method returns. If the coroutine breaks during that time, it is immediately removed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop (GameStack.ICoroutine ic);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop(class GameStack.ICoroutine ic) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ic" Type="GameStack.ICoroutine" />
+      </Parameters>
+      <Docs>
+        <param name="ic">
+        </param>
+        <summary>Stops the given coroutine.</summary>
+        <remarks>The coroutine is removed from the list. Coroutines cannot be resumed without being re-added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public bool Update ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Update() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Advances all coroutines one frame, using no arguments.</summary>
+        <returns>True if any coroutines ran this frame.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public bool Update (T e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Update(!T e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="e">Arguments for the current frame.</param>
+        <summary>Advance all coroutines one frame, using the supplied arguments.</summary>
+        <returns>True if any coroutines ran this frame.</returns>
+        <remarks>Typically used with <see cref="T:GameStack.FrameArgs" />.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

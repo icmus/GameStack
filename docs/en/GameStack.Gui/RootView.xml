@@ -1,0 +1,189 @@
+<Type Name="RootView" FullName="GameStack.Gui.RootView">
+  <TypeSignature Language="C#" Value="public class RootView : GameStack.Gui.View, GameStack.IHandler&lt;GameStack.Gesture&gt;, GameStack.IHandler&lt;GameStack.Resize&gt;, GameStack.IHandler&lt;GameStack.Touch&gt;, GameStack.IUpdater" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RootView extends GameStack.Gui.View implements class GameStack.IHandler`1&lt;class GameStack.Gesture&gt;, class GameStack.IHandler`1&lt;class GameStack.Resize&gt;, class GameStack.IHandler`1&lt;class GameStack.Touch&gt;, class GameStack.IUpdater" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Gui.View</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IHandler&lt;GameStack.Gesture&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>GameStack.IHandler&lt;GameStack.Resize&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>GameStack.IHandler&lt;GameStack.Touch&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>GameStack.IUpdater</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Manages a UI hierarchy and processes events handled by controls within the hierarchy.</summary>
+    <remarks>An instance of this class must sit at the root of any UI hierarchy. It represents the entire hierarchy to your scene. Add the root to the scene collection by calling <see cref="M:GameStack.Scene.Add(System.Object)" /> to pass events into the hierarchy.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RootView (OpenTK.Vector2 viewSize, float depth, float maxDepth = 1000);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Vector2 viewSize, float32 depth, float32 maxDepth) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="viewSize" Type="OpenTK.Vector2" />
+        <Parameter Name="depth" Type="System.Single" />
+        <Parameter Name="maxDepth" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="viewSize">The viewport size in logical pixels.</param>
+        <param name="depth">The Z-depth of the root (use 0 unless you have multiple roots).</param>
+        <param name="maxDepth">The maximum camera view distance. Don't draw any views further than this.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Draw the entire view hierarchy. This method must be called from your draw method or your view hierarchy will not be visible.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IHandler&lt;GameStack.Gesture&gt;.Handle">
+      <MemberSignature Language="C#" Value="void IHandler&lt;Gesture&gt;.Handle (GameStack.FrameArgs frame, GameStack.Gesture e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IHandler&lt;GameStack.Gesture&gt;.Handle(class GameStack.FrameArgs frame, class GameStack.Gesture e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+        <Parameter Name="e" Type="GameStack.Gesture" />
+      </Parameters>
+      <Docs>
+        <param name="frame">
+        </param>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IHandler&lt;GameStack.Resize&gt;.Handle">
+      <MemberSignature Language="C#" Value="void IHandler&lt;Resize&gt;.Handle (GameStack.FrameArgs frame, GameStack.Resize e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IHandler&lt;GameStack.Resize&gt;.Handle(class GameStack.FrameArgs frame, class GameStack.Resize e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+        <Parameter Name="e" Type="GameStack.Resize" />
+      </Parameters>
+      <Docs>
+        <param name="frame">
+        </param>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IHandler&lt;GameStack.Touch&gt;.Handle">
+      <MemberSignature Language="C#" Value="void IHandler&lt;Touch&gt;.Handle (GameStack.FrameArgs frame, GameStack.Touch e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IHandler&lt;GameStack.Touch&gt;.Handle(class GameStack.FrameArgs frame, class GameStack.Touch e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+        <Parameter Name="e" Type="GameStack.Touch" />
+      </Parameters>
+      <Docs>
+        <param name="frame">
+        </param>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IUpdater.Update">
+      <MemberSignature Language="C#" Value="void IUpdater.Update (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IUpdater.Update(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Layout">
+      <MemberSignature Language="C#" Value="public void Layout (OpenTK.Vector2 viewSize, float depth);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Layout(valuetype OpenTK.Vector2 viewSize, float32 depth) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewSize" Type="OpenTK.Vector2" />
+        <Parameter Name="depth" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="viewSize">The new view size.</param>
+        <param name="depth">The new z-index of the root (usually 0).</param>
+        <summary>
+        </summary>
+        <remarks>If you haven't added the root to your scene collection, you must manually call this function when the viewport size changes.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

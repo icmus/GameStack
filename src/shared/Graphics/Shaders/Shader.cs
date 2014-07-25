@@ -17,10 +17,6 @@ using ActiveUniformType = OpenTK.Graphics.ES20.All;
 
 namespace GameStack.Graphics {
 	public abstract class Shader : IDisposable {
-		static volatile int _shaderCount = 0;
-
-		public static int ShaderCount { get { return _shaderCount; } }
-
 		static Dictionary<IntPtr,Dictionary<string, Shader>> _shaders = new Dictionary<IntPtr, Dictionary<string, Shader>>();
 
 		string _name;
@@ -128,7 +124,6 @@ namespace GameStack.Graphics {
 			}
 
 			_refCount = 1;
-			Interlocked.Increment(ref _shaderCount);
 		}
 
 		public virtual int MaxNumLights { get { return 0; } }
@@ -249,8 +244,6 @@ namespace GameStack.Graphics {
 					if(_shaders.ContainsKey(ThreadContext.Current.GLContext))
 						_shaders[ThreadContext.Current.GLContext].Remove(_name);
 				}
-
-				Interlocked.Decrement(ref _shaderCount);
 			}
 		}
 

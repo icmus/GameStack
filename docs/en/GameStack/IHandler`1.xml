@@ -1,0 +1,44 @@
+<Type Name="IHandler&lt;T&gt;" FullName="GameStack.IHandler&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IHandler&lt;T&gt; where T : EventBase" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IHandler`1&lt;(class GameStack.EventBase) T&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T">
+      <Constraints>
+        <BaseTypeName>GameStack.EventBase</BaseTypeName>
+      </Constraints>
+    </TypeParameter>
+  </TypeParameters>
+  <Interfaces />
+  <Docs>
+    <typeparam name="T">The type of event to be handled.</typeparam>
+    <summary>Any class can implement this interface to receive the specified type of event.</summary>
+    <remarks>Scenes can implement this interface, as well as objects that are added to a scene collection. When added, any object that has an interface of any specific type will handle events of that type that come through the queue.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public void Handle (GameStack.FrameArgs frame, T e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Handle(class GameStack.FrameArgs frame, !T e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+        <Parameter Name="e" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="frame">Information about the current frame.</param>
+        <param name="e">Arguments specific to the event.</param>
+        <summary>Called when an event of type T is dequeued from the event queue.</summary>
+        <remarks>If your implementation is not being called, ensure that it's either implemented on your scene class or on an object added to the scene collection.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

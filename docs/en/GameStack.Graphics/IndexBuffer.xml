@@ -1,0 +1,114 @@
+<Type Name="IndexBuffer" FullName="GameStack.Graphics.IndexBuffer">
+  <TypeSignature Language="C#" Value="public class IndexBuffer : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit IndexBuffer extends System.Object implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Manages a native index buffer containing a set of indices into a <see cref="T:GameStack.Graphics.VertexBuffer" />.</summary>
+    <remarks>Index buffers are used to optimize memory by eliminating redundant vertex definitions. Each vertex can be referenced multiple times in a mesh's geometry by index.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public IndexBuffer (int[] vertices = null, OpenTK.Graphics.OpenGL.BeginMode mode = OpenTK.Graphics.OpenGL.BeginMode.Triangles);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32[] vertices, valuetype OpenTK.Graphics.OpenGL.BeginMode mode) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="vertices" Type="System.Int32[]" />
+        <Parameter Name="mode" Type="OpenTK.Graphics.OpenGL.BeginMode" />
+      </Parameters>
+      <Docs>
+        <param name="vertices">
+        </param>
+        <param name="mode">Override the draw mode for this buffer. The most common primitive is the triangle.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Commit() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Synchronize the data to the actual hardware buffer.</summary>
+        <remarks>In order for changes to the data to take effect, this method must be called. It is best to make all of your changes and then call this method once to reduce overhead.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public int[] Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the raw buffer data.</summary>
+        <value>
+        </value>
+        <remarks>After setting this value or modifying the array, the <see cref="M:GameStack.Graphics.IndexBuffer.Commit()" /> method must be called for the changes to take effect.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called in order to release buffer resources.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (int offset = 0, int count = -1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(int32 offset, int32 count) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="offset" Type="System.Int32" />
+        <Parameter Name="count" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="offset">The start offset.</param>
+        <param name="count">The primitive count or -1 for buffer length.</param>
+        <summary>Draw the contents of the index buffer, causing a native draw call.</summary>
+        <remarks>This method is normally called by drawable classes and not directly by apps. A <see cref="T:GameStack.Graphics.VertexBuffer" /> must be in scope or this method has undefined behavior.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

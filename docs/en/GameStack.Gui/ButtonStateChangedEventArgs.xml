@@ -1,0 +1,55 @@
+<Type Name="ButtonStateChangedEventArgs" FullName="GameStack.Gui.ButtonStateChangedEventArgs">
+  <TypeSignature Language="C#" Value="public class ButtonStateChangedEventArgs : EventArgs" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ButtonStateChangedEventArgs extends System.EventArgs" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.EventArgs</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Event arguments for use with <see cref="E:GameStack.Gui.Button.StateChanged" />.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OldState">
+      <MemberSignature Language="C#" Value="public GameStack.Gui.ButtonState OldState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Gui.ButtonState OldState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the previous button state.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public GameStack.Gui.ButtonState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Gui.ButtonState State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the current button state.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

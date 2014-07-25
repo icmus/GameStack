@@ -1,0 +1,73 @@
+<Type Name="AnimationBehavior" FullName="GameStack.Graphics.AnimationBehavior">
+  <TypeSignature Language="C#" Value="public enum AnimationBehavior" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed AnimationBehavior extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates how an animation should behave when animating a time outside of its defined timeline.</summary>
+    <remarks>For example, if an animation has a duration of 10 seconds, but we allow the animation to play to 11 seconds, how should the animation behave in that case?</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Constant">
+      <MemberSignature Language="C#" Value="Constant" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.AnimationBehavior Constant = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.AnimationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Clamp the time to the ending time (or beginning time), effectively freezing the animation.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Default">
+      <MemberSignature Language="C#" Value="Default" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.AnimationBehavior Default = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.AnimationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Use the default node transformation (reverts model to original position).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Linear">
+      <MemberSignature Language="C#" Value="Linear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.AnimationBehavior Linear = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.AnimationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The value of the nearest two keys is extrapolated (continues current motion).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Repeat">
+      <MemberSignature Language="C#" Value="Repeat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.AnimationBehavior Repeat = int32(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.AnimationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Play the animation repeatedly (time mod duration).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

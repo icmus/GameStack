@@ -1,0 +1,71 @@
+<Type Name="Gesture" FullName="GameStack.Gesture">
+  <TypeSignature Language="C#" Value="public abstract class Gesture : GameStack.EventBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Gesture extends GameStack.EventBase" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.EventBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Abstract base class for all gesture events.</summary>
+    <remarks>Only supported on platforms with gesture support (currently mobile).</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 Point { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 Point" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the normalized viewport point (-1 to 1).</summary>
+        <value>
+        </value>
+        <remarks>Useful for unprojecting the point into world space.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public GameStack.GestureState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.GestureState State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.GestureState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the gestures current state, indicating what phase of the gesture this event indicates.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SurfacePoint">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 SurfacePoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 SurfacePoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The viewport point in pixels.</summary>
+        <value>
+        </value>
+        <remarks>When using an orthographic 2D camera with the origin in the lower left, these coordinates
+        will match world coordinates, and are useful for GUI click detection without projecting.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

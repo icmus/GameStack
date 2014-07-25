@@ -1,0 +1,570 @@
+<Type Name="View" FullName="GameStack.Gui.View">
+  <TypeSignature Language="C#" Value="public class View : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit View extends System.Object implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>The base class for all objects participating in a UI view hierarchy.</summary>
+    <remarks>This class is overriden to create controls with specific behaviors and visuals. This class can also be used by itself as a generic container for other views, since all views can contain other views.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public View ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public View (GameStack.Gui.LayoutSpec spec);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Gui.LayoutSpec spec) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spec" Type="GameStack.Gui.LayoutSpec" />
+      </Parameters>
+      <Docs>
+        <param name="spec">Layout.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddView">
+      <MemberSignature Language="C#" Value="public void AddView (GameStack.Gui.View view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddView(class GameStack.Gui.View view) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="GameStack.Gui.View" />
+      </Parameters>
+      <Docs>
+        <param name="view">View to be added.</param>
+        <summary>Add a view as a child of this view.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockInput">
+      <MemberSignature Language="C#" Value="public bool BlockInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BlockInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the view's input blocked?</summary>
+        <value>
+        </value>
+        <remarks>When true, the view will not process any input events, nor will any descendants receive events. This property is useful for situations where you want to suppress user input while a transition finishes. By setting this on the root, you can disable input for the entire view hierarchy.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Children">
+      <MemberSignature Language="C#" Value="public System.Collections.ObjectModel.ReadOnlyCollection&lt;GameStack.Gui.View&gt; Children { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.ObjectModel.ReadOnlyCollection`1&lt;class GameStack.Gui.View&gt; Children" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.ObjectModel.ReadOnlyCollection&lt;GameStack.Gui.View&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the immediate children of this view.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearViews">
+      <MemberSignature Language="C#" Value="public void ClearViews ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearViews() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Dispose and remove all child views.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsPoint">
+      <MemberSignature Language="C#" Value="public bool ContainsPoint (OpenTK.Vector2 point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsPoint(valuetype OpenTK.Vector2 point) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="point">Absolute point in pixels in the same coordinate space as the UI root.</param>
+        <summary>Determines whether a point within the view lies within the view's frame.</summary>
+        <returns>True if the point is within the view's frame.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to dispose child views.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (OpenTK.Matrix4 parentTransform);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(valuetype OpenTK.Matrix4 parentTransform) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parentTransform" Type="OpenTK.Matrix4" />
+      </Parameters>
+      <Docs>
+        <param name="parentTransform">The cumulative identity applied to the parent, or identity for none.</param>
+        <summary>Draw the view and its children using the specified world transform.</summary>
+        <remarks>Usually not called directly except with the <see cref="T:GameStack.Gui.RootView" /> class when your scene wants to draw the view hierarchy.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindInputSinkByPoint">
+      <MemberSignature Language="C#" Value="public GameStack.Gui.IPointerInput FindInputSinkByPoint (OpenTK.Vector2 point, OpenTK.Matrix4 parentInv, out OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GameStack.Gui.IPointerInput FindInputSinkByPoint(valuetype OpenTK.Vector2 point, valuetype OpenTK.Matrix4 parentInv, valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.IPointerInput</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="OpenTK.Vector2" />
+        <Parameter Name="parentInv" Type="OpenTK.Matrix4" />
+        <Parameter Name="where" Type="OpenTK.Vector2&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="point">
+        </param>
+        <param name="parentInv">
+        </param>
+        <param name="where">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FindViewByPoint">
+      <MemberSignature Language="C#" Value="public GameStack.Gui.View FindViewByPoint (OpenTK.Vector2 point, OpenTK.Matrix4 parentInv, out OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GameStack.Gui.View FindViewByPoint(valuetype OpenTK.Vector2 point, valuetype OpenTK.Matrix4 parentInv, valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.View</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="OpenTK.Vector2" />
+        <Parameter Name="parentInv" Type="OpenTK.Matrix4" />
+        <Parameter Name="where" Type="OpenTK.Vector2&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="point">Absolute point in pixels in the same coordinate space as the UI root.</param>
+        <param name="parentInv">The cumulative inverse transform of the parent.</param>
+        <param name="where">The relative point within the view, if found.</param>
+        <summary>Find the appropriate input sink, if any, for an event at the specified point.</summary>
+        <returns>A reference to the handling view or null if there is none.</returns>
+        <remarks>Usually not called directly.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frame">
+      <MemberSignature Language="C#" Value="public System.Drawing.RectangleF Frame { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.RectangleF Frame" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.RectangleF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the control's frame relative to its parent.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCumulativeTransform">
+      <MemberSignature Language="C#" Value="public OpenTK.Matrix4 GetCumulativeTransform ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype OpenTK.Matrix4 GetCumulativeTransform() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Matrix4</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Calculate the cumulative transform of this view based on its parents.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCumulativeTransformInv">
+      <MemberSignature Language="C#" Value="public OpenTK.Matrix4 GetCumulativeTransformInv ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype OpenTK.Matrix4 GetCumulativeTransformInv() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Matrix4</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Calculate the inverse cumulative transform of this view based on its parents.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Layout">
+      <MemberSignature Language="C#" Value="public virtual void Layout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Layout() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Force the view to recursively process layout.</summary>
+        <remarks>Usually not called directly.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Margins">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 Margins { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 Margins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Get the left, top, right, and bottom distances from the parent's frame.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDraw">
+      <MemberSignature Language="C#" Value="protected virtual void OnDraw (ref OpenTK.Matrix4 transform);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDraw(valuetype OpenTK.Matrix4 transform) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transform" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="transform">The cumulative transform that should be applied to this view.</param>
+        <summary>When overridden, should perform all actions required to render the view.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUpdate">
+      <MemberSignature Language="C#" Value="protected virtual void OnUpdate (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnUpdate(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Frame info.</param>
+        <summary>When overridden, should perform all actions required to update the view.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Overlaps">
+      <MemberSignature Language="C#" Value="public bool Overlaps (GameStack.Gui.View other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Overlaps(class GameStack.Gui.View other) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="GameStack.Gui.View" />
+      </Parameters>
+      <Docs>
+        <param name="other">
+        </param>
+        <summary>Determines whether two views overlap in 2D space.</summary>
+        <returns>True if the two views overlap.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Parent">
+      <MemberSignature Language="C#" Value="public GameStack.Gui.View Parent { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Gui.View Parent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.View</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the view's parent view, or returns null if the view is not part of a hierarchy, or is at the root of a hierarchy.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveView">
+      <MemberSignature Language="C#" Value="public void RemoveView (GameStack.Gui.View view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveView(class GameStack.Gui.View view) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="GameStack.Gui.View" />
+      </Parameters>
+      <Docs>
+        <param name="view">The view to be removed.</param>
+        <summary>Removes a child view from the hierarchy.</summary>
+        <remarks>If the view is not a child of this view, no action is taken.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.SizeF Size { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.SizeF Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.SizeF</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the size of the view in pixels.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SortChildren">
+      <MemberSignature Language="C#" Value="public void SortChildren ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SortChildren() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Sort all child views so that they are ordered from smallest to highest z-depth.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Spec">
+      <MemberSignature Language="C#" Value="public GameStack.Gui.LayoutSpec Spec { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Gui.LayoutSpec Spec" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.LayoutSpec</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the layout specification.</summary>
+        <value>
+        </value>
+        <remarks>See <see cref="T:GameStack.Gui.LayoutSpec" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tag">
+      <MemberSignature Language="C#" Value="public object Tag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Tag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>An optional data tag of any type.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transform">
+      <MemberSignature Language="C#" Value="public OpenTK.Matrix4 Transform { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Matrix4 Transform" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Matrix4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the local transform applied to this view in its parent's coordinate space.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransformInv">
+      <MemberSignature Language="C#" Value="public OpenTK.Matrix4 TransformInv { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Matrix4 TransformInv" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Matrix4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the local inverse transform.</summary>
+        <value>
+        </value>
+        <remarks>Automatically updated when the local transform is set.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Update(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>Not usually called manually.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ZDepth">
+      <MemberSignature Language="C#" Value="public float ZDepth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 ZDepth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The view's Z-depth relative to the parent. Higher values are closer to the camera.</summary>
+        <value>
+        </value>
+        <remarks>By default, the Z-depth of every view is set to 0.1f.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

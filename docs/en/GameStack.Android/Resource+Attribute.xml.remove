@@ -1,0 +1,19 @@
+<Type Name="Resource+Attribute" FullName="GameStack.Android.Resource+Attribute">
+  <TypeSignature Language="C#" Value="public class Resource.Attribute" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi Resource/Attribute extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Android</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+    </summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members />
+</Type>

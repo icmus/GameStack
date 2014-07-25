@@ -1,0 +1,49 @@
+<Type Name="ICoroutine" FullName="GameStack.ICoroutine">
+  <TypeSignature Language="C#" Value="public interface ICoroutine" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICoroutine" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Coroutines are controlled through this interface.</summary>
+    <remarks>Objects implementing this interface are returned by <see cref="M:GameStack.CoroutineList{T}.Start(System.Collections.IEnumerator)" />. </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IsFinished">
+      <MemberSignature Language="C#" Value="public bool IsFinished { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsFinished" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the coroutine finished running?</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Stop() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stop the coroutine.</summary>
+        <remarks>Stopped coroutines cannot be resumed and must be started again.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

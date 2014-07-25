@@ -13,7 +13,7 @@ using OpenTK.Graphics.OpenGL;
 using OpenTK.Graphics.ES20;
 #endif
 namespace GameStack {
-	public class Scene : IGameViewEventHandler, IDisposable {
+	public class Scene : IDisposable {
 		IGameView _view;
 		List<IUpdater> _updaters;
 		Dictionary<Type, List<Delegate>> _actions;

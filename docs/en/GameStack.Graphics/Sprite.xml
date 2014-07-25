@@ -1,0 +1,493 @@
+<Type Name="Sprite" FullName="GameStack.Graphics.Sprite">
+  <TypeSignature Language="C#" Value="public class Sprite : GameStack.Graphics.Drawable2D, GameStack.Graphics.IBatchable, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Sprite extends GameStack.Graphics.Drawable2D implements class GameStack.Graphics.IBatchable, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Drawable2D</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.Graphics.IBatchable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Manages a single 2D image, often part of a spritesheet.</summary>
+    <remarks>In most cases, unless sprites are being dynamically created, these will be retrieved from a <see cref="T:GameStack.Graphics.Atlas" /> asset.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sprite (System.IO.Stream stream, GameStack.Graphics.TextureSettings settings = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class GameStack.Graphics.TextureSettings settings) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+      </Parameters>
+      <Docs>
+        <param name="stream">
+        </param>
+        <param name="settings">
+        </param>
+        <summary>Create a sprite from an asset stream containing a PNG image.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sprite (string path, GameStack.Graphics.TextureSettings settings = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class GameStack.Graphics.TextureSettings settings) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+      </Parameters>
+      <Docs>
+        <param name="path">Relative asset path to .png.</param>
+        <param name="settings">
+        </param>
+        <summary>Create a sprite from a .png asset.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sprite (System.IO.Stream stream, GameStack.Graphics.TextureSettings settings, OpenTK.Vector4 rect, bool relativeRect = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class GameStack.Graphics.TextureSettings settings, valuetype OpenTK.Vector4 rect, bool relativeRect) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+        <Parameter Name="rect" Type="OpenTK.Vector4" />
+        <Parameter Name="relativeRect" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">
+        </param>
+        <param name="settings">
+        </param>
+        <param name="rect">
+        </param>
+        <param name="relativeRect">
+        </param>
+        <summary>Create a sprite from a .png asset.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sprite (string path, GameStack.Graphics.TextureSettings settings, OpenTK.Vector4 rect, bool relativeRect = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class GameStack.Graphics.TextureSettings settings, valuetype OpenTK.Vector4 rect, bool relativeRect) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+        <Parameter Name="rect" Type="OpenTK.Vector4" />
+        <Parameter Name="relativeRect" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+        </param>
+        <param name="settings">
+        </param>
+        <param name="rect">
+        </param>
+        <param name="relativeRect">
+        </param>
+        <summary>Create a sprite from a .png asset.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sprite (System.IO.Stream stream, GameStack.Graphics.TextureSettings settings, OpenTK.Vector4 rect, bool relativeRect, OpenTK.Vector4 color, bool flipV = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class GameStack.Graphics.TextureSettings settings, valuetype OpenTK.Vector4 rect, bool relativeRect, valuetype OpenTK.Vector4 color, bool flipV) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+        <Parameter Name="rect" Type="OpenTK.Vector4" />
+        <Parameter Name="relativeRect" Type="System.Boolean" />
+        <Parameter Name="color" Type="OpenTK.Vector4" />
+        <Parameter Name="flipV" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">
+        </param>
+        <param name="settings">
+        </param>
+        <param name="rect">
+        </param>
+        <param name="relativeRect">
+        </param>
+        <param name="color">
+        </param>
+        <param name="flipV">
+        </param>
+        <summary>Create a sprite from a .png asset.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sprite (string path, GameStack.Graphics.TextureSettings settings, OpenTK.Vector4 rect, bool relativeRect, OpenTK.Vector4 color, bool flipV = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class GameStack.Graphics.TextureSettings settings, valuetype OpenTK.Vector4 rect, bool relativeRect, valuetype OpenTK.Vector4 color, bool flipV) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+        <Parameter Name="rect" Type="OpenTK.Vector4" />
+        <Parameter Name="relativeRect" Type="System.Boolean" />
+        <Parameter Name="color" Type="OpenTK.Vector4" />
+        <Parameter Name="flipV" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+        </param>
+        <param name="settings">
+        </param>
+        <param name="rect">
+        </param>
+        <param name="relativeRect">
+        </param>
+        <param name="color">
+        </param>
+        <param name="flipV">Correct for vertical mirroring.</param>
+        <summary>Create a sprite from a .png asset.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sprite (GameStack.Graphics.Material material, OpenTK.Vector2 size, GameStack.Graphics.VertexBuffer vbuffer = null, GameStack.Graphics.IndexBuffer ibuffer = null, int ioffset = 0, int icount = 0, bool ownMaterial = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.Material material, valuetype OpenTK.Vector2 size, class GameStack.Graphics.VertexBuffer vbuffer, class GameStack.Graphics.IndexBuffer ibuffer, int32 ioffset, int32 icount, bool ownMaterial) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="material" Type="GameStack.Graphics.Material" />
+        <Parameter Name="size" Type="OpenTK.Vector2" />
+        <Parameter Name="vbuffer" Type="GameStack.Graphics.VertexBuffer" />
+        <Parameter Name="ibuffer" Type="GameStack.Graphics.IndexBuffer" />
+        <Parameter Name="ioffset" Type="System.Int32" />
+        <Parameter Name="icount" Type="System.Int32" />
+        <Parameter Name="ownMaterial" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="material">
+        </param>
+        <param name="size">
+        </param>
+        <param name="vbuffer">
+        </param>
+        <param name="ibuffer">
+        </param>
+        <param name="ioffset">
+        </param>
+        <param name="icount">
+        </param>
+        <param name="ownMaterial">
+        </param>
+        <summary>
+        </summary>
+        <remarks>Typically only called by <see cref="T:GameStack.Graphics.Atlas" /> or other asset loaders.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_ibuffer">
+      <MemberSignature Language="C#" Value="protected GameStack.Graphics.IndexBuffer _ibuffer;" />
+      <MemberSignature Language="ILAsm" Value=".field family class GameStack.Graphics.IndexBuffer _ibuffer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.IndexBuffer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_icount">
+      <MemberSignature Language="C#" Value="protected int _icount;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 _icount" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_ioffset">
+      <MemberSignature Language="C#" Value="protected int _ioffset;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 _ioffset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_material">
+      <MemberSignature Language="C#" Value="protected GameStack.Graphics.Material _material;" />
+      <MemberSignature Language="ILAsm" Value=".field family class GameStack.Graphics.Material _material" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_size">
+      <MemberSignature Language="C#" Value="protected OpenTK.Vector2 _size;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype OpenTK.Vector2 _size" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_vbuffer">
+      <MemberSignature Language="C#" Value="protected GameStack.Graphics.VertexBuffer _vbuffer;" />
+      <MemberSignature Language="ILAsm" Value=".field family class GameStack.Graphics.VertexBuffer _vbuffer" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexBuffer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Graphics.IBatchable.IndexBuffer">
+      <MemberSignature Language="C#" Value="GameStack.Graphics.IndexBuffer GameStack.Graphics.IBatchable.IndexBuffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.IndexBuffer GameStack.Graphics.IBatchable.IndexBuffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.IndexBuffer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Graphics.IBatchable.IndexCount">
+      <MemberSignature Language="C#" Value="int GameStack.Graphics.IBatchable.IndexCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GameStack.Graphics.IBatchable.IndexCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Graphics.IBatchable.IndexOffset">
+      <MemberSignature Language="C#" Value="int GameStack.Graphics.IBatchable.IndexOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 GameStack.Graphics.IBatchable.IndexOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Graphics.IBatchable.Material">
+      <MemberSignature Language="C#" Value="GameStack.Graphics.Material GameStack.Graphics.IBatchable.Material { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Material GameStack.Graphics.IBatchable.Material" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Graphics.IBatchable.VertexBuffer">
+      <MemberSignature Language="C#" Value="GameStack.Graphics.VertexBuffer GameStack.Graphics.IBatchable.VertexBuffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.VertexBuffer GameStack.Graphics.IBatchable.VertexBuffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexBuffer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Material">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Material Material { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Material Material" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the sprite's default material.</summary>
+        <value>
+        </value>
+        <remarks>This material can be overridden by putting another material in scope before drawing.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDraw">
+      <MemberSignature Language="C#" Value="protected override void OnDraw (ref OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDraw(valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="world" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="world">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public virtual OpenTK.Vector2 Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the size of the sprite in logical pixels.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

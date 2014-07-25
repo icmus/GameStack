@@ -1,0 +1,198 @@
+<Type Name="Animation" FullName="GameStack.Graphics.Animation">
+  <TypeSignature Language="C#" Value="public class Animation : GameStack.IUpdater, GameStack.IWaitFor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Animation extends System.Object implements class GameStack.IUpdater, class GameStack.IWaitFor" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IUpdater</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>GameStack.IWaitFor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Manages animations provided by model assets.</summary>
+    <remarks>Retrieve instances of this object from the <see cref="P:GameStack.Graphics.Model.Animations" /> property.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Animation (string name, double duration, double rate, GameStack.Graphics.AnimationChannel[] channels);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, float64 duration, float64 rate, class GameStack.Graphics.AnimationChannel[] channels) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="duration" Type="System.Double" />
+        <Parameter Name="rate" Type="System.Double" />
+        <Parameter Name="channels" Type="GameStack.Graphics.AnimationChannel[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="duration">
+        </param>
+        <param name="rate">
+        </param>
+        <param name="channels">
+        </param>
+        <summary>
+        </summary>
+        <remarks>Normally called by asset loaders.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Channels">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.AnimationChannel[] Channels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.AnimationChannel[] Channels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.AnimationChannel[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the animation channels associated with this animation.</summary>
+        <value>
+        </value>
+        <remarks>Each animation channel controls an invidiaul node in the mesh. When played simultaneously, the channels work together to animate different parts of the model, appearing as one unified motion.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Duration">
+      <MemberSignature Language="C#" Value="public double Duration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Duration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The animation's duration in seconds.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IWaitFor.Check">
+      <MemberSignature Language="C#" Value="bool IWaitFor.Check ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool GameStack.IWaitFor.Check() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The animation's name as specified in the original model file.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rate">
+      <MemberSignature Language="C#" Value="public double Rate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Rate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The animation rate in frames per second.</summary>
+        <value>
+        </value>
+        <remarks>For example, 30 for 30 FPS or ~32ms between frames.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start (double startTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start(float64 startTime) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startTime" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="startTime">The point in the animation at which to start, or 0 for the beginning.</param>
+        <summary>Begins playing an animation.</summary>
+        <remarks>Once called, the animation begins applying transforms to the mesh nodes each time it is updated. If your animation is not updating, ensure that this object has been added to the scene collection by calling <see cref="M:GameStack.Scene.Add(System.Object)" /> or that you are manually pumping the animation in your update method.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Cease playing the animation.</summary>
+        <remarks>All nodes are left at their current state, so the model stays in the same pose as when it was stopped.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Update(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>Normally called automatically when the method is added to the scene collection, but can also be pumped manually.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

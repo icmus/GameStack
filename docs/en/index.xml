@@ -1,0 +1,396 @@
+<Overview>
+  <Assemblies>
+    <Assembly Name="GameStack.Desktop" Version="1.0.0.0">
+      <AssemblyPublicKey>[00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00 00 24 00 00 52 53 41 31 00 04 00 00 11 00 00 00 8b f0 bd c1 5c 48 fc 9d d4 45 a9 1c c0 ca 60 fd dc 70 e3 43 3e 3c 16 50 d6 e9 d5 ef 39 91 ff 76 bf fe 31 f6 d2 e4 86 2f 21 01 1a 73 81 03 9a ff 15 01 d1 74 c9 f3 85 7a 45 50 2c b8 9f 62 ec bf 84 1f f7 ab fd d3 19 5a 8e 90 cf 13 7d d9 5b 96 3f e7 5f b1 da 75 16 35 13 8b 16 b3 af 0a 85 21 77 e8 c4 38 60 d2 f0 1e e0 2a 06 d8 91 92 a8 a8 41 48 5d 44 9e cd f1 96 22 54 79 be 7e a7 97 a3 ]</AssemblyPublicKey>
+      <Attributes>
+        <Attribute>
+          <AttributeName>System.Diagnostics.Debuggable(System.Diagnostics.DebuggableAttribute+DebuggingModes.IgnoreSymbolStoreSequencePoints | System.Diagnostics.DebuggableAttribute+DebuggingModes.DisableOptimizations)</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCompany("iconmobile LLC")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyConfiguration("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyCopyright("(c) 2014 iconmobile LLC")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyDescription("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyProduct("GameStack")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTitle("GameStack.Desktop")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Reflection.AssemblyTrademark("")</AttributeName>
+        </Attribute>
+        <Attribute>
+          <AttributeName>System.Runtime.CompilerServices.RuntimeCompatibility(WrapNonExceptionThrows=true)</AttributeName>
+        </Attribute>
+      </Attributes>
+    </Assembly>
+  </Assemblies>
+  <Remarks>
+  </Remarks>
+  <Copyright>© 2014 iconmobile LLC</Copyright>
+  <Types>
+    <Namespace Name="Cairo">
+    </Namespace>
+    <Namespace Name="GameStack">
+      <Type Name="Assets" Kind="Class" />
+      <Type Name="CairoEx" Kind="Class" />
+      <Type Name="Controller`1" DisplayName="Controller&lt;T&gt;" Kind="Class" />
+      <Type Name="ConversionEx" Kind="Class" />
+      <Type Name="CoroutineList`1" DisplayName="CoroutineList&lt;T&gt;" Kind="Class" />
+      <Type Name="EventBase" Kind="Class" />
+      <Type Name="FrameArgs" Kind="Class" />
+      <Type Name="Gesture" Kind="Class" />
+      <Type Name="GestureState" Kind="Enumeration" />
+      <Type Name="GestureType" Kind="Enumeration" />
+      <Type Name="ICoroutine" Kind="Interface" />
+      <Type Name="IGameView" Kind="Interface" />
+      <Type Name="IGestureInput" Kind="Interface" />
+      <Type Name="IHandler`1" DisplayName="IHandler&lt;T&gt;" Kind="Interface" />
+      <Type Name="IStreamingSound" Kind="Interface" />
+      <Type Name="IUpdater" Kind="Interface" />
+      <Type Name="IWaitFor" Kind="Interface" />
+      <Type Name="IWaitFor`1" DisplayName="IWaitFor&lt;T&gt;" Kind="Interface" />
+      <Type Name="KeyEvent" Kind="Class" />
+      <Type Name="KeyModifier" Kind="Enumeration" />
+      <Type Name="KeyState" Kind="Enumeration" />
+      <Type Name="LowMemory" Kind="Class" />
+      <Type Name="Mathf" Kind="Class" />
+      <Type Name="OpenALException" Kind="Class" />
+      <Type Name="PanGesture" Kind="Class" />
+      <Type Name="Pause" Kind="Class" />
+      <Type Name="Ray" Kind="Structure" />
+      <Type Name="Resize" Kind="Class" />
+      <Type Name="Resume" Kind="Class" />
+      <Type Name="Scene" Kind="Class" />
+      <Type Name="SceneCrossfader" Kind="Class" />
+      <Type Name="SoundChannel" Kind="Class" />
+      <Type Name="SoundEffect" Kind="Class" />
+      <Type Name="Start" Kind="Class" />
+      <Type Name="StreamingOpusFile" Kind="Class" />
+      <Type Name="StreamingSoundChannel" Kind="Class" />
+      <Type Name="SwipeDirection" Kind="Enumeration" />
+      <Type Name="SwipeGesture" Kind="Class" />
+      <Type Name="TapGesture" Kind="Class" />
+      <Type Name="ThreadContext" Kind="Class" />
+      <Type Name="Touch" Kind="Class" />
+      <Type Name="TouchState" Kind="Enumeration" />
+      <Type Name="Transition`1" DisplayName="Transition&lt;T&gt;" Kind="Class" />
+      <Type Name="Tween" Kind="Class" />
+      <Type Name="TweenFunc`1" DisplayName="TweenFunc&lt;T&gt;" Kind="Delegate" />
+      <Type Name="WaitFor" Kind="Class" />
+      <Type Name="WaitFor`1" DisplayName="WaitFor&lt;T&gt;" Kind="Class" />
+      <Type Name="WaitForAny`1" DisplayName="WaitForAny&lt;T&gt;" Kind="Class" />
+      <Type Name="WaitForCoroutine" Kind="Class" />
+      <Type Name="WaitForTime" Kind="Class" />
+    </Namespace>
+    <Namespace Name="GameStack.Android">
+    </Namespace>
+    <Namespace Name="GameStack.Content">
+      <Type Name="BinaryEx" Kind="Class" />
+      <Type Name="ContentException" Kind="Class" />
+      <Type Name="ITarHeader" Kind="Interface" />
+      <Type Name="PngLoader" Kind="Class" />
+      <Type Name="TarException" Kind="Class" />
+      <Type Name="TarReader" Kind="Class" />
+    </Namespace>
+    <Namespace Name="GameStack.Desktop">
+      <Type Name="SDL2EventArgs" Kind="Class" />
+      <Type Name="SDL2EventHandler" Kind="Delegate" />
+      <Type Name="SDL2EventLoop" Kind="Class" />
+      <Type Name="SDL2Exception" Kind="Class" />
+      <Type Name="SDL2GameView" Kind="Class" />
+    </Namespace>
+    <Namespace Name="GameStack.Graphics">
+      <Type Name="Animation" Kind="Class" />
+      <Type Name="AnimationBehavior" Kind="Enumeration" />
+      <Type Name="AnimationChannel" Kind="Class" />
+      <Type Name="Atlas" Kind="Class" />
+      <Type Name="Batch" Kind="Class" />
+      <Type Name="BitmapChar" Kind="Class" />
+      <Type Name="BitmapFont" Kind="Class" />
+      <Type Name="BlendMode" Kind="Enumeration" />
+      <Type Name="BlurDirection" Kind="Enumeration" />
+      <Type Name="BlurMaterial" Kind="Class" />
+      <Type Name="BlurShader" Kind="Class" />
+      <Type Name="Bone" Kind="Class" />
+      <Type Name="Camera" Kind="Class" />
+      <Type Name="Camera2D" Kind="Class" />
+      <Type Name="Camera2DOrigin" Kind="Enumeration" />
+      <Type Name="DirectionalLight" Kind="Class" />
+      <Type Name="Drawable2D" Kind="Class" />
+      <Type Name="FrameBuffer" Kind="Class" />
+      <Type Name="FrameSequence`1" DisplayName="FrameSequence&lt;T&gt;" Kind="Class" />
+      <Type Name="FreeTypeException" Kind="Class" />
+      <Type Name="FreeTypeFontFace" Kind="Class" />
+      <Type Name="HorizontalAlignment" Kind="Enumeration" />
+      <Type Name="IBatchable" Kind="Interface" />
+      <Type Name="IndexBuffer" Kind="Class" />
+      <Type Name="Light" Kind="Class" />
+      <Type Name="Lighting" Kind="Class" />
+      <Type Name="LightType" Kind="Enumeration" />
+      <Type Name="Material" Kind="Class" />
+      <Type Name="Mesh" Kind="Class" />
+      <Type Name="MeshMaterial" Kind="Class" />
+      <Type Name="MeshShader" Kind="Class" />
+      <Type Name="MeshShaderSettings" Kind="Class" />
+      <Type Name="MeshTextureSlot" Kind="Structure" />
+      <Type Name="Model" Kind="Class" />
+      <Type Name="Node" Kind="Class" />
+      <Type Name="PointLight" Kind="Class" />
+      <Type Name="PositionKey" Kind="Structure" />
+      <Type Name="Quad" Kind="Class" />
+      <Type Name="RotationKey" Kind="Structure" />
+      <Type Name="ScalingKey" Kind="Structure" />
+      <Type Name="ScopedObject" Kind="Class" />
+      <Type Name="Shader" Kind="Class" />
+      <Type Name="ShaderException" Kind="Class" />
+      <Type Name="ShadingMode" Kind="Enumeration" />
+      <Type Name="SlicedSprite" Kind="Class" />
+      <Type Name="SolidColorShader" Kind="Class" />
+      <Type Name="Sprite" Kind="Class" />
+      <Type Name="SpriteMaterial" Kind="Class" />
+      <Type Name="SpriteSequence" Kind="Class" />
+      <Type Name="SpriteShader" Kind="Class" />
+      <Type Name="TextBlock" Kind="Class" />
+      <Type Name="Texture" Kind="Class" />
+      <Type Name="TextureFilter" Kind="Enumeration" />
+      <Type Name="TextureOperation" Kind="Enumeration" />
+      <Type Name="TextureSettings" Kind="Class" />
+      <Type Name="TextureSlot" Kind="Class" />
+      <Type Name="TextureWrap" Kind="Enumeration" />
+      <Type Name="VertexBuffer" Kind="Class" />
+      <Type Name="VertexElement" Kind="Class" />
+      <Type Name="VertexFormat" Kind="Class" />
+      <Type Name="VertexWeight" Kind="Structure" />
+    </Namespace>
+    <Namespace Name="GameStack.Gui">
+      <Type Name="Button" Kind="Class" />
+      <Type Name="ButtonState" Kind="Enumeration" />
+      <Type Name="ButtonStateChangedEventArgs" Kind="Class" />
+      <Type Name="CanvasView" Kind="Class" />
+      <Type Name="ImageView" Kind="Class" />
+      <Type Name="IPointerInput" Kind="Interface" />
+      <Type Name="Label" Kind="Class" />
+      <Type Name="LayoutSpec" Kind="Class" />
+      <Type Name="RadioGroup" Kind="Class" />
+      <Type Name="RadioGroupEventArgs" Kind="Class" />
+      <Type Name="RootView" Kind="Class" />
+      <Type Name="VerticalAlignment" Kind="Enumeration" />
+      <Type Name="View" Kind="Class" />
+    </Namespace>
+    <Namespace Name="GameStack.iOS">
+    </Namespace>
+    <Namespace Name="SDL2">
+    </Namespace>
+  </Types>
+  <Title>GameStack</Title>
+  <ExtensionMethods>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:Cairo.Context" />
+      </Targets>
+      <Member MemberName="Clear">
+        <MemberSignature Language="C#" Value="public static void Clear (this Cairo.Context ctx);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Clear(class Cairo.Context ctx) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Void</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="ctx" Type="Cairo.Context" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="ctx" />
+          <summary />
+        </Docs>
+        <Link Type="GameStack.CairoEx" Member="M:GameStack.CairoEx.Clear(Cairo.Context)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:Cairo.Context" />
+      </Targets>
+      <Member MemberName="SetSourceRGBAi">
+        <MemberSignature Language="C#" Value="public static void SetSourceRGBAi (this Cairo.Context ctx, int r, int g, int b, int a);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSourceRGBAi(class Cairo.Context ctx, int32 r, int32 g, int32 b, int32 a) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Void</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="ctx" Type="Cairo.Context" RefType="this" />
+          <Parameter Name="r" Type="System.Int32" />
+          <Parameter Name="g" Type="System.Int32" />
+          <Parameter Name="b" Type="System.Int32" />
+          <Parameter Name="a" Type="System.Int32" />
+        </Parameters>
+        <Docs>
+          <param name="ctx" />
+          <param name="r" />
+          <param name="g" />
+          <param name="b" />
+          <param name="a" />
+          <summary>Set the source RGBA with integer values.</summary>
+        </Docs>
+        <Link Type="GameStack.CairoEx" Member="M:GameStack.CairoEx.SetSourceRGBAi(Cairo.Context,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:System.IO.BinaryReader" />
+      </Targets>
+      <Member MemberName="ReadMatrix4">
+        <MemberSignature Language="C#" Value="public static void ReadMatrix4 (this System.IO.BinaryReader reader, out OpenTK.Matrix4 val);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReadMatrix4(class System.IO.BinaryReader reader, valuetype OpenTK.Matrix4 val) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Void</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="reader" Type="System.IO.BinaryReader" RefType="this" />
+          <Parameter Name="val" Type="OpenTK.Matrix4&amp;" RefType="out" />
+        </Parameters>
+        <Docs>
+          <param name="reader" />
+          <param name="val" />
+          <summary />
+        </Docs>
+        <Link Type="GameStack.Content.BinaryEx" Member="M:GameStack.Content.BinaryEx.ReadMatrix4(System.IO.BinaryReader,OpenTK.Matrix4@)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:System.IO.BinaryReader" />
+      </Targets>
+      <Member MemberName="ReadVector2">
+        <MemberSignature Language="C#" Value="public static OpenTK.Vector2 ReadVector2 (this System.IO.BinaryReader reader);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype OpenTK.Vector2 ReadVector2(class System.IO.BinaryReader reader) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>OpenTK.Vector2</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="reader" Type="System.IO.BinaryReader" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="reader" />
+          <summary />
+        </Docs>
+        <Link Type="GameStack.Content.BinaryEx" Member="M:GameStack.Content.BinaryEx.ReadVector2(System.IO.BinaryReader)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:System.IO.BinaryReader" />
+      </Targets>
+      <Member MemberName="ReadVector3">
+        <MemberSignature Language="C#" Value="public static OpenTK.Vector3 ReadVector3 (this System.IO.BinaryReader reader);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype OpenTK.Vector3 ReadVector3(class System.IO.BinaryReader reader) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>OpenTK.Vector3</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="reader" Type="System.IO.BinaryReader" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="reader" />
+          <summary />
+        </Docs>
+        <Link Type="GameStack.Content.BinaryEx" Member="M:GameStack.Content.BinaryEx.ReadVector3(System.IO.BinaryReader)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:System.IO.BinaryReader" />
+      </Targets>
+      <Member MemberName="ReadVector4">
+        <MemberSignature Language="C#" Value="public static OpenTK.Vector4 ReadVector4 (this System.IO.BinaryReader reader);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype OpenTK.Vector4 ReadVector4(class System.IO.BinaryReader reader) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>OpenTK.Vector4</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="reader" Type="System.IO.BinaryReader" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="reader" />
+          <summary />
+        </Docs>
+        <Link Type="GameStack.Content.BinaryEx" Member="M:GameStack.Content.BinaryEx.ReadVector4(System.IO.BinaryReader)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:OpenTK.Vector4" />
+      </Targets>
+      <Member MemberName="ToColor">
+        <MemberSignature Language="C#" Value="public static System.Drawing.Color ToColor (this OpenTK.Vector4 val);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color ToColor(valuetype OpenTK.Vector4 val) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>System.Drawing.Color</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="val" Type="OpenTK.Vector4" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="val" />
+          <summary>Convert RGBA tuple to color.</summary>
+        </Docs>
+        <Link Type="GameStack.ConversionEx" Member="M:GameStack.ConversionEx.ToColor(OpenTK.Vector4)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:System.Drawing.SizeF" />
+      </Targets>
+      <Member MemberName="ToVector2">
+        <MemberSignature Language="C#" Value="public static OpenTK.Vector2 ToVector2 (this System.Drawing.SizeF size);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype OpenTK.Vector2 ToVector2(valuetype System.Drawing.SizeF size) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>OpenTK.Vector2</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="size" Type="System.Drawing.SizeF" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="size" />
+          <summary>Convert size to XY tuple.</summary>
+        </Docs>
+        <Link Type="GameStack.ConversionEx" Member="M:GameStack.ConversionEx.ToVector2(System.Drawing.SizeF)" />
+      </Member>
+    </ExtensionMethod>
+    <ExtensionMethod>
+      <Targets>
+        <Target Type="T:System.Drawing.Color" />
+      </Targets>
+      <Member MemberName="ToVector4">
+        <MemberSignature Language="C#" Value="public static OpenTK.Vector4 ToVector4 (this System.Drawing.Color color);" />
+        <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype OpenTK.Vector4 ToVector4(valuetype System.Drawing.Color color) cil managed" />
+        <MemberType>ExtensionMethod</MemberType>
+        <ReturnValue>
+          <ReturnType>OpenTK.Vector4</ReturnType>
+        </ReturnValue>
+        <Parameters>
+          <Parameter Name="color" Type="System.Drawing.Color" RefType="this" />
+        </Parameters>
+        <Docs>
+          <param name="color" />
+          <summary>Convert color to RGBA tuple.</summary>
+        </Docs>
+        <Link Type="GameStack.ConversionEx" Member="M:GameStack.ConversionEx.ToVector4(System.Drawing.Color)" />
+      </Member>
+    </ExtensionMethod>
+  </ExtensionMethods>
+</Overview>

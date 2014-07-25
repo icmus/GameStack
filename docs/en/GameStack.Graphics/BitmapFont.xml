@@ -1,0 +1,230 @@
+<Type Name="BitmapFont" FullName="GameStack.Graphics.BitmapFont">
+  <TypeSignature Language="C#" Value="public class BitmapFont : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BitmapFont extends System.Object implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Manages a bitmap font asset.</summary>
+    <remarks>This class can be used with UI controls such as <see cref="T:GameStack.Gui.Label" /> and <see cref="T:GameStack.Gui.Button" /> or can be used directly with <see cref="T:GameStack.Graphics.TextBlock" />. The .font asset must be produced by the pipeline tools, which support BMFont-format font definition files.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapFont (System.IO.Stream stream, GameStack.Graphics.Shader shader = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class GameStack.Graphics.Shader shader) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="shader" Type="GameStack.Graphics.Shader" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Must contain an font asset file image produced by the pipeline.</param>
+        <param name="shader">When supplied, always use this shader instead of the default sprite shader.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BitmapFont (string path, GameStack.Graphics.Shader shader = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class GameStack.Graphics.Shader shader) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="shader" Type="GameStack.Graphics.Shader" />
+      </Parameters>
+      <Docs>
+        <param name="path">Relative asset path.</param>
+        <param name="shader">When supplied, always use this shader instead of the default sprite shader.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Base">
+      <MemberSignature Language="C#" Value="public float Base { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Base" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the font baseline in pixels.</summary>
+        <value>
+        </value>
+        <remarks>This indicates where the bottoms of most letters should sit. When rendering lines of text, the vertical position is adjusted with this value.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release texture resources.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Face">
+      <MemberSignature Language="C#" Value="public string Face { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Face" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the name of the font face.</summary>
+        <value>
+        </value>
+        <remarks>This matches the name of the font as specified in the original font definition.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetKerning">
+      <MemberSignature Language="C#" Value="public float GetKerning (int first, int second);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetKerning(int32 first, int32 second) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="first" Type="System.Int32" />
+        <Parameter Name="second" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="first">
+        </param>
+        <param name="second">
+        </param>
+        <summary>Gets a kerning value for a specific character pair.</summary>
+        <returns>
+        </returns>
+        <remarks>This is used when rendering bitmap text to adjust the horizontal placement of each character based on the previous character. If no specific kerning is defined for the character pair, a value of 0 is returned.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.BitmapChar this[int id] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.BitmapChar Item(int32)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.BitmapChar</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="id">Character ID, usually equal to the character's numerical value.</param>
+        <summary>Gets info about a single bitmap character.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineHeight">
+      <MemberSignature Language="C#" Value="public float LineHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 LineHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the total space between the bottom and the top of a line of text.</summary>
+        <value>
+        </value>
+        <remarks>When rendering text, this is the amount of space the virtual caret must move down when beginning a new line.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Material">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.SpriteMaterial Material { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.SpriteMaterial Material" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.SpriteMaterial</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the underlying material for the font sheet.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelScale">
+      <MemberSignature Language="C#" Value="public float PixelScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 PixelScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the pixel scale of the underlying texture.</summary>
+        <value>
+        </value>
+        <remarks>Fonts designed to be used at retina resolution will return 2.0.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public int Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the size of the font sheet texture as defined by the asset metadata.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

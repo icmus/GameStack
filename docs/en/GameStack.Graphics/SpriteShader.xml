@@ -1,0 +1,33 @@
+<Type Name="SpriteShader" FullName="GameStack.Graphics.SpriteShader">
+  <TypeSignature Language="C#" Value="public sealed class SpriteShader : GameStack.Graphics.Shader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SpriteShader extends GameStack.Graphics.Shader" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Shader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Default shader for sprites and 2D objects.</summary>
+    <remarks>Use with <see cref="T:GameStack.Graphics.SpriteMaterial" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpriteShader ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

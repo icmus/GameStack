@@ -1,0 +1,151 @@
+<Type Name="LayoutSpec" FullName="GameStack.Gui.LayoutSpec">
+  <TypeSignature Language="C#" Value="public class LayoutSpec" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LayoutSpec extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A layout specification is a collection of lambda functions that control the behavior of a view's layout with respect to its parent.</summary>
+    <remarks>Since layout specs use lambdas, they can be continually evaluated whenever a layout refresh is required. This provides an extremely flexible layout system capable of stacking, tiling, grids, and so on.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LayoutSpec ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Drawing.SizeF,float&gt; Bottom { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;valuetype System.Drawing.SizeF, float32&gt; Bottom" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Drawing.SizeF,System.Single&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a function returning the distance in pixels between the bottom of this view and the bottom of its parent.</summary>
+        <value>
+        </value>
+        <remarks>If <see cref="P:GameStack.Gui.LayoutSpec.Top" /> and <see cref="P:GameStack.Gui.LayoutSpec.Height" /> are set, this should be omitted.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Empty">
+      <MemberSignature Language="C#" Value="public static readonly GameStack.Gui.LayoutSpec Empty;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class GameStack.Gui.LayoutSpec Empty" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.LayoutSpec</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A generic layout spec that just fills the parent.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Drawing.SizeF,float&gt; Height { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;valuetype System.Drawing.SizeF, float32&gt; Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Drawing.SizeF,System.Single&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a function that returns the view's height.</summary>
+        <value>
+        </value>
+        <remarks>If <see cref="P:GameStack.Gui.LayoutSpec.Top" /> and <see cref="P:GameStack.Gui.LayoutSpec.Height" /> are set, this should be omitted.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Left">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Drawing.SizeF,float&gt; Left { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;valuetype System.Drawing.SizeF, float32&gt; Left" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Drawing.SizeF,System.Single&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a function that returns the distance between the view's left side and the parent's left side.</summary>
+        <value>
+        </value>
+        <remarks>If <see cref="P:GameStack.Gui.LayoutSpec.Right" /> and <see cref="P:GameStack.Gui.LayoutSpec.Width" /> are set, this should be omitted.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Right">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Drawing.SizeF,float&gt; Right { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;valuetype System.Drawing.SizeF, float32&gt; Right" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Drawing.SizeF,System.Single&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a function that returns the distance between the view's right side and the parent's right side.</summary>
+        <value>
+        </value>
+        <remarks>If <see cref="P:GameStack.Gui.LayoutSpec.Left" /> and <see cref="P:GameStack.Gui.LayoutSpec.Width" /> are set, this should be omitted.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Drawing.SizeF,float&gt; Top { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;valuetype System.Drawing.SizeF, float32&gt; Top" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Drawing.SizeF,System.Single&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a function returning the distance in pixels between the top of this view and the top of its parent.</summary>
+        <value>
+        </value>
+        <remarks>If <see cref="P:GameStack.Gui.LayoutSpec.Bottom" /> and <see cref="P:GameStack.Gui.LayoutSpec.Height" /> are set, this should be omitted.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public Func&lt;System.Drawing.SizeF,float&gt; Width { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`2&lt;valuetype System.Drawing.SizeF, float32&gt; Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;System.Drawing.SizeF,System.Single&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a function returning the width of this view.</summary>
+        <value>
+        </value>
+        <remarks>If <see cref="P:GameStack.Gui.LayoutSpec.Left" /> and <see cref="P:GameStack.Gui.LayoutSpec.Right" /> are set, this should be omitted.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

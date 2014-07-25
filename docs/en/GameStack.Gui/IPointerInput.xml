@@ -1,0 +1,115 @@
+<Type Name="IPointerInput" FullName="GameStack.Gui.IPointerInput">
+  <TypeSignature Language="C#" Value="public interface IPointerInput" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPointerInput" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implemented by any UI controls that wish to receive generic pointer events.</summary>
+    <remarks>Pointers are abstract and take a different form on different platforms. On mobile, a pointer refers to a single tracked touch. On a desktop, the pointer is simply the mouse cursor. Most UI interfaces involve a single pointer.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnPointerDown">
+      <MemberSignature Language="C#" Value="public void OnPointerDown (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPointerDown(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">Point relative to this view.</param>
+        <summary>Handler for pointer down inside view's bounds.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPointerEnter">
+      <MemberSignature Language="C#" Value="public void OnPointerEnter (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPointerEnter(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">Point relative to this view.</param>
+        <summary>Handles pointer entering view bounds.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPointerExit">
+      <MemberSignature Language="C#" Value="public void OnPointerExit (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPointerExit(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">Point relative to this view.</param>
+        <summary>Handles pointer leaving view bounds.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPointerMove">
+      <MemberSignature Language="C#" Value="public void OnPointerMove (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPointerMove(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">Point relative to this view.</param>
+        <summary>Handles the pointer moving within view bounds.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPointerUp">
+      <MemberSignature Language="C#" Value="public void OnPointerUp (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnPointerUp(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">Point relative to this view.</param>
+        <summary>Handler for pointer up within view's bounds, or outside of view's bounds if pointer was previously down inside.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

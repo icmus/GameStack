@@ -1,0 +1,89 @@
+<Type Name="KeyEvent" FullName="GameStack.KeyEvent">
+  <TypeSignature Language="C#" Value="public class KeyEvent : GameStack.EventBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyEvent extends GameStack.EventBase" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.EventBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>An object of this type is added to the queue whenever a keyboard event occurs.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Modifier">
+      <MemberSignature Language="C#" Value="public GameStack.KeyModifier Modifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.KeyModifier Modifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets any key modifiers applied during the key event.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanCode">
+      <MemberSignature Language="C#" Value="public int ScanCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScanCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the numeric scan code of the key in question.</summary>
+        <value>
+        </value>
+        <remarks>This is not necessarily an ASCII/ANSI value. Use <see cref="P:GameStack.KeyEvent.Symbol" /> when reading character data.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public GameStack.KeyState State { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.KeyState State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the current state of the key causing the event.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Symbol">
+      <MemberSignature Language="C#" Value="public char Symbol { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance char Symbol" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Char</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the symbolic character associated with the key.</summary>
+        <value>
+        </value>
+        <remarks>This property will return a zero character value if the key does not correspond to an ANSI character between 0 and 255.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

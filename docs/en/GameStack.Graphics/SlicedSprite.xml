@@ -1,0 +1,120 @@
+<Type Name="SlicedSprite" FullName="GameStack.Graphics.SlicedSprite">
+  <TypeSignature Language="C#" Value="public class SlicedSprite : GameStack.Graphics.Sprite" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SlicedSprite extends GameStack.Graphics.Sprite" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Sprite</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Extends the <see cref="T:GameStack.Graphics.Sprite" /> class and provides the ability to resize a sprite without distorting the edges or border.</summary>
+    <remarks>
+      <para>Instances of this class are typically retrieved via <see cref="M:GameStack.Graphics.Atlas.GetSprite``1(System.String)" />.</para>
+      <para>A sliced sprite is broken into 9 quads: one for each edge, one for each corner, and one for the middle (think of a tic-tac-toe board). This allows each portion to be scaled differently. Corners are never scaled. Edges can be scaled along their axis, but not long their width (or they can be tiled along their axis). The center is scaled in either direction, or it can tile in either direction (or both).</para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SlicedSprite (GameStack.Graphics.SpriteMaterial material, OpenTK.Vector2 pos, OpenTK.Vector2 size, OpenTK.Vector2 origin, OpenTK.Vector4 color, OpenTK.Vector4 border, bool tileX, bool tileY, bool hollow);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.SpriteMaterial material, valuetype OpenTK.Vector2 pos, valuetype OpenTK.Vector2 size, valuetype OpenTK.Vector2 origin, valuetype OpenTK.Vector4 color, valuetype OpenTK.Vector4 border, bool tileX, bool tileY, bool hollow) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="material" Type="GameStack.Graphics.SpriteMaterial" />
+        <Parameter Name="pos" Type="OpenTK.Vector2" />
+        <Parameter Name="size" Type="OpenTK.Vector2" />
+        <Parameter Name="origin" Type="OpenTK.Vector2" />
+        <Parameter Name="color" Type="OpenTK.Vector4" />
+        <Parameter Name="border" Type="OpenTK.Vector4" />
+        <Parameter Name="tileX" Type="System.Boolean" />
+        <Parameter Name="tileY" Type="System.Boolean" />
+        <Parameter Name="hollow" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="material">Default material.</param>
+        <param name="pos">
+        </param>
+        <param name="size">
+        </param>
+        <param name="origin">
+        </param>
+        <param name="color">
+        </param>
+        <param name="border">
+        </param>
+        <param name="tileX">
+        </param>
+        <param name="tileY">
+        </param>
+        <param name="hollow">
+        </param>
+        <summary>
+        </summary>
+        <remarks>Typically only called by asset loaders.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.SlicedSprite Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GameStack.Graphics.SlicedSprite Clone() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.SlicedSprite</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Creates a new copy of the sprite so that it can be sized independently.</summary>
+        <returns>
+        </returns>
+        <remarks>The new copy shares the same material resources, but stores its own resizable copy of the geometry.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public void Resize (OpenTK.Vector2 size);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resize(valuetype OpenTK.Vector2 size) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="size">The new size, including border widths.</param>
+        <summary>Modify the sprite's geometry to match the new size.</summary>
+        <remarks>This method mutates the sprite instance. Use <see cref="M:GameStack.Graphics.SlicedSprite.Clone()" /> to avoid conflicts.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resize">
+      <MemberSignature Language="C#" Value="public void Resize (float w, float h);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resize(float32 w, float32 h) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Single" />
+        <Parameter Name="h" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="w">The new width, including border widths.</param>
+        <param name="h">The new height, including border widths.</param>
+        <summary>Modify the sprite's geometry to match the new size.</summary>
+        <remarks>This method mutates the sprite instance. Use <see cref="M:GameStack.Graphics.SlicedSprite.Clone()" /> to avoid conflicts.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

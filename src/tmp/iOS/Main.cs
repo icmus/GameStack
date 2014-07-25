@@ -2,6 +2,7 @@
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using GameStack;
+using GameStack.iOS;
 
 namespace Temp {
 	public class Application {

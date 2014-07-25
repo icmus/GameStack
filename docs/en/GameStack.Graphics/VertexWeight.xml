@@ -1,0 +1,52 @@
+<Type Name="VertexWeight" FullName="GameStack.Graphics.VertexWeight">
+  <TypeSignature Language="C#" Value="public struct VertexWeight" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit VertexWeight extends System.ValueType" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Used with model animations to specify a weight for a vertex or group of vertices.</summary>
+    <remarks>Typically not used directly by apps, see <see cref="T:GameStack.Graphics.Model" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="VertexId">
+      <MemberSignature Language="C#" Value="public int VertexId;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 VertexId" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Weight">
+      <MemberSignature Language="C#" Value="public float Weight;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 Weight" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

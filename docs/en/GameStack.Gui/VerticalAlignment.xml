@@ -1,0 +1,62 @@
+<Type Name="VerticalAlignment" FullName="GameStack.Gui.VerticalAlignment">
+  <TypeSignature Language="C#" Value="public enum VerticalAlignment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed VerticalAlignment extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates the vertical alignment to be used when positioning text.</summary>
+    <remarks>Used with <see cref="T:GameStack.Gui.Label" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Bottom">
+      <MemberSignature Language="C#" Value="Bottom" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Gui.VerticalAlignment Bottom = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.VerticalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Middle">
+      <MemberSignature Language="C#" Value="Middle" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Gui.VerticalAlignment Middle = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.VerticalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Top">
+      <MemberSignature Language="C#" Value="Top" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Gui.VerticalAlignment Top = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.VerticalAlignment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

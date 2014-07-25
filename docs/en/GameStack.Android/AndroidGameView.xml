@@ -1,0 +1,561 @@
+<Type Name="AndroidGameView" FullName="GameStack.Android.AndroidGameView">
+  <TypeSignature Language="C#" Value="public class AndroidGameView : Android.Opengl.GLSurfaceView, Android.Opengl.GLSurfaceView.IRenderer, Android.Views.GestureDetector.IOnGestureListener, GameStack.IGameView, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AndroidGameView extends Android.Opengl.GLSurfaceView implements class Android.Opengl.GLSurfaceView/IRenderer, class Android.Runtime.IJavaObject, class Android.Views.GestureDetector/IOnGestureListener, class GameStack.IGameView, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Android</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Android.Opengl.GLSurfaceView</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Android.Opengl.GLSurfaceView+IRenderer</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Android.Views.GestureDetector+IOnGestureListener</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>GameStack.IGameView</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Platform-specific implementation of <see cref="T:GameStack.IGameView" />.</summary>
+    <remarks>See interface documentation.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AndroidGameView (Android.Content.Context context, int maxFramesPerSecond = 60);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Android.Content.Context context, int32 maxFramesPerSecond) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="context" Type="Android.Content.Context" />
+        <Parameter Name="maxFramesPerSecond" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="context">
+        </param>
+        <param name="maxFramesPerSecond">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Opengl.GLSurfaceView+IRenderer.OnDrawFrame">
+      <MemberSignature Language="C#" Value="void GLSurfaceView.IRenderer.OnDrawFrame (Javax.Microedition.Khronos.Opengles.IGL10 gl);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Android.Opengl.GLSurfaceView.IRenderer.OnDrawFrame(class Javax.Microedition.Khronos.Opengles.IGL10 gl) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gl" Type="Javax.Microedition.Khronos.Opengles.IGL10" />
+      </Parameters>
+      <Docs>
+        <param name="gl"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Opengl.GLSurfaceView+IRenderer.OnSurfaceChanged">
+      <MemberSignature Language="C#" Value="void GLSurfaceView.IRenderer.OnSurfaceChanged (Javax.Microedition.Khronos.Opengles.IGL10 gl, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Android.Opengl.GLSurfaceView.IRenderer.OnSurfaceChanged(class Javax.Microedition.Khronos.Opengles.IGL10 gl, int32 width, int32 height) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gl" Type="Javax.Microedition.Khronos.Opengles.IGL10" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="gl"></param>
+        <param name="width"></param>
+        <param name="height"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Opengl.GLSurfaceView+IRenderer.OnSurfaceCreated">
+      <MemberSignature Language="C#" Value="void GLSurfaceView.IRenderer.OnSurfaceCreated (Javax.Microedition.Khronos.Opengles.IGL10 gl, Javax.Microedition.Khronos.Egl.EGLConfig config);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Android.Opengl.GLSurfaceView.IRenderer.OnSurfaceCreated(class Javax.Microedition.Khronos.Opengles.IGL10 gl, class Javax.Microedition.Khronos.Egl.EGLConfig config) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="gl" Type="Javax.Microedition.Khronos.Opengles.IGL10" />
+        <Parameter Name="config" Type="Javax.Microedition.Khronos.Egl.EGLConfig" />
+      </Parameters>
+      <Docs>
+        <param name="gl"></param>
+        <param name="config"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Views.GestureDetector+IOnGestureListener.OnDown">
+      <MemberSignature Language="C#" Value="bool GestureDetector.IOnGestureListener.OnDown (Android.Views.MotionEvent e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool Android.Views.GestureDetector.IOnGestureListener.OnDown(class Android.Views.MotionEvent e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Android.Views.MotionEvent" />
+      </Parameters>
+      <Docs>
+        <param name="e"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Views.GestureDetector+IOnGestureListener.OnFling">
+      <MemberSignature Language="C#" Value="bool GestureDetector.IOnGestureListener.OnFling (Android.Views.MotionEvent e1, Android.Views.MotionEvent e2, float velocityX, float velocityY);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool Android.Views.GestureDetector.IOnGestureListener.OnFling(class Android.Views.MotionEvent e1, class Android.Views.MotionEvent e2, float32 velocityX, float32 velocityY) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e1" Type="Android.Views.MotionEvent" />
+        <Parameter Name="e2" Type="Android.Views.MotionEvent" />
+        <Parameter Name="velocityX" Type="System.Single" />
+        <Parameter Name="velocityY" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="e1"></param>
+        <param name="e2"></param>
+        <param name="velocityX"></param>
+        <param name="velocityY"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Views.GestureDetector+IOnGestureListener.OnLongPress">
+      <MemberSignature Language="C#" Value="void GestureDetector.IOnGestureListener.OnLongPress (Android.Views.MotionEvent e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Android.Views.GestureDetector.IOnGestureListener.OnLongPress(class Android.Views.MotionEvent e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Android.Views.MotionEvent" />
+      </Parameters>
+      <Docs>
+        <param name="e"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Views.GestureDetector+IOnGestureListener.OnScroll">
+      <MemberSignature Language="C#" Value="bool GestureDetector.IOnGestureListener.OnScroll (Android.Views.MotionEvent e1, Android.Views.MotionEvent e2, float distanceX, float distanceY);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool Android.Views.GestureDetector.IOnGestureListener.OnScroll(class Android.Views.MotionEvent e1, class Android.Views.MotionEvent e2, float32 distanceX, float32 distanceY) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e1" Type="Android.Views.MotionEvent" />
+        <Parameter Name="e2" Type="Android.Views.MotionEvent" />
+        <Parameter Name="distanceX" Type="System.Single" />
+        <Parameter Name="distanceY" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="e1"></param>
+        <param name="e2"></param>
+        <param name="distanceX"></param>
+        <param name="distanceY"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Views.GestureDetector+IOnGestureListener.OnShowPress">
+      <MemberSignature Language="C#" Value="void GestureDetector.IOnGestureListener.OnShowPress (Android.Views.MotionEvent e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void Android.Views.GestureDetector.IOnGestureListener.OnShowPress(class Android.Views.MotionEvent e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Android.Views.MotionEvent" />
+      </Parameters>
+      <Docs>
+        <param name="e"></param>
+        <summary></summary>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Android.Views.GestureDetector+IOnGestureListener.OnSingleTapUp">
+      <MemberSignature Language="C#" Value="bool GestureDetector.IOnGestureListener.OnSingleTapUp (Android.Views.MotionEvent e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool Android.Views.GestureDetector.IOnGestureListener.OnSingleTapUp(class Android.Views.MotionEvent e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Android.Views.MotionEvent" />
+      </Parameters>
+      <Docs>
+        <param name="e"></param>
+        <summary></summary>
+        <returns></returns>
+        <remarks></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Destroyed">
+      <MemberSignature Language="C#" Value="public event EventHandler Destroyed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Destroyed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableGesture">
+      <MemberSignature Language="C#" Value="public void EnableGesture (GameStack.GestureType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableGesture(valuetype GameStack.GestureType type) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="GameStack.GestureType" />
+      </Parameters>
+      <Docs>
+        <param name="type">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaused">
+      <MemberSignature Language="C#" Value="public bool IsPaused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFrame">
+      <MemberSignature Language="C#" Value="public void LoadFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadFrame() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDetachedFromWindow">
+      <MemberSignature Language="C#" Value="protected override void OnDetachedFromWindow ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDetachedFromWindow() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSizeChanged">
+      <MemberSignature Language="C#" Value="protected override void OnSizeChanged (int w, int h, int oldw, int oldh);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnSizeChanged(int32 w, int32 h, int32 oldw, int32 oldh) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="w" Type="System.Int32" />
+        <Parameter Name="h" Type="System.Int32" />
+        <Parameter Name="oldw" Type="System.Int32" />
+        <Parameter Name="oldh" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="w">
+        </param>
+        <param name="h">
+        </param>
+        <param name="oldw">
+        </param>
+        <param name="oldh">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnTouchEvent">
+      <MemberSignature Language="C#" Value="public override bool OnTouchEvent (Android.Views.MotionEvent e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool OnTouchEvent(class Android.Views.MotionEvent e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="Android.Views.MotionEvent" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pause">
+      <MemberSignature Language="C#" Value="public void Pause ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Pause() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelScale">
+      <MemberSignature Language="C#" Value="public float PixelScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 PixelScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Quit">
+      <MemberSignature Language="C#" Value="public void Quit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Quit() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;GameStack.FrameArgs&gt; Render;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class GameStack.FrameArgs&gt; Render" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.FrameArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderNow">
+      <MemberSignature Language="C#" Value="public void RenderNow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderNow() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resume">
+      <MemberSignature Language="C#" Value="public void Resume ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Resume() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;GameStack.FrameArgs&gt; Update;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class GameStack.FrameArgs&gt; Update" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.FrameArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

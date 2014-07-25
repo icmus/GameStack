@@ -2,7 +2,7 @@ using System;
 using IEnumerator = System.Collections.IEnumerator;
 
 namespace GameStack {
-	public class Coroutine<T> : ICoroutine where T : class {
+	internal class Coroutine<T> : ICoroutine where T : class {
 		CoroutineList<T> _owner;
 		IEnumerator _ie;
 

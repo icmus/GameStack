@@ -1,0 +1,6 @@
+<Namespace Name="GameStack.Content">
+  <Docs>
+    <summary>Types to support asset loading at runtime.</summary>
+    <remarks>Types in this namespace are generally only used by classes that load and control assets. You can use these tools to build custom multi-file asset types based on the standard .tar file format.</remarks>
+  </Docs>
+</Namespace>

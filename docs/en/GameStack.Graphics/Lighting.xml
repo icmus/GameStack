@@ -1,0 +1,61 @@
+<Type Name="Lighting" FullName="GameStack.Graphics.Lighting">
+  <TypeSignature Language="C#" Value="public class Lighting : GameStack.Graphics.ScopedObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Lighting extends GameStack.Graphics.ScopedObject" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.ScopedObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Aggregates one or more lights into a lighting rig to be used with drawing operations.</summary>
+    <remarks>Use with subtypes of <see cref="T:GameStack.Graphics.Light" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lighting (GameStack.Graphics.Light[] lights);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.Light[] lights) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="lights" Type="GameStack.Graphics.Light[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="lights">One or more lights.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Apply">
+      <MemberSignature Language="C#" Value="public void Apply (ref OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Apply(valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="world" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="world">World transform applied to lighting rig.</param>
+        <summary>Apply the lighting rig to the currently active material/shader.</summary>
+        <remarks>Usually called by drawable classes and not directly by apps. If no material is in scope, an exception will be thrown. If the material does not support lighting, the behavior of this method is undefined.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

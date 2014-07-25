@@ -1,0 +1,134 @@
+<Type Name="Batch" FullName="GameStack.Graphics.Batch">
+  <TypeSignature Language="C#" Value="public class Batch : GameStack.Graphics.ScopedObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Batch extends GameStack.Graphics.ScopedObject implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.ScopedObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Combines multiple draw operations with one material into a single draw operation.</summary>
+    <remarks>When an instance of this class is placed in scope (by calling Begin), draw calls on supported objects (those implementing <see cref="T:GameStack.Graphics.IBatchable" />) will be batched into a single draw call per material. The actual draw takes place when the batch leaves scope.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Batch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release buffer resources.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (GameStack.Graphics.IBatchable obj, OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(class GameStack.Graphics.IBatchable obj, valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="GameStack.Graphics.IBatchable" />
+        <Parameter Name="world" Type="OpenTK.Matrix4" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Batchable drawing object to add.</param>
+        <param name="world">World transform to apply when drawing this object.</param>
+        <summary>Explicitly adds a single batchable object to the draw list.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (GameStack.Graphics.IBatchable obj, ref OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(class GameStack.Graphics.IBatchable obj, valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="GameStack.Graphics.IBatchable" />
+        <Parameter Name="world" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="obj">Batchable drawing object to add.</param>
+        <param name="world">World transform to apply when drawing this object.</param>
+        <summary>Explicitly adds a single batchable object to the draw list.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBegin">
+      <MemberSignature Language="C#" Value="protected override void OnBegin ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBegin() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnd">
+      <MemberSignature Language="C#" Value="protected override void OnEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnd() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

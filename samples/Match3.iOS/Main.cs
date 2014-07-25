@@ -3,9 +3,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using GameStack;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using GameStack;
+using GameStack.iOS;
 
 namespace Samples.Match3 {
 	public class Application {

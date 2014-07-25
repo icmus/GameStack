@@ -1,0 +1,185 @@
+<Type Name="AnimationChannel" FullName="GameStack.Graphics.AnimationChannel">
+  <TypeSignature Language="C#" Value="public class AnimationChannel" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AnimationChannel extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Manages a set of transform key frames to be applied to a mesh node when playing an animation.</summary>
+    <remarks>One animation channel can work in concert with others to simultaneously animate different parts of the model. This class is normally instantiated by asset loaders, and can be retrieved from instances of <see cref="T:GameStack.Graphics.Animation" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnimationChannel (string nodeName, GameStack.Graphics.AnimationBehavior preState, GameStack.Graphics.AnimationBehavior postState, GameStack.Graphics.PositionKey[] posKeys, GameStack.Graphics.RotationKey[] rotKeys, GameStack.Graphics.ScalingKey[] scaleKeys);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string nodeName, valuetype GameStack.Graphics.AnimationBehavior preState, valuetype GameStack.Graphics.AnimationBehavior postState, valuetype GameStack.Graphics.PositionKey[] posKeys, valuetype GameStack.Graphics.RotationKey[] rotKeys, valuetype GameStack.Graphics.ScalingKey[] scaleKeys) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="nodeName" Type="System.String" />
+        <Parameter Name="preState" Type="GameStack.Graphics.AnimationBehavior" />
+        <Parameter Name="postState" Type="GameStack.Graphics.AnimationBehavior" />
+        <Parameter Name="posKeys" Type="GameStack.Graphics.PositionKey[]" />
+        <Parameter Name="rotKeys" Type="GameStack.Graphics.RotationKey[]" />
+        <Parameter Name="scaleKeys" Type="GameStack.Graphics.ScalingKey[]" />
+      </Parameters>
+      <Docs>
+        <param name="nodeName">
+        </param>
+        <param name="preState">
+        </param>
+        <param name="postState">
+        </param>
+        <param name="posKeys">
+        </param>
+        <param name="rotKeys">
+        </param>
+        <param name="scaleKeys">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Node Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Node Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Node</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeName">
+      <MemberSignature Language="C#" Value="public string NodeName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NodeName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionKeys">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.PositionKey[] PositionKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.PositionKey[] PositionKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.PositionKey[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PostState">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.AnimationBehavior PostState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.AnimationBehavior PostState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.AnimationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreState">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.AnimationBehavior PreState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.AnimationBehavior PreState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.AnimationBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RotationKeys">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.RotationKey[] RotationKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.RotationKey[] RotationKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.RotationKey[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScalingKeys">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.ScalingKey[] ScalingKeys { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.ScalingKey[] ScalingKeys" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ScalingKey[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

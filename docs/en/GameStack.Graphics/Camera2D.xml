@@ -1,0 +1,91 @@
+<Type Name="Camera2D" FullName="GameStack.Graphics.Camera2D">
+  <TypeSignature Language="C#" Value="public class Camera2D : GameStack.Graphics.Camera, GameStack.IHandler&lt;GameStack.Resize&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Camera2D extends GameStack.Graphics.Camera implements class GameStack.IHandler`1&lt;class GameStack.Resize&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Camera</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IHandler&lt;GameStack.Resize&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A utility class that adds convenience functions to <see cref="T:GameStack.Graphics.Camera" /> specific to 2D scenarios.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Camera2D (OpenTK.Vector2 viewSize, float depth, GameStack.Graphics.Camera2DOrigin origin = GameStack.Graphics.Camera2DOrigin.LowerLeft);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Vector2 viewSize, float32 depth, valuetype GameStack.Graphics.Camera2DOrigin origin) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="viewSize" Type="OpenTK.Vector2" />
+        <Parameter Name="depth" Type="System.Single" />
+        <Parameter Name="origin" Type="GameStack.Graphics.Camera2DOrigin" />
+      </Parameters>
+      <Docs>
+        <param name="viewSize">The size of the viewport.</param>
+        <param name="depth">The maximum depth, or how far the camera can see. Larger values allow for bigger z depth values on UI controls.</param>
+        <param name="origin">Specifies where on the screen the (0,0) coordinates should be.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IHandler&lt;GameStack.Resize&gt;.Handle">
+      <MemberSignature Language="C#" Value="void IHandler&lt;Resize&gt;.Handle (GameStack.FrameArgs frame, GameStack.Resize e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IHandler&lt;GameStack.Resize&gt;.Handle(class GameStack.FrameArgs frame, class GameStack.Resize e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+        <Parameter Name="e" Type="GameStack.Resize" />
+      </Parameters>
+      <Docs>
+        <param name="frame">
+        </param>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetViewSize">
+      <MemberSignature Language="C#" Value="public void SetViewSize (OpenTK.Vector2 viewSize, float depth);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetViewSize(valuetype OpenTK.Vector2 viewSize, float32 depth) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="viewSize" Type="OpenTK.Vector2" />
+        <Parameter Name="depth" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="viewSize">The new view size.</param>
+        <param name="depth">The new camera depth.</param>
+        <summary>Updates the camera to match a changed view size.</summary>
+        <remarks>View sizes can change when window resize is enabled on desktop and when the orientation changes on mobile devices.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

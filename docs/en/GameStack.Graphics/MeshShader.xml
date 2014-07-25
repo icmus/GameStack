@@ -1,0 +1,54 @@
+<Type Name="MeshShader" FullName="GameStack.Graphics.MeshShader">
+  <TypeSignature Language="C#" Value="public class MeshShader : GameStack.Graphics.Shader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MeshShader extends GameStack.Graphics.Shader" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Shader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Default mesh shader implementing a standard Phong model.</summary>
+    <remarks>Most commonly used with <see cref="T:GameStack.Graphics.MeshMaterial" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeshShader (GameStack.Graphics.MeshShaderSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.MeshShaderSettings settings) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="GameStack.Graphics.MeshShaderSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxNumLights">
+      <MemberSignature Language="C#" Value="public override int MaxNumLights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxNumLights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the maximum number of supported lights.</summary>
+        <value>
+        </value>
+        <remarks>If the caller attempts to use more lights than are supported, the additional lights will be ignored.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

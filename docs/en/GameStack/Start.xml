@@ -1,0 +1,75 @@
+<Type Name="Start" FullName="GameStack.Start">
+  <TypeSignature Language="C#" Value="public class Start : GameStack.EventBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Start extends GameStack.EventBase" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.EventBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>An instance of this type is added to the event queue when the scene is clear to begin running.</summary>
+    <remarks>Most apps will want to use this event as an opportunity to load assets required for the scene, such as sprites, models, and sounds.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Start (OpenTK.Vector2 size, float pixelScale);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Vector2 size, float32 pixelScale) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="size" Type="OpenTK.Vector2" />
+        <Parameter Name="pixelScale" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="size">
+        </param>
+        <param name="pixelScale">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelScale">
+      <MemberSignature Language="C#" Value="public float PixelScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 PixelScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The system pixel scale.</summary>
+        <value>
+        </value>
+        <remarks>This will be 1.0 for standard displays and 2.0 for retina displays.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The size of the viewport in logical pixels.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

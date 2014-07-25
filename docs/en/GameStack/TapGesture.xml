@@ -1,0 +1,17 @@
+<Type Name="TapGesture" FullName="GameStack.TapGesture">
+  <TypeSignature Language="C#" Value="public class TapGesture : GameStack.Gesture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TapGesture extends GameStack.Gesture" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Gesture</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Instances of this type are added to the event queue whenever a tap gesture is detected.</summary>
+    <remarks>Only supported on platforms with gesture support (currently mobile). For events of this type to be generated, the <see cref="M:GameStack.IGameView.EnableGesture(GameStack.GestureType)" />method must be called to enable this gesture type.</remarks>
+  </Docs>
+  <Members />
+</Type>

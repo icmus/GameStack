@@ -14,7 +14,7 @@ using OpenTK.Audio.OpenAL;
 using OpenTK.Graphics.ES20;
 using GameStack.Graphics;
 
-namespace GameStack {
+namespace GameStack.iOS {
 	[Register("GameView")]
 	public class iOSGameView : UIView, IGameView {
 		Thread _logicThread;

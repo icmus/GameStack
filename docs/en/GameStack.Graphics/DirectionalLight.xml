@@ -1,0 +1,60 @@
+<Type Name="DirectionalLight" FullName="GameStack.Graphics.DirectionalLight">
+  <TypeSignature Language="C#" Value="public class DirectionalLight : GameStack.Graphics.Light" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DirectionalLight extends GameStack.Graphics.Light" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Light</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Simulates a light at an infinite distance shining rays in parallel in a specified direction.</summary>
+    <remarks>This type of light is commonly used to simulate daylight.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DirectionalLight (OpenTK.Vector3 direction, OpenTK.Vector3 ambient, OpenTK.Vector3 diffuse, OpenTK.Vector3 specular);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Vector3 direction, valuetype OpenTK.Vector3 ambient, valuetype OpenTK.Vector3 diffuse, valuetype OpenTK.Vector3 specular) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="direction" Type="OpenTK.Vector3" />
+        <Parameter Name="ambient" Type="OpenTK.Vector3" />
+        <Parameter Name="diffuse" Type="OpenTK.Vector3" />
+        <Parameter Name="specular" Type="OpenTK.Vector3" />
+      </Parameters>
+      <Docs>
+        <param name="direction">Normalized light direction.</param>
+        <param name="ambient">The ambient light contribution.</param>
+        <param name="diffuse">The diffuse light contribution.</param>
+        <param name="specular">The specular light contribution.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override GameStack.Graphics.LightType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.LightType Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.LightType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the type of this light.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

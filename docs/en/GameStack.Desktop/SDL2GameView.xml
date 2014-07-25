@@ -1,0 +1,332 @@
+<Type Name="SDL2GameView" FullName="GameStack.Desktop.SDL2GameView">
+  <TypeSignature Language="C#" Value="public class SDL2GameView : GameStack.IGameView, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SDL2GameView extends System.Object implements class GameStack.IGameView, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IGameView</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A game view implementation designed to run on desktop systems with SDL2.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SDL2GameView (string title, int width, int height, bool fullscreen = false, bool vsync = true, int x = 805240832, int y = 805240832);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string title, int32 width, int32 height, bool fullscreen, bool vsync, int32 x, int32 y) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="title" Type="System.String" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="fullscreen" Type="System.Boolean" />
+        <Parameter Name="vsync" Type="System.Boolean" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="title">Window title.</param>
+        <param name="width">Desired viewport width.</param>
+        <param name="height">Desired viewport height.</param>
+        <param name="fullscreen">True to enter full screen mode.</param>
+        <param name="vsync">True to attempt enabling v-sync.</param>
+        <param name="x">Initial left position of window.</param>
+        <param name="y">Initial top position of window.</param>
+        <summary>Create and initialize a new window.</summary>
+        <remarks>Events will begin firing immediately when the viewport is ready if a scene has been connected.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Destroyed">
+      <MemberSignature Language="C#" Value="public event EventHandler Destroyed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Destroyed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fires when the window is being closed.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release window and viewport resources.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableGesture">
+      <MemberSignature Language="C#" Value="public void EnableGesture (GameStack.GestureType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableGesture(valuetype GameStack.GestureType type) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="GameStack.GestureType" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type of gesture events to be enabled.</param>
+        <summary>Enables a specific type of gesture event.</summary>
+        <remarks>Calling this method currently has no effect on desktop systems.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnqueueEvent">
+      <MemberSignature Language="C#" Value="public void EnqueueEvent (SDL2.SDL.SDL_Event e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnqueueEvent(valuetype SDL2.SDL/SDL_Event e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="SDL2.SDL+SDL_Event" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnterLoop">
+      <MemberSignature Language="C#" Value="public void EnterLoop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnterLoop() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Begin executing the event loop.</summary>
+        <remarks>Any scenes connected to the view will be executed and this method will return when all scenes are finished.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Event">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;GameStack.Desktop.SDL2EventArgs&gt; Event;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class GameStack.Desktop.SDL2EventArgs&gt; Event" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.Desktop.SDL2EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaused">
+      <MemberSignature Language="C#" Value="public bool IsPaused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the view currently paused?</summary>
+        <value>
+        </value>
+        <remarks>When paused, no scene updates or rendering will take place. This property commonly returns true if the app is suspended.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Join">
+      <MemberSignature Language="C#" Value="public void Join ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Join() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFrame">
+      <MemberSignature Language="C#" Value="public void LoadFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadFrame() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>When called, the current frame is marked as a load frame.</summary>
+        <remarks>Load frames are used to identiy extra long frames, allowing the system to deal intelligently with animations and transitions to prevent them from skipping ahead because of the gap in time.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelScale">
+      <MemberSignature Language="C#" Value="public float PixelScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 PixelScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the system's pixel scale.</summary>
+        <value>
+        </value>
+        <remarks>Returns 2.0 for retina displays.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;GameStack.FrameArgs&gt; Render;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class GameStack.FrameArgs&gt; Render" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.FrameArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fires when the view needs the scene to render.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderNow">
+      <MemberSignature Language="C#" Value="public void RenderNow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderNow() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Force the scene to render immediately.</summary>
+        <remarks>Useful for capturing the output of a scene for further processing.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the viewport size in logical pixels.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartThread">
+      <MemberSignature Language="C#" Value="public void StartThread ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartThread() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;GameStack.FrameArgs&gt; Update;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class GameStack.FrameArgs&gt; Update" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.FrameArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fires when the view needs the scene to update.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindowId">
+      <MemberSignature Language="C#" Value="public uint WindowId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 WindowId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

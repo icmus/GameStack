@@ -1,0 +1,36 @@
+<Type Name="SwipeGesture" FullName="GameStack.SwipeGesture">
+  <TypeSignature Language="C#" Value="public class SwipeGesture : GameStack.Gesture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SwipeGesture extends GameStack.Gesture" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Gesture</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>An instance of this type is added to the event queue whenever a swipe gesture is detected.</summary>
+    <remarks>Only supported on platforms with gesture support (currently mobile). For events of this type to be generated, the <see cref="M:GameStack.IGameView.EnableGesture(GameStack.GestureType)" />method must be called to enable this gesture type.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public GameStack.SwipeDirection Direction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.SwipeDirection Direction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.SwipeDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the swipe direction.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

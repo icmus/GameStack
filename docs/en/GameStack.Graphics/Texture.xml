@@ -1,0 +1,271 @@
+<Type Name="Texture" FullName="GameStack.Graphics.Texture">
+  <TypeSignature Language="C#" Value="public class Texture : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Texture extends System.Object implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Manages a texture, or an area of memory containing an image or map used in rendering.</summary>
+    <remarks>GameStack standardizes on .png files for texture images. The pipeline tools will automatically
+    pre-multiply both stand-alone images and images that are part of a spritesheet.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Texture (string path, GameStack.Graphics.TextureSettings settings = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class GameStack.Graphics.TextureSettings settings) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+      </Parameters>
+      <Docs>
+        <param name="path">Relative asset path to .png.</param>
+        <param name="settings">
+        </param>
+        <summary>Create a texture from an asset file.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Texture (System.Drawing.Size size, GameStack.Graphics.TextureSettings settings = null, OpenTK.Graphics.OpenGL.PixelFormat format = OpenTK.Graphics.OpenGL.PixelFormat.Rgba);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Size size, class GameStack.Graphics.TextureSettings settings, valuetype OpenTK.Graphics.OpenGL.PixelFormat format) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="size" Type="System.Drawing.Size" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+        <Parameter Name="format" Type="OpenTK.Graphics.OpenGL.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="size">Texture size in pixels.</param>
+        <param name="settings">
+        </param>
+        <param name="format">
+        </param>
+        <summary>Create a new.</summary>
+        <remarks>A new texture is not guaranteed to be cleared.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Texture (System.IO.Stream stream, GameStack.Graphics.TextureSettings settings = null, bool leaveOpen = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class GameStack.Graphics.TextureSettings settings, bool leaveOpen) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+        <Parameter Name="leaveOpen" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Stream containing .png file image.</param>
+        <param name="settings">
+        </param>
+        <param name="leaveOpen">If true, stream will be left open after image is loaded.</param>
+        <summary>Create a new texture from an image in a stream.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Texture (int width, int height, GameStack.Graphics.TextureSettings settings = null, OpenTK.Graphics.OpenGL.PixelFormat format = OpenTK.Graphics.OpenGL.PixelFormat.Rgba);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 width, int32 height, class GameStack.Graphics.TextureSettings settings, valuetype OpenTK.Graphics.OpenGL.PixelFormat format) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="settings" Type="GameStack.Graphics.TextureSettings" />
+        <Parameter Name="format" Type="OpenTK.Graphics.OpenGL.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="width">Width in pixels.</param>
+        <param name="height">Height in pixels.</param>
+        <param name="settings">
+        </param>
+        <param name="format">
+        </param>
+        <summary>
+        </summary>
+        <remarks>A new texture is not guaranteed to be cleared.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Apply">
+      <MemberSignature Language="C#" Value="public void Apply ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Apply() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Activate the texture in the current context.</summary>
+        <remarks>Typically only called by internal classes, but more fine-grained control can be gained by flipping textures manually.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release texture buffer.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GenerateMipmaps">
+      <MemberSignature Language="C#" Value="public void GenerateMipmaps ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GenerateMipmaps() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Generates texture Mipmaps.</summary>
+        <remarks>Call this method to generate Mipmaps on a new texture, or to update the Mipmaps after changing texture data. Only applicable when using trilinear filtering.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public uint Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the native texture handle.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetData">
+      <MemberSignature Language="C#" Value="public void SetData (IntPtr buf);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetData(native int buf) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buf" Type="System.IntPtr" />
+      </Parameters>
+      <Docs>
+        <param name="buf">Raw data in the pixel format specified when constructed.</param>
+        <summary>Replace the texture pixel data.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Settings">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureSettings Settings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.TextureSettings Settings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the textures settings.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the size of the texture in pixels.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TexelSize">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 TexelSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 TexelSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the size of a single texel in UV space (1/w, 1/h).</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TextureCount">
+      <MemberSignature Language="C#" Value="public static int TextureCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property int32 TextureCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Get the number of texture instances currently in use.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

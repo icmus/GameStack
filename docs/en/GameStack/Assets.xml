@@ -1,0 +1,217 @@
+<Type Name="Assets" FullName="GameStack.Assets">
+  <TypeSignature Language="C#" Value="public static class Assets" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Assets extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Static class for accessing assets on the current platform.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AppName">
+      <MemberSignature Language="C#" Value="public static string AppName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string AppName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the app name to be used when storing user data.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OrgName">
+      <MemberSignature Language="C#" Value="public static string OrgName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property string OrgName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the organization name to be used when storing user data.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelScale">
+      <MemberSignature Language="C#" Value="public static float PixelScale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property float32 PixelScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the current pixel scaling value (e.g., 2f for retina).</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveAddonStream">
+      <MemberSignature Language="C#" Value="public static System.IO.Stream ResolveAddonStream (string path, System.IO.FileMode mode = System.IO.FileMode.Open, System.IO.FileAccess access = System.IO.FileAccess.Read);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Stream ResolveAddonStream(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">
+        </param>
+        <param name="mode">
+        </param>
+        <param name="access">
+        </param>
+        <summary>Resolves an add-on path into a stream for reading.</summary>
+        <returns>
+        </returns>
+        <remarks>Only applicable on platforms with in-app add-on support.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveStream">
+      <MemberSignature Language="C#" Value="public static System.IO.Stream ResolveStream (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Stream ResolveStream(string path) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">The name of the asset relative to the base asset path.</param>
+        <summary>Resolves a named asset into a stream for reading.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveUserPath">
+      <MemberSignature Language="C#" Value="public static string ResolveUserPath (string path = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ResolveUserPath(string path) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">A relative path inside the user data folder, or an empty string to return the user data root.</param>
+        <summary>Gets the user data folder or a path to a sub-folder inside the user data folder.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolveUserStream">
+      <MemberSignature Language="C#" Value="public static System.IO.Stream ResolveUserStream (string path, System.IO.FileMode mode = System.IO.FileMode.Open, System.IO.FileAccess access = System.IO.FileAccess.ReadWrite);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.IO.Stream ResolveUserStream(string path, valuetype System.IO.FileMode mode, valuetype System.IO.FileAccess access) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="mode" Type="System.IO.FileMode" />
+        <Parameter Name="access" Type="System.IO.FileAccess" />
+      </Parameters>
+      <Docs>
+        <param name="path">Relative path to user data file.</param>
+        <param name="mode">
+        </param>
+        <param name="access">
+        </param>
+        <summary>Resolves a user data file by relative path.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAppInfo">
+      <MemberSignature Language="C#" Value="public static void SetAppInfo (string appName, string orgName = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetAppInfo(string appName, string orgName) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appName" Type="System.String" />
+        <Parameter Name="orgName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="appName">The app name to use when storing user data.</param>
+        <param name="orgName">The organization name to use when storing user data.</param>
+        <summary>Sets the app and org names for the currently running app.</summary>
+        <remarks>Only applicable on platforms with persistent settings APIs.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetKey">
+      <MemberSignature Language="C#" Value="public static void SetKey (string key, string iv);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetKey(string key, string iv) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.String" />
+        <Parameter Name="iv" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="key">
+        </param>
+        <param name="iv">
+        </param>
+        <summary>Sets the encryption key and IV to be used with encrypted assets.</summary>
+        <remarks>Must be called before loading any encrypted assets.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

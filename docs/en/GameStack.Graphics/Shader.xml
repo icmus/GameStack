@@ -1,0 +1,448 @@
+<Type Name="Shader" FullName="GameStack.Graphics.Shader">
+  <TypeSignature Language="C#" Value="public abstract class Shader : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Shader extends System.Object implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A base class for custom shaders, providing basic shader compilation, linking and reflection facilities.</summary>
+    <remarks>Shaders are generally used by subtypes of <see cref="T:GameStack.Graphics.Material" /> and shaders that take custom parameters often have their own material types exposing those parameters as well.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Shader (string vertSource, string fragSource, string name = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string vertSource, string fragSource, string name) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="vertSource" Type="System.String" />
+        <Parameter Name="fragSource" Type="System.String" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="vertSource">The vertex shader GLSL source code.</param>
+        <param name="fragSource">The fragment shader GLSL source code.</param>
+        <param name="name">The unique name of the shader instance, used for reference tracking.</param>
+        <summary>
+        </summary>
+        <remarks>The shader name is used by the reference counting mechanism to determine if two shaders of the same type are in fact identical shaders. One might construct two shaders of the same type but with different parameters, affecting how the shader code is generated. For statically defined shaders, using the default (the type name) is sufficient. Dynamically generated shaders must supply unique names based on any arguments affecting generation of shader code. Failure to do so may result in shader instances being reused when they should not be. Take note and heed this warning before ye descend into madness.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attribute">
+      <MemberSignature Language="C#" Value="public int Attribute (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Attribute(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Attribute name.</param>
+        <summary>Gets a location from an attribute name.</summary>
+        <returns>Attribute location or -1 if not found.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release shader resources.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Handle">
+      <MemberSignature Language="C#" Value="public uint Handle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 Handle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the native shader handle.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxNumLights">
+      <MemberSignature Language="C#" Value="public virtual int MaxNumLights { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxNumLights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the maximum number of lights supported by this shader.</summary>
+        <value>
+        </value>
+        <remarks>Shaders that do not support the lighting model should return 0.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTransforms">
+      <MemberSignature Language="C#" Value="public void SetTransforms (ref OpenTK.Matrix4 modelView, ref OpenTK.Matrix4 projection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTransforms(valuetype OpenTK.Matrix4 modelView, valuetype OpenTK.Matrix4 projection) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modelView" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+        <Parameter Name="projection" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="modelView">
+        </param>
+        <param name="projection">
+        </param>
+        <summary>Set the shader's modelview and projection uniforms.</summary>
+        <remarks>This methid is typically only called by <see cref="T:GameStack.Graphics.Camera" /> and related classes.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public int Uniform (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 Uniform(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Uniform name.</param>
+        <summary>Gets a uniform location by name.</summary>
+        <returns>Uniform location or -1 if not found.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, OpenTK.Matrix4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Matrix4 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="OpenTK.Matrix4" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, ref OpenTK.Matrix4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Matrix4 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, OpenTK.Matrix4[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Matrix4[] values) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="values" Type="OpenTK.Matrix4[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="values">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, OpenTK.Vector2 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Vector2 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, OpenTK.Vector3 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Vector3 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="OpenTK.Vector3" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, ref OpenTK.Vector3 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Vector3 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="OpenTK.Vector3&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, OpenTK.Vector3[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Vector3[] values) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="values" Type="OpenTK.Vector3[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="values">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, OpenTK.Vector4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Vector4 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="OpenTK.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, ref OpenTK.Vector4 value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, valuetype OpenTK.Vector4 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="OpenTK.Vector4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, int32 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, int[] values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, int32[] values) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="values" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="values">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Uniform">
+      <MemberSignature Language="C#" Value="public void Uniform (string name, float value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Uniform(string name, float32 value) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="value" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="value">
+        </param>
+        <summary>Sets a uniform value by name.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

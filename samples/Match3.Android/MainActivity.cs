@@ -12,11 +12,12 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using GameStack;
 using Java.IO;
 using OpenTK;
 using OpenTK.Audio;
 using OpenTK.Audio.OpenAL;
+using GameStack;
+using GameStack.Android;
 
 namespace Samples.Match3 {
 	[Activity (Label = "Samples.Match3.MainActivity", MainLauncher = true,

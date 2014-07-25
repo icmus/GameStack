@@ -1,0 +1,150 @@
+<Type Name="Light" FullName="GameStack.Graphics.Light">
+  <TypeSignature Language="C#" Value="public abstract class Light" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Light extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Abstract base class for different types of light.</summary>
+    <remarks>Objects of this type can be added to <see cref="T:GameStack.Graphics.Lighting" /> instances.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Light (OpenTK.Vector3 vector, OpenTK.Vector3 ambient, OpenTK.Vector3 diffuse, OpenTK.Vector3 specular, OpenTK.Vector3 attenuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Vector3 vector, valuetype OpenTK.Vector3 ambient, valuetype OpenTK.Vector3 diffuse, valuetype OpenTK.Vector3 specular, valuetype OpenTK.Vector3 attenuation) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="vector" Type="OpenTK.Vector3" />
+        <Parameter Name="ambient" Type="OpenTK.Vector3" />
+        <Parameter Name="diffuse" Type="OpenTK.Vector3" />
+        <Parameter Name="specular" Type="OpenTK.Vector3" />
+        <Parameter Name="attenuation" Type="OpenTK.Vector3" />
+      </Parameters>
+      <Docs>
+        <param name="vector">The light vector (meaning is implementation-dependent).</param>
+        <param name="ambient">Ambient contribution.</param>
+        <param name="diffuse">Diffuse contribution.</param>
+        <param name="specular">Specular contribution.</param>
+        <param name="attenuation">Attenuation (where applicable).</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ambient">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector3 Ambient { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector3 Ambient" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the ambient contribution.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Attenuation">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector3 Attenuation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector3 Attenuation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the light's attenuation.</summary>
+        <value>
+        </value>
+        <remarks>For light types that support attenuation, this controls how much influence the light loses over an object as it moves further away.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Diffuse">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector3 Diffuse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector3 Diffuse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the diffuse contribution.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Specular">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector3 Specular { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector3 Specular" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the specular contribution.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public abstract GameStack.Graphics.LightType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.LightType Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.LightType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the light type.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Vector">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector3 Vector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector3 Vector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the light vector.</summary>
+        <value>
+        </value>
+        <remarks>The meaning of this value is dependent on the light type.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

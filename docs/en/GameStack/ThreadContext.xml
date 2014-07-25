@@ -1,0 +1,85 @@
+<Type Name="ThreadContext" FullName="GameStack.ThreadContext">
+  <TypeSignature Language="C#" Value="public class ThreadContext" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ThreadContext extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Provides static access to the state of the current thread.</summary>
+    <remarks>This class is generally used by GameStack classes.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ThreadContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public static GameStack.ThreadContext Current { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class GameStack.ThreadContext Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.ThreadContext</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Get the current thread's context.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnsureGLContext">
+      <MemberSignature Language="C#" Value="public IntPtr EnsureGLContext ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance native int EnsureGLContext() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Validate that an OpenGL or GLES context is active and valid.</summary>
+        <returns>Returns a handle for the context.</returns>
+        <remarks>This method will throw an exception if no context is active.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GLContext">
+      <MemberSignature Language="C#" Value="public IntPtr GLContext { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance native int GLContext" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IntPtr</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a handle representing the current OpenGL or GLES context.</summary>
+        <value>
+        </value>
+        <remarks>If no context is present, IntPtr.Zero will be returned.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,46 @@
+<Type Name="Camera2DOrigin" FullName="GameStack.Graphics.Camera2DOrigin">
+  <TypeSignature Language="C#" Value="public enum Camera2DOrigin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Camera2DOrigin extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates where the (0,0) coordinate is considered to be with repsect to the camera.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Center">
+      <MemberSignature Language="C#" Value="Center" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.Camera2DOrigin Center = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Camera2DOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The origin is at the center of the screen (OpenGL standard).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LowerLeft">
+      <MemberSignature Language="C#" Value="LowerLeft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.Camera2DOrigin LowerLeft = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Camera2DOrigin</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The origin is at the lower left corner of the screen (useful for UI placement).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

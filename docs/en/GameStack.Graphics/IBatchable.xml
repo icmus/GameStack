@@ -1,0 +1,105 @@
+<Type Name="IBatchable" FullName="GameStack.Graphics.IBatchable">
+  <TypeSignature Language="C#" Value="public interface IBatchable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IBatchable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>When implemented by an object, indicates that the object is capable of being used with the <see cref="T:GameStack.Graphics.Batch" /> class to batch draw calls.</summary>
+    <remarks>Any object implementing IBatchable has an additional responsibility: when the object is asked to draw itself, it must check if there is a <see cref="T:GameStack.Graphics.Batch" /> is in scope using the <see cref="M:GameStack.Graphics.ScopedObject.Find{T}" /> method. If there is, it must call <see cref="M:GameStack.Graphics.Batch.Draw(GameStack.Graphics.IBatchable)" /> instead of drawing itself normally.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="IndexBuffer">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.IndexBuffer IndexBuffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.IndexBuffer IndexBuffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.IndexBuffer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the index buffer containing the object's geometry.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexCount">
+      <MemberSignature Language="C#" Value="public int IndexCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IndexCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the index count of the object's geometry.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOffset">
+      <MemberSignature Language="C#" Value="public int IndexOffset { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IndexOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the index buffer offset of the object's geometry.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Material">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Material Material { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Material Material" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the object's default material.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VertexBuffer">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.VertexBuffer VertexBuffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.VertexBuffer VertexBuffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexBuffer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the vertex buffer containing the object's geometry.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

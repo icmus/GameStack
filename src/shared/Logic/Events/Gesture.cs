@@ -23,7 +23,7 @@ namespace GameStack {
 
 		public Vector2 SurfacePoint { get; private set; }
 
-		public Gesture (GestureState state, Vector2 point, Vector2 surfacePoint) {
+		internal Gesture (GestureState state, Vector2 point, Vector2 surfacePoint) {
 			this.State = state;
 			this.Point = point;
 			this.SurfacePoint = surfacePoint;

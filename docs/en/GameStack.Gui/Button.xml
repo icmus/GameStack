@@ -1,0 +1,533 @@
+<Type Name="Button" FullName="GameStack.Gui.Button">
+  <TypeSignature Language="C#" Value="public class Button : GameStack.Gui.View, GameStack.Gui.IPointerInput" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Button extends GameStack.Gui.View implements class GameStack.Gui.IPointerInput" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Gui.View</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.Gui.IPointerInput</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A simple control that can be used as a standard button, a toggle button, or as a member of a radio button group.</summary>
+    <remarks>To use radio button functionality, first construct a <see cref="T:GameStack.Gui.RadioGroup" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Button (GameStack.Gui.LayoutSpec spec = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Gui.LayoutSpec spec) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spec" Type="GameStack.Gui.LayoutSpec" />
+      </Parameters>
+      <Docs>
+        <param name="spec">Layout.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Button (GameStack.Gui.RadioGroup group, GameStack.Gui.LayoutSpec spec = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Gui.RadioGroup group, class GameStack.Gui.LayoutSpec spec) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="group" Type="GameStack.Gui.RadioGroup" />
+        <Parameter Name="spec" Type="GameStack.Gui.LayoutSpec" />
+      </Parameters>
+      <Docs>
+        <param name="group">If provided, the button will belong to the radio group.</param>
+        <param name="spec">Layout.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivePressedSprite">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite ActivePressedSprite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Sprite ActivePressedSprite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the sprite to draw when the button is both active and pressed down.</summary>
+        <value>
+        </value>
+        <remarks>If no sprite is provided, <see cref="P:GameStack.Gui.Button.PressedSprite" /> is used.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActiveSprite">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite ActiveSprite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Sprite ActiveSprite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the sprite to draw when the button is active.</summary>
+        <value>
+        </value>
+        <remarks>If no sprite is provided, <see cref="P:GameStack.Gui.Button.NormalSprite" /> is used.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clicked">
+      <MemberSignature Language="C#" Value="public event EventHandler Clicked;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Clicked" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fires when the button has been tapped or clicked.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the button tint color.</summary>
+        <value>
+        </value>
+        <remarks>Set this value to white for no tint.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisabledSprite">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite DisabledSprite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Sprite DisabledSprite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the sprite to draw when the button is disabled.</summary>
+        <value>
+        </value>
+        <remarks>If no sprite is provided, <see cref="P:GameStack.Gui.Button.NormalSprite" /> is used.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release child controls.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Gui.IPointerInput.OnPointerDown">
+      <MemberSignature Language="C#" Value="void IPointerInput.OnPointerDown (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.Gui.IPointerInput.OnPointerDown(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Gui.IPointerInput.OnPointerEnter">
+      <MemberSignature Language="C#" Value="void IPointerInput.OnPointerEnter (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.Gui.IPointerInput.OnPointerEnter(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Gui.IPointerInput.OnPointerExit">
+      <MemberSignature Language="C#" Value="void IPointerInput.OnPointerExit (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.Gui.IPointerInput.OnPointerExit(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Gui.IPointerInput.OnPointerMove">
+      <MemberSignature Language="C#" Value="void IPointerInput.OnPointerMove (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.Gui.IPointerInput.OnPointerMove(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.Gui.IPointerInput.OnPointerUp">
+      <MemberSignature Language="C#" Value="void IPointerInput.OnPointerUp (OpenTK.Vector2 where);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.Gui.IPointerInput.OnPointerUp(valuetype OpenTK.Vector2 where) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="where" Type="OpenTK.Vector2" />
+      </Parameters>
+      <Docs>
+        <param name="where">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActive">
+      <MemberSignature Language="C#" Value="public bool IsActive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the button in an active state?</summary>
+        <value>
+        </value>
+        <remarks>When the button is a toggle, this is true when the button is toggled on. If the button is part of a radio group, this is true if the button is currently selected.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsEnabled">
+      <MemberSignature Language="C#" Value="public bool IsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the button enabled?</summary>
+        <value>
+        </value>
+        <remarks>When this is false, the disabled sprite will be shown (if set) and input will be ignored.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsToggle">
+      <MemberSignature Language="C#" Value="public bool IsToggle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsToggle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value indicating whether this is a toggle button.</summary>
+        <value>
+        </value>
+        <remarks>This defaults to false; set to true for toggle behavior.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Layout">
+      <MemberSignature Language="C#" Value="public override void Layout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Layout() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalSprite">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite NormalSprite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Sprite NormalSprite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the sprite to draw when the button is in a normal state.</summary>
+        <value>
+        </value>
+        <remarks>This value is required.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDraw">
+      <MemberSignature Language="C#" Value="protected override void OnDraw (ref OpenTK.Matrix4 transform);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDraw(valuetype OpenTK.Matrix4 transform) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transform" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="transform">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OverSprite">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite OverSprite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Sprite OverSprite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the sprite to draw when the pointer is over the button.</summary>
+        <value>
+        </value>
+        <remarks>Only applicable on platforms with pointer devices (e.g., a mouse). If no sprite is provided, <see cref="P:GameStack.Gui.Button.NormalSprite" /> is used.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PressedSprite">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite PressedSprite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Sprite PressedSprite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the sprite to draw when the button is pressed down.</summary>
+        <value>
+        </value>
+        <remarks>If no sprite is provided, <see cref="P:GameStack.Gui.Button.PressedSprite" /> is used.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLabel">
+      <MemberSignature Language="C#" Value="public void SetLabel (string text, GameStack.Graphics.BitmapFont font);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLabel(string text, class GameStack.Graphics.BitmapFont font) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="GameStack.Graphics.BitmapFont" />
+      </Parameters>
+      <Docs>
+        <param name="text">
+        </param>
+        <param name="font">
+        </param>
+        <summary>Create a centered label for the button using the specified text and bitmap font.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLabel">
+      <MemberSignature Language="C#" Value="public void SetLabel (string text, GameStack.Graphics.BitmapFont font, GameStack.Graphics.HorizontalAlignment halign, GameStack.Gui.VerticalAlignment valign);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLabel(string text, class GameStack.Graphics.BitmapFont font, valuetype GameStack.Graphics.HorizontalAlignment halign, valuetype GameStack.Gui.VerticalAlignment valign) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="GameStack.Graphics.BitmapFont" />
+        <Parameter Name="halign" Type="GameStack.Graphics.HorizontalAlignment" />
+        <Parameter Name="valign" Type="GameStack.Gui.VerticalAlignment" />
+      </Parameters>
+      <Docs>
+        <param name="text">
+        </param>
+        <param name="font">
+        </param>
+        <param name="halign">
+        </param>
+        <param name="valign">
+        </param>
+        <summary>Create a label for the button with the specified font and alignment.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLabel">
+      <MemberSignature Language="C#" Value="public void SetLabel (string text, GameStack.Graphics.BitmapFont font, GameStack.Graphics.HorizontalAlignment halign, GameStack.Gui.VerticalAlignment valign, System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLabel(string text, class GameStack.Graphics.BitmapFont font, valuetype GameStack.Graphics.HorizontalAlignment halign, valuetype GameStack.Gui.VerticalAlignment valign, valuetype System.Drawing.Color color) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="GameStack.Graphics.BitmapFont" />
+        <Parameter Name="halign" Type="GameStack.Graphics.HorizontalAlignment" />
+        <Parameter Name="valign" Type="GameStack.Gui.VerticalAlignment" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="text">
+        </param>
+        <param name="font">
+        </param>
+        <param name="halign">
+        </param>
+        <param name="valign">
+        </param>
+        <param name="color">
+        </param>
+        <summary>Create a label for the button with the specified font, alignment, and color.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="State">
+      <MemberSignature Language="C#" Value="public GameStack.Gui.ButtonState State { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Gui.ButtonState State" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.ButtonState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the button's current state.</summary>
+        <value>
+        </value>
+        <remarks>Setting this property causes the normal events to fire if the value is changed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StateChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;GameStack.Gui.ButtonStateChangedEventArgs&gt; StateChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class GameStack.Gui.ButtonStateChangedEventArgs&gt; StateChanged" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.Gui.ButtonStateChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fires when the button's state has changed.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

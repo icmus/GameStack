@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.IO;
 
-namespace Cairo {
+namespace GameStack.Graphics {
 	public class FreeTypeFontFace : FontFace {
 		static bool _initialized = false;
 		static IntPtr _ftLib;

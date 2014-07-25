@@ -1,0 +1,40 @@
+<Type Name="BlurShader" FullName="GameStack.Graphics.BlurShader">
+  <TypeSignature Language="C#" Value="public class BlurShader : GameStack.Graphics.Shader" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BlurShader extends GameStack.Graphics.Shader" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Shader</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Custom shader providing horizontal and vertical Gaussian blur.</summary>
+    <remarks>Normally used alongside the <see cref="T:GameStack.Graphics.BlurMaterial" /> material which sets uniforms necessary for the proper operation of this shader.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BlurShader (GameStack.Graphics.BlurDirection dir, int kernel, double sigma);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype GameStack.Graphics.BlurDirection dir, int32 kernel, float64 sigma) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dir" Type="GameStack.Graphics.BlurDirection" />
+        <Parameter Name="kernel" Type="System.Int32" />
+        <Parameter Name="sigma" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="dir">The blur direction.</param>
+        <param name="kernel">The Gaussian blur kernel.</param>
+        <param name="sigma">The Gaussian blur standard deviation.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

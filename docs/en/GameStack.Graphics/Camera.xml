@@ -1,0 +1,174 @@
+<Type Name="Camera" FullName="GameStack.Graphics.Camera">
+  <TypeSignature Language="C#" Value="public class Camera : GameStack.Graphics.ScopedObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Camera extends GameStack.Graphics.ScopedObject" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.ScopedObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Manages projection and view transforms.</summary>
+    <remarks>For 2D requirements, consider using the <see cref="T:GameStack.Graphics.Camera2D" /> convenience class. Whenever a camera is in scope (by calling Begin) the camera's transforms will be applied to drawing operations. Most drawing operations require a camera and will throw an exception if none is in scope.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Camera ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Apply">
+      <MemberSignature Language="C#" Value="public void Apply (ref OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Apply(valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="world" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="world">
+        </param>
+        <summary>Apply the camera's transforms to the current shader.</summary>
+        <remarks>Must be called before drawing using the camera. This method is primarily called by drawable objects and not directly by apps.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Inverse">
+      <MemberSignature Language="C#" Value="public OpenTK.Matrix4 Inverse { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Matrix4 Inverse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Matrix4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the combined inverse of the view-projection matrix.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Projection">
+      <MemberSignature Language="C#" Value="public OpenTK.Matrix4 Projection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Matrix4 Projection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Matrix4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the projection matrix.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTransforms">
+      <MemberSignature Language="C#" Value="public void SetTransforms (OpenTK.Matrix4 view, OpenTK.Matrix4 projection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTransforms(valuetype OpenTK.Matrix4 view, valuetype OpenTK.Matrix4 projection) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="OpenTK.Matrix4" />
+        <Parameter Name="projection" Type="OpenTK.Matrix4" />
+      </Parameters>
+      <Docs>
+        <param name="view">The new view matrix.</param>
+        <param name="projection">The new projection matrix.</param>
+        <summary>Change the camera's transforms.</summary>
+        <remarks>Use the static helper methods of the <see cref="T:OpenTK.Matrix4" /> class to construct view and projection matrices.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTransforms">
+      <MemberSignature Language="C#" Value="public void SetTransforms (ref OpenTK.Matrix4 view, ref OpenTK.Matrix4 projection);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTransforms(valuetype OpenTK.Matrix4 view, valuetype OpenTK.Matrix4 projection) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="view" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+        <Parameter Name="projection" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="view">The new view matrix.</param>
+        <param name="projection">The new projection matrix.</param>
+        <summary>Change the camera's transforms.</summary>
+        <remarks>Use the static helper methods of the <see cref="T:OpenTK.Matrix4" /> class to construct view and projection matrices.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Unproject">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector3 Unproject (OpenTK.Vector2 pos, float z = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype OpenTK.Vector3 Unproject(valuetype OpenTK.Vector2 pos, float32 z) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pos" Type="OpenTK.Vector2" />
+        <Parameter Name="z" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="pos">
+        </param>
+        <param name="z">
+        </param>
+        <summary>Unproject a point into world space.</summary>
+        <returns>
+        </returns>
+        <remarks>The inverse of the combined view-projection matrix is applied to the point.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="View">
+      <MemberSignature Language="C#" Value="public OpenTK.Matrix4 View { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Matrix4 View" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Matrix4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the view transform.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

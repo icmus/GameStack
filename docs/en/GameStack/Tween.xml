@@ -1,0 +1,1050 @@
+<Type Name="Tween" FullName="GameStack.Tween">
+  <TypeSignature Language="C#" Value="public static class Tween" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Tween extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Static class providing common easing functions.</summary>
+    <remarks>Generally used with <see cref="T:GameStack.Controller{T}" /> or <see cref="T:GameStack.Transition{T}" /></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CubicBezier">
+      <MemberSignature Language="C#" Value="public static GameStack.TweenFunc&lt;float&gt; CubicBezier (float mx1, float my1, float mx2, float my2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GameStack.TweenFunc`1&lt;float32&gt; CubicBezier(float32 mx1, float32 my1, float32 mx2, float32 my2) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TweenFunc&lt;System.Single&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mx1" Type="System.Single" />
+        <Parameter Name="my1" Type="System.Single" />
+        <Parameter Name="mx2" Type="System.Single" />
+        <Parameter Name="my2" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="mx1">
+        </param>
+        <param name="my1">
+        </param>
+        <param name="mx2">
+        </param>
+        <param name="my2">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInBack">
+      <MemberSignature Language="C#" Value="public static float EaseInBack (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInBack(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInBounce">
+      <MemberSignature Language="C#" Value="public static float EaseInBounce (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInBounce(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCircle">
+      <MemberSignature Language="C#" Value="public static float EaseInCircle (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInCircle(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInCubic">
+      <MemberSignature Language="C#" Value="public static float EaseInCubic (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInCubic(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInElastic">
+      <MemberSignature Language="C#" Value="public static float EaseInElastic (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInElastic(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInExp">
+      <MemberSignature Language="C#" Value="public static float EaseInExp (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInExp(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutBack">
+      <MemberSignature Language="C#" Value="public static float EaseInOutBack (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutBack(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutBounce">
+      <MemberSignature Language="C#" Value="public static float EaseInOutBounce (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutBounce(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutCircle">
+      <MemberSignature Language="C#" Value="public static float EaseInOutCircle (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutCircle(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutCubic">
+      <MemberSignature Language="C#" Value="public static float EaseInOutCubic (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutCubic(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutElastic">
+      <MemberSignature Language="C#" Value="public static float EaseInOutElastic (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutElastic(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutExp">
+      <MemberSignature Language="C#" Value="public static float EaseInOutExp (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutExp(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutQuad">
+      <MemberSignature Language="C#" Value="public static float EaseInOutQuad (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutQuad(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutQuart">
+      <MemberSignature Language="C#" Value="public static float EaseInOutQuart (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutQuart(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutQuint">
+      <MemberSignature Language="C#" Value="public static float EaseInOutQuint (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutQuint(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInOutSine">
+      <MemberSignature Language="C#" Value="public static float EaseInOutSine (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInOutSine(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInQuad">
+      <MemberSignature Language="C#" Value="public static float EaseInQuad (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInQuad(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInQuart">
+      <MemberSignature Language="C#" Value="public static float EaseInQuart (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInQuart(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInQuint">
+      <MemberSignature Language="C#" Value="public static float EaseInQuint (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInQuint(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseInSine">
+      <MemberSignature Language="C#" Value="public static float EaseInSine (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseInSine(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutBack">
+      <MemberSignature Language="C#" Value="public static float EaseOutBack (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutBack(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutBounce">
+      <MemberSignature Language="C#" Value="public static float EaseOutBounce (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutBounce(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutCircle">
+      <MemberSignature Language="C#" Value="public static float EaseOutCircle (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutCircle(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutCubic">
+      <MemberSignature Language="C#" Value="public static float EaseOutCubic (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutCubic(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutElastic">
+      <MemberSignature Language="C#" Value="public static float EaseOutElastic (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutElastic(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutExp">
+      <MemberSignature Language="C#" Value="public static float EaseOutExp (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutExp(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutQuad">
+      <MemberSignature Language="C#" Value="public static float EaseOutQuad (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutQuad(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutQuart">
+      <MemberSignature Language="C#" Value="public static float EaseOutQuart (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutQuart(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutQuint">
+      <MemberSignature Language="C#" Value="public static float EaseOutQuint (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutQuint(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EaseOutSine">
+      <MemberSignature Language="C#" Value="public static float EaseOutSine (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 EaseOutSine(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Lerp">
+      <MemberSignature Language="C#" Value="public static float Lerp (float from, float to, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float32 Lerp(float32 from, float32 to, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="System.Single" />
+        <Parameter Name="to" Type="System.Single" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="from">
+        </param>
+        <param name="to">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapColor">
+      <MemberSignature Language="C#" Value="public static GameStack.TweenFunc&lt;System.Drawing.Color&gt; WrapColor (GameStack.TweenFunc&lt;float&gt; func);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GameStack.TweenFunc`1&lt;valuetype System.Drawing.Color&gt; WrapColor(class GameStack.TweenFunc`1&lt;float32&gt; func) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TweenFunc&lt;System.Drawing.Color&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="func" Type="GameStack.TweenFunc&lt;System.Single&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="func">
+        </param>
+        <summary>Create an adapter to allow <see cref="T:System.Drawing.Color" /> to be used with easing functions.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapVector2">
+      <MemberSignature Language="C#" Value="public static GameStack.TweenFunc&lt;OpenTK.Vector2&gt; WrapVector2 (GameStack.TweenFunc&lt;float&gt; func);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GameStack.TweenFunc`1&lt;valuetype OpenTK.Vector2&gt; WrapVector2(class GameStack.TweenFunc`1&lt;float32&gt; func) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TweenFunc&lt;OpenTK.Vector2&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="func" Type="GameStack.TweenFunc&lt;System.Single&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="func">
+        </param>
+        <summary>Create an adapter to allow <see cref="T:OpenTK.Vector2" /> to be used with easing functions.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapVector3">
+      <MemberSignature Language="C#" Value="public static GameStack.TweenFunc&lt;OpenTK.Vector3&gt; WrapVector3 (GameStack.TweenFunc&lt;float&gt; func);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GameStack.TweenFunc`1&lt;valuetype OpenTK.Vector3&gt; WrapVector3(class GameStack.TweenFunc`1&lt;float32&gt; func) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TweenFunc&lt;OpenTK.Vector3&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="func" Type="GameStack.TweenFunc&lt;System.Single&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="func">
+        </param>
+        <summary>Create an adapter to allow <see cref="T:OpenTK.Vector3" /> to be used with easing functions.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

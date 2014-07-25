@@ -1,0 +1,73 @@
+<Type Name="CairoEx" FullName="GameStack.CairoEx">
+  <TypeSignature Language="C#" Value="public static class CairoEx" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit CairoEx extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Convenience extension methods for working with Cairo.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public static void Clear (this Cairo.Context ctx);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void Clear(class Cairo.Context ctx) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="Cairo.Context" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSourceRGBAi">
+      <MemberSignature Language="C#" Value="public static void SetSourceRGBAi (this Cairo.Context ctx, int r, int g, int b, int a);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSourceRGBAi(class Cairo.Context ctx, int32 r, int32 g, int32 b, int32 a) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ctx" Type="Cairo.Context" RefType="this" />
+        <Parameter Name="r" Type="System.Int32" />
+        <Parameter Name="g" Type="System.Int32" />
+        <Parameter Name="b" Type="System.Int32" />
+        <Parameter Name="a" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ctx">
+        </param>
+        <param name="r">
+        </param>
+        <param name="g">
+        </param>
+        <param name="b">
+        </param>
+        <param name="a">
+        </param>
+        <summary>Set the source RGBA with integer values.</summary>
+        <remarks>Just wraps SetSourceRGBA.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

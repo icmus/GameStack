@@ -1,0 +1,134 @@
+<Type Name="ImageView" FullName="GameStack.Gui.ImageView">
+  <TypeSignature Language="C#" Value="public class ImageView : GameStack.Gui.View" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ImageView extends GameStack.Gui.View" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Gui.View</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A simple view for displaying a single image.</summary>
+    <remarks>If a <see cref="T:GameStack.Graphics.SlicedSprite" /> is provided, the sprite is automtically resized to fit the view frame. Since this operation mutates the sprite's geometry, consider calling <see cref="M:GameStack.Graphics.SlicedSprite.Clone()" /> to create a copy first. Sliced sprites are resized regardless of the <see cref="P:GameStack.Gui.ImageView.Fill" /> setting.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ImageView (GameStack.Graphics.Sprite sprite, GameStack.Gui.LayoutSpec spec = null, bool fill = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.Sprite sprite, class GameStack.Gui.LayoutSpec spec, bool fill) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sprite" Type="GameStack.Graphics.Sprite" />
+        <Parameter Name="spec" Type="GameStack.Gui.LayoutSpec" />
+        <Parameter Name="fill" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sprite">
+        </param>
+        <param name="spec">Layout.</param>
+        <param name="fill">If true, the sprite will fill the view's frame; otherwise, it will retain its original dimensions.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the tint color.</summary>
+        <value>
+        </value>
+        <remarks>Use white for no tint.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public bool Fill { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Fill" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Should the sprite be scaled to fill the view frame?</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Layout">
+      <MemberSignature Language="C#" Value="public override void Layout ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Layout() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDraw">
+      <MemberSignature Language="C#" Value="protected override void OnDraw (ref OpenTK.Matrix4 transform);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDraw(valuetype OpenTK.Matrix4 transform) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transform" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="transform">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sprite">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite Sprite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Sprite Sprite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the sprite presented by this view.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

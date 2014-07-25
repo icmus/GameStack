@@ -1,0 +1,28 @@
+<Type Name="SDL2EventHandler" FullName="GameStack.Desktop.SDL2EventHandler">
+  <TypeSignature Language="C#" Value="public delegate void SDL2EventHandler(object sender, SDL2EventArgs e);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SDL2EventHandler extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sender" Type="System.Object" />
+    <Parameter Name="e" Type="GameStack.Desktop.SDL2EventArgs" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sender">
+    </param>
+    <param name="e">
+    </param>
+    <summary>
+    </summary>
+    <remarks>
+    </remarks>
+  </Docs>
+</Type>

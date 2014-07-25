@@ -1,0 +1,73 @@
+<Type Name="TouchState" FullName="GameStack.TouchState">
+  <TypeSignature Language="C#" Value="public enum TouchState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TouchState extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates the current phase of an individual touch.</summary>
+    <remarks>Used with the <see cref="T:GameStack.Touch" /> event type.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Cancel">
+      <MemberSignature Language="C#" Value="Cancel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.TouchState Cancel = int32(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TouchState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The touch has been cancelled; for example, the touch went outside of the view bounds or the user pressed the home button during a touch action.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="End">
+      <MemberSignature Language="C#" Value="End" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.TouchState End = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TouchState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The touch has ended normally (finger up).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Move">
+      <MemberSignature Language="C#" Value="Move" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.TouchState Move = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TouchState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The touch continues at a new position (finger still down).</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="Start" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.TouchState Start = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TouchState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The touch has begun (finger down).</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

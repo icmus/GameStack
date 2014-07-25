@@ -1,0 +1,101 @@
+<Type Name="TextureSettings" FullName="GameStack.Graphics.TextureSettings">
+  <TypeSignature Language="C#" Value="public class TextureSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TextureSettings extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Options container for per-texture rendering options.</summary>
+    <remarks>Use with <see cref="C:GameStack.Graphics.Texture()" /></remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TextureSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagFilter">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureFilter MagFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.TextureFilter MagFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the magnification filter.</summary>
+        <value>
+        </value>
+        <remarks>Type of filtering to use when texture is scaled &gt; 1.0.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinFilter">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureFilter MinFilter { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.TextureFilter MinFilter" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the minification filter.</summary>
+        <value>
+        </value>
+        <remarks>Type of filtering to use when texture is scaled &lt; 1.0.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapS">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureWrap WrapS { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.TextureWrap WrapS" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureWrap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the horizontal wrapping mode.</summary>
+        <value>
+        </value>
+        <remarks>Controls the rendering behavior of the texture when the U coordinate is outside the 0..1 range.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WrapT">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureWrap WrapT { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.TextureWrap WrapT" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureWrap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the vertical wrapping mode.</summary>
+        <value>
+        </value>
+        <remarks>Controls the rendering behavior of the texture when the V coordinate is outside the 0..1 range.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

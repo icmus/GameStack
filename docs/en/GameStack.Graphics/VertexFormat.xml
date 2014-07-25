@@ -1,0 +1,163 @@
+<Type Name="VertexFormat" FullName="GameStack.Graphics.VertexFormat">
+  <TypeSignature Language="C#" Value="public class VertexFormat" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VertexFormat extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A vertex format specifies which attributes are passed into the shader for each vertex.</summary>
+    <remarks>Typically used with <see cref="T:GameStack.Graphics.VertexBuffer" />. Instances of this class are usually created by asset loaders like <see cref="T:GameStack.Graphics.Model" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VertexFormat (int stride, GameStack.Graphics.VertexElement[] elements);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 stride, class GameStack.Graphics.VertexElement[] elements) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stride" Type="System.Int32" />
+        <Parameter Name="elements" Type="GameStack.Graphics.VertexElement[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="stride">The total size of the vertex format in floats.</param>
+        <param name="elements">One or more elements.</param>
+        <summary>
+        </summary>
+        <remarks>To be useful, at least a Position element needs to be specified.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Elements">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.VertexElement[] Elements { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.VertexElement[] Elements" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexElement[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the elements in the vertex format.</summary>
+        <value>
+        </value>
+        <remarks>To be useful, at least a Position element needs to be specified.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.VertexElement this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.VertexElement Item(string)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexElement</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Element name matching shader attribute name.</param>
+        <summary>Gets a vertex element by name.</summary>
+        <value>A matching element or null if not found.</value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public static readonly GameStack.Graphics.VertexFormat Position;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class GameStack.Graphics.VertexFormat Position" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A convenience format specifying position; the bare minimum.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionColor">
+      <MemberSignature Language="C#" Value="public static readonly GameStack.Graphics.VertexFormat PositionColor;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class GameStack.Graphics.VertexFormat PositionColor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A convenience format specifying position and color.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionColorUV">
+      <MemberSignature Language="C#" Value="public static readonly GameStack.Graphics.VertexFormat PositionColorUV;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class GameStack.Graphics.VertexFormat PositionColorUV" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A convenience format specifying position, color, and a texture coordinate.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionUV">
+      <MemberSignature Language="C#" Value="public static readonly GameStack.Graphics.VertexFormat PositionUV;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly class GameStack.Graphics.VertexFormat PositionUV" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A convenience format specifying a position and texture coordinate.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stride">
+      <MemberSignature Language="C#" Value="public int Stride { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Stride" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the stride, or the total size of the vertex elements in floats.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

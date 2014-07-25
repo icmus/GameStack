@@ -1,0 +1,95 @@
+<Type Name="WaitFor&lt;T&gt;" FullName="GameStack.WaitFor&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class WaitFor&lt;T&gt; : GameStack.WaitFor, GameStack.IWaitFor&lt;T&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WaitFor`1&lt;T&gt; extends GameStack.WaitFor implements class GameStack.IWaitFor, class GameStack.IWaitFor`1&lt;!T&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>GameStack.WaitFor</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IWaitFor&lt;T&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">The frame argument type.</typeparam>
+    <summary>Any class deriving from this class can be yielded from a coroutine.</summary>
+    <remarks>This class is similar to the non-generic <see cref="T:GameStack:WaitFor" /> class but allows evaluation of the frame arguments as well. Use with <see cref="T:GameStack.CoroutineList{T}" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WaitFor (Func&lt;T,bool&gt; condition);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Func`2&lt;!T, bool&gt; condition) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="condition" Type="System.Func&lt;T,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="condition">Called whenever the wait condition must be evaluated.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Any">
+      <MemberSignature Language="C#" Value="public static GameStack.IWaitFor Any (GameStack.IWaitFor[] waitList);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GameStack.IWaitFor Any(class GameStack.IWaitFor[] waitList) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.IWaitFor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitList" Type="GameStack.IWaitFor[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="waitList">One or more objects to wait on.</param>
+        <summary>When yielded, suspend execution until one of the specified objects reports completion.</summary>
+        <returns>Yield this.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Check">
+      <MemberSignature Language="C#" Value="public virtual bool Check (T e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Check(!T e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

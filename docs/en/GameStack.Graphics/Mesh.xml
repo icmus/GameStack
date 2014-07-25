@@ -1,0 +1,142 @@
+<Type Name="Mesh" FullName="GameStack.Graphics.Mesh">
+  <TypeSignature Language="C#" Value="public class Mesh" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mesh extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Manages a single mesh within a <see cref="T:GameStack.Graphics.Model" />.</summary>
+    <remarks>Apps typically do not need to acces objects of this type directly.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mesh (string name, GameStack.Graphics.Material mat, GameStack.Graphics.VertexFormat format, float[] vertices, int[] indices, GameStack.Graphics.Bone[] bones);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class GameStack.Graphics.Material mat, class GameStack.Graphics.VertexFormat format, float32[] vertices, int32[] indices, class GameStack.Graphics.Bone[] bones) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="mat" Type="GameStack.Graphics.Material" />
+        <Parameter Name="format" Type="GameStack.Graphics.VertexFormat" />
+        <Parameter Name="vertices" Type="System.Single[]" />
+        <Parameter Name="indices" Type="System.Int32[]" />
+        <Parameter Name="bones" Type="GameStack.Graphics.Bone[]" />
+      </Parameters>
+      <Docs>
+        <param name="name">
+        </param>
+        <param name="mat">
+        </param>
+        <param name="format">
+        </param>
+        <param name="vertices">
+        </param>
+        <param name="indices">
+        </param>
+        <param name="bones">
+        </param>
+        <summary>
+        </summary>
+        <remarks>Typically called by asset loaders.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bones">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Bone[] Bones { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Bone[] Bones" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Bone[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the bones associated with the mesh, if any.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (ref OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="world" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="world">Apply this world transform.</param>
+        <summary>Draws the mesh.</summary>
+        <remarks>Uses the mesh's default material unless another material is already in scope. A camera must be in scope.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Material">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Material Material { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Material Material" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the mesh's default material.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the mesh's name as defined in the original model file.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Node">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Node Node { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Node Node" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Node</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the transform hierarchy node for this mesh.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

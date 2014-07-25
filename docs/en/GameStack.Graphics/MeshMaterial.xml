@@ -1,0 +1,345 @@
+<Type Name="MeshMaterial" FullName="GameStack.Graphics.MeshMaterial">
+  <TypeSignature Language="C#" Value="public class MeshMaterial : GameStack.Graphics.Material" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MeshMaterial extends GameStack.Graphics.Material" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Material</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A material to be used with the default mesh shader.</summary>
+    <remarks>Instances of this material are created automatically by the <see cref="T:GameStack.Graphics.Model" /> asset type.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeshMaterial (GameStack.Graphics.Shader shader = null, string name = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.Shader shader, string name) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="shader" Type="GameStack.Graphics.Shader" />
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="shader">If provided, override the default mesh shader.</param>
+        <param name="name">The name of the mesh material.</param>
+        <summary>
+        </summary>
+        <remarks>Usually called by asset loaders, but could also be called by apps when constructing mesh geometry at runtime.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlendMode">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.BlendMode BlendMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.BlendMode BlendMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.BlendMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the blend mode to use when rendering a mesh.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorAmbient">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 ColorAmbient { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 ColorAmbient" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the static ambient color.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorDiffuse">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 ColorDiffuse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 ColorDiffuse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the static diffuse color.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorEmissive">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 ColorEmissive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 ColorEmissive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the static emissive color.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorSpecular">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 ColorSpecular { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 ColorSpecular" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the static specular color.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorTransparent">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 ColorTransparent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 ColorTransparent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the static transparency color.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DiffuseMap">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureSlot[] DiffuseMap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.TextureSlot[] DiffuseMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureSlot[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the diffuse map.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EmissiveMap">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureSlot[] EmissiveMap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.TextureSlot[] EmissiveMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureSlot[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the emissive map.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTwoSided">
+      <MemberSignature Language="C#" Value="public bool IsTwoSided { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTwoSided" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the mesh surface two-sided?</summary>
+        <value>
+        </value>
+        <remarks>When true, backface culling is disabled when rendering the mesh. Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsWireframeEnabled">
+      <MemberSignature Language="C#" Value="public bool IsWireframeEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsWireframeEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the mesh rendered in wireframe mode?</summary>
+        <value>
+        </value>
+        <remarks>Currently only supported on desktop. Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the name of the material.</summary>
+        <value>
+        </value>
+        <remarks>Equal to the name provided in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalMap">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureSlot[] NormalMap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.TextureSlot[] NormalMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureSlot[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the normal map.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBegin">
+      <MemberSignature Language="C#" Value="protected override void OnBegin ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBegin() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnd">
+      <MemberSignature Language="C#" Value="protected override void OnEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnd() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Opacity">
+      <MemberSignature Language="C#" Value="public float Opacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Opacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the material opacity.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shininess">
+      <MemberSignature Language="C#" Value="public float Shininess { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Shininess" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the material shininess, with higher numbers making for smaller, more concentrated specular highlights.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShininessStrength">
+      <MemberSignature Language="C#" Value="public float ShininessStrength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 ShininessStrength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Controls the intensity of specular highlights.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecularMap">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureSlot[] SpecularMap { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.TextureSlot[] SpecularMap" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureSlot[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the specularity map.</summary>
+        <value>
+        </value>
+        <remarks>Setting this value overrides the value specified in the model asset.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

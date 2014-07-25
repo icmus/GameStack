@@ -1,0 +1,114 @@
+<Type Name="IStreamingSound" FullName="GameStack.IStreamingSound">
+  <TypeSignature Language="C#" Value="public interface IStreamingSound" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IStreamingSound" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Generic interface for a streaming sound asset.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ChannelCount">
+      <MemberSignature Language="C#" Value="public int ChannelCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ChannelCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the number of audio channels contained in the asset (2 for stereo).</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillBuffer">
+      <MemberSignature Language="C#" Value="public int FillBuffer (int sampleCount, short[] buf, int bufOffset = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 FillBuffer(int32 sampleCount, int16[] buf, int32 bufOffset) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sampleCount" Type="System.Int32" />
+        <Parameter Name="buf" Type="System.Int16[]" />
+        <Parameter Name="bufOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="sampleCount">
+        </param>
+        <param name="buf">
+        </param>
+        <param name="bufOffset">
+        </param>
+        <summary>Fills the specified buffer with audio data, advancing the current location.</summary>
+        <returns>Number of bytes filled.</returns>
+        <remarks>This method is normally not called directly but instead through a <see cref="T:GameStack.StreamingSoundCahnnel" /> instance. </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Path">
+      <MemberSignature Language="C#" Value="public string Path { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Path" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the path to the streaming asset.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public bool Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Reset() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Reset the current position to the beginning.</summary>
+        <returns>True if the operation was successful.</returns>
+        <remarks>This method will not stop any active sound channels from playing.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleRate">
+      <MemberSignature Language="C#" Value="public int SampleRate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SampleRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the sample rate in samples per second (e.g., 44100).</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

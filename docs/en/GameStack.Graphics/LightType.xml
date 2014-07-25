@@ -1,0 +1,45 @@
+<Type Name="LightType" FullName="GameStack.Graphics.LightType">
+  <TypeSignature Language="C#" Value="public enum LightType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed LightType extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates which type of light a light source provides.</summary>
+    <remarks>Used with subtypes of <see cref="T:GameStack.Graphics.Light" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Directional">
+      <MemberSignature Language="C#" Value="Directional" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.LightType Directional = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.LightType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Simulate a light infinitely far away with all light rays traveling in parallel in the specified direction. Commonly used to simulate daylight.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Point">
+      <MemberSignature Language="C#" Value="Point" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.LightType Point = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.LightType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Simulate light rays traveling outward in all directions from a specific point.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

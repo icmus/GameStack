@@ -1,0 +1,55 @@
+<Type Name="Resize" FullName="GameStack.Resize">
+  <TypeSignature Language="C#" Value="public class Resize : GameStack.EventBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Resize extends GameStack.EventBase" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.EventBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>An instance of this type is added to the event queue when the viewport has resized.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PixelScale">
+      <MemberSignature Language="C#" Value="public float PixelScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 PixelScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the pixel scale of the system (2.0 for retina).</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the size of the viewport in logical pixels.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

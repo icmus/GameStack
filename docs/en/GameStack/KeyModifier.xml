@@ -1,0 +1,247 @@
+<Type Name="KeyModifier" FullName="GameStack.KeyModifier">
+  <TypeSignature Language="C#" Value="public enum KeyModifier" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KeyModifier extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName>System.Flags</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>Indicates which modifier keys are pressed during key events.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alt">
+      <MemberSignature Language="C#" Value="Alt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier Alt = int32(768)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Either alt key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AltGr">
+      <MemberSignature Language="C#" Value="AltGr" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier AltGr = int32(16384)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The AltGr key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CapsLock">
+      <MemberSignature Language="C#" Value="CapsLock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier CapsLock = int32(8192)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The CapsLock key is active.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Control">
+      <MemberSignature Language="C#" Value="Control" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier Control = int32(192)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Either control key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftAlt">
+      <MemberSignature Language="C#" Value="LeftAlt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier LeftAlt = int32(256)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The left alt key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftControl">
+      <MemberSignature Language="C#" Value="LeftControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier LeftControl = int32(64)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The left control key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftMeta">
+      <MemberSignature Language="C#" Value="LeftMeta" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier LeftMeta = int32(1024)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The left meta key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="LeftShift">
+      <MemberSignature Language="C#" Value="LeftShift" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier LeftShift = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The left shift key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Meta">
+      <MemberSignature Language="C#" Value="Meta" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier Meta = int32(3072)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Either meta key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier None = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>No modifier keys are pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NumLock">
+      <MemberSignature Language="C#" Value="NumLock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier NumLock = int32(4096)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>NumLock is active.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightAlt">
+      <MemberSignature Language="C#" Value="RightAlt" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier RightAlt = int32(512)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The right alt key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightControl">
+      <MemberSignature Language="C#" Value="RightControl" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier RightControl = int32(128)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The right control key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightMeta">
+      <MemberSignature Language="C#" Value="RightMeta" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier RightMeta = int32(2048)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The right meta key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RightShift">
+      <MemberSignature Language="C#" Value="RightShift" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier RightShift = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The right shift key is pressed.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Shift">
+      <MemberSignature Language="C#" Value="Shift" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyModifier Shift = int32(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyModifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Either shift key is pressed.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

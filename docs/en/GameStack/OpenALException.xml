@@ -1,0 +1,38 @@
+<Type Name="OpenALException" FullName="GameStack.OpenALException">
+  <TypeSignature Language="C#" Value="public class OpenALException : Exception" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OpenALException extends System.Exception" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Exception</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Thrown when an OpenAL operation has failed.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenALException (OpenTK.Audio.OpenAL.ALError error);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Audio.OpenAL.ALError error) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="error" Type="OpenTK.Audio.OpenAL.ALError" />
+      </Parameters>
+      <Docs>
+        <param name="error">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

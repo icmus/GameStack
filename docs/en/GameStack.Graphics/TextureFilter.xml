@@ -1,0 +1,62 @@
+<Type Name="TextureFilter" FullName="GameStack.Graphics.TextureFilter">
+  <TypeSignature Language="C#" Value="public enum TextureFilter" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextureFilter extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates what kind of min or mag filtering a texture uses.</summary>
+    <remarks>Use with the <see cref="T:GameStack.Graphics.Texture" /> class.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Linear">
+      <MemberSignature Language="C#" Value="Linear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureFilter Linear = int32(9729)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Nearest">
+      <MemberSignature Language="C#" Value="Nearest" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureFilter Nearest = int32(9728)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Trilinear">
+      <MemberSignature Language="C#" Value="Trilinear" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureFilter Trilinear = int32(9987)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureFilter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

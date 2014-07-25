@@ -1,0 +1,60 @@
+<Type Name="FreeTypeFontFace" FullName="GameStack.Graphics.FreeTypeFontFace">
+  <TypeSignature Language="C#" Value="public class FreeTypeFontFace : Cairo.FontFace" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FreeTypeFontFace extends Cairo.FontFace" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Cairo.FontFace</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Manages a vector font face for use with the drawing API.</summary>
+    <remarks>When including vector font files as assets, remember to check the licensing requirements of your fonts.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static GameStack.Graphics.FreeTypeFontFace Create (string path, int faceIndex = 0, int loadOptions = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GameStack.Graphics.FreeTypeFontFace Create(string path, int32 faceIndex, int32 loadOptions) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.FreeTypeFontFace</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="faceIndex" Type="System.Int32" />
+        <Parameter Name="loadOptions" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="path">Relative asset path. Use the original filename (e.g., myfont.ttf or myfont.otf)</param>
+        <param name="faceIndex">The face index within the font file; usually 0.</param>
+        <param name="loadOptions">Font load options passed directly to FreeType; usually 0.</param>
+        <summary>Load a new FreeType font face from an asset file.</summary>
+        <returns>
+        </returns>
+        <remarks>This font face can be used with the Cairo drawing API.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release the font resources.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

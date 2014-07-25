@@ -2,7 +2,7 @@ using System;
 
 namespace GameStack {
 	// A single-use transition.
-	public class Transition<T> : IDisposable, ITransition, IUpdater {
+	public class Transition<T> : IDisposable, IUpdater {
 		T _from, _to;
 		float _time, _duration;
 		TweenFunc<T> _easing;

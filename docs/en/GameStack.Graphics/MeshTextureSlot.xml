@@ -1,0 +1,94 @@
+<Type Name="MeshTextureSlot" FullName="GameStack.Graphics.MeshTextureSlot">
+  <TypeSignature Language="C#" Value="public struct MeshTextureSlot" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MeshTextureSlot extends System.ValueType" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Maps a mesh to one or more textures.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeshTextureSlot (int index, float blendFactor, GameStack.Graphics.TextureOperation operation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 index, float32 blendFactor, valuetype GameStack.Graphics.TextureOperation operation) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="blendFactor" Type="System.Single" />
+        <Parameter Name="operation" Type="GameStack.Graphics.TextureOperation" />
+      </Parameters>
+      <Docs>
+        <param name="index">
+        </param>
+        <param name="blendFactor">
+        </param>
+        <param name="operation">
+        </param>
+        <summary>
+        </summary>
+        <remarks>Usually called by asset loaders.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlendFactor">
+      <MemberSignature Language="C#" Value="public float BlendFactor;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 BlendFactor" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Index">
+      <MemberSignature Language="C#" Value="public int Index;" />
+      <MemberSignature Language="ILAsm" Value=".field public int32 Index" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Operation">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.TextureOperation Operation;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype GameStack.Graphics.TextureOperation Operation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,97 @@
+<Type Name="WaitFor" FullName="GameStack.WaitFor">
+  <TypeSignature Language="C#" Value="public class WaitFor : GameStack.IWaitFor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WaitFor extends System.Object implements class GameStack.IWaitFor" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IWaitFor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Any class deriving from this class can be yielded from a coroutine.</summary>
+    <remarks>Use with <see cref="T:GameStack.CoroutineList{T}" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WaitFor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Check">
+      <MemberSignature Language="C#" Value="public virtual bool Check ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Check() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Checks whether the wait condition is true.</summary>
+        <returns>True if the coroutine should continue running.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Coroutine">
+      <MemberSignature Language="C#" Value="public static GameStack.IWaitFor Coroutine (GameStack.ICoroutine co);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GameStack.IWaitFor Coroutine(class GameStack.ICoroutine co) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.IWaitFor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="co" Type="GameStack.ICoroutine" />
+      </Parameters>
+      <Docs>
+        <param name="co">The coroutine to wait for.</param>
+        <summary>When yielded, suspends execution until the specified coroutine is complete.</summary>
+        <returns>Yield this value.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Seconds">
+      <MemberSignature Language="C#" Value="public static GameStack.IWaitFor Seconds (float seconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class GameStack.IWaitFor Seconds(float32 seconds) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.IWaitFor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seconds" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="seconds">The time to wait, in seconds.</param>
+        <summary>When yielded, suspends execution until the specified time has elapsed.</summary>
+        <returns>Yield this value.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,5 +1,6 @@
 ﻿using System;
 using GameStack;
+using GameStack.Graphics;
 using GameStack.Gui;
 using Cairo;
 

@@ -1,0 +1,60 @@
+<Type Name="GestureType" FullName="GameStack.GestureType">
+  <TypeSignature Language="C#" Value="public enum GestureType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed GestureType extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates the type of the current gesture.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Pan">
+      <MemberSignature Language="C#" Value="Pan" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.GestureType Pan = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.GestureType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A pan gesture, with a single touch point that is being moved in any direction.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Swipe">
+      <MemberSignature Language="C#" Value="Swipe" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.GestureType Swipe = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.GestureType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A swipe gesture, the quick movement of a single touch in a horizontal or vertical direction.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Tap">
+      <MemberSignature Language="C#" Value="Tap" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.GestureType Tap = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.GestureType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>A touch that begins and ends without moving significantly.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

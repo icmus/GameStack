@@ -1,0 +1,67 @@
+<Type Name="RadioGroup" FullName="GameStack.Gui.RadioGroup">
+  <TypeSignature Language="C#" Value="public class RadioGroup" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RadioGroup extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Groups buttons together into a common radio group with only one active button at a time.</summary>
+    <remarks>Pass an instance of this to <see cref="C:GameStack.Gui.Button(GameStack.Gui.RadioGroup,GameStack.Gui.LayoutSpec)" /> for all buttons that should belong to this group.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RadioGroup ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Active">
+      <MemberSignature Language="C#" Value="public GameStack.Gui.Button Active { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Gui.Button Active" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Gui.Button</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Returns the active button, or null if there is none yet.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Changed">
+      <MemberSignature Language="C#" Value="public EventHandler&lt;GameStack.Gui.RadioGroupEventArgs&gt; Changed;" />
+      <MemberSignature Language="ILAsm" Value=".field public class System.EventHandler`1&lt;class GameStack.Gui.RadioGroupEventArgs&gt; Changed" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.Gui.RadioGroupEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fires whenever the active button has changed.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

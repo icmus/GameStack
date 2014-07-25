@@ -1,0 +1,278 @@
+<Type Name="Controller&lt;T&gt;" FullName="GameStack.Controller&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class Controller&lt;T&gt; : GameStack.IUpdater, GameStack.IWaitFor, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Controller`1&lt;T&gt; extends System.Object implements class GameStack.IUpdater, class GameStack.IWaitFor, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IUpdater</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>GameStack.IWaitFor</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">The type of value to be controlled.</typeparam>
+    <summary>Controls a property or variable by transitioning it from value to value over time.</summary>
+    <remarks>This class is very similar to <see cref="T:GameStack.Transition{T}" /> but it is meant to control a variable repeatedly
+    instead of with a one-time transition.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Controller (T start, GameStack.TweenFunc&lt;T&gt; easing, Action&lt;T&gt; callback, Action&lt;GameStack.Controller&lt;T&gt;&gt; done = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T start, class GameStack.TweenFunc`1&lt;!T&gt; easing, class System.Action`1&lt;!T&gt; callback, class System.Action`1&lt;class GameStack.Controller`1&lt;!T&gt;&gt; done) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="start" Type="T" />
+        <Parameter Name="easing" Type="GameStack.TweenFunc&lt;T&gt;" />
+        <Parameter Name="callback" Type="System.Action&lt;T&gt;" />
+        <Parameter Name="done" Type="System.Action&lt;GameStack.Controller&lt;T&gt;&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="start">The starting value.</param>
+        <param name="easing">The easing function.</param>
+        <param name="callback">Called whenever the object's value must be updated.</param>
+        <param name="done">Called each time the current target value has been reached.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>The controller is stopped and put in an unusable state.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Easing">
+      <MemberSignature Language="C#" Value="public GameStack.TweenFunc&lt;T&gt; Easing { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.TweenFunc`1&lt;!T&gt; Easing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.TweenFunc&lt;T&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the easing function to use.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IUpdater.Update">
+      <MemberSignature Language="C#" Value="void IUpdater.Update (GameStack.FrameArgs frame);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IUpdater.Update(class GameStack.FrameArgs frame) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="frame">
+        </param>
+        <summary>Move the controller ahead one step.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IWaitFor.Check">
+      <MemberSignature Language="C#" Value="bool IWaitFor.Check ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance bool GameStack.IWaitFor.Check() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDone">
+      <MemberSignature Language="C#" Value="public bool IsDone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Has the value reached its current target?</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset (T start);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset(!T start) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="start">The starting value.</param>
+        <summary>Reset the controller to a specific value and stop any active transition.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Stop updating and keep the current value.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public void To (T to, float duration, Action&lt;GameStack.Controller&lt;T&gt;&gt; done = null, GameStack.TweenFunc&lt;T&gt; easing = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void To(!T to, float32 duration, class System.Action`1&lt;class GameStack.Controller`1&lt;!T&gt;&gt; done, class GameStack.TweenFunc`1&lt;!T&gt; easing) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="to" Type="T" />
+        <Parameter Name="duration" Type="System.Single" />
+        <Parameter Name="done" Type="System.Action&lt;GameStack.Controller&lt;T&gt;&gt;" />
+        <Parameter Name="easing" Type="GameStack.TweenFunc&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="to">Transition to this value.</param>
+        <param name="duration">Transition duration in seconds.</param>
+        <param name="done">Finished callback.</param>
+        <param name="easing">Easing function.</param>
+        <summary>Begin transitioning the controlled value to a new target value.</summary>
+        <remarks>When called, any existing transition in progress is superceded.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public void To (T from, T to, float duration, Action&lt;GameStack.Controller&lt;T&gt;&gt; done = null, GameStack.TweenFunc&lt;T&gt; easing = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void To(!T from, !T to, float32 duration, class System.Action`1&lt;class GameStack.Controller`1&lt;!T&gt;&gt; done, class GameStack.TweenFunc`1&lt;!T&gt; easing) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="from" Type="T" />
+        <Parameter Name="to" Type="T" />
+        <Parameter Name="duration" Type="System.Single" />
+        <Parameter Name="done" Type="System.Action&lt;GameStack.Controller&lt;T&gt;&gt;" />
+        <Parameter Name="easing" Type="GameStack.TweenFunc&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="from">The start value.</param>
+        <param name="to">Transition to this value.</param>
+        <param name="duration">Transition duration in seconds.</param>
+        <param name="done">Finished callback.</param>
+        <param name="easing">Easing function.</param>
+        <summary>Begin transitioning the controlled value to a new target value.</summary>
+        <remarks>When called, any existing transition in progress is superceded. Calling this overload is the same as calling Reset with the start value, followed by the other To overload.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update (float delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Update(float32 delta) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delta" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="delta">The amount of time that has passed, in seconds.</param>
+        <summary>Move the controller ahead one step.</summary>
+        <remarks>Rather than calling this method manually, you can add a controller to the scene collection and it will automatically
+        be advanced every frame.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public T Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance !T Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the current value.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

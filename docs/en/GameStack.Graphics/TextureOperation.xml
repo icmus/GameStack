@@ -1,0 +1,122 @@
+<Type Name="TextureOperation" FullName="GameStack.Graphics.TextureOperation">
+  <TypeSignature Language="C#" Value="public enum TextureOperation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextureOperation extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates which texture operation to use when combining texture layers in a mesh material.</summary>
+    <remarks>Used with <see cref="T:GameStack.Graphics.Model" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="Add" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureOperation Add = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Divide">
+      <MemberSignature Language="C#" Value="Divide" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureOperation Divide = int32(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Multiply">
+      <MemberSignature Language="C#" Value="Multiply" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureOperation Multiply = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Replace">
+      <MemberSignature Language="C#" Value="Replace" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureOperation Replace = int32(255)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SignedAdd">
+      <MemberSignature Language="C#" Value="SignedAdd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureOperation SignedAdd = int32(5)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SmoothAdd">
+      <MemberSignature Language="C#" Value="SmoothAdd" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureOperation SmoothAdd = int32(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Subtract">
+      <MemberSignature Language="C#" Value="Subtract" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureOperation Subtract = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureOperation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

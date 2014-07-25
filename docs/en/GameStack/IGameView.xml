@@ -1,0 +1,169 @@
+<Type Name="IGameView" FullName="GameStack.IGameView">
+  <TypeSignature Language="C#" Value="public interface IGameView : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IGameView implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A cross-platform interface for platform-specific game view implementations.</summary>
+    <remarks>Implemented by all *GameView classes.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Destroyed">
+      <MemberSignature Language="C#" Value="public event EventHandler Destroyed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler Destroyed" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fired when the view has been destroyed and resources should be released.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableGesture">
+      <MemberSignature Language="C#" Value="public void EnableGesture (GameStack.GestureType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableGesture(valuetype GameStack.GestureType type) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="GameStack.GestureType" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type of gesture to enable.</param>
+        <summary>This method must be called for any gesture types that are desired.</summary>
+        <remarks>Some platforms require specific gesture recognizers to be hooked up. Therefore, all apps
+        should call this method for each type of gesture they want to receive events for.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPaused">
+      <MemberSignature Language="C#" Value="public bool IsPaused { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPaused" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the view currently paused?</summary>
+        <value>
+        </value>
+        <remarks>When paused, scenes are not updated and no new content is rendered.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFrame">
+      <MemberSignature Language="C#" Value="public void LoadFrame ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void LoadFrame() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Mark the next frame as a load frame.</summary>
+        <remarks>Load frames are frames that are especially long due to heavy operations such as loading many assets. The purpose of distinguishing load frames is so that transitions and animations don't skip ahead during heavy operations. The event pump will not try to "catch up," but will instead proceed to the next frame as if a usual amount of time has passed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelScale">
+      <MemberSignature Language="C#" Value="public float PixelScale { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 PixelScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the pixel scale for the current view.</summary>
+        <value>
+        </value>
+        <remarks>On most desktop systems, this will return 1.0. Retina-based iPhone displays will return 2.0.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Render">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;GameStack.FrameArgs&gt; Render;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class GameStack.FrameArgs&gt; Render" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.FrameArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fired when the current scene should be rendered.</summary>
+        <remarks>All rendering should be done during the course of this event. GameStack guarantees that the graphics and audio contexts are set up correctly while this event is processing.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RenderNow">
+      <MemberSignature Language="C#" Value="public void RenderNow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RenderNow() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Force the view to render to the current framebuffer immediately.</summary>
+        <remarks>This can be useful for forcing multiple rendering updates per frame. For example, on a load frame, this method could be called multiple times to update a status bar or animate a spinner.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the viewport size in pixels.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;GameStack.FrameArgs&gt; Update;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class GameStack.FrameArgs&gt; Update" />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;GameStack.FrameArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Fires when the current scene should update.</summary>
+        <remarks>GameStack does NOT guarantee that there is a valid graphics or audio context when this event fires. To perform rendering operations, use the <see cref="E:GameStack.IGameView.Render" /> event. This event is for logical updates.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

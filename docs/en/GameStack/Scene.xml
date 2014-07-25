@@ -1,0 +1,429 @@
+<Type Name="Scene" FullName="GameStack.Scene">
+  <TypeSignature Language="C#" Value="public class Scene : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Scene extends System.Object implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>The scene is responsible for updating its own objects, managing its own resources, and controlling any number of entities or views. Most apps will have types derived from Scene.</summary>
+    <remarks>
+      <para>A class derived from Scene can implement any of the event handling interfaces, such as <see cref="T:GameStack.IUpdater" /> or <see cref="T:GameStack.IHandler{T}" /> and the handler methods will automatically be called. Most scenes implement at least IUpdater for updating the world and IHandler&lt;Start&gt; for loading resources.</para>
+      <para>All types deriving from this class should override the <see cref="M:GameStack.Scene.Dispose" /> method in order to free resources such as textures and sound assets.</para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Scene (GameStack.IGameView view = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.IGameView view) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="view" Type="GameStack.IGameView" />
+      </Parameters>
+      <Docs>
+        <param name="view">The view to which the scene will be attached.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Add(object obj) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">An object of any type to add to the scene collection.</param>
+        <summary>Add an object to the scene, subscribing any relevant event handlers.</summary>
+        <remarks>If the object implements <see cref="T:GameStack.IUpdater" /> or <see cref="T:GameStack.IHandler{T}" /> then the event handlers will automatically be connected.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddHandler&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void AddHandler&lt;T&gt; (Action&lt;GameStack.FrameArgs,T&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddHandler&lt;T&gt;(class System.Action`2&lt;class GameStack.FrameArgs, !!T&gt; action) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;GameStack.FrameArgs,T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of event to be handled.</typeparam>
+        <param name="action">The action to take when an event occurs.</param>
+        <summary>Add a simple handler to be invoked when an event of the specified type occurs.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddMany">
+      <MemberSignature Language="C#" Value="public void AddMany (object[] obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddMany(object[] obj) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="obj">One or more objects to be added. They may be of different types.</param>
+        <summary>Add one or more objects to the scene collection.</summary>
+        <remarks>See <see cref="M:GameStack.Scene.Add(System.Object)" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color ClearColor { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color ClearColor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the clear color used in the default <see cref="M:GameStack.Scene.OnDraw(GameStack.FrameArgs)" /> method.</summary>
+        <value>
+        </value>
+        <remarks>Defaults to the familiar cornflower blue.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Should be overridden in derived classes to dispose of resources.</summary>
+        <remarks>If a suitable implementation is not provided, then resources may leak when switching between scenes.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawNow">
+      <MemberSignature Language="C#" Value="public void DrawNow (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawNow(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>Force the scene to draw immediately, for capturing frame output from a scene for use in another draw operation.</summary>
+        <remarks>Normally when this method is called expclitly, a <see cref="T:GameStack.Graphics.FrameBuffer" /> object will be in scope to capture the output.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForEach&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void ForEach&lt;T&gt; (Action&lt;T&gt; action) where T : class, GameStack.IUpdater;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ForEach&lt;class (class GameStack.IUpdater) T&gt;(class System.Action`1&lt;!!T&gt; action) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <ParameterAttribute>ReferenceTypeConstraint</ParameterAttribute>
+            <InterfaceName>GameStack.IUpdater</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type on which to filter.</typeparam>
+        <param name="action">The action to perform on all matching objects.</param>
+        <summary>Performs an action of all objects in the scene collection that match the specified type or derive from it.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsUpdating">
+      <MemberSignature Language="C#" Value="public bool IsUpdating { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsUpdating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the scene actively updating?</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVisible">
+      <MemberSignature Language="C#" Value="public bool IsVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the scene actively rendering?</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDestroy">
+      <MemberSignature Language="C#" Value="public void OnDestroy (object sender, EventArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnDestroy(object sender, class System.EventArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="System.EventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">
+        </param>
+        <param name="e">
+        </param>
+        <summary>Called when the attached viewport has been destroyed.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDraw">
+      <MemberSignature Language="C#" Value="protected virtual void OnDraw (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDraw(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">Info for the current frame.</param>
+        <summary>Called when the scene should render all of its contents.</summary>
+        <remarks>When this method is called, the graphics context is guaranteed to be valid.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnRender">
+      <MemberSignature Language="C#" Value="public void OnRender (object sender, GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnRender(object sender, class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">
+        </param>
+        <param name="e">
+        </param>
+        <summary>Called when the viewport wants the scene to render.</summary>
+        <remarks>Overriding this method is not normally needed. It can be used to perform pre-render actions.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnUpdate">
+      <MemberSignature Language="C#" Value="public void OnUpdate (object sender, GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OnUpdate(object sender, class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="sender">
+        </param>
+        <param name="e">
+        </param>
+        <summary>Called when the viewport wants the scene to update.</summary>
+        <remarks>Overriding this method is not normally needed. It can be used to perform pre-update actions before event handlers are called.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public void Remove (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Remove(object obj) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">
+        </param>
+        <summary>Remove an object from the scene collection and stop calling its event handlers.</summary>
+        <remarks>If the object does not exist in the scene collection, this method does nothing.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveHandler&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void RemoveHandler&lt;T&gt; (Action&lt;GameStack.FrameArgs,T&gt; action);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveHandler&lt;T&gt;(class System.Action`2&lt;class GameStack.FrameArgs, !!T&gt; action) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T" />
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="action" Type="System.Action&lt;GameStack.FrameArgs,T&gt;" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">
+        </typeparam>
+        <param name="action">The previously added action.</param>
+        <summary>Removes a simple event handler.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveMany">
+      <MemberSignature Language="C#" Value="public void RemoveMany (object[] obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RemoveMany(object[] obj) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="obj">One or more objects to be removed.</param>
+        <summary>Removes one or more objects from the scene collection.</summary>
+        <remarks>See <see cref="M:GameStack.Scene.Remove(System.Object)" /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public virtual void Start (object sender, GameStack.Start args);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Start(object sender, class GameStack.Start args) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sender" Type="System.Object" />
+        <Parameter Name="args" Type="GameStack.Start" />
+      </Parameters>
+      <Docs>
+        <param name="sender">
+        </param>
+        <param name="args">
+        </param>
+        <summary>Can be called explicitly by scene transition managers to activate the scene.</summary>
+        <remarks>This method does not normally need to be called or overridden.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="View">
+      <MemberSignature Language="C#" Value="public GameStack.IGameView View { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.IGameView View" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.IGameView</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets a reference to the view that the scene is attached to.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

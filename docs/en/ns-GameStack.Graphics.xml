@@ -1,0 +1,6 @@
+<Namespace Name="GameStack.Graphics">
+  <Docs>
+    <summary>Types related to 2D and 3D graphics and drawing.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

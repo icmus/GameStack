@@ -1,0 +1,115 @@
+<Type Name="BinaryEx" FullName="GameStack.Content.BinaryEx">
+  <TypeSignature Language="C#" Value="public static class BinaryEx" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit BinaryEx extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Static extension methods for reading and writing binary data.</summary>
+    <remarks>These facilities are mainly used by asset types to load metadata.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ReadMatrix4">
+      <MemberSignature Language="C#" Value="public static void ReadMatrix4 (this System.IO.BinaryReader reader, out OpenTK.Matrix4 val);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ReadMatrix4(class System.IO.BinaryReader reader, valuetype OpenTK.Matrix4 val) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.BinaryReader" RefType="this" />
+        <Parameter Name="val" Type="OpenTK.Matrix4&amp;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="reader">
+        </param>
+        <param name="val">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadVector2">
+      <MemberSignature Language="C#" Value="public static OpenTK.Vector2 ReadVector2 (this System.IO.BinaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype OpenTK.Vector2 ReadVector2(class System.IO.BinaryReader reader) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.BinaryReader" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="reader">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadVector3">
+      <MemberSignature Language="C#" Value="public static OpenTK.Vector3 ReadVector3 (this System.IO.BinaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype OpenTK.Vector3 ReadVector3(class System.IO.BinaryReader reader) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.BinaryReader" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="reader">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadVector4">
+      <MemberSignature Language="C#" Value="public static OpenTK.Vector4 ReadVector4 (this System.IO.BinaryReader reader);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype OpenTK.Vector4 ReadVector4(class System.IO.BinaryReader reader) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="reader" Type="System.IO.BinaryReader" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="reader">
+        </param>
+        <summary>
+        </summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

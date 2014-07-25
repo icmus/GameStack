@@ -16,10 +16,4 @@ namespace GameStack {
 		void LoadFrame ();
 		void RenderNow ();
 	}
-
-	public interface IGameViewEventHandler {
-		void OnUpdate (object sender, FrameArgs args);
-		void OnRender (object sender, FrameArgs args);
-		void OnDestroy (object sender, EventArgs args);
-	}
 }

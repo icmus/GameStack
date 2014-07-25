@@ -1,0 +1,45 @@
+<Type Name="IWaitFor&lt;T&gt;" FullName="GameStack.IWaitFor&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public interface IWaitFor&lt;T&gt; : GameStack.IWaitFor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWaitFor`1&lt;T&gt; implements class GameStack.IWaitFor" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IWaitFor</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">The type of frame arguments to be passed in. Must match the type used by <see cref="T:GameStack.CoroutineList{T}" />.</typeparam>
+    <summary>Implemented by any type that can be yielded from a coroutine.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Check">
+      <MemberSignature Language="C#" Value="public bool Check (T e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Check(!T e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="T" />
+      </Parameters>
+      <Docs>
+        <param name="e">The current frame arguments.</param>
+        <summary>Checks whether the condition is true, using the frame arguments as additional input.</summary>
+        <returns>True if the condition is true and the coroutine should continue executing, false if the coroutine should remain dormant for another frame.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

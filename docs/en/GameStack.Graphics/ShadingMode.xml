@@ -1,0 +1,182 @@
+<Type Name="ShadingMode" FullName="GameStack.Graphics.ShadingMode">
+  <TypeSignature Language="C#" Value="public enum ShadingMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ShadingMode extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates the desired shading model for a mesh.</summary>
+    <remarks>Note that Phong is the only built-in lighting model.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Blinn">
+      <MemberSignature Language="C#" Value="Blinn" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode Blinn = int32(4)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="CookTorrance">
+      <MemberSignature Language="C#" Value="CookTorrance" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode CookTorrance = int32(8)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Flat">
+      <MemberSignature Language="C#" Value="Flat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode Flat = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Fresnel">
+      <MemberSignature Language="C#" Value="Fresnel" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode Fresnel = int32(10)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Gouraud">
+      <MemberSignature Language="C#" Value="Gouraud" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode Gouraud = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Minnaert">
+      <MemberSignature Language="C#" Value="Minnaert" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode Minnaert = int32(7)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode None = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="NoShading">
+      <MemberSignature Language="C#" Value="NoShading" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode NoShading = int32(9)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OrenNayar">
+      <MemberSignature Language="C#" Value="OrenNayar" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode OrenNayar = int32(6)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Phong">
+      <MemberSignature Language="C#" Value="Phong" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode Phong = int32(3)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Toon">
+      <MemberSignature Language="C#" Value="Toon" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.ShadingMode Toon = int32(5)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+        </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

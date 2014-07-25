@@ -1,0 +1,6 @@
+<Namespace Name="GameStack.Desktop">
+  <Docs>
+    <summary>Types specific to desktop platforms using SDL2.</summary>
+    <remarks></remarks>
+  </Docs>
+</Namespace>

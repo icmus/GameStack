@@ -1,0 +1,143 @@
+<Type Name="VertexBuffer" FullName="GameStack.Graphics.VertexBuffer">
+  <TypeSignature Language="C#" Value="public class VertexBuffer : GameStack.Graphics.ScopedObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VertexBuffer extends GameStack.Graphics.ScopedObject" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.ScopedObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Manages a collection of vertices in a buffer.</summary>
+    <remarks>Collections of vertices can belong to simple 2D geometry like sprites or quads, and 3D meshes. This class is typically used in concert with <see cref="T:GameStack.Graphics.IndexBuffer" />. By using a separate index buffer, vertices can be re-used any number of times in the mesh whenever the attributes are identical. In order to draw with an index buffer, an instance of this class must be in scope. This class is not normally created directly, but instead via one of the asset loading classes like <see cref="T:GameStack.Graphics.Model" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VertexBuffer (GameStack.Graphics.VertexFormat format, float[] vertices = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.VertexFormat format, float32[] vertices) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="format" Type="GameStack.Graphics.VertexFormat" />
+        <Parameter Name="vertices" Type="System.Single[]" />
+      </Parameters>
+      <Docs>
+        <param name="format">
+        </param>
+        <param name="vertices">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Commit">
+      <MemberSignature Language="C#" Value="public void Commit ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Commit() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Write data to the native vertex buffer.</summary>
+        <remarks>Must be called for changes to take effect.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public float[] Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32[] Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the raw vertex data.</summary>
+        <value>
+        </value>
+        <remarks>In order for changes to take effect, <see cref="M:GameStack.Graphics.VertexBuffer.Commit()" /> must be called.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release buffer resources.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Format">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.VertexFormat Format { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.VertexFormat Format" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.VertexFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the vertex format.</summary>
+        <value>
+        </value>
+        <remarks>Vertex formats specify what kind of information is passed to the shader for each vertex.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBegin">
+      <MemberSignature Language="C#" Value="protected override void OnBegin ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBegin() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnd">
+      <MemberSignature Language="C#" Value="protected override void OnEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnd() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

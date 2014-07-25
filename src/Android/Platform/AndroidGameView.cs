@@ -16,7 +16,7 @@ using OpenTK.Audio.OpenAL;
 using OpenTK.Graphics.ES20;
 using GameStack.Graphics;
 
-namespace GameStack {
+namespace GameStack.Android {
 	public class AndroidGameView : GLSurfaceView, IGameView, GLSurfaceView.IRenderer, GestureDetector.IOnGestureListener {
 		ConcurrentQueue<EventBase> _queue;
 		FrameArgs _event;

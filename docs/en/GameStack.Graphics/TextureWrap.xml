@@ -1,0 +1,45 @@
+<Type Name="TextureWrap" FullName="GameStack.Graphics.TextureWrap">
+  <TypeSignature Language="C#" Value="public enum TextureWrap" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TextureWrap extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Controls how textures are wrapped; specifically, how textured are rendered with a U or V coordinate outside the 0..1 range.</summary>
+    <remarks>Use with <see cref="T:GameStack.Graphics.Texture" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Clamp">
+      <MemberSignature Language="C#" Value="Clamp" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureWrap Clamp = int32(33071)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureWrap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The color at the edge will be repeated, "smearing" edges of the texture outwards.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Repeat">
+      <MemberSignature Language="C#" Value="Repeat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.Graphics.TextureWrap Repeat = int32(10497)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.TextureWrap</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The texture will repeat (x = x % 1.0); use this with tiling textures.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

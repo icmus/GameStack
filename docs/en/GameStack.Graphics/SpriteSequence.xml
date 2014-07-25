@@ -1,0 +1,143 @@
+<Type Name="SpriteSequence" FullName="GameStack.Graphics.SpriteSequence">
+  <TypeSignature Language="C#" Value="public class SpriteSequence : GameStack.Graphics.FrameSequence&lt;GameStack.Graphics.Sprite&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpriteSequence extends GameStack.Graphics.FrameSequence`1&lt;class GameStack.Graphics.Sprite&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.FrameSequence&lt;GameStack.Graphics.Sprite&gt;</BaseTypeName>
+    <BaseTypeArguments>
+      <BaseTypeArgument TypeParamName="T">GameStack.Graphics.Sprite</BaseTypeArgument>
+    </BaseTypeArguments>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Utility class for drawing a sequence of sprite images at a specified frame rate.</summary>
+    <remarks>In order to update the animation, the object must be added to your scene collection or pumped manually in your update method.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpriteSequence (int framesPerSecond, bool loop, GameStack.Graphics.Sprite[] frames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 framesPerSecond, bool loop, class GameStack.Graphics.Sprite[] frames) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="framesPerSecond" Type="System.Int32" />
+        <Parameter Name="loop" Type="System.Boolean" />
+        <Parameter Name="frames" Type="GameStack.Graphics.Sprite[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="framesPerSecond">Animation rate in frames per second.</param>
+        <param name="loop">If true, animation is looped infinitely.</param>
+        <param name="frames">One or more sprites to be displayed in sequence.</param>
+        <summary>
+        </summary>
+        <remarks>Sprites are expected to be the same size.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpriteSequence (int framesPerSecond, bool loop, GameStack.Graphics.Atlas atlas, string[] spriteNames);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 framesPerSecond, bool loop, class GameStack.Graphics.Atlas atlas, string[] spriteNames) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="framesPerSecond" Type="System.Int32" />
+        <Parameter Name="loop" Type="System.Boolean" />
+        <Parameter Name="atlas" Type="GameStack.Graphics.Atlas" />
+        <Parameter Name="spriteNames" Type="System.String[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName>System.ParamArray</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="framesPerSecond">Animation rate in frames per second.</param>
+        <param name="loop">If true, animation is looped infinitely.</param>
+        <param name="atlas">The atlas asset from which all sprites will be sourced.</param>
+        <param name="spriteNames">One or more names of sprites within the atlas.</param>
+        <summary>
+        </summary>
+        <remarks>Sprites are expected to be the same size. Sprite names are equivalent to their original .png file names, but without the extension.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (OpenTK.Vector3 pos, float scaleX = 1, float scaleY = 1, float rotation = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(valuetype OpenTK.Vector3 pos, float32 scaleX, float32 scaleY, float32 rotation) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pos" Type="OpenTK.Vector3" />
+        <Parameter Name="scaleX" Type="System.Single" />
+        <Parameter Name="scaleY" Type="System.Single" />
+        <Parameter Name="rotation" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="pos">
+        </param>
+        <param name="scaleX">
+        </param>
+        <param name="scaleY">
+        </param>
+        <param name="rotation">
+        </param>
+        <summary>Draws the current frame.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (float x, float y, float z, float scaleX = 1, float scaleY = 1, float rotation = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(float32 x, float32 y, float32 z, float32 scaleX, float32 scaleY, float32 rotation) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="z" Type="System.Single" />
+        <Parameter Name="scaleX" Type="System.Single" />
+        <Parameter Name="scaleY" Type="System.Single" />
+        <Parameter Name="rotation" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">
+        </param>
+        <param name="y">
+        </param>
+        <param name="z">
+        </param>
+        <param name="scaleX">
+        </param>
+        <param name="scaleY">
+        </param>
+        <param name="rotation">
+        </param>
+        <summary>Draws the current frame.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

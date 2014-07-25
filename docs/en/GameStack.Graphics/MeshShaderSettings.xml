@@ -1,0 +1,173 @@
+<Type Name="MeshShaderSettings" FullName="GameStack.Graphics.MeshShaderSettings">
+  <TypeSignature Language="C#" Value="public class MeshShaderSettings" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MeshShaderSettings extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Controls the limits of a mesh shader instance.</summary>
+    <remarks>Using higher limits will consume more resources but will allow for more intricate animations and more lights. The default settings are good enough in most cases.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeshShaderSettings ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoneCount">
+      <MemberSignature Language="C#" Value="public int BoneCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BoneCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The number of bones to be rendered.</summary>
+        <value>
+        </value>
+        <remarks>This should be set equal to the number of bones contained in the mesh(es) to be rendered with this instance.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BoneSlotCount">
+      <MemberSignature Language="C#" Value="public int BoneSlotCount { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BoneSlotCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The maximum number of transformations that can be applied to a bone.</summary>
+        <value>
+        </value>
+        <remarks>This should be equal to the maximum number of bones that can influence any given vertex. Raising this value consumes more resources, lowering it may reduce the accuracy of animations.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Diffuse">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.MeshTextureSlot[] Diffuse { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.MeshTextureSlot[] Diffuse" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.MeshTextureSlot[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the texture slot mapping for the diffuse texture.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Emissive">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.MeshTextureSlot[] Emissive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.MeshTextureSlot[] Emissive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.MeshTextureSlot[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the texture slot mapping for the emissive texture.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxLights">
+      <MemberSignature Language="C#" Value="public int MaxLights { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxLights" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the maximum number of lights.</summary>
+        <value>
+        </value>
+        <remarks>Higher values consume more resources, lower values may cause some lights to be ignored.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.MeshTextureSlot[] Normal { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.MeshTextureSlot[] Normal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.MeshTextureSlot[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the texture slot mapping for the normal texture.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShadingMode">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.ShadingMode ShadingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.ShadingMode ShadingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.ShadingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the shading mode.</summary>
+        <value>
+        </value>
+        <remarks>Currently, only the Phong mode is implemented.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Specular">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.MeshTextureSlot[] Specular { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.MeshTextureSlot[] Specular" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.MeshTextureSlot[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the texture slot mapping for the specular texture.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

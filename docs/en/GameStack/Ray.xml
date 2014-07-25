@@ -1,0 +1,71 @@
+<Type Name="Ray" FullName="GameStack.Ray">
+  <TypeSignature Language="C#" Value="public struct Ray" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit Ray extends System.ValueType" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A utility class representing a ray.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ray (OpenTK.Vector3 position, OpenTK.Vector3 direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Vector3 position, valuetype OpenTK.Vector3 direction) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="position" Type="OpenTK.Vector3" />
+        <Parameter Name="direction" Type="OpenTK.Vector3" />
+      </Parameters>
+      <Docs>
+        <param name="position">The ray's origin.</param>
+        <param name="direction">The ray's normalized direction.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Direction">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector3 Direction;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype OpenTK.Vector3 Direction" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The ray's normalized direction.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector3 Position;" />
+      <MemberSignature Language="ILAsm" Value=".field public valuetype OpenTK.Vector3 Position" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The ray's origin.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

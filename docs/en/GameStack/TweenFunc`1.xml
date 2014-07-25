@@ -1,0 +1,33 @@
+<Type Name="TweenFunc&lt;T&gt;" FullName="GameStack.TweenFunc&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public delegate T TweenFunc&lt;T&gt;(T from, T to, float t);" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed TweenFunc`1&lt;T&gt; extends System.MulticastDelegate" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="from" Type="T" />
+    <Parameter Name="to" Type="T" />
+    <Parameter Name="t" Type="System.Single" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>T</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <typeparam name="T">The type of the value to be interpolated.</typeparam>
+    <param name="from">The starting value.</param>
+    <param name="to">The ending value.</param>
+    <param name="t">The time, between 0 and 1.</param>
+    <summary>Functions matching this delegate can be used with <see cref="T:GameStack.Controller{T}" /> and <see cref="T:GameStack.Transition{T}" />.</summary>
+    <returns>
+    </returns>
+    <remarks>
+    </remarks>
+  </Docs>
+</Type>

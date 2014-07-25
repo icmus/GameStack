@@ -1,0 +1,34 @@
+<Type Name="IWaitFor" FullName="GameStack.IWaitFor">
+  <TypeSignature Language="C#" Value="public interface IWaitFor" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IWaitFor" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implemented by any type that can be yielded from a coroutine.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Check">
+      <MemberSignature Language="C#" Value="public bool Check ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Check() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Checks the current condition to determine if the coroutine may continue.</summary>
+        <returns>True if the condition has been met and the coroutine should continue, false if the coroutine should remain dormant until the next update.</returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,37 @@
+<Type Name="IGestureInput" FullName="GameStack.IGestureInput">
+  <TypeSignature Language="C#" Value="public interface IGestureInput" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IGestureInput" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>Implemented by all UI views that which to receive gesture events within their frame.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="OnGesture">
+      <MemberSignature Language="C#" Value="public void OnGesture (GameStack.Gesture e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void OnGesture(class GameStack.Gesture e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.Gesture" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>Called when a gesture has occurred within the view's frame.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

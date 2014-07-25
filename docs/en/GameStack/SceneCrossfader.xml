@@ -1,0 +1,270 @@
+<Type Name="SceneCrossfader" FullName="GameStack.SceneCrossfader">
+  <TypeSignature Language="C#" Value="public class SceneCrossfader : GameStack.Scene, GameStack.IHandler&lt;GameStack.Resize&gt;, GameStack.IHandler&lt;GameStack.Start&gt;, GameStack.IUpdater, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SceneCrossfader extends GameStack.Scene implements class GameStack.IHandler`1&lt;class GameStack.Resize&gt;, class GameStack.IHandler`1&lt;class GameStack.Start&gt;, class GameStack.IUpdater, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Scene</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IHandler&lt;GameStack.Resize&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>GameStack.IHandler&lt;GameStack.Start&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>GameStack.IUpdater</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>A special type of scene that manages other scenes and adds the ability to cross-fade between the two.</summary>
+    <remarks>This class uses a <see cref="T:GameStack.Graphics.FrameBuffer" /> to store the rendered contents of one scene
+    while transitioning to the next. By blending the two, a smooth fading effect is achieved.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SceneCrossfader (GameStack.IGameView view);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.IGameView view) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="view" Type="GameStack.IGameView" />
+      </Parameters>
+      <Docs>
+        <param name="view">The view to which this scene and the child scenes are attached.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Release resources and also dispose the current scene if there is one.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FadeTo">
+      <MemberSignature Language="C#" Value="public void FadeTo (GameStack.Scene nextScene, float duration = 0.5, bool disposeCurrent = true, bool freezeNext = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FadeTo(class GameStack.Scene nextScene, float32 duration, bool disposeCurrent, bool freezeNext) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nextScene" Type="GameStack.Scene" />
+        <Parameter Name="duration" Type="System.Single" />
+        <Parameter Name="disposeCurrent" Type="System.Boolean" />
+        <Parameter Name="freezeNext" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="nextScene">The next scene to be activated.</param>
+        <param name="duration">The duration of the fade effect in seconds.</param>
+        <param name="disposeCurrent">True if the previous scene should automatically be disposed.</param>
+        <param name="freezeNext">True if the next scene should not begin running automatically.</param>
+        <summary>Stops the current scene, begins the next scene and applies a visual fade transition between the two.</summary>
+        <remarks>If no scene is active yet because the app has just started, use the <see cref="M:GameStack.SceneCrossfader.SetScene(GameStack.Scene)" /> method instead.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IHandler&lt;GameStack.Resize&gt;.Handle">
+      <MemberSignature Language="C#" Value="void IHandler&lt;Resize&gt;.Handle (GameStack.FrameArgs frame, GameStack.Resize e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IHandler&lt;GameStack.Resize&gt;.Handle(class GameStack.FrameArgs frame, class GameStack.Resize e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+        <Parameter Name="e" Type="GameStack.Resize" />
+      </Parameters>
+      <Docs>
+        <param name="frame">
+        </param>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GameStack.IHandler&lt;GameStack.Start&gt;.Handle">
+      <MemberSignature Language="C#" Value="void IHandler&lt;Start&gt;.Handle (GameStack.FrameArgs frame, GameStack.Start e);" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance void GameStack.IHandler&lt;GameStack.Start&gt;.Handle(class GameStack.FrameArgs frame, class GameStack.Start e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+        <Parameter Name="e" Type="GameStack.Start" />
+      </Parameters>
+      <Docs>
+        <param name="frame">
+        </param>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnComposeScenes">
+      <MemberSignature Language="C#" Value="protected virtual void OnComposeScenes (GameStack.FrameArgs e, GameStack.Graphics.Texture prevTexture, GameStack.Graphics.Texture nextTexture, float t);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnComposeScenes(class GameStack.FrameArgs e, class GameStack.Graphics.Texture prevTexture, class GameStack.Graphics.Texture nextTexture, float32 t) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+        <Parameter Name="prevTexture" Type="GameStack.Graphics.Texture" />
+        <Parameter Name="nextTexture" Type="GameStack.Graphics.Texture" />
+        <Parameter Name="t" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <param name="prevTexture">
+        </param>
+        <param name="nextTexture">
+        </param>
+        <param name="t">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDraw">
+      <MemberSignature Language="C#" Value="protected override sealed void OnDraw (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnDraw(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Scene">
+      <MemberSignature Language="C#" Value="public GameStack.Scene Scene { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Scene Scene" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Scene</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the currently active scene.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetScene">
+      <MemberSignature Language="C#" Value="public void SetScene (GameStack.Scene scene);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetScene(class GameStack.Scene scene) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="scene" Type="GameStack.Scene" />
+      </Parameters>
+      <Docs>
+        <param name="scene">The scene to start.</param>
+        <summary>Immediately start the specified scene without a transition.</summary>
+        <remarks>This method is most appropriate when the app has just started and the first scene needs to be set.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Skip">
+      <MemberSignature Language="C#" Value="public void Skip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Skip() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>If a transition is currently in progress, skip it and immediately show the new scene normally.</summary>
+        <remarks>If no transition is in progress, this method merely starts the current scene if it is not running.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update (GameStack.FrameArgs e);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Update(class GameStack.FrameArgs e) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="e" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="e">
+        </param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

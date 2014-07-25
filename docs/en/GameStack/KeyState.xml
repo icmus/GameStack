@@ -1,0 +1,60 @@
+<Type Name="KeyState" FullName="GameStack.KeyState">
+  <TypeSignature Language="C#" Value="public enum KeyState" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed KeyState extends System.Enum" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>Indicates the current state of a key associated with a <see cref="T:GameStack.KeyEvent" />.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Down">
+      <MemberSignature Language="C#" Value="Down" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyState Down = int32(0)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The key has transitioned from an unpressed to a pressed state.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Repeat">
+      <MemberSignature Language="C#" Value="Repeat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyState Repeat = int32(2)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The key has remained held down and a repeat keypress was generated.</summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Up">
+      <MemberSignature Language="C#" Value="Up" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype GameStack.KeyState Up = int32(1)" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.KeyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The key has transitioned from a pressed to an unpressed state.</summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

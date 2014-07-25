@@ -1,0 +1,125 @@
+<Type Name="SpriteMaterial" FullName="GameStack.Graphics.SpriteMaterial">
+  <TypeSignature Language="C#" Value="public class SpriteMaterial : GameStack.Graphics.Material" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SpriteMaterial extends GameStack.Graphics.Material" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Material</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>The default material used with <see cref="T:GameStack.Graphics.Sprite" /> and <see cref="T:GameStack.Graphics.Atlas" />.</summary>
+    <remarks>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SpriteMaterial (GameStack.Graphics.Shader shader, GameStack.Graphics.Texture texture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.Shader shader, class GameStack.Graphics.Texture texture) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="shader" Type="GameStack.Graphics.Shader" />
+        <Parameter Name="texture" Type="GameStack.Graphics.Texture" />
+      </Parameters>
+      <Docs>
+        <param name="shader">The shader to use when drawing the sprite.</param>
+        <param name="texture">Optional.</param>
+        <summary>
+        </summary>
+        <remarks>The most common shader to use is <see cref="T:GameStack.Graphics.SpriteShader" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Color">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector4 Color { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector4 Color" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the material.</summary>
+        <value>
+        </value>
+        <remarks>Set to white to draw the sprite normally; set to another color to tint the sprite.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release shader and texture resources.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBegin">
+      <MemberSignature Language="C#" Value="protected override void OnBegin ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBegin() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnd">
+      <MemberSignature Language="C#" Value="protected override void OnEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnd() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Texture">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Texture Texture { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Texture Texture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Texture</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the texture to use when drawing the sprite.</summary>
+        <value>
+        </value>
+        <remarks>If the texture is replaced, the caller must dispose of the old texture.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

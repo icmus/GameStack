@@ -1,0 +1,90 @@
+<Type Name="PointLight" FullName="GameStack.Graphics.PointLight">
+  <TypeSignature Language="C#" Value="public class PointLight : GameStack.Graphics.Light" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PointLight extends GameStack.Graphics.Light" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.Light</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Simulates a light that sends rays in all directions from a specific point.</summary>
+    <remarks>This type of light is commonly used to simulate a light bulb or other local light sources.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PointLight (OpenTK.Vector3 position, OpenTK.Vector3 ambient, OpenTK.Vector3 diffuse, OpenTK.Vector3 specular, OpenTK.Vector3 attenuation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Vector3 position, valuetype OpenTK.Vector3 ambient, valuetype OpenTK.Vector3 diffuse, valuetype OpenTK.Vector3 specular, valuetype OpenTK.Vector3 attenuation) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="position" Type="OpenTK.Vector3" />
+        <Parameter Name="ambient" Type="OpenTK.Vector3" />
+        <Parameter Name="diffuse" Type="OpenTK.Vector3" />
+        <Parameter Name="specular" Type="OpenTK.Vector3" />
+        <Parameter Name="attenuation" Type="OpenTK.Vector3" />
+      </Parameters>
+      <Docs>
+        <param name="position">The light's world position.</param>
+        <param name="ambient">The ambient contribution.</param>
+        <param name="diffuse">The diffuse contribution.</param>
+        <param name="specular">The specular contribution.</param>
+        <param name="attenuation">The attenuation, or rate of decrease of intensity as a function of distance.</param>
+        <summary>
+        </summary>
+        <remarks>When setting attenuation, X is the quadratic term, Y is the linear term, and Z is the constant term. The attenuation formula is attenuation = 1.0 / (quadratic * dist * dist + linear * dist + constant)</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PointLight (OpenTK.Vector3 position, OpenTK.Vector3 ambient, OpenTK.Vector3 diffuse, OpenTK.Vector3 specular, float attenQuadratic, float attenLinear, float attenConstant);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype OpenTK.Vector3 position, valuetype OpenTK.Vector3 ambient, valuetype OpenTK.Vector3 diffuse, valuetype OpenTK.Vector3 specular, float32 attenQuadratic, float32 attenLinear, float32 attenConstant) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="position" Type="OpenTK.Vector3" />
+        <Parameter Name="ambient" Type="OpenTK.Vector3" />
+        <Parameter Name="diffuse" Type="OpenTK.Vector3" />
+        <Parameter Name="specular" Type="OpenTK.Vector3" />
+        <Parameter Name="attenQuadratic" Type="System.Single" />
+        <Parameter Name="attenLinear" Type="System.Single" />
+        <Parameter Name="attenConstant" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="position">The light's world position.</param>
+        <param name="ambient">The ambient contribution.</param>
+        <param name="diffuse">The diffuse contribution.</param>
+        <param name="specular">The specular contribution.</param>
+        <param name="attenQuadratic">The quadratic attenuation term.</param>
+        <param name="attenLinear">The linear attenuation term.</param>
+        <param name="attenConstant">The constant attenuation term.</param>
+        <summary>
+        </summary>
+        <remarks>The attenuation formula is attenuation = 1.0 / (quadratic * dist * dist + linear * dist + constant)</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public override GameStack.Graphics.LightType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype GameStack.Graphics.LightType Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.LightType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the type of light.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

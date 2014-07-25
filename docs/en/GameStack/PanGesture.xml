@@ -1,0 +1,36 @@
+<Type Name="PanGesture" FullName="GameStack.PanGesture">
+  <TypeSignature Language="C#" Value="public class PanGesture : GameStack.Gesture" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PanGesture extends GameStack.Gesture" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Gesture</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>Instances of this class are added to the event queue when pan gestures have been detected.</summary>
+    <remarks>Only supported on platforms with gesture support (currently mobile). For events of this type to be generated, the <see cref="M:GameStack.IGameView.EnableGesture(GameStack.GestureType)" />method must be called to enable this gesture type.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Translation">
+      <MemberSignature Language="C#" Value="public OpenTK.Vector2 Translation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype OpenTK.Vector2 Translation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>OpenTK.Vector2</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the distance and direction moved during the course of the gesture so far, in pixels.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,169 @@
+<Type Name="Atlas" FullName="GameStack.Graphics.Atlas">
+  <TypeSignature Language="C#" Value="public class Atlas : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Atlas extends System.Object implements class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>Manages a collection of sprites combined together into a single texture (a spritesheet).</summary>
+    <remarks>Atlas assets are created using the pipeline tools.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Atlas (System.IO.Stream stream, GameStack.Graphics.Shader shader = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, class GameStack.Graphics.Shader shader) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="shader" Type="GameStack.Graphics.Shader" />
+      </Parameters>
+      <Docs>
+        <param name="stream">
+        </param>
+        <param name="shader">
+        </param>
+        <summary>Load an asset atlas directly from a stream.</summary>
+        <remarks>The input must contain an atlas file image as created by the pipeline tools.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Atlas (string path, GameStack.Graphics.Shader shader = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string path, class GameStack.Graphics.Shader shader) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+        <Parameter Name="shader" Type="GameStack.Graphics.Shader" />
+      </Parameters>
+      <Docs>
+        <param name="path">Relative asset path.</param>
+        <param name="shader">If provided, always use this shader instead of the default sprite shader.</param>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release textures.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSprite">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite GetSprite (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class GameStack.Graphics.Sprite GetSprite(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The sprite name, matching the original filename, without extension.</param>
+        <summary>Gets a single standard sprite by name.</summary>
+        <returns>
+        </returns>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSprite&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T GetSprite&lt;T&gt; (string name) where T : GameStack.Graphics.Sprite;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetSprite&lt;(class GameStack.Graphics.Sprite) T&gt;(string name) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>GameStack.Graphics.Sprite</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">To retrieve a specialized sprite type, specify a subtype of Sprite.</typeparam>
+        <param name="name">The sprite name, matching the original filename, without extension.</param>
+        <summary>Get a strongly typed sprite instance.</summary>
+        <returns>
+        </returns>
+        <remarks>Use this method to easily retireve SlicedSprite instances from an Atlas. This is just a convenience overload so that casting is not required.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Sprite this[string name] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Sprite Item(string)" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Sprite</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The sprite name, matching the original filename, without extension.</param>
+        <summary>Gets a sprite by name.</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Material">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Material Material { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Material Material" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Material</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the sprite's default material.</summary>
+        <value>
+        </value>
+        <remarks>This material will be used each time a sprite from the Atlas is rendered, unless another material is already in scope.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

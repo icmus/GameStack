@@ -130,8 +130,8 @@ namespace GameStack.Gui {
 		}
 
 		public void RemoveView (View view) {
-			view.Parent = null;
-			_children.Remove(view);
+			if (_children.Remove(view))
+				view.Parent = null;
 		}
 
 		public void ClearViews () {

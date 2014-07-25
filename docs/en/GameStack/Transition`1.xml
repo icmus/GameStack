@@ -1,0 +1,129 @@
+<Type Name="Transition&lt;T&gt;" FullName="GameStack.Transition&lt;T&gt;">
+  <TypeSignature Language="C#" Value="public class Transition&lt;T&gt; : GameStack.IUpdater, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Transition`1&lt;T&gt; extends System.Object implements class GameStack.IUpdater, class System.IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <TypeParameters>
+    <TypeParameter Name="T" />
+  </TypeParameters>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>GameStack.IUpdater</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <typeparam name="T">The type of the controlled value.</typeparam>
+    <summary>Transitions a property from one value to another over time.</summary>
+    <remarks>This is a simpler version of <see cref="T:GameStack.Controller{T}" /> for one-time transitions.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Transition (T from, T to, float duration, GameStack.TweenFunc&lt;T&gt; easing, Action&lt;T&gt; callback, Action done = null);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(!T from, !T to, float32 duration, class GameStack.TweenFunc`1&lt;!T&gt; easing, class System.Action`1&lt;!T&gt; callback, class System.Action done) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="from" Type="T" />
+        <Parameter Name="to" Type="T" />
+        <Parameter Name="duration" Type="System.Single" />
+        <Parameter Name="easing" Type="GameStack.TweenFunc&lt;T&gt;" />
+        <Parameter Name="callback" Type="System.Action&lt;T&gt;" />
+        <Parameter Name="done" Type="System.Action" />
+      </Parameters>
+      <Docs>
+        <param name="from">The starting value.</param>
+        <param name="to">The ending value.</param>
+        <param name="duration">The transition duration in seconds.</param>
+        <param name="easing">The easing function to use.</param>
+        <param name="callback">Called to set the controlled object's property.</param>
+        <param name="done">Called when the transition has finished.</param>
+        <summary>Start a transition immediately.</summary>
+        <remarks>In order to continue running, the transition must either be added to the scene collection by calling <see cref="M:GameStack.Scene.Add(System.Object)" /> or by pumping the transition manually on update.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>End the transition.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDone">
+      <MemberSignature Language="C#" Value="public bool IsDone { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Is the transition finished?</summary>
+        <value>
+        </value>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update (GameStack.FrameArgs frame);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Update(class GameStack.FrameArgs frame) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frame" Type="GameStack.FrameArgs" />
+      </Parameters>
+      <Docs>
+        <param name="frame">Current frame info.</param>
+        <summary>Advance the transition one frame.</summary>
+        <remarks>Generally called automatically when added to the scene collection.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Update">
+      <MemberSignature Language="C#" Value="public void Update (float delta);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Update(float32 delta) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="delta" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="delta">The time that has passed in seconds since the last call.</param>
+        <summary>Advance the transition one frame.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -9,7 +9,7 @@ namespace GameStack {
 		bool Check (T e);
 	}
 
-	public class WaitForBase : IWaitFor {
+	public class WaitFor : IWaitFor {
 		public virtual bool Check () {
 			return false;
 		}
@@ -23,10 +23,7 @@ namespace GameStack {
 		}
 	}
 
-	public class WaitFor : WaitForBase {
-	}
-
-	public class WaitFor<T> : WaitForBase, IWaitFor<T> {
+	public class WaitFor<T> : WaitFor, IWaitFor<T> {
 		Func<T, bool> _condition;
 
 		public WaitFor (Func<T, bool> condition) {
@@ -42,7 +39,7 @@ namespace GameStack {
 		}
 	}
 
-	public class WaitForCoroutine : WaitForBase {
+	public class WaitForCoroutine : WaitFor {
 		ICoroutine _co;
 
 		public WaitForCoroutine (ICoroutine co) {
@@ -54,7 +51,7 @@ namespace GameStack {
 		}
 	}
 
-	public class WaitForTime : WaitForBase {
+	public class WaitForTime : WaitFor {
 		int _start, _duration;
 
 		public WaitForTime (int duration) {

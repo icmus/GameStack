@@ -50,8 +50,8 @@ namespace GameStack.Graphics {
 			_inverse.Invert();
 		}
 
-		public Vector3 Unproject (Vector2 pos, float z) {
-			var source = new Vector3(pos.X, pos.Y, 2f * Mathf.Clamp(z, 0f, 1f) - 1f);
+		public Vector3 Unproject (Vector2 pos, float z = 0) {
+			var source = new Vector3(pos.X, pos.Y, z);
 			Vector3.Transform(ref source, ref _inverse, out source);
 			return source;
 		}

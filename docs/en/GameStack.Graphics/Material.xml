@@ -1,0 +1,102 @@
+<Type Name="Material" FullName="GameStack.Graphics.Material">
+  <TypeSignature Language="C#" Value="public class Material : GameStack.Graphics.ScopedObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Material extends GameStack.Graphics.ScopedObject" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>GameStack.Graphics.ScopedObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>A base class for all materials.</summary>
+    <remarks>Materials store information about how geometry is rendered, independent of the geometry itself. This includes the shader program that will be used as well as the parameters that are passed to the shader. Materials are responsible for setting texture parameters as well. This class can be subtyped to expose more properties specific to certain shaders. For example, <see cref="T:GameStack.Graphics.BlurMaterial" /> exposes properties relevant to the use of <see cref="T:GameStack.Graphics.BlurShader" />.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Material (GameStack.Graphics.Shader shader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class GameStack.Graphics.Shader shader) cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="shader" Type="GameStack.Graphics.Shader" />
+      </Parameters>
+      <Docs>
+        <param name="shader">The shader to be used when this material is active.</param>
+        <summary>
+        </summary>
+        <remarks>The shader will be disposed with the material.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Must be called to release shader resources.</summary>
+        <remarks>The shader is automatically disposed with the material.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnBegin">
+      <MemberSignature Language="C#" Value="protected override void OnBegin ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnBegin() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Set all shader uniforms in preparation for draw.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnEnd">
+      <MemberSignature Language="C#" Value="protected override void OnEnd ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnEnd() cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>If necessary, restore any modified settings.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shader">
+      <MemberSignature Language="C#" Value="public GameStack.Graphics.Shader Shader { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class GameStack.Graphics.Shader Shader" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>GameStack.Graphics.Shader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the shader to be used when the material is active.</summary>
+        <value>
+        </value>
+        <remarks>When switching materials, the caller is responsible for disposing the old material.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

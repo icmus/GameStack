@@ -3,7 +3,7 @@ using System;
 namespace GameStack {
 	// This is a persistent transition type which can be used to control a value
 	// over multiple transitions by repeated calls to the To() method.
-	public class Controller<T> : IDisposable, ITransition, IUpdater, IWaitFor {
+	public class Controller<T> : IDisposable, IUpdater, IWaitFor {
 		T _from, _to, _val;
 		float _time, _duration;
 		TweenFunc<T> _easing;

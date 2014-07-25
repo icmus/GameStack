@@ -1,0 +1,161 @@
+<Type Name="Drawable2D" FullName="GameStack.Graphics.Drawable2D">
+  <TypeSignature Language="C#" Value="public abstract class Drawable2D" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Drawable2D extends System.Object" />
+  <AssemblyInfo>
+    <AssemblyName>GameStack.Desktop</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>An abstract base class for any simple 2D drawable object such as a sprite or quad.</summary>
+    <remarks>When creating new drawing objects, such as customized visualizations, you can derive from this class to expose basic drawing facilities consistent with other classes. For interactive UI objects, consider subclassing <see cref="T:GameStack.Gui.View" /> instead.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Drawable2D ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+        </summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="world" Type="OpenTK.Matrix4" />
+      </Parameters>
+      <Docs>
+        <param name="world">
+        </param>
+        <summary>Draws the object using the current material and camera.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (ref OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="world" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="world">
+        </param>
+        <summary>Draws the object using the current material and camera.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public virtual void Draw (OpenTK.Vector3 pos, float scaleX = 1, float scaleY = 1, float rotation = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Draw(valuetype OpenTK.Vector3 pos, float32 scaleX, float32 scaleY, float32 rotation) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pos" Type="OpenTK.Vector3" />
+        <Parameter Name="scaleX" Type="System.Single" />
+        <Parameter Name="scaleY" Type="System.Single" />
+        <Parameter Name="rotation" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="pos">
+        </param>
+        <param name="scaleX">
+        </param>
+        <param name="scaleY">
+        </param>
+        <param name="rotation">
+        </param>
+        <summary>Draws the object using the current material and camera.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw (float x, float y, float z, float scaleX = 1, float scaleY = 1, float rotation = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw(float32 x, float32 y, float32 z, float32 scaleX, float32 scaleY, float32 rotation) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Single" />
+        <Parameter Name="y" Type="System.Single" />
+        <Parameter Name="z" Type="System.Single" />
+        <Parameter Name="scaleX" Type="System.Single" />
+        <Parameter Name="scaleY" Type="System.Single" />
+        <Parameter Name="rotation" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="x">
+        </param>
+        <param name="y">
+        </param>
+        <param name="z">
+        </param>
+        <param name="scaleX">
+        </param>
+        <param name="scaleY">
+        </param>
+        <param name="rotation">
+        </param>
+        <summary>Draws the object using the current material and camera.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnDraw">
+      <MemberSignature Language="C#" Value="protected abstract void OnDraw (ref OpenTK.Matrix4 world);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnDraw(valuetype OpenTK.Matrix4 world) cil managed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="world" Type="OpenTK.Matrix4&amp;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="world">The world transform to be applied while drawing.</param>
+        <summary>When overridden, must draw the object.</summary>
+        <remarks>
+        </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
