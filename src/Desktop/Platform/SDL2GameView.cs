@@ -19,6 +19,7 @@ namespace GameStack.Desktop {
 		IntPtr _window;
 		int _width, _height;
 		IntPtr _glContext;
+		int _frameRate;
 		FrameArgs _frameArgs;
 		uint _windowId;
 		bool _loadFrame;
@@ -30,10 +31,12 @@ namespace GameStack.Desktop {
 		public event EventHandler Destroyed;
 
 		public SDL2GameView (string title, int width, int height, bool fullscreen = false, bool vsync = true, 
-		                     int x = SDL.SDL_WINDOWPOS_CENTERED, int y = SDL.SDL_WINDOWPOS_CENTERED) {
+		                     int x = SDL.SDL_WINDOWPOS_CENTERED, int y = SDL.SDL_WINDOWPOS_CENTERED,
+		                     int frameRate = 60) {
 			_refCount++;
 			_width = width;
 			_height = height;
+			_frameRate = frameRate;
 
 			_frameArgs = new FrameArgs();
 			_frameArgs.Enqueue(new Start(new Vector2(_width, _height), 1.0f));
@@ -119,7 +122,7 @@ namespace GameStack.Desktop {
 			long freq = Stopwatch.Frequency;
 			long time = Stopwatch.GetTimestamp();
 			long acc = 0;
-			long frameTime = freq / 60;
+			long frameTime = freq / _frameRate;
 			float frameSeconds = frameTime / (float)freq;
 
 			while (!_isDisposed) {
@@ -183,7 +186,7 @@ namespace GameStack.Desktop {
 			long freq = Stopwatch.Frequency;
 			long time = Stopwatch.GetTimestamp();
 			long acc = 0;
-			long frameTime = freq / 60;
+			long frameTime = freq / _frameRate;
 			float frameSeconds = frameTime / (float)freq;
 
 			while (!_isDisposed) {
