@@ -58,7 +58,7 @@ pipeline:
 import: pipeline
 	$(call xbuild,src/pipeline/import/Import.csproj)
 
-desktop:
+desktop: import
 	$(call xbuild,src/Desktop/bindings/GameStack.Desktop.Bindings.csproj)
 	$(call xbuild,src/Desktop/GameStack.Desktop.csproj)
 
