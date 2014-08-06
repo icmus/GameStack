@@ -10,7 +10,6 @@ namespace GameStack {
 
 		public static void Init () {
 			var deviceName = Alc.GetString(IntPtr.Zero, AlcGetString.DefaultAllDevicesSpecifier);
-			Console.WriteLine(deviceName);
 			_device = Alc.OpenDevice(deviceName);
 			_context = Alc.CreateContext(_device, (int[])null);
 			Alc.MakeContextCurrent(_context);

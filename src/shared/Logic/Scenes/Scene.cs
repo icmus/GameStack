@@ -197,7 +197,7 @@ namespace GameStack {
 			}
 			catch (TargetInvocationException ex) {
 				if (ex.InnerException != null) {
-					Console.WriteLine(ex.InnerException.ToString());
+					Console.Error.WriteLine(ex.InnerException.ToString());
 				}
 				#if DEBUG
 				throw;
@@ -212,7 +212,7 @@ namespace GameStack {
 				}
 			}
 			catch (Exception ex) {
-				Console.WriteLine(ex.ToString());
+				Console.Error.WriteLine(ex.ToString());
 				#if DEBUG
 				throw;
 				#endif
