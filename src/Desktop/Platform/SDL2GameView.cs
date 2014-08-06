@@ -105,9 +105,8 @@ namespace GameStack.Desktop {
 			int major, minor;
 			SDL.SDL_GL_GetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_MAJOR_VERSION, out major);
 			SDL.SDL_GL_GetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_MINOR_VERSION, out minor);
-			Console.WriteLine("OpenGL version: {0}.{1}", major, minor);
+			Console.Error.WriteLine("OpenGL version: {0}.{1}", major, minor);
 			#endif
-            Console.Error.WriteLine("OpenGL version: {0}.{1}", major, minor);
 
 			GL.LoadAll();
 			GL.Enable(EnableCap.Multisample);
