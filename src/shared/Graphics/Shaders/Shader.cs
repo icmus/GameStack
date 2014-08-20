@@ -23,13 +23,13 @@ namespace GameStack.Graphics {
 		Shader _master;
 		int _refCount;
 		uint _handle;
-		uint _vertHandle, _fragHandle;
+		uint _vertHandle, _fragHandle, _geomHandle;
 		Dictionary<string, int> _uniforms;
 		Dictionary<string, int> _attributes;
 
 		public uint Handle { get { return _handle; } }
 
-		public Shader (string vertSource, string fragSource, string name = null) {
+		public Shader (string vertSource, string fragSource, string name = null, string geomSource = null) {
 			_name = name ?? this.GetType().FullName;
 			var glContext = ThreadContext.Current.EnsureGLContext();
 			lock (_shaders) {
@@ -52,23 +52,33 @@ namespace GameStack.Graphics {
 				_shaders[glContext].Add(_name, this);
 				_master = this;
 
+				bool hasGeom = !string.IsNullOrWhiteSpace(geomSource);
+
 				// create shader program and link
 #if __ANDROID__
-            _vertHandle = (uint)GL.CreateShader(All.VertexShader);
-            _fragHandle = (uint)GL.CreateShader(All.FragmentShader);
+            	_vertHandle = (uint)GL.CreateShader(All.VertexShader);
+				if (hasGeom)
+					_geomHandle = (uint)GL.CreateShader(All.GeometryShader);
+            	_fragHandle = (uint)GL.CreateShader(All.FragmentShader);
 #else
 				_vertHandle = (uint)GL.CreateShader(ShaderType.VertexShader);
+				if (hasGeom)
+					_geomHandle = (uint)GL.CreateShader(ShaderType.GeometryShader);
 				_fragHandle = (uint)GL.CreateShader(ShaderType.FragmentShader);
 #endif
 
-				if (_vertHandle <= 0 || _fragHandle <= 0)
+				if (_vertHandle <= 0 || _fragHandle <= 0 || (hasGeom && _geomHandle <= 0))
 					throw new ShaderException("Failed to create shader.");
 				_handle = (uint)GL.CreateProgram();
 				if (_handle <= 0)
 					throw new ShaderException("Failed to create program.");
 				CompileShader(_vertHandle, vertSource);
+				if (hasGeom)
+					CompileShader(_geomHandle, geomSource);
 				CompileShader(_fragHandle, fragSource);
 				GL.AttachShader(_handle, _vertHandle);
+				if (hasGeom)
+					GL.AttachShader(_handle, _geomHandle);
 				GL.AttachShader(_handle, _fragHandle);
 				GL.LinkProgram(_handle);
 			}
@@ -237,6 +247,10 @@ namespace GameStack.Graphics {
 			if (--_master._refCount == 0) {
 				GL.DetachShader(_handle, _vertHandle);
 				GL.DeleteShader(_vertHandle);
+				if (_geomHandle > 0) {
+					GL.DetachShader(_handle, _geomHandle);
+					GL.DeleteShader(_geomHandle);
+				}
 				GL.DetachShader(_handle, _fragHandle);
 				GL.DeleteShader(_fragHandle);
 				GL.DeleteProgram(_handle);
