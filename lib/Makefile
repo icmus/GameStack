@@ -1,8 +1,8 @@
 SHELL=/bin/bash
 JSON_NET_VER=6.0.1
-ASSIMP_NET_VER=101
+ASSIMP_NET_VER=tags/3.3.1
 SDL2_CS_VER=master
-ASSIMP_VER=tags/v3.1
+ASSIMP_VER=tags/v3.1.1
 LIBOGG_VER=1.3.2
 LIBOPUS_VER=1.1
 LIBOPUSFILE_VER=0.6
@@ -113,7 +113,7 @@ json-net: folders
 
 assimp-net: folders
 	if [ ! -d assimp-net ]; then \
-		svn checkout -r $(ASSIMP_NET_VER) http://assimp-net.googlecode.com/svn/trunk assimp-net; \
+		svn checkout http://assimp-net.googlecode.com/svn/$(ASSIMP_NET_VER) assimp-net; \
 		patch -d assimp-net -p0 < patches/assimp-nix.patch; \
 	fi
 	xbuild /p:Configuration=Net45-Release assimp-net/AssimpNet.sln

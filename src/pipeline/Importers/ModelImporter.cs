@@ -14,7 +14,7 @@ namespace GameStack.Pipeline {
 		public override void Import (Stream input, Stream output, string filename) {
 			using (var importer = new AssimpContext()) {
 				var scene = importer.ImportFileFromStream(input,
-					           PostProcessSteps.Triangulate | PostProcessSteps.SortByPrimitiveType | PostProcessSteps.GenerateNormals,
+                    PostProcessSteps.Triangulate | PostProcessSteps.SortByPrimitiveType | PostProcessSteps.GenerateNormals,
 					           Path.GetExtension(filename));
 				using (var tw = new TarWriter(output)) {
 					var textures = new Dictionary<string, string>();

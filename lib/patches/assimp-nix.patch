@@ -1,8 +1,8 @@
 Index: AssimpNet/AssimpNet.csproj
 ===================================================================
---- AssimpNet/AssimpNet.csproj	(revision 101)
+--- AssimpNet/AssimpNet.csproj	(revision 123)
 +++ AssimpNet/AssimpNet.csproj	(working copy)
-@@ -136,7 +136,7 @@
+@@ -138,7 +138,7 @@
    <ItemGroup />
    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
    <PropertyGroup>
@@ -11,7 +11,7 @@ Index: AssimpNet/AssimpNet.csproj
    </PropertyGroup>
    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
         Other similar extension points exist, see Microsoft.Common.targets.
-@@ -145,4 +145,4 @@
+@@ -147,4 +147,4 @@
    <Target Name="AfterBuild">
    </Target>
    -->
@@ -20,63 +20,61 @@ Index: AssimpNet/AssimpNet.csproj
 +</Project>
 Index: AssimpNet/Unmanaged/AssimpLibrary.cs
 ===================================================================
---- AssimpNet/Unmanaged/AssimpLibrary.cs	(revision 101)
+--- AssimpNet/Unmanaged/AssimpLibrary.cs	(revision 123)
 +++ AssimpNet/Unmanaged/AssimpLibrary.cs	(working copy)
-@@ -1350,8 +1350,8 @@
+@@ -1465,8 +1465,8 @@
          public const String DefaultWindows32BitPath = "Assimp32.dll";
          public const String DefaultWindows64BitPath = "Assimp64.dll";
  
 -        public const String DefaultLinux32BitPath = "Assimp32.so";
 -        public const String DefaultLinux64BitPath = "Assimp64.so";
-+		public const String DefaultLinux32BitPath = "./libassimp";
-+		public const String DefaultLinux64BitPath = "./libassimp";
++        public const String DefaultLinux32BitPath = "./libassimp";
++        public const String DefaultLinux64BitPath = "./libassimp";
  
-         public static AssimpLibraryImplementation CreateRuntimeImplementation() {
-             if(IsLinux()) {
-@@ -1559,26 +1559,54 @@
- 
-         public override string DefaultLibraryPath32Bit {
-             get {
+         public static AssimpLibraryImplementation CreateRuntimeImplementation()
+         {
+@@ -1713,7 +1713,7 @@
+         {
+             get
+             {
 -                return AssimpDefaultLibraryPath.DefaultLinux32BitPath;
-+				return AssimpDefaultLibraryPath.DefaultLinux32BitPath + LibExtension;
++                return AssimpDefaultLibraryPath.DefaultLinux32BitPath + LibExtension;
              }
          }
  
-         public override string DefaultLibraryPath64Bit {
-             get {
+@@ -1721,22 +1721,49 @@
+         {
+             get
+             {
 -                return AssimpDefaultLibraryPath.DefaultLinux64BitPath;
-+				return AssimpDefaultLibraryPath.DefaultLinux64BitPath + LibExtension;
++                return AssimpDefaultLibraryPath.DefaultLinux64BitPath + LibExtension;
              }
          }
  
 -        [DllImport("libdl.so")]
-+		private static string LibExtension {
-+			get {
-+				return IsMacOsx ? ".dylib" : ".so";
-+			}
-+		}
-+
-+		private static bool IsMacOsx {
-+			get {
-+				var buf = IntPtr.Zero;
-+				try {
-+					buf = Marshal.AllocHGlobal(2048);
-+					if (uname(buf) == 0) {
-+						string os = Marshal.PtrToStringAnsi(buf);
-+						if (os == "Darwin")
-+							return true;
-+					}
-+				} catch {
-+				} finally {
-+					if (buf != IntPtr.Zero)
-+						Marshal.FreeHGlobal(buf);
-+				}
-+				return false;
-+			}
-+		}
-+
-+		[DllImport("libc")]
-+		private static extern int uname (IntPtr buf);
++        public static string LibExtension {
++            get {
++                return IsMacOsx ? ".dylib" : ".so";
++            }
++        }
++            
++        private static bool IsMacOsx {
++            get {
++                var buf = IntPtr.Zero;
++                try {
++                    buf = Marshal.AllocHGlobal(2048);
++                    if (uname(buf) == 0) {
++                        string os = Marshal.PtrToStringAnsi(buf);
++                        if (os == "Darwin")
++                            return true;
++                    }
++                } finally {
++                    if (buf != IntPtr.Zero)
++                        Marshal.FreeHGlobal(buf);
++                }
++                return false;
++            }
++        }
 +
 +        [DllImport("libdl")]
          private static extern IntPtr dlopen(String fileName, int flags);
@@ -93,4 +91,9 @@ Index: AssimpNet/Unmanaged/AssimpLibrary.cs
 +        [DllImport("libdl")]
          private static extern IntPtr dlerror();
  
++        [DllImport("libc")]
++        private static extern int uname (IntPtr buf);
++
          private const int RTLD_NOW = 2;
+ 
+         protected override IntPtr NativeLoadLibrary(String path)
