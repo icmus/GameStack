@@ -21,14 +21,14 @@ namespace GameStack.Graphics {
 		Dictionary<string, Animation> _anims;
 		Dictionary<string, Mesh> _meshes;
 
-		public Model (string path) {
+        public Model (string path, Func<string, MeshShaderSettings, MeshMaterial> matBuilder = null) {
 			using (var stream = Assets.ResolveStream(path)) {
-				this.Initialize(stream);
+				this.Initialize(stream, matBuilder);
 			}
 		}
 
-		public Model (Stream stream) {
-			this.Initialize(stream);
+        public Model (Stream stream, Func<string, MeshShaderSettings, MeshMaterial> matBuilder = null) {
+			this.Initialize(stream, matBuilder);
 		}
 
 		public Node RootNode { get { return _root; } }
@@ -45,7 +45,7 @@ namespace GameStack.Graphics {
 			this.Draw(ref world);
 		}
 
-		void Initialize (Stream stream) {
+        void Initialize (Stream stream, Func<string, MeshShaderSettings, MeshMaterial> matBuilder) {
 			var tr = new TarReader(stream);
 			MemoryStream modelStream = null;
 			var textures = new Dictionary<string, Texture>();
@@ -71,7 +71,7 @@ namespace GameStack.Graphics {
 				if (modelStream == null)
 					throw new ContentException("Model data not found.");
 				using (var reader = new BinaryReader(modelStream)) {
-					this.InitModel(reader, textures);
+                    this.InitModel(reader, textures, matBuilder);
 				}
 			} finally {
 				if (modelStream != null)
@@ -79,8 +79,8 @@ namespace GameStack.Graphics {
 			}
 		}
 
-		void InitModel (BinaryReader reader, Dictionary<string, Texture> textures) {
-			var materials = this.ReadMaterials(reader, textures);
+        void InitModel (BinaryReader reader, Dictionary<string, Texture> textures, Func<string, MeshShaderSettings, MeshMaterial> matBuilder) {
+            var materials = this.ReadMaterials(reader, textures, matBuilder);
 			var meshes = this.ReadMeshes(reader, materials);
 			_meshes = meshes.ToDictionary<Mesh,string>(m => m.Name);
 			_anims = this.ReadAnimations(reader);
@@ -145,42 +145,65 @@ namespace GameStack.Graphics {
 			return node;
 		}
 
-		Material[] ReadMaterials (BinaryReader reader, Dictionary<string, Texture> textures) {
+        Material[] ReadMaterials (BinaryReader reader, Dictionary<string, Texture> textures, Func<string, MeshShaderSettings, MeshMaterial> matBuilder) {
 			var matCount = reader.ReadInt32();
 			var mats = new MeshMaterial[matCount];
 			for (var i = 0; i < matCount; i++) {
 				var name = reader.ReadString();
-				var mat = new MeshMaterial(null, name);
-				mat.IsTwoSided = reader.ReadBoolean();
-				mat.IsWireframeEnabled = reader.ReadBoolean();
+
+				var isTwoSided = reader.ReadBoolean();
+				var isWireframeEnabled = reader.ReadBoolean();
 				var shadingMode = (ShadingMode)reader.ReadInt32();
-				mat.BlendMode = (BlendMode)reader.ReadInt32();
-				mat.Opacity = reader.ReadSingle();
-				mat.Shininess = reader.ReadSingle();
-				mat.ShininessStrength = reader.ReadSingle();
-				mat.ColorAmbient = reader.ReadVector4();
-				mat.ColorDiffuse = reader.ReadVector4();
-				mat.ColorSpecular = reader.ReadVector4();
-				mat.ColorEmissive = reader.ReadVector4();
-				mat.ColorTransparent = reader.ReadVector4();
+				var blendMode = (BlendMode)reader.ReadInt32();
+				var opacity = reader.ReadSingle();
+				var shininess = reader.ReadSingle();
+				var shininessStrength = reader.ReadSingle();
+				var colorAmbient = reader.ReadVector4();
+				var colorDiffuse = reader.ReadVector4();
+				var colorSpecular = reader.ReadVector4();
+				var colorEmissive = reader.ReadVector4();
+				var colorTransparent = reader.ReadVector4();
 				var boneCount = reader.ReadInt32();
 				var boneSlotCount = reader.ReadInt32();
-				mat.DiffuseMap = this.ReadTextureStack(reader, textures);
-				mat.NormalMap = this.ReadTextureStack(reader, textures);
-				mat.SpecularMap = this.ReadTextureStack(reader, textures);
-				mat.EmissiveMap = this.ReadTextureStack(reader, textures);
+				var diffuseMap = this.ReadTextureStack(reader, textures);
+				var normalMap = this.ReadTextureStack(reader, textures);
+				var specularMap = this.ReadTextureStack(reader, textures);
+				var emissiveMap = this.ReadTextureStack(reader, textures);
 
 				var settings = new MeshShaderSettings {
 					MaxLights = 4,
 					BoneCount = boneCount,
 					BoneSlotCount = boneSlotCount,
 					ShadingMode = shadingMode,
-					Diffuse = GetMeshTextureStack(mat.DiffuseMap),
-					Normal = GetMeshTextureStack(mat.NormalMap),
-					Specular = GetMeshTextureStack(mat.SpecularMap),
-					Emissive = GetMeshTextureStack(mat.EmissiveMap)
+					Diffuse = GetMeshTextureStack(diffuseMap),
+					Normal = GetMeshTextureStack(normalMap),
+					Specular = GetMeshTextureStack(specularMap),
+					Emissive = GetMeshTextureStack(emissiveMap)
 				};
-				mat.Shader = new MeshShader(settings);
+
+				MeshMaterial mat;
+				if (matBuilder != null)
+					mat = matBuilder(name, settings);
+				else {
+					mat = new MeshMaterial(null, name);
+					mat.Shader = new MeshShader(settings);
+				}
+
+				mat.IsTwoSided = isTwoSided;
+				mat.IsWireframeEnabled = isWireframeEnabled;
+				mat.BlendMode = blendMode;
+				mat.Opacity = opacity;
+				mat.Shininess = shininess;
+				mat.ShininessStrength = shininessStrength;
+				mat.ColorAmbient = colorAmbient;
+				mat.ColorDiffuse = colorDiffuse;
+				mat.ColorSpecular = colorSpecular;
+				mat.ColorEmissive = colorEmissive;
+				mat.ColorTransparent = colorTransparent;
+				mat.DiffuseMap = diffuseMap;
+				mat.NormalMap = normalMap;
+				mat.SpecularMap = specularMap;
+				mat.EmissiveMap = emissiveMap;
 
 				mats[i] = mat;
 			}
