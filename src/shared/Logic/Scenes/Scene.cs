@@ -20,6 +20,7 @@ namespace GameStack {
 		Dictionary<Type, List<KeyValuePair<object,MethodInfo>>> _handlers;
 		List<IDisposable> _disposables;
 		List<object> _unknowns;
+		List<IEventSource> _sources;
 		object[] _handlerArgs;
 		bool _isVisible, _isUpdating;
 
@@ -31,6 +32,7 @@ namespace GameStack {
 			_handlers = new Dictionary<Type, List<KeyValuePair<object, MethodInfo>>>();
 			_disposables = new List<IDisposable>();
 			_handlerArgs = new object[2];
+            _sources = new List<IEventSource>();
 			_unknowns = new List<object>();
 
 			this.Add(this);
@@ -87,6 +89,10 @@ namespace GameStack {
 				}
 			}
 
+			var source = obj as IEventSource;
+			if(source != null)
+				_sources.Add(source);
+
 			var disposable = obj as IDisposable;
 			if (disposable != null && disposable != this) {
 				_disposables.Add(disposable);
@@ -126,10 +132,14 @@ namespace GameStack {
 				}
 			}
 
+			var source = obj as IEventSource;
+			if(source != null) {
+				any |= _sources.Remove(source);
+			}
+
 			var disposable = obj as IDisposable;
 			if (disposable != null) {
-				_disposables.Remove(disposable);
-				any = true;
+				any |= _disposables.Remove(disposable);
 			}
 
 			if (!any)
@@ -170,6 +180,10 @@ namespace GameStack {
 
 			int count = 0;
 			try {
+				foreach(var source in _sources) {
+					source.Poll(e);
+				}
+
 				foreach (var evt in e.Events) {
 					var t = evt.GetType();
 					_handlerArgs[0] = e;
