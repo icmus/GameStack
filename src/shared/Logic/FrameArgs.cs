@@ -20,11 +20,11 @@ namespace GameStack {
 			_eventsReadOnly = _events.AsReadOnly ();
 		}
 
-		internal void Enqueue (EventBase e) {
+		public void Enqueue (EventBase e) {
 			_events.Add (e);
 		}
 
-		internal void ClearEvents () {
+		public void ClearEvents () {
 			_events.Clear ();
 		}
 	}

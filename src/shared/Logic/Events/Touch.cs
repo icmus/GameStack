@@ -20,7 +20,7 @@ namespace GameStack {
 
 		public bool IsVirtual { get; private set; }
 
-		internal Touch (TouchState state, Vector2 point, Vector2 surfacePoint, long index = 0, bool isVirtual = false) {
+		public Touch (TouchState state, Vector2 point, Vector2 surfacePoint, long index = 0, bool isVirtual = false) {
 			this.State = state;
 			this.Point = point;
 			this.SurfacePoint = surfacePoint;
