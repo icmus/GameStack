@@ -24,13 +24,13 @@ using PixelFormat = OpenTK.Graphics.ES20.All;
 
 namespace GameStack.Graphics {
 	public class FrameBuffer : ScopedObject {
-		int _fb, _oldfb;
+		int _fb, _db, _oldfb;
 		Size _size;
 		Vector4 _color;
 		int[] _oldViewport;
 		Texture _tex;
 
-		public FrameBuffer (Texture texture, bool disposeTexture = false) {
+		public FrameBuffer (Texture texture, bool depthBuffer = false, bool disposeTexture = false) {
 			ThreadContext.Current.EnsureGLContext();
 
 			_size = texture.Size;
@@ -42,15 +42,28 @@ namespace GameStack.Graphics {
 			GL.GenFramebuffers(1, buf);
 			_fb = buf[0];
 
+            if (depthBuffer) {
+                GL.GenRenderbuffers(1, buf);
+                _db = buf [0];
+                GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, _db);
+                GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.DepthComponent16,
+                    _size.Width, _size.Height);
+                GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, 0);
+            }
+
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _fb);
-			GL.BindTexture(TextureTarget.Texture2D, texture.Handle);
+
 			#if __DESKTOP__
 			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.ColorAttachment0, TextureTarget.Texture2D, texture.Handle, 0);
 			#else
 			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferSlot.ColorAttachment0, TextureTarget.Texture2D, texture.Handle, 0);
 			#endif
 
-			GL.BindTexture(TextureTarget.Texture2D, 0);
+            if (depthBuffer) {
+                GL.FramebufferRenderbuffer(FramebufferTarget.Framebuffer, FramebufferAttachment.DepthAttachment,
+                    RenderbufferTarget.Renderbuffer, _db);
+            }
+
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _oldfb);
 
 			this.ClearOnBegin = true;
@@ -73,7 +86,7 @@ namespace GameStack.Graphics {
 			GL.Viewport(_size);
 			if (this.ClearOnBegin) {
 				GL.ClearColor(_color.X, _color.Y, _color.Z, _color.W);
-				GL.Clear(ClearBufferMask.ColorBufferBit);
+				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 			}
 		}
 
@@ -105,6 +118,10 @@ namespace GameStack.Graphics {
 		}
 
 		public override void Dispose () {
+			if (_db > 0) {
+				GL.DeleteRenderbuffers(1, new int[] { _db });
+				_db = -1;
+			}
 			if (_fb > 0) {
 				GL.DeleteFramebuffers(1, new int[] { _fb });
 				_fb = -1;
