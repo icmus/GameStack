@@ -46,7 +46,7 @@ namespace GameStack.Graphics {
                 GL.GenRenderbuffers(1, buf);
                 _db = buf [0];
                 GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, _db);
-                GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.DepthComponent16,
+                GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.DepthComponent32,
                     _size.Width, _size.Height);
                 GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, 0);
             }
