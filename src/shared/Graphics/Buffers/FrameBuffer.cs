@@ -68,7 +68,6 @@ namespace GameStack.Graphics {
                     RenderbufferTarget.Renderbuffer, _db);
             }
 
-            Console.WriteLine(GL.CheckFramebufferStatus(FramebufferTarget.Framebuffer));
 //            var check = GL.CheckFramebufferStatus(FramebufferTarget.Framebuffer);
 //            if (check != FramebufferErrorCode.FramebufferComplete)
 //                throw new InvalidOperationException("Failed to create FBO: " + check.ToString());
