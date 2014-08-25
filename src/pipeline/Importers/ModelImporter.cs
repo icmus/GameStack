@@ -52,7 +52,9 @@ namespace GameStack.Pipeline
             writer.Write(scene.MaterialCount);
             for (var i = 0; i < scene.MaterialCount; i++) {
                 var mat = scene.Materials[i];
-                this.WriteMaterial(mat, writer, textures, boneCounts[i], boneSlotCounts[i]);
+                this.WriteMaterial(mat, writer, textures,
+                    boneCounts.ContainsKey(i) ? boneCounts[i] : 0,
+                    boneSlotCounts.ContainsKey(i) ? boneSlotCounts[i] : 0);
             }
 
             writer.Write(scene.MeshCount);
