@@ -32,9 +32,8 @@ namespace GameStack.Graphics {
 
 		public FrameBuffer (Texture texture, bool depthBuffer = false, bool disposeTexture = false) {
 			ThreadContext.Current.EnsureGLContext();
-
+            var msaa = texture.Settings.Samples > 1;
 			_size = texture.Size;
-
 			_oldfb = this.CurrentFrameBuffer;
 			_oldViewport = new int[4];
 
@@ -46,15 +45,20 @@ namespace GameStack.Graphics {
                 GL.GenRenderbuffers(1, buf);
                 _db = buf [0];
                 GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, _db);
-                GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.DepthComponent32,
-                    _size.Width, _size.Height);
+                if (msaa)
+                    GL.RenderbufferStorageMultisample(RenderbufferTarget.Renderbuffer, texture.Settings.Samples,
+                        RenderbufferStorage.DepthComponent32, _size.Width, _size.Height);
+                else
+                    GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.DepthComponent32,
+                        _size.Width, _size.Height);
                 GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, 0);
             }
 
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _fb);
 
 			#if __DESKTOP__
-			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.ColorAttachment0, TextureTarget.Texture2D, texture.Handle, 0);
+			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.ColorAttachment0,
+                msaa ? TextureTarget.Texture2DMultisample : TextureTarget.Texture2D, texture.Handle, 0);
 			#else
 			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferSlot.ColorAttachment0, TextureTarget.Texture2D, texture.Handle, 0);
 			#endif
@@ -64,6 +68,10 @@ namespace GameStack.Graphics {
                     RenderbufferTarget.Renderbuffer, _db);
             }
 
+            Console.WriteLine(GL.CheckFramebufferStatus(FramebufferTarget.Framebuffer));
+            var check = GL.CheckFramebufferStatus(FramebufferTarget.Framebuffer);
+            if (check != FramebufferErrorCode.FramebufferComplete)
+                throw new InvalidOperationException("Failed to create FBO: " + check.ToString());
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _oldfb);
 
 			this.ClearOnBegin = true;

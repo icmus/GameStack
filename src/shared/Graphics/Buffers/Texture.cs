@@ -35,9 +35,12 @@ namespace GameStack.Graphics {
 		public TextureWrap WrapS { get; set; }
 		public TextureWrap WrapT { get; set; }
 
+        public int Samples { get; set; }
+
 		public TextureSettings () {
 			this.MagFilter = this.MinFilter = TextureFilter.Linear;
 			this.WrapS = this.WrapT = TextureWrap.Clamp;
+            this.Samples = 1;
 		}
 	}
 
@@ -128,31 +131,39 @@ namespace GameStack.Graphics {
 			// upload the texture into a texture buffer
 			_handle = (uint)GL.GenTexture();
 
+            var msaa = _settings.Samples > 1;
+            var target = msaa ? TextureTarget.Texture2DMultisample : TextureTarget.Texture2D;
 			GL.PixelStore(PixelStoreParameter.UnpackAlignment, 1);
 			GL.ActiveTexture(TextureUnit.Texture0);
-			GL.BindTexture(TextureTarget.Texture2D, _handle);
-			if (buf == null)
-				#if __ANDROID__
+            GL.BindTexture(target, _handle);
+            if (buf == null) {
+                #if __ANDROID__
 				GL.TexImage2D(TextureTarget.Texture2D, 0, (int)PixelInternalFormat.Rgba, _size.Width, _size.Height, 0, _format, PixelType.UnsignedByte, IntPtr.Zero);
-				#else
-				GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height, 0, _format, PixelType.UnsignedByte, IntPtr.Zero);
-				#endif
-			else {
+                #else
+                if(msaa) {
+                    GL.TexImage2DMultisample(TextureTargetMultisample.Texture2DMultisample, _settings.Samples, PixelInternalFormat.Rgba, _size.Width, _size.Height, true);
+                }
+                else
+                    GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height, 0, _format, PixelType.UnsignedByte, IntPtr.Zero);
+                #endif
+            } else {
 				#if __ANDROID__
 				GL.TexImage2D(TextureTarget.Texture2D, 0, (int)PixelInternalFormat.Rgba, _size.Width, _size.Height,
 					0, _format, PixelType.UnsignedByte, buf);
 				#else
-				GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height,
-					0, _format, PixelType.UnsignedByte, buf);
+				GL.TexImage2D(target, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height,
+    				0, _format, PixelType.UnsignedByte, buf);
 				#endif
 				if (_settings.MinFilter == TextureFilter.Trilinear)
 					GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
 			}
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMagFilter, (int)_settings.MagFilter);
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureMinFilter, (int)_settings.MinFilter);
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapS, (int)_settings.WrapS);
-			GL.TexParameter(TextureTarget.Texture2D, TextureParameterName.TextureWrapT, (int)_settings.WrapT);
-			GL.BindTexture(TextureTarget.Texture2D, 0);
+            if (!msaa) {
+                GL.TexParameter(target, TextureParameterName.TextureMagFilter, (int)_settings.MagFilter);
+                GL.TexParameter(target, TextureParameterName.TextureMinFilter, (int)_settings.MinFilter);
+                GL.TexParameter(target, TextureParameterName.TextureWrapS, (int)_settings.WrapS);
+                GL.TexParameter(target, TextureParameterName.TextureWrapT, (int)_settings.WrapT);
+            }
+			GL.BindTexture(target, 0);
 
 			_texelSize = new Vector2(1f / _size.Width, 1f / _size.Height);
 
@@ -160,17 +171,19 @@ namespace GameStack.Graphics {
 		}
 
 		public void Apply() {
-			GL.BindTexture(TextureTarget.Texture2D, _handle);
+            GL.BindTexture(_settings.Samples > 1 ? TextureTarget.Texture2DMultisample : TextureTarget.Texture2D, _handle);
 		}
 
 		public void GenerateMipmaps () {
 			if (_settings.MinFilter != TextureFilter.Trilinear)
 				throw new InvalidOperationException("Texture filter does not use mipmaps.");
 
+            var target = _settings.Samples > 1 ? TextureTarget.Texture2DMultisample : TextureTarget.Texture2D;
+
 			GL.ActiveTexture(TextureUnit.Texture0);
-			GL.BindTexture(TextureTarget.Texture2D, _handle);
+			GL.BindTexture(target, _handle);
 			GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
-			GL.BindTexture(TextureTarget.Texture2D, 0);
+			GL.BindTexture(target, 0);
 		}
 
 		public void Dispose () {
