@@ -32,8 +32,7 @@ namespace GameStack.Graphics {
 			_ownResources = ownMaterial;
 		}
 
-		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true) {
-			var tex = new Texture(stream, settings);
+        public Sprite (Texture tex, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true) {
 			_material = new SpriteMaterial(new SpriteShader(), tex);
 
 			if (rect == Vector4.Zero)
@@ -65,6 +64,20 @@ namespace GameStack.Graphics {
 
 			_ownResources = true;
 		}
+		public Sprite (Texture tex, Vector4 rect, bool relativeRect = false)
+			: this(tex, rect, relativeRect, Vector4.One)
+		{
+		}
+		public Sprite (Texture tex)
+			: this(tex, Vector4.Zero, false, Vector4.One)
+		{
+		}
+
+		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true)
+			: this(new Texture(stream, settings), rect, relativeRect, color, flipV)
+		{
+
+		}
 		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect = false)
 			: this(stream, settings, rect, relativeRect, Vector4.One)
 		{
@@ -86,6 +99,7 @@ namespace GameStack.Graphics {
 			: this(path, settings, Vector4.Zero, false, Vector4.One)
 		{
 		}
+
 
 		public Material Material { get { return _material; } }
 
