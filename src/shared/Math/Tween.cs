@@ -28,6 +28,17 @@ namespace GameStack {
 			};
 		}
 
+        public static TweenFunc<Vector4> WrapVector4 (TweenFunc<float> func) {
+            return (from, to, t) => {
+                return new Vector4(
+                    func(from.X, to.X, t),
+                    func(from.Y, to.Y, t),
+                    func(from.Z, to.Z, t),
+                    func(from.W, to.W, t)
+                );
+            };
+        }
+
 		public static TweenFunc<Color> WrapColor (TweenFunc<float> func) {
 			return (from, to, t) => {
 				return Color.FromArgb(

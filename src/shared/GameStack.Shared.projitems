@@ -99,5 +99,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\BlurMaterial.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\BlurShader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\IEventSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\Hex.cs" />
   </ItemGroup>
 </Project>
