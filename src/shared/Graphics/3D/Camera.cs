@@ -27,6 +27,8 @@ namespace GameStack.Graphics {
 
 			Matrix4 wv;
 			Matrix4.Mult(ref world, ref _view, out wv);
+			Matrix4 vp;
+			Matrix4.Mult(ref _view, ref _projection, out vp);
 
 			Matrix4 nw = wv;
 			nw.M41 = nw.M42 = nw.M43 = 0f;
@@ -34,7 +36,10 @@ namespace GameStack.Graphics {
 			nw.Transpose();
 
 			shader.Uniform("World", ref world);
+			shader.Uniform("View", ref _view);
+			shader.Uniform("Projection", ref _projection);
 			shader.Uniform("WorldView", ref wv);
+			shader.Uniform("ViewProjection", ref vp);
 			shader.Uniform("WorldViewProjection", ref wvp);
 			shader.Uniform("NormalMatrix", ref nw);
 		}
