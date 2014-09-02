@@ -14,7 +14,6 @@ namespace GameStack
                 value = value.Substring(1);
             uint v;
             uint.TryParse(value, System.Globalization.NumberStyles.HexNumber, null, out v);
-            Console.WriteLine(v);
 
             return new Vector4(
                 (float)(v >> 24) / 255f,

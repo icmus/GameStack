@@ -176,7 +176,7 @@ namespace GameStack.Gui {
 
 		#region IPointerInput implementation
 
-        public virtual void OnPointerEnter (Vector2 where) {
+        public virtual void OnPointerEnter (FrameArgs e, Vector2 where) {
 			switch (this.State) {
 				case ButtonState.Active:
 					break;
@@ -192,7 +192,7 @@ namespace GameStack.Gui {
 			}
 		}
 
-        public virtual void OnPointerExit (Vector2 where) {
+        public virtual void OnPointerExit (FrameArgs e, Vector2 where) {
 			switch (this.State) {
 				case ButtonState.Over:
 					this.State = ButtonState.Normal;
@@ -206,7 +206,7 @@ namespace GameStack.Gui {
 			}
 		}
 
-		public virtual void OnPointerDown (Vector2 where) {
+        public virtual void OnPointerDown (FrameArgs e, Vector2 where) {
 			switch (this.State) {
 				case ButtonState.Disabled:
 					break;
@@ -219,7 +219,7 @@ namespace GameStack.Gui {
 			}
 		}
 
-		public virtual void OnPointerUp (Vector2 where) {
+        public virtual void OnPointerUp (FrameArgs e, Vector2 where) {
 			switch (this.State) {
 				case ButtonState.Outside:
 					this.State = ButtonState.Normal;
@@ -235,7 +235,7 @@ namespace GameStack.Gui {
 			}
 		}
 
-		public virtual void OnPointerMove (Vector2 where) {
+        public virtual void OnPointerMove (FrameArgs e, Vector2 where) {
 		}
 
 		#endregion
