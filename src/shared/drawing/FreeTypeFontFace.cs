@@ -9,10 +9,12 @@ namespace GameStack.Graphics {
 		static bool _initialized = false;
 		static IntPtr _ftLib;
 		IntPtr _ftFace;
+        GCHandle _gcHandle;
 		bool _isDisposed;
 
-		FreeTypeFontFace (IntPtr handler, IntPtr ft_face) : base(handler, true) {
+		FreeTypeFontFace (IntPtr handler, IntPtr ft_face, GCHandle gcHandle) : base(handler, true) {
 			_ftFace = ft_face;
+			_gcHandle = gcHandle;
 		}
 
 		public new void Dispose () {
@@ -29,17 +31,18 @@ namespace GameStack.Graphics {
 				Initialize();
 
 			IntPtr ft_face;
+			GCHandle gcHandle;
 			using (var s = GameStack.Assets.ResolveStream(path)) {
 				using (var ms = new MemoryStream((int)s.Length)) {
 					s.CopyTo(ms);
-					var handle = GCHandle.Alloc(ms.ToArray(), GCHandleType.Pinned);
-					try {
+					gcHandle = GCHandle.Alloc(ms.ToArray(), GCHandleType.Pinned);
+                    try {
 						int err;
-						if ((err = FT_New_Memory_Face(_ftLib, handle.AddrOfPinnedObject(), (int)ms.Length, faceIndex, out ft_face)) != 0)
+						if ((err = FT_New_Memory_Face(_ftLib, gcHandle.AddrOfPinnedObject(), (int)ms.Length, faceIndex, out ft_face)) != 0)
 							throw new FreeTypeException("Error " + err + " loading font face " + path);
-					}
-					finally {
-						handle.Free();
+					} catch {
+						gcHandle.Free();
+						throw;
 					}
 				}
 			}
@@ -48,7 +51,7 @@ namespace GameStack.Graphics {
 			if (cairo_font_face_status(handler) != 0)
 				throw new FreeTypeException("Can't create cairo font for " + path);
 
-			return new FreeTypeFontFace(handler, ft_face);
+			return new FreeTypeFontFace(handler, ft_face, gcHandle);
 		}
 
 		private static void Initialize () {
