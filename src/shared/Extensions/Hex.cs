@@ -3,7 +3,7 @@ using OpenTK;
 
 namespace GameStack
 {
-    public static class Hex
+    public static partial class Hex
     {
         public static Vector4 ToVector4(string value) {
             if (value == null)
