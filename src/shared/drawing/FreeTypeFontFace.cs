@@ -23,6 +23,7 @@ namespace GameStack.Graphics {
 				cairo_font_face_destroy(Handle);
 				FT_Done_Face(_ftFace);
 				_isDisposed = true;
+				_gcHandle.Free();
 			}
 		}
 
@@ -36,7 +37,7 @@ namespace GameStack.Graphics {
 				using (var ms = new MemoryStream((int)s.Length)) {
 					s.CopyTo(ms);
 					gcHandle = GCHandle.Alloc(ms.ToArray(), GCHandleType.Pinned);
-                    try {
+					try {
 						int err;
 						if ((err = FT_New_Memory_Face(_ftLib, gcHandle.AddrOfPinnedObject(), (int)ms.Length, faceIndex, out ft_face)) != 0)
 							throw new FreeTypeException("Error " + err + " loading font face " + path);
