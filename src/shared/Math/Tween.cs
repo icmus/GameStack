@@ -2,7 +2,6 @@
 //     (c) 2013 Brett Ernst, Jameson Ernst, Robert Marsters, Gabriel Isenberg https://github.com/gisenberg/tabletop.io.gui
 //     Licensed under the terms of the MIT license.
 using System;
-using System.Drawing;
 using OpenTK;
 
 namespace GameStack {
@@ -41,11 +40,12 @@ namespace GameStack {
 
 		public static TweenFunc<Color> WrapColor (TweenFunc<float> func) {
 			return (from, to, t) => {
-				return Color.FromArgb(
-					(int)func(from.A, to.A, t),
+				return new Color(
 					(int)func(from.R, to.R, t),
 					(int)func(from.G, to.G, t),
-					(int)func(from.B, to.B, t));
+					(int)func(from.B, to.B, t),
+					(int)func(from.A, to.A, t)
+				);
 			};
 		}
 

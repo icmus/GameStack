@@ -16,10 +16,10 @@ namespace GameStack
 			uint.TryParse(value, System.Globalization.NumberStyles.HexNumber, null, out v);
 
 			return new Color(
-				(double)(v >> 24) / 255.0,
-				(double)((v >> 16) & 0xff) / 255.0,
-				(double)((v >> 8) & 0xff) / 255.0,
-				(double)(v & 0xff) / 255.0
+				v >> 24,
+				(v >> 16) & 0xff,
+				(v >> 8) & 0xff,
+				v & 0xff
 			);
 		}
 	}

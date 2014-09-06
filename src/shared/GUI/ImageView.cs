@@ -9,12 +9,12 @@ namespace GameStack.Gui {
 
 		public ImageView (Sprite sprite, LayoutSpec spec = null, bool fill = true) : base(spec) {
 			this.Sprite = sprite;
-			this.Color = Vector4.One;
+			this.Color = Color.White;
 			this.Fill = fill;
 		}
 
 		public Sprite Sprite { get; set; }
-		public Vector4 Color { get; set; }
+		public Color Color { get; set; }
 		public bool Fill { get; set; }
 
 		public override void Layout () {
@@ -34,7 +34,7 @@ namespace GameStack.Gui {
 				Matrix4.Mult(ref _scale, ref transform, out t);
 
 			SpriteMaterial spriteMat;
-			if (Color != Vector4.One && (spriteMat = Sprite.Material as SpriteMaterial) != null) {
+			if (Color != Color.White && (spriteMat = Sprite.Material as SpriteMaterial) != null) {
 				var c = spriteMat.Color;
 				spriteMat.Color = Color;
 				this.Sprite.Draw(ref t);

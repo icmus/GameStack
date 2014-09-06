@@ -1,7 +1,6 @@
 #pragma warning disable 0618
 
 using System;
-using System.Drawing;
 using System.IO;
 using OpenTK;
 using OpenTK.Graphics;
@@ -26,7 +25,7 @@ namespace GameStack.Graphics {
 	public class FrameBuffer : ScopedObject {
 		int _fb, _db, _oldfb;
 		Size _size;
-		Vector4 _color;
+		Color _color;
 		int[] _oldViewport;
 		Texture _tex;
 
@@ -92,7 +91,7 @@ namespace GameStack.Graphics {
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _fb);
 			GL.Viewport(_size);
 			if (this.ClearOnBegin) {
-				GL.ClearColor(_color.X, _color.Y, _color.Z, _color.W);
+				GL.ClearColor(_color.R, _color.G, _color.B, _color.A);
 				GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 			}
 		}

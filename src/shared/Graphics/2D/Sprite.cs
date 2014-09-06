@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.Drawing;
 using OpenTK;
 using OpenTK.Graphics;
 
@@ -32,7 +31,7 @@ namespace GameStack.Graphics {
 			_ownResources = ownMaterial;
 		}
 
-        public Sprite (Texture tex, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true) {
+        public Sprite (Texture tex, Vector4 rect, bool relativeRect, Color color, bool flipV = true) {
 			_material = new SpriteMaterial(new SpriteShader(), tex);
 
 			if (rect == Vector4.Zero)
@@ -46,12 +45,13 @@ namespace GameStack.Graphics {
 
 			_size = new Vector2(rect.Z - rect.X, rect.W - rect.Y);
 
+			var c = (Vector4)color;
 			_vbuffer = new VertexBuffer(VertexFormat.PositionColorUV);
 			_vbuffer.Data = new [] {
-				rect.X, rect.Y, 0f, color.X, color.Y, color.Z, color.W, 0f, flipV ? 1f : 0f,
-				rect.Z, rect.Y, 0f, color.X, color.Y, color.Z, color.W, 1f, flipV ? 1f : 0f,
-				rect.Z, rect.W, 0f, color.X, color.Y, color.Z, color.W, 1f, flipV ? 0f : 1f,
-				rect.X, rect.W, 0f, color.X, color.Y, color.Z, color.W, 0f, flipV ? 0f : 1f
+				rect.X, rect.Y, 0f, c.X, c.Y, c.Z, c.W, 0f, flipV ? 1f : 0f,
+				rect.Z, rect.Y, 0f, c.X, c.Y, c.Z, c.W, 1f, flipV ? 1f : 0f,
+				rect.Z, rect.W, 0f, c.X, c.Y, c.Z, c.W, 1f, flipV ? 0f : 1f,
+				rect.X, rect.W, 0f, c.X, c.Y, c.Z, c.W, 0f, flipV ? 0f : 1f
 			};
 			_vbuffer.Commit ();
 
@@ -65,29 +65,29 @@ namespace GameStack.Graphics {
 			_ownResources = true;
 		}
 		public Sprite (Texture tex, Vector4 rect, bool relativeRect = false)
-			: this(tex, rect, relativeRect, Vector4.One)
+			: this(tex, rect, relativeRect, Color.White)
 		{
 		}
 		public Sprite (Texture tex)
-			: this(tex, Vector4.Zero, false, Vector4.One)
+			: this(tex, Vector4.Zero, false, Color.White)
 		{
 		}
 
-		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true)
+		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect, Color color, bool flipV = true)
 			: this(new Texture(stream, settings), rect, relativeRect, color, flipV)
 		{
 
 		}
 		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect = false)
-			: this(stream, settings, rect, relativeRect, Vector4.One)
+			: this(stream, settings, rect, relativeRect, Color.White)
 		{
 		}
 		public Sprite (Stream stream, TextureSettings settings = null)
-			: this(stream, settings, Vector4.Zero, false, Vector4.One)
+			: this(stream, settings, Vector4.Zero, false, Color.White)
 		{
 		}
 
-		public Sprite (String path, TextureSettings settings, Vector4 rect, bool relativeRect, Vector4 color, bool flipV = true)
+		public Sprite (String path, TextureSettings settings, Vector4 rect, bool relativeRect, Color color, bool flipV = true)
 			: this(Assets.ResolveStream(path), settings, rect, relativeRect, color, flipV)
 		{
 		}

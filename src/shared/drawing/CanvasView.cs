@@ -34,7 +34,7 @@ namespace GameStack.Gui {
 
 		public override void Layout () {
 			base.Layout();
-			var sz = new System.Drawing.Size((int)this.Size.Width, (int)this.Size.Height);
+			var sz = new Size((int)this.Size.Width, (int)this.Size.Height);
 			if (_ctx == null || _surface.Width != sz.Width || _surface.Height != sz.Height) {
 				this.Release();
 				_surface = new ImageSurface(Format.Argb32, sz.Width, sz.Height);
@@ -46,7 +46,7 @@ namespace GameStack.Gui {
 				#else
 				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, null, PixelFormat.Bgra));
 				#endif
-				_quad = new Quad(_mat, new Vector4(0f, 0f, sz.Width, sz.Height), Vector4.One, true);
+				_quad = new Quad(_mat, new Vector4(0f, 0f, sz.Width, sz.Height), Color.White, true);
 				this.Invalidate();
 			}
 			_isValid = false;

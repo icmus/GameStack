@@ -15,7 +15,7 @@ namespace GameStack.Graphics {
 		float _width, _kerning, _leading;
 		string _text;
 		bool _isDirty;
-		Vector4 _color;
+		Color _color;
 		Vector2 _actualSize;
 		VertexBuffer _vbuffer;
 		IndexBuffer _ibuffer;
@@ -29,7 +29,7 @@ namespace GameStack.Graphics {
 			_font = font;
 			_width = width;
 			_text = text;
-			_color = Vector4.One;
+			_color = Color.White;
 			_isDirty = true;
 		}
 
@@ -83,7 +83,7 @@ namespace GameStack.Graphics {
 			}
 		}
 
-		public Vector4 Color {
+		public Color Color {
 			get {
 				return _color;
 			}

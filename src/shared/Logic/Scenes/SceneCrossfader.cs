@@ -72,9 +72,9 @@ namespace GameStack
 				Skip();
 			else {
 				if (_prevTexture == null)
-					_prevTexture = new Texture(new System.Drawing.Size((int)startArgs.Size.X, (int)startArgs.Size.Y));
+					_prevTexture = new Texture(new Size((int)startArgs.Size.X, (int)startArgs.Size.Y));
 				if (_nextTexture == null)
-					_nextTexture = new Texture(new System.Drawing.Size((int)startArgs.Size.X, (int)startArgs.Size.Y));
+					_nextTexture = new Texture(new Size((int)startArgs.Size.X, (int)startArgs.Size.Y));
 				if (_prevFBO == null)
 					_prevFBO = new FrameBuffer(_prevTexture);
 				if (_nextFBO == null)
@@ -176,19 +176,19 @@ namespace GameStack
 		{
 			using (_cam.Begin()) {
 				var origColor = ClearColor;
-				ClearColor = System.Drawing.Color.Black;
+				ClearColor = Color.Black;
 				base.OnDraw(e);
 				ClearColor = origColor;
 
 				_mat.Texture = prevTexture;
-				_mat.Color = Vector4.One;
+				_mat.Color = Color.White;
 				using (_mat.Begin()) {
 					_quad.Draw(0, 0, 0);
 				}
 
 				if (_t > 0) {
 					_mat.Texture = nextTexture;
-					_mat.Color = new Vector4(t, t, t, t);
+					_mat.Color = new Color(t, t, t, t);
 					using (_mat.Begin()) {
 						_quad.Draw(0, 0, 1);
 					}

@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using OpenTK;
 using OpenTK.Graphics;
 
@@ -13,10 +12,11 @@ using OpenTK.Graphics.ES20;
 namespace GameStack.Graphics {
 	public class SlicedSprite : Sprite {
 		Vector2 _origin, _tileSize, _texelSize;
-		Vector4 _border, _outerUV, _innerUV, _color;
+		Vector4 _border, _outerUV, _innerUV;
+		Vector4 _color;
 		bool _tileX, _tileY, _hollow;
 
-		public SlicedSprite (SpriteMaterial material, Vector2 pos, Vector2 size, Vector2 origin, Vector4 color, Vector4 border, bool tileX, bool tileY, bool hollow)
+		public SlicedSprite (SpriteMaterial material, Vector2 pos, Vector2 size, Vector2 origin, Color color, Vector4 border, bool tileX, bool tileY, bool hollow)
 			: base(material, size, new VertexBuffer(VertexFormat.PositionColorUV), new IndexBuffer(), 0, 0, true) {
 			ThreadContext.Current.EnsureGLContext();
 

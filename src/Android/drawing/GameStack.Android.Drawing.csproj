@@ -58,17 +58,9 @@
   <Import Project="..\..\shared\drawing\GameStack.Shared.Drawing.projitems" Label="Shared" Condition="Exists('..\..\shared\drawing\GameStack.Shared.Drawing.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="armeabi-v7a\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\GameStack.Android.csproj">
       <Project>{4F6E9D20-6F6F-441D-8FD2-940CECE87D24}</Project>
       <Name>GameStack.Android</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedNativeLibrary Include="..\..\..\bin\android\libcairo.so">
-      <Link>armeabi-v7a\libcairo.so</Link>
-    </EmbeddedNativeLibrary>
   </ItemGroup>
 </Project>

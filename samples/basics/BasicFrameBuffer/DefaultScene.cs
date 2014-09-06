@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using GameStack;
 using GameStack.Graphics;
 using OpenTK;
@@ -47,7 +46,7 @@ namespace Basics {
 				Vector4.One);
 
 			// a black background suits this example better
-			this.ClearColor = System.Drawing.Color.Black;
+			this.ClearColor = Color.Black;
 		}
 
 		protected override void OnDraw (FrameArgs e) {

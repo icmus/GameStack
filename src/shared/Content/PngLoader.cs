@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Runtime.InteropServices;
-using System.Drawing;
 using GameStack.Bindings;
 #if __MOBILE__
 using OpenTK.Graphics.ES20;

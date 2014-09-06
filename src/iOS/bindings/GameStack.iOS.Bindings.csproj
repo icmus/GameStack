@@ -37,27 +37,10 @@
     <Reference Include="System" />
     <Reference Include="monotouch" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
   <Import Project="..\..\shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\shared\bindings\GameStack.Shared.Bindings.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\liblodepng.a">
-      <Link>liblodepng.a</Link>
-    </ObjcBindingNativeLibrary>
-    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\libogg.a">
-      <Link>libogg.a</Link>
-    </ObjcBindingNativeLibrary>
-    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\libopus.a">
-      <Link>libopus.a</Link>
-    </ObjcBindingNativeLibrary>
-    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\libopusfile.a">
-      <Link>libopusfile.a</Link>
-    </ObjcBindingNativeLibrary>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="liblodepng.linkwith.cs">

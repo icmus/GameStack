@@ -1,7 +1,6 @@
 ﻿using System;
 using GameStack;
 using GameStack.Graphics;
-using System.Drawing;
 using OpenTK;
 using Cairo;
 using GameStack.Gui;

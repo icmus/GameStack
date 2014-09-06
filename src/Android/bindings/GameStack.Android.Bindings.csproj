@@ -58,18 +58,4 @@
   </ItemGroup>
   <Import Project="..\..\shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\shared\bindings\GameStack.Shared.Bindings.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="armeabi-v7a\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedNativeLibrary Include="..\..\..\bin\android\liblodepng.so">
-      <Link>armeabi-v7a\liblodepng.so</Link>
-    </EmbeddedNativeLibrary>
-    <EmbeddedNativeLibrary Include="..\..\..\bin\android\libopenal32.so">
-      <Link>armeabi-v7a\libopenal32.so</Link>
-    </EmbeddedNativeLibrary>
-    <EmbeddedNativeLibrary Include="..\..\..\bin\android\libopusfile.so">
-      <Link>armeabi-v7a\libopusfile.so</Link>
-    </EmbeddedNativeLibrary>
-  </ItemGroup>
 </Project>

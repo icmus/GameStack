@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.IO.Compression;
@@ -175,7 +174,7 @@ namespace GameStack.Graphics {
 			if (s.StartsWith("#"))
 				s = s.Substring(1);
 			int.TryParse(s, NumberStyles.HexNumber, null, out argb);
-			return Color.FromArgb(argb).ToVector4();
+			return new Color(argb).ToVector4();
 		}
 
 		class SpriteDefinition {

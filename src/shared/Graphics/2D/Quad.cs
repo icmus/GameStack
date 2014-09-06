@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 using OpenTK;
 using OpenTK.Graphics;
 
@@ -8,12 +7,12 @@ namespace GameStack.Graphics {
 		VertexBuffer _vbuffer;
 		IndexBuffer _ibuffer;
 		Material _material;
-		Vector4 _color;
+		Color _color;
 
-		public Quad (Vector4 rect, Vector4 color, bool flipY = false) : this(null, rect, color, flipY) {
+		public Quad (Vector4 rect, Color color, bool flipY = false) : this(null, rect, color, flipY) {
 		}
 
-		public Quad (Material material, Vector4 rect, Vector4 color, bool flipV = false) {
+		public Quad (Material material, Vector4 rect, Color color, bool flipV = false) {
 			_material = material;
 			_color = color;
 			_vbuffer = new VertexBuffer (VertexFormat.PositionColorUV);
@@ -22,11 +21,12 @@ namespace GameStack.Graphics {
 			if (rect == Vector4.Zero)
 				rect = new Vector4(-0.5f, -0.5f, 0.5f, 0.5f);
 
+			var c = (Vector4)_color;
 			_vbuffer.Data = new [] {
-				rect.X, rect.Y, 0f, _color.X, _color.Y, _color.Z, _color.W, 0f, flipV ? 1f : 0f,
-				rect.Z, rect.Y, 0f, _color.X, _color.Y, _color.Z, _color.W, 1f, flipV ? 1f : 0f,
-				rect.Z, rect.W, 0f, _color.X, _color.Y, _color.Z, _color.W, 1f, flipV ? 0f : 1f,
-				rect.X, rect.W, 0f, _color.X, _color.Y, _color.Z, _color.W, 0f, flipV ? 0f : 1f
+				rect.X, rect.Y, 0f, c.X, c.Y, c.Z, c.W, 0f, flipV ? 1f : 0f,
+				rect.Z, rect.Y, 0f, c.X, c.Y, c.Z, c.W, 1f, flipV ? 1f : 0f,
+				rect.Z, rect.W, 0f, c.X, c.Y, c.Z, c.W, 1f, flipV ? 0f : 1f,
+				rect.X, rect.W, 0f, c.X, c.Y, c.Z, c.W, 0f, flipV ? 0f : 1f
 			};
 			_vbuffer.Commit ();
 			_ibuffer.Data = new [] { 0, 1, 2, 2, 3, 0 };

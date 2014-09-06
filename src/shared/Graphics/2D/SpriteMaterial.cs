@@ -13,11 +13,11 @@ using TextureTarget = OpenTK.Graphics.ES20.All;
 namespace GameStack.Graphics {
 	public class SpriteMaterial : Material {
 		Texture _texture;
-		Vector4 _tint;
+		Color _tint;
 
 		public SpriteMaterial (Shader shader, Texture texture) : base(shader) {
 			_texture = texture;
-			this.Color = Vector4.One;
+			this.Color = Color.White;
 		}
 
 		protected override void OnBegin () {
@@ -43,7 +43,7 @@ namespace GameStack.Graphics {
 
 		public Texture Texture { get { return _texture; } set { _texture = value; } }
 
-		public Vector4 Color { get { return _tint; } set { _tint = value; } }
+		public Color Color { get { return _tint; } set { _tint = value; } }
 
 		public override void Dispose () {
 			if (_texture != null)

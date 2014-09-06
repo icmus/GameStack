@@ -1,6 +1,5 @@
 ﻿using System;
 using Cairo;
-using System.Drawing;
 using System.Runtime.InteropServices;
 
 namespace GameStack {
@@ -14,6 +13,10 @@ namespace GameStack {
 			ctx.Operator = Operator.Clear;
 			ctx.Paint();
 			ctx.Operator = op;
+		}
+
+		public static Cairo.Color ToCairoColor(this GameStack.Color c) {
+			return new Cairo.Color((double)c.R / 255.0, (double)c.G / 255.0, (double)c.B / 255.0, (double)c.A / 255.0);
 		}
 	}
 }

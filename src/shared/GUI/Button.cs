@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 using OpenTK;
 using GameStack.Graphics;
 
@@ -21,13 +20,13 @@ namespace GameStack.Gui {
 		Label _label;
 
 		public Button (LayoutSpec spec = null) : base(spec) {
-			Color = Vector4.One;
+			Color = Color.White;
 		}
 
 		public Button (RadioGroup group, LayoutSpec spec = null) : base(spec) {
 			group.Add (this);
 			_group = group;
-			Color = Vector4.One;
+			Color = Color.White;
 			this.IsToggle = true;
 		}
 
@@ -43,7 +42,7 @@ namespace GameStack.Gui {
 
 		public Sprite DisabledSprite { get; set; }
 
-		public Vector4 Color { get; set; }
+		public Color Color { get; set; }
 
 		public bool IsToggle { get; set; }
 
@@ -118,7 +117,7 @@ namespace GameStack.Gui {
 			if (_label != null)
 				this.RemoveView (_label);
 			_label = new Label (text, font);
-			_label.Color = System.Drawing.Color.White;
+			_label.Color = GameStack.Color.White;
 			_label.HorizontalAlignment = halign;
 			_label.VerticalAlignment = valign;
 			this.AddView (_label);
@@ -128,7 +127,7 @@ namespace GameStack.Gui {
 			if (_label != null)
 				this.RemoveView (_label);
 			_label = new Label (text, font);
-			_label.Color = System.Drawing.Color.White;
+			_label.Color = GameStack.Color.White;
 			_label.HorizontalAlignment = HorizontalAlignment.Center;
 			_label.VerticalAlignment = VerticalAlignment.Middle;
 			this.AddView (_label);
@@ -159,10 +158,10 @@ namespace GameStack.Gui {
 			var sprite = this.CurrentSprite;
 
 			SpriteMaterial spriteMat;
-			if (Color != Vector4.One && (spriteMat = sprite.Material as SpriteMaterial) != null) {
+			if (Color != Color.White && (spriteMat = sprite.Material as SpriteMaterial) != null) {
 				spriteMat.Color = Color;
 				sprite.Draw(ref transform);
-				spriteMat.Color = Vector4.One;
+				spriteMat.Color = Color.White;
 			} else
 				sprite.Draw(ref transform);
 		}

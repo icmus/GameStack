@@ -37,9 +37,6 @@
     <Reference Include="monotouch" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
-  <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,16 +57,5 @@
     <Compile Include="..\..\..\AssemblyVersion.cs">
       <Link>AssemblyVersion.cs</Link>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <ObjcBindingNativeLibrary Include="..\..\..\..\bin\ios\libcairo.a">
-      <Link>libcairo.a</Link>
-    </ObjcBindingNativeLibrary>
-    <ObjcBindingNativeLibrary Include="..\..\..\..\bin\ios\libfreetype.a">
-      <Link>libfreetype.a</Link>
-    </ObjcBindingNativeLibrary>
-    <ObjcBindingNativeLibrary Include="..\..\..\..\bin\ios\libpixman-1.a">
-      <Link>libpixman-1.a</Link>
-    </ObjcBindingNativeLibrary>
   </ItemGroup>
 </Project>

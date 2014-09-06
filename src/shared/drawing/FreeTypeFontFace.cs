@@ -1,6 +1,5 @@
 ﻿using System;
 using Cairo;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.IO;
 

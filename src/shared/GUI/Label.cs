@@ -1,5 +1,4 @@
 using System;
-using System.Drawing;
 using OpenTK;
 using GameStack.Graphics;
 
@@ -26,7 +25,7 @@ namespace GameStack.Gui {
 
 		public float Leading { get { return _text.Leading; } set { _text.Leading = value; } }
 
-		public Color Color { get { return _text.Color.ToColor (); } set { _text.Color = value.ToVector4 (); } }
+		public Color Color { get { return _text.Color; } set { _text.Color = value; } }
 
 		public HorizontalAlignment HorizontalAlignment { get { return _text.HorizontalAlignment; } set { _text.HorizontalAlignment = value; } }
 

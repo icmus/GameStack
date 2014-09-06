@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Drawing;
 using OpenTK;
+using GameStack;
 using GameStack.Graphics;
-using SizeFunc = System.Func<System.Drawing.SizeF, float>;
+using RectangleF = GameStack.RectangleF;
+using SizeFunc = System.Func<GameStack.SizeF, float>;
 
 namespace GameStack.Gui {
 	public class LayoutSpec {

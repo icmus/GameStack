@@ -62,9 +62,6 @@
   <Import Project="..\shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\shared\GameStack.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Platform\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="bindings\GameStack.Android.Bindings.csproj">
       <Project>{265D25E9-B44C-46DF-8B8F-9FAC9BA74E73}</Project>
       <Name>GameStack.Android.Bindings</Name>

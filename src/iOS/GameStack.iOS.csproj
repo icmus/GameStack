@@ -41,9 +41,6 @@
     <Reference Include="monotouch" />
     <Reference Include="OpenTK-1.0" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Platform\" />
-  </ItemGroup>
   <Import Project="..\shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\shared\GameStack.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

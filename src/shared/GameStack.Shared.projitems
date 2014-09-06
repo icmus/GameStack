@@ -82,7 +82,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Logic\Scenes\Scene.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\Scenes\SceneCrossfader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\Controller.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Math\ITransition.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\Mathf.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\Ray.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\Transition.cs" />
@@ -100,5 +99,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\BlurShader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\IEventSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\Hex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Color.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Size.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\SizeF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\RectangleF.cs" />
   </ItemGroup>
 </Project>

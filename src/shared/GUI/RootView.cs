@@ -1,6 +1,6 @@
 using System;
-using System.Drawing;
 using OpenTK;
+using GameStack;
 using GameStack.Graphics;
 
 namespace GameStack.Gui {
