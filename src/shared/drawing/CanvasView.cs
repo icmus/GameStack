@@ -44,7 +44,7 @@ namespace GameStack.Gui {
 				#elif __MOBILE__
 				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, null, All.BgraExt));
 				#else
-				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, null, PixelFormat.Bgra));
+				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, new TextureSettings { Format = PixelFormat.Bgra }));
 				#endif
 				_quad = new Quad(_mat, new Vector4(0f, 0f, sz.Width, sz.Height), Color.White, true);
 				this.Invalidate();

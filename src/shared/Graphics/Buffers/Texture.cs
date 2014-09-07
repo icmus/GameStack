@@ -36,10 +36,29 @@ namespace GameStack.Graphics {
 
         public int Samples { get; set; }
 
+		public PixelFormat Format { get; set; }
+		public PixelInternalFormat InternalFormat { get; set; }
+		public PixelType DataType { get; set; }
+
 		public TextureSettings () {
 			this.MagFilter = this.MinFilter = TextureFilter.Linear;
 			this.WrapS = this.WrapT = TextureWrap.Clamp;
             this.Samples = 1;
+			this.Format = PixelFormat.Rgba;
+			this.InternalFormat = PixelInternalFormat.Rgba;
+			this.DataType = PixelType.UnsignedByte;
+		}
+
+		public TextureSettings Clone() {
+			return new TextureSettings {
+				MagFilter = this.MagFilter,
+				MinFilter = this.MinFilter,
+				WrapS = this.WrapS,
+				WrapT = this.WrapT,
+				Samples = this.Samples,
+				Format = this.Format,
+				InternalFormat = this.InternalFormat
+			};
 		}
 	}
 
@@ -61,34 +80,19 @@ namespace GameStack.Graphics {
 
 		uint _handle = 0;
 		Size _size;
-		PixelFormat _format;
 		Vector2 _texelSize;
 		TextureSettings _settings;
 
-		public Texture (int width, int height, TextureSettings settings = null,
-			#if __MOBILE__
-			All format = All.Rgba
-			#else
-			PixelFormat format = PixelFormat.Rgba
-			#endif
-		) {
+		public Texture (int width, int height, TextureSettings settings = null) {
 			_size = new Size(width, height);
-			_format = (PixelFormat)format;
 
-			this.Initialize(null, settings);
+			this.Initialize(null, settings != null ? settings.Clone() : new TextureSettings());
 		}
 
-		public Texture (Size size, TextureSettings settings = null,
-			#if __MOBILE__
-			All format = All.Rgba
-			#else
-			PixelFormat format = PixelFormat.Rgba
-			#endif
-		) {
+		public Texture (Size size, TextureSettings settings = null) {
 			_size = size;
-			_format = (PixelFormat)format;
 
-			this.Initialize(null, settings);
+			this.Initialize(null, settings != null ? settings.Clone() : new TextureSettings());
 		}
 
 		public Texture (string path, TextureSettings settings = null)
@@ -97,7 +101,10 @@ namespace GameStack.Graphics {
 		}
 
 		public Texture (Stream stream, TextureSettings settings = null, bool leaveOpen = true) {
-			byte[] data = PngLoader.Decode(stream, out _size, out _format);
+			PixelFormat format;
+			byte[] data = PngLoader.Decode(stream, out _size, out format);
+			settings = settings != null ? settings.Clone() : new TextureSettings();
+			settings.Format = format;
 			this.Initialize(data, settings);
 
 			if (!leaveOpen)
@@ -114,17 +121,12 @@ namespace GameStack.Graphics {
 
 		public void SetData (IntPtr buf) {
 			GL.BindTexture(TextureTarget.Texture2D, _handle);
-			#if __ANDROID__
-			GL.TexImage2D(TextureTarget.Texture2D, 0, (int)PixelInternalFormat.Rgba, _size.Width, _size.Height, 0, _format, PixelType.UnsignedByte, buf);
-			#else
-			GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height, 0, _format, PixelType.UnsignedByte, buf);
-			#endif
+			GL.TexImage2D(TextureTarget.Texture2D, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, buf);
 			GL.BindTexture(TextureTarget.Texture2D, 0);
 		}
 
 		void Initialize (byte[] buf, TextureSettings settings) {
-			_settings = settings ?? new TextureSettings();
-
+			_settings = settings;
 			ThreadContext.Current.EnsureGLContext();
 
 			// upload the texture into a texture buffer
@@ -136,23 +138,14 @@ namespace GameStack.Graphics {
 			GL.ActiveTexture(TextureUnit.Texture0);
             GL.BindTexture(target, _handle);
             if (buf == null) {
-                #if __ANDROID__
-				GL.TexImage2D(TextureTarget.Texture2D, 0, (int)PixelInternalFormat.Rgba, _size.Width, _size.Height, 0, _format, PixelType.UnsignedByte, IntPtr.Zero);
-                #else
                 if(msaa) {
-                    GL.TexImage2DMultisample(TextureTargetMultisample.Texture2DMultisample, _settings.Samples, PixelInternalFormat.Rgba, _size.Width, _size.Height, true);
+					GL.TexImage2DMultisample(TextureTargetMultisample.Texture2DMultisample, _settings.Samples, _settings.InternalFormat, _size.Width, _size.Height, true);
                 }
                 else
-                    GL.TexImage2D(TextureTarget.Texture2D, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height, 0, _format, PixelType.UnsignedByte, IntPtr.Zero);
-                #endif
+					GL.TexImage2D(TextureTarget.Texture2D, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, IntPtr.Zero);
             } else {
-				#if __ANDROID__
-				GL.TexImage2D(TextureTarget.Texture2D, 0, (int)PixelInternalFormat.Rgba, _size.Width, _size.Height,
-					0, _format, PixelType.UnsignedByte, buf);
-				#else
-				GL.TexImage2D(target, 0, PixelInternalFormat.Rgba, _size.Width, _size.Height,
-    				0, _format, PixelType.UnsignedByte, buf);
-				#endif
+				GL.TexImage2D(target, 0, _settings.InternalFormat, _size.Width, _size.Height,
+					0, _settings.Format, _settings.DataType, buf);
 				if (_settings.MinFilter == TextureFilter.Trilinear)
 					GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
 			}
