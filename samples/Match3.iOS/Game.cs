@@ -103,8 +103,8 @@ namespace Samples.Match3 {
 		}
 
 		void IHandler<Resize>.Handle (FrameArgs frame, Resize e) {
-			_scale = e.Size.X > 620 && e.Size.Y > 620 ? 2f : 1f;
-			if (e.Size.X >= 1920 && e.Size.Y >= 1080)
+			_scale = e.Size.Width > 620 && e.Size.Height > 620 ? 2f : 1f;
+			if (e.Size.Width >= 1920 && e.Size.Height >= 1080)
 				_scale = 3f;
 			_spriteSize = SpriteSize * _scale;
 			_padding = BoardPadding * _scale;
@@ -116,14 +116,14 @@ namespace Samples.Match3 {
 			_maxVelocity = MaxVelocity * _scale;
 			_numberSize = NumberSize * _scale;
 			_origin = new Vector2(
-				Mathf.Floor((e.Size.X - _boardWidth) / 2f),
-				Mathf.Floor((e.Size.Y - _boardWidth) / 2f)
+				Mathf.Floor((e.Size.Width - _boardWidth) / 2f),
+				Mathf.Floor((e.Size.Height - _boardWidth) / 2f)
 			);
 			_coinHeight = CoinHeight * _scale;
 			if (_isNewGame)
-				_backgroundOffset = e.Size.X - _origin.X;
+				_backgroundOffset = e.Size.Width - _origin.X;
 
-			if (e.Size.X > e.Size.Y) {
+			if (e.Size.Width > e.Size.Height) {
 				_numberOrigin.X = 15f * (_scale * _scale);
 				_numberOrigin.Y = _origin.Y + _boardWidth - _numberSize;
 			} else {
@@ -133,8 +133,8 @@ namespace Samples.Match3 {
 
 			_cam.SetViewSize(e.Size, 100f);
 
-			if (e.Size.X > e.Size.Y)
-				_origin.X = e.Size.X - 90f - _boardWidth;
+			if (e.Size.Width > e.Size.Height)
+				_origin.X = e.Size.Width - 90f - _boardWidth;
 			var s = e.PixelScale;
 			var width = (int)(_boardWidth * s);
 			_boardArea = new Rectangle((int)(_origin.X * s), (int)(_origin.Y * s), width, width);
@@ -517,9 +517,9 @@ namespace Samples.Match3 {
 
 			using (_cam.Begin()) {
 				var viewSize = this.View.Size;
-				var bgsize = Math.Max(viewSize.X, viewSize.Y);
+				var bgsize = Math.Max(viewSize.Width, viewSize.Height);
 
-				_background.Draw((viewSize.X - bgsize) / 2f, (viewSize.Y - bgsize) / 2f, 0f, bgsize / _background.Size.X, bgsize / _background.Size.Y);
+				_background.Draw((viewSize.Width - bgsize) / 2f, (viewSize.Height - bgsize) / 2f, 0f, bgsize / _background.Size.X, bgsize / _background.Size.Y);
 				_boardBackground.Draw(_origin.X + _boardWidth / 2f + _backgroundOffset, _origin.Y + _boardWidth / 2f, 1f, _boardWidth + 25f, _boardWidth + 25f);
 
 				var scale = Matrix4.Scale(_scale);
@@ -565,7 +565,7 @@ namespace Samples.Match3 {
 				this.ForEach<CoinAnimation>(a => a.Draw(_scale));
 
 				if (_gameOver)
-					_atlas["game-over"].Draw(this.View.Size.X / 2f, this.View.Size.Y / 2f, 10f, _scale * _gameOverScale, _scale * _gameOverScale);
+					_atlas["game-over"].Draw(this.View.Size.Width / 2f, this.View.Size.Height / 2f, 10f, _scale * _gameOverScale, _scale * _gameOverScale);
 			}
 		}
 

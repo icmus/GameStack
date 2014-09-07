@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using OpenTK;
 
 namespace GameStack {
 	[StructLayout(LayoutKind.Sequential)]
@@ -38,6 +39,14 @@ namespace GameStack {
 
 		public static implicit operator SizeF (System.Drawing.SizeF sz) {
 			return new SizeF(sz.Width, sz.Height);
+		}
+
+		public static explicit operator Size (SizeF sz) {
+			return new Size((int)sz.Width, (int)sz.Height);
+		}
+
+		public static explicit operator Vector2 (SizeF sz) {
+			return new Vector2(sz.Width, sz.Height);
 		}
 	}
 }

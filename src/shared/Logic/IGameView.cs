@@ -10,7 +10,7 @@ namespace GameStack
         event EventHandler<FrameArgs> Render;
         event EventHandler Destroyed;
 
-        Vector2 Size { get; }
+        SizeF Size { get; }
 
         float PixelScale { get; }
 

@@ -39,8 +39,8 @@ namespace GameStack.Desktop {
 			_frameRate = frameRate;
 
 			_frameArgs = new FrameArgs();
-			_frameArgs.Enqueue(new Start(new Vector2(_width, _height), 1.0f));
-			_frameArgs.Enqueue(new Resize(new Vector2(_width, _height), 1.0f));
+			_frameArgs.Enqueue(new Start(new SizeF(_width, _height), 1.0f));
+			_frameArgs.Enqueue(new Resize(new SizeF(_width, _height), 1.0f));
 			_sdlEvents = new ConcurrentQueue<SDL.SDL_Event>();
 
 			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_CONTEXT_MAJOR_VERSION, 3);
@@ -77,7 +77,7 @@ namespace GameStack.Desktop {
 
 		public uint WindowId { get { return _windowId; } }
 
-		public Vector2 Size { get { return new Vector2(_width, _height); } }
+		public SizeF Size { get { return new SizeF(_width, _height); } }
 
 		public float PixelScale { get { return 1.0f; } }
 

@@ -8,7 +8,7 @@ namespace Basics {
 		Camera _cam;
 		Atlas _sprites;
 		Batch _batch;
-		Vector2 _sz;
+		SizeF _sz;
 
 		public DefaultScene (IGameView view) : base(view) {
 		}
@@ -27,8 +27,8 @@ namespace Basics {
 			using (_cam.Begin()) { // using the camera...
 				using (_batch.Begin()) { // ...batch all draws...
 					// just fill up the screen
-					for (var x = 0f; x < _sz.X; x += 32) {
-						for (var y = 0f; y < _sz.Y; y += 32) {
+					for (var x = 0f; x < _sz.Width; x += 32) {
+						for (var y = 0f; y < _sz.Height; y += 32) {
 							sprite.Draw(x, y, 0);
 						}
 					}

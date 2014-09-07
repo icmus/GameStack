@@ -38,7 +38,7 @@ namespace GameStack
 			_cam = new Camera2D(e.Size, 2);
 			if (_quad != null)
 				_quad.Dispose();
-			_quad = new Quad(new Vector4(0, 0, e.Size.X, e.Size.Y), Vector4.One);
+			_quad = new Quad(new Vector4(0, 0, e.Size.Width, e.Size.Height), Vector4.One);
 		}
 
 		public Scene Scene { get { return _scene; } }
@@ -72,9 +72,9 @@ namespace GameStack
 				Skip();
 			else {
 				if (_prevTexture == null)
-					_prevTexture = new Texture(new Size((int)startArgs.Size.X, (int)startArgs.Size.Y));
+					_prevTexture = new Texture(new Size((int)startArgs.Size.Width, (int)startArgs.Size.Height));
 				if (_nextTexture == null)
-					_nextTexture = new Texture(new Size((int)startArgs.Size.X, (int)startArgs.Size.Y));
+					_nextTexture = new Texture(new Size((int)startArgs.Size.Width, (int)startArgs.Size.Height));
 				if (_prevFBO == null)
 					_prevFBO = new FrameBuffer(_prevTexture);
 				if (_nextFBO == null)

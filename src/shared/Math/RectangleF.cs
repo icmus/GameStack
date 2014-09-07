@@ -15,7 +15,7 @@ namespace GameStack
 			this.X = x;
 			this.Y = y;
 			this.X2 = x + width;
-			this.Y2 = y + width;
+			this.Y2 = y + height;
 		}
 
 		public bool IsEmpty { get { return this.X == 0f && this.Y == 0f && this.X2 == 0f && this.Y2 == 0f; } }

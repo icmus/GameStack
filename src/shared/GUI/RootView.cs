@@ -10,17 +10,17 @@ namespace GameStack.Gui {
 		IPointerInput _focused, _current;
 		long _pointerId;
 
-		public RootView (Vector2 viewSize, float depth, float maxDepth = 1000f) {
+		public RootView (SizeF viewSize, float depth, float maxDepth = 1000f) {
 			_maxDepth = maxDepth;
 			_camera = new Camera2D(viewSize, _maxDepth);
 			this.Layout(viewSize, depth);
 			_pointerId = -1;
 		}
 
-		public void Layout (Vector2 viewSize, float depth) {
+		public void Layout (SizeF viewSize, float depth) {
 			_depth = depth;
-			this.Frame = new RectangleF(0f, 0f, viewSize.X, viewSize.Y);
-			this.Size = new SizeF(viewSize.X, viewSize.Y);
+			this.Frame = new RectangleF(0f, 0f, viewSize.Width, viewSize.Height);
+			this.Size = new SizeF(viewSize.Width, viewSize.Height);
 			this.ZDepth = depth;
 
 			foreach (var view in this.Children)

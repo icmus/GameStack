@@ -26,7 +26,7 @@ namespace Basics {
 			};
 
 			// use a separate camera sized for the buffer
-			_fbcam = new Camera2D(new Vector2(64, 64), 1000f,
+			_fbcam = new Camera2D(new SizeF(64, 64), 1000f,
 				Camera2DOrigin.Center);
 
 			// horizontal blur material

@@ -29,12 +29,12 @@ namespace Basics {
 				Vector4.One);
 
 			_pos = Vector3.Zero;
-			_width = e.Size.X;
+			_width = e.Size.Width;
 		}
 			
 		void IHandler<Resize>.Handle (FrameArgs frame, Resize e) {
 			// save width info on resize and reset position
-			_width = e.Size.X;
+			_width = e.Size.Height;
 			_pos.X = 0;
 		}
 

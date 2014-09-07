@@ -15,7 +15,7 @@ namespace BasicAnimatedModel {
 		void IHandler<Start>.Handle (FrameArgs frame, Start e) {
 			// basic orthographic camera will do
 			// model has a really small scale, so "zoom in"
-			_cam = new Camera2D(e.Size / 15000, 1000, Camera2DOrigin.Center);
+			_cam = new Camera2D(new SizeF(e.Size.Width / 15000, e.Size.Height / 15000), 1000, Camera2DOrigin.Center);
 
 			// basic lighting with a single directional light
 			_lights = new Lighting(

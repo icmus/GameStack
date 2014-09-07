@@ -25,7 +25,7 @@ namespace Basics {
 					Vector3.UnitY),
 				Matrix4.CreatePerspectiveFieldOfView(
 					MathHelper.DegreesToRadians(45f), 
-					e.Size.X / e.Size.Y, 0.1f, 100f)
+					e.Size.Width / e.Size.Height, 0.1f, 100f)
 			);
 
 			// we'll use a solid red material

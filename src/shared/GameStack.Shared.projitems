@@ -103,5 +103,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Math\Size.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\SizeF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\RectangleF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\LayoutSpec.cs" />
   </ItemGroup>
 </Project>

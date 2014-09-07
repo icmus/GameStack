@@ -27,7 +27,7 @@ namespace Basics {
 			// create our custom progress bar to stretch across most
 			// of the screen
 			_bar = new ProgressBarView(new LayoutSpec {
-				Top = p => (e.Size.Y - 30f) / 2f,
+				Top = p => (e.Size.Height - 30f) / 2f,
 				Height = p => 30f,
 				Left = p => 50,
 				Right = p => 50

@@ -10,7 +10,7 @@ namespace Basics {
 
 		Camera _cam;
 		BitmapFont _font;
-		Vector2 _size;
+		SizeF _size;
 		TextBlock[] _txt;
 
 		public DefaultScene (IGameView view) : base(view) {
@@ -45,17 +45,17 @@ namespace Basics {
 
 			using (_cam.Begin()) { // using the camera...
 				// upper left text
-				_txt[0].Draw(0, _size.Y - _txt[0].ActualSize.Y - 10f, 0);
+				_txt[0].Draw(0, _size.Height - _txt[0].ActualSize.Y - 10f, 0);
 
 				// center text
 				_txt[1].Draw(
 					// round off to avoid fuzzy text
-					Mathf.Floor((_size.X - 200f) / 2f),
-					Mathf.Floor((_size.Y - _txt[1].ActualSize.Y) / 2f),
+					Mathf.Floor((_size.Width - 200f) / 2f),
+					Mathf.Floor((_size.Height - _txt[1].ActualSize.Y) / 2f),
 					0);
 
 				// lower right text
-				_txt[2].Draw(_size.X - 200f - 10f, 0, 0);
+				_txt[2].Draw(_size.Width - 200f - 10f, 0, 0);
 			}
 		}
 

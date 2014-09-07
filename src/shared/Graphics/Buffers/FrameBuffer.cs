@@ -85,6 +85,8 @@ namespace GameStack.Graphics {
 
 		public bool ClearOnBegin { get; set; }
 
+		public Texture Texture { get { return _tex; } }
+
 		protected override void OnBegin () {
 			_oldfb = this.CurrentFrameBuffer;
 			GL.GetInteger(GetPName.Viewport, _oldViewport);

@@ -6,75 +6,14 @@ using OpenTK;
 using GameStack;
 using GameStack.Graphics;
 using RectangleF = GameStack.RectangleF;
-using SizeFunc = System.Func<GameStack.SizeF, float>;
 
 namespace GameStack.Gui {
-	public class LayoutSpec {
-		public static readonly LayoutSpec Empty = new LayoutSpec();
-
-		SizeFunc _left, _top, _right, _bottom, _width, _height;
-
-		public SizeFunc Left {
-			get { return _left; }
-			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
-				_left = value;
-			}
-		}
-
-		public SizeFunc Top {
-			get { return _top; }
-			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
-				_top = value;
-			}
-		}
-
-		public SizeFunc Right {
-			get { return _right; }
-			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
-				_right = value;
-			}
-		}
-
-		public SizeFunc Bottom {
-			get { return _bottom; }
-			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
-				_bottom = value;
-			}
-		}
-
-		public SizeFunc Width {
-			get { return _width; }
-			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
-				_width = value;
-			}
-		}
-
-		public SizeFunc Height {
-			get { return _height; }
-			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
-				_height = value;
-			}
-		}
-	}
-
 	public class View : IDisposable {
 		List<View> _children;
 		Matrix4 _transform;
 		Matrix4 _transformInv;
 		LayoutSpec _spec;
-		Vector4 _margins;
+		RectangleF _margins;
 		SizeF _size;
 
 		public View () : this(null) {
@@ -100,7 +39,7 @@ namespace GameStack.Gui {
 		public ReadOnlyCollection<View> Children { get; private set; }
 		public RectangleF Frame { get; protected set; }
 		public SizeF Size { get { return _size; } protected set { _size = value; } }
-		public Vector4 Margins { get { return _margins; } }
+		public RectangleF Margins { get { return _margins; } }
 		public float ZDepth { get; set; }
 		public bool BlockInput { get; set; }
 		public object Tag { get; set; }
@@ -146,7 +85,7 @@ namespace GameStack.Gui {
 				var psz = this.Parent.Size;
 				var pz = this.Parent.ZDepth;
 
-				_margins = new Vector4(
+				_margins = new RectangleF(
 					_spec.Left != null ? _spec.Left(psz) : 0f,
 					_spec.Top != null ? _spec.Top(psz) : 0f,
 					_spec.Right != null ? _spec.Right(psz) : 0f,
@@ -154,20 +93,20 @@ namespace GameStack.Gui {
 
 				if (_spec.Width != null) {
 					if (_spec.Left != null && _spec.Right == null)
-						_margins.Z = psz.Width - _margins.X - _spec.Width(psz);
+						_margins.Right = psz.Width - _margins.Left - _spec.Width(psz);
 					else if (_spec.Left == null && _spec.Right != null)
-						_margins.X = psz.Width - _margins.Z - _spec.Width(psz);
+						_margins.Left = psz.Width - _margins.Right - _spec.Width(psz);
 				}
 				if (_spec.Height != null) {
 					if (_spec.Top != null && _spec.Bottom == null)
-						_margins.W = psz.Height - _margins.Y - _spec.Height(psz);
+						_margins.Bottom = psz.Height - _margins.Top - _spec.Height(psz);
 					else if (_spec.Top == null && _spec.Bottom != null)
-						_margins.Y = psz.Height - _margins.W - _spec.Height(psz);
+						_margins.Top = psz.Height - _margins.Bottom - _spec.Height(psz);
 				}
 
-				_size = new SizeF(psz.Width - _margins.X - _margins.Z, psz.Height - _margins.Y - _margins.W);
+				_size = new SizeF(psz.Width - _margins.Left - _margins.Right, psz.Height - _margins.Top - _margins.Bottom);
 
-				this.Frame = new RectangleF(_margins.X, _margins.Y, _size.Width, _size.Height);
+				this.Frame = new RectangleF(_margins.Left, _margins.Top, _size.Width, _size.Height);
 			}
 
 			_children.ForEach(c => c.Layout());
@@ -191,8 +130,8 @@ namespace GameStack.Gui {
 
 		public void Draw (Matrix4 parentTransform) {
 			var local = _transform;
-			local.M41 += _margins.X;
-			local.M42 += _margins.W;
+			local.M41 += _margins.Left;
+			local.M42 += _margins.Bottom;
 			local.M43 += this.ZDepth;
 			Matrix4.Mult(ref local, ref parentTransform, out local);
 
@@ -203,8 +142,8 @@ namespace GameStack.Gui {
 
 		public Matrix4 GetCumulativeTransform () {
 			var result = _transform;
-			result.M41 += _margins.X;
-			result.M42 += _margins.W;
+			result.M41 += _margins.Left;
+			result.M42 += _margins.Bottom;
 			result.M43 += this.ZDepth;
 
 			if (Parent != null) {
@@ -218,8 +157,8 @@ namespace GameStack.Gui {
 		public Matrix4 GetCumulativeTransformInv () {
 			Matrix4 result = Parent != null ? Parent.GetCumulativeTransformInv() : Matrix4.Identity;
 
-			result.M41 -= _margins.X;
-			result.M42 -= _margins.W;
+			result.M41 -= _margins.Left;
+			result.M42 -= _margins.Bottom;
 			result.M43 -= this.ZDepth;
 
 			Matrix4.Mult(ref result, ref _transformInv, out result);
@@ -231,7 +170,7 @@ namespace GameStack.Gui {
 			if (BlockInput)
 				return null;
 
-			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, 0) * TransformInv;
+			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, 0) * TransformInv;
 
 			foreach (var view in Enumerable.Reverse(_children)) {
 				if (view.BlockInput)
@@ -267,7 +206,7 @@ namespace GameStack.Gui {
 
 		View FindViewByPointImpl (Vector2 point, Matrix4 parentInv, out Vector3 where) {
 			where = Vector3.Zero;
-			var inv = parentInv * Matrix4.CreateTranslation(-_margins.X, -_margins.W, -ZDepth) * TransformInv;
+			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, -ZDepth) * TransformInv;
 
 			var cPoint = point;
 			var hit = _children.Select(c => {

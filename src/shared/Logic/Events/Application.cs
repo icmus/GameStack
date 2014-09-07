@@ -3,10 +3,10 @@ using OpenTK;
 
 namespace GameStack {
 	public class Start : EventBase {
-		public Vector2 Size { get; private set; }
+		public SizeF Size { get; private set; }
 		public float PixelScale { get; private set; }
 
-		public Start (Vector2 size, float pixelScale) {
+		public Start (SizeF size, float pixelScale) {
 			this.Size = size;
 			this.PixelScale = pixelScale;
 		}
