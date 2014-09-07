@@ -39,7 +39,7 @@ namespace GameStack.Graphics {
 		public static readonly VertexFormat PositionUV = new VertexFormat(
 			                                                 5,
 			                                                 new VertexElement("Position", 0, 3),
-			                                                 new VertexElement("MultiTexCoord0", 3, 2)
+			                                                 new VertexElement("TexCoord0", 3, 2)
 		                                                 );
 		public static readonly VertexFormat PositionColor = new VertexFormat(
 			                                                    7,
@@ -50,7 +50,7 @@ namespace GameStack.Graphics {
 			                                                      9,
 			                                                      new VertexElement("Position", 0, 3),
 			                                                      new VertexElement("Color", 3, 4),
-			                                                      new VertexElement("MultiTexCoord0", 7, 2)
+			                                                      new VertexElement("TexCoord0", 7, 2)
 		                                                      );
 	}
 

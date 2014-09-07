@@ -13,14 +13,14 @@ uniform mat4 WorldViewProjection;
 
 attribute vec4 Position;
 attribute vec4 Color;
-attribute vec2 MultiTexCoord0;
+attribute vec2 TexCoord0;
 
 varying vec4 color;
 varying vec2 texCoord0;
 
 void main() {
     // slice the sprite out of the texture
-    texCoord0 = MultiTexCoord0;
+    texCoord0 = TexCoord0;
     color = Color;
     gl_Position = WorldViewProjection * Position;
 }
@@ -48,14 +48,14 @@ uniform mat4 WorldViewProjection;
 
 attribute vec4 Position;
 attribute vec4 Color;
-attribute vec2 MultiTexCoord0;
+attribute vec2 TexCoord0;
 
 varying vec4 color;
 varying vec2 texCoord0;
 
 void main() {
     // slice the sprite out of the texture
-    texCoord0 = MultiTexCoord0;
+    texCoord0 = TexCoord0;
     color = Color;
     gl_Position = WorldViewProjection * Position;
 }

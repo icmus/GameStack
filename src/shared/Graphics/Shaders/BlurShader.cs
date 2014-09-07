@@ -54,14 +54,14 @@ uniform mat4 World;
 uniform float TexelSize;
 
 attribute vec4 Position;
-attribute vec2 MultiTexCoord0;
+attribute vec2 TexCoord0;
 
 varying vec2 texCoord0;
 varying vec2 blurTexCoords[{0}];
 
 void main() {{
 	gl_Position = WorldViewProjection * Position;
-	texCoord0 = MultiTexCoord0;
+	texCoord0 = TexCoord0;
 	{1}
 }}
 ";
