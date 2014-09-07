@@ -120,9 +120,14 @@ namespace GameStack.Graphics {
 		public TextureSettings Settings { get { return _settings; } }
 
 		public void SetData (IntPtr buf) {
+			int active, bound;
+			GL.GetInteger(GetPName.ActiveTexture, out active);
+			GL.GetInteger(GetPName.Texture2D, out bound);
+			GL.ActiveTexture(TextureUnit.Texture0);
 			GL.BindTexture(TextureTarget.Texture2D, _handle);
 			GL.TexImage2D(TextureTarget.Texture2D, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, buf);
-			GL.BindTexture(TextureTarget.Texture2D, 0);
+			GL.ActiveTexture((TextureUnit)active);
+			GL.BindTexture(TextureTarget.Texture2D, bound);
 		}
 
 		public unsafe void SetData<T> (T[] buf) where T : struct {
