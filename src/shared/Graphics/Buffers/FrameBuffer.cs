@@ -28,6 +28,7 @@ namespace GameStack.Graphics {
 		Color _color;
 		int[] _oldViewport;
 		Texture _tex;
+		bool _disposeTex;
 
 		public FrameBuffer (Texture texture, bool depthBuffer = false, bool disposeTexture = false) {
 			ThreadContext.Current.EnsureGLContext();
@@ -35,6 +36,8 @@ namespace GameStack.Graphics {
 			_size = texture.Size;
 			_oldfb = this.CurrentFrameBuffer;
 			_oldViewport = new int[4];
+			_disposeTex = disposeTexture;
+			_tex = texture;
 
 			var buf = new int[1];
 			GL.GenFramebuffers(1, buf);
@@ -73,8 +76,6 @@ namespace GameStack.Graphics {
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _oldfb);
 
 			this.ClearOnBegin = true;
-			if (disposeTexture)
-				_tex = texture;
 		}
 
 		public int Handle { get { return _fb; } }
@@ -135,7 +136,7 @@ namespace GameStack.Graphics {
 				_fb = -1;
 			}
 
-			if (_tex != null)
+			if (_disposeTex)
 				_tex.Dispose();
 
 			base.Dispose();

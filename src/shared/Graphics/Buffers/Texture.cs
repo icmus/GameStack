@@ -125,6 +125,12 @@ namespace GameStack.Graphics {
 			GL.BindTexture(TextureTarget.Texture2D, 0);
 		}
 
+		public unsafe void SetData<T> (T[] buf) where T : struct {
+			var pin = GCHandle.Alloc(buf, GCHandleType.Pinned);
+			this.SetData(pin.AddrOfPinnedObject());
+			pin.Free();
+		}
+
 		void Initialize (byte[] buf, TextureSettings settings) {
 			_settings = settings;
 			ThreadContext.Current.EnsureGLContext();
