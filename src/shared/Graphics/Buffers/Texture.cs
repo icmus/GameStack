@@ -39,6 +39,7 @@ namespace GameStack.Graphics {
 		public PixelFormat Format { get; set; }
 		public PixelInternalFormat InternalFormat { get; set; }
 		public PixelType DataType { get; set; }
+		public TextureTarget BindTarget { get; set; }
 
 		public TextureSettings () {
 			this.MagFilter = this.MinFilter = TextureFilter.Linear;
@@ -47,6 +48,7 @@ namespace GameStack.Graphics {
 			this.Format = PixelFormat.Rgba;
 			this.InternalFormat = PixelInternalFormat.Rgba;
 			this.DataType = PixelType.UnsignedByte;
+			this.BindTarget = TextureTarget.Texture2D;
 		}
 
 		public TextureSettings Clone() {
@@ -57,7 +59,9 @@ namespace GameStack.Graphics {
 				WrapT = this.WrapT,
 				Samples = this.Samples,
 				Format = this.Format,
-				InternalFormat = this.InternalFormat
+				InternalFormat = this.InternalFormat,
+				DataType = this.DataType,
+				BindTarget = this.BindTarget
 			};
 		}
 	}
@@ -120,14 +124,11 @@ namespace GameStack.Graphics {
 		public TextureSettings Settings { get { return _settings; } }
 
 		public void SetData (IntPtr buf) {
-			int active, bound;
-			GL.GetInteger(GetPName.ActiveTexture, out active);
-			GL.GetInteger(GetPName.Texture2D, out bound);
 			GL.ActiveTexture(TextureUnit.Texture0);
-			GL.BindTexture(TextureTarget.Texture2D, _handle);
-			GL.TexImage2D(TextureTarget.Texture2D, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, buf);
-			GL.ActiveTexture((TextureUnit)active);
-			GL.BindTexture(TextureTarget.Texture2D, bound);
+			GL.BindTexture(_settings.BindTarget, _handle);
+			GL.PixelStore(PixelStoreParameter.PackAlignment, 1);
+			GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, buf);
+			Console.WriteLine(_settings.BindTarget + " " + _settings.InternalFormat + " " + _settings.Format + " " + _settings.DataType);
 		}
 
 		public unsafe void SetData<T> (T[] buf) where T : struct {
@@ -141,32 +142,33 @@ namespace GameStack.Graphics {
 			ThreadContext.Current.EnsureGLContext();
 
 			// upload the texture into a texture buffer
-			_handle = (uint)GL.GenTexture();
+			GL.GenTextures(1, out _handle);
 
             var msaa = _settings.Samples > 1;
-            var target = msaa ? TextureTarget.Texture2DMultisample : TextureTarget.Texture2D;
+			_settings.BindTarget = msaa ? TextureTarget.Texture2DMultisample : _settings.BindTarget;
 			GL.PixelStore(PixelStoreParameter.UnpackAlignment, 1);
 			GL.ActiveTexture(TextureUnit.Texture0);
-            GL.BindTexture(target, _handle);
+			GL.BindTexture(_settings.BindTarget, _handle);
+			GL.PixelStore(PixelStoreParameter.PackAlignment, 1);
             if (buf == null) {
                 if(msaa) {
 					GL.TexImage2DMultisample(TextureTargetMultisample.Texture2DMultisample, _settings.Samples, _settings.InternalFormat, _size.Width, _size.Height, true);
                 }
                 else
-					GL.TexImage2D(TextureTarget.Texture2D, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, IntPtr.Zero);
+					GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, IntPtr.Zero);
             } else {
-				GL.TexImage2D(target, 0, _settings.InternalFormat, _size.Width, _size.Height,
+				GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height,
 					0, _settings.Format, _settings.DataType, buf);
 				if (_settings.MinFilter == TextureFilter.Trilinear)
 					GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
 			}
             if (!msaa) {
-                GL.TexParameter(target, TextureParameterName.TextureMagFilter, (int)_settings.MagFilter);
-                GL.TexParameter(target, TextureParameterName.TextureMinFilter, (int)_settings.MinFilter);
-                GL.TexParameter(target, TextureParameterName.TextureWrapS, (int)_settings.WrapS);
-                GL.TexParameter(target, TextureParameterName.TextureWrapT, (int)_settings.WrapT);
+				GL.TexParameter(_settings.BindTarget, TextureParameterName.TextureMagFilter, (int)_settings.MagFilter);
+				GL.TexParameter(_settings.BindTarget, TextureParameterName.TextureMinFilter, (int)_settings.MinFilter);
+				GL.TexParameter(_settings.BindTarget, TextureParameterName.TextureWrapS, (int)_settings.WrapS);
+				GL.TexParameter(_settings.BindTarget, TextureParameterName.TextureWrapT, (int)_settings.WrapT);
             }
-			GL.BindTexture(target, 0);
+			GL.BindTexture(_settings.BindTarget, 0);
 
 			_texelSize = new Vector2(1f / _size.Width, 1f / _size.Height);
 
@@ -174,19 +176,17 @@ namespace GameStack.Graphics {
 		}
 
 		public void Apply() {
-            GL.BindTexture(_settings.Samples > 1 ? TextureTarget.Texture2DMultisample : TextureTarget.Texture2D, _handle);
+			GL.BindTexture(_settings.BindTarget, _handle);
 		}
 
 		public void GenerateMipmaps () {
 			if (_settings.MinFilter != TextureFilter.Trilinear)
 				throw new InvalidOperationException("Texture filter does not use mipmaps.");
 
-            var target = _settings.Samples > 1 ? TextureTarget.Texture2DMultisample : TextureTarget.Texture2D;
-
 			GL.ActiveTexture(TextureUnit.Texture0);
-			GL.BindTexture(target, _handle);
+			GL.BindTexture(_settings.BindTarget, _handle);
 			GL.GenerateMipmap(GenerateMipmapTarget.Texture2D);
-			GL.BindTexture(target, 0);
+			GL.BindTexture(_settings.BindTarget, 0);
 		}
 
 		public void Dispose () {

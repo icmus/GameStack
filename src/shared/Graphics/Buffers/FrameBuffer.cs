@@ -60,9 +60,9 @@ namespace GameStack.Graphics {
 
 			#if __DESKTOP__
 			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.ColorAttachment0,
-                msaa ? TextureTarget.Texture2DMultisample : TextureTarget.Texture2D, texture.Handle, 0);
+				texture.Settings.BindTarget, texture.Handle, 0);
 			#else
-			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferSlot.ColorAttachment0, TextureTarget.Texture2D, texture.Handle, 0);
+			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferSlot.ColorAttachment0, texture.Settings.BindTarget, texture.Handle, 0);
 			#endif
 
             if (depthBuffer) {
