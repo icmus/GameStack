@@ -180,6 +180,15 @@ namespace GameStack.Graphics {
 				GL.Uniform2(loc, ref value);
 		}
 
+		public void Uniform (string name, Vector2[] values) {
+			var loc = this.Uniform(name);
+			if (loc >= 0) {
+				for (var i = 0; i < values.Length; i++) {
+					GL.Uniform2(loc + i, ref values[i]);
+				}
+			}
+		}
+
 		public void Uniform (string name, Vector3 value) {
 			var loc = this.Uniform(name);
 			if (loc >= 0)
@@ -211,6 +220,15 @@ namespace GameStack.Graphics {
 			var loc = this.Uniform(name);
 			if (loc >= 0)
 				GL.Uniform4(loc, ref value);
+		}
+
+		public void Uniform (string name, Vector4[] values) {
+			var loc = this.Uniform(name);
+			if (loc >= 0) {
+				for (var i = 0; i < values.Length; i++) {
+					GL.Uniform4(loc + i, ref values[i]);
+				}
+			}
 		}
 
 		public void Uniform (string name, Matrix4 value) {
