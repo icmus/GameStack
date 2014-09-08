@@ -56,7 +56,7 @@ namespace GameStack.Graphics {
 
 		public void Draw (int offset = 0, int count = -1, BeginMode _mode = BeginMode.Triangles) {
 			if (count < 0)
-				count = _data.Length;
+				count = _data.Length / _format.Stride;
 			if (count == 0)
 				return;
 			GL.DrawArrays(_mode, offset, count);
