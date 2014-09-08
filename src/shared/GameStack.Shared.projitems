@@ -104,5 +104,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Math\SizeF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\RectangleF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\LayoutSpec.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\RandomEx.cs" />
   </ItemGroup>
 </Project>

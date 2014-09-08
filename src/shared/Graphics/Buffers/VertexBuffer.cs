@@ -45,13 +45,21 @@ namespace GameStack.Graphics {
 
 		public float[] Data { get { return _data; } set { _data = value; } }
 
-		public void Commit () {
+		public void Commit (BufferUsage usage = BufferUsage.StaticDraw) {
 			if (_data == null)
 				_data = new float[0];
 
 			GL.BindBuffer(BufferTarget.ArrayBuffer, _handle);
-			GL.BufferData(BufferTarget.ArrayBuffer, (IntPtr)(sizeof(float) * _data.Length), _data, BufferUsage.StaticDraw);
+			GL.BufferData(BufferTarget.ArrayBuffer, (IntPtr)(sizeof(float) * _data.Length), _data, usage);
 			GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
+		}
+
+		public void Draw (int offset = 0, int count = -1, BeginMode _mode = BeginMode.Triangles) {
+			if (count < 0)
+				count = _data.Length;
+			if (count == 0)
+				return;
+			GL.DrawArrays(_mode, offset, count);
 		}
 
 		protected override void OnBegin () {

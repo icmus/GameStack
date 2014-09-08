@@ -128,7 +128,6 @@ namespace GameStack.Graphics {
 			GL.BindTexture(_settings.BindTarget, _handle);
 			GL.PixelStore(PixelStoreParameter.PackAlignment, 1);
 			GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, buf);
-			Console.WriteLine(_settings.BindTarget + " " + _settings.InternalFormat + " " + _settings.Format + " " + _settings.DataType);
 		}
 
 		public unsafe void SetData<T> (T[] buf) where T : struct {
