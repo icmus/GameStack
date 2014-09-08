@@ -16,6 +16,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Logic\" />
     <Folder Include="$(MSBuildThisFileDirectory)Math\" />
     <Folder Include="$(MSBuildThisFileDirectory)Sound\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Content\ContentException.cs" />
@@ -105,5 +106,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Math\RectangleF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\LayoutSpec.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\RandomEx.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\IPriorityQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\PriorityQueueNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\PriorityQueue.cs" />
   </ItemGroup>
 </Project>
