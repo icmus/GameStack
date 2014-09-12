@@ -31,7 +31,7 @@ namespace GameStack.Graphics {
 			_ownResources = ownMaterial;
 		}
 
-        public Sprite (Texture tex, Vector4 rect, bool relativeRect, Color color, bool flipV = true) {
+        public Sprite (Texture tex, Vector4 rect, bool relativeRect, RgbColor color, bool flipV = true) {
 			_material = new SpriteMaterial(new SpriteShader(), tex);
 
 			if (rect == Vector4.Zero)
@@ -65,29 +65,29 @@ namespace GameStack.Graphics {
 			_ownResources = true;
 		}
 		public Sprite (Texture tex, Vector4 rect, bool relativeRect = false)
-			: this(tex, rect, relativeRect, Color.White)
+			: this(tex, rect, relativeRect, RgbColor.White)
 		{
 		}
 		public Sprite (Texture tex)
-			: this(tex, Vector4.Zero, false, Color.White)
+			: this(tex, Vector4.Zero, false, RgbColor.White)
 		{
 		}
 
-		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect, Color color, bool flipV = true)
+		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect, RgbColor color, bool flipV = true)
 			: this(new Texture(stream, settings), rect, relativeRect, color, flipV)
 		{
 
 		}
 		public Sprite (Stream stream, TextureSettings settings, Vector4 rect, bool relativeRect = false)
-			: this(stream, settings, rect, relativeRect, Color.White)
+			: this(stream, settings, rect, relativeRect, RgbColor.White)
 		{
 		}
 		public Sprite (Stream stream, TextureSettings settings = null)
-			: this(stream, settings, Vector4.Zero, false, Color.White)
+			: this(stream, settings, Vector4.Zero, false, RgbColor.White)
 		{
 		}
 
-		public Sprite (String path, TextureSettings settings, Vector4 rect, bool relativeRect, Color color, bool flipV = true)
+		public Sprite (String path, TextureSettings settings, Vector4 rect, bool relativeRect, RgbColor color, bool flipV = true)
 			: this(Assets.ResolveStream(path), settings, rect, relativeRect, color, flipV)
 		{
 		}

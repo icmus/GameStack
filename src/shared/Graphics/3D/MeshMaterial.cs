@@ -32,7 +32,7 @@ namespace GameStack.Graphics {
 		bool _isTwoSided, _isWireframeEnabled;
 		BlendMode _blendMode;
 		float _opacity, _shininess, _shininessStrength;
-		Color _colorAmbient, _colorDiffuse, _colorSpecular, _colorEmissive, _colorTransparent;
+		RgbColor _colorAmbient, _colorDiffuse, _colorSpecular, _colorEmissive, _colorTransparent;
 		TextureSlot[] _diffuseMap, _normalMap, _specularMap, _emissiveMap;
 
 		int _units;
@@ -59,15 +59,15 @@ namespace GameStack.Graphics {
 
 		public float ShininessStrength { get { return _shininessStrength; } set { _shininessStrength = value; } }
 
-		public Color ColorAmbient { get { return _colorAmbient; } set { _colorAmbient = value; } }
+		public RgbColor ColorAmbient { get { return _colorAmbient; } set { _colorAmbient = value; } }
 
-		public Color ColorDiffuse { get { return _colorDiffuse; } set { _colorDiffuse = value; } }
+		public RgbColor ColorDiffuse { get { return _colorDiffuse; } set { _colorDiffuse = value; } }
 
-		public Color ColorSpecular { get { return _colorSpecular; } set { _colorSpecular = value; } }
+		public RgbColor ColorSpecular { get { return _colorSpecular; } set { _colorSpecular = value; } }
 
-		public Color ColorEmissive { get { return _colorEmissive; } set { _colorEmissive = value; } }
+		public RgbColor ColorEmissive { get { return _colorEmissive; } set { _colorEmissive = value; } }
 
-		public Color ColorTransparent { get { return _colorTransparent; } set { _colorTransparent = value; } }
+		public RgbColor ColorTransparent { get { return _colorTransparent; } set { _colorTransparent = value; } }
 
 		public TextureSlot[] DiffuseMap { get { return _diffuseMap; } set { _diffuseMap = value; } }
 

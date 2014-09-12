@@ -18,7 +18,7 @@ namespace GameStack.Graphics {
 
 		public float Height { get { return this.Font.LineHeight; } }
 
-		public TextRun (BitmapFont font, int start, float kerning, Color color) {
+		public TextRun (BitmapFont font, int start, float kerning, RgbColor color) {
 			this.Font = font;
 			this.Start = start;
 			_kerning = kerning;

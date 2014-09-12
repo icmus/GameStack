@@ -5,7 +5,7 @@ namespace GameStack
 {
 	public static partial class Hex
 	{
-		public static Color ToColor(string value) {
+		public static RgbColor ToColor(string value) {
 			if (value == null)
 				throw new ArgumentNullException();
 			if (value.Length < 8 || value.Length > 9)
@@ -15,7 +15,7 @@ namespace GameStack
 			uint v;
 			uint.TryParse(value, System.Globalization.NumberStyles.HexNumber, null, out v);
 
-			return new Color(
+			return new RgbColor(
 				v >> 24,
 				(v >> 16) & 0xff,
 				(v >> 8) & 0xff,

@@ -99,7 +99,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\BlurMaterial.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\BlurShader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Logic\Events\IEventSource.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Math\Color.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\Size.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\SizeF.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\RectangleF.cs" />
@@ -108,5 +107,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\IPriorityQueue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\PriorityQueueNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\PriorityQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\RgbColor.cs" />
   </ItemGroup>
 </Project>

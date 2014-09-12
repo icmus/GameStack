@@ -25,7 +25,7 @@ namespace GameStack.Graphics {
 	public class FrameBuffer : ScopedObject {
 		int _fb, _db, _oldfb;
 		Size _size;
-		Color _color;
+		RgbColor _color;
 		int[] _oldViewport;
 		Texture _tex;
 		bool _disposeTex;

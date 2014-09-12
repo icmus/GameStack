@@ -24,7 +24,7 @@ namespace Basics {
 				Vector4.One
 			);
 			// white background
-			this.ClearColor = Color.White;
+			this.ClearColor = RgbColor.White;
 		}
 
 		void IHandler<Touch>.Handle(FrameArgs frame, Touch e) {
@@ -62,7 +62,7 @@ namespace Basics {
 				Vector4.One
 			);
 			// black background
-			this.ClearColor = Color.Black;
+			this.ClearColor = RgbColor.Black;
 		}
 
 		void IHandler<Touch>.Handle(FrameArgs frame, Touch e) {

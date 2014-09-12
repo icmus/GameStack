@@ -15,7 +15,7 @@ namespace GameStack {
 			ctx.Operator = op;
 		}
 
-		public static Cairo.Color ToCairoColor(this GameStack.Color c) {
+		public static Cairo.Color ToCairoColor(this GameStack.RgbColor c) {
 			return new Cairo.Color((double)c.R / 255.0, (double)c.G / 255.0, (double)c.B / 255.0, (double)c.A / 255.0);
 		}
 	}

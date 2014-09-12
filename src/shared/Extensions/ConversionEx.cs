@@ -3,7 +3,7 @@ using OpenTK;
 
 namespace GameStack {
 	public static class ConversionEx {
-		public static Vector4 ToVector4 (this Color color) {
+		public static Vector4 ToVector4 (this RgbColor color) {
 			return new Vector4 (
 				(float)color.R / 255f,
 				(float)color.G / 255f,
@@ -12,8 +12,8 @@ namespace GameStack {
 			);
 		}
 
-		public static Color ToColor (this Vector4 val) {
-			return new Color(val.X, val.Y, val.Z, val.W);
+		public static RgbColor ToColor (this Vector4 val) {
+			return new RgbColor(val.X, val.Y, val.Z, val.W);
 		}
 
 		public static Vector2 ToVector2 (this SizeF size) {

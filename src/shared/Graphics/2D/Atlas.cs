@@ -174,7 +174,7 @@ namespace GameStack.Graphics {
 			if (s.StartsWith("#"))
 				s = s.Substring(1);
 			int.TryParse(s, NumberStyles.HexNumber, null, out argb);
-			return new Color(argb).ToVector4();
+			return new RgbColor(argb).ToVector4();
 		}
 
 		class SpriteDefinition {

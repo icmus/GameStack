@@ -46,7 +46,7 @@ namespace GameStack.Gui {
 				#else
 				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, new TextureSettings { Format = PixelFormat.Bgra }));
 				#endif
-				_quad = new Quad(_mat, new Vector4(0f, 0f, sz.Width, sz.Height), Color.White, true);
+				_quad = new Quad(_mat, new Vector4(0f, 0f, sz.Width, sz.Height), RgbColor.White, true);
 				this.Invalidate();
 			}
 			_isValid = false;

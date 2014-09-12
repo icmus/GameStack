@@ -7,12 +7,12 @@ namespace GameStack.Graphics {
 		VertexBuffer _vbuffer;
 		IndexBuffer _ibuffer;
 		Material _material;
-		Color _color;
+		RgbColor _color;
 
-		public Quad (Vector4 rect, Color color, bool flipY = false) : this(null, rect, color, flipY) {
+		public Quad (Vector4 rect, RgbColor color, bool flipY = false) : this(null, rect, color, flipY) {
 		}
 
-		public Quad (Material material, Vector4 rect, Color color, bool flipV = false) {
+		public Quad (Material material, Vector4 rect, RgbColor color, bool flipV = false) {
 			_material = material;
 			_color = color;
 			_vbuffer = new VertexBuffer (VertexFormat.PositionColorUV);

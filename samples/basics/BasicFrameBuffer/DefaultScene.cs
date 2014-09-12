@@ -46,7 +46,7 @@ namespace Basics {
 				Vector4.One);
 
 			// a black background suits this example better
-			this.ClearColor = Color.Black;
+			this.ClearColor = RgbColor.Black;
 		}
 
 		protected override void OnDraw (FrameArgs e) {

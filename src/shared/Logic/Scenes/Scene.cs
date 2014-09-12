@@ -24,7 +24,7 @@ namespace GameStack {
 		bool _isVisible, _isUpdating;
 
 		public Scene (IGameView view = null) {
-			this.ClearColor = Color.CornflowerBlue;
+			this.ClearColor = RgbColor.CornflowerBlue;
 
 			_actions = new Dictionary<Type, List<Delegate>>();
 			_updaters = new List<IUpdater>();
@@ -48,7 +48,7 @@ namespace GameStack {
 
 		public IGameView View { get { return _view; } }
 
-		public Color ClearColor { get; set; }
+		public RgbColor ClearColor { get; set; }
 
 		public bool IsVisible { get { return _isVisible; } set { _isVisible = value; } }
 

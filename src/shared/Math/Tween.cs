@@ -38,9 +38,9 @@ namespace GameStack {
             };
         }
 
-		public static TweenFunc<Color> WrapColor (TweenFunc<float> func) {
+		public static TweenFunc<RgbColor> WrapColor (TweenFunc<float> func) {
 			return (from, to, t) => {
-				return new Color(
+				return new RgbColor(
 					(int)func(from.R, to.R, t),
 					(int)func(from.G, to.G, t),
 					(int)func(from.B, to.B, t),

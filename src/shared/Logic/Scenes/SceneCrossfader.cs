@@ -176,19 +176,19 @@ namespace GameStack
 		{
 			using (_cam.Begin()) {
 				var origColor = ClearColor;
-				ClearColor = Color.Black;
+				ClearColor = RgbColor.Black;
 				base.OnDraw(e);
 				ClearColor = origColor;
 
 				_mat.Texture = prevTexture;
-				_mat.Color = Color.White;
+				_mat.Color = RgbColor.White;
 				using (_mat.Begin()) {
 					_quad.Draw(0, 0, 0);
 				}
 
 				if (_t > 0) {
 					_mat.Texture = nextTexture;
-					_mat.Color = new Color(t, t, t, t);
+					_mat.Color = new RgbColor(t, t, t, t);
 					using (_mat.Begin()) {
 						_quad.Draw(0, 0, 1);
 					}
