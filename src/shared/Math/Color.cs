@@ -9,7 +9,7 @@ namespace GameStack {
 		public byte B;
 		public byte A;
 
-		public Color (byte r, byte g, byte b, byte a) {
+		public Color (byte r, byte g, byte b, byte a = 255) {
 			this.R = r;
 			this.G = g;
 			this.B = b;
