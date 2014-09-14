@@ -15,6 +15,7 @@ namespace GameStack.Gui {
 		LayoutSpec _spec;
 		RectangleF _margins;
 		SizeF _size;
+		float _zdepth;
 
 		public View () : this(null) {
 		}
@@ -24,7 +25,6 @@ namespace GameStack.Gui {
 			_children = new List<View>();
 			this.Transform = Matrix4.Identity;
 			this.Children = _children.AsReadOnly();
-			this.ZDepth = 0.1f;
 		}
 
 		public LayoutSpec Spec {
@@ -40,7 +40,7 @@ namespace GameStack.Gui {
 		public RectangleF Frame { get; protected set; }
 		public SizeF Size { get { return _size; } protected set { _size = value; } }
 		public RectangleF Margins { get { return _margins; } }
-		public float ZDepth { get; set; }
+		public float ZDepth { get { return _zdepth; } protected set { _zdepth = value; } }
 		public bool BlockInput { get; set; }
 		public object Tag { get; set; }
 
@@ -85,28 +85,37 @@ namespace GameStack.Gui {
 				var psz = this.Parent.Size;
 				var pz = this.Parent.ZDepth;
 
-				_margins = new RectangleF(
-					_spec.Left != null ? _spec.Left(psz) : 0f,
-					_spec.Top != null ? _spec.Top(psz) : 0f,
-					_spec.Right != null ? _spec.Right(psz) : 0f,
-					_spec.Bottom != null ? _spec.Bottom(psz) : 0f);
+				if (_spec.Margins == null) {
+					_margins = new RectangleF(
+						_spec.Left != null ? _spec.Left(psz) : 0f,
+						_spec.Top != null ? _spec.Top(psz) : 0f,
+						_spec.Right != null ? _spec.Right(psz) : 0f,
+						_spec.Bottom != null ? _spec.Bottom(psz) : 0f);
 
-				if (_spec.Width != null) {
-					if (_spec.Left != null && _spec.Right == null)
-						_margins.Right = psz.Width - _margins.Left - _spec.Width(psz);
-					else if (_spec.Left == null && _spec.Right != null)
-						_margins.Left = psz.Width - _margins.Right - _spec.Width(psz);
+					if (_spec.Width != null) {
+						if (_spec.Left != null && _spec.Right == null)
+							_margins.Right = psz.Width - _margins.Left - _spec.Width(psz);
+						else if (_spec.Left == null && _spec.Right != null)
+							_margins.Left = psz.Width - _margins.Right - _spec.Width(psz);
+					}
+					if (_spec.Height != null) {
+						if (_spec.Top != null && _spec.Bottom == null)
+							_margins.Bottom = psz.Height - _margins.Top - _spec.Height(psz);
+						else if (_spec.Top == null && _spec.Bottom != null)
+							_margins.Top = psz.Height - _margins.Bottom - _spec.Height(psz);
+					}
+
+					_size = new SizeF(psz.Width - _margins.Left - _margins.Right, psz.Height - _margins.Top - _margins.Bottom);
+
+					this.Frame = _margins;
+				} else {
+					this.Frame = _spec.Margins(psz);
 				}
-				if (_spec.Height != null) {
-					if (_spec.Top != null && _spec.Bottom == null)
-						_margins.Bottom = psz.Height - _margins.Top - _spec.Height(psz);
-					else if (_spec.Top == null && _spec.Bottom != null)
-						_margins.Top = psz.Height - _margins.Bottom - _spec.Height(psz);
-				}
 
-				_size = new SizeF(psz.Width - _margins.Left - _margins.Right, psz.Height - _margins.Top - _margins.Bottom);
-
-				this.Frame = new RectangleF(_margins.Left, _margins.Top, _size.Width, _size.Height);
+				if (_spec.ZOffset != null)
+					_zdepth = _spec.ZOffset();
+				else
+					_zdepth = 0.01f;
 			}
 
 			_children.ForEach(c => c.Layout());
