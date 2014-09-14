@@ -62,8 +62,8 @@
     <Compile Include="..\shared\drawing\FreeTypeFontFace.cs">
       <Link>Drawing\FreeTypeFontFace.cs</Link>
     </Compile>
-    <Compile Include="..\shared\drawing\Hex.cs">
-      <Link>Drawing\Hex.cs</Link>
+    <Compile Include="..\shared\drawing\PathData.cs">
+      <Link>Drawing\PathData.cs</Link>
     </Compile>
   </ItemGroup>
   <Import Project="..\shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\shared\GameStack.Shared.projitems')" />

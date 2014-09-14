@@ -60,6 +60,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)CanvasView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CairoEx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FreeTypeFontFace.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Hex.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PathData.cs" />
   </ItemGroup>
 </Project>
