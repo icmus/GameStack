@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using OpenTK;
 
 namespace GameStack {
 	[StructLayout(LayoutKind.Sequential)]
@@ -28,7 +29,7 @@ namespace GameStack {
 			: this((byte)(r * 255.0), (byte)(g * 255.0), (byte)(b * 255.0), (byte)(a * 255.0)) {
 		}
 
-		public RgbColor (int rgba)
+		public RgbColor (uint rgba)
 			: this((byte)(rgba >> 24), (byte)((rgba >> 16) & 0xff), (byte)((rgba >> 8) & 0xff), (byte)(rgba & 0xff)) {
 		}
 
@@ -51,6 +52,12 @@ namespace GameStack {
 
 		public static bool operator!= (RgbColor c1, RgbColor c2) {
 			return !(c1 == c2);
+		}
+
+		public static RgbColor operator* (RgbColor c1, RgbColor c2) {
+			var v1 = (Vector4)c1;
+			var v2 = (Vector4)c2;
+			return new RgbColor(v1.X * v2.X, v1.Y * v2.Y, v1.Z * v2.Z, v1.W * v2.W);
 		}
 
 		public static implicit operator System.Drawing.Color (RgbColor c) {

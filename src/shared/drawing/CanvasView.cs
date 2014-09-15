@@ -81,6 +81,7 @@ namespace GameStack.Gui {
 		}
 
 		protected virtual void OnDraw (Quad quad, ref Matrix4 transform) {
+			((SpriteMaterial)_quad.Material).Color = this.Tint;
 			_quad.Draw(ref transform);
 		}
 

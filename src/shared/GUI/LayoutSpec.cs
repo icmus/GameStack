@@ -2,6 +2,7 @@
 using SizeFunc = System.Func<GameStack.SizeF, float>;
 using MarginsFunc = System.Func<GameStack.SizeF, GameStack.RectangleF>;
 using DepthFunc = System.Func<float>;
+using ColorFunc = System.Func<GameStack.RgbColor>;
 
 namespace GameStack.Gui
 {
@@ -11,6 +12,7 @@ namespace GameStack.Gui
 		MarginsFunc _margins;
 		SizeFunc _left, _top, _right, _bottom, _width, _height;
 		DepthFunc _zdepth;
+		ColorFunc _tint;
 
 		public MarginsFunc Margins {
 			get { return _margins; }
@@ -81,6 +83,15 @@ namespace GameStack.Gui
 				if (this == Empty)
 					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
 				_zdepth = value;
+			}
+		}
+
+		public ColorFunc Tint {
+			get { return _tint; }
+			set {
+				if (this == Empty)
+					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				_tint = value;
 			}
 		}
 	}

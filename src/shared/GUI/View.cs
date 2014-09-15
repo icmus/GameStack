@@ -16,6 +16,7 @@ namespace GameStack.Gui {
 		RectangleF _margins;
 		SizeF _size;
 		float _zdepth;
+		RgbColor _tint;
 
 		public View () : this(null) {
 		}
@@ -25,6 +26,7 @@ namespace GameStack.Gui {
 			_children = new List<View>();
 			this.Transform = Matrix4.Identity;
 			this.Children = _children.AsReadOnly();
+			_tint = RgbColor.White;
 		}
 
 		public LayoutSpec Spec {
@@ -42,6 +44,7 @@ namespace GameStack.Gui {
 		public RectangleF Margins { get { return _margins; } }
 		public float ZDepth { get { return _zdepth; } protected set { _zdepth = value; } }
 		public bool BlockInput { get; set; }
+		public RgbColor Tint { get { return _tint; } }
 		public object Tag { get; set; }
 
 		public Matrix4 Transform {
@@ -116,6 +119,11 @@ namespace GameStack.Gui {
 					_zdepth = _spec.ZOffset();
 				else
 					_zdepth = 0.01f;
+
+				if (_spec.Tint != null)
+					_tint = _spec.Tint() * this.Parent.Tint;
+				else
+					_tint = RgbColor.White * this.Parent.Tint;
 			}
 
 			_children.ForEach(c => c.Layout());

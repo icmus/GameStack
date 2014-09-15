@@ -170,10 +170,10 @@ namespace GameStack.Graphics {
 		}
 
 		static Vector4 ParseColor (string s) {
-			int argb = -1;
+			uint argb = 0xffffffff;
 			if (s.StartsWith("#"))
 				s = s.Substring(1);
-			int.TryParse(s, NumberStyles.HexNumber, null, out argb);
+			uint.TryParse(s, NumberStyles.HexNumber, null, out argb);
 			return new RgbColor(argb).ToVector4();
 		}
 
