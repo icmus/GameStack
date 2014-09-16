@@ -28,12 +28,12 @@ namespace GameStack.Graphics {
 			var sb = new StringBuilder();
 			var weights = BuildWeights(length, sigma);
 			for (var i = 0; i < length; i++)
-				sb.AppendFormat("c += texture2D(DiffuseMap, blurTexCoords[{0}]) * {1};\n",
+				sb.AppendFormat("c += texture2D(Texture, blurTexCoords[{0}]) * {1};\n",
 					i, weights[length - i].ToString("0.0###################"));
-			sb.AppendFormat("c += texture2D(DiffuseMap, texCoord0) * {0};\n",
+			sb.AppendFormat("c += texture2D(Texture, texCoord0) * {0};\n",
 				weights[0].ToString("0.0###################"));
 			for (var i = length; i < length * 2; i++)
-				sb.AppendFormat("c += texture2D(DiffuseMap, blurTexCoords[{0}]) * {1};\n",
+				sb.AppendFormat("c += texture2D(Texture, blurTexCoords[{0}]) * {1};\n",
 					i, weights[i - length + 1].ToString("0.0###################"));
 
 			return string.Format(FragSourceFormat, length * 2, sb.ToString());
@@ -66,7 +66,7 @@ void main() {{
 }}
 ";
 		const string FragSourceFormat = @"
-uniform sampler2D DiffuseMap;
+uniform sampler2D Texture;
 uniform vec4 Tint;
 
 varying vec2 texCoord0;
