@@ -32,7 +32,7 @@ namespace GameStack.Desktop {
 
 		public SDL2GameView (string title, int width, int height, bool fullscreen = false, bool vsync = true, 
 		                     int x = SDL.SDL_WINDOWPOS_CENTERED, int y = SDL.SDL_WINDOWPOS_CENTERED,
-		                     int frameRate = 60) {
+							int frameRate = 60, bool windowChrome = true) {
 			_refCount++;
 			_width = width;
 			_height = height;
@@ -60,8 +60,11 @@ namespace GameStack.Desktop {
 				x, y,
 				width, height,
 				SDL.SDL_WindowFlags.SDL_WINDOW_OPENGL
-				| (fullscreen ? SDL.SDL_WindowFlags.SDL_WINDOW_FULLSCREEN : 0)
+				| (!windowChrome ? SDL.SDL_WindowFlags.SDL_WINDOW_BORDERLESS : 0)
+				//| (fullscreen ? SDL.SDL_WindowFlags.SDL_WINDOW_FULLSCREEN : 0)
 			);
+			if(fullscreen)
+				SDL.SDL_SetWindowFullscreen(_window, (uint)SDL.SDL_WindowFlags.SDL_WINDOW_FULLSCREEN_DESKTOP);
 			if (_window == IntPtr.Zero)
 				throw new SDL2Exception();
 
