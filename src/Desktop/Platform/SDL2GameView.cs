@@ -24,6 +24,7 @@ namespace GameStack.Desktop {
 		uint _windowId;
 		bool _loadFrame;
 		volatile bool _isDisposed;
+		bool _captureKeyboard;
 
 		public event EventHandler<FrameArgs> Update;
 		public event EventHandler<FrameArgs> Render;
@@ -32,11 +33,12 @@ namespace GameStack.Desktop {
 
 		public SDL2GameView (string title, int width, int height, bool fullscreen = false, bool vsync = true, 
 		                     int x = SDL.SDL_WINDOWPOS_CENTERED, int y = SDL.SDL_WINDOWPOS_CENTERED,
-							int frameRate = 60, bool windowChrome = true) {
+							int frameRate = 60, bool windowChrome = true, bool captureKeyboard = false) {
 			_refCount++;
 			_width = width;
 			_height = height;
 			_frameRate = frameRate;
+			_captureKeyboard = captureKeyboard;
 
 			_frameArgs = new FrameArgs();
 			_frameArgs.Enqueue(new Start(new SizeF(_width, _height), 1.0f));
@@ -279,7 +281,7 @@ namespace GameStack.Desktop {
 					break;
 				case SDL.SDL_EventType.SDL_KEYDOWN:
 				case SDL.SDL_EventType.SDL_KEYUP:
-					if (e.key.windowID != _windowId)
+					if (!_captureKeyboard && e.key.windowID != _windowId)
 						return;
 					var sym = (int)e.key.keysym.sym;
 					_frameArgs.Enqueue(new KeyEvent(
