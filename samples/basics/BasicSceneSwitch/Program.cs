@@ -10,7 +10,7 @@ namespace Basics {
 				throw new SDL2Exception();
 			}
 			using (var loop = new SDL2EventLoop()) {
-				using (var view = new SDL2GameView("Basics", 640, 480, false, true, 0, 0)) {
+				using (var view = new SDL2GameView(WindowMode.Window, "Basics", 640, 480, true)) {
 					var fader = new SceneCrossfader(view);
 					fader.SetScene(new Scene1(view, fader));
 					view.Event += (object sender, SDL2EventArgs e) => {

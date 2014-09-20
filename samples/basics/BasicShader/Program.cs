@@ -9,7 +9,7 @@ namespace Basics {
 				throw new SDL2Exception();
 			}
 			using (var loop = new SDL2EventLoop()) {
-				using (var view = new SDL2GameView("Basics", 640, 480, false, true, 0, 0)) {
+				using (var view = new SDL2GameView(WindowMode.Window, "Basics", 640, 480, true)) {
 					using (var scene = new DefaultScene(view)) {
 						view.Event += (object sender, SDL2EventArgs e) => {
 							if (e.Event.type == SDL.SDL_EventType.SDL_KEYDOWN && e.Event.key.keysym.sym == SDL.SDL_Keycode.SDLK_ESCAPE)

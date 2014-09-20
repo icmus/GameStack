@@ -10,35 +10,37 @@ using OpenTK.Graphics.OpenGL;
 using SDL2;
 
 namespace GameStack.Desktop {
+	public enum WindowMode {
+		Window,
+		Fullscreen,
+		Desktop
+	}
+
 	public class SDL2GameView : IGameView, IDisposable {
 		static AudioContext _alContext;
 		static int _refCount = 0;
+
 		Thread _thread;
 		ConcurrentQueue<SDL.SDL_Event> _sdlEvents;
-		bool _mouseDrag;
-		IntPtr _window;
-		int _width, _height;
-		IntPtr _glContext;
-		int _frameRate;
-		FrameArgs _frameArgs;
+		IntPtr _window, _glContext;
+		int _width, _height, _frameRate;
 		uint _windowId;
-		bool _loadFrame;
+		FrameArgs _frameArgs;
+		bool _loadFrame, _mouseDrag, _captureKeyboard;
 		volatile bool _isDisposed;
-		bool _captureKeyboard;
 
 		public event EventHandler<FrameArgs> Update;
 		public event EventHandler<FrameArgs> Render;
 		public event EventHandler<SDL2EventArgs> Event;
 		public event EventHandler Destroyed;
 
-		public SDL2GameView (string title, int width, int height, bool fullscreen = false, bool vsync = true, 
-		                     int x = SDL.SDL_WINDOWPOS_CENTERED, int y = SDL.SDL_WINDOWPOS_CENTERED,
-							int frameRate = 60, bool windowChrome = true, bool captureKeyboard = false) {
+		public SDL2GameView(WindowMode mode, string title = "GameStack", int width = 0, int height = 0, bool vsync = true,
+			int x = SDL.SDL_WINDOWPOS_CENTERED, int y = SDL.SDL_WINDOWPOS_CENTERED) {
 			_refCount++;
 			_width = width;
 			_height = height;
-			_frameRate = frameRate;
-			_captureKeyboard = captureKeyboard;
+			_frameRate = 60;
+			_captureKeyboard = false;
 
 			_frameArgs = new FrameArgs();
 			_frameArgs.Enqueue(new Start(new SizeF(_width, _height), 1.0f));
@@ -54,7 +56,7 @@ namespace GameStack.Desktop {
 			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_DEPTH_SIZE, 24);
 			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_MULTISAMPLEBUFFERS, 1);
 			SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_MULTISAMPLESAMPLES, 4);
-			if(vsync)
+			if (vsync)
 				SDL.SDL_GL_SetAttribute(SDL.SDL_GLattr.SDL_GL_DOUBLEBUFFER, 1);
 
 			_window = SDL.SDL_CreateWindow(
@@ -62,10 +64,11 @@ namespace GameStack.Desktop {
 				x, y,
 				width, height,
 				SDL.SDL_WindowFlags.SDL_WINDOW_OPENGL
-				| (!windowChrome ? SDL.SDL_WindowFlags.SDL_WINDOW_BORDERLESS : 0)
-				//| (fullscreen ? SDL.SDL_WindowFlags.SDL_WINDOW_FULLSCREEN : 0)
+					| (mode != WindowMode.Window ? SDL.SDL_WindowFlags.SDL_WINDOW_BORDERLESS : 0)
+					| (mode == WindowMode.Fullscreen ? SDL.SDL_WindowFlags.SDL_WINDOW_FULLSCREEN : 0)
+					| (mode == WindowMode.Desktop ? SDL.SDL_WindowFlags.SDL_WINDOW_FULLSCREEN_DESKTOP : 0)
 			);
-			if(fullscreen)
+			if(mode == WindowMode.Desktop)
 				SDL.SDL_SetWindowFullscreen(_window, (uint)SDL.SDL_WindowFlags.SDL_WINDOW_FULLSCREEN_DESKTOP);
 			if (_window == IntPtr.Zero)
 				throw new SDL2Exception();
@@ -87,6 +90,10 @@ namespace GameStack.Desktop {
 		public float PixelScale { get { return 1.0f; } }
 
 		public bool IsPaused { get { return false; } }
+
+		public bool CaptureKeyboard { get { return _captureKeyboard; } set { _captureKeyboard = value; } }
+
+		public int FrameRate { get { return _frameRate; } set { _frameRate = value; } }
 
 		public void StartThread () {
 			_thread = new Thread(ThreadProc);
