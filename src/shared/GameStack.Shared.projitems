@@ -107,5 +107,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\PriorityQueue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\RgbColor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\ITouchInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\IScalePanInput.cs" />
   </ItemGroup>
 </Project>
