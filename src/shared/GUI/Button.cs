@@ -14,7 +14,7 @@ namespace GameStack.Gui {
 		ActiveOutside
 	}
 
-	public class Button : View, IPointerInput {
+	public class Button : View, ITouchInput {
 		ButtonState _state;
 		RadioGroup _group;
 		Label _label;

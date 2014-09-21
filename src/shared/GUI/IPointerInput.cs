@@ -2,7 +2,7 @@ using System;
 using OpenTK;
 
 namespace GameStack.Gui {
-	public interface IPointerInput {
+	public interface ITouchInput {
 		void OnPointerEnter (FrameArgs frame, Vector2 where);
 
 		void OnPointerExit (FrameArgs frame, Vector2 where);

@@ -4,10 +4,10 @@ using GameStack;
 using GameStack.Graphics;
 
 namespace GameStack.Gui {
-	public class RootView : View, IUpdater, IHandler<Resize>, IHandler<Touch>, IHandler<Gesture> {
+	public class RootView : View, IUpdater, IHandler<Resize>, IHandler<Touch> {
 		float _depth, _maxDepth;
 		Camera2D _camera;
-		IPointerInput _focused, _current;
+		ITouchInput _focused, _current;
 		long _pointerId;
 
 		public RootView (SizeF viewSize, float depth, float maxDepth = 1000f) {
@@ -40,7 +40,7 @@ namespace GameStack.Gui {
 
 		void IHandler<Touch>.Handle (FrameArgs frame, Touch e) {
 			Vector2 where;
-			var src = this.FindInputSinkByPoint<IPointerInput>(e.SurfacePoint, Matrix4.Identity, out where);
+			var src = this.FindInputSinkByPoint<ITouchInput>(e.SurfacePoint, Matrix4.Identity, out where);
 			switch (e.State) {
 				case TouchState.Start:
 					if (_pointerId >= 0)
@@ -87,13 +87,6 @@ namespace GameStack.Gui {
 					break;
 			}
 			_current = src;
-		}
-
-		void IHandler<Gesture>.Handle (FrameArgs frame, Gesture e) {
-			IGestureInput target = _focused as IGestureInput;
-			if (target != null) {
-				target.OnGesture(e);
-			}
 		}
 
 		void IUpdater.Update (FrameArgs e) {
