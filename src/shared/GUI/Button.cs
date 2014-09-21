@@ -238,7 +238,6 @@ namespace GameStack.Gui {
 		}
 
 		#endregion
-
 	}
 
 	public class ButtonStateChangedEventArgs : EventArgs {

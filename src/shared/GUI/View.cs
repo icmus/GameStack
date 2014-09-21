@@ -182,7 +182,7 @@ namespace GameStack.Gui {
 			return result;
 		}
 
-		public IPointerInput FindInputSinkByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {
+		public T FindInputSinkByPoint<T> (Vector2 point, Matrix4 parentInv, out Vector2 where) where T : class {
 			where = Vector2.Zero;
 			if (BlockInput)
 				return null;
@@ -192,17 +192,17 @@ namespace GameStack.Gui {
 			foreach (var view in Enumerable.Reverse(_children)) {
 				if (view.BlockInput)
 					continue;
-				var found = view.FindInputSinkByPoint(point, inv, out where);
+				var found = view.FindInputSinkByPoint<T>(point, inv, out where);
 				if (found != null)
 					return found;
 			}
-			if (this is IPointerInput) {
+			if (this is T) {
 				var temp = Vector3.Transform(new Vector3(point), inv);
 				point = new Vector2(temp.X, temp.Y);
 
 				if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
 						where = point;
-					return (IPointerInput)this;
+					return (T)((object)this);
 				}
 			}
 
