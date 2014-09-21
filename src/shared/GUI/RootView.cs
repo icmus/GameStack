@@ -46,12 +46,12 @@ namespace GameStack.Gui {
 					if (_pointerId >= 0)
 						return;
 					if (e.Index == _pointerId && _focused != null && src != _focused) {
-						_focused.OnPointerExit(frame, where);
-						_focused.OnPointerUp(frame, where);
+						_focused.OnPointerExit(_focused, frame, where);
+						_focused.OnPointerUp(_focused, frame, where);
 					}
 					if (src != null) {
 						_focused = src;
-						src.OnPointerDown(frame, where);
+						src.OnPointerDown(src, frame, where);
 						_pointerId = e.Index;
 					}
 					break;
@@ -60,18 +60,18 @@ namespace GameStack.Gui {
 						return;
 					if (_focused != null) {
 						if (_focused != src)
-							_focused.OnPointerExit(frame, where);
+							_focused.OnPointerExit(_focused, frame, where);
 						else if (_current != _focused && _focused == src)
-							_focused.OnPointerEnter(frame, where);
+							_focused.OnPointerEnter(_focused, frame, where);
 						else
-							_focused.OnPointerMove(frame, where);
+							_focused.OnPointerMove(_focused, frame, where);
 					}
 					break;
 				case TouchState.End:
 					if (e.Index != _pointerId)
 						return;
 					if (_focused != null)
-						_focused.OnPointerUp(frame, where);
+						_focused.OnPointerUp(_focused, frame, where);
 					_focused = null;
 					_pointerId = -1;
 					break;
@@ -79,8 +79,8 @@ namespace GameStack.Gui {
 					if (e.Index != _pointerId)
 						return;
 					if (_focused != null) {
-						_focused.OnPointerExit(frame, where);
-						_focused.OnPointerUp(frame, where);
+						_focused.OnPointerExit(_focused, frame, where);
+						_focused.OnPointerUp(_focused, frame, where);
 					}
 					_focused = null;
 					_pointerId = -1;

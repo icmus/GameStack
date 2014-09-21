@@ -221,6 +221,16 @@ namespace GameStack.Gui {
 			return null;
 		}
 
+		public void Bubble<T> (Action<T> func) where T : class {
+			var view = this;
+			while (view != null) {
+				var intf = view as T;
+				if (intf != null)
+					func(intf);
+				view = view.Parent;
+			}
+		}
+
 		View FindViewByPointImpl (Vector2 point, Matrix4 parentInv, out Vector3 where) {
 			where = Vector3.Zero;
 			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, -ZDepth) * TransformInv;

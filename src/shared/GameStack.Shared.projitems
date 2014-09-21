@@ -58,7 +58,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\SolidColorShader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\SpriteShader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\Button.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)GUI\IPointerInput.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\ImageView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\Label.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\RadioGroup.cs" />
@@ -107,5 +106,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\PriorityQueueNode.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\PriorityQueue.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\RgbColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\ITouchInput.cs" />
   </ItemGroup>
 </Project>
