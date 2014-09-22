@@ -8,12 +8,11 @@ namespace GameStack.Gui {
 	public class RootView : View, IUpdater, IHandler<Resize>, IHandler<Touch> {
 		class KnownTouch {
 			public long Id;
-			public Vector2 Last, Now, Where;
+			public Vector2 Point, Where, Delta;
 			public ITouchInput Owner;
 			public ITouchInput Current;
 			public KnownTouch Next;
 			public bool Used;
-			public bool Visited;
 		}
 
 		Dictionary<long,KnownTouch> _touchesById;
@@ -70,8 +69,7 @@ namespace GameStack.Gui {
 							kt2 = kt2.Next;
 						kt2.Next = new KnownTouch {
 							Id = e.Index,
-							Last = e.SurfacePoint,
-							Now = e.SurfacePoint,
+							Point = e.SurfacePoint,
 							Where = where,
 							Owner = kt1.Owner,
 							Current = psrc,
@@ -82,8 +80,7 @@ namespace GameStack.Gui {
 					else {
 						kt1 = new KnownTouch {
 							Id = e.Index,
-							Last = e.SurfacePoint,
-							Now = e.SurfacePoint,
+							Point = e.SurfacePoint,
 							Where = where,
 							Owner = psrc,
 							Current = psrc
@@ -106,14 +103,10 @@ namespace GameStack.Gui {
 					else
 						(kt1.Owner as View).Bubble<ITouchInput>(v => v.OnPointerMove(kt1.Owner, frame, where));
 				}
-				kt1.Last = kt1.Now;
-				kt1.Visited = true;
-				kt1.Now = e.SurfacePoint;
+				kt1.Delta += (e.SurfacePoint - kt1.Point);
+				kt1.Point = e.SurfacePoint;
 				kt1.Current = psrc;
 				kt1.Where = where;
-
-				kt1 = _touchesByView[kt1.Owner];
-				kt2 = kt1.Next;
 				break;
 			case TouchState.End:
 			case TouchState.Cancel:
@@ -141,33 +134,23 @@ namespace GameStack.Gui {
 				}
 				break;
 			}
-
-			switch(e.State) {
-			case TouchState.Move:
-				if (kt1 != null && kt2 != null) {
-					Vector2 delta;
-					float dist = 1;
-					// each finger movement will fire a separate event, so only take into account one
-					// finger's contribution to the change at a time
-					if (kt1.Id == e.Index) {
-						delta = (kt1.Now + kt2.Now) * 0.5f - (kt1.Last + kt2.Now) * 0.5f;
-					} else if (kt2.Id == e.Index) {
-						delta = (kt1.Now + kt2.Now) * 0.5f - (kt1.Now + kt2.Last) * 0.5f;
-					} else
-						break;
-
-					var c = (kt1.Where + kt2.Where) * 0.5f;
-					var view = kt1.Owner as View;
-					view.Bubble<IScalePanInput>(v => v.OnScalePan(kt1.Owner, frame, c, new Vector2(delta.X, -delta.Y), dist));
-				}
-				break;
-			}
 		}
 
 		void IUpdater.Update (FrameArgs e) {
-			this.Update(e);
+			foreach (var kvp in _touchesByView) {
+				var kt1 = kvp.Value;
+				var kt2 = kt1.Next;
+				float scale = 1f;
+				if (kt2 != null && (kt1.Delta != Vector2.Zero || kt2.Delta != Vector2.Zero)) {
+					var delta = (kt1.Point + kt2.Point) * 0.5f - ((kt1.Point - kt1.Delta) + (kt2.Point - kt2.Delta)) * 0.5f;
+					var where = (kt1.Where + kt2.Where) * 0.5f;
+					((View)kvp.Key).Bubble<IScalePanInput>(v => v.OnScalePan(kvp.Key, e, where, new Vector2(delta.X, -delta.Y), scale));
+				}
+			}
 			foreach (var kt in _touchesById.Values)
-				kt.Visited = false;
+				kt.Delta = Vector2.Zero;
+
+			this.Update(e);
 		}
 	}
 }
