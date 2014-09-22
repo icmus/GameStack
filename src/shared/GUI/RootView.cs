@@ -13,6 +13,7 @@ namespace GameStack.Gui {
 			public ITouchInput Current;
 			public KnownTouch Next;
 			public bool Used;
+			public bool Visited;
 		}
 
 		Dictionary<long,KnownTouch> _touchesById;
@@ -100,13 +101,13 @@ namespace GameStack.Gui {
 					if (kt1.Owner != psrc) {
 						if (kt1.Owner == kt1.Current)
 							(kt1.Owner as View).Bubble<ITouchInput>(v => v.OnPointerExit(kt1.Owner, frame, where));
-					}
-					else if (kt1.Owner == psrc && kt1.Current != kt1.Owner)
+					} else if (kt1.Owner == psrc && kt1.Current != kt1.Owner)
 						(kt1.Owner as View).Bubble<ITouchInput>(v => v.OnPointerEnter(kt1.Owner, frame, where));
 					else
 						(kt1.Owner as View).Bubble<ITouchInput>(v => v.OnPointerMove(kt1.Owner, frame, where));
 				}
 				kt1.Last = kt1.Now;
+				kt1.Visited = true;
 				kt1.Now = e.SurfacePoint;
 				kt1.Current = psrc;
 				kt1.Where = where;
@@ -145,17 +146,16 @@ namespace GameStack.Gui {
 			case TouchState.Move:
 				if (kt1 != null && kt2 != null) {
 					Vector2 delta;
-					float dist;
-					// only take into account one finger movement at a time
-					// this produces multiple, smaller deltas per frame
+					float dist = 1;
+					// each finger movement will fire a separate event, so only take into account one
+					// finger's contribution to the change at a time
 					if (kt1.Id == e.Index) {
 						delta = (kt1.Now + kt2.Now) * 0.5f - (kt1.Last + kt2.Now) * 0.5f;
-						dist = (kt2.Now - kt1.Now).Length / (kt2.Now - kt1.Last).Length;
 					} else if (kt2.Id == e.Index) {
 						delta = (kt1.Now + kt2.Now) * 0.5f - (kt1.Now + kt2.Last) * 0.5f;
-						dist = (kt2.Now - kt1.Now).Length / (kt2.Last - kt1.Now).Length;
 					} else
 						break;
+
 					var c = (kt1.Where + kt2.Where) * 0.5f;
 					var view = kt1.Owner as View;
 					view.Bubble<IScalePanInput>(v => v.OnScalePan(kt1.Owner, frame, c, new Vector2(delta.X, -delta.Y), dist));
@@ -166,6 +166,8 @@ namespace GameStack.Gui {
 
 		void IUpdater.Update (FrameArgs e) {
 			this.Update(e);
+			foreach (var kt in _touchesById.Values)
+				kt.Visited = false;
 		}
 	}
 }
