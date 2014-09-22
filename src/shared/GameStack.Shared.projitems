@@ -108,5 +108,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Math\RgbColor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\ITouchInput.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\IScalePanInput.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GUI\IInputTarget.cs" />
   </ItemGroup>
 </Project>

@@ -182,26 +182,41 @@ namespace GameStack.Gui {
 			return result;
 		}
 
-		public T FindInputSinkByPoint<T> (Vector2 point, Matrix4 parentInv, out Vector2 where) where T : class {
+		public T FindInputSinkByPoint<T> (Vector2 point, Matrix4 parentInv, out Vector2 where) where T : class, IInputTarget {
+			float z;
+			return this.FindInputSinkByPointImpl<T>(point, parentInv, out where, 0f, out z);
+		}
+
+		T FindInputSinkByPointImpl<T> (Vector2 point, Matrix4 parentInv, out Vector2 where, float zparent, out float zdepth) where T : class, IInputTarget {
 			where = Vector2.Zero;
+			zdepth = float.MinValue;
 			if (BlockInput)
 				return null;
 
 			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, 0) * TransformInv;
 
-			foreach (var view in Enumerable.Reverse(_children)) {
+			T found = null;
+			foreach (var view in _children) {
 				if (view.BlockInput)
 					continue;
-				var found = view.FindInputSinkByPoint<T>(point, inv, out where);
-				if (found != null)
-					return found;
+				float z;
+				Vector2 w;
+				var v = view.FindInputSinkByPointImpl<T>(point, inv, out w, zparent + this.ZDepth, out z);
+				if (v != null && (found == null || z > zdepth)) {
+					found = v;
+					zdepth = z;
+					where = w;
+				}
 			}
+			if (found != null)
+				return found;
 			if (this is T) {
 				var temp = Vector3.Transform(new Vector3(point), inv);
 				point = new Vector2(temp.X, temp.Y);
 
 				if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
 						where = point;
+					zdepth = zparent + this.ZDepth;
 					return (T)((object)this);
 				}
 			}
