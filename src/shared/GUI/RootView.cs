@@ -140,9 +140,11 @@ namespace GameStack.Gui {
 			foreach (var kvp in _touchesByView) {
 				var kt1 = kvp.Value;
 				var kt2 = kt1.Next;
-				float scale = 1f;
 				if (kt2 != null && (kt1.Delta != Vector2.Zero || kt2.Delta != Vector2.Zero)) {
-					var delta = (kt1.Point + kt2.Point) * 0.5f - ((kt1.Point - kt1.Delta) + (kt2.Point - kt2.Delta)) * 0.5f;
+					var old1 = kt1.Point - kt1.Delta;
+					var old2 = kt2.Point - kt2.Delta;
+					var delta = (kt1.Point + kt2.Point) * 0.5f - (old1 + old2) * 0.5f;
+					var scale = (kt1.Point - kt2.Point).Length / (old1 - old2).Length;
 					var where = (kt1.Where + kt2.Where) * 0.5f;
 					((View)kvp.Key).Bubble<IScalePanInput>(v => v.OnScalePan(kvp.Key, e, where, new Vector2(delta.X, -delta.Y), scale));
 				}
