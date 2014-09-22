@@ -144,8 +144,18 @@ namespace GameStack.Gui {
 			switch(e.State) {
 			case TouchState.Move:
 				if (kt1 != null && kt2 != null) {
-					var delta = (kt1.Now + kt2.Now) * 0.5f - (kt1.Last + kt2.Last) * 0.5f;
-					var dist = (kt2.Now - kt1.Now).Length / (kt2.Last - kt1.Last).Length;
+					Vector2 delta;
+					float dist;
+					// only take into account one finger movement at a time
+					// this produces multiple, smaller deltas per frame
+					if (kt1.Id == e.Index) {
+						delta = (kt1.Now + kt2.Now) * 0.5f - (kt1.Last + kt2.Now) * 0.5f;
+						dist = (kt2.Now - kt1.Now).Length / (kt2.Now - kt1.Last).Length;
+					} else if (kt2.Id == e.Index) {
+						delta = (kt1.Now + kt2.Now) * 0.5f - (kt1.Now + kt2.Last) * 0.5f;
+						dist = (kt2.Now - kt1.Now).Length / (kt2.Last - kt1.Now).Length;
+					} else
+						break;
 					var c = (kt1.Where + kt2.Where) * 0.5f;
 					var view = kt1.Owner as View;
 					view.Bubble<IScalePanInput>(v => v.OnScalePan(kt1.Owner, frame, c, new Vector2(delta.X, -delta.Y), dist));

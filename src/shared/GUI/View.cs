@@ -46,6 +46,7 @@ namespace GameStack.Gui {
 		public bool BlockInput { get; set; }
 		public RgbColor Tint { get { return _tint; } }
 		public object Tag { get; set; }
+		public bool PixelAlign { get; set; }
 
 		public Matrix4 Transform {
 			get { return _transform; }
@@ -148,6 +149,17 @@ namespace GameStack.Gui {
 			local.M42 += _margins.Bottom;
 			local.M43 += this.ZDepth;
 			Matrix4.Mult(ref local, ref parentTransform, out local);
+
+			// pixel alignment is only possible without scale and rotation applied
+			// this is a special case of a special case
+			if (this.PixelAlign
+				&& local.M11 == 1f && local.M12 == 0f && local.M13 == 0f
+				&& local.M21 == 0f && local.M22 == 1f && local.M23 == 0f
+				&& local.M31 == 0f && local.M32 == 0f && local.M33 == 1f)
+			{
+				local.M41 = Mathf.Round(local.M41, MidpointRounding.AwayFromZero);
+				local.M42 = Mathf.Round(local.M42, MidpointRounding.AwayFromZero);
+			}
 
 			this.OnDraw(ref local);
 			foreach (var view in _children)
