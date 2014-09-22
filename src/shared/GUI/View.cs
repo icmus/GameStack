@@ -70,11 +70,14 @@ namespace GameStack.Gui {
 			_children.Add(view);
 			view.Parent = this;
 			view.Layout();
+			this.OnChildAdded(view);
 		}
 
 		public void RemoveView (View view) {
-			if (_children.Remove(view))
+			if (_children.Remove(view)) {
 				view.Parent = null;
+				this.OnChildRemoved(view);
+			}
 		}
 
 		public void ClearViews () {
@@ -133,16 +136,10 @@ namespace GameStack.Gui {
 			_children.Sort((l, r) => l.ZDepth < r.ZDepth ? -1 : l.ZDepth > r.ZDepth ? 1 : 0);
 		}
 
-		protected virtual void OnUpdate(FrameArgs e) {
-		}
-
 		public void Update(FrameArgs e) {
 			this.OnUpdate(e);
 			foreach (var view in _children)
 				view.Update(e);
-		}
-
-		protected virtual void OnDraw (ref Matrix4 transform) {
 		}
 
 		public void Draw (Matrix4 parentTransform) {
@@ -187,49 +184,12 @@ namespace GameStack.Gui {
 			return this.FindInputSinkByPointImpl<T>(point, parentInv, out where, 0f, out z);
 		}
 
-		T FindInputSinkByPointImpl<T> (Vector2 point, Matrix4 parentInv, out Vector2 where, float zparent, out float zdepth) where T : class, IInputTarget {
-			where = Vector2.Zero;
-			zdepth = float.MinValue;
-			if (BlockInput)
-				return null;
-
-			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, 0) * TransformInv;
-
-			T found = null;
-			foreach (var view in _children) {
-				if (view.BlockInput)
-					continue;
-				float z;
-				Vector2 w;
-				var v = view.FindInputSinkByPointImpl<T>(point, inv, out w, zparent + this.ZDepth, out z);
-				if (v != null && (found == null || z > zdepth)) {
-					found = v;
-					zdepth = z;
-					where = w;
-				}
-			}
-			if (found != null)
-				return found;
-			if (this is T) {
-				var temp = Vector3.Transform(new Vector3(point), inv);
-				point = new Vector2(temp.X, temp.Y);
-
-				if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
-						where = point;
-					zdepth = zparent + this.ZDepth;
-					return (T)((object)this);
-				}
-			}
-
-			return null;
-		}
-
 		public View FindViewByPoint (Vector2 point, Matrix4 parentInv, out Vector2 where) {
-			where = Vector2.Zero;
+				where = Vector2.Zero;
 			Vector3 hitPos;
 			var view = FindViewByPointImpl(point, parentInv, out hitPos);
 			if (view != null) {
-				where = hitPos.Xy;
+					where = hitPos.Xy;
 				return view;
 			}
 
@@ -244,42 +204,6 @@ namespace GameStack.Gui {
 					func(intf);
 				view = view.Parent;
 			}
-		}
-
-		View FindViewByPointImpl (Vector2 point, Matrix4 parentInv, out Vector3 where) {
-			where = Vector3.Zero;
-			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, -ZDepth) * TransformInv;
-
-			var cPoint = point;
-			var hit = _children.Select(c => {
-				Vector3 cHitPos;
-				var cHit = c.FindViewByPointImpl(cPoint, inv, out cHitPos);
-				if (cHit == null)
-					return new KeyValuePair<View, Vector3>?();
-				else
-					return new KeyValuePair<View, Vector3>(cHit, cHitPos);
-			})
-				.Where(c => c.HasValue)
-				.OrderByDescending(c => c.Value.Value.Z)
-				.FirstOrDefault();
-
-			var temp = Vector3.Transform(new Vector3(point), inv);
-			point = new Vector2(temp.X, temp.Y);
-
-			if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
-				if (hit.HasValue && hit.Value.Value.Z >= 0) {
-					where = hit.Value.Value + new Vector3(0, 0, Transform.M43 + ZDepth);
-					return hit.Value.Key;
-				} else {
-					where = new Vector3(point.X, point.Y, Transform.M43 + ZDepth);
-					return this;
-				}
-			} else if (hit.HasValue) {
-				where = hit.Value.Value + new Vector3(0, 0, Transform.M43 + ZDepth);
-				return hit.Value.Key;
-			}
-
-			return null;
 		}
 
 		public bool ContainsPoint (Vector2 point) {
@@ -331,11 +255,96 @@ namespace GameStack.Gui {
 			return false;
 		}
 
+		protected virtual void OnUpdate(FrameArgs e) {
+		}
+
+		protected virtual void OnDraw (ref Matrix4 transform) {
+		}
+
+		protected virtual void OnChildAdded(View view) {
+		}
+
+		protected virtual void OnChildRemoved(View view) {
+		}
+
+		T FindInputSinkByPointImpl<T> (Vector2 point, Matrix4 parentInv, out Vector2 where, float zparent, out float zdepth) where T : class, IInputTarget {
+			where = Vector2.Zero;
+			zdepth = float.MinValue;
+			if (BlockInput)
+				return null;
+
+			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, 0) * TransformInv;
+
+			T found = null;
+			foreach (var view in _children) {
+				if (view.BlockInput)
+					continue;
+				float z;
+				Vector2 w;
+				var v = view.FindInputSinkByPointImpl<T>(point, inv, out w, zparent + this.ZDepth, out z);
+				if (v != null && (found == null || z > zdepth)) {
+					found = v;
+					zdepth = z;
+					where = w;
+				}
+			}
+			if (found != null)
+				return found;
+			if (this is T) {
+				var temp = Vector3.Transform(new Vector3(point), inv);
+				point = new Vector2(temp.X, temp.Y);
+
+				if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
+						where = point;
+					zdepth = zparent + this.ZDepth;
+					return (T)((object)this);
+				}
+			}
+
+			return null;
+		}
+			
+		View FindViewByPointImpl (Vector2 point, Matrix4 parentInv, out Vector3 where) {
+			where = Vector3.Zero;
+			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, -ZDepth) * TransformInv;
+
+			var cPoint = point;
+			var hit = _children.Select(c => {
+				Vector3 cHitPos;
+				var cHit = c.FindViewByPointImpl(cPoint, inv, out cHitPos);
+				if (cHit == null)
+					return new KeyValuePair<View, Vector3>?();
+				else
+					return new KeyValuePair<View, Vector3>(cHit, cHitPos);
+			})
+				.Where(c => c.HasValue)
+				.OrderByDescending(c => c.Value.Value.Z)
+				.FirstOrDefault();
+
+			var temp = Vector3.Transform(new Vector3(point), inv);
+			point = new Vector2(temp.X, temp.Y);
+
+			if (point.X >= 0 && point.Y >= 0 && point.X < _size.Width && point.Y < _size.Height) {
+				if (hit.HasValue && hit.Value.Value.Z >= 0) {
+					where = hit.Value.Value + new Vector3(0, 0, Transform.M43 + ZDepth);
+					return hit.Value.Key;
+				} else {
+					where = new Vector3(point.X, point.Y, Transform.M43 + ZDepth);
+					return this;
+				}
+			} else if (hit.HasValue) {
+				where = hit.Value.Value + new Vector3(0, 0, Transform.M43 + ZDepth);
+				return hit.Value.Key;
+			}
+
+			return null;
+		}
+			
 		public virtual void Dispose () {
 			for (int i = _children.Count - 1; i >= 0; i--)
 				_children[i].Dispose();
-			if (Parent != null)
-				Parent.RemoveView(this);
+			if (this.Parent != null)
+				this.Parent.RemoveView(this);
 		}
 	}
 }
