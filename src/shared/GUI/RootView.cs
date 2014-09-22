@@ -107,7 +107,7 @@ namespace GameStack.Gui {
 						(kt1.Owner as View).Bubble<ITouchInput>(v => v.OnPointerMove(kt1.Owner, frame, where));
 				}
 				kt1.Last = kt1.Now;
-				kt1.Now = where;
+				kt1.Now = e.SurfacePoint;
 				kt1.Current = psrc;
 				kt1.Where = where;
 
