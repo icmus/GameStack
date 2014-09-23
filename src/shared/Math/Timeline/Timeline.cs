@@ -9,9 +9,13 @@ namespace GameStack {
 		double _duration, _time, _rate;
 		bool _isPlaying;
 
+		private Timeline () {
+		}
+
 		public Timeline (double duration) {
 			_duration = duration;
 			_channels = new Dictionary<string, IKeyChannel>();
+			_rate = 1f;
 		}
 
 		public double Duration { get { return _duration; } set { _duration = value; } }
@@ -41,7 +45,7 @@ namespace GameStack {
 
 		public void Update(float dt) {
 			if (_isPlaying) {
-				this.Seek(Math.Min(_duration, _time + dt));
+				this.Seek(Math.Min(_duration, _time + dt * _rate));
 				if (_time >= _duration)
 					_isPlaying = false;
 			}
@@ -57,6 +61,14 @@ namespace GameStack {
 					throw new ArgumentException("Incorrect type for channel `" + name + "'.");
 			} else
 				throw new ArgumentException("No such channel named `" + name + "'.");
+		}
+
+		public Timeline Clone () {
+			return new Timeline() {
+				_duration = _duration,
+				_rate = _rate,
+				_channels = new Dictionary<string, IKeyChannel>(_channels)
+			};
 		}
 
 		void IUpdater.Update (FrameArgs e) {
