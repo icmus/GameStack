@@ -17,6 +17,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Math\" />
     <Folder Include="$(MSBuildThisFileDirectory)Sound\" />
     <Folder Include="$(MSBuildThisFileDirectory)Math\PriorityQueue\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Math\Timeline\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Content\ContentException.cs" />
@@ -109,5 +110,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)GUI\ITouchInput.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\IScalePanInput.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GUI\IInputTarget.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Timeline\Timeline.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\Timeline\KeyChannel.cs" />
   </ItemGroup>
 </Project>
