@@ -48,6 +48,15 @@ namespace GameStack.Gui {
 		public object Tag { get; set; }
 		public bool PixelAlign { get; set; }
 
+		public View RootView {
+			get {
+				var view = this;
+				while (view.Parent != null)
+					view = view.Parent;
+				return view;
+			}
+		}
+
 		public Matrix4 Transform {
 			get { return _transform; }
 			set {
