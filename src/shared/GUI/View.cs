@@ -128,6 +128,11 @@ namespace GameStack.Gui {
 					_tint = _spec.Tint() * this.Parent.Tint;
 				else
 					_tint = RgbColor.White * this.Parent.Tint;
+
+				if (_spec.Transform != null) {
+					_transform = _spec.Transform();
+					_transformInv = Matrix4.Identity;
+				}
 			}
 
 			_children.ForEach(c => c.Layout());

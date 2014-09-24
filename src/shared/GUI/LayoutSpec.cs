@@ -1,24 +1,27 @@
 ﻿using System;
+using OpenTK;
 using SizeFunc = System.Func<GameStack.SizeF, float>;
 using MarginsFunc = System.Func<GameStack.SizeF, GameStack.RectangleF>;
 using DepthFunc = System.Func<float>;
 using ColorFunc = System.Func<GameStack.RgbColor>;
+using TransformFunc = System.Func<OpenTK.Matrix4>;
 
 namespace GameStack.Gui
 {
 	public class LayoutSpec {
+		const string NoModifySharedLayout = "Cannot modify shared default layout; create a new instance!";
 		public static readonly LayoutSpec Empty = new LayoutSpec();
 
 		MarginsFunc _margins;
 		SizeFunc _left, _top, _right, _bottom, _width, _height;
 		DepthFunc _zdepth;
 		ColorFunc _tint;
+		TransformFunc _transform;
 
 		public MarginsFunc Margins {
 			get { return _margins; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_margins = value;
 			}
 		}
@@ -26,8 +29,7 @@ namespace GameStack.Gui
 		public SizeFunc Left {
 			get { return _left; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_left = value;
 			}
 		}
@@ -35,8 +37,7 @@ namespace GameStack.Gui
 		public SizeFunc Top {
 			get { return _top; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_top = value;
 			}
 		}
@@ -44,8 +45,7 @@ namespace GameStack.Gui
 		public SizeFunc Right {
 			get { return _right; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_right = value;
 			}
 		}
@@ -53,8 +53,7 @@ namespace GameStack.Gui
 		public SizeFunc Bottom {
 			get { return _bottom; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_bottom = value;
 			}
 		}
@@ -62,8 +61,7 @@ namespace GameStack.Gui
 		public SizeFunc Width {
 			get { return _width; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_width = value;
 			}
 		}
@@ -71,8 +69,7 @@ namespace GameStack.Gui
 		public SizeFunc Height {
 			get { return _height; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_height = value;
 			}
 		}
@@ -80,8 +77,7 @@ namespace GameStack.Gui
 		public DepthFunc ZOffset {
 			get { return _zdepth; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_zdepth = value;
 			}
 		}
@@ -89,10 +85,22 @@ namespace GameStack.Gui
 		public ColorFunc Tint {
 			get { return _tint; }
 			set {
-				if (this == Empty)
-					throw new InvalidOperationException("Cannot modify shared default layout; create a new instance!");
+				this.CheckNotShared();
 				_tint = value;
 			}
+		}
+
+		public TransformFunc Transform {
+			get { return _transform; }
+			set {
+				this.CheckNotShared();
+				_transform = value;
+			}
+		}
+
+		void CheckNotShared() {
+			if (object.ReferenceEquals(this, Empty))
+				throw new InvalidOperationException(NoModifySharedLayout);
 		}
 	}
 }
