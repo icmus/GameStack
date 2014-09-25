@@ -25,6 +25,11 @@ namespace GameStack {
 			return this.Width.GetHashCode() ^ this.Height.GetHashCode();
 		}
 
+		public override string ToString ()
+		{
+			return "(" + this.Width + "," + this.Height + ")";
+		}
+
 		public static bool operator== (SizeF sz1, SizeF sz2) {
 			return sz1.Width == sz2.Width && sz1.Height == sz2.Height;
 		}
