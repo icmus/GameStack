@@ -31,9 +31,13 @@ namespace GameStack {
 			
 			return File.Exists(scaledPath) ? scaledPath : fullPath;
 		}
-		
+
+		public static string ResolvePath (string path) {
+			return Path.Combine(AssetBasePath, path);
+		}
+
 		public static Stream ResolveStream (string path) {
-			var stream = File.OpenRead(FindScaledAsset(Path.Combine(AssetBasePath, path)));
+			var stream = File.OpenRead(FindScaledAsset(ResolvePath(path)));
 
 			if (_key != null && _iv != null) {
 				var ms = new MemoryStream();
