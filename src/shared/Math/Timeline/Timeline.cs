@@ -7,16 +7,18 @@ using GameStack.Graphics;
 namespace GameStack {
 	public class Timeline : IUpdater {
 		Dictionary<string,IKeyChannel> _channels;
-		double _duration, _time, _rate;
+		double _duration, _time, _rate, _til;
 		bool _isPlaying;
+		Action _done;
 
 		private Timeline () {
 		}
 
-		public Timeline (double duration) {
+		public Timeline (double duration = double.MaxValue) {
 			_duration = duration;
 			_channels = new Dictionary<string, IKeyChannel>();
 			_rate = 1f;
+			_til = _duration;
 		}
 
 		public double Duration { get { return _duration; } set { _duration = value; } }
@@ -25,7 +27,7 @@ namespace GameStack {
 
 		public double Rate { get { return _rate; } set { _rate = value; } }
 
-		public double Time { get { return _time; } set { _time = value; } }
+		public double Time { get { return _time; } }
 
 		public void AddChannel(string name, IKeyChannel channel) {
 			if (_channels.ContainsKey(name))
@@ -37,6 +39,14 @@ namespace GameStack {
 			return _channels.Remove(name);
 		}
 
+		public void Play(double to = -1, Action done = null) {
+			_til = to;
+			if (_til < 0)
+				_til = _rate < 0 ? 0.0 : _duration;
+			_done = done;
+			_isPlaying = true;
+		}
+
 		public void Seek (double time) {
 			_time = time;
 			foreach (var chan in _channels.Values) {
@@ -46,9 +56,19 @@ namespace GameStack {
 
 		public void Update(float dt) {
 			if (_isPlaying) {
-				this.Seek(Math.Min(_duration, _time + dt * _rate));
-				if (_time >= _duration)
-					_isPlaying = false;
+				if (_rate < 0) {
+					this.Seek(Math.Max(Math.Max(0, _til), _time + dt * _rate));
+					if (_time <= 0 || _time <= _til) {
+						_isPlaying = false;
+					}
+				} else {
+					this.Seek(Math.Min(Math.Min(_duration, _til), _time + dt * _rate));
+					if (_time >= _duration || _time >= _til) {
+						_isPlaying = false;
+					}
+				}
+				if (!_isPlaying && _done != null)
+					_done();
 			}
 		}
 
@@ -68,6 +88,7 @@ namespace GameStack {
 			return new Timeline() {
 				_duration = _duration,
 				_rate = _rate,
+				_til = _duration,
 				_channels = _channels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Clone())
 			};
 		}

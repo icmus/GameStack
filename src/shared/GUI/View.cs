@@ -17,6 +17,7 @@ namespace GameStack.Gui {
 		SizeF _size;
 		float _zdepth;
 		RgbColor _tint;
+		bool _isDisposed;
 
 		public View () : this(null) {
 		}
@@ -155,6 +156,10 @@ namespace GameStack.Gui {
 			this.OnUpdate(e);
 			foreach (var view in _children)
 				view.Update(e);
+			for (var i = _children.Count - 1; i >= 0; --i) {
+				if (_children[i]._isDisposed)
+					this.RemoveView(_children[i]);
+			}
 		}
 
 		public void Draw (Matrix4 parentTransform) {
@@ -369,8 +374,7 @@ namespace GameStack.Gui {
 		public virtual void Dispose () {
 			for (int i = _children.Count - 1; i >= 0; i--)
 				_children[i].Dispose();
-			if (this.Parent != null)
-				this.Parent.RemoveView(this);
+			_isDisposed = true;
 		}
 	}
 }
