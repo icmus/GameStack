@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using GameStack;
 using GameStack.Graphics;
@@ -7,6 +8,7 @@ namespace GameStack
 {
 	public interface IKeyChannel {
 		void Update (double t);
+		IKeyChannel Clone ();
 	}
 
 	public class KeyChannel<T> : IKeyChannel {
@@ -35,6 +37,10 @@ namespace GameStack
 		public void AddRange(IEnumerable<KeyFrame<T>> keyframes) {
 			foreach (var k in keyframes)
 				this.Add(k);
+		}
+
+		IKeyChannel IKeyChannel.Clone () {
+			return new KeyChannel<T>(_setter, _keyframes.Values.ToArray());
 		}
 
 		void IKeyChannel.Update (double t) {

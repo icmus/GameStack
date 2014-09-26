@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using GameStack;
 using GameStack.Graphics;
@@ -67,7 +68,7 @@ namespace GameStack {
 			return new Timeline() {
 				_duration = _duration,
 				_rate = _rate,
-				_channels = new Dictionary<string, IKeyChannel>(_channels)
+				_channels = _channels.ToDictionary(kvp => kvp.Key, kvp => kvp.Value.Clone())
 			};
 		}
 
