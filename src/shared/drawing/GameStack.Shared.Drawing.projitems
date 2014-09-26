@@ -61,5 +61,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)CairoEx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FreeTypeFontFace.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PathData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DrawTo.cs" />
   </ItemGroup>
 </Project>

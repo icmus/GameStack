@@ -65,6 +65,9 @@
     <Compile Include="..\shared\drawing\PathData.cs">
       <Link>Drawing\PathData.cs</Link>
     </Compile>
+    <Compile Include="..\shared\drawing\DrawTo.cs">
+      <Link>Drawing\DrawTo.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="..\shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\shared\GameStack.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
