@@ -44,6 +44,7 @@ namespace GameStack {
 			if (_til < 0)
 				_til = _rate < 0 ? 0.0 : _duration;
 			_done = done;
+			this.Seek(_time);
 			_isPlaying = true;
 		}
 

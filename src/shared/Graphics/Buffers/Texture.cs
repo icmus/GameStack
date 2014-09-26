@@ -153,8 +153,8 @@ namespace GameStack.Graphics {
                 if(msaa) {
 					GL.TexImage2DMultisample(TextureTargetMultisample.Texture2DMultisample, _settings.Samples, _settings.InternalFormat, _size.Width, _size.Height, true);
                 }
-                else
-					GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, IntPtr.Zero);
+//                else
+//					GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, IntPtr.Zero);
             } else {
 				GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height,
 					0, _settings.Format, _settings.DataType, buf);
