@@ -22,6 +22,7 @@ namespace GameStack.Gui {
 		int[] _state;
 
 		public View () : this(null) {
+			this.IsVisible = true;
 		}
 
 		public View (LayoutSpec spec) {
@@ -30,6 +31,7 @@ namespace GameStack.Gui {
 			this.Transform = Matrix4.Identity;
 			this.Children = _children.AsReadOnly();
 			_tint = RgbColor.White;
+			this.IsVisible = true;
 		}
 
 		public LayoutSpec Spec {
@@ -51,6 +53,7 @@ namespace GameStack.Gui {
 		public object Tag { get; set; }
 		public bool PixelAlign { get; set; }
 		public bool Scissor { get; set; }
+		public bool IsVisible { get; set; }
 
 		public View RootView {
 			get {
@@ -166,6 +169,9 @@ namespace GameStack.Gui {
 		}
 
 		public void Draw (Matrix4 parentTransform) {
+			if (!this.IsVisible)
+				return;
+
 			var local = _transform;
 			local.M41 += _margins.Left;
 			local.M42 += _margins.Bottom;
