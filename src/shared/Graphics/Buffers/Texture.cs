@@ -40,6 +40,7 @@ namespace GameStack.Graphics {
 		public PixelInternalFormat InternalFormat { get; set; }
 		public PixelType DataType { get; set; }
 		public TextureTarget BindTarget { get; set; }
+		public bool InitEmpty { get; set; }
 
 		public TextureSettings () {
 			this.MagFilter = this.MinFilter = TextureFilter.Linear;
@@ -49,6 +50,7 @@ namespace GameStack.Graphics {
 			this.InternalFormat = PixelInternalFormat.Rgba;
 			this.DataType = PixelType.UnsignedByte;
 			this.BindTarget = TextureTarget.Texture2D;
+			this.InitEmpty = true;
 		}
 
 		public TextureSettings Clone() {
@@ -153,8 +155,8 @@ namespace GameStack.Graphics {
                 if(msaa) {
 					GL.TexImage2DMultisample(TextureTargetMultisample.Texture2DMultisample, _settings.Samples, _settings.InternalFormat, _size.Width, _size.Height, true);
                 }
-//                else
-//					GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, IntPtr.Zero);
+				else if (_settings.InitEmpty && _size.Width > 0 && _size.Height > 0)
+					GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, IntPtr.Zero);
             } else {
 				GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height,
 					0, _settings.Format, _settings.DataType, buf);
