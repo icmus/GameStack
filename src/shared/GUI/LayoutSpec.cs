@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenTK;
 using SizeFunc = System.Func<GameStack.SizeF, float>;
-using MarginsFunc = System.Func<GameStack.SizeF, GameStack.RectangleF>;
+using MarginsFunc = System.Func<GameStack.SizeF, GameStack.MarginsF>;
 using DepthFunc = System.Func<float>;
 using ColorFunc = System.Func<GameStack.RgbColor>;
 using TransformFunc = System.Func<OpenTK.Matrix4>;

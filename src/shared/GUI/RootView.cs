@@ -31,7 +31,7 @@ namespace GameStack.Gui {
 
 		public void Layout (SizeF viewSize, float depth) {
 			_depth = depth;
-			this.Frame = new RectangleF(0f, 0f, viewSize.Width, viewSize.Height);
+			this.Frame = new MarginsF(0f, 0f, viewSize.Width, viewSize.Height);
 			this.Size = new SizeF(viewSize.Width, viewSize.Height);
 			this.ZDepth = depth;
 

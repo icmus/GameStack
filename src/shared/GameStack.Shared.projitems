@@ -112,5 +112,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)GUI\IInputTarget.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\Timeline\Timeline.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\Timeline\KeyChannel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Math\MarginsF.cs" />
   </ItemGroup>
 </Project>
