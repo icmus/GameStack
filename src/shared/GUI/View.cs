@@ -329,14 +329,14 @@ namespace GameStack.Gui {
 		T FindInputSinkByPointImpl<T> (Vector2 point, Matrix4 parentInv, out Vector2 where, float zparent, out float zdepth) where T : class, IInputTarget {
 			where = Vector2.Zero;
 			zdepth = float.MinValue;
-			if (BlockInput)
+			if (BlockInput || _isDisposed)
 				return null;
 
 			var inv = parentInv * Matrix4.CreateTranslation(-_margins.Left, -_margins.Bottom, 0) * TransformInv;
 
 			T found = null;
 			foreach (var view in _children) {
-				if (view.BlockInput)
+				if (view.BlockInput || view._isDisposed)
 					continue;
 				float z;
 				Vector2 w;
@@ -403,6 +403,7 @@ namespace GameStack.Gui {
 			for (int i = _children.Count - 1; i >= 0; i--)
 				_children[i].Dispose();
 			_isDisposed = true;
+			this.BlockInput = true;
 		}
 	}
 }
