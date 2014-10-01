@@ -95,8 +95,7 @@ namespace GameStack.Gui {
 				if (!_touchesById.TryGetValue(e.Index, out kt1))
 					return;
 				if (_touchesByView[kt1.Owner] == kt1 && !kt1.Used) {
-					if (kt1.Owner != psrc) {
-						if (kt1.Owner == kt1.Current)
+					if (kt1.Owner != psrc && kt1.Owner == kt1.Current) {
 							(kt1.Owner as View).Bubble<ITouchInput>(v => v.OnPointerExit(kt1.Owner, frame, where));
 					} else if (kt1.Owner == psrc && kt1.Current != kt1.Owner)
 						(kt1.Owner as View).Bubble<ITouchInput>(v => v.OnPointerEnter(kt1.Owner, frame, where));
