@@ -265,6 +265,15 @@ namespace GameStack.Gui {
 			}
 		}
 
+		public void Broadcast<T> (Action<T> func) where T : class {
+			foreach (var child in _children) {
+				var intf = child as T;
+				if (intf != null)
+					func(intf);
+				child.Broadcast<T>(func);
+			}
+		}
+
 		public bool ContainsPoint (Vector2 point) {
 			point = Vector3.Transform(new Vector3(point), GetCumulativeTransformInv()).Xy;
 			return point.X >= 0 && point.X < _size.Width && point.Y >= 0 && point.Y < _size.Height;
