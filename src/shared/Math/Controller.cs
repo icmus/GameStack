@@ -11,7 +11,7 @@ namespace GameStack {
 		Action<Controller<T>> _done, _done2;
 		bool _isDone;
 
-		public Controller (T start, TweenFunc<T> easing, Action<T> callback, Action<Controller<T>> done = null) {
+		public Controller (T start, TweenFunc<T> easing, Action<T> callback = null, Action<Controller<T>> done = null) {
 			_val = _from = start;
 			_easing = easing;
 			_callback = callback;
@@ -60,7 +60,8 @@ namespace GameStack {
 
 		public void Update (float delta) {
 			if (delta == 0f) {
-				_callback(_val);
+				if(_callback != null)
+					_callback(_val);
 				return;
 			}
 			if (_isDone)
@@ -68,7 +69,8 @@ namespace GameStack {
 			_time += delta;
 			var t = Mathf.Min(_time / _duration, 1f);
 			_val = _easing(_from, _to, (float)t);
-			_callback(_val);
+			if(_callback != null)
+				_callback(_val);
 			if (_time >= _duration) {
 				_isDone = true;
 				var done = _done2 ?? _done;
