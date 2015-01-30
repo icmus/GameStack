@@ -83,6 +83,8 @@ run-time requirements.
 * wget
 * unzip
 * cmake
+* pkg-config
+* fontconfig
 
 ### Linux prerequisites
 
@@ -98,9 +100,9 @@ pacman -S git base-devel wget unzip subversion mono cmake
 ### Mac OSX prerequisites
 
 * Xcode 5.1+ with command-line tools installed
-* iPhone SDK 7.1+
+* iPhone SDK 8.1+
 * Android NDK r8d+
-* Xamarin Studio 5+ (Mono 3.4+)
+* Xamarin Studio 6+ (Mono 3.12+)
 
 ## Building prerequisite libs
 

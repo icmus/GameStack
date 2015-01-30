@@ -9,7 +9,7 @@ LIBOPUSFILE_VER=0.6
 CAIRO_VER=1.12.16
 PIXMAN_VER=0.32.4
 FREETYPE_VER=2.5.3
-IOS_SDK_VER=7.1
+IOS_SDK_VER=8.1
 ANDROID_VER=14
 ANDROID_NDK_VER=8d
 NDK_TOOLCHAIN_VER=4.7
@@ -188,7 +188,7 @@ freetype: folders
 cairo: folders
 	$(call wget,http://cairographics.org/releases/cairo-$(CAIRO_VER).tar.xz,cairo-$(CAIRO_VER).tar.xz,cairo)
 	patch -N -d cairo -p1 < patches/cairo-android.patch || true
-	$(call autoconf,cairo,src/.libs/libcairo.a,../bin/desktop,src/.libs/libcairo.a,../bin/ios,src/.libs/libcairo.so,../bin/android,pixman_CFLAGS="-I`pwd`/../pixman/pixman" FREETYPE_CFLAGS="-I`pwd`/../freetype/include" --disable-fc --enable-ft --disable-ps --disable-pdf --disable-svg --disable-script --disable-xlib --disable-qt --disable-quartz --disable-png --disable-egl --disable-glx --disable-wgl --disable-gobject,FREETYPE_LIBS="-lfreetype" CFLAGS="$(CFLAGS)" pixman_LIBS="-L`pwd`/../../bin/desktop -lpixman-1",pixman_LIBS="-L`pwd`/../../bin/ios -lpixman-1",pixman_LIBS="-L`pwd`/../../bin/android -lpixman-1 `pwd`/src/cpu-features.lo" CFLAGS="$(NDK_CFLAGS)" LDFLAGS="$(NDK_LDFLAGS)",,cp -f $(NDK_ROOT)/sources/android/cpufeatures/cpu-features.* src/ && ./libtool --mode=compile $(NDK_CC) $(NDK_CFLAGS) -g -O -c src/cpu-features.c -o src/cpu-features.o,1)
+	$(call autoconf,cairo,src/.libs/libcairo.{$(LIB_EXT)$(comma)a},../bin/desktop,src/.libs/libcairo.a,../bin/ios,src/.libs/libcairo.so,../bin/android,pixman_CFLAGS="-I`pwd`/../pixman/pixman" FREETYPE_CFLAGS="-I`pwd`/../freetype/include" --disable-fc --enable-ft --disable-ps --disable-pdf --disable-svg --disable-script --disable-xlib --disable-qt --disable-quartz --disable-png --disable-egl --disable-glx --disable-wgl --disable-gobject,FREETYPE_LIBS="-lfreetype" CFLAGS="$(CFLAGS)" pixman_LIBS="-L`pwd`/../../bin/desktop -lpixman-1",pixman_LIBS="-L`pwd`/../../bin/ios -lpixman-1",pixman_LIBS="-L`pwd`/../../bin/android -lpixman-1 `pwd`/src/cpu-features.lo" CFLAGS="$(NDK_CFLAGS)" LDFLAGS="$(NDK_LDFLAGS)",,cp -f $(NDK_ROOT)/sources/android/cpufeatures/cpu-features.* src/ && ./libtool --mode=compile $(NDK_CC) $(NDK_CFLAGS) -g -O -c src/cpu-features.c -o src/cpu-features.o,1)
 	$(call lipo,../bin/desktop/libcairo.a,../bin/ios/libcairo.a,../bin/ios/libcairo.a)
 
 openalsoft: folders
