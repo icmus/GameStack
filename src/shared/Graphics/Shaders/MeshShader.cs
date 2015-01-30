@@ -3,7 +3,7 @@ using System.Text;
 
 namespace GameStack.Graphics {
 	public class MeshShader : Shader {
-		const string ShaderVersion = "120";
+		const string ShaderVersion = "150";
 
 		int _maxNumLights;
 
@@ -23,8 +23,8 @@ namespace GameStack.Graphics {
 			sb.Append("#version ").AppendLine(ShaderVersion);
 			AppendDefines(sb, settings);
 			AppendUniform(sb, settings);
-			AppendAttribute(sb, settings);
-			AppendVarying(sb, settings, true);
+			AppendIn(sb, settings);
+			AppendOut(sb, settings, true);
 			sb.AppendLine("void main() {");
 			sb.AppendLine("    vec4 p = Position;");
 			if (settings.BoneSlotCount > 0) {
@@ -49,7 +49,8 @@ namespace GameStack.Graphics {
 			sb.Append("#version ").AppendLine(ShaderVersion);
 			AppendDefines(sb, settings);
 			AppendUniform(sb, settings);
-			AppendVarying(sb, settings, false);
+			AppendOut(sb, settings, false);
+			sb.AppendLine("out vec4 FragColor;");
 			sb.AppendLine("void main() {");
 			sb.AppendLine("    vec3 n = normal;");
 			sb.AppendLine("    vec4 a = ColorAmbient;");
@@ -155,22 +156,22 @@ namespace GameStack.Graphics {
 			}
 		}
 
-		static void AppendAttribute (StringBuilder sb, MeshShaderSettings settings) {
-			sb.AppendLine("attribute vec4 Position;");
-			sb.AppendLine("attribute vec4 Normal;");
+		static void AppendIn (StringBuilder sb, MeshShaderSettings settings) {
+			sb.AppendLine("in vec4 Position;");
+			sb.AppendLine("in vec4 Normal;");
 			for (var i = 0; i < 4; i++)
-				sb.Append("attribute vec2 TexCoord").Append(i).AppendLine(";");
+				sb.Append("in vec2 TexCoord").Append(i).AppendLine(";");
 			for (var i = 0; i < settings.BoneSlotCount; i++) {
-				sb.Append("attribute float BoneWeight").Append(i).AppendLine(";");
-				sb.Append("attribute float BoneIndex").Append(i).AppendLine(";");
+				sb.Append("in float BoneWeight").Append(i).AppendLine(";");
+				sb.Append("in float BoneIndex").Append(i).AppendLine(";");
 			}
 		}
 
-		static void AppendVarying (StringBuilder sb, MeshShaderSettings settings, bool output) {
-			sb.AppendLine("varying vec3 normal;");
-			sb.AppendLine("varying vec3 v;");
+		static void AppendOut (StringBuilder sb, MeshShaderSettings settings, bool output) {
+			sb.AppendLine("out vec3 normal;");
+			sb.AppendLine("out vec3 v;");
 			for (var i = 0; i < 4; i++)
-				sb.Append("varying").Append(" vec2 texCoord").Append(i).AppendLine(";");
+				sb.Append("out").Append(" vec2 texCoord").Append(i).AppendLine(";");
 		}
 
 		const string FragPhong = @"
@@ -197,11 +198,11 @@ namespace GameStack.Graphics {
 		vec3 r = normalize(-reflect(l, n));
 		ls += s.xyz * LightSpecular[i] * pow(max(dot(r, e), 0.0), Shininess) * ShininessStrength * atten;
 	}
-	gl_FragColor = vec4(la, 1.0) + vec4(ld, 1.0) + vec4(ls, 1.0);
+	FragColor = vec4(la, 1.0) + vec4(ld, 1.0) + vec4(ls, 1.0);
 ";
 
 		const string FragDiffuse = @"
-    tmp = texture2D(DiffuseMap{0}, DIFFUSE_INDEX{0}) * DIFFUSE_BLEND{0};
+    tmp = texture(DiffuseMap{0}, DIFFUSE_INDEX{0}) * DIFFUSE_BLEND{0};
 #if DIFFUSE_OP{0}==0
 	d *= tmp;
 #elif DIFFUSE_OP{0}==1
@@ -217,7 +218,7 @@ namespace GameStack.Graphics {
 #endif
 ";
 		const string FragNormal = @"
-	tmp = texture2D(NormalMap{0}, NORMAL_INDEX{0}) * NORMAL_BLEND{0};
+	tmp = texture(NormalMap{0}, NORMAL_INDEX{0}) * NORMAL_BLEND{0};
 #if NORMAL_OP{0}==0
 	n *= tmp;
 #elif NORMAL_OP{0}==1
@@ -235,7 +236,7 @@ namespace GameStack.Graphics {
 #endif
 ";
 		const string FragSpecular = @"
-	tmp = texture2D(SpecularMap{0}, SPECULAR_INDEX{0}) * SPECULAR_BLEND{0};
+	tmp = texture(SpecularMap{0}, SPECULAR_INDEX{0}) * SPECULAR_BLEND{0};
 #if SPECULAR_OP{0}==0
 	s *= tmp;
 #elif SPECULAR_OP{0}==1
@@ -251,7 +252,7 @@ namespace GameStack.Graphics {
 #endif
 ";
 		const string FragEmissive = @"
-	tmp = texture2D(EmissiveMap{0}, EMISSIVE_INDEX{0}) * EMISSIVE_BLEND{0};
+	tmp = texture(EmissiveMap{0}, EMISSIVE_INDEX{0}) * EMISSIVE_BLEND{0};
 #if EMISSIVE_OP{0}==0
 	e *= tmp;
 #elif EMISSIVE_OP{0}==1

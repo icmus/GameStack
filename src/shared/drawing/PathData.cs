@@ -42,7 +42,7 @@ namespace GameStack.Graphics {
 
 		IEnumerable<PathCommand> ReadCommands(string path, double x, double y) {
 			var ie = this.ReadTokens(path).GetEnumerator();
-			PathCommand cmd;
+			var cmd = new PathCommand();
 			cmd.Operation = PathOperation.MoveTo;
 			while (ie.MoveNext()) {
 				var cur = ie.Current;

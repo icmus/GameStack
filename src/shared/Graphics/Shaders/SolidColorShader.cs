@@ -7,23 +7,25 @@ namespace GameStack.Graphics {
 		}
 #if __DESKTOP__
 
-		const string VertSrc = @"#version 120
+		const string VertSrc = @"#version 150
 
 uniform mat4 WorldViewProjection;
 
-attribute vec4 Position;
+in vec4 Position;
 
 void main() {
     gl_Position = WorldViewProjection * Position;
 }
 ";
 
-		const string FragSrc = @"#version 120
+		const string FragSrc = @"#version 150
 
 uniform vec4 Tint;
 
+out vec4 FragColor;
+
 void main() {
-    gl_FragColor = Tint;
+    FragColor = Tint;
 }
 ";
 

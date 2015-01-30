@@ -345,7 +345,4 @@ Global
 		{E9A1CA4C-9637-4562-85B7-EE768565A37D}.Release|x86.ActiveCfg = Release|x86
 		{E9A1CA4C-9637-4562-85B7-EE768565A37D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = BasicUI\BasicUI.csproj
-	EndGlobalSection
 EndGlobal

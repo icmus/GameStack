@@ -28,12 +28,12 @@ namespace GameStack.Graphics {
 			var sb = new StringBuilder();
 			var weights = BuildWeights(length, sigma);
 			for (var i = 0; i < length; i++)
-				sb.AppendFormat("c += texture2D(Texture, blurTexCoords[{0}]) * {1};\n",
+				sb.AppendFormat("c += texture(Texture, blurTexCoords[{0}]) * {1};\n",
 					i, weights[length - i].ToString("0.0###################"));
-			sb.AppendFormat("c += texture2D(Texture, texCoord0) * {0};\n",
+			sb.AppendFormat("c += texture(Texture, texCoord0) * {0};\n",
 				weights[0].ToString("0.0###################"));
 			for (var i = length; i < length * 2; i++)
-				sb.AppendFormat("c += texture2D(Texture, blurTexCoords[{0}]) * {1};\n",
+				sb.AppendFormat("c += texture(Texture, blurTexCoords[{0}]) * {1};\n",
 					i, weights[i - length + 1].ToString("0.0###################"));
 
 			return string.Format(FragSourceFormat, length * 2, sb.ToString());
@@ -48,16 +48,16 @@ namespace GameStack.Graphics {
 			return weights;
 		}
 
-		const string VertSourceFormat = @"
+		const string VertSourceFormat = @"#version 150
 uniform mat4 WorldViewProjection;
 uniform mat4 World;
 uniform float TexelSize;
 
-attribute vec4 Position;
-attribute vec2 TexCoord0;
+in vec4 Position;
+in vec2 TexCoord0;
 
-varying vec2 texCoord0;
-varying vec2 blurTexCoords[{0}];
+out vec2 texCoord0;
+out vec2 blurTexCoords[{0}];
 
 void main() {{
 	gl_Position = WorldViewProjection * Position;
@@ -65,18 +65,20 @@ void main() {{
 	{1}
 }}
 ";
-		const string FragSourceFormat = @"
+		const string FragSourceFormat = @"#version 150
 uniform sampler2D Texture;
 uniform vec4 Tint;
 
-varying vec2 texCoord0;
-varying vec2 blurTexCoords[{0}];
+in vec2 texCoord0;
+in vec2 blurTexCoords[{0}];
+
+out vec4 FragColor;
 
 void main() {{
 	vec4 c = vec4(0.0);
 	vec4 tmp = vec4(0.0);
 	{1}
-	gl_FragColor = c * Tint;
+	FragColor = c * Tint;
 }}";
 	}
 

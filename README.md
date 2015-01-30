@@ -89,7 +89,7 @@ run-time requirements.
 ### Linux prerequisites
 
 * Base dev tools: gcc, g++, make, autoconf, patch
-* Mono 3.4+
+* Mono 3.12+
 
 Cheat code for Arch:
 
