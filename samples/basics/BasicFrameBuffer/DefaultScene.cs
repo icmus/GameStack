@@ -31,14 +31,14 @@ namespace Basics {
 
 			// horizontal blur material
 			_matHblur = new BlurMaterial(
-				new BlurShader(BlurDirection.Horizontal, 24, 5),
+				new BlurShader(BlurDirection.Horizontal, 14, 5),
 				((SpriteMaterial)_sprites["star"].Material).Texture,
 				1f / 64f
 			);
 
 			// vertical blur material
 			_matVblur = new BlurMaterial(
-				new BlurShader(BlurDirection.Vertical, 24, 5),
+				new BlurShader(BlurDirection.Vertical, 14, 5),
 				tex, 1f / 64f);
 
 			// quad used to draw the contents of the frame buffer
