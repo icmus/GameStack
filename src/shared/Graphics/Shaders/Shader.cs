@@ -247,7 +247,7 @@ namespace GameStack.Graphics {
 			var loc = this.Uniform(name);
 			if (loc >= 0) {
 				for (var i = 0; i < values.Length; i++) {
-					GL.UniformMatrix4(loc + i * 4, false, ref values[i]);
+					GL.UniformMatrix4(loc + i, false, ref values[i]);
 				}
 			}
 		}
