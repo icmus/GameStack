@@ -24,7 +24,7 @@ namespace GameStack.Graphics {
 			AppendDefines(sb, settings);
 			AppendUniform(sb, settings);
 			AppendIn(sb, settings);
-			AppendOut(sb, settings, true);
+			AppendVarying(sb, settings, true);
 			sb.AppendLine("void main() {");
 			sb.AppendLine("    vec4 p = Position;");
 			if (settings.BoneSlotCount > 0) {
@@ -49,7 +49,7 @@ namespace GameStack.Graphics {
 			sb.Append("#version ").AppendLine(ShaderVersion);
 			AppendDefines(sb, settings);
 			AppendUniform(sb, settings);
-			AppendOut(sb, settings, false);
+			AppendVarying(sb, settings, false);
 			sb.AppendLine("out vec4 FragColor;");
 			sb.AppendLine("void main() {");
 			sb.AppendLine("    vec3 n = normal;");
@@ -167,11 +167,12 @@ namespace GameStack.Graphics {
 			}
 		}
 
-		static void AppendOut (StringBuilder sb, MeshShaderSettings settings, bool output) {
-			sb.AppendLine("out vec3 normal;");
-			sb.AppendLine("out vec3 v;");
+		static void AppendVarying (StringBuilder sb, MeshShaderSettings settings, bool output) {
+			var dir = output ? "out" : "in";
+			sb.Append(dir).AppendLine(" vec3 normal;");
+			sb.Append(dir).AppendLine(" vec3 v;");
 			for (var i = 0; i < 4; i++)
-				sb.Append("out").Append(" vec2 texCoord").Append(i).AppendLine(";");
+				sb.Append(dir).Append(" vec2 texCoord").Append(i).AppendLine(";");
 		}
 
 		const string FragPhong = @"
