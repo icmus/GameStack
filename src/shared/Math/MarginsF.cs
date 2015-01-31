@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace GameStack
 {
-	[StructLayout(LayoutKind.Sequential)]
+	[StructLayout(LayoutKind.Sequential, Pack = 1)]
 	public struct MarginsF
 	{
 		public float Left;

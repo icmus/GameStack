@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using OpenTK;
 
 namespace GameStack {
-	[StructLayout(LayoutKind.Sequential)]
+	[StructLayout(LayoutKind.Sequential, Pack = 1)]
 	public struct RgbColor {
 		public byte R;
 		public byte G;

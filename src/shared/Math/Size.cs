@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 
 namespace GameStack {
-	[StructLayout(LayoutKind.Sequential)]
+	[StructLayout(LayoutKind.Sequential, Pack = 1)]
 	public struct Size {
 		public int Width;
 		public int Height;

@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 
 namespace GameStack.Pipeline {
-	[StructLayout (LayoutKind.Sequential)]
+	[StructLayout (LayoutKind.Sequential, Pack = 1)]
 	public struct Vector2 {
 		public static readonly Vector2 Zero = new Vector2 (0, 0);
 		public float X, Y;
@@ -21,7 +21,7 @@ namespace GameStack.Pipeline {
 		}
 	}
 
-	[StructLayout (LayoutKind.Sequential)]
+	[StructLayout (LayoutKind.Sequential, Pack = 1)]
 	public struct Vector4 {
 		public float X, Y, Z, W;
 
@@ -33,7 +33,7 @@ namespace GameStack.Pipeline {
 		}
 	}
 
-	[StructLayout (LayoutKind.Sequential)]
+	[StructLayout (LayoutKind.Sequential, Pack = 1)]
 	public struct Vector3 {
 		public static readonly Vector3 Zero = new Vector3 (0, 0, 0);
 		public float X, Y, Z;
@@ -53,7 +53,7 @@ namespace GameStack.Pipeline {
 		}
 	}
 
-	[StructLayout (LayoutKind.Sequential)]
+	[StructLayout (LayoutKind.Sequential, Pack = 1)]
 	struct Vertex {
 		public Vector3 V, VN;
 		public Vector2 VT;
