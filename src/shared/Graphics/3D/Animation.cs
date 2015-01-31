@@ -141,19 +141,19 @@ namespace GameStack.Graphics {
 		}
 	}
 
-	[StructLayout(LayoutKind.Sequential)]
+	[StructLayout(LayoutKind.Sequential, Pack = 1)]
 	public struct PositionKey {
 		public double Time;
 		public Vector3 Position;
 	}
 
-	[StructLayout(LayoutKind.Sequential)]
+	[StructLayout(LayoutKind.Sequential, Pack = 1)]
 	public struct RotationKey {
 		public double Time;
 		public Quaternion Rotation;
 	}
 
-	[StructLayout(LayoutKind.Sequential)]
+	[StructLayout(LayoutKind.Sequential, Pack = 1)]
 	public struct ScalingKey {
 		public double Time;
 		public Vector3 Scale;
