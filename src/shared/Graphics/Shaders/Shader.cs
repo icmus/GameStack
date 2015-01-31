@@ -243,11 +243,12 @@ namespace GameStack.Graphics {
 				GL.UniformMatrix4(loc, false, ref value);
 		}
 
-		public void Uniform (string name, Matrix4[] values) {
+		public unsafe void Uniform (string name, Matrix4[] values) {
 			var loc = this.Uniform(name);
 			if (loc >= 0) {
-				for (var i = 0; i < values.Length; i++) {
-					GL.UniformMatrix4(loc + i, false, ref values[i]);
+				fixed(Matrix4* p1 = &values[0]) {
+					float* p2 = (float*)p1;
+					GL.UniformMatrix4(loc, values.Length, false, p2);
 				}
 			}
 		}
