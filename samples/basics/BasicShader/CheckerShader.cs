@@ -12,13 +12,12 @@ namespace Basics {
 uniform mat4 WorldViewProjection;
 
 in vec4 Position;
-in vec2 MultiTexCoord0;
+in vec2 TexCoord0;
 
 out vec2 texCoord0;
 
 void main() {
-    // slice the sprite out of the texture
-    texCoord0 = MultiTexCoord0;
+    texCoord0 = TexCoord0;
     gl_Position = WorldViewProjection * Position;
 }
 ";
