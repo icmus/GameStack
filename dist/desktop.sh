@@ -21,5 +21,6 @@ fi
 
 mkdir -p "$TGT"/assets
 cp -f "$BIN"/desktop/*.{dll,dll.mdb,dll.config,$EXT} "$TGT"
+ln -s libcairo.dylib "$TGT"/libcairo.2.dylib
 cd "$BIN"
 mono import.exe "$CONTENT" "$TGT"/assets "$@" 
