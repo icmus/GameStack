@@ -11,5 +11,6 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)OggOpusFile.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OpusfileTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LibPngLite.cs" />
   </ItemGroup>
 </Project>

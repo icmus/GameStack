@@ -106,7 +106,7 @@ dyld_id = \
 
 comma := ,
 
-all: json-net assimp-net sdl2-cs lodepng assimp libogg libopus libopusfile openalsoft pixman freetype cairo
+all: json-net assimp-net sdl2-cs pnglite assimp libogg libopus libopusfile openalsoft pixman freetype cairo
 
 json-net: folders
 	$(call nuget,Newtonsoft.Json,$(JSON_NET_VER))
@@ -130,23 +130,25 @@ sdl2-cs: folders
 	cp -f sdl2-cs/bin/Debug/SDL2-CS.dll ../bin/desktop/SDL2-CS.dbg.dll
 	cp -f sdl2-cs/bin/Debug/SDL2-CS.dll.mdb ../bin/desktop/SDL2-CS.dbg.dll.mdb
 
-lodepng: folders
+pnglite: folders
 	if [ $(UNAME) = 'Darwin' ]; then \
-		cd lodepng && gcc -c -m32 -arch i386 -o lodepng.o lodepng.c && gcc -m32 -arch i386 -dynamiclib lodepng.o -o liblodepng.$(LIB_EXT); \
-		ar rcs liblodepng.a lodepng.o; \
-		cp -f liblodepng.$(LIB_EXT) liblodepng.a ../../bin/desktop; \
-		gcc -isysroot $(IOS_ROOT) -marm -arch armv7 -c -o lodepng.o lodepng.c && gcc -isysroot $(IOS_ROOT) -marm -arch armv7 -dynamiclib lodepng.o -o liblodepng.$(LIB_EXT); \
-		ar rcs liblodepng.a lodepng.o; \
-		cp -f liblodepng.a ../../bin/ios; \
-		lipo -arch i386 ../../bin/desktop/liblodepng.a -arch arm ../../bin/ios/liblodepng.a -create -output ../../bin/ios/liblodepng.a; \
+		cd pnglite && gcc -c -m32 -arch i386 -o pnglite.o pnglite.c && gcc -m32 -arch i386 -dynamiclib -lz pnglite.o -o libpnglite.$(LIB_EXT); \
+		ar rcs libpnglite.a pnglite.o; \
+		cp -f libpnglite.$(LIB_EXT) libpnglite.a ../../bin/desktop; \
+        if [ -d $(IOS_ROOT) ]; then \
+            gcc -isysroot $(IOS_ROOT) -marm -arch armv7 -c -o pnglite.o pnglite.c && gcc -isysroot $(IOS_ROOT) -marm -arch armv7 -dynamiclib -lz pnglite.o -o libpnglite.$(LIB_EXT); \
+            ar rcs libpnglite.a pnglite.o; \
+            cp -f libpnglite.a ../../bin/ios; \
+            lipo -arch i386 ../../bin/desktop/libpnglite.a -arch arm ../../bin/ios/libpnglite.a -create -output ../../bin/ios/libpnglite.a; \
+        fi; \
 	else \
-		cd lodepng && gcc -fPIC -c -o lodepng.o lodepng.c && gcc -shared lodepng.o -o liblodepng.$(LIB_EXT); \
-		cp -f liblodepng.$(LIB_EXT) ../../bin/desktop; \
+		cd pnglite && gcc -fPIC -c -o pnglite.o pnglite.c && gcc -lz -shared pnglite.o -o libpnglite.$(LIB_EXT); \
+		cp -f libpnglite.$(LIB_EXT) ../../bin/desktop; \
 	fi; \
 	if [ -d $(NDK_ROOT) ]; then \
-			$(NDK_CC) $(NDK_CFLAGS) -c -o lodepng.o lodepng.c; \
-			$(NDK_CC) $(NDK_LDFLAGS) -shared -o liblodepng.so lodepng.o; \
-			cp -f liblodepng.so ../../bin/android; \
+			$(NDK_CC) $(NDK_CFLAGS) -c -o pnglite.o pnglite.c; \
+			$(NDK_CC) $(NDK_LDFLAGS) -lz -shared -o libpnglite.so pnglite.o; \
+			cp -f libpnglite.so ../../bin/android; \
 	fi
 
 assimp: folders
@@ -210,4 +212,4 @@ folders:
 clean:
 	rm -rf json-net assimp-net sdl2-cs assimp libogg libopus libopusfile pixman cairo openalsoft
 
-.PHONY: all json-net assimp-net sdl2-cs lodepng assimp libogg libopus libopusfile pixman cairo openalsoft pixman freetype cairo
+.PHONY: all json-net assimp-net sdl2-cs pnglite assimp libogg libopus libopusfile pixman cairo openalsoft pixman freetype cairo
