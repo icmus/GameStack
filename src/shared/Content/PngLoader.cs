@@ -92,7 +92,7 @@ namespace GameStack.Content {
 				if (result < 0)
 					throw new PngException(result);
 
-				result = LibPngLite.png_set_data(ref png, size.Width, size.Height, 4, 6, imgData);
+				result = LibPngLite.png_set_data(ref png, size.Width, size.Height, 8, 6, imgData);
 				if (result < 0)
 					throw new PngException(result);
 
