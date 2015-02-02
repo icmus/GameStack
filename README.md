@@ -40,7 +40,7 @@ The DLLs can also be added to an existing project to use GameStack's facilities.
 The following components are required for execution of GameStack apps on desktop
 platforms:
 
-* Mono 3.4+ [OSX installer](http://www.go-mono.com/mono-downloads/download.html)
+* Mono 3.12+ [OSX installer](http://www.go-mono.com/mono-downloads/download.html)
 * SDL 2 [OSX installer](http://www.libsdl.org/download-2.0.php)
 * OpenAL (provided by OSX; needs package install on Linux)
 
@@ -55,6 +55,11 @@ pacman -S mono sdl2 openal
 
 You also need to have installed video/sound drivers and an appropriate display
 server (e.g., Xorg). See your distribution's documentation for additional info.
+
+*NOTE:* On OSX, you may need to add "." to your DYLD_LIBRARY_PATH for some samples
+to work correctly. For example:
+
+$ export DYLD_LIBRARY_PATH=.:$DYLD_LIBRARY_PATH
 
 # Building GameStack
 
