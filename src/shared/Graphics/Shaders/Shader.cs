@@ -6,13 +6,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using OpenTK;
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
-#endif
-#if __ANDROID__
-using ActiveUniformType = OpenTK.Graphics.ES20.All;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
 
 namespace GameStack.Graphics {
@@ -281,11 +278,11 @@ namespace GameStack.Graphics {
 		}
 
 		static void CompileShader (uint shader, string src) {
-#if __DESKTOP__
+#if __MOBILE__
+			GL.ShaderSource (shader, 1, new[] { src }, new[] { src.Length });
+#else
 			var len = src.Length;
 			GL.ShaderSource(shader, 1, new[] { src }, ref len);
-#else
-			GL.ShaderSource (shader, 1, new[] { src }, new[] { src.Length });
 #endif
 			GL.CompileShader(shader);
 
@@ -294,11 +291,7 @@ namespace GameStack.Graphics {
 			GL.GetShaderInfoLog(shader, 256, out i, info);
 
 			int compileResult = -1;
-#if __ANDROID__
-            GL.GetShader((uint)shader, All.CompileStatus, out compileResult);
-#else
 			GL.GetShader((uint)shader, ShaderParameter.CompileStatus, out compileResult);
-#endif
 			if (compileResult != 1) {
 				throw new ShaderException(string.Format("Shader compile error: {0}: {1}",
 					compileResult, info));

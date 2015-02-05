@@ -4,16 +4,10 @@ using System;
 using OpenTK;
 using OpenTK.Graphics;
 
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-using BufferUsage = OpenTK.Graphics.OpenGL.BufferUsageHint;
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
-#endif
-#if __ANDROID__
-using VertexAttribPointerType = OpenTK.Graphics.ES20.All;
-using BufferTarget = OpenTK.Graphics.ES20.All;
-using BufferUsage = OpenTK.Graphics.ES20.All;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
 
 namespace GameStack.Graphics {
@@ -21,9 +15,9 @@ namespace GameStack.Graphics {
 		VertexFormat _format;
 		float[] _data;
 		int _handle;
-		#if __DESKTOP__
+#if __DESKTOP__
 		int _vao;
-		#endif
+#endif
 
 		public VertexBuffer (VertexFormat format, float[] vertices = null) {
 			_format = format;
@@ -32,10 +26,10 @@ namespace GameStack.Graphics {
 			var buf = new int[1];
 			GL.GenBuffers(1, buf);
 			_handle = buf[0];
-			#if __DESKTOP__
+#if __DESKTOP__
 			_vao = GL.GenVertexArray();
 			GL.BindVertexArray(_vao);
-			#endif
+#endif
 
 			if (_data != null)
 				this.Commit();
@@ -45,7 +39,7 @@ namespace GameStack.Graphics {
 
 		public float[] Data { get { return _data; } set { _data = value; } }
 
-		public void Commit (BufferUsage usage = BufferUsage.StaticDraw) {
+		public void Commit (BufferUsageHint usage = BufferUsageHint.StaticDraw) {
 			if (_data == null)
 				_data = new float[0];
 
@@ -69,9 +63,9 @@ namespace GameStack.Graphics {
 			if (ScopedObject.Find<VertexBuffer>() != null)
 				throw new InvalidOperationException("there is already an active vertex buffer.");
 
-			#if __DESKTOP__
+#if __DESKTOP__
 			GL.BindVertexArray(_vao);
-			#endif
+#endif
 
 			var stride = _format.Stride * sizeof(float);
 			GL.BindBuffer(BufferTarget.ArrayBuffer, _handle);
@@ -104,12 +98,12 @@ namespace GameStack.Graphics {
 				GL.DeleteBuffers(1, new int[] { _handle });
 				_handle = -1;
 			}
-			#if __DESKTOP__
+#if __DESKTOP__
 			if(_vao >= 0) {
 				GL.DeleteVertexArray(_vao);
 				_vao = -1;
 			}
-			#endif
+#endif
 		}
 	}
 }

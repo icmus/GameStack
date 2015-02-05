@@ -5,20 +5,10 @@ using System.IO;
 using OpenTK;
 using OpenTK.Graphics;
 using GameStack.Content;
-
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
-#endif
-#if __ANDROID__
-using FramebufferTarget = OpenTK.Graphics.ES20.All;
-using FramebufferSlot = OpenTK.Graphics.ES20.All;
-using TextureTarget = OpenTK.Graphics.ES20.All;
-using PixelStoreParameter = OpenTK.Graphics.ES20.All;
-using PixelType = OpenTK.Graphics.ES20.All;
-using GetPName = OpenTK.Graphics.ES20.All;
-using PixelFormat = OpenTK.Graphics.ES20.All;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
 
 namespace GameStack.Graphics {
@@ -58,11 +48,11 @@ namespace GameStack.Graphics {
 
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _fb);
 
-			#if __DESKTOP__
+			#if __MOBILE__
+			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferSlot.ColorAttachment0, texture.Settings.BindTarget, texture.Handle, 0);
+			#else
 			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.ColorAttachment0,
 				texture.Settings.BindTarget, texture.Handle, 0);
-			#else
-			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferSlot.ColorAttachment0, texture.Settings.BindTarget, texture.Handle, 0);
 			#endif
 
             if (depthBuffer) {

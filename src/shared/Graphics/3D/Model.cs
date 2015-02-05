@@ -8,11 +8,10 @@ using System.Runtime.InteropServices;
 using GameStack.Content;
 using OpenTK;
 
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-using BufferUsage = OpenTK.Graphics.OpenGL.BufferUsageHint;
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
 
 namespace GameStack.Graphics {

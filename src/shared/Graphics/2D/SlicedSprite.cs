@@ -2,13 +2,12 @@ using System;
 using System.Collections.Generic;
 using OpenTK;
 using OpenTK.Graphics;
-
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
+
 namespace GameStack.Graphics {
 	public class SlicedSprite : Sprite {
 		Vector2 _origin, _tileSize, _texelSize;

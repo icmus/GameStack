@@ -2,19 +2,10 @@
 
 using System;
 using OpenTK;
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
-#endif
-#if __ANDROID__
-using GetPName = OpenTK.Graphics.ES20.All;
-using EnableCap = OpenTK.Graphics.ES20.All;
-using BlendingFactorSrc = OpenTK.Graphics.ES20.All;
-using BlendingFactorDest = OpenTK.Graphics.ES20.All;
-using TextureTarget = OpenTK.Graphics.ES20.All;
-using TextureUnit = OpenTK.Graphics.ES20.All;
-using TextureParameterName = OpenTK.Graphics.ES20.All;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
 
 namespace GameStack.Graphics {
@@ -86,29 +77,29 @@ namespace GameStack.Graphics {
 					GL.Disable(EnableCap.CullFace);
 			}
 
-			#if __DESKTOP__
+#if __DESKTOP__
 			if (_isWireframeEnabled) {
 				GL.GetInteger(GetPName.PolygonMode, _polygonState);
 				GL.PolygonMode(MaterialFace.Front, PolygonMode.Line);
 				if (_isTwoSided)
 					GL.PolygonMode(MaterialFace.Back, PolygonMode.Line);
 			}
-			#endif
+#endif
 
-			#if __DESKTOP__
-			GL.GetInteger(GetPName.BlendSrc, out _blendSrcState);
-			GL.GetInteger(GetPName.BlendDst, out _blendDstState);
-			if (_blendMode == BlendMode.Additive) {
-				GL.GetInteger(GetPName.BlendSrc, out _blendSrcState);
-				GL.GetInteger(GetPName.BlendDst, out _blendDstState);
-				GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.One);
-			}
-			#else
+			#if __MOBILE__
 			GL.GetInteger(GetPName.BlendSrcRgb, out _blendSrcState);
 			GL.GetInteger(GetPName.BlendDstRgb, out _blendDstState);
 			if (_blendMode == BlendMode.Additive) {
 				GL.GetInteger(GetPName.BlendSrcRgb, out _blendSrcState);
 				GL.GetInteger(GetPName.BlendDstRgb, out _blendDstState);
+				GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.One);
+			}
+			#else
+			GL.GetInteger(GetPName.BlendSrc, out _blendSrcState);
+			GL.GetInteger(GetPName.BlendDst, out _blendDstState);
+			if (_blendMode == BlendMode.Additive) {
+				GL.GetInteger(GetPName.BlendSrc, out _blendSrcState);
+				GL.GetInteger(GetPName.BlendDst, out _blendDstState);
 				GL.BlendFunc(BlendingFactorSrc.SrcAlpha, BlendingFactorDest.One);
 			}
 			#endif
@@ -140,13 +131,13 @@ namespace GameStack.Graphics {
 			}
 			if (_isTwoSided && _cullingState)
 				GL.Enable(EnableCap.CullFace);
-			#if __DESKTOP__
+#if __DESKTOP__
 			if (_isWireframeEnabled) {
 				GL.PolygonMode(MaterialFace.Front, (PolygonMode)_polygonState[0]);
 				if (_isTwoSided)
 					GL.PolygonMode(MaterialFace.Back, (PolygonMode)_polygonState[1]);
 			}
-			#endif
+#endif
 			if (_blendMode == BlendMode.Additive)
 				GL.BlendFunc((BlendingFactorSrc)_blendSrcState, (BlendingFactorDest)_blendDstState);
 

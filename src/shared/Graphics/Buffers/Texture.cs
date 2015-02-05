@@ -9,21 +9,10 @@ using System.Threading;
 using OpenTK;
 using GameStack.Content;
 
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
-using GenerateMipmapTarget = OpenTK.Graphics.ES20.All;
-#endif
-#if __ANDROID__
-using TextureUnit = OpenTK.Graphics.ES20.All;
-using TextureTarget = OpenTK.Graphics.ES20.All;
-using TexturePixelType = OpenTK.Graphics.ES20.All;
-using PixelInternalFormat = OpenTK.Graphics.ES20.All;
-using PixelType = OpenTK.Graphics.ES20.All;
-using PixelStoreParameter = OpenTK.Graphics.ES20.All;
-using TextureParameterName = OpenTK.Graphics.ES20.All;
-using PixelFormat = OpenTK.Graphics.ES20.All;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
 
 namespace GameStack.Graphics {

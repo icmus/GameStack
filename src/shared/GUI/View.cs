@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using OpenTK;
+#if __MOBILE__
+using OpenTK.Graphics.ES20;
+#else
 using OpenTK.Graphics.OpenGL;
+#endif
 using GameStack;
 using GameStack.Graphics;
 using RectangleF = GameStack.RectangleF;

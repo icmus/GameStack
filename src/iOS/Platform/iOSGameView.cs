@@ -21,7 +21,7 @@ namespace GameStack.iOS {
 		volatile bool _threadPaused;
 		EAGLContext _glContext;
 		AudioContext _alContext;
-		Vector2 _size;
+		SizeF _size;
 		uint _cb, _fb, _db;
 		CADisplayLink _link;
 		double _lastTime = -1.0;
@@ -55,7 +55,7 @@ namespace GameStack.iOS {
 		public event EventHandler<FrameArgs> Render;
 		public event EventHandler Destroyed;
 
-		public Vector2 Size { get { return _size; } }
+		public SizeF Size { get { return _size; } }
 
 		public float PixelScale { get { return UIScreen.MainScreen.Scale; } }
 
@@ -108,7 +108,7 @@ namespace GameStack.iOS {
 						if (o.State != UIGestureRecognizerState.Ended)
 							return;
 						point = o.LocationInView(o.View);
-						_events.Enqueue(new TapGesture(this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y)));
+						_events.Enqueue(new TapGesture(this.NormalizeToViewport(point), new Vector2(point.X, _size.Height - point.Y)));
 					}));
 					break;
 				case GestureType.Swipe:
@@ -130,7 +130,7 @@ namespace GameStack.iOS {
 							dir = SwipeDirection.Down;
 							break;
 						}
-						_events.Enqueue(new SwipeGesture(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y), dir));
+						_events.Enqueue(new SwipeGesture(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Height - point.Y), dir));
 					}));
 					break;
 				case GestureType.Pan:
@@ -141,7 +141,7 @@ namespace GameStack.iOS {
 						_events.Enqueue(new PanGesture(
 							state,
 							this.NormalizeToViewport(point),
-							new Vector2(point.X, _size.Y - point.Y),
+							new Vector2(point.X, _size.Height - point.Y),
 							new Vector2(translation.X, -translation.Y)
 						));
 					}));
@@ -194,7 +194,7 @@ namespace GameStack.iOS {
 
 		void OnTouchEvent (TouchState state, UITouch touch) {
 			var point = touch.LocationInView(touch.View);
-			_events.Enqueue(new Touch(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Y - point.Y), (long)touch.Handle));
+			_events.Enqueue(new Touch(state, this.NormalizeToViewport(point), new Vector2(point.X, _size.Height - point.Y), (long)touch.Handle));
 		}
 
 		public override void LayoutSubviews () {
@@ -202,8 +202,8 @@ namespace GameStack.iOS {
 			base.LayoutSubviews();
 			var bounds = this.Bounds;
 
-			if (bounds.Width != _size.X || bounds.Height != _size.Y) {
-				_size = new Vector2(bounds.Width, bounds.Height);
+			if (bounds.Width != _size.Width || bounds.Height != _size.Height) {
+				_size = new SizeF(bounds.Width, bounds.Height);
 				_events.Enqueue(new Resize(_size, PixelScale));
 			}
 		}
@@ -231,7 +231,7 @@ namespace GameStack.iOS {
 				// set up framebuffer
 				GL.GenFramebuffers(1, out _fb);
 
-				_size = new Vector2(this.Bounds.Width, this.Bounds.Height);
+				_size = new SizeF(this.Bounds.Width, this.Bounds.Height);
 				_threadPaused = true;
 			}
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _fb);
@@ -382,8 +382,8 @@ namespace GameStack.iOS {
 
 		Vector2 NormalizeToViewport (PointF point) {
 			return new Vector2(
-				2f * point.X / _size.X - 1f,
-				2f * (_size.Y - point.Y) / _size.Y - 1f);
+				2f * point.X / _size.Width - 1f,
+				2f * (_size.Height - point.Y) / _size.Height - 1f);
 		}
 	}
 }

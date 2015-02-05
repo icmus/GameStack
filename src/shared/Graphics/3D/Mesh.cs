@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using GameStack.Graphics;
 using OpenTK;
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
-#endif
-#if __ANDROID__
-using BeginMode = OpenTK.Graphics.ES20.All;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
 
 namespace GameStack.Graphics {

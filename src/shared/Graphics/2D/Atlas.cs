@@ -6,13 +6,12 @@ using System.IO.Compression;
 using OpenTK;
 using OpenTK.Graphics;
 using GameStack.Content;
-
-#if __DESKTOP__
-using OpenTK.Graphics.OpenGL;
-
-#else
+#if __MOBILE__
 using OpenTK.Graphics.ES20;
+#else
+using OpenTK.Graphics.OpenGL;
 #endif
+
 namespace GameStack.Graphics {
 	public class Atlas : IDisposable {
 		string _path;
