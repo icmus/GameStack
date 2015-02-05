@@ -9,8 +9,6 @@
     <RootNamespace>GameStack.iOS.Drawing.Bindings</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>GameStack.iOS.Drawing.Bindings</AssemblyName>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,5 +55,13 @@
     <Compile Include="..\..\..\AssemblyVersion.cs">
       <Link>AssemblyVersion.cs</Link>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="..\..\..\..\bin\ios\libcairo.a">
+      <Link>libcairo.a</Link>
+    </ObjcBindingNativeLibrary>
+    <ObjcBindingNativeLibrary Include="..\..\..\..\bin\ios\libfreetype.a">
+      <Link>libfreetype.a</Link>
+    </ObjcBindingNativeLibrary>
   </ItemGroup>
 </Project>

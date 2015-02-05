@@ -23,7 +23,6 @@ namespace GameStack.Graphics {
 
 		public FrameBuffer (Texture texture, bool depthBuffer = false, bool disposeTexture = false) {
 			ThreadContext.Current.EnsureGLContext();
-            var msaa = texture.Settings.Samples > 1;
 			_size = texture.Size;
 			_oldfb = this.CurrentFrameBuffer;
 			_oldViewport = new int[4];
@@ -42,6 +41,7 @@ namespace GameStack.Graphics {
 				GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferInternalFormat.DepthComponent16,
 					_size.Width, _size.Height);
 #else
+				var msaa = texture.Settings.Samples > 1;
 				if (msaa)
 					GL.RenderbufferStorageMultisample(RenderbufferTarget.Renderbuffer, texture.Settings.Samples,
 						RenderbufferStorage.DepthComponent32, _size.Width, _size.Height);

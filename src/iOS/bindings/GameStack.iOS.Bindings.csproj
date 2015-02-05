@@ -9,8 +9,6 @@
     <RootNamespace>GameStack.iOS.Bindings</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>GameStack.iOS.Bindings</AssemblyName>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,5 +57,28 @@
     <Compile Include="..\..\AssemblyVersion.cs">
       <Link>AssemblyVersion.cs</Link>
     </Compile>
+    <Compile Include="libpixman-1.linkwith.cs">
+      <DependentUpon>libpixman-1.a</DependentUpon>
+    </Compile>
+    <Compile Include="libpnglite.linkwith.cs">
+      <DependentUpon>libpnglite.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\libogg.a">
+      <Link>libogg.a</Link>
+    </ObjcBindingNativeLibrary>
+    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\libopus.a">
+      <Link>libopus.a</Link>
+    </ObjcBindingNativeLibrary>
+    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\libopusfile.a">
+      <Link>libopusfile.a</Link>
+    </ObjcBindingNativeLibrary>
+    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\libpixman-1.a">
+      <Link>libpixman-1.a</Link>
+    </ObjcBindingNativeLibrary>
+    <ObjcBindingNativeLibrary Include="..\..\..\bin\ios\libpnglite.a">
+      <Link>libpnglite.a</Link>
+    </ObjcBindingNativeLibrary>
   </ItemGroup>
 </Project>
