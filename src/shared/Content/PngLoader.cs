@@ -7,9 +7,6 @@ using OpenTK.Graphics.ES20;
 #else
 using OpenTK.Graphics.OpenGL;
 #endif
-#if __ANDROID__
-using PixelFormat = OpenTK.Graphics.ES20.All;
-#endif
 
 namespace GameStack.Content {
 	public static class PngLoader {

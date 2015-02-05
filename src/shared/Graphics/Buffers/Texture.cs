@@ -11,6 +11,7 @@ using GameStack.Content;
 
 #if __MOBILE__
 using OpenTK.Graphics.ES20;
+using GenerateMipmapTarget = OpenTK.Graphics.ES20.TextureTarget;
 #else
 using OpenTK.Graphics.OpenGL;
 #endif
@@ -118,7 +119,11 @@ namespace GameStack.Graphics {
 			GL.ActiveTexture(TextureUnit.Texture0);
 			GL.BindTexture(_settings.BindTarget, _handle);
 			GL.PixelStore(PixelStoreParameter.PackAlignment, 1);
+#if __MOBILE__
+			GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, (OpenTK.Graphics.ES20.PixelFormat)_settings.Format, _settings.DataType, buf);
+#else
 			GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, buf);
+#endif
 		}
 
 		public unsafe void SetData<T> (T[] buf) where T : struct {
@@ -135,16 +140,21 @@ namespace GameStack.Graphics {
 			GL.GenTextures(1, out _handle);
 
             var msaa = _settings.Samples > 1;
+#if !__MOBILE__
 			_settings.BindTarget = msaa ? TextureTarget.Texture2DMultisample : _settings.BindTarget;
+#endif
 			GL.PixelStore(PixelStoreParameter.UnpackAlignment, 1);
 			GL.ActiveTexture(TextureUnit.Texture0);
 			GL.BindTexture(_settings.BindTarget, _handle);
 			GL.PixelStore(PixelStoreParameter.PackAlignment, 1);
             if (buf == null) {
+#if !__MOBILE__
                 if(msaa) {
 					GL.TexImage2DMultisample(TextureTargetMultisample.Texture2DMultisample, _settings.Samples, _settings.InternalFormat, _size.Width, _size.Height, true);
                 }
-				else if (_settings.InitEmpty && _size.Width > 0 && _size.Height > 0)
+				else
+#endif
+				if (_settings.InitEmpty && _size.Width > 0 && _size.Height > 0)
 					GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height, 0, _settings.Format, _settings.DataType, IntPtr.Zero);
             } else {
 				GL.TexImage2D(_settings.BindTarget, 0, _settings.InternalFormat, _size.Width, _size.Height,

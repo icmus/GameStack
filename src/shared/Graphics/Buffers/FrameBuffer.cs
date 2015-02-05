@@ -7,6 +7,7 @@ using OpenTK.Graphics;
 using GameStack.Content;
 #if __MOBILE__
 using OpenTK.Graphics.ES20;
+using FramebufferAttachment = OpenTK.Graphics.ES20.FramebufferSlot;
 #else
 using OpenTK.Graphics.OpenGL;
 #endif
@@ -37,23 +38,24 @@ namespace GameStack.Graphics {
                 GL.GenRenderbuffers(1, buf);
                 _db = buf [0];
                 GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, _db);
-                if (msaa)
-                    GL.RenderbufferStorageMultisample(RenderbufferTarget.Renderbuffer, texture.Settings.Samples,
-                        RenderbufferStorage.DepthComponent32, _size.Width, _size.Height);
-                else
-                    GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.DepthComponent32,
-                        _size.Width, _size.Height);
+#if __MOBILE__
+				GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferInternalFormat.DepthComponent16,
+					_size.Width, _size.Height);
+#else
+				if (msaa)
+					GL.RenderbufferStorageMultisample(RenderbufferTarget.Renderbuffer, texture.Settings.Samples,
+						RenderbufferStorage.DepthComponent32, _size.Width, _size.Height);
+				else
+					GL.RenderbufferStorage(RenderbufferTarget.Renderbuffer, RenderbufferStorage.DepthComponent32,
+						_size.Width, _size.Height);
+#endif
                 GL.BindRenderbuffer(RenderbufferTarget.Renderbuffer, 0);
             }
 
 			GL.BindFramebuffer(FramebufferTarget.Framebuffer, _fb);
 
-			#if __MOBILE__
-			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferSlot.ColorAttachment0, texture.Settings.BindTarget, texture.Handle, 0);
-			#else
 			GL.FramebufferTexture2D(FramebufferTarget.Framebuffer, FramebufferAttachment.ColorAttachment0,
 				texture.Settings.BindTarget, texture.Handle, 0);
-			#endif
 
             if (depthBuffer) {
                 GL.FramebufferRenderbuffer(FramebufferTarget.Framebuffer, FramebufferAttachment.DepthAttachment,

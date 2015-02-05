@@ -52,17 +52,12 @@ namespace GameStack.Graphics {
 				bool hasGeom = !string.IsNullOrWhiteSpace(geomSource);
 
 				// create shader program and link
-#if __ANDROID__
-            	_vertHandle = (uint)GL.CreateShader(All.VertexShader);
-				if (hasGeom)
-					_geomHandle = (uint)GL.CreateShader(All.GeometryShader);
-            	_fragHandle = (uint)GL.CreateShader(All.FragmentShader);
-#else
 				_vertHandle = (uint)GL.CreateShader(ShaderType.VertexShader);
+#if !__MOBILE__
 				if (hasGeom)
 					_geomHandle = (uint)GL.CreateShader(ShaderType.GeometryShader);
-				_fragHandle = (uint)GL.CreateShader(ShaderType.FragmentShader);
 #endif
+				_fragHandle = (uint)GL.CreateShader(ShaderType.FragmentShader);
 
 				if (_vertHandle <= 0 || _fragHandle <= 0 || (hasGeom && _geomHandle <= 0))
 					throw new ShaderException("Failed to create shader.");
@@ -74,59 +69,39 @@ namespace GameStack.Graphics {
 					CompileShader(_geomHandle, geomSource);
 				CompileShader(_fragHandle, fragSource);
 				GL.AttachShader(_handle, _vertHandle);
+#if !__MOBILE__
 				if (hasGeom)
 					GL.AttachShader(_handle, _geomHandle);
+#endif
 				GL.AttachShader(_handle, _fragHandle);
 				GL.LinkProgram(_handle);
 			}
 
 			// catalog linked shader uniforms
 			int total = 0;
-#if __ANDROID__
-            GL.GetProgram(_handle, All.ActiveUniforms, out total);
-#else
 			GL.GetProgram(_handle, ProgramParameter.ActiveUniforms, out total);
-#endif
+
 			var sb = new StringBuilder(100);
 			_uniforms = new Dictionary<string, int>();
 			for (var i = 0; i < total; ++i) {
 				int length = 0, size = 0;
 				ActiveUniformType type;
-				#if __ANDROID__
-				GL.GetActiveUniform((uint)_handle, (uint)i, 100, out length, out size, out type, sb);
-				#else
 				GL.GetActiveUniform(_handle, (uint)i, 100, out length, out size, out type, sb);
-				#endif
 				var n = sb.ToString();
-				#if __ANDROID__
-				_uniforms.Add(n, GL.GetUniformLocation(_handle, sb));
-				#else
 				_uniforms.Add(n, GL.GetUniformLocation(_handle, n));
-				#endif
 				sb.Length = 0;
 			}
 
 			// catalog linked vertex attributes
-#if __ANDROID__
-            GL.GetProgram(_handle, All.ActiveAttributes, out total);
-#else
 			GL.GetProgram(_handle, ProgramParameter.ActiveAttributes, out total);
-#endif
+
 			_attributes = new Dictionary<string, int>();
 			for (var i = 0; i < total; ++i) {
 				int length = 0, size = 0;
-				#if __ANDROID__
-                All type;
-				#else
 				ActiveAttribType type;
-				#endif
 				GL.GetActiveAttrib(_handle, (uint)i, 100, out length, out size, out type, sb);
 				var n = sb.ToString();
-				#if __ANDROID__
-				_attributes.Add(n, GL.GetAttribLocation(_handle, sb));
-				#else
 				_attributes.Add(n, GL.GetAttribLocation(_handle, n));
-				#endif
 				sb.Length = 0;
 			}
 

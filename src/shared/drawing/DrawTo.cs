@@ -23,7 +23,13 @@ namespace GameStack.Graphics {
 				using (var ctx = new Context(surface)) {
 					func(ctx, sz.Width, sz.Height);
 				}
-				var tex = new Texture(sz, new TextureSettings { Format = OpenTK.Graphics.OpenGL.PixelFormat.Bgra });
+				var tex = new Texture(sz, new TextureSettings {
+#if __MOBILE__
+					Format = (OpenTK.Graphics.ES20.PixelFormat)OpenTK.Graphics.ES20.All.Bgra
+#else
+					Format = OpenTK.Graphics.OpenGL.PixelFormat.Bgra
+#endif
+				});
 				tex.SetData(surface.DataPtr);
 				return tex;
 			}

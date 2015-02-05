@@ -6,6 +6,7 @@ using OpenTK.Graphics;
 
 #if __MOBILE__
 using OpenTK.Graphics.ES20;
+using BufferUsageHint = OpenTK.Graphics.ES20.BufferUsage;
 #else
 using OpenTK.Graphics.OpenGL;
 #endif
@@ -15,7 +16,7 @@ namespace GameStack.Graphics {
 		VertexFormat _format;
 		float[] _data;
 		int _handle;
-#if __DESKTOP__
+#if !__MOBILE__
 		int _vao;
 #endif
 
@@ -26,7 +27,7 @@ namespace GameStack.Graphics {
 			var buf = new int[1];
 			GL.GenBuffers(1, buf);
 			_handle = buf[0];
-#if __DESKTOP__
+#if !__MOBILE__
 			_vao = GL.GenVertexArray();
 			GL.BindVertexArray(_vao);
 #endif
@@ -63,7 +64,7 @@ namespace GameStack.Graphics {
 			if (ScopedObject.Find<VertexBuffer>() != null)
 				throw new InvalidOperationException("there is already an active vertex buffer.");
 
-#if __DESKTOP__
+#if !__MOBILE__
 			GL.BindVertexArray(_vao);
 #endif
 
@@ -98,7 +99,7 @@ namespace GameStack.Graphics {
 				GL.DeleteBuffers(1, new int[] { _handle });
 				_handle = -1;
 			}
-#if __DESKTOP__
+#if !__MOBILE__
 			if(_vao >= 0) {
 				GL.DeleteVertexArray(_vao);
 				_vao = -1;

@@ -39,13 +39,13 @@ namespace GameStack.Gui {
 				this.Release();
 				_surface = new ImageSurface(Format.Argb32, sz.Width, sz.Height);
 				_ctx = new Context(_surface);
-				#if __ANDROID__
-				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, null, All.Rgba));
-				#elif __MOBILE__
-				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, null, All.BgraExt));
-				#else
-				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, new TextureSettings { Format = PixelFormat.Bgra }));
-				#endif
+				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, new TextureSettings {
+#if __MOBILE__
+					Format = (PixelFormat)All.Bgra
+#else
+					Format = PixelFormat.Bgra
+#endif
+				}));
 				_quad = new Quad(_mat, new Vector4(0f, 0f, sz.Width, sz.Height), RgbColor.White, true);
 				this.Invalidate();
 			}

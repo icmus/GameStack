@@ -77,7 +77,7 @@ namespace GameStack.Graphics {
 					GL.Disable(EnableCap.CullFace);
 			}
 
-#if __DESKTOP__
+#if !__MOBILE__
 			if (_isWireframeEnabled) {
 				GL.GetInteger(GetPName.PolygonMode, _polygonState);
 				GL.PolygonMode(MaterialFace.Front, PolygonMode.Line);
@@ -131,7 +131,7 @@ namespace GameStack.Graphics {
 			}
 			if (_isTwoSided && _cullingState)
 				GL.Enable(EnableCap.CullFace);
-#if __DESKTOP__
+#if !__MOBILE__
 			if (_isWireframeEnabled) {
 				GL.PolygonMode(MaterialFace.Front, (PolygonMode)_polygonState[0]);
 				if (_isTwoSided)

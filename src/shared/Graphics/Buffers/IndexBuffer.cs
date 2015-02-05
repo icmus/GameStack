@@ -5,6 +5,7 @@ using OpenTK;
 using OpenTK.Graphics;
 #if __MOBILE__
 using OpenTK.Graphics.ES20;
+using BufferUsageHint = OpenTK.Graphics.ES20.BufferUsage;
 #else
 using OpenTK.Graphics.OpenGL;
 #endif
@@ -13,18 +14,9 @@ namespace GameStack.Graphics {
 	public class IndexBuffer : IDisposable {
 		int[] _data;
 		int _handle;
-		#if __ANDROID__
-		All _mode;
-
-#else
 		BeginMode _mode;
-		#endif
-		#if __ANDROID__
-		public IndexBuffer (int[] vertices = null, All mode = All.Triangles) {
 
-#else
 		public IndexBuffer (int[] vertices = null, BeginMode mode = BeginMode.Triangles) {
-#endif
 			_mode = mode;
 			ThreadContext.Current.EnsureGLContext();
 			_data = vertices;

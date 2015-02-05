@@ -254,15 +254,9 @@ namespace GameStack {
 		}
 
 		protected virtual void OnDraw (FrameArgs e) {
-#if __ANDROID__
-            GL.Enable(All.DepthTest);
-            GL.Enable(All.Blend);
-            GL.BlendFunc(All.One, All.OneMinusSrcAlpha);
-#else
 			GL.Enable(EnableCap.DepthTest);
 			GL.Enable(EnableCap.Blend);
 			GL.BlendFunc(BlendingFactorSrc.One, BlendingFactorDest.OneMinusSrcAlpha);
-#endif
 			GL.DepthMask(true);
 			GL.ClearColor(this.ClearColor);
 			GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
