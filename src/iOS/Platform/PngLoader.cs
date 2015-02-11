@@ -2,6 +2,8 @@
 using System.IO;
 using System.Runtime.InteropServices;
 using GameStack.Bindings;
+using MonoTouch;
+
 #if __MOBILE__
 using OpenTK.Graphics.ES20;
 #else
@@ -30,14 +32,14 @@ namespace GameStack.Content {
 				if (result < 0)
 					throw new PngException(result);
 				switch (png.bpp) {
-					case 3:
-						pxFormat = PixelFormat.Rgb;
-						break;
-					case 4:
-						pxFormat = PixelFormat.Rgba;
-						break;
-					default:
-						throw new PngException("Unsupported bpp: " + png.bpp);
+				case 3:
+					pxFormat = PixelFormat.Rgb;
+					break;
+				case 4:
+					pxFormat = PixelFormat.Rgba;
+					break;
+				default:
+					throw new PngException("Unsupported bpp: " + png.bpp);
 				}
 				size = new Size(png.width, png.height);
 				var buf = new byte[png.width * png.height * png.bpp];
@@ -52,6 +54,7 @@ namespace GameStack.Content {
 		[DllImport("libc")]
 		unsafe static extern IntPtr memcpy (byte* dst, byte* src, int len);
 
+		[MonoPInvokeCallback(typeof(LibPngLite.ReadCallback))]
 		unsafe static int ReadCallback (IntPtr output, int size, int count, ref LibPngLite.PngDataCursor cursor) {
 			var sz = size * count;
 			if (sz > cursor.Length - cursor.Offset)
@@ -99,7 +102,11 @@ namespace GameStack.Content {
 			}
 		}
 
+		[MonoPInvokeCallback(typeof(LibPngLite.WriteCallback))]
 		unsafe static int WriteCallback (IntPtr input, int size, int count, ref LibPngLite.PngDataCursor cursor) {
+			if (input == IntPtr.Zero)
+				return 0;
+
 			var sz = size * count;
 			if (sz > cursor.Length - cursor.Offset)
 				return 0;

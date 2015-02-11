@@ -77,6 +77,7 @@ namespace OpusfileSharp {
 		static extern int op_pcm_seek (IntPtr of, long pcm_offset);
 
 		static Dictionary<IntPtr, OggOpusFile> _streams = new Dictionary<IntPtr, OggOpusFile>();
+		static int _sHandle = 0;
 
 		ReadFunc _read;
 		SeekFunc _seek;
@@ -97,6 +98,7 @@ namespace OpusfileSharp {
 			_seek = new SeekFunc(SeekCallback);
 			_tell = new TellFunc(TellCallback);
 
+			Console.WriteLine(_sourceStream.CanSeek);
 			var cb = new _OpusFileCallbacks() {
 				read = Marshal.GetFunctionPointerForDelegate(_read),
 				seek = _sourceStream.CanSeek ? Marshal.GetFunctionPointerForDelegate(_seek) : IntPtr.Zero,
@@ -104,8 +106,8 @@ namespace OpusfileSharp {
 				close = IntPtr.Zero,
 			};
 
-			_handle = (IntPtr)this.GetHashCode();
 			lock (_streams) {
+				_handle = (IntPtr)_sHandle++;
 				_streams.Add(_handle, this);
 			}
 

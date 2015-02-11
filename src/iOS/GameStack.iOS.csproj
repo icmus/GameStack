@@ -9,8 +9,6 @@
     <RootNamespace>GameStack</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>GameStack.iOS</AssemblyName>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,15 +40,16 @@
     <Reference Include="OpenTK-1.0" />
   </ItemGroup>
   <Import Project="..\shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\shared\GameStack.Shared.projitems')" />
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Platform\iOSGameView.cs" />
     <Compile Include="Platform\Assets.cs" />
     <Compile Include="..\AssemblyVersion.cs">
       <Link>AssemblyVersion.cs</Link>
     </Compile>
+    <Compile Include="Platform\PngLoader.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="bindings\GameStack.iOS.Bindings.csproj">
       <Project>{FAA87CC8-FC0B-43FB-B9FA-871573597175}</Project>

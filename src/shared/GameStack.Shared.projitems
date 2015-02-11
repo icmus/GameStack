@@ -92,7 +92,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Sound\StreamingSoundChannel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sound\IStreamingSound.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sound\StreamingOpusFile.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Content\PngLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ConversionEx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\BinaryEx.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Graphics\Shaders\BlurMaterial.cs" />

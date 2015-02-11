@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using OpenTK;
 
 namespace GameStack {
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Sequential)]
 	public struct SizeF {
 		public float Width;
 		public float Height;

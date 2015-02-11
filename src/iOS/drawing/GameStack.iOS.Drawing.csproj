@@ -9,8 +9,6 @@
     <RootNamespace>GameStack.iOS.Drawing</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>GameStack.iOS.Drawing</AssemblyName>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,7 +44,7 @@
     </Compile>
   </ItemGroup>
   <Import Project="..\..\shared\drawing\GameStack.Shared.Drawing.projitems" Label="Shared" Condition="Exists('..\..\shared\drawing\GameStack.Shared.Drawing.projitems')" />
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\GameStack.iOS.csproj">
       <Project>{A74E0B3C-5920-4C74-B0C7-6D9F7A2EC828}</Project>

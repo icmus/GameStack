@@ -138,7 +138,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="Game.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Icon-72.png" />
@@ -146,4 +145,5 @@
     <BundleResource Include="Resources\Icon%402x.png" />
     <BundleResource Include="Resources\Icon-72%402x.png" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

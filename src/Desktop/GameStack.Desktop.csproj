@@ -68,6 +68,7 @@
     <Compile Include="..\shared\drawing\DrawTo.cs">
       <Link>Drawing\DrawTo.cs</Link>
     </Compile>
+    <Compile Include="Platform\PngLoader.cs" />
   </ItemGroup>
   <Import Project="..\shared\GameStack.Shared.projitems" Label="Shared" Condition="Exists('..\shared\GameStack.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
