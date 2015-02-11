@@ -3,13 +3,13 @@ using System.Runtime.InteropServices;
 
 namespace GameStack
 {
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Explicit)]
 	public struct RectangleF
 	{
-		public float X;
-		public float Y;
-		public float X2;
-		public float Y2;
+		[FieldOffset(0)] public float X;
+		[FieldOffset(4)] public float Y;
+		[FieldOffset(8)] public float X2;
+		[FieldOffset(12)] public float Y2;
 
 		public RectangleF(float x, float y, float width, float height) {
 			this.X = x;

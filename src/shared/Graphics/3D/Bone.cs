@@ -26,9 +26,9 @@ namespace GameStack.Graphics {
 		public Node Node { get { return _node; } internal set { _node = value; } }
 	}
 
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Explicit)]
 	public struct VertexWeight {
-		public int VertexId;
-		public float Weight;
+		[FieldOffset(0)] public int VertexId;
+		[FieldOffset(4)] public float Weight;
 	}
 }

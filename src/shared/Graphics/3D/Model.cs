@@ -314,6 +314,7 @@ namespace GameStack.Graphics {
 					var postState = (AnimationBehavior)reader.ReadInt32();
 					var keyCount = reader.ReadInt32();
 					var positions = new PositionKey[keyCount];
+					Console.WriteLine(sizeof(PositionKey));
 					var sz = keyCount * sizeof(PositionKey);
 					var buf = new byte[sz];
 					reader.Read(buf, 0, sz);

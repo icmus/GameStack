@@ -3,13 +3,13 @@ using System.Runtime.InteropServices;
 
 namespace GameStack
 {
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Explicit)]
 	public struct MarginsF
 	{
-		public float Left;
-		public float Top;
-		public float Right;
-		public float Bottom;
+		[FieldOffset(0)] public float Left;
+		[FieldOffset(4)] public float Top;
+		[FieldOffset(8)] public float Right;
+		[FieldOffset(12)] public float Bottom;
 
 		public MarginsF(float left, float top, float right, float bottom) {
 			this.Left = left;

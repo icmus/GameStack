@@ -2,10 +2,12 @@ using System;
 using System.Runtime.InteropServices;
 
 namespace GameStack.Pipeline {
-	[StructLayout (LayoutKind.Sequential, Pack = 1)]
+	[StructLayout (LayoutKind.Explicit)]
 	public struct Vector2 {
 		public static readonly Vector2 Zero = new Vector2 (0, 0);
-		public float X, Y;
+
+		[FieldOffset(0)] public float X;
+		[FieldOffset(1)] public float Y;
 
 		public Vector2 (float x, float y) {
 			X = x;
@@ -21,9 +23,12 @@ namespace GameStack.Pipeline {
 		}
 	}
 
-	[StructLayout (LayoutKind.Sequential, Pack = 1)]
+	[StructLayout (LayoutKind.Explicit)]
 	public struct Vector4 {
-		public float X, Y, Z, W;
+		[FieldOffset(0)] public float X;
+		[FieldOffset(4)] public float Y;
+		[FieldOffset(8)] public float Z;
+		[FieldOffset(12)] public float W;
 
 		public Vector4 (float x, float y, float z, float w) {
 			X = x;
@@ -33,10 +38,13 @@ namespace GameStack.Pipeline {
 		}
 	}
 
-	[StructLayout (LayoutKind.Sequential, Pack = 1)]
+	[StructLayout (LayoutKind.Explicit)]
 	public struct Vector3 {
 		public static readonly Vector3 Zero = new Vector3 (0, 0, 0);
-		public float X, Y, Z;
+
+		[FieldOffset(0)] public float X;
+		[FieldOffset(4)] public float Y;
+		[FieldOffset(8)] public float Z;
 
 		public Vector3 (float x, float y, float z) {
 			X = x;

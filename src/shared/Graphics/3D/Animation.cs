@@ -141,22 +141,24 @@ namespace GameStack.Graphics {
 		}
 	}
 
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Explicit)]
 	public struct PositionKey {
-		public double Time;
-		public Vector3 Position;
+		[FieldOffset(0)] public double Time;
+		[FieldOffset(8)] public Vector3 Position;
+		[FieldOffset(20)] public float _Padding;
 	}
 
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Explicit)]
 	public struct RotationKey {
-		public double Time;
-		public Quaternion Rotation;
+		[FieldOffset(0)] public double Time;
+		[FieldOffset(8)] public Quaternion Rotation;
 	}
 
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Explicit)]
 	public struct ScalingKey {
-		public double Time;
-		public Vector3 Scale;
+		[FieldOffset(0)] public double Time;
+		[FieldOffset(8)] public Vector3 Scale;
+		[FieldOffset(20)] public float _Padding;
 	}
 
 	public enum AnimationBehavior {

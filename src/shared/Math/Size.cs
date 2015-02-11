@@ -2,10 +2,10 @@
 using System.Runtime.InteropServices;
 
 namespace GameStack {
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Explicit)]
 	public struct Size {
-		public int Width;
-		public int Height;
+		[FieldOffset(0)] public int Width;
+		[FieldOffset(4)] public int Height;
 
 		public Size (int width, int height) {
 			this.Width = width;

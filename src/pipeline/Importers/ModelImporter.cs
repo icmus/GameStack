@@ -291,6 +291,7 @@ namespace GameStack.Pipeline
                     var key = chan.PositionKeys[j];
                     writer.Write(key.Time);
                     writer.Write(key.Value);
+					writer.Write(0);
                 }
                 keyCount = chan.RotationKeyCount;
                 writer.Write(keyCount);
@@ -305,6 +306,7 @@ namespace GameStack.Pipeline
                     var key = chan.ScalingKeys[j];
                     writer.Write(key.Time);
                     writer.Write(key.Value);
+					writer.Write(0);
                 }
             }
         }

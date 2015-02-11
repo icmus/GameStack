@@ -3,12 +3,12 @@ using System.Runtime.InteropServices;
 using OpenTK;
 
 namespace GameStack {
-	[StructLayout(LayoutKind.Sequential, Pack = 1)]
+	[StructLayout(LayoutKind.Explicit)]
 	public struct RgbColor {
-		public byte R;
-		public byte G;
-		public byte B;
-		public byte A;
+		[FieldOffset(0)] public byte R;
+		[FieldOffset(1)] public byte G;
+		[FieldOffset(2)] public byte B;
+		[FieldOffset(3)] public byte A;
 
 		public RgbColor (byte r, byte g, byte b, byte a = 255) {
 			this.R = r;
