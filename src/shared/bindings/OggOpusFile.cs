@@ -98,7 +98,6 @@ namespace OpusfileSharp {
 			_seek = new SeekFunc(SeekCallback);
 			_tell = new TellFunc(TellCallback);
 
-			Console.WriteLine(_sourceStream.CanSeek);
 			var cb = new _OpusFileCallbacks() {
 				read = Marshal.GetFunctionPointerForDelegate(_read),
 				seek = _sourceStream.CanSeek ? Marshal.GetFunctionPointerForDelegate(_seek) : IntPtr.Zero,

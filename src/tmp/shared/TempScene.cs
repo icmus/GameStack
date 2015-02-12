@@ -2,16 +2,14 @@
 using GameStack;
 using GameStack.Graphics;
 using GameStack.Gui;
+using OpenTK;
 
 namespace Temp {
-	public class MyScene : Scene, IUpdater, IHandler<Start> {
+	public class MyScene : Scene, IHandler<Start> {
 		public MyScene (IGameView view) : base(view) {
 		}
 
 		void IHandler<Start>.Handle (FrameArgs frame, Start e) {
-		}
-
-		void IUpdater.Update (FrameArgs e) {
 		}
 
 		protected override void OnDraw (FrameArgs e) {

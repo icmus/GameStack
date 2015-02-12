@@ -7,7 +7,7 @@ namespace GameStack.Pipeline {
 		public static readonly Vector2 Zero = new Vector2 (0, 0);
 
 		[FieldOffset(0)] public float X;
-		[FieldOffset(1)] public float Y;
+		[FieldOffset(4)] public float Y;
 
 		public Vector2 (float x, float y) {
 			X = x;
