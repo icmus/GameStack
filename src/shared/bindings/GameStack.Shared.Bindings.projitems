@@ -9,8 +9,6 @@
     <Import_RootNamespace>GameStack.Shared.Bindings</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)OggOpusFile.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)OpusfileTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LibPngLite.cs" />
   </ItemGroup>
 </Project>

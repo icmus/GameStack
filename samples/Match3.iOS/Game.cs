@@ -42,10 +42,10 @@ namespace Samples.Match3 {
 		Tuple<int,int> _fromSquare;
 		bool _settled, _animating;
 		Rectangle _boardArea;
-		//SoundChannel _sfx, _sfx2;
-		//StreamingSoundChannel _music;
-		//SoundEffect _sndNoMatch, _sndMatch, _sndLanding, _sndCoin, _sndOneUp;
-		//StreamingOpusFile _musicFile, _musicGameOver;
+		SoundChannel _sfx, _sfx2;
+		StreamingSoundChannel _music;
+		SoundEffect _sndNoMatch, _sndMatch, _sndLanding, _sndCoin, _sndOneUp;
+		StreamingOpusFile _musicFile, _musicGameOver;
 		int _score;
 		string _scoreStr;
 		bool _isNewGame, _gameOver, _noInput, _wasPlaying;
@@ -89,17 +89,17 @@ namespace Samples.Match3 {
 			_poof = new SpriteSequence(7, false, _atlas["smoke-1"], _atlas["smoke-2"], _atlas["smoke-3"], _atlas["smoke-4"]);
 			this.Add(_poof);
 
-//			_sfx = new SoundChannel();
-//			_sfx2 = new SoundChannel();
-//			_sndNoMatch = new SoundEffect("no-match.opus");
-//			_sndMatch = new SoundEffect("match.opus");
-//			_sndLanding = new SoundEffect("landing.opus");
-//			_sndCoin = new SoundEffect("coin.opus");
-//			_sndOneUp = new SoundEffect("1-up.opus");
+			_sfx = new SoundChannel();
+			_sfx2 = new SoundChannel();
+			_sndNoMatch = new SoundEffect("no-match.opus");
+			_sndMatch = new SoundEffect("match.opus");
+			_sndLanding = new SoundEffect("landing.opus");
+			_sndCoin = new SoundEffect("coin.opus");
+			_sndOneUp = new SoundEffect("1-up.opus");
 
-			//_music = new StreamingSoundChannel();
-			//_musicFile = new StreamingOpusFile("mario.opus");
-			//_musicGameOver = new StreamingOpusFile("game-over.opus");
+			_music = new StreamingSoundChannel();
+			_musicFile = new StreamingOpusFile("mario.opus");
+			_musicGameOver = new StreamingOpusFile("game-over.opus");
 		}
 
 		void IHandler<Resize>.Handle (FrameArgs frame, Resize e) {
@@ -148,7 +148,7 @@ namespace Samples.Match3 {
 				this.FillBoard(true);
 				_settled = false;
 				_isNewGame = false;
-				//_music.PlaySound(_musicGameOver, false);
+				_music.PlaySound(_musicGameOver, false);
 				_gameOver = false;
 			}
 			//else if (this.View.Size.Y - e.Point.Y < 50f)
@@ -207,7 +207,7 @@ namespace Samples.Match3 {
 				Transition<float> trnBackground = null;
 				trnBackground = new Transition<float>(_backgroundOffset, 0f, 0.5f, Tween.EaseOutSine, v => _backgroundOffset = v, () => this.Remove(trnBackground));
 				this.Add(trnBackground);
-				//_music.PlaySound(_musicFile, true);
+				_music.PlaySound(_musicFile, true);
 			}
 
 			if (_animating) {
@@ -230,7 +230,7 @@ namespace Samples.Match3 {
 							if (_offsets[i, j].Y == 0f) {
 								_velocities[i, j] = 0f;
 								_boardMask[i, j] = true;
-								//_sfx.PlaySound(_sndLanding);
+								_sfx.PlaySound(_sndLanding);
 							}
 							any = true;
 						}
@@ -246,7 +246,7 @@ namespace Samples.Match3 {
 					Array.Clear(_boardMask, 0, BoardSize * BoardSize);
 					if (any) {
 						_animating = true;
-						//_sfx.PlaySound(_sndMatch);
+						_sfx.PlaySound(_sndMatch);
 						_poof.Reset();
 					} else {
 						_settled = true;
@@ -353,11 +353,11 @@ namespace Samples.Match3 {
 				if (legal) {
 					this.Remove(swap);
 					_animating = true;
-					//_sfx.PlaySound(_sndMatch);
+					_sfx.PlaySound(_sndMatch);
 					_poof.Reset();
 					_noInput = false;
 				} else {
-					//_sfx.PlaySound(_sndNoMatch);
+					_sfx.PlaySound(_sndNoMatch);
 					swap.Reset(0f);
 					swap.To(1f, 0.3f, (t) => {
 						this.Swap(i1, j1, i2, j2);
@@ -453,10 +453,10 @@ namespace Samples.Match3 {
 		}
 
 		void AddToScore (int points, int i, int j) {
-//			if (_score / 100 < (_score + points) / 100)
-//				_sfx2.PlaySound(_sndOneUp);
-//			else if (!_sfx2.IsPlaying || _sfx2.CurrentSound != _sndOneUp)
-//				_sfx2.PlaySound(_sndCoin);
+			if (_score / 100 < (_score + points) / 100)
+				_sfx2.PlaySound(_sndOneUp);
+			else if (!_sfx2.IsPlaying || _sfx2.CurrentSound != _sndOneUp)
+				_sfx2.PlaySound(_sndCoin);
 			_score += points;
 			_scoreStr = _score.ToString();
 
@@ -505,7 +505,7 @@ namespace Samples.Match3 {
 		}
 
 		void GameOver () {
-			//_music.PlaySound(_musicGameOver, false);
+			_music.PlaySound(_musicGameOver, false);
 			_gameOver = true;
 			Transition<float> trnGameOver = null;
 			trnGameOver = new Transition<float>(0f, 1f, 0.75f, Tween.EaseOutBounce, v => _gameOverScale = v, () => this.Remove(trnGameOver));
@@ -570,24 +570,24 @@ namespace Samples.Match3 {
 		}
 
 		void IHandler<Pause>.Handle (FrameArgs frame, Pause e) {
-//			if (_music != null && _music.IsPlaying) {
-//				_wasPlaying = true;
-//				_music.Pause();
-//			}
+			if (_music != null && _music.IsPlaying) {
+				_wasPlaying = true;
+				_music.Pause();
+			}
 		}
 
 		void IHandler<Resume>.Handle (FrameArgs frame, Resume e) {
-//			if (_wasPlaying)
-//				_music.Play();
+			if (_wasPlaying)
+				_music.Play();
 		}
 
 		public override void Dispose () {
-//			if (_music != null)
-//				_music.Dispose();
-//			if (_sfx != null)
-//				_sfx.Dispose();
-//			if (_sfx2 != null)
-//				_sfx2.Dispose();
+			if (_music != null)
+				_music.Dispose();
+			if (_sfx != null)
+				_sfx.Dispose();
+			if (_sfx2 != null)
+				_sfx2.Dispose();
 
 			base.Dispose();
 		}

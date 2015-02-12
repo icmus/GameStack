@@ -112,5 +112,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Math\Timeline\Timeline.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\Timeline\KeyChannel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Math\MarginsF.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\OggOpusFile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sound\OpusfileTypes.cs" />
   </ItemGroup>
 </Project>
