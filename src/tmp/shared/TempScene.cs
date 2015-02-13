@@ -5,8 +5,8 @@ using GameStack.Gui;
 using OpenTK;
 
 namespace Temp {
-	public class MyScene : Scene, IHandler<Start> {
-		public MyScene (IGameView view) : base(view) {
+	public class DefaultScene : Scene, IHandler<Start> {
+		public DefaultScene (IGameView view) : base(view) {
 		}
 
 		void IHandler<Start>.Handle (FrameArgs frame, Start e) {

@@ -7,6 +7,12 @@ using GameStack.Graphics;
 
 namespace GameStack.Graphics {
 	public class BlurShader : Shader {
+#if __MOBILE__
+		const string TextureFunc = "texture2D";
+#else 
+		const string TextureFunc = "texture";
+#endif
+
 		public BlurShader (BlurDirection dir, int kernel, double sigma) :
 			base(BuildVertSource(dir, kernel), BuildFragSource(kernel, sigma), string.Format("blur::{0}:{1}:{2}", dir, kernel, sigma)) {
 		}
@@ -28,13 +34,13 @@ namespace GameStack.Graphics {
 			var sb = new StringBuilder();
 			var weights = BuildWeights(length, sigma);
 			for (var i = 0; i < length; i++)
-				sb.AppendFormat("c += texture(Texture, blurTexCoords[{0}]) * {1};\n",
-					i, weights[length - i].ToString("0.0###################"));
-			sb.AppendFormat("c += texture(Texture, texCoord0) * {0};\n",
-				weights[0].ToString("0.0###################"));
+				sb.AppendFormat("c += {2}(Texture, blurTexCoords[{0}]) * {1};\n",
+					i, weights[length - i].ToString("0.0###################"), TextureFunc);
+			sb.AppendFormat("c += {1}(Texture, texCoord0) * {0};\n",
+				weights[0].ToString("0.0###################"), TextureFunc);
 			for (var i = length; i < length * 2; i++)
-				sb.AppendFormat("c += texture(Texture, blurTexCoords[{0}]) * {1};\n",
-					i, weights[i - length + 1].ToString("0.0###################"));
+				sb.AppendFormat("c += {2}(Texture, blurTexCoords[{0}]) * {1};\n",
+					i, weights[i - length + 1].ToString("0.0###################"), TextureFunc);
 
 			return string.Format(FragSourceFormat, length * 2, sb.ToString());
 		}
@@ -48,6 +54,39 @@ namespace GameStack.Graphics {
 			return weights;
 		}
 
+#if __MOBILE__
+		const string VertSourceFormat = @"
+uniform mat4 WorldViewProjection;
+uniform mat4 World;
+uniform float TexelSize;
+
+attribute vec4 Position;
+attribute vec2 TexCoord0;
+
+varying vec2 texCoord0;
+varying vec2 blurTexCoords[{0}];
+
+void main() {{
+	gl_Position = WorldViewProjection * Position;
+	texCoord0 = TexCoord0;
+	{1}
+}}
+";
+		const string FragSourceFormat = @"
+uniform sampler2D Texture;
+uniform mediump vec4 Tint;
+
+varying mediump vec2 texCoord0;
+varying mediump vec2 blurTexCoords[{0}];
+
+void main() {{
+	mediump vec4 c = vec4(0.0);
+	mediump vec4 tmp = vec4(0.0);
+	{1}
+	gl_FragColor = c * Tint;
+}}
+";
+#else
 		const string VertSourceFormat = @"#version 150
 uniform mat4 WorldViewProjection;
 uniform mat4 World;
@@ -80,6 +119,7 @@ void main() {{
 	{1}
 	FragColor = c * Tint;
 }}";
+#endif
 	}
 
 	public enum BlurDirection {

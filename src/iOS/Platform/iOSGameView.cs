@@ -29,6 +29,7 @@ namespace GameStack.iOS {
 		ConcurrentQueue<EventBase> _events;
 		FrameArgs _frame;
 		int _loadFrame;
+		float _pixelScale;
 		volatile bool _lowMemHandled;
 
 
@@ -57,7 +58,7 @@ namespace GameStack.iOS {
 
 		public SizeF Size { get { return _size; } }
 
-		public float PixelScale { get { return UIScreen.MainScreen.Scale; } }
+		public float PixelScale { get { return _pixelScale; } }
 
 		public int Interval {
 			get { return _interval; }
@@ -272,7 +273,7 @@ namespace GameStack.iOS {
 				_events.Enqueue(new Resize(_size, PixelScale));
 			}
 
-			Assets.PixelScale = PixelScale;
+			Assets.PixelScale = _pixelScale = UIScreen.MainScreen.Scale;
 		}
 
 		void DestroyContext () {

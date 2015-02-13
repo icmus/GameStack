@@ -16,13 +16,13 @@ namespace Temp {
 		UIWindow _window;
 		UIViewController _controller;
 		iOSGameView _view;
-		MyScene _scene;
+		DefaultScene _scene;
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options) {
 			_window = new UIWindow(UIScreen.MainScreen.Bounds);
 			_controller = new UIViewController();
 			_view = new iOSGameView(UIScreen.MainScreen.ApplicationFrame);
-			_scene = new MyScene(_view);
+			_scene = new DefaultScene(_view);
 			_window.RootViewController = _controller;
 			_controller.View = _view;
 

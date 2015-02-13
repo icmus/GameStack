@@ -10,7 +10,7 @@ namespace Temp {
 			}
 			using (var loop = new SDL2EventLoop()) {
 				using (var view = new SDL2GameView(WindowMode.Window, "Temp", 640, 480, true)) {
-					using (var scene = new MyScene(view)) {
+					using (var scene = new DefaultScene(view)) {
 						view.Event += (object sender, SDL2EventArgs e) => {
 							if (e.Event.type == SDL.SDL_EventType.SDL_KEYDOWN && e.Event.key.keysym.sym == SDL.SDL_Keycode.SDLK_ESCAPE)
 								view.Dispose();
