@@ -5,6 +5,16 @@ namespace GameStack.Graphics {
 	public class MeshShader : Shader {
 		const string ShaderVersion = "150";
 
+#if __MOBILE__
+		const string InStr = "attribute";
+		const string FragOut = "gl_FragColor";
+		const string TextureFunc = "texture2D";
+#else
+		const string InStr = "in";
+		const string FragOut = "FragColor";
+		const string TextureFunc = "texture";
+#endif
+
 		int _maxNumLights;
 
 		public MeshShader (MeshShaderSettings settings)
@@ -20,11 +30,13 @@ namespace GameStack.Graphics {
 
 		static string GetVertSource (MeshShaderSettings settings) {
 			var sb = new StringBuilder();
+#if !__MOBILE__
 			sb.Append("#version ").AppendLine(ShaderVersion);
+#endif
 			AppendDefines(sb, settings);
 			AppendUniform(sb, settings);
 			AppendIn(sb, settings);
-			AppendVarying(sb, settings, true);
+			AppendVarying(sb, settings, false);
 			sb.AppendLine("void main() {");
 			sb.AppendLine("    vec4 p = Position;");
 			if (settings.BoneSlotCount > 0) {
@@ -46,11 +58,17 @@ namespace GameStack.Graphics {
 
 		static string GetFragSource (MeshShaderSettings settings) {
 			var sb = new StringBuilder();
+#if __MOBILE__
+			sb.AppendLine("precision mediump float;");
+#else
 			sb.Append("#version ").AppendLine(ShaderVersion);
+#endif
 			AppendDefines(sb, settings);
 			AppendUniform(sb, settings);
-			AppendVarying(sb, settings, false);
+			AppendVarying(sb, settings, true);
+#if !__MOBILE__
 			sb.AppendLine("out vec4 FragColor;");
+#endif
 			sb.AppendLine("void main() {");
 			sb.AppendLine("    vec3 n = normal;");
 			sb.AppendLine("    vec4 a = ColorAmbient;");
@@ -60,21 +78,21 @@ namespace GameStack.Graphics {
 			sb.AppendLine("    vec4 tmp;");
 			if (settings.Diffuse != null) {
 				for (var i = 0; i < settings.Diffuse.Length; i++)
-					sb.AppendFormat(FragDiffuse, i);
+					sb.AppendFormat(FragDiffuse, i, TextureFunc);
 			}
 			if (settings.Normal != null) {
 				for (var i = 0; i < settings.Normal.Length; i++)
-					sb.AppendFormat(FragNormal, i);
+					sb.AppendFormat(FragNormal, i, TextureFunc);
 			}
 			if (settings.Specular != null) {
 				for (var i = 0; i < settings.Specular.Length; i++)
-					sb.AppendFormat(FragSpecular, i);
+					sb.AppendFormat(FragSpecular, i, TextureFunc);
 			}
 			if (settings.Emissive != null) {
 				for (var i = 0; i < settings.Emissive.Length; i++)
-					sb.AppendFormat(FragEmissive, i);
+					sb.AppendFormat(FragEmissive, i, TextureFunc);
 			}
-			sb.AppendLine(FragPhong);
+			sb.AppendFormat(FragPhong, FragOut);
 			sb.AppendLine("}");
 
 			return sb.ToString();
@@ -157,18 +175,22 @@ namespace GameStack.Graphics {
 		}
 
 		static void AppendIn (StringBuilder sb, MeshShaderSettings settings) {
-			sb.AppendLine("in vec4 Position;");
-			sb.AppendLine("in vec4 Normal;");
+			sb.Append(InStr).AppendLine(" vec4 Position;");
+			sb.Append(InStr).AppendLine(" vec4 Normal;");
 			for (var i = 0; i < 4; i++)
-				sb.Append("in vec2 TexCoord").Append(i).AppendLine(";");
+				sb.Append(InStr).Append(" vec2 TexCoord").Append(i).AppendLine(";");
 			for (var i = 0; i < settings.BoneSlotCount; i++) {
-				sb.Append("in float BoneWeight").Append(i).AppendLine(";");
-				sb.Append("in float BoneIndex").Append(i).AppendLine(";");
+				sb.Append(InStr).Append(" float BoneWeight").Append(i).AppendLine(";");
+				sb.Append(InStr).Append(" float BoneIndex").Append(i).AppendLine(";");
 			}
 		}
 
-		static void AppendVarying (StringBuilder sb, MeshShaderSettings settings, bool output) {
-			var dir = output ? "out" : "in";
+		static void AppendVarying (StringBuilder sb, MeshShaderSettings settings, bool isFrag) {
+#if __MOBILE__
+			var dir = "varying";
+#else
+			var dir = isFrag ? "in" : "out";
+#endif
 			sb.Append(dir).AppendLine(" vec3 normal;");
 			sb.Append(dir).AppendLine(" vec3 v;");
 			for (var i = 0; i < 4; i++)
@@ -182,28 +204,28 @@ namespace GameStack.Graphics {
 
 	float atten;
 	vec3 l;
-	for(int i = 0; i < MAX_NUM_LIGHTS; i++) {
-		if(LightType[i] == 0) {
+	for(int i = 0; i < MAX_NUM_LIGHTS; i++) {{
+		if(LightType[i] == 0) {{
 			atten = 1.0;
 			l = -LightVector[i];
-		} else if (LightType[i] == 1) {
+		}} else if (LightType[i] == 1) {{
 			l = LightVector[i] - v;
 			float dist = length(l);
 			l /= dist;
 			vec3 att = LightAttenuation[i];
 			atten = 1.0 / (att.x * dist * dist + att.y * dist + att.z);
-		}
+		}}
 		la += a.xyz * LightAmbient[i];
 		ld += d.xyz * LightDiffuse[i] * max(dot(n, l), 0.0) * atten;
 		vec3 e = normalize(-v);
 		vec3 r = normalize(-reflect(l, n));
 		ls += s.xyz * LightSpecular[i] * pow(max(dot(r, e), 0.0), Shininess) * ShininessStrength * atten;
-	}
-	FragColor = vec4(la, 1.0) + vec4(ld, 1.0) + vec4(ls, 1.0);
+	}}
+	{0} = vec4(la, 1.0) + vec4(ld, 1.0) + vec4(ls, 1.0);
 ";
 
 		const string FragDiffuse = @"
-    tmp = texture(DiffuseMap{0}, DIFFUSE_INDEX{0}) * DIFFUSE_BLEND{0};
+    tmp = {1}(DiffuseMap{0}, DIFFUSE_INDEX{0}) * DIFFUSE_BLEND{0};
 #if DIFFUSE_OP{0}==0
 	d *= tmp;
 #elif DIFFUSE_OP{0}==1
@@ -219,7 +241,7 @@ namespace GameStack.Graphics {
 #endif
 ";
 		const string FragNormal = @"
-	tmp = texture(NormalMap{0}, NORMAL_INDEX{0}) * NORMAL_BLEND{0};
+	tmp = {1}(NormalMap{0}, NORMAL_INDEX{0}) * NORMAL_BLEND{0};
 #if NORMAL_OP{0}==0
 	n *= tmp;
 #elif NORMAL_OP{0}==1
@@ -237,7 +259,7 @@ namespace GameStack.Graphics {
 #endif
 ";
 		const string FragSpecular = @"
-	tmp = texture(SpecularMap{0}, SPECULAR_INDEX{0}) * SPECULAR_BLEND{0};
+	tmp = {1}(SpecularMap{0}, SPECULAR_INDEX{0}) * SPECULAR_BLEND{0};
 #if SPECULAR_OP{0}==0
 	s *= tmp;
 #elif SPECULAR_OP{0}==1
@@ -253,7 +275,7 @@ namespace GameStack.Graphics {
 #endif
 ";
 		const string FragEmissive = @"
-	tmp = texture(EmissiveMap{0}, EMISSIVE_INDEX{0}) * EMISSIVE_BLEND{0};
+	tmp = {1}(EmissiveMap{0}, EMISSIVE_INDEX{0}) * EMISSIVE_BLEND{0};
 #if EMISSIVE_OP{0}==0
 	e *= tmp;
 #elif EMISSIVE_OP{0}==1

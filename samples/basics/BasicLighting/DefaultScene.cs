@@ -21,7 +21,7 @@ namespace BasicAnimatedModel {
 			_lights = new Lighting(
 				new DirectionalLight(
 					-Vector3.UnitY, // direction
-					new Vector3(.2f, .2f, .2f), // ambient 
+					Vector3.One, // ambient 
 					Vector3.One, // diffuse
 					Vector3.One // specular
 				),
