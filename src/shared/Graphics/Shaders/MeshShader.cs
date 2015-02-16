@@ -95,7 +95,6 @@ namespace GameStack.Graphics {
 			sb.AppendFormat(FragPhong, FragOut);
 			sb.AppendLine("}");
 
-			Console.WriteLine(sb.ToString());
 			return sb.ToString();
 		}
 

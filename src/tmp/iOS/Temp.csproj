@@ -62,7 +62,7 @@
     <CodesignKey>iPhone Developer</CodesignKey>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="../../../dist/ios.sh ${ProjectDir}/../../../samples/basics/BasicAnimatedModel/content/ ${AppDirectory}" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="../../../dist/ios.sh ${ProjectDir}/../content/ ${AppDirectory}" workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
     <MtouchI18n>
