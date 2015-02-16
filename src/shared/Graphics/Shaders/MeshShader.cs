@@ -95,6 +95,7 @@ namespace GameStack.Graphics {
 			sb.AppendFormat(FragPhong, FragOut);
 			sb.AppendLine("}");
 
+			Console.WriteLine(sb.ToString());
 			return sb.ToString();
 		}
 
@@ -104,7 +105,7 @@ namespace GameStack.Graphics {
 				for (var i = 0; i < settings.Diffuse.Length; i++) {
 					var item = settings.Diffuse[0];
 					sb.Append("#define DIFFUSE_INDEX").Append(i.ToString()).Append(" texCoord").AppendLine(item.Index.ToString());
-					sb.Append("#define DIFFUSE_BLEND").Append(i.ToString()).Append(" ").AppendLine(item.BlendFactor.ToString());
+					sb.Append("#define DIFFUSE_BLEND").Append(i.ToString()).Append(" ").AppendLine(item.BlendFactor.ToString("0.0########"));
 					sb.Append("#define DIFFUSE_OP").Append(i.ToString()).Append(" ").AppendLine(((int)item.Operation).ToString());
 				}
 			}
@@ -112,7 +113,7 @@ namespace GameStack.Graphics {
 				for (var i = 0; i < settings.Normal.Length; i++) {
 					var item = settings.Normal[0];
 					sb.Append("#define NORMAL_INDEX").Append(i.ToString()).Append(" texCoord").AppendLine(item.Index.ToString());
-					sb.Append("#define NORMAL_BLEND").Append(i.ToString()).Append(" ").AppendLine(item.BlendFactor.ToString());
+					sb.Append("#define NORMAL_BLEND").Append(i.ToString()).Append(" ").AppendLine(item.BlendFactor.ToString("0.0########"));
 					sb.Append("#define NORMAL_OP").Append(i.ToString()).Append(" ").AppendLine(((int)item.Operation).ToString());
 				}
 			}
@@ -120,7 +121,7 @@ namespace GameStack.Graphics {
 				for (var i = 0; i < settings.Specular.Length; i++) {
 					var item = settings.Specular[0];
 					sb.Append("#define SPECULAR_INDEX").Append(i.ToString()).Append(" texCoord").AppendLine(item.Index.ToString());
-					sb.Append("#define SPECULAR_BLEND").Append(i.ToString()).Append(" ").AppendLine(item.BlendFactor.ToString());
+					sb.Append("#define SPECULAR_BLEND").Append(i.ToString()).Append(" ").AppendLine(item.BlendFactor.ToString("0.0########"));
 					sb.Append("#define SPECULAR_OP").Append(i.ToString()).Append(" ").AppendLine(((int)item.Operation).ToString());
 				}
 			}
@@ -128,7 +129,7 @@ namespace GameStack.Graphics {
 				for (var i = 0; i < settings.Specular.Length; i++) {
 					var item = settings.Specular[0];
 					sb.Append("#define EMISSIVE_INDEX").Append(i.ToString()).Append(" texCoord").AppendLine(item.Index.ToString());
-					sb.Append("#define EMISSIVE_BLEND").Append(i.ToString()).Append(" ").AppendLine(item.BlendFactor.ToString());
+					sb.Append("#define EMISSIVE_BLEND").Append(i.ToString()).Append(" ").AppendLine(item.BlendFactor.ToString("0.0########"));
 					sb.Append("#define EMISSIVE_OP").Append(i.ToString()).Append(" ").AppendLine(((int)item.Operation).ToString());
 				}
 			}

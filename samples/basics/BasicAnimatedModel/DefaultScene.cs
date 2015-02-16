@@ -17,6 +17,9 @@ namespace BasicAnimatedModel {
 		void IHandler<Start>.Handle (FrameArgs frame, Start e) {
 			// basic orthographic camera will do
 			_cam = new Camera2D(e.Size, 1000, Camera2DOrigin.Center);
+			_cam = new Camera();
+			_cam.SetTransforms(Matrix4.LookAt(new Vector3(0, 0, 3f), Vector3.Zero, Vector3.UnitY),
+				Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45f), e.Size.Width / e.Size.Height, 0.01f, 100f));
 
 			// basic lighting with a single directional light
 			_lights = new Lighting(
@@ -40,8 +43,7 @@ namespace BasicAnimatedModel {
 		void IUpdater.Update (FrameArgs e) {
 			// rotate the model slowly and center in front of camera
 			_rot += Mathf.PiOver2 * e.DeltaTime;
-			_world = Matrix4.Scale(200f) * Matrix4.CreateRotationY(_rot) 
-				* Matrix4.CreateTranslation(0, -200f, 300f);
+			_world = Matrix4.CreateRotationY(_rot) * Matrix4.CreateTranslation(new Vector3(0, -0.8f, 0));
 		}
 
 		protected override void OnDraw (FrameArgs e) {
