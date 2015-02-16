@@ -3,7 +3,7 @@ using GameStack;
 using GameStack.Graphics;
 using OpenTK;
 
-namespace BasicAnimatedModel {
+namespace Basics {
 	public class DefaultScene : Scene, IUpdater, IHandler<Start> {
 		Camera _cam;
 		Model _model;

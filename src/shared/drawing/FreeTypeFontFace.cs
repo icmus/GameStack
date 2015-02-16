@@ -60,13 +60,16 @@ namespace GameStack.Graphics {
 			_initialized = true;
 		}
 
-		#if __IOS__
+#if __IOS__
 		const string Libfreetype = "__Internal";
 		const string Libcairo = "__Internal";
-		#else
-		const string Libfreetype = "libfreetype";
+#elif __ANDROID__
+		const string Libfreetype = "libcairo";
 		const string Libcairo = "libcairo";
-		#endif
+#else
+		const string Libfreetype = "libcairo";
+		const string Libcairo = "libfreetype";
+#endif
 
 		[DllImport(Libfreetype)]
 		private static extern int FT_Init_FreeType (out IntPtr ft_lib);

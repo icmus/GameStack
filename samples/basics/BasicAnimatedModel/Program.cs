@@ -2,7 +2,7 @@
 using GameStack.Desktop;
 using SDL2;
 
-namespace BasicAnimatedModel {
+namespace Basics {
 	public class Program {
 		public static void Main (string[] args) {
 			if ((SDL.SDL_Init((SDL.SDL_INIT_NOPARACHUTE | SDL.SDL_INIT_VIDEO)) < 0)) {

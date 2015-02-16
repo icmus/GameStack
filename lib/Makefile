@@ -184,7 +184,7 @@ pixman: folders
 
 freetype: folders
 	$(call wget,http://download.savannah.gnu.org/releases/freetype/freetype-$(FREETYPE_VER).tar.bz2,freetype-$(FREETYPE_VER).tar.bz2,freetype)
-	$(call autoconf,freetype,objs/.libs/libfreetype.{$(LIB_EXT)$(comma)a},../bin/desktop,objs/.libs/libfreetype.a,../bin/ios,objs/.libs/libfreetype.a,../bin/android,--with-png=no --with-harfbuzz=no --with-bzip2=no --with-zlib=no --with-old-mac-fonts=no CFLAGS="$(CFLAGS)",,,CFLAGS="$(NDK_CFLAGS)" LDFLAGS="$(NDK_LDFLAGS)",,,1)
+	$(call autoconf,freetype,objs/.libs/libfreetype.{$(LIB_EXT)$(comma)a},../bin/desktop,objs/.libs/libfreetype.a,../bin/ios,objs/.libs/libfreetype.{so$(comma)a},../bin/android,--with-png=no --with-harfbuzz=no --with-bzip2=no --with-zlib=no --with-old-mac-fonts=no CFLAGS="$(CFLAGS)",,,CFLAGS="$(NDK_CFLAGS)" LDFLAGS="$(NDK_LDFLAGS)",,,1)
 	$(call lipo,../bin/desktop/libfreetype.a,../bin/ios/libfreetype.a,../bin/ios/libfreetype.a)
 
 cairo: folders
