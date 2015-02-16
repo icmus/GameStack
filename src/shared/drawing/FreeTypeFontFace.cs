@@ -68,7 +68,7 @@ namespace GameStack.Graphics {
 		const string Libcairo = "libcairo";
 #else
 		const string Libfreetype = "libcairo";
-		const string Libcairo = "libfreetype";
+		const string Libcairo = "libcairo";
 #endif
 
 		[DllImport(Libfreetype)]
