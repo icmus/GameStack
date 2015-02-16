@@ -10,6 +10,7 @@
     <RootNamespace>GameStack.Pipeline</RootNamespace>
     <AssemblyName>GameStack.Pipeline</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
