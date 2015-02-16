@@ -24,7 +24,9 @@ namespace GameStack.Graphics {
 					func(ctx, sz.Width, sz.Height);
 				}
 				var tex = new Texture(sz, new TextureSettings {
-#if __MOBILE__
+#if __ANDROID__
+					Format = (OpenTK.Graphics.ES20.PixelFormat)OpenTK.Graphics.ES20.All.Rgba
+#elif __MOBILE__
 					Format = (OpenTK.Graphics.ES20.PixelFormat)OpenTK.Graphics.ES20.All.Bgra
 #else
 					Format = OpenTK.Graphics.OpenGL.PixelFormat.Bgra

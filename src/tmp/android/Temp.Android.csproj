@@ -29,7 +29,7 @@
     <ConsolePause>false</ConsolePause>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="../../../dist/android.sh ${ProjectDir}/../content ${ProjectDir}" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="../../../dist/android.sh ${ProjectDir}/../../../samples/basics/Basic9Slice/content ${ProjectDir}" workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -61,7 +61,6 @@
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -85,6 +84,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="assets\FordAntennaWGL-Regular.otf" />
+    <Folder Include="assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="assets\sprites.atlas" />
   </ItemGroup>
 </Project>

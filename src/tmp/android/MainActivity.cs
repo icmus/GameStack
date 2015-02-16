@@ -24,13 +24,13 @@ namespace Temp {
 		ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden)]
 	public class MainActivity : Activity {
 		AndroidGameView _view;
-		MyScene _scene;
+		DefaultScene _scene;
 
 		protected override void OnCreate (Bundle bundle) {
 			base.OnCreate (bundle);
 
 			_view = new AndroidGameView (this, 60);
-			_scene = new MyScene (_view);
+			_scene = new DefaultScene (_view);
 
 			this.SetContentView (_view);
 		}

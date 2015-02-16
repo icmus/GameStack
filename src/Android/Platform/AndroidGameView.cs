@@ -20,7 +20,7 @@ namespace GameStack.Android {
 	public class AndroidGameView : GLSurfaceView, IGameView, GLSurfaceView.IRenderer, GestureDetector.IOnGestureListener {
 		ConcurrentQueue<EventBase> _queue;
 		FrameArgs _event;
-		Vector2 _size;
+		SizeF _size;
 		int _minFrameTicks, _lastTicks;
 		GestureDetector _gestureDetector;
 		HashSet<GestureType> _enabledGestures;
@@ -42,7 +42,7 @@ namespace GameStack.Android {
 		public event EventHandler<FrameArgs> Render;
 		public event EventHandler Destroyed;
 
-		public Vector2 Size { get { return _size; } }
+		public SizeF Size { get { return _size; } }
 
 		public float PixelScale { get { return 1f; } }
 
@@ -88,7 +88,7 @@ namespace GameStack.Android {
 		}
 
 		public override bool OnTouchEvent (MotionEvent e) {
-			var spos = new Vector2 (e.GetX (), _size.Y - e.GetY ());
+			var spos = new Vector2 (e.GetX (), _size.Height - e.GetY ());
 			var pos = this.NormalizeToViewport (spos);
 
 			switch (e.Action) {
@@ -100,7 +100,7 @@ namespace GameStack.Android {
 					break;
 				case MotionEventActions.Move:
 					for (var i = 0; i < e.HistorySize; i++) {
-						var shpos = new Vector2 (e.GetHistoricalX (i), _size.Y - e.GetHistoricalY (i));
+						var shpos = new Vector2 (e.GetHistoricalX (i), _size.Height - e.GetHistoricalY (i));
 						var hpos = this.NormalizeToViewport (shpos);
 						_queue.Enqueue (new Touch (TouchState.Move, hpos, shpos));
 					}
@@ -129,8 +129,8 @@ namespace GameStack.Android {
 
 		Vector2 NormalizeToViewport (Vector2 point) {
 			return new Vector2 (
-				2f * point.X / _size.X - 1f,
-				2f * point.Y / _size.Y - 1f);
+				2f * point.X / _size.Width - 1f,
+				2f * point.Y / _size.Height - 1f);
 		}
 
 		#region IOnGestureListener implementation
@@ -162,7 +162,7 @@ namespace GameStack.Android {
 						dir = SwipeDirection.Left;
 				}
 
-				var spos = new Vector2 (e2.GetX (), _size.Y - e2.GetY ());
+				var spos = new Vector2 (e2.GetX (), _size.Height - e2.GetY ());
 				var pos = this.NormalizeToViewport (spos);
 				_queue.Enqueue (new SwipeGesture (state, pos, spos, dir));
 				return true;
@@ -183,7 +183,7 @@ namespace GameStack.Android {
 				else
 					state = GestureState.Cancel;
 
-				var spos = new Vector2 (e2.GetX (), _size.Y - e2.GetY ());
+				var spos = new Vector2 (e2.GetX (), _size.Height - e2.GetY ());
 				var pos = this.NormalizeToViewport (spos);
 
 				_queue.Enqueue (new PanGesture (state, pos, spos, new Vector2 (e2.GetX () - e1.GetX (), e1.GetY () - e2.GetY ())));
@@ -197,7 +197,7 @@ namespace GameStack.Android {
 
 		bool GestureDetector.IOnGestureListener.OnSingleTapUp (MotionEvent e) {
 			if (_enabledGestures.Contains (GestureType.Tap)) {
-				var spos = new Vector2 (e.GetX (), _size.Y - e.GetY ());
+				var spos = new Vector2 (e.GetX (), _size.Height - e.GetY ());
 				var pos = this.NormalizeToViewport (spos);
 				_queue.Enqueue (new TapGesture (pos, spos));
 				return true;
@@ -215,7 +215,7 @@ namespace GameStack.Android {
 		}
 
 		void IRenderer.OnSurfaceChanged (Javax.Microedition.Khronos.Opengles.IGL10 gl, int width, int height) {
-			_size = new Vector2 (width, height);
+			_size = new SizeF (width, height);
 			_queue.Enqueue (new Resize (_size, 1f));
 			GL.Viewport (0, 0, width, height);
 		}

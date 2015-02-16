@@ -40,7 +40,9 @@ namespace GameStack.Gui {
 				_surface = new ImageSurface(Format.Argb32, sz.Width, sz.Height);
 				_ctx = new Context(_surface);
 				_mat = new SpriteMaterial(new SpriteShader(), new Texture(sz, new TextureSettings {
-#if __MOBILE__
+#if __ANDROID__
+					Format = (PixelFormat)All.Rgba
+#elif __MOBILE__
 					Format = (PixelFormat)All.Bgra
 #else
 					Format = PixelFormat.Bgra
@@ -57,7 +59,7 @@ namespace GameStack.Gui {
 		}
 
 		public unsafe void Commit() {
-			#if __ANDROID__
+#if __ANDROID__
 			byte* p = (byte*)_surface.DataPtr;
 			var count = _surface.Width * _surface.Height;
 			for (var i = 0; i < count; i++) {
@@ -66,7 +68,7 @@ namespace GameStack.Gui {
 				p[2] = tmp;
 				p += 4;
 			}
-			#endif
+#endif
 			_mat.Texture.SetData(_surface.DataPtr);
 			_isValid = true;
 		}

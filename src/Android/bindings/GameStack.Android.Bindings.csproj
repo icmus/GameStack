@@ -12,8 +12,6 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>GameStack.Android.Bindings</AssemblyName>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="liblodepng.cs" />
     <Compile Include="..\..\AssemblyVersion.cs">
       <Link>AssemblyVersion.cs</Link>
     </Compile>
@@ -58,4 +55,19 @@
   </ItemGroup>
   <Import Project="..\..\shared\bindings\GameStack.Shared.Bindings.projitems" Label="Shared" Condition="Exists('..\..\shared\bindings\GameStack.Shared.Bindings.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="lib\" />
+    <Folder Include="lib\armeabi-v7a\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedNativeLibrary Include="..\..\..\bin\android\libopenal32.so">
+      <Link>lib\armeabi-v7a\libopenal32.so</Link>
+    </EmbeddedNativeLibrary>
+    <EmbeddedNativeLibrary Include="..\..\..\bin\android\libpnglite.so">
+      <Link>lib\armeabi-v7a\libpnglite.so</Link>
+    </EmbeddedNativeLibrary>
+    <EmbeddedNativeLibrary Include="..\..\..\bin\android\libopusfile.so">
+      <Link>lib\armeabi-v7a\libopusfile.so</Link>
+    </EmbeddedNativeLibrary>
+  </ItemGroup>
 </Project>

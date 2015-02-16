@@ -17,5 +17,6 @@ if [ ! -f "$BIN"/import.exe ]; then
 fi
 
 mkdir -p "$TGT"/assets
+cp -f "$BIN"/android/*.so "$TGT"
 cd "$BIN"
 mono import.exe "$CONTENT" "$TGT"/assets "$@" 
