@@ -335,19 +335,20 @@ namespace GameStack.Pipeline
                 if (!textures.ContainsKey(name))
                     continue;
                 textures.Remove(name);
-                Bitmap bmp = null;
+				Image img = null;
                 if (tex.HasCompressedData) {
                     using (var ms = new MemoryStream(tex.CompressedData)) {
-                        bmp = new Bitmap(ms);
+						img = Image.FromStream(ms);
                     }
                 } else if (tex.HasNonCompressedData) {
                     fixed(Texel *p = tex.NonCompressedData) {
-                        bmp = new Bitmap(tex.Width, tex.Height, tex.Width * 4, PixelFormat.Format32bppArgb, (IntPtr)p);
+						img = (Image)new Bitmap(tex.Width, tex.Height, tex.Width * 4, PixelFormat.Format32bppArgb, (IntPtr)p);
                     }
                 }
-                if (bmp != null) {
+                if (img != null) {
+					img = ImageHelper.PremultiplyAlpha(img);
                     using (var ms = new MemoryStream()) {
-                        bmp.Save(ms, ImageFormat.Png);
+						img.Save(ms, ImageFormat.Png);
                         ms.Position = 0;
                         tw.Write(ms, ms.Length, name + ".png");
                     }
@@ -357,6 +358,7 @@ namespace GameStack.Pipeline
                 try {
                     var img = ImageLoader.Load(kvp.Key);
                     using (var ms = new MemoryStream()) {
+						img = ImageHelper.PremultiplyAlpha(img);
                         img.Save(ms, ImageFormat.Png);
                         ms.Position = 0;
                         tw.Write(ms, ms.Length, kvp.Value + ".png");

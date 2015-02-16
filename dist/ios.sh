@@ -17,6 +17,6 @@ if [ ! -f "$BIN"/import.exe ]; then
 fi
 
 mkdir -p "$TGT"/assets
-cp -f "$BIN"/ios/*.{dll,dll.mdb,dll.config,$EXT} "$TGT"
+cp -f "$BIN"/ios/*.{dll,dll.mdb} "$TGT"
 cd "$BIN"
 mono import.exe "$CONTENT" "$TGT"/assets "$@" 
