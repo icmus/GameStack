@@ -7,7 +7,7 @@ using MonoTouch.Foundation;
 namespace GameStack {
 	public static class Assets {
 		static readonly string AssetBasePath = Path.Combine(NSBundle.MainBundle.BundleUrl.Path, "assets");
-		static readonly string AddonsBasePath = Path.GetFullPath(Path.Combine(NSBundle.MainBundle.BundleUrl.Path, "..", "Library", "Addons"));
+        static readonly string AddonsBasePath = Path.Combine(NSFileManager.DefaultManager.GetUrls(NSSearchPathDirectory.LibraryDirectory, NSSearchPathDomain.User)[0].Path, "Addons");
 		public static string AppName { get; private set; }
 		public static string OrgName { get; private set; }
 		static string _userPath;
@@ -57,7 +57,7 @@ namespace GameStack {
 			AppName = appName;
 			OrgName = orgName;
 
-			_userPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            _userPath = NSFileManager.DefaultManager.GetUrls(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomain.User)[0].Path;
 		}
 
 		public static Stream ResolveUserStream (string path, FileMode mode = FileMode.Open, FileAccess access = FileAccess.ReadWrite) {
